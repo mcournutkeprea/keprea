@@ -57,11 +57,13 @@ const Innovation = () => {
               
               <div className="grid grid-cols-1 gap-6">
                 <div className="text-center">
-                  <div className="text-sm text-muted-foreground">La plante détecte les molécules d'insectes et réagit</div>
+                  <div className="text-lg font-bold text-primary mb-2">Interagissent avec la plante qui "répond" pour mieux se défendre des stress de l'environnement</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">0</div>
-                  <div className="text-sm text-muted-foreground">résidu toxique dans l'environnement</div>
+                  <div className="text-lg font-bold text-primary mb-2">Respectent le sol sans aucun résidu toxique</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-primary mb-2">Améliorent le rendement</div>
                 </div>
               </div>
               
