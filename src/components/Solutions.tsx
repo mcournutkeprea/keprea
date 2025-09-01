@@ -1,4 +1,4 @@
-import { Circle, Worm, Bug, Shield, Droplets, Flower2, Wheat } from "lucide-react";
+import { Circle, Worm, Bug, Shield, Droplets, GitBranch, Wheat } from "lucide-react";
 
 const Solutions = () => {
   return (
@@ -48,7 +48,7 @@ const Solutions = () => {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
-                      <Flower2 className="w-5 h-5 lg:w-4 lg:h-4 text-white" />
+                      <GitBranch className="w-5 h-5 lg:w-4 lg:h-4 text-white" />
                     </div>
                     <span className="text-xs text-center text-white">Racines</span>
                   </div>
