@@ -14,13 +14,27 @@ const Hero = () => {
             backgroundPosition: 'center'
           }}
         />
-        {/* Animated water droplets overlay */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}></div>
-          <div className="absolute top-20 right-20 w-1 h-1 bg-white rounded-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }}></div>
-          <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '2s', animationDuration: '3.5s' }}></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '5s' }}></div>
+        
+        {/* Animated particles overlay */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Floating particles */}
+          <div className="absolute top-10 left-10 w-3 h-3 bg-white/40 rounded-full animate-float"></div>
+          <div className="absolute top-20 right-20 w-2 h-2 bg-primary/60 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-white/50 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/40 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute bottom-20 right-10 w-3 h-3 bg-white/30 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+          
+          {/* Drifting elements */}
+          <div className="absolute top-1/4 left-0 w-1 h-1 bg-primary rounded-full animate-drift"></div>
+          <div className="absolute top-1/2 left-0 w-2 h-2 bg-white/60 rounded-full animate-drift" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-3/4 left-0 w-1 h-1 bg-primary/80 rounded-full animate-drift" style={{ animationDelay: '4s' }}></div>
+          
+          {/* Sparkling effects */}
+          <div className="absolute top-16 left-1/3 w-1 h-1 bg-white rounded-full animate-sparkle"></div>
+          <div className="absolute top-32 right-1/4 w-1 h-1 bg-primary rounded-full animate-sparkle" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-32 left-1/2 w-1 h-1 bg-white rounded-full animate-sparkle" style={{ animationDelay: '2s' }}></div>
         </div>
+        
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
