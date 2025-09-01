@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroVideoBg from "@/assets/hero-video-bg.jpg";
 
 const Hero = () => {
   return (
@@ -9,7 +8,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center animate-gentle-zoom"
           style={{ 
-            backgroundImage: `url(${heroVideoBg})`,
+            backgroundImage: `url(/lovable-uploads/02291a4f-e953-464d-88bb-2ded1fed45c6.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
