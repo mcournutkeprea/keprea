@@ -193,3 +193,37 @@ All colors MUST be HSL.
     filter: brightness(0.98) contrast(1.1);
   }
 }
+
+@keyframes water-drop {
+  0% { 
+    transform: translateY(-20px) scaleY(1);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+    transform: translateY(0px) scaleY(1.2);
+  }
+  90% { 
+    opacity: 1;
+    transform: translateY(100vh) scaleY(1.5);
+  }
+  100% { 
+    opacity: 0;
+    transform: translateY(100vh) scaleY(1.5);
+  }
+}
+
+@keyframes ripple {
+  0% { 
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(1.5);
+    opacity: 0.4;
+  }
+  100% { 
+    transform: scale(2);
+    opacity: 0;
+  }
+}

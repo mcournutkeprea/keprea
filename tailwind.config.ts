@@ -175,6 +175,38 @@ export default {
 						transform: 'scale(1.03) translateX(1px) rotateZ(0.2deg)',
 						filter: 'brightness(0.98) contrast(1.1)'
 					}
+				},
+				'water-drop': {
+					'0%': {
+						transform: 'translateY(-20px) scaleY(1)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '1',
+						transform: 'translateY(0px) scaleY(1.2)'
+					},
+					'90%': {
+						opacity: '1',
+						transform: 'translateY(100vh) scaleY(1.5)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(100vh) scaleY(1.5)'
+					}
+				},
+				'ripple': {
+					'0%': {
+						transform: 'scale(0)',
+						opacity: '0.8'
+					},
+					'50%': {
+						transform: 'scale(1.5)',
+						opacity: '0.4'
+					},
+					'100%': {
+						transform: 'scale(2)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
@@ -187,7 +219,9 @@ export default {
 				'sparkle': 'sparkle 2s ease-in-out infinite',
 				'sway': 'sway 8s ease-in-out infinite',
 				'pan-up': 'pan-up 12s ease-in-out infinite',
-				'plant-sway': 'plant-sway 8s ease-in-out infinite'
+				'plant-sway': 'plant-sway 8s ease-in-out infinite',
+				'water-drop': 'water-drop 6s linear infinite',
+				'ripple': 'ripple 3s ease-out infinite'
 			}
 		}
 	},

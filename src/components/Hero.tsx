@@ -24,24 +24,21 @@ const Hero = () => {
           }}
         />
         
-        {/* Animated particles overlay */}
+        {/* Animated water drops overlay */}
         <div className="absolute inset-0 pointer-events-none">
-          {/* Floating particles */}
-          <div className="absolute top-10 left-10 w-3 h-3 bg-white/40 rounded-full animate-float"></div>
-          <div className="absolute top-20 right-20 w-2 h-2 bg-primary/60 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-white/50 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/40 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-          <div className="absolute bottom-20 right-10 w-3 h-3 bg-white/30 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+          {/* Water drops falling */}
+          <div className="absolute top-0 left-1/4 w-2 h-4 bg-white/30 rounded-full animate-water-drop" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-0 left-1/2 w-1.5 h-3 bg-primary/40 rounded-full animate-water-drop" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-0 left-3/4 w-1 h-2 bg-white/40 rounded-full animate-water-drop" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-0 left-1/3 w-1.5 h-3 bg-white/25 rounded-full animate-water-drop" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 left-2/3 w-1 h-2 bg-primary/30 rounded-full animate-water-drop" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute top-0 left-1/5 w-1 h-2.5 bg-white/35 rounded-full animate-water-drop" style={{ animationDelay: '5s' }}></div>
+          <div className="absolute top-0 left-4/5 w-1.5 h-3.5 bg-white/20 rounded-full animate-water-drop" style={{ animationDelay: '1.5s' }}></div>
           
-          {/* Drifting elements */}
-          <div className="absolute top-1/4 left-0 w-1 h-1 bg-primary rounded-full animate-drift"></div>
-          <div className="absolute top-1/2 left-0 w-2 h-2 bg-white/60 rounded-full animate-drift" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-3/4 left-0 w-1 h-1 bg-primary/80 rounded-full animate-drift" style={{ animationDelay: '4s' }}></div>
-          
-          {/* Sparkling effects */}
-          <div className="absolute top-16 left-1/3 w-1 h-1 bg-white rounded-full animate-sparkle"></div>
-          <div className="absolute top-32 right-1/4 w-1 h-1 bg-primary rounded-full animate-sparkle" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-32 left-1/2 w-1 h-1 bg-white rounded-full animate-sparkle" style={{ animationDelay: '2s' }}></div>
+          {/* Ripple effects on ground */}
+          <div className="absolute bottom-10 left-1/4 w-8 h-2 bg-white/10 rounded-full animate-ripple" style={{ animationDelay: '6s' }}></div>
+          <div className="absolute bottom-12 left-1/2 w-6 h-1.5 bg-primary/15 rounded-full animate-ripple" style={{ animationDelay: '8s' }}></div>
+          <div className="absolute bottom-8 left-3/4 w-4 h-1 bg-white/20 rounded-full animate-ripple" style={{ animationDelay: '10s' }}></div>
         </div>
         
         {/* Dark overlay for text readability */}
