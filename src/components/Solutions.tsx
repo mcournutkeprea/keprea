@@ -32,8 +32,8 @@ const Solutions = () => {
                   </div>
                 </div>
 
-                {/* Icônes symboliques - verticales à droite sans texte */}
-                <div className="flex lg:flex-col gap-6 lg:gap-8 justify-center lg:justify-start lg:ml-8 lg:mt-4">
+                {/* Icônes symboliques - toujours verticales à droite */}
+                <div className="flex flex-col gap-6 lg:gap-8 justify-start ml-8 lg:mt-4">
                   <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <Shield className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
                   </div>
