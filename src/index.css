@@ -104,3 +104,13 @@ All colors MUST be HSL.
     font-family: 'Poppins', sans-serif;
   }
 }
+
+/* Custom animations */
+@keyframes gentle-zoom {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
+}
