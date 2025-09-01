@@ -133,6 +133,17 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				'sway': {
+					'0%, 100%': {
+						transform: 'scale(1.02) translateX(0px) rotate(0deg)'
+					},
+					'25%': {
+						transform: 'scale(1.03) translateX(-2px) rotate(-0.5deg)'
+					},
+					'75%': {
+						transform: 'scale(1.03) translateX(2px) rotate(0.5deg)'
+					}
 				}
 			},
 			animation: {
@@ -142,7 +153,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out both',
 				'float': 'float 3s ease-in-out infinite',
 				'drift': 'drift 4s linear infinite',
-				'sparkle': 'sparkle 2s ease-in-out infinite'
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'sway': 'sway 8s ease-in-out infinite'
 			}
 		}
 	},

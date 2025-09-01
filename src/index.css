@@ -148,3 +148,15 @@ All colors MUST be HSL.
     transform: scale(1);
   }
 }
+
+@keyframes sway {
+  0%, 100% { 
+    transform: scale(1.02) translateX(0px) rotate(0deg);
+  }
+  25% { 
+    transform: scale(1.03) translateX(-2px) rotate(-0.5deg);
+  }
+  75% { 
+    transform: scale(1.03) translateX(2px) rotate(0.5deg);
+  }
+}

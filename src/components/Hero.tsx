@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
+import heroPlants from "@/assets/hero-plants-wind.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <video 
-          className="absolute inset-0 w-full h-full object-cover animate-gentle-zoom"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/hero-background-video.mp4" type="video/mp4" />
-        </video>
+        <div 
+          className="absolute inset-0 bg-cover bg-center animate-sway"
+          style={{ 
+            backgroundImage: `url(${heroPlants})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
         
         {/* Animated particles overlay */}
         <div className="absolute inset-0 pointer-events-none">
