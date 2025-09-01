@@ -7,11 +7,11 @@ const Hero = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover bg-center animate-sway"
+          className="absolute inset-0 bg-cover animate-pan-up"
           style={{ 
-            backgroundImage: `url(${heroPlants})`,
+            backgroundImage: `url(/lovable-uploads/a475772e-8a3f-471f-86bd-e279450c6590.png)`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center bottom'
           }}
         />
         

@@ -144,6 +144,17 @@ export default {
 					'75%': {
 						transform: 'scale(1.03) translateX(2px) rotate(0.5deg)'
 					}
+				},
+				'pan-up': {
+					'0%': {
+						transform: 'scale(1.1) translateY(20px)'
+					},
+					'50%': {
+						transform: 'scale(1.08) translateY(0px)'
+					},
+					'100%': {
+						transform: 'scale(1.1) translateY(-20px)'
+					}
 				}
 			},
 			animation: {
@@ -154,7 +165,8 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'drift': 'drift 4s linear infinite',
 				'sparkle': 'sparkle 2s ease-in-out infinite',
-				'sway': 'sway 8s ease-in-out infinite'
+				'sway': 'sway 8s ease-in-out infinite',
+				'pan-up': 'pan-up 15s ease-in-out infinite'
 			}
 		}
 	},
