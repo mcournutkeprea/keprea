@@ -20,32 +20,30 @@ const Solutions = () => {
               <h3 className="text-2xl font-bold mb-2 text-white">Booster solutions</h3>
               <p className="text-lg font-medium text-white/90 mb-6">For soil quality and plant strength</p>
               
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
-                <div className="space-y-3 mb-6 lg:mb-0 lg:flex-1">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-white"></div>
-                    <span className="text-sm font-medium text-white">Boostea13 - riche en acides aminés libres</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-white"></div>
-                    <span className="text-sm font-medium text-white">Fertilea432 - riche en matière organique</span>
-                  </div>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-white"></div>
+                  <span className="text-sm font-medium text-white">Boostea13 - riche en acides aminés libres</span>
                 </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-white"></div>
+                  <span className="text-sm font-medium text-white">Fertilea432 - riche en matière organique</span>
+                </div>
+              </div>
 
-                {/* Icônes symboliques - toujours verticales à droite */}
-                <div className="flex flex-col gap-6 lg:gap-8 justify-start ml-8 lg:mt-4">
-                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <Shield className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
-                  </div>
-                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <Droplets className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
-                  </div>
-                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <GitBranch className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
-                  </div>
-                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <Wheat className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
-                  </div>
+              {/* Icônes symboliques - positionnées à droite de l'image */}
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <Droplets className="w-5 h-5 text-white" />
+                </div>
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <GitBranch className="w-5 h-5 text-white" />
+                </div>
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <Wheat className="w-5 h-5 text-white" />
                 </div>
               </div>
             </div>
