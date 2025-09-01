@@ -20,42 +20,44 @@ const Solutions = () => {
               <h3 className="text-2xl font-bold mb-2 text-white">Booster solutions</h3>
               <p className="text-lg font-medium text-white/90 mb-6">For soil quality and plant strength</p>
               
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-white"></div>
-                  <span className="text-sm font-medium text-white">Boostea13 - Foliar application</span>
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                <div className="space-y-3 mb-6 lg:mb-0 lg:flex-1">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-white"></div>
+                    <span className="text-sm font-medium text-white">Boostea13 - riche en acides aminés libres</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-white"></div>
+                    <span className="text-sm font-medium text-white">Fertilea432 - riche en matière organique</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-white"></div>
-                  <span className="text-sm font-medium text-white">Solea110 - Soil application</span>
-                </div>
-              </div>
 
-              {/* Icônes symboliques */}
-              <div className="flex gap-6 justify-center mb-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
-                    <div className="text-2xl">🛡️</div>
+                {/* Icônes symboliques - verticales à droite */}
+                <div className="flex lg:flex-col gap-4 lg:gap-3 justify-center lg:justify-start lg:ml-6">
+                  <div className="flex flex-col items-center">
+                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
+                      <div className="text-xl lg:text-lg text-white">🛡️</div>
+                    </div>
+                    <span className="text-xs text-center text-white">Protection</span>
                   </div>
-                  <span className="text-xs text-center text-white">Protection</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
-                    <div className="text-2xl">💧</div>
+                  <div className="flex flex-col items-center">
+                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
+                      <div className="text-xl lg:text-lg text-white">💧</div>
+                    </div>
+                    <span className="text-xs text-center text-white">Hydratation</span>
                   </div>
-                  <span className="text-xs text-center text-white">Hydratation</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
-                    <div className="text-2xl">🌱</div>
+                  <div className="flex flex-col items-center">
+                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
+                      <div className="text-xl lg:text-lg text-white">🌱</div>
+                    </div>
+                    <span className="text-xs text-center text-white">Racines</span>
                   </div>
-                  <span className="text-xs text-center text-white">Racines</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
-                    <div className="text-2xl">🌽</div>
+                  <div className="flex flex-col items-center">
+                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
+                      <div className="text-xl lg:text-lg text-white">🌽</div>
+                    </div>
+                    <span className="text-xs text-center text-white">Rendement</span>
                   </div>
-                  <span className="text-xs text-center text-white">Rendement</span>
                 </div>
               </div>
             </div>
