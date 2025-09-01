@@ -111,7 +111,7 @@ const Solutions = () => {
             {/* Image de fond */}
             <div 
               className="absolute inset-0 opacity-20 bg-cover bg-center"
-              style={{ backgroundImage: `url('/src/assets/protection-shield.jpg')` }}
+              style={{ backgroundImage: `url('/lovable-uploads/2b2944de-aec7-4fae-a32a-04a140dc619e.png')` }}
             ></div>
           </div>
         </div>

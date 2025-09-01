@@ -25,7 +25,11 @@ const Contact = () => {
               <p className="text-muted-foreground">
                 Découvrez comment nos biosolutions peuvent transformer votre approche agricole.
               </p>
-              <Button size="lg" className="w-full">
+              <Button 
+                size="lg" 
+                className="w-full"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 En savoir plus
               </Button>
             </CardContent>
@@ -58,8 +62,8 @@ const Contact = () => {
                     <p className="text-muted-foreground">Damparis, France</p>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <MapFrance />
+                <div className="mt-4 h-32 bg-muted rounded-lg flex items-center justify-center">
+                  <p className="text-sm text-muted-foreground">📍 Damparis, France</p>
                 </div>
               </CardContent>
             </Card>

@@ -5,6 +5,7 @@ import Solutions from "@/components/Solutions";
 import Innovation from "@/components/Innovation";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Innovation />
       <Team />
       <Contact />
+      <ContactForm />
     </div>
   );
 };
