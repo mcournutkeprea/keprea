@@ -79,7 +79,8 @@ const ContactForm = () => {
             <div className="pt-6 border-t border-muted">
               <div className="text-center space-y-2">
                 <p className="text-sm text-muted-foreground">Ou contactez-nous directement :</p>
-                <div className="flex justify-center items-center">
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-sm font-medium">📧 g.daoulas@keprea.com</span>
                   <span className="text-sm font-medium">📍 Damparis, France</span>
                 </div>
               </div>

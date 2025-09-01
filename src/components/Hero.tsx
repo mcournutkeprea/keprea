@@ -27,8 +27,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Keprea développe des solutions de fertilisation, de boost et de protection 
-            révolutionnaires à base d'insectes pour optimiser vos cultures agricoles.
+            Keprea développe des solutions de fertilisation, des booster et des solutions de protection à base d'insectes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
