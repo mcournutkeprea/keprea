@@ -14,8 +14,8 @@ const Innovation = () => {
             
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-accent-foreground text-sm">🧬</span>
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
+                  <span className="text-white text-lg font-bold">🧬</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Acides aminés bioactifs</h3>
@@ -26,8 +26,8 @@ const Innovation = () => {
               </div>
               
               <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-accent-foreground text-sm">🔬</span>
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
+                  <span className="text-white text-lg font-bold">🔬</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Chitine fonctionnelle</h3>
@@ -38,8 +38,8 @@ const Innovation = () => {
               </div>
               
               <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-accent-foreground text-sm">🐛</span>
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
+                  <span className="text-white text-lg font-bold">🐛</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Biocontrôle vivant</h3>

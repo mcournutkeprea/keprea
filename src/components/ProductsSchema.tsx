@@ -35,8 +35,12 @@ const ProductsSchema = () => {
 
               {/* Booster */}
               <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-green-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-3xl">🚀</span>
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-green-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/9853d018-a698-4557-9110-e59c7dda7061.png" 
+                    alt="Booster - pulvérisateur agricole" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-bold text-foreground mb-2">Booster</h3>
                 <p className="text-sm text-muted-foreground">Molécules d'intérêt contre l'ensemble des stress de la plante</p>
@@ -44,8 +48,12 @@ const ProductsSchema = () => {
 
               {/* Protection */}
               <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-3xl">🛡️</span>
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/9117a39b-c413-496a-a9cd-892017ab37b7.png" 
+                    alt="Protection - structure moléculaire huile" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-bold text-foreground mb-2">Protection</h3>
                 <p className="text-sm text-muted-foreground">Solutions naturelles de biocontrôle</p>
