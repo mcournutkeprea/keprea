@@ -57,12 +57,7 @@ const Innovation = () => {
               
               <div className="grid grid-cols-1 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm text-muted-foreground">naturelles et biodégradables</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">20x</div>
-                  <div className="text-sm text-muted-foreground">plus efficace que les solutions chimiques traditionnelles</div>
+                  <div className="text-sm text-muted-foreground">La plante détecte les molécules d'insectes et réagit</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-2">0</div>
@@ -78,7 +73,7 @@ const Innovation = () => {
             </div>
             
             <div className="bg-card p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Pourquoi les macro-organismes ?</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Pourquoi les macro-organismes vivants ?</h3>
               
               <div className="grid grid-cols-1 gap-6">
                 <div className="text-center">
