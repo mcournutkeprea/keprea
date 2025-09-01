@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 142 69% 8%;
 
-    --primary: 142 69% 20%;
-    --primary-foreground: 120 100% 98%;
+    --primary: 143 88% 57%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 120 60% 95%;
     --secondary-foreground: 142 69% 8%;
@@ -65,8 +65,8 @@ All colors MUST be HSL.
     --popover: 142 50% 12%;
     --popover-foreground: 120 100% 98%;
 
-    --primary: 88 77% 45%;
-    --primary-foreground: 142 69% 8%;
+    --primary: 143 88% 57%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 142 30% 25%;
     --secondary-foreground: 120 100% 98%;
@@ -101,5 +101,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
   }
 }
