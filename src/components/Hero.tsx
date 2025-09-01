@@ -4,14 +4,23 @@ import heroPlants from "@/assets/hero-plants-wind.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
+      {/* Animated Background - Style OneOne Bio */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover animate-pan-up"
+          className="absolute inset-0 bg-cover animate-plant-sway"
           style={{ 
             backgroundImage: `url(/lovable-uploads/a475772e-8a3f-471f-86bd-e279450c6590.png)`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center bottom'
+            backgroundPosition: 'center center'
+          }}
+        />
+        <div 
+          className="absolute inset-0 bg-cover animate-pan-up opacity-40"
+          style={{ 
+            backgroundImage: `url(/lovable-uploads/a475772e-8a3f-471f-86bd-e279450c6590.png)`,
+            backgroundSize: '110% 110%',
+            backgroundPosition: 'center center',
+            mixBlendMode: 'multiply'
           }}
         />
         
