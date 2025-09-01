@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import MapFrance from "./MapFrance";
+import europeMapLocation from "@/assets/europe-map-location.png";
 
 const Contact = () => {
   return (
@@ -36,24 +37,13 @@ const Contact = () => {
           </Card>
           
           <div className="space-y-6">
-            
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-primary text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Localisation</h3>
-                    <p className="text-muted-foreground">3 avenue Innovia</p>
-                    <p className="text-muted-foreground">Damparis, France</p>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <MapFrance />
-                </div>
-              </CardContent>
-            </Card>
+            <div className="w-full">
+              <img 
+                src={europeMapLocation} 
+                alt="Localisation Keprea - 2H de Paris, Lyon, Bâle, Genève" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
