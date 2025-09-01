@@ -61,7 +61,7 @@ const Solutions = () => {
             {/* Image de fond */}
             <div 
               className="absolute inset-0 opacity-30 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/7feb4ae5-12e3-41d1-b89f-3d1f9c152d85.png')` }}
+              style={{ backgroundImage: `url('/src/assets/biostimulants-concept.jpg')` }}
             ></div>
           </div>
 
@@ -111,7 +111,7 @@ const Solutions = () => {
             {/* Image de fond */}
             <div 
               className="absolute inset-0 opacity-20 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/2b2944de-aec7-4fae-a32a-04a140dc619e.png')` }}
+              style={{ backgroundImage: `url('/src/assets/protection-shield.jpg')` }}
             ></div>
           </div>
         </div>

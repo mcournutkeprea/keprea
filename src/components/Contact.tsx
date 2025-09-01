@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import MapFrance from "./MapFrance";
 
 const Contact = () => {
   return (
@@ -57,8 +58,8 @@ const Contact = () => {
                     <p className="text-muted-foreground">Damparis, France</p>
                   </div>
                 </div>
-                <div className="mt-4 h-32 bg-muted rounded-lg flex items-center justify-center">
-                  <p className="text-sm text-muted-foreground">📍 Damparis, France</p>
+                <div className="mt-4">
+                  <MapFrance />
                 </div>
               </CardContent>
             </Card>
