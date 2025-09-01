@@ -52,9 +52,10 @@ const ContactForm = () => {
                     <SelectValue placeholder="Sélectionnez un sujet" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="biostimulants">Solutions biostimulantes</SelectItem>
+                    <SelectItem value="booster">Booster</SelectItem>
                     <SelectItem value="biocontrol">Solutions de biocontrôle</SelectItem>
-                    <SelectItem value="partnership">Partenariat</SelectItem>
+                    <SelectItem value="pollinisation">Pollinisation</SelectItem>
+                    <SelectItem value="plusieurs-solutions">Plusieurs solutions</SelectItem>
                     <SelectItem value="information">Demande d'information générale</SelectItem>
                   </SelectContent>
                 </Select>

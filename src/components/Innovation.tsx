@@ -56,14 +56,21 @@ const Innovation = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">Pourquoi les substances issues d'insectes ?</h3>
               
               <div className="grid grid-cols-1 gap-6">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary mb-2">Interagissent avec la plante qui "répond" pour mieux se défendre des stress de l'environnement</div>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">✓</div>
+                  <div className="text-lg font-bold text-green-500">Interagissent avec la plante qui "répond" pour mieux se défendre des stress de l'environnement</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary mb-2">Respectent le sol sans aucun résidu toxique</div>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">✓</div>
+                  <div className="text-lg font-bold text-green-500">Respectent le sol sans aucun résidu toxique</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary mb-2">Améliorent le rendement</div>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">✓</div>
+                  <div className="text-lg font-bold text-green-500">Améliorent le rendement</div>
                 </div>
               </div>
               
