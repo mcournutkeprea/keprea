@@ -9,8 +9,7 @@ const Innovation = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Nous exploitons le potentiel extraordinaire des insectes pour créer des solutions 
-              agricoles révolutionnaires. Notre approche scientifique combine tradition et innovation 
-              pour vous offrir des produits performants et respectueux de l'environnement.
+              agricoles durables, performantes et peu coûteuses. Notre approche scientifique combine tradition, innovation pour répondre au besoin des producteurs agricoles.
             </p>
             
             <div className="space-y-4">
@@ -53,30 +52,26 @@ const Innovation = () => {
           </div>
           
           <div className="bg-card p-8 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Pourquoi les insectes ?</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">Pourquoi les macro-organismes ?</h3>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">95%</div>
-                <div className="text-sm text-muted-foreground">Moins d'eau</div>
+                <div className="text-3xl font-bold text-primary mb-2">84%</div>
+                <div className="text-sm text-muted-foreground">des cultures dépendent des insectes pour leur qualité et rendement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">80%</div>
-                <div className="text-sm text-muted-foreground">Moins d'espace</div>
+                <div className="text-3xl font-bold text-primary mb-2">5500</div>
+                <div className="text-sm text-muted-foreground">auxiliaires utiles recensés en France</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">99%</div>
-                <div className="text-sm text-muted-foreground">Moins de CO₂</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Recyclage</div>
+                <div className="text-3xl font-bold text-primary mb-2">10 000</div>
+                <div className="text-sm text-muted-foreground">individus actifs par m² en moyenne</div>
               </div>
             </div>
             
             <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
               <p className="text-sm text-muted-foreground text-center">
-                "Une révolution agricole respectueuse de la planète"
+                "Les macro-organismes créent un écosystème équilibré, transformant les ressources naturelles en solutions durables pour l'agriculture."
               </p>
             </div>
           </div>

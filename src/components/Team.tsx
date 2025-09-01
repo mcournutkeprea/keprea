@@ -13,14 +13,14 @@ const Team = () => {
   
   // Positions des membres sur la photo d'équipe
   const teamMembers: TeamMember[] = [
-    { id: 1, name: "Jean", role: "Directeur", x: 12, y: 65 },
-    { id: 2, name: "Michel", role: "Conseiller", x: 24, y: 65 },
-    { id: 3, name: "François", role: "Responsable R&D", x: 36, y: 65 },
-    { id: 4, name: "Antoine", role: "Ingénieur", x: 48, y: 65 },
-    { id: 5, name: "Pierre", role: "Directeur Commercial", x: 60, y: 65 },
-    { id: 6, name: "Claude", role: "Responsable Production", x: 72, y: 65 },
-    { id: 7, name: "Bernard", role: "Consultant", x: 84, y: 65 },
-    { id: 8, name: "Thomas", role: "Responsable International", x: 95, y: 65 },
+    { id: 1, name: "Jean", role: "Directeur", x: 12, y: 45 },
+    { id: 2, name: "Michel", role: "Conseiller", x: 24, y: 45 },
+    { id: 3, name: "François", role: "Responsable R&D", x: 36, y: 45 },
+    { id: 4, name: "Antoine", role: "Ingénieur", x: 48, y: 45 },
+    { id: 5, name: "Pierre", role: "Directeur Commercial", x: 60, y: 45 },
+    { id: 6, name: "Claude", role: "Responsable Production", x: 72, y: 45 },
+    { id: 7, name: "Bernard", role: "Consultant", x: 84, y: 45 },
+    { id: 8, name: "Thomas", role: "Responsable International", x: 95, y: 45 },
   ];
 
   return (

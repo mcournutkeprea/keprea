@@ -21,21 +21,39 @@ const Solutions = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium">K Boost - Seed treatment</span>
+                  <span className="text-sm font-medium">Boostea13 - Seed treatment</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium">K Stim - Foliar application</span>
+                  <span className="text-sm font-medium">Solea110 - Foliar application</span>
                 </div>
               </div>
 
-              {/* Formules chimiques */}
-              <div className="flex gap-4 mb-4">
-                <div className="bg-white/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/20">
-                  <span className="text-sm font-mono text-foreground">Proline C₅H₉NO₂</span>
+              {/* Icônes symboliques */}
+              <div className="flex gap-6 justify-center mb-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
+                    <div className="text-2xl">🛡️</div>
+                  </div>
+                  <span className="text-xs text-center">Protection</span>
                 </div>
-                <div className="bg-white/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/20">
-                  <span className="text-sm font-mono text-foreground">Glutamic acid C₅H₉NO₄</span>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
+                    <div className="text-2xl">💧</div>
+                  </div>
+                  <span className="text-xs text-center">Hydratation</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
+                    <div className="text-2xl">🌱</div>
+                  </div>
+                  <span className="text-xs text-center">Racines</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
+                    <div className="text-2xl">🌽</div>
+                  </div>
+                  <span className="text-xs text-center">Rendement</span>
                 </div>
               </div>
             </div>
@@ -57,7 +75,7 @@ const Solutions = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="text-2xl">🛡️</div>
-                    <span className="text-sm font-medium">Biofongicide</span>
+                    <span className="text-sm font-medium">Biofongicide - substances d'insectes liquides</span>
                   </div>
                   <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                 </div>
@@ -65,7 +83,7 @@ const Solutions = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="text-2xl">🛡️</div>
-                    <span className="text-sm font-medium">Bionématicide</span>
+                    <span className="text-sm font-medium">Bionématicide - substances d'insectes solides</span>
                   </div>
                   <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                 </div>
@@ -73,9 +91,12 @@ const Solutions = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="text-2xl">🛡️</div>
-                    <span className="text-sm font-medium">Contre les principaux ravageurs</span>
+                    <span className="text-sm font-medium">Solutions innovantes contre les ravageurs</span>
                   </div>
-                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
+                  <div className="text-right">
+                    <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
+                    <p className="text-xs text-muted-foreground mt-1">Méthodes d'élevage uniques & combinaisons biocontrôle</p>
+                  </div>
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-muted">

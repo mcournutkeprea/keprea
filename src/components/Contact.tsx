@@ -21,32 +21,11 @@ const Contact = () => {
               <CardTitle className="text-2xl">Parlons de votre projet</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Expertise personnalisée</h3>
-                <p className="text-muted-foreground text-sm">
-                  Nos experts analysent vos besoins spécifiques pour vous proposer 
-                  les solutions les plus adaptées à vos cultures.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Accompagnement complet</h3>
-                <p className="text-muted-foreground text-sm">
-                  De la consultation initiale au suivi de vos résultats, 
-                  nous vous accompagnons à chaque étape.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Innovation continue</h3>
-                <p className="text-muted-foreground text-sm">
-                  Bénéficiez des dernières avancées de la recherche en biosolutions 
-                  et agtech.
-                </p>
-              </div>
-              
+              <p className="text-muted-foreground">
+                Découvrez comment nos biosolutions peuvent transformer votre approche agricole.
+              </p>
               <Button size="lg" className="w-full">
-                Demander une consultation
+                En savoir plus
               </Button>
             </CardContent>
           </Card>
@@ -74,22 +53,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Localisation</h3>
-                    <p className="text-muted-foreground">France, spécialistes agtech</p>
+                    <p className="text-muted-foreground">3 avenue Innovia</p>
+                    <p className="text-muted-foreground">Damparis, France</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-primary text-xl">🔬</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">R&D</h3>
-                    <p className="text-muted-foreground">Innovation biosolutions</p>
-                  </div>
+                <div className="mt-4 h-32 bg-muted rounded-lg flex items-center justify-center">
+                  <p className="text-sm text-muted-foreground">📍 Damparis, France</p>
                 </div>
               </CardContent>
             </Card>
