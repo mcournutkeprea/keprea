@@ -1,3 +1,5 @@
+import { Circle, Worm, Bug } from "lucide-react";
+
 const Solutions = () => {
   return (
     <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -15,17 +17,17 @@ const Solutions = () => {
           {/* Section Biostimulant - Booster */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8">
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Biostimulant solutions</h3>
-              <p className="text-lg font-medium text-muted-foreground mb-6">For soil quality and plant strength</p>
+              <h3 className="text-2xl font-bold mb-2 text-white">Biostimulant solutions</h3>
+              <p className="text-lg font-medium text-white/90 mb-6">For soil quality and plant strength</p>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium">Boostea13 - Seed treatment</span>
+                  <div className="w-3 h-3 rounded-full bg-white"></div>
+                  <span className="text-sm font-medium text-white">Boostea13 - Seed treatment</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium">Solea110 - Foliar application</span>
+                  <div className="w-3 h-3 rounded-full bg-white"></div>
+                  <span className="text-sm font-medium text-white">Solea110 - Foliar application</span>
                 </div>
               </div>
 
@@ -35,74 +37,76 @@ const Solutions = () => {
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
                     <div className="text-2xl">🛡️</div>
                   </div>
-                  <span className="text-xs text-center">Protection</span>
+                  <span className="text-xs text-center text-white">Protection</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
                     <div className="text-2xl">💧</div>
                   </div>
-                  <span className="text-xs text-center">Hydratation</span>
+                  <span className="text-xs text-center text-white">Hydratation</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
                     <div className="text-2xl">🌱</div>
                   </div>
-                  <span className="text-xs text-center">Racines</span>
+                  <span className="text-xs text-center text-white">Racines</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-2">
                     <div className="text-2xl">🌽</div>
                   </div>
-                  <span className="text-xs text-center">Rendement</span>
+                  <span className="text-xs text-center text-white">Rendement</span>
                 </div>
               </div>
             </div>
             
             {/* Image de fond */}
             <div 
-              className="absolute inset-0 opacity-30 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('/src/assets/biostimulants-concept.jpg')` }}
             ></div>
+            {/* Filtre sombre */}
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           {/* Section Biocontrôle */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8">
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Bioncontrol solutions</h3>
-              <p className="text-lg font-medium text-muted-foreground mb-6">Protecting your crops, naturally.</p>
+              <h3 className="text-2xl font-bold mb-2 text-white">Bioncontrol solutions</h3>
+              <p className="text-lg font-medium text-white/90 mb-6">Protecting your crops, naturally.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="text-2xl">🛡️</div>
-                    <span className="text-sm font-medium">Biofongicide - substances d'insectes liquides</span>
+                    <Circle className="w-6 h-6 text-white" />
+                    <span className="text-sm font-medium text-white">Biofongicide - substances d'insectes liquides</span>
                   </div>
                   <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="text-2xl">🛡️</div>
-                    <span className="text-sm font-medium">Bionématicide - substances d'insectes solides</span>
+                    <Worm className="w-6 h-6 text-white" />
+                    <span className="text-sm font-medium text-white">Bionématicide - substances d'insectes solides</span>
                   </div>
                   <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="text-2xl">🛡️</div>
-                    <span className="text-sm font-medium">Solutions innovantes contre les ravageurs</span>
+                    <Bug className="w-6 h-6 text-white" />
+                    <span className="text-sm font-medium text-white">Solutions innovantes contre les ravageurs</span>
                   </div>
                   <div className="text-right">
                     <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
-                    <p className="text-xs text-muted-foreground mt-1">Méthodes d'élevage uniques & combinaisons biocontrôle</p>
+                    <p className="text-xs text-white/70 mt-1">Méthodes d'élevage uniques & combinaisons biocontrôle</p>
                   </div>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-muted">
+                <div className="mt-4 pt-4 border-t border-white/20">
                   <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-primary"></div>
-                    <span className="text-sm font-medium">Insectes auxiliaires (Lacewing)</span>
+                    <div className="w-3 h-3 rounded-full bg-white"></div>
+                    <span className="text-sm font-medium text-white">Insectes auxiliaires (Lacewing)</span>
                   </div>
                 </div>
               </div>
@@ -110,9 +114,11 @@ const Solutions = () => {
             
             {/* Image de fond */}
             <div 
-              className="absolute inset-0 opacity-20 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('/lovable-uploads/2b2944de-aec7-4fae-a32a-04a140dc619e.png')` }}
             ></div>
+            {/* Filtre sombre */}
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
         </div>
       </div>
