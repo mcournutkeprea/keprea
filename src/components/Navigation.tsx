@@ -9,7 +9,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/f442514f-eeef-4f75-9058-46c4d7871765.png" 
               alt="Keprea Logo" 
-              className="h-8 w-auto"
+              className="h-12 w-auto bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2"
             />
           </div>
           
