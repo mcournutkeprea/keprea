@@ -15,7 +15,7 @@ const Solutions = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Section Booster */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-12 min-h-[400px]">
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-2 text-white">Booster solutions</h3>
               <p className="text-lg font-medium text-white/90 mb-6">For soil quality and plant strength</p>
@@ -58,7 +58,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Biocontrôle */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-12 min-h-[400px]">
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-2 text-white">Bioncontrol solutions</h3>
               <p className="text-lg font-medium text-white/90 mb-6">Protecting your crops, naturally.</p>
