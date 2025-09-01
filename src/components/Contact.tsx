@@ -36,19 +36,6 @@ const Contact = () => {
           </Card>
           
           <div className="space-y-6">
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-primary text-xl">📧</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground">contact@keprea.com</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
             
             <Card>
               <CardContent className="p-6">
@@ -62,8 +49,8 @@ const Contact = () => {
                     <p className="text-muted-foreground">Damparis, France</p>
                   </div>
                 </div>
-                <div className="mt-4 h-32 bg-muted rounded-lg flex items-center justify-center">
-                  <p className="text-sm text-muted-foreground">📍 Damparis, France</p>
+                <div className="mt-4">
+                  <MapFrance />
                 </div>
               </CardContent>
             </Card>

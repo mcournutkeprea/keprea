@@ -14,33 +14,7 @@ const Hero = () => {
             backgroundPosition: 'center center'
           }}
         />
-        <div 
-          className="absolute inset-0 bg-cover animate-slow-zoom opacity-30"
-          style={{ 
-            backgroundImage: `url(/lovable-uploads/6a8303db-496f-46ce-9260-7c76071683b9.png)`,
-            backgroundSize: '120% 120%',
-            backgroundPosition: 'center center',
-            mixBlendMode: 'overlay',
-            animationDelay: '10s'
-          }}
-        />
         
-        {/* Animated water drops overlay */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Water drops falling */}
-          <div className="absolute top-0 left-1/4 w-2 h-4 bg-white/30 rounded-full animate-water-drop" style={{ animationDelay: '0s' }}></div>
-          <div className="absolute top-0 left-1/2 w-1.5 h-3 bg-primary/40 rounded-full animate-water-drop" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-0 left-3/4 w-1 h-2 bg-white/40 rounded-full animate-water-drop" style={{ animationDelay: '4s' }}></div>
-          <div className="absolute top-0 left-1/3 w-1.5 h-3 bg-white/25 rounded-full animate-water-drop" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-0 left-2/3 w-1 h-2 bg-primary/30 rounded-full animate-water-drop" style={{ animationDelay: '3s' }}></div>
-          <div className="absolute top-0 left-1/5 w-1 h-2.5 bg-white/35 rounded-full animate-water-drop" style={{ animationDelay: '5s' }}></div>
-          <div className="absolute top-0 left-4/5 w-1.5 h-3.5 bg-white/20 rounded-full animate-water-drop" style={{ animationDelay: '1.5s' }}></div>
-          
-          {/* Ripple effects on ground */}
-          <div className="absolute bottom-10 left-1/4 w-8 h-2 bg-white/10 rounded-full animate-ripple" style={{ animationDelay: '6s' }}></div>
-          <div className="absolute bottom-12 left-1/2 w-6 h-1.5 bg-primary/15 rounded-full animate-ripple" style={{ animationDelay: '8s' }}></div>
-          <div className="absolute bottom-8 left-3/4 w-4 h-1 bg-white/20 rounded-full animate-ripple" style={{ animationDelay: '10s' }}></div>
-        </div>
         
       </div>
 

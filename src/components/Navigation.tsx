@@ -20,14 +20,15 @@ const Navigation = () => {
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
                 À propos
               </a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </a>
             </div>
           </div>
           
           <div className="hidden md:block">
-            <Button variant="default" size="sm">
+            <Button 
+              variant="default" 
+              size="sm"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Nous contacter
             </Button>
           </div>
