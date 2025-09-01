@@ -14,10 +14,10 @@ const Solutions = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Section Biostimulant - Booster */}
+          {/* Section Booster */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8">
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-2 text-white">Biostimulant solutions</h3>
+              <h3 className="text-2xl font-bold mb-2 text-white">Booster solutions</h3>
               <p className="text-lg font-medium text-white/90 mb-6">For soil quality and plant strength</p>
               
               <div className="space-y-3 mb-6">
@@ -63,7 +63,7 @@ const Solutions = () => {
             {/* Image de fond */}
             <div 
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/src/assets/biostimulants-concept.jpg')` }}
+              style={{ backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')` }}
             ></div>
             {/* Filtre sombre */}
             <div className="absolute inset-0 bg-black/40"></div>
@@ -81,7 +81,6 @@ const Solutions = () => {
                     <Circle className="w-6 h-6 text-white" />
                     <span className="text-sm font-medium text-white">Biofongicide - substances d'insectes liquides</span>
                   </div>
-                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
@@ -89,7 +88,6 @@ const Solutions = () => {
                     <Worm className="w-6 h-6 text-white" />
                     <span className="text-sm font-medium text-white">Bionématicide - substances d'insectes solides</span>
                   </div>
-                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
@@ -98,7 +96,6 @@ const Solutions = () => {
                     <span className="text-sm font-medium text-white">Solutions innovantes contre les ravageurs</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
                     <p className="text-xs text-white/70 mt-1">Méthodes d'élevage uniques & combinaisons biocontrôle</p>
                   </div>
                 </div>
