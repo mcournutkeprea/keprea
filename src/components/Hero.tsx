@@ -7,20 +7,21 @@ const Hero = () => {
       {/* Animated Background - Style OneOne Bio */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover animate-plant-sway"
+          className="absolute inset-0 bg-cover animate-slow-zoom"
           style={{ 
-            backgroundImage: `url(/lovable-uploads/a475772e-8a3f-471f-86bd-e279450c6590.png)`,
+            backgroundImage: `url(/lovable-uploads/6a8303db-496f-46ce-9260-7c76071683b9.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center'
           }}
         />
         <div 
-          className="absolute inset-0 bg-cover animate-pan-up opacity-40"
+          className="absolute inset-0 bg-cover animate-slow-zoom opacity-30"
           style={{ 
-            backgroundImage: `url(/lovable-uploads/a475772e-8a3f-471f-86bd-e279450c6590.png)`,
-            backgroundSize: '110% 110%',
+            backgroundImage: `url(/lovable-uploads/6a8303db-496f-46ce-9260-7c76071683b9.png)`,
+            backgroundSize: '120% 120%',
             backgroundPosition: 'center center',
-            mixBlendMode: 'multiply'
+            mixBlendMode: 'overlay',
+            animationDelay: '10s'
           }}
         />
         

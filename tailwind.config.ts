@@ -162,18 +162,18 @@ export default {
 						transform: 'scale(1.05) translateY(-10px)'
 					}
 				},
-				'plant-sway': {
-					'0%, 100%': {
-						transform: 'scale(1.02) translateX(0px) rotateZ(0deg)',
-						filter: 'brightness(1) contrast(1.1)'
+				'slow-zoom': {
+					'0%': {
+						transform: 'scale(1)',
+						filter: 'brightness(1) contrast(1)'
 					},
-					'33%': {
-						transform: 'scale(1.03) translateX(-1px) rotateZ(-0.2deg)',
+					'50%': {
+						transform: 'scale(1.1)',
 						filter: 'brightness(1.05) contrast(1.1)'
 					},
-					'66%': {
-						transform: 'scale(1.03) translateX(1px) rotateZ(0.2deg)',
-						filter: 'brightness(0.98) contrast(1.1)'
+					'100%': {
+						transform: 'scale(1)',
+						filter: 'brightness(1) contrast(1)'
 					}
 				},
 				'water-drop': {
@@ -219,7 +219,7 @@ export default {
 				'sparkle': 'sparkle 2s ease-in-out infinite',
 				'sway': 'sway 8s ease-in-out infinite',
 				'pan-up': 'pan-up 12s ease-in-out infinite',
-				'plant-sway': 'plant-sway 8s ease-in-out infinite',
+				'slow-zoom': 'slow-zoom 30s ease-in-out infinite',
 				'water-drop': 'water-drop 6s linear infinite',
 				'ripple': 'ripple 3s ease-out infinite'
 			}
