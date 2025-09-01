@@ -23,11 +23,11 @@ const Solutions = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-white"></div>
-                  <span className="text-sm font-medium text-white">Boostea13 - Seed treatment</span>
+                  <span className="text-sm font-medium text-white">Boostea13 - Foliar application</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-white"></div>
-                  <span className="text-sm font-medium text-white">Solea110 - Foliar application</span>
+                  <span className="text-sm font-medium text-white">Solea110 - Soil application</span>
                 </div>
               </div>
 
@@ -94,16 +94,6 @@ const Solutions = () => {
                   <div className="flex items-center gap-3">
                     <Bug className="w-6 h-6 text-white" />
                     <span className="text-sm font-medium text-white">Solutions innovantes contre les ravageurs</span>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs text-white/70 mt-1">Méthodes d'élevage uniques & combinaisons biocontrôle</p>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-white"></div>
-                    <span className="text-sm font-medium text-white">Insectes auxiliaires (Lacewing)</span>
                   </div>
                 </div>
               </div>
