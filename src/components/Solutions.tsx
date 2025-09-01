@@ -32,31 +32,19 @@ const Solutions = () => {
                   </div>
                 </div>
 
-                {/* Icônes symboliques - verticales à droite */}
-                <div className="flex lg:flex-col gap-4 lg:gap-3 justify-center lg:justify-start lg:ml-6">
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
-                      <Shield className="w-5 h-5 lg:w-4 lg:h-4 text-white" />
-                    </div>
-                    <span className="text-xs text-center text-white">Protection</span>
+                {/* Icônes symboliques - verticales à droite sans texte */}
+                <div className="flex lg:flex-col gap-6 lg:gap-8 justify-center lg:justify-start lg:ml-8 lg:mt-4">
+                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <Shield className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
-                      <Droplets className="w-5 h-5 lg:w-4 lg:h-4 text-white" />
-                    </div>
-                    <span className="text-xs text-center text-white">Hydratation</span>
+                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <Droplets className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
-                      <GitBranch className="w-5 h-5 lg:w-4 lg:h-4 text-white" />
-                    </div>
-                    <span className="text-xs text-center text-white">Racines</span>
+                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <GitBranch className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 lg:w-8 lg:h-8 rounded-full bg-white/20 flex items-center justify-center mb-1">
-                      <Wheat className="w-5 h-5 lg:w-4 lg:h-4 text-white" />
-                    </div>
-                    <span className="text-xs text-center text-white">Rendement</span>
+                  <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <Wheat className="w-6 h-6 lg:w-5 lg:h-5 text-white" />
                   </div>
                 </div>
               </div>
