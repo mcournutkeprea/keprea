@@ -5,14 +5,15 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center animate-gentle-zoom"
-          style={{ 
-            backgroundImage: `url(/lovable-uploads/02291a4f-e953-464d-88bb-2ded1fed45c6.png)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
+        <video 
+          className="absolute inset-0 w-full h-full object-cover animate-gentle-zoom"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hero-background-video.mp4" type="video/mp4" />
+        </video>
         
         {/* Animated particles overlay */}
         <div className="absolute inset-0 pointer-events-none">
