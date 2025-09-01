@@ -65,14 +65,6 @@ const Hero = () => {
             >
               Découvrir nos solutions
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="px-8 py-3 border-white text-white hover:bg-white hover:text-primary"
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              En savoir plus
-            </Button>
           </div>
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -81,12 +73,12 @@ const Hero = () => {
               <div className="text-white/80">Naturel</div>
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">+30%</div>
-              <div className="text-white/80">Performance</div>
+              <div className="text-3xl font-bold text-white mb-2">0</div>
+              <div className="text-white/80">pas d'investissement dans le matériel agricole</div>
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">0</div>
-              <div className="text-white/80">Impact chimique</div>
+              <div className="text-3xl font-bold text-white mb-2">10</div>
+              <div className="text-white/80">solutions développées dont 2 déjà disponibles</div>
             </div>
           </div>
         </div>
