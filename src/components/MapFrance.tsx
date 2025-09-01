@@ -47,8 +47,6 @@ const MapFrance = () => {
       <div ref={mapContainer} className="w-full h-full" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
         <div className="text-center p-4">
-          <div className="text-4xl mb-2">📍</div>
-          <div className="font-semibold text-foreground">Dole, France</div>
           <div className="text-sm text-muted-foreground">3 avenue Innovia, Damparis</div>
         </div>
       </div>
