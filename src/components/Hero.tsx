@@ -42,8 +42,6 @@ const Hero = () => {
           <div className="absolute bottom-8 left-3/4 w-4 h-1 bg-white/20 rounded-full animate-ripple" style={{ animationDelay: '10s' }}></div>
         </div>
         
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
