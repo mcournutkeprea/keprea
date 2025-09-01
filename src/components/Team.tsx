@@ -11,12 +11,16 @@ interface TeamMember {
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   
-  // Positions des membres sur la photo (à ajuster selon la vraie photo)
+  // Positions des membres sur la photo d'équipe
   const teamMembers: TeamMember[] = [
-    { id: 1, name: "Marie", role: "CEO", x: 25, y: 40 },
-    { id: 2, name: "Pierre", role: "CTO", x: 50, y: 45 },
-    { id: 3, name: "Sophie", role: "R&D Manager", x: 75, y: 42 },
-    // Ajoutez plus de membres selon votre équipe
+    { id: 1, name: "Jean", role: "Directeur", x: 12, y: 65 },
+    { id: 2, name: "Michel", role: "Conseiller", x: 24, y: 65 },
+    { id: 3, name: "François", role: "Responsable R&D", x: 36, y: 65 },
+    { id: 4, name: "Antoine", role: "Ingénieur", x: 48, y: 65 },
+    { id: 5, name: "Pierre", role: "Directeur Commercial", x: 60, y: 65 },
+    { id: 6, name: "Claude", role: "Responsable Production", x: 72, y: 65 },
+    { id: 7, name: "Bernard", role: "Consultant", x: 84, y: 65 },
+    { id: 8, name: "Thomas", role: "Responsable International", x: 95, y: 65 },
   ];
 
   return (
@@ -32,12 +36,13 @@ const Team = () => {
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          {/* Container pour la photo d'équipe */}
-          <div className="relative overflow-hidden rounded-lg shadow-lg bg-gray-200 aspect-[16/10]">
-            {/* Placeholder pour la photo - sera remplacé par votre vraie photo */}
-            <div className="w-full h-full flex items-center justify-center text-gray-500">
-              <p>Photo d'équipe à intégrer</p>
-            </div>
+          {/* Photo d'équipe */}
+          <div className="relative overflow-hidden rounded-lg shadow-lg aspect-[16/10]">
+            <img 
+              src="/lovable-uploads/a9befb70-02c2-43d9-96de-99567fb9d734.png" 
+              alt="Équipe Keprea - Experts en agtech et biosolutions"
+              className="w-full h-full object-cover"
+            />
 
             {/* Points interactifs pour chaque membre */}
             {teamMembers.map((member) => (
