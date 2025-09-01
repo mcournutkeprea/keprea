@@ -1,117 +1,97 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
 const Solutions = () => {
-  const boosterProducts = [
-    {
-      name: "K Boost",
-      type: "Seed",
-      description: "Traitement de semences à base d'acides aminés d'insectes pour optimiser la germination et le développement racinaire",
-      benefits: ["Germination améliorée", "Développement racinaire", "Résistance au stress"]
-    },
-    {
-      name: "K Stim", 
-      type: "Foliar",
-      description: "Application foliaire pour stimuler la croissance et la résistance des plantes grâce aux propriétés de la chitine",
-      benefits: ["Croissance stimulée", "Résistance renforcée", "Meilleure photosynthèse"]
-    }
-  ];
-
-  const biocontroleProducts = [
-    {
-      name: "K Protect",
-      description: "Solution bio-fongicide à base d'extraits d'insectes pour protéger contre les maladies fongiques",
-      benefits: ["Protection antifongique", "Action préventive", "Respectueux de l'environnement"]
-    },
-    {
-      name: "K Tin",
-      description: "Bio-nématicide naturel pour lutter contre les nématodes parasites des cultures",
-      benefits: ["Contrôle des nématodes", "Protection des racines", "Solution naturelle"]
-    },
-    {
-      name: "Insectes auxiliaires",
-      description: "Lâchers d'insectes bénéfiques (Ephestia, Lacewing) pour un contrôle biologique optimal",
-      benefits: ["Contrôle biologique", "Équilibre naturel", "Protection durable"]
-    }
-  ];
-
   return (
     <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        
-        {/* Section Booster */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Booster
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Stimulateurs de croissance à base d'acides aminés et chitine d'insectes pour optimiser le développement de vos cultures
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {boosterProducts.map((product, index) => (
-              <Card key={index} className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="text-2xl">🚀</div>
-                    <div>
-                      <CardTitle className="text-xl font-bold">{product.name}</CardTitle>
-                      <span className="text-sm text-primary font-medium">{product.type}</span>
-                    </div>
-                  </div>
-                  <CardDescription className="text-muted-foreground">
-                    {product.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {product.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <span className="text-primary mr-2">✓</span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Our Bio-solutions
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Addressing the major challenges faced by farmers worldwide: competitiveness, productivity, environmental preservation
+          </p>
         </div>
 
-        {/* Section Biocontrôle */}
-        <div>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Biocontrôle
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Solutions de protection biologique pour une agriculture durable et respectueuse de l'environnement
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Section Biostimulant - Booster */}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8">
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold mb-2 text-foreground">Biostimulant solutions</h3>
+              <p className="text-lg font-medium text-muted-foreground mb-6">For soil quality and plant strength</p>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
+                  <span className="text-sm font-medium">K Boost - Seed treatment</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
+                  <span className="text-sm font-medium">K Stim - Foliar application</span>
+                </div>
+              </div>
+
+              {/* Formules chimiques */}
+              <div className="flex gap-4 mb-4">
+                <div className="bg-white/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/20">
+                  <span className="text-sm font-mono text-foreground">Proline C₅H₉NO₂</span>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/20">
+                  <span className="text-sm font-mono text-foreground">Glutamic acid C₅H₉NO₄</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Image de fond */}
+            <div 
+              className="absolute inset-0 opacity-30 bg-cover bg-center"
+              style={{ backgroundImage: `url('/lovable-uploads/7feb4ae5-12e3-41d1-b89f-3d1f9c152d85.png')` }}
+            ></div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {biocontroleProducts.map((product, index) => (
-              <Card key={index} className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
-                <CardHeader className="text-center">
-                  <div className="text-4xl mb-4">🛡️</div>
-                  <CardTitle className="text-xl font-bold">{product.name}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {product.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {product.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <span className="text-primary mr-2">✓</span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+
+          {/* Section Biocontrôle */}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8">
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold mb-2 text-foreground">Bioncontrol solutions</h3>
+              <p className="text-lg font-medium text-muted-foreground mb-6">Protecting your crops, naturally.</p>
+              
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="text-2xl">🛡️</div>
+                    <span className="text-sm font-medium">Biofongicide</span>
+                  </div>
+                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="text-2xl">🛡️</div>
+                    <span className="text-sm font-medium">Bionématicide</span>
+                  </div>
+                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="text-2xl">🛡️</div>
+                    <span className="text-sm font-medium">Contre les principaux ravageurs</span>
+                  </div>
+                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">En développement</span>
+                </div>
+
+                <div className="mt-4 pt-4 border-t border-muted">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-primary"></div>
+                    <span className="text-sm font-medium">Insectes auxiliaires (Lacewing)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Image de fond */}
+            <div 
+              className="absolute inset-0 opacity-20 bg-cover bg-center"
+              style={{ backgroundImage: `url('/lovable-uploads/2b2944de-aec7-4fae-a32a-04a140dc619e.png')` }}
+            ></div>
           </div>
         </div>
       </div>
