@@ -221,7 +221,12 @@ export default {
 				'pan-up': 'pan-up 12s ease-in-out infinite',
 				'slow-zoom': 'slow-zoom 30s ease-in-out infinite',
 				'water-drop': 'water-drop 6s linear infinite',
-				'ripple': 'ripple 3s ease-out infinite'
+				'ripple': 'ripple 3s ease-out infinite',
+				'pan-left': 'pan-left 15s ease-in-out infinite',
+				'pan-right': 'pan-right 15s ease-in-out infinite',
+				'slow-pan-left': 'slow-pan-left 20s ease-in-out infinite',
+				'slow-pan-right': 'slow-pan-right 20s ease-in-out infinite',
+				'camera-sweep': 'camera-sweep 25s ease-in-out infinite'
 			}
 		}
 	},

@@ -43,7 +43,7 @@ const Team = () => {
             <img 
               src="/lovable-uploads/a9befb70-02c2-43d9-96de-99567fb9d734.png" 
               alt="Équipe Keprea - Experts en agtech et biosolutions"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover animate-camera-sweep"
             />
 
             {/* Points interactifs pour chaque membre */}

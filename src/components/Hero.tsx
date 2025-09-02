@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Animated Background - Style OneOne Bio */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover animate-slow-zoom"
+          className="absolute inset-0 bg-cover animate-camera-sweep"
           style={{ 
             backgroundImage: `url(/lovable-uploads/6a8303db-496f-46ce-9260-7c76071683b9.png)`,
             backgroundSize: 'cover',

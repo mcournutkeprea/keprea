@@ -80,7 +80,7 @@ const Production = () => {
                   <img 
                     src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png"
                     alt="Site de production Keprea à Damparis"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover animate-slow-pan-right"
                   />
                 </div>
               </div>
