@@ -1,4 +1,6 @@
-import { Worm, Shield, Droplets, GitBranch, Wheat } from "lucide-react";
+import { Shield, Droplets, GitBranch, Wheat } from "lucide-react";
+
+console.log("Solutions component loading...");
 
 const Solutions = () => {
   return (
