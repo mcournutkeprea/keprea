@@ -86,16 +86,60 @@ const Production = () => {
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-primary" />
+                {/* Processus de production intégré */}
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-foreground mb-4">{t('production.process.title')}</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {/* Étape 1: Collecte */}
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-lg">🪲</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step1')}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">{t('production.team.title')}</h4>
-                      <p className="text-muted-foreground">
-                        {t('production.team.desc')}
-                      </p>
+                    
+                    {/* Étape 2: Transformation */}
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-lg">⚗️</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step2')}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Étape 3: Packaging */}
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-lg">📦</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step3')}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Étape 4: Épandage */}
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-lg">🚜</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step4')}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Étape 5: Cultures en forme - sur toute la largeur */}
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg sm:col-span-2">
+                      <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-lg">🌱</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step5')}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -118,99 +162,6 @@ const Production = () => {
 
             {/* Background gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent"></div>
-          </div>
-        </div>
-        
-        {/* Processus de production */}
-        <div className="mt-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-              {t('production.process.title')}
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('production.process.subtitle')}
-            </p>
-          </div>
-          
-          <div className="relative bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl p-8 overflow-hidden">
-            {/* Diagramme de processus des insectes */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              {/* Étape 1: Collecte de co-produits */}
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-2xl">🪲</span>
-                  </div>
-                </div>
-                <h4 className="font-semibold text-sm mb-2">{t('production.process.step1')}</h4>
-                <p className="text-xs text-muted-foreground">{t('production.process.step1_desc')}</p>
-              </div>
-              
-              {/* Étape 2: Transformation */}
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-2xl">⚗️</span>
-                  </div>
-                </div>
-                <h4 className="font-semibold text-sm mb-2">{t('production.process.step2')}</h4>
-                <p className="text-xs text-muted-foreground">{t('production.process.step2_desc')}</p>
-              </div>
-              
-              {/* Étape 3: Packaging */}
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-2xl">📦</span>
-                  </div>
-                </div>
-                <h4 className="font-semibold text-sm mb-2">{t('production.process.step3')}</h4>
-                <p className="text-xs text-muted-foreground">{t('production.process.step3_desc')}</p>
-              </div>
-              
-              {/* Étape 4: Épandage */}
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-2xl">🚜</span>
-                  </div>
-                </div>
-                <h4 className="font-semibold text-sm mb-2">{t('production.process.step4')}</h4>
-                <p className="text-xs text-muted-foreground">{t('production.process.step4_desc')}</p>
-              </div>
-              
-              {/* Étape 5: Cultures en forme */}
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-2xl">🌱</span>
-                  </div>
-                </div>
-                <h4 className="font-semibold text-sm mb-2">{t('production.process.step5')}</h4>
-                <p className="text-xs text-muted-foreground">{t('production.process.step5_desc')}</p>
-              </div>
-            </div>
-            
-            {/* Flèches de connexion horizontales */}
-            <div className="absolute inset-0 pointer-events-none">
-              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                  <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-                    refX="0" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" className="fill-primary/30" />
-                  </marker>
-                </defs>
-                {/* Flèches entre les étapes */}
-                <line x1="18" y1="50" x2="22" y2="50" stroke="currentColor" 
-                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
-                <line x1="38" y1="50" x2="42" y2="50" stroke="currentColor" 
-                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
-                <line x1="58" y1="50" x2="62" y2="50" stroke="currentColor" 
-                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
-                <line x1="78" y1="50" x2="82" y2="50" stroke="currentColor" 
-                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
-              </svg>
-            </div>
           </div>
         </div>
       </div>
