@@ -1,4 +1,4 @@
-import { Circle, Worm, Bug, Shield, Droplets, GitBranch, Wheat } from "lucide-react";
+import { Worm, Shield, Droplets, GitBranch, Wheat } from "lucide-react";
 
 const Solutions = () => {
   return (
@@ -66,13 +66,6 @@ const Solutions = () => {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Circle className="w-6 h-6 text-white" />
-                    <span className="text-sm font-medium text-white">Biofongicide - substances d'insectes liquides</span>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
                     <Worm className="w-6 h-6 text-white" />
                     <span className="text-sm font-medium text-white">Bionématicide - substances d'insectes solides</span>
                   </div>
@@ -80,7 +73,11 @@ const Solutions = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Bug className="w-6 h-6 text-white" />
+                    <img 
+                      src="/lovable-uploads/7ece34ef-ff1b-4288-b0ef-0ababd8faf18.png" 
+                      alt="Larve de chrysope" 
+                      className="w-6 h-6 object-cover rounded"
+                    />
                     <span className="text-sm font-medium text-white">Solutions innovantes contre les ravageurs</span>
                   </div>
                 </div>

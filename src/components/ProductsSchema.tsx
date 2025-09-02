@@ -59,35 +59,20 @@ const ProductsSchema = () => {
                 <p className="text-sm text-muted-foreground">Solutions naturelles de biocontrôle</p>
               </div>
 
-              {/* Pollinisation */}
+              {/* Macro-organismes */}
               <div className="text-center">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
                   <img 
-                    src="/lovable-uploads/0184afb4-2ca6-4b4a-9a71-b9ddf5b1c906.png" 
-                    alt="Pollinisation - bourdon" 
+                    src="/lovable-uploads/7ece34ef-ff1b-4288-b0ef-0ababd8faf18.png" 
+                    alt="Macro-organismes - larve" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-foreground mb-2">Pollinisation</h3>
-                <p className="text-sm text-muted-foreground">Solutions de pollinisation naturelle</p>
+                <h3 className="font-bold text-foreground mb-2">Macro-organismes</h3>
+                <p className="text-sm text-muted-foreground">Solutions de biocontrôle vivantes</p>
               </div>
             </div>
 
-            {/* Flèches pour montrer le cycle */}
-            <div className="hidden lg:block">
-              <div className="absolute top-20 left-1/4 transform -translate-x-1/2">
-                <div className="text-2xl text-primary rotate-45">→</div>
-              </div>
-              <div className="absolute top-32 right-1/4 transform translate-x-1/2">
-                <div className="text-2xl text-primary -rotate-45">→</div>
-              </div>
-              <div className="absolute bottom-20 right-1/4 transform translate-x-1/2">
-                <div className="text-2xl text-primary -rotate-135">→</div>
-              </div>
-              <div className="absolute bottom-32 left-1/4 transform -translate-x-1/2">
-                <div className="text-2xl text-primary rotate-135">→</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
