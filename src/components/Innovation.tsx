@@ -9,7 +9,7 @@ const Innovation = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Nous exploitons le potentiel extraordinaire des insectes pour créer des solutions 
-              agricoles durables, performantes et peu coûteuses. Notre approche scientifique combine tradition, innovation pour répondre au besoin des producteurs agricoles.
+              agricoles durables, performantes et peu coûteuses. Notre approche scientifique combine tradition, innovation et mécanisation pour répondre au besoin des producteurs agricoles.
             </p>
             
             <div className="space-y-4">

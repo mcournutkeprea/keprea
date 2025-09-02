@@ -66,7 +66,9 @@ const Solutions = () => {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Worm className="w-6 h-6 text-white" />
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2M20 8.5V7L14 1L12.5 2.5L15.75 5.75H8.25L11.5 2.5L10 1L4 7V8.5H6V18.5C6 19.6 6.9 20.5 8 20.5H16C17.1 20.5 18 19.6 18 18.5V8.5H20M8 8.5H16V18.5H8V8.5Z"/>
+                    </svg>
                     <span className="text-sm font-medium text-white">Bionématicide - substances d'insectes solides</span>
                   </div>
                 </div>
