@@ -42,9 +42,9 @@ const Production = () => {
                       <Factory className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Technologies modernes</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{t('production.technology.title')}</h4>
                       <p className="text-muted-foreground">
-                        Équipements de pointe pour la production de biostimulants et solutions de biocontrôle
+                        {t('production.technology.desc')}
                       </p>
                     </div>
                   </div>
@@ -54,9 +54,9 @@ const Production = () => {
                       <Leaf className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Respect de l'environnement</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{t('production.environment.title')}</h4>
                       <p className="text-muted-foreground">
-                        Processus de production éco-responsable et certifications qualité
+                        {t('production.environment.desc')}
                       </p>
                     </div>
                   </div>
@@ -66,9 +66,9 @@ const Production = () => {
                       <Users className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Équipe d'experts</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{t('production.team.title')}</h4>
                       <p className="text-muted-foreground">
-                        Une équipe de spécialistes dédiée à l'innovation et à la qualité
+                        {t('production.team.desc')}
                       </p>
                     </div>
                   </div>

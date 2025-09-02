@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TeamMember {
   id: number;
@@ -9,6 +10,7 @@ interface TeamMember {
 }
 
 const Team = () => {
+  const { t } = useLanguage();
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   
   // Positions des membres sur la photo d'équipe
@@ -28,10 +30,10 @@ const Team = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            Notre Équipe
+            {t('team.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Une équipe passionnée d'experts en agtech et biotechnologie
+            {t('team.subtitle')}
           </p>
         </div>
 
@@ -75,7 +77,7 @@ const Team = () => {
 
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              Survolez les points sur la photo pour découvrir notre équipe
+              {t('team.hover')}
             </p>
           </div>
         </div>
