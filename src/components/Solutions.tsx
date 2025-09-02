@@ -67,7 +67,7 @@ const Solutions = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2M20 8.5V7L14 1L12.5 2.5L15.75 5.75H8.25L11.5 2.5L10 1L4 7V8.5H6V18.5C6 19.6 6.9 20.5 8 20.5H16C17.1 20.5 18 19.6 18 18.5V8.5H20M8 8.5H16V18.5H8V8.5Z"/>
+                      <path d="M6 2C4.9 2 4 2.9 4 4V6C4 7.1 4.9 8 6 8H8C9.1 8 10 7.1 10 6V4C10 2.9 9.1 2 8 2H6M14 2C12.9 2 12 2.9 12 4V6C12 7.1 12.9 8 14 8H16C17.1 8 18 7.1 18 6V4C18 2.9 17.1 2 16 2H14M6 10C4.9 10 4 10.9 4 12V14C4 15.1 4.9 16 6 16H8C9.1 16 10 15.1 10 14V12C10 10.9 9.1 10 8 10H6M14 10C12.9 10 12 10.9 12 12V14C12 15.1 12.9 16 14 16H16C17.1 16 18 15.1 18 14V12C18 10.9 17.1 10 16 10H14M6 18C4.9 18 4 18.9 4 20V22C4 23.1 4.9 24 6 24H8C9.1 24 10 23.1 10 22V20C10 18.9 9.1 18 8 18H6Z"/>
                     </svg>
                     <span className="text-sm font-medium text-white">Bionématicide - substances d'insectes solides</span>
                   </div>
@@ -75,11 +75,9 @@ const Solutions = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <img 
-                      src="/lovable-uploads/7ece34ef-ff1b-4288-b0ef-0ababd8faf18.png" 
-                      alt="Larve de chrysope" 
-                      className="w-6 h-6 object-cover rounded"
-                    />
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C10.9 2 10 2.9 10 4C10 5.1 10.9 6 12 6C13.1 6 14 5.1 14 4C14 2.9 13.1 2 12 2M19 8C18.4 8 17.9 8.2 17.5 8.5L15.7 10.3C15.3 10.7 15.3 11.3 15.7 11.7C16.1 12.1 16.7 12.1 17.1 11.7L18.9 9.9C19.3 9.5 19.3 8.9 18.9 8.5C18.6 8.2 18.1 8 19 8M5 8C5.6 8 6.1 8.2 6.5 8.5C6.9 8.9 6.9 9.5 6.5 9.9L4.7 11.7C4.3 12.1 3.7 12.1 3.3 11.7C2.9 11.3 2.9 10.7 3.3 10.3L5.1 8.5C5.4 8.2 5.9 8 5 8M12 8C10.3 8 9 9.3 9 11C9 12.7 10.3 14 12 14C13.7 14 15 12.7 15 11C15 9.3 13.7 8 12 8M12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"/>
+                    </svg>
                     <span className="text-sm font-medium text-white">Solutions innovantes contre les ravageurs</span>
                   </div>
                 </div>

@@ -21,6 +21,9 @@ const Navigation = () => {
               <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors">
                 Innovation
               </a>
+              <a href="#production" className="text-muted-foreground hover:text-primary transition-colors">
+                Notre site de production
+              </a>
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
                 À propos
               </a>
