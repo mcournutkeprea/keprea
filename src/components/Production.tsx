@@ -1,6 +1,8 @@
 import { MapPin, Factory, Leaf, Users } from "lucide-react";
 import FranceMap from "./FranceMap";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
 const Production = () => {
   const { t } = useLanguage();
@@ -14,6 +16,30 @@ const Production = () => {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('production.subtitle')}
           </p>
+          
+          {/* Logo cliquable pour voir le processus de production */}
+          <div className="mt-8">
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="hover:scale-110 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-full">
+                  <img 
+                    src="/lovable-uploads/2aef602f-7a71-41fa-9ba0-e21e19b88e57.png"
+                    alt="Voir le processus de production"
+                    className="w-16 h-16 mx-auto cursor-pointer"
+                  />
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full">
+                <div className="p-4">
+                  <img 
+                    src="/lovable-uploads/fed1a5d0-31aa-4f79-92a2-9f46e3512478.png"
+                    alt="Processus de production - Blending, Spray Drying, Distillation, Spirulina"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
