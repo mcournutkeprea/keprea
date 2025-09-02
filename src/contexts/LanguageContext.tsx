@@ -287,6 +287,114 @@ const translations: Translations = {
     es: 'Un equipo de especialistas dedicado a la innovación y la calidad',
     pt: 'Uma equipe de especialistas dedicada à inovação e qualidade'
   },
+  'production.process.title': {
+    fr: 'Notre Processus de Production',
+    en: 'Our Production Process',
+    es: 'Nuestro Proceso de Producción',
+    pt: 'Nosso Processo de Produção'
+  },
+  'production.process.subtitle': {
+    fr: 'Un processus industriel maîtrisé pour des biostimulants de qualité supérieure',
+    en: 'A controlled industrial process for superior quality biostimulants',
+    es: 'Un proceso industrial controlado para bioestimulantes de calidad superior',
+    pt: 'Um processo industrial controlado para bioestimulantes de qualidade superior'
+  },
+  'production.process.step1': {
+    fr: 'Matières Premières',
+    en: 'Raw Materials',
+    es: 'Materias Primas',
+    pt: 'Matérias-Primas'
+  },
+  'production.process.step1_desc': {
+    fr: 'Sélection rigoureuse des matières premières naturelles',
+    en: 'Rigorous selection of natural raw materials',
+    es: 'Selección rigurosa de materias primas naturales',
+    pt: 'Seleção rigorosa de matérias-primas naturais'
+  },
+  'production.process.step2': {
+    fr: 'Pasteurisation',
+    en: 'Pasteurization',
+    es: 'Pasteurización',
+    pt: 'Pasteurização'
+  },
+  'production.process.step2_desc': {
+    fr: 'Traitement thermique contrôlé',
+    en: 'Controlled thermal treatment',
+    es: 'Tratamiento térmico controlado',
+    pt: 'Tratamento térmico controlado'
+  },
+  'production.process.step3': {
+    fr: 'Filtration',
+    en: 'Filtration',
+    es: 'Filtración',
+    pt: 'Filtração'
+  },
+  'production.process.step3_desc': {
+    fr: 'Purification et concentration',
+    en: 'Purification and concentration',
+    es: 'Purificación y concentración',
+    pt: 'Purificação e concentração'
+  },
+  'production.process.step4': {
+    fr: 'Fermentation',
+    en: 'Fermentation',
+    es: 'Fermentación',
+    pt: 'Fermentação'
+  },
+  'production.process.step4_desc': {
+    fr: 'Processus de bioactivation',
+    en: 'Bioactivation process',
+    es: 'Proceso de bioactivación',
+    pt: 'Processo de bioativação'
+  },
+  'production.process.step5': {
+    fr: 'Maturation',
+    en: 'Maturation',
+    es: 'Maduración',
+    pt: 'Maturação'
+  },
+  'production.process.step5_desc': {
+    fr: 'Développement des propriétés',
+    en: 'Property development',
+    es: 'Desarrollo de propiedades',
+    pt: 'Desenvolvimento de propriedades'
+  },
+  'production.process.step6': {
+    fr: 'Pressage',
+    en: 'Pressing',
+    es: 'Prensado',
+    pt: 'Prensagem'
+  },
+  'production.process.step6_desc': {
+    fr: 'Extraction optimisée',
+    en: 'Optimized extraction',
+    es: 'Extracción optimizada',
+    pt: 'Extração otimizada'
+  },
+  'production.process.step7': {
+    fr: 'Formulation',
+    en: 'Formulation',
+    es: 'Formulación',
+    pt: 'Formulação'
+  },
+  'production.process.step7_desc': {
+    fr: 'Mise en forme finale',
+    en: 'Final shaping',
+    es: 'Conformación final',
+    pt: 'Moldagem final'
+  },
+  'production.process.step8': {
+    fr: 'Conditionnement',
+    en: 'Packaging',
+    es: 'Envasado',
+    pt: 'Embalagem'
+  },
+  'production.process.step8_desc': {
+    fr: 'Emballage et étiquetage',
+    en: 'Packing and labeling',
+    es: 'Empaque y etiquetado',
+    pt: 'Embalagem e rotulagem'
+  },
   // Team section
   'team.title': {
     fr: 'Notre Équipe',

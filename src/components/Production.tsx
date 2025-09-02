@@ -120,6 +120,145 @@ const Production = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent"></div>
           </div>
         </div>
+        
+        {/* Processus de production */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+              {t('production.process.title')}
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t('production.process.subtitle')}
+            </p>
+          </div>
+          
+          <div className="relative bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl p-8 overflow-hidden">
+            {/* Diagramme de processus isométrique */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {/* Étape 1: Matière première */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">🥛</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step1')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step1_desc')}</p>
+              </div>
+              
+              {/* Étape 2: Pasteurisation */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">🔥</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step2')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step2_desc')}</p>
+              </div>
+              
+              {/* Étape 3: Filtration */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">🔬</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step3')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step3_desc')}</p>
+              </div>
+              
+              {/* Étape 4: Coagulation */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">⚗️</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step4')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step4_desc')}</p>
+              </div>
+            </div>
+            
+            {/* Deuxième rangée */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Étape 5: Maturation */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">⏰</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step5')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step5_desc')}</p>
+              </div>
+              
+              {/* Étape 6: Pressage */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">🔧</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step6')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step6_desc')}</p>
+              </div>
+              
+              {/* Étape 7: Moulage */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">🧊</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step7')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step7_desc')}</p>
+              </div>
+              
+              {/* Étape 8: Emballage */}
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">📦</span>
+                  </div>
+                </div>
+                <h4 className="font-semibold text-sm mb-2">{t('production.process.step8')}</h4>
+                <p className="text-xs text-muted-foreground">{t('production.process.step8_desc')}</p>
+              </div>
+            </div>
+            
+            {/* Flèches de connexion */}
+            <div className="absolute inset-0 pointer-events-none">
+              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                  <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                    refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" className="fill-primary/30" />
+                  </marker>
+                </defs>
+                {/* Flèches horizontales première rangée */}
+                <line x1="23" y1="25" x2="27" y2="25" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+                <line x1="48" y1="25" x2="52" y2="25" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+                <line x1="73" y1="25" x2="77" y2="25" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+                
+                {/* Flèches verticales */}
+                <line x1="85" y1="35" x2="15" y2="65" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+                  
+                {/* Flèches horizontales deuxième rangée */}
+                <line x1="23" y1="75" x2="27" y2="75" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+                <line x1="48" y1="75" x2="52" y2="75" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+                <line x1="73" y1="75" x2="77" y2="75" stroke="currentColor" 
+                  strokeWidth="0.3" markerEnd="url(#arrowhead)" className="text-primary/30" />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
