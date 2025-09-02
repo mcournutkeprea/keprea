@@ -37,6 +37,12 @@ const translations: Translations = {
     es: 'Acerca de',
     pt: 'Sobre'
   },
+  'nav.game': {
+    fr: 'Pack jeu éducatif',
+    en: 'Educational game pack',
+    es: 'Pack juego educativo',
+    pt: 'Pacote de jogo educativo'
+  },
   'nav.contact': {
     fr: 'Nous contacter',
     en: 'Contact us',
@@ -498,6 +504,97 @@ const translations: Translations = {
     en: 'Your company name',
     es: 'Nombre de tu empresa',
     pt: 'Nome da sua empresa'
+  },
+  // Educational Game section
+  'game.title': {
+    fr: 'AgVengers - Le Jeu Éducatif',
+    en: 'AgVengers - The Educational Game',
+    es: 'AgVengers - El Juego Educativo',
+    pt: 'AgVengers - O Jogo Educativo'
+  },
+  'game.subtitle': {
+    fr: 'Découvrez le monde fascinant des insectes auxiliaires et ravageurs à travers notre jeu de cartes éducatif et ludique',
+    en: 'Discover the fascinating world of beneficial and pest insects through our educational and fun card game',
+    es: 'Descubre el fascinante mundo de los insectos beneficiosos y plagas a través de nuestro juego de cartas educativo y divertido',
+    pt: 'Descubra o fascinante mundo dos insetos benéficos e pragas através do nosso jogo de cartas educativo e divertido'
+  },
+  'game.howToPlay': {
+    fr: 'Comment Jouer ?',
+    en: 'How to Play?',
+    es: '¿Cómo Jugar?',
+    pt: 'Como Jogar?'
+  },
+  'game.step1.title': {
+    fr: 'Découverte',
+    en: 'Discovery',
+    es: 'Descubrimiento',
+    pt: 'Descoberta'
+  },
+  'game.step1.description': {
+    fr: 'Apprenez à identifier les différents insectes et leurs caractéristiques',
+    en: 'Learn to identify different insects and their characteristics',
+    es: 'Aprende a identificar diferentes insectos y sus características',
+    pt: 'Aprenda a identificar diferentes insetos e suas características'
+  },
+  'game.step2.title': {
+    fr: 'Stratégie',
+    en: 'Strategy',
+    es: 'Estrategia',
+    pt: 'Estratégia'
+  },
+  'game.step2.description': {
+    fr: 'Utilisez les super-pouvoirs des insectes auxiliaires contre les ravageurs',
+    en: 'Use the superpowers of beneficial insects against pests',
+    es: 'Usa los superpoderes de los insectos beneficiosos contra las plagas',
+    pt: 'Use os superpoderes dos insetos benéficos contra as pragas'
+  },
+  'game.step3.title': {
+    fr: 'Protection',
+    en: 'Protection',
+    es: 'Protección',
+    pt: 'Proteção'
+  },
+  'game.step3.description': {
+    fr: 'Protégez vos cultures en créant un écosystème équilibré',
+    en: 'Protect your crops by creating a balanced ecosystem',
+    es: 'Protege tus cultivos creando un ecosistema equilibrado',
+    pt: 'Proteja suas culturas criando um ecossistema equilibrado'
+  },
+  'game.educational.title': {
+    fr: 'Objectif Pédagogique',
+    en: 'Educational Objective',
+    es: 'Objetivo Educativo',
+    pt: 'Objetivo Educacional'
+  },
+  'game.educational.description': {
+    fr: 'Ce jeu permet de comprendre l\'importance des insectes dans l\'écosystème agricole et d\'apprendre à distinguer les alliés des ravageurs.',
+    en: 'This game helps understand the importance of insects in the agricultural ecosystem and learn to distinguish allies from pests.',
+    es: 'Este juego ayuda a entender la importancia de los insectos en el ecosistema agrícola y aprender a distinguir aliados de plagas.',
+    pt: 'Este jogo ajuda a entender a importância dos insetos no ecossistema agrícola e aprender a distinguir aliados de pragas.'
+  },
+  'game.educational.allies': {
+    fr: 'Insectes Auxiliaires',
+    en: 'Beneficial Insects',
+    es: 'Insectos Beneficiosos',
+    pt: 'Insetos Benéficos'
+  },
+  'game.educational.alliesDesc': {
+    fr: 'Les héros qui protègent nos cultures naturellement en régulant les populations de ravageurs.',
+    en: 'The heroes that naturally protect our crops by regulating pest populations.',
+    es: 'Los héroes que protegen naturalmente nuestros cultivos regulando las poblaciones de plagas.',
+    pt: 'Os heróis que protegem naturalmente nossas culturas regulando as populações de pragas.'
+  },
+  'game.educational.pests': {
+    fr: 'Insectes Ravageurs',
+    en: 'Pest Insects',
+    es: 'Insectos Plaga',
+    pt: 'Insetos Pragas'
+  },
+  'game.educational.pestsDesc': {
+    fr: 'Les défis à surmonter qui peuvent endommager les cultures si non contrôlées.',
+    en: 'The challenges to overcome that can damage crops if not controlled.',
+    es: 'Los desafíos a superar que pueden dañar los cultivos si no se controlan.',
+    pt: 'Os desafios a superar que podem danificar as culturas se não controlados.'
   }
 };
 

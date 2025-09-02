@@ -30,6 +30,9 @@ const Navigation = () => {
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
                 {t('nav.about')}
               </a>
+              <a href="#game" className="text-muted-foreground hover:text-primary transition-colors">
+                {t('nav.game')}
+              </a>
             </div>
           </div>
           

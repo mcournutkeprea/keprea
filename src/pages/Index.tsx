@@ -7,6 +7,7 @@ import Production from "@/components/Production";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import ContactForm from "@/components/ContactForm";
+import EducationalGame from "@/components/EducationalGame";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Innovation />
       <Production />
       <Team />
+      <EducationalGame />
       <Contact />
       <ContactForm />
     </div>
