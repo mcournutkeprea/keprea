@@ -64,10 +64,10 @@ const translations: Translations = {
   },
   // Solutions section
   'solutions.title': {
-    fr: 'Nos Bio-solutions',
-    en: 'Our Bio-solutions',
-    es: 'Nuestras Bio-soluciones',
-    pt: 'Nossas Bio-soluções'
+    fr: 'Nos Biosolutions',
+    en: 'Our Biosolutions',
+    es: 'Nuestras Biosoluciones',
+    pt: 'Nossas Biosoluções'
   },
   'solutions.subtitle': {
     fr: 'Répondre aux défis majeurs des agriculteurs du monde entier : compétitivité, productivité, préservation de l\'environnement',
