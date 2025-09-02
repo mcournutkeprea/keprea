@@ -295,10 +295,10 @@ const translations: Translations = {
     pt: 'Nossa Equipe'
   },
   'team.subtitle': {
-    fr: 'Une équipe passionnée d\'experts en agtech et biotechnologie',
-    en: 'A passionate team of experts in agtech and biotechnology',
-    es: 'Un equipo apasionado de expertos en agtech y biotecnología',
-    pt: 'Uma equipe apaixonada de especialistas em agtech e biotecnologia'
+    fr: 'Une équipe passionnée d\'experts en biotechnologie, agriculture, industrie et politiques agricoles',
+    en: 'A passionate team of experts in biotechnology, agriculture, industry and agricultural policies',
+    es: 'Un equipo apasionado de expertos en biotecnología, agricultura, industria y políticas agrícolas',
+    pt: 'Uma equipe apaixonada de especialistas em biotecnologia, agricultura, indústria e políticas agrícolas'
   },
   'team.hover': {
     fr: 'Survolez les points sur la photo pour découvrir notre équipe',
