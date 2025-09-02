@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
+  const { t } = useLanguage();
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,27 +19,28 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors">
-                Solutions
+                {t('nav.solutions')}
               </a>
               <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors">
-                Innovation
+                {t('nav.innovation')}
               </a>
               <a href="#production" className="text-muted-foreground hover:text-primary transition-colors">
-                Notre site de production
+                {t('nav.production')}
               </a>
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                À propos
+                {t('nav.about')}
               </a>
             </div>
           </div>
           
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSelector />
             <Button 
               variant="default" 
               size="sm"
               onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Nous contacter
+              {t('nav.contact')}
             </Button>
           </div>
         </div>

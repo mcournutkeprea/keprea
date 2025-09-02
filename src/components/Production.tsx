@@ -1,16 +1,18 @@
 import { MapPin, Factory, Leaf, Users } from "lucide-react";
 import FranceMap from "./FranceMap";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Production = () => {
+  const { t } = useLanguage();
   return (
     <section id="production" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Notre site de production
+            {t('production.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Découvrez notre site de production moderne situé à Damparis, en France, où nous développons nos solutions bio-innovantes
+            {t('production.subtitle')}
           </p>
         </div>
 
@@ -19,7 +21,7 @@ const Production = () => {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-foreground">
-                  Un site d'excellence
+                  {t('production.excellence')}
                 </h3>
                 
                 <div className="space-y-6">
@@ -28,9 +30,9 @@ const Production = () => {
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Localisation stratégique</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{t('production.location.title')}</h4>
                       <p className="text-muted-foreground">
-                        Situé sur la commune de Damparis, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d'un important bassin céréalier et viticole français.
+                        {t('production.location.desc')}
                       </p>
                     </div>
                   </div>
