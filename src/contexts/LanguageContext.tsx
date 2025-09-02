@@ -300,100 +300,64 @@ const translations: Translations = {
     pt: 'Um processo industrial controlado para bioestimulantes de qualidade superior'
   },
   'production.process.step1': {
-    fr: 'Matières Premières',
-    en: 'Raw Materials',
-    es: 'Materias Primas',
-    pt: 'Matérias-Primas'
+    fr: 'Collecte de Co-produits',
+    en: 'Co-product Collection',
+    es: 'Recolección de Co-productos',
+    pt: 'Coleta de Co-produtos'
   },
   'production.process.step1_desc': {
-    fr: 'Sélection rigoureuse des matières premières naturelles',
-    en: 'Rigorous selection of natural raw materials',
-    es: 'Selección rigurosa de materias primas naturales',
-    pt: 'Seleção rigorosa de matérias-primas naturais'
+    fr: 'Collecte de co-produits issus de l\'élevage d\'insectes',
+    en: 'Collection of co-products from insect farming',
+    es: 'Recolección de co-productos de la cría de insectos',
+    pt: 'Coleta de co-produtos da criação de insetos'
   },
   'production.process.step2': {
-    fr: 'Pasteurisation',
-    en: 'Pasteurization',
-    es: 'Pasteurización',
-    pt: 'Pasteurização'
+    fr: 'Transformation',
+    en: 'Transformation',
+    es: 'Transformación',
+    pt: 'Transformação'
   },
   'production.process.step2_desc': {
-    fr: 'Traitement thermique contrôlé',
-    en: 'Controlled thermal treatment',
-    es: 'Tratamiento térmico controlado',
-    pt: 'Tratamento térmico controlado'
+    fr: 'Transformation et sélection des molécules d\'intérêts',
+    en: 'Transformation and selection of molecules of interest',
+    es: 'Transformación y selección de moléculas de interés',
+    pt: 'Transformação e seleção de moléculas de interesse'
   },
   'production.process.step3': {
-    fr: 'Filtration',
-    en: 'Filtration',
-    es: 'Filtración',
-    pt: 'Filtração'
-  },
-  'production.process.step3_desc': {
-    fr: 'Purification et concentration',
-    en: 'Purification and concentration',
-    es: 'Purificación y concentración',
-    pt: 'Purificação e concentração'
-  },
-  'production.process.step4': {
-    fr: 'Fermentation',
-    en: 'Fermentation',
-    es: 'Fermentación',
-    pt: 'Fermentação'
-  },
-  'production.process.step4_desc': {
-    fr: 'Processus de bioactivation',
-    en: 'Bioactivation process',
-    es: 'Proceso de bioactivación',
-    pt: 'Processo de bioativação'
-  },
-  'production.process.step5': {
-    fr: 'Maturation',
-    en: 'Maturation',
-    es: 'Maduración',
-    pt: 'Maturação'
-  },
-  'production.process.step5_desc': {
-    fr: 'Développement des propriétés',
-    en: 'Property development',
-    es: 'Desarrollo de propiedades',
-    pt: 'Desenvolvimento de propriedades'
-  },
-  'production.process.step6': {
-    fr: 'Pressage',
-    en: 'Pressing',
-    es: 'Prensado',
-    pt: 'Prensagem'
-  },
-  'production.process.step6_desc': {
-    fr: 'Extraction optimisée',
-    en: 'Optimized extraction',
-    es: 'Extracción optimizada',
-    pt: 'Extração otimizada'
-  },
-  'production.process.step7': {
-    fr: 'Formulation',
-    en: 'Formulation',
-    es: 'Formulación',
-    pt: 'Formulação'
-  },
-  'production.process.step7_desc': {
-    fr: 'Mise en forme finale',
-    en: 'Final shaping',
-    es: 'Conformación final',
-    pt: 'Moldagem final'
-  },
-  'production.process.step8': {
-    fr: 'Conditionnement',
+    fr: 'Packaging',
     en: 'Packaging',
     es: 'Envasado',
     pt: 'Embalagem'
   },
-  'production.process.step8_desc': {
-    fr: 'Emballage et étiquetage',
-    en: 'Packing and labeling',
-    es: 'Empaque y etiquetado',
-    pt: 'Embalagem e rotulagem'
+  'production.process.step3_desc': {
+    fr: 'Conditionnement des biostimulants',
+    en: 'Biostimulant packaging',
+    es: 'Envasado de bioestimulantes',
+    pt: 'Embalagem de bioestimulantes'
+  },
+  'production.process.step4': {
+    fr: 'Épandage',
+    en: 'Field Application',
+    es: 'Aplicación en Campo',
+    pt: 'Aplicação no Campo'
+  },
+  'production.process.step4_desc': {
+    fr: 'Épandage dans les champs agricoles',
+    en: 'Application in agricultural fields',
+    es: 'Aplicación en campos agrícolas',
+    pt: 'Aplicação em campos agrícolas'
+  },
+  'production.process.step5': {
+    fr: 'Cultures en Forme',
+    en: 'Healthy Crops',
+    es: 'Cultivos Saludables',
+    pt: 'Cultivos Saudáveis'
+  },
+  'production.process.step5_desc': {
+    fr: 'Cultures en pleine forme et rendements optimisés',
+    en: 'Healthy crops and optimized yields',
+    es: 'Cultivos saludables y rendimientos optimizados',
+    pt: 'Cultivos saudáveis e rendimentos otimizados'
   },
   // Team section
   'team.title': {
