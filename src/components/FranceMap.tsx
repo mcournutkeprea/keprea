@@ -1,9 +1,6 @@
 const FranceMap = () => {
   return (
     <div className="w-full max-w-sm mx-auto">
-      <h4 className="text-sm font-medium text-foreground mb-3 text-center">
-        Localisation géographique
-      </h4>
       <div className="relative bg-muted/30 rounded-lg p-4">
         <div className="relative w-full">
           <img 
@@ -35,12 +32,6 @@ const FranceMap = () => {
             <p className="font-medium text-foreground">Bâle</p>
             <p className="text-muted-foreground">2h</p>
           </div>
-        </div>
-        
-        <div className="mt-3 text-center">
-          <p className="text-xs text-muted-foreground">
-            Au cœur de l'Europe, à 2h des grandes métropoles
-          </p>
         </div>
       </div>
     </div>
