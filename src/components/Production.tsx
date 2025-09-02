@@ -1,4 +1,5 @@
 import { MapPin, Factory, Leaf, Users } from "lucide-react";
+import FranceMap from "./FranceMap";
 
 const Production = () => {
   return (
@@ -13,9 +14,9 @@ const Production = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-accent/20 p-12 min-h-[500px]">
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-foreground">
                   Un site d'excellence
@@ -80,6 +81,10 @@ const Production = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
+              </div>
+
+              <div className="lg:col-span-1">
+                <FranceMap />
               </div>
             </div>
 
