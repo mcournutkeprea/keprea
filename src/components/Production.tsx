@@ -29,7 +29,7 @@ const Production = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Localisation stratégique</h4>
                       <p className="text-muted-foreground">
-                        Situé à Damparis, France, au cœur de l'Europe pour une distribution optimale
+                        Situé sur la commune de Damparis, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d'un important bassin céréalier et viticole français.
                       </p>
                     </div>
                   </div>
@@ -75,15 +75,10 @@ const Production = () => {
               <div className="relative">
                 <div className="aspect-square rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
                   <img 
-                    src="/lovable-uploads/f70fe1c8-b7e1-4261-bf4d-f1a469759696.png"
+                    src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png"
                     alt="Site de production Keprea à Damparis"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                
-                {/* Localisation badge */}
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                  📍 Damparis, France
                 </div>
               </div>
             </div>
