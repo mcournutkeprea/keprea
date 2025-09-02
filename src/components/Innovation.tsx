@@ -60,26 +60,26 @@ const Innovation = () => {
               
               <div className="grid grid-cols-1 gap-6">
                 <div className="flex items-center justify-center gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-lg font-bold text-green-500">{t('innovation.benefit1')}</div>
+                  <div className="text-lg font-bold text-primary">{t('innovation.benefit1')}</div>
                 </div>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-lg font-bold text-green-500">{t('innovation.benefit2')}</div>
+                  <div className="text-lg font-bold text-primary">{t('innovation.benefit2')}</div>
                 </div>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-lg font-bold text-green-500">{t('innovation.benefit3')}</div>
+                  <div className="text-lg font-bold text-primary">{t('innovation.benefit3')}</div>
                 </div>
               </div>
               
