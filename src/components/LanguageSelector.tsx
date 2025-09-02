@@ -26,7 +26,7 @@ const LanguageSelector = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors bg-background/50 backdrop-blur-sm rounded-lg border border-border/50 hover:border-primary/20"
       >
-        <span className="text-lg">{currentLanguage?.flag}</span>
+        <span className="text-xl">{currentLanguage?.flag}</span>
         <ChevronDown className="w-4 h-4" />
       </button>
 
@@ -48,7 +48,7 @@ const LanguageSelector = () => {
                   language === lang.code ? 'bg-primary/10 text-primary' : 'text-foreground'
                 }`}
               >
-                <span className="text-lg">{lang.flag}</span>
+                <span className="text-xl">{lang.flag}</span>
                 <span>{lang.name}</span>
               </button>
             ))}
