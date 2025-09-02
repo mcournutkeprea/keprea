@@ -46,30 +46,28 @@ const ProductsSchema = () => {
                 <p className="text-sm text-muted-foreground">Molécules d'intérêt contre l'ensemble des stress de la plante</p>
               </div>
 
-              {/* Protection */}
+              {/* Substances naturelles */}
               <div className="text-center">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
                   <img 
                     src="/lovable-uploads/9117a39b-c413-496a-a9cd-892017ab37b7.png" 
-                    alt="Protection - structure moléculaire huile" 
+                    alt="Substances naturelles - structure moléculaire huile" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-foreground mb-2">Protection</h3>
-                <p className="text-sm text-muted-foreground">Solutions naturelles de biocontrôle</p>
+                <h3 className="font-bold text-foreground mb-2">Substances naturelles</h3>
+                <p className="text-sm text-muted-foreground">des Extraits d'insectes pour lutter directement contre les pathogènes</p>
               </div>
 
               {/* Macro-organismes */}
               <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/7ece34ef-ff1b-4288-b0ef-0ababd8faf18.png" 
-                    alt="Macro-organismes - larve" 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2M21 9V7L15 1L13.5 2.5L16.75 5.75H7.25L10.5 2.5L9 1L3 7V9H5V19C5 20.1 5.9 21 7 21H17C18.1 21 19 20.1 19 19V9H21M7 9H17V19H7V9Z"/>
+                  </svg>
                 </div>
                 <h3 className="font-bold text-foreground mb-2">Macro-organismes</h3>
-                <p className="text-sm text-muted-foreground">Solutions de biocontrôle vivantes</p>
+                <p className="text-sm text-muted-foreground">le vivant pour protéger les cultures</p>
               </div>
             </div>
 
