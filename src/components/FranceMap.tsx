@@ -4,7 +4,7 @@ const FranceMap = () => {
       <div className="relative bg-muted/30 rounded-lg p-4">
         <div className="relative w-full">
           <img 
-            src="/lovable-uploads/ff3e0512-662c-40cb-bb4f-17320f4917d1.png"
+            src="/lovable-uploads/d900d55a-cbeb-49cf-a873-26753d80abb6.png"
             alt="Carte de l'Europe avec localisation de Dole"
             className="w-full h-auto rounded-md"
           />
