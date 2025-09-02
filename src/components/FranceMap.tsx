@@ -1,25 +1,68 @@
+import { useEffect, useRef } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
 const FranceMap = () => {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<L.Map | null>(null);
+
+  useEffect(() => {
+    if (!mapRef.current || mapInstanceRef.current) return;
+
+    // Coordonnées de l'usine à Damparis
+    const lat = 47.054611;   // 47°03'16.6"N
+    const lon = 5.432528;    // 5°25'57.1"E
+
+    // 1) Carte en vue "globe" (zoom bas)
+    const map = L.map(mapRef.current, { 
+      zoomControl: true,
+      attributionControl: false 
+    }).setView([20, 0], 2);
+
+    mapInstanceRef.current = map;
+
+    // 2) Tuiles OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
+    }).addTo(map);
+
+    // 3) Animation de vol vers le point
+    const targetZoom = 17;    // niveau de zoom pour voir le bâtiment
+    const durationSec = 3;    // durée de l'animation (secondes)
+
+    // Lancement après un petit délai pour que la carte se charge
+    setTimeout(() => {
+      map.flyTo([lat, lon], targetZoom, {
+        animate: true,
+        duration: durationSec,
+        easeLinearity: 0.25
+      });
+
+      // Déposer le marqueur une fois l'animation terminée
+      map.once('moveend', () => {
+        L.marker([lat, lon]).addTo(map)
+          .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Damparis, France')
+          .openPopup();
+      });
+    }, 500);
+
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
+      }
+    };
+  }, []);
+
   return (
     <div className="w-full max-w-sm mx-auto">
       <div className="relative bg-muted/30 rounded-lg p-4">
-        <div className="relative w-full">
-          <a 
-            href="https://maps.app.goo.gl/ggMmHPAZFNzrAnpr9" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="block cursor-pointer hover:scale-105 transition-transform duration-200"
-          >
-            <img 
-              src="/lovable-uploads/d900d55a-cbeb-49cf-a873-26753d80abb6.png"
-              alt="Carte de l'Europe avec localisation de Dole"
-              className="w-full h-auto rounded-md"
-            />
-          </a>
-          
-          {/* Label pour Dole */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full border border-primary/20">
-            <p className="text-xs font-medium text-foreground">Dole, France</p>
-          </div>
+        <div className="relative w-full h-64">
+          <div 
+            ref={mapRef} 
+            className="w-full h-full rounded-md overflow-hidden border border-border"
+          />
         </div>
         
         <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
