@@ -47,7 +47,7 @@ const Solutions = () => {
             
             <div 
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/4875b7e7-bd49-468d-b011-6b3b0f9bc793.png')` }}
+              style={{ backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')` }}
             ></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
@@ -81,7 +81,7 @@ const Solutions = () => {
             
             <div 
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/9e2c96de-9be3-4923-8270-ed9ac4140e8d.png')` }}
+              style={{ backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')` }}
             ></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
