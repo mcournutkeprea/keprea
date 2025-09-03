@@ -10,9 +10,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/f442514f-eeef-4f75-9058-46c4d7871765.png" 
+              src="/lovable-uploads/0e951f6e-e749-4481-b6d1-6c680205357f.png" 
               alt="Keprea Logo" 
-              className="h-20 w-auto bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3"
+              className="h-24 w-auto bg-white/90 backdrop-blur-sm rounded-lg px-5 py-4"
             />
           </div>
           
