@@ -365,18 +365,6 @@ const translations: Translations = {
     es: 'Acompañamiento y consejos para uso óptimo en campo',
     pt: 'Acompanhamento e conselhos para uso otimizado no campo'
   },
-  'production.process.step6': {
-    fr: 'Cultures en Forme',
-    en: 'Healthy Crops',
-    es: 'Cultivos Saludables',
-    pt: 'Cultivos Saudáveis'
-  },
-  'production.process.step6_desc': {
-    fr: 'Cultures en pleine forme et rendements optimisés',
-    en: 'Healthy crops and optimized yields',
-    es: 'Cultivos saludables y rendimientos optimizados',
-    pt: 'Cultivos saudáveis e rendimentos otimizados'
-  },
   // Team section
   'team.title': {
     fr: 'Notre Équipe',

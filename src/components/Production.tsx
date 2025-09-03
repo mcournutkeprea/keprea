@@ -108,7 +108,7 @@ const Production = () => {
             {/* Processus de production en bas */}
             <div className="relative z-10 mt-8">
               <h4 className="text-lg font-semibold text-foreground mb-4 text-center">{t('production.process.title')}</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 {/* Étape 1: Élevage d'insecte auxiliaire */}
                 <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -159,15 +159,6 @@ const Production = () => {
                   </div>
                 </div>
                 
-                {/* Étape 6: Cultures en forme */}
-                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🌱</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{t('production.process.step6')}</p>
-                  </div>
-                </div>
               </div>
             </div>
 
