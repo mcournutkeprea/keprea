@@ -306,60 +306,72 @@ const translations: Translations = {
     pt: 'Um processo industrial controlado para bioestimulantes de qualidade superior'
   },
   'production.process.step1': {
+    fr: 'Élevage d\'insecte auxiliaire',
+    en: 'Beneficial Insect Breeding',
+    es: 'Cría de insectos auxiliares',
+    pt: 'Criação de insetos auxiliares'
+  },
+  'production.process.step1_desc': {
+    fr: 'Élevage contrôlé d\'insectes auxiliaires en laboratoire',
+    en: 'Controlled breeding of beneficial insects in laboratory',
+    es: 'Cría controlada de insectos auxiliares en laboratorio',
+    pt: 'Criação controlada de insetos auxiliares em laboratório'
+  },
+  'production.process.step2': {
     fr: 'Collecte de Co-produits',
     en: 'Co-product Collection',
     es: 'Recolección de Co-productos',
     pt: 'Coleta de Co-produtos'
   },
-  'production.process.step1_desc': {
+  'production.process.step2_desc': {
     fr: 'Collecte de co-produits issus de l\'élevage d\'insectes',
     en: 'Collection of co-products from insect farming',
     es: 'Recolección de co-productos de la cría de insectos',
     pt: 'Coleta de co-produtos da criação de insetos'
   },
-  'production.process.step2': {
+  'production.process.step3': {
     fr: 'Transformation',
     en: 'Transformation',
     es: 'Transformación',
     pt: 'Transformação'
   },
-  'production.process.step2_desc': {
+  'production.process.step3_desc': {
     fr: 'Transformation et sélection des molécules d\'intérêts',
     en: 'Transformation and selection of molecules of interest',
     es: 'Transformación y selección de moléculas de interés',
     pt: 'Transformação e seleção de moléculas de interesse'
   },
-  'production.process.step3': {
+  'production.process.step4': {
     fr: 'Packaging',
     en: 'Packaging',
     es: 'Envasado',
     pt: 'Embalagem'
   },
-  'production.process.step3_desc': {
+  'production.process.step4_desc': {
     fr: 'Conditionnement des biostimulants',
     en: 'Biostimulant packaging',
     es: 'Envasado de bioestimulantes',
     pt: 'Embalagem de bioestimulantes'
   },
-  'production.process.step4': {
-    fr: 'Épandage',
-    en: 'Field Application',
-    es: 'Aplicación en Campo',
-    pt: 'Aplicação no Campo'
-  },
-  'production.process.step4_desc': {
-    fr: 'Épandage dans les champs agricoles',
-    en: 'Application in agricultural fields',
-    es: 'Aplicación en campos agrícolas',
-    pt: 'Aplicação em campos agrícolas'
-  },
   'production.process.step5': {
+    fr: 'Conseil d\'utilisation en plein champ',
+    en: 'Field Application Advice',
+    es: 'Consejo de uso en campo',
+    pt: 'Conselho de uso no campo'
+  },
+  'production.process.step5_desc': {
+    fr: 'Accompagnement et conseils pour l\'utilisation optimale en plein champ',
+    en: 'Support and advice for optimal field application',
+    es: 'Acompañamiento y consejos para uso óptimo en campo',
+    pt: 'Acompanhamento e conselhos para uso otimizado no campo'
+  },
+  'production.process.step6': {
     fr: 'Cultures en Forme',
     en: 'Healthy Crops',
     es: 'Cultivos Saludables',
     pt: 'Cultivos Saudáveis'
   },
-  'production.process.step5_desc': {
+  'production.process.step6_desc': {
     fr: 'Cultures en pleine forme et rendements optimisés',
     en: 'Healthy crops and optimized yields',
     es: 'Cultivos saludables y rendimientos optimizados',
