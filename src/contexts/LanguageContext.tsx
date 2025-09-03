@@ -234,10 +234,10 @@ const translations: Translations = {
     pt: 'Nosso local de produção'
   },
   'production.subtitle': {
-    fr: 'Découvrez notre site de production moderne situé à Damparis, en France, où nous développons nos solutions bio-innovantes',
-    en: 'Discover our modern production site located in Damparis, France, where we develop our bio-innovative solutions',
-    es: 'Descubra nuestro moderno sitio de producción ubicado en Damparis, Francia, donde desarrollamos nuestras soluciones bio-innovadoras',
-    pt: 'Descubra nosso moderno local de produção localizado em Damparis, França, onde desenvolvemos nossas soluções bio-inovadoras'
+    fr: 'Découvrez notre site de production moderne situé à Dole, en France, où nous développons nos solutions bio-innovantes',
+    en: 'Discover our modern production site located in Dole, France, where we develop our bio-innovative solutions',
+    es: 'Descubra nuestro moderno sitio de producción ubicado en Dole, Francia, donde desarrollamos nuestras soluciones bio-innovadoras',
+    pt: 'Descubra nosso moderno local de produção localizado em Dole, França, onde desenvolvemos nossas soluções bio-inovadoras'
   },
   'production.excellence': {
     fr: 'Un site d\'excellence',
@@ -252,10 +252,10 @@ const translations: Translations = {
     pt: 'Localização estratégica'
   },
   'production.location.desc': {
-    fr: 'Situé sur la commune de Damparis, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d\'un important bassin céréalier et viticole français.',
-    en: 'Located in the municipality of Damparis, our site is only 2 hours from Paris, Basel, Geneva and Lyon, in the heart of an important French cereal and wine-growing basin.',
-    es: 'Situado en el municipio de Damparis, nuestro sitio está a solo 2 horas de París, Basilea, Ginebra y Lyon, en el corazón de una importante cuenca cerealera y vitícola francesa.',
-    pt: 'Localizado no município de Damparis, nosso local fica a apenas 2 horas de Paris, Basileia, Genebra e Lyon, no coração de uma importante bacia cerealífera e vitícola francesa.'
+    fr: 'Situé sur la commune de Dole, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d\'un important bassin céréalier et viticole français.',
+    en: 'Located in the municipality of Dole, our site is only 2 hours from Paris, Basel, Geneva and Lyon, in the heart of an important French cereal and wine-growing basin.',
+    es: 'Situado en el municipio de Dole, nuestro sitio está a solo 2 horas de París, Basilea, Ginebra y Lyon, en el corazón de una importante cuenca cerealera y vitícola francesa.',
+    pt: 'Localizado no município de Dole, nosso local fica a apenas 2 horas de Paris, Basileia, Genebra e Lyon, no coração de uma importante bacia cerealífera e vitícola francesa.'
   },
   'production.technology.title': {
     fr: 'Technologies modernes',

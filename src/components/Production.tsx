@@ -94,7 +94,7 @@ const Production = () => {
                 <div className="aspect-square rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
                   <img 
                     src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png"
-                    alt="Site de production Keprea à Damparis"
+                    alt="Site de production Keprea à Dole"
                     className="w-full h-full object-cover animate-slow-pan-right"
                   />
                 </div>

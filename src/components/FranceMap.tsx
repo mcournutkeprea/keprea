@@ -9,7 +9,7 @@ const FranceMap = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Coordonnées de l'usine à Damparis
+    // Coordonnées de l'usine à Dole
     const lat = 47.054611;   // 47°03'16.6"N
     const lon = 5.432528;    // 5°25'57.1"E
 
@@ -42,7 +42,7 @@ const FranceMap = () => {
       // Déposer le marqueur une fois l'animation terminée
       map.once('moveend', () => {
         L.marker([lat, lon]).addTo(map)
-          .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Damparis, France')
+          .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Dole, France')
           .openPopup();
       });
     }, 500);
