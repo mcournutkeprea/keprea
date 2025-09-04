@@ -115,7 +115,7 @@ const Solutions = () => {
             
             <div 
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/2b2944de-aec7-4fae-a32a-04a140dc619e.png')` }}
+              style={{ backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')` }}
             ></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
