@@ -70,8 +70,17 @@ const Innovation = () => {
 
         {/* Deuxième et troisième blocs - Grid 2 colonnes avec images */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Colonne gauche - Bloc substances + image fertilisation */}
+          {/* Colonne gauche - Image fertilisation + bloc substances */}
           <div className="space-y-6">
+            {/* Image fertilisation */}
+            <div className="rounded-xl overflow-hidden shadow-sm">
+              <img 
+                src={fieldFertilization} 
+                alt="Fertilisation dans un champ agricole" 
+                className="w-full h-48 object-cover"
+              />
+            </div>
+            
             <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
               
@@ -96,19 +105,19 @@ const Innovation = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Image fertilisation */}
+          </div>
+
+          {/* Colonne droite - Image abeille + bloc organismes */}
+          <div className="space-y-6">
+            {/* Image abeille */}
             <div className="rounded-xl overflow-hidden shadow-sm">
               <img 
-                src={fieldFertilization} 
-                alt="Fertilisation dans un champ agricole" 
+                src={beeOnPlant} 
+                alt="Abeille sur une plante en fleur" 
                 className="w-full h-48 object-cover"
               />
             </div>
-          </div>
-
-          {/* Colonne droite - Bloc organismes + image abeille */}
-          <div className="space-y-6">
+            
             <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
               
@@ -132,15 +141,6 @@ const Innovation = () => {
                   "{t('innovation.quote2')}"
                 </p>
               </div>
-            </div>
-            
-            {/* Image abeille */}
-            <div className="rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src={beeOnPlant} 
-                alt="Abeille sur une plante en fleur" 
-                className="w-full h-48 object-cover"
-              />
             </div>
           </div>
         </div>
