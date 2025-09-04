@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ProductsSchema from "@/components/ProductsSchema";
-import Solutions from "@/components/Solutions";
 import Innovation from "@/components/Innovation";
 import Production from "@/components/Production";
 import Team from "@/components/Team";
@@ -15,7 +14,6 @@ const Index = () => {
       <Navigation />
       <Hero />
       <ProductsSchema />
-      <Solutions />
       <Innovation />
       <Production />
       <Team />
