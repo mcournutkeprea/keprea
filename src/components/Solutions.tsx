@@ -13,7 +13,7 @@ const Solutions = () => {
             {t('solutions.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('solutions.subtitle')}
+            Répondre aux défis majeurs des agriculteurs du monde entier : compétitivité, productivité, préservation des sols, de la biodiversité et du climat
           </p>
         </div>
 
