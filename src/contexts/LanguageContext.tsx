@@ -330,10 +330,10 @@ const translations: Translations = {
     pt: 'Coleta de co-produtos da criação de insetos'
   },
   'production.process.step3': {
-    fr: 'Transformation',
-    en: 'Transformation',
-    es: 'Transformación',
-    pt: 'Transformação'
+    fr: 'Préparation ou transformation',
+    en: 'Preparation or transformation',
+    es: 'Preparación o transformación',
+    pt: 'Preparação ou transformação'
   },
   'production.process.step3_desc': {
     fr: 'Transformation et sélection des molécules d\'intérêts',
