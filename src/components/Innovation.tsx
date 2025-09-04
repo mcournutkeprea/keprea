@@ -76,21 +76,22 @@ const Innovation = () => {
           {/* Colonne gauche - Image fertilisation + bloc substances */}
           <div className="space-y-6">
             {/* Image fertilisation avec flip */}
-            <div className="rounded-xl overflow-hidden shadow-sm h-48 perspective-1000">
+            <div className="rounded-xl overflow-hidden shadow-sm h-48" style={{ perspective: '1000px' }}>
               <div 
-                className={`relative w-full h-full transition-transform duration-700 preserve-3d cursor-pointer ${
-                  isFlipped ? 'rotate-y-180' : ''
-                }`}
+                className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`}
                 onClick={() => setIsFlipped(!isFlipped)}
                 style={{ 
                   transformStyle: 'preserve-3d',
-                  perspective: '1000px'
+                  transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
                 }}
               >
                 {/* Face avant - Image */}
                 <div 
-                  className="absolute inset-0 backface-hidden"
-                  style={{ backfaceVisibility: 'hidden' }}
+                  className="absolute inset-0"
+                  style={{ 
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(0deg)'
+                  }}
                 >
                   <img 
                     src={fieldFertilization} 
@@ -101,7 +102,7 @@ const Innovation = () => {
                 
                 {/* Face arrière - Texte HLOA */}
                 <div 
-                  className="absolute inset-0 bg-primary flex items-center justify-center backface-hidden"
+                  className="absolute inset-0 bg-primary flex items-center justify-center"
                   style={{ 
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
