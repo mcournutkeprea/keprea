@@ -17,7 +17,7 @@ const Innovation = () => {
                 {t('innovation.title')}
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                {t('innovation.subtitle')}
+                Nous exploitons le potentiel extraordinaire des insectes pour créer des solutions agricoles durables, performantes et abordables. Notre approche scientifique et technique combine savoir faire artisanal, industriel et agronomique pour répondre aux besoins des agriculteurs.
               </p>
               
               <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
