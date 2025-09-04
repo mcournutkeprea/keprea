@@ -108,57 +108,62 @@ const Production = () => {
             {/* Processus de production en bas */}
             <div className="relative z-10 mt-8">
               <h4 className="text-lg font-semibold text-foreground mb-4 text-center">De la larve au champs</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                {/* Étape 1: Élevage d'insecte auxiliaire */}
-                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🐛</span>
+              <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
+                {/* Première colonne - deux premiers carrés alignés verticalement */}
+                <div className="flex flex-col gap-4">
+                  {/* Étape 1: Élevage d'insecte auxiliaire */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🐛</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step1')}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{t('production.process.step1')}</p>
-                  </div>
-                </div>
-                
-                {/* Étape 2: Collecte */}
-                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🪲</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{t('production.process.step2')}</p>
-                  </div>
-                </div>
-                
-                {/* Étape 3: Transformation */}
-                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">⚗️</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{t('production.process.step3')}</p>
+                  
+                  {/* Étape 2: Collecte */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🪲</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step2')}</p>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Étape 4: Packaging */}
-                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">📦</span>
+                {/* Deuxième section - trois derniers carrés */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {/* Étape 3: Transformation */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">⚗️</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step3')}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{t('production.process.step4')}</p>
+                  
+                  {/* Étape 4: Packaging */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">📦</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step4')}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Étape 5: Conseil d'utilisation en plein champ */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                    <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">👨‍🌾</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
+                    </div>
                   </div>
                 </div>
-                
-                {/* Étape 5: Conseil d'utilisation en plein champ */}
-                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">👨‍🌾</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
-                  </div>
-                </div>
-                
               </div>
             </div>
 
