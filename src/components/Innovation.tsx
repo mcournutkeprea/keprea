@@ -54,27 +54,23 @@ const Innovation = () => {
             </div>
           </div>
           
-          <div>
-            <div className="bg-card p-8 rounded-lg shadow-sm">
+          <div className="space-y-6">
+            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
               
-              <div className="grid grid-cols-1 gap-6">
+              <div className="space-y-4">
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
                   </div>
                   <div className="text-lg font-bold text-primary">interagissent rapidement avec la plante et le sol, naturellement</div>
                 </div>
-              </div>
-              <div className="text-center">
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
                   </div>
                   <div className="text-lg font-bold text-primary">{t('innovation.benefit2')}</div>
                 </div>
-              </div>
-              <div className="text-center">
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
@@ -89,31 +85,31 @@ const Innovation = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-        
-        <div className="bg-card p-8 rounded-xl shadow-sm">
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">84%</div>
-              <div className="text-sm text-muted-foreground">{t('innovation.stat1.desc')}</div>
+
+            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">84%</div>
+                  <div className="text-sm text-muted-foreground">{t('innovation.stat1.desc')}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">5500</div>
+                  <div className="text-sm text-muted-foreground">{t('innovation.stat2.desc')}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">10 000</div>
+                  <div className="text-sm text-muted-foreground">{t('innovation.stat3.desc')}</div>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-6 bg-secondary/50 rounded-lg">
+                <p className="text-sm text-muted-foreground text-center">
+                  "{t('innovation.quote2')}"
+                </p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">5500</div>
-              <div className="text-sm text-muted-foreground">{t('innovation.stat2.desc')}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">10 000</div>
-              <div className="text-sm text-muted-foreground">{t('innovation.stat3.desc')}</div>
-            </div>
-          </div>
-          
-          <div className="mt-8 p-6 bg-secondary/50 rounded-lg">
-            <p className="text-sm text-muted-foreground text-center">
-              "{t('innovation.quote2')}"
-            </p>
           </div>
         </div>
       </div>
