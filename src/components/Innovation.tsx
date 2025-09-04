@@ -2,9 +2,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Check } from "lucide-react";
 import beeOnPlant from "@/assets/bee-on-plant.jpg";
 import fieldFertilization from "@/assets/field-fertilization.jpg";
+import { useState } from "react";
 
 const Innovation = () => {
   const { t } = useLanguage();
+  const [isFlipped, setIsFlipped] = useState(false);
+  
   return (
     <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
@@ -72,13 +75,41 @@ const Innovation = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Colonne gauche - Image fertilisation + bloc substances */}
           <div className="space-y-6">
-            {/* Image fertilisation */}
-            <div className="rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src={fieldFertilization} 
-                alt="Fertilisation dans un champ agricole" 
-                className="w-full h-48 object-cover"
-              />
+            {/* Image fertilisation avec flip */}
+            <div className="rounded-xl overflow-hidden shadow-sm h-48 perspective-1000">
+              <div 
+                className={`relative w-full h-full transition-transform duration-700 preserve-3d cursor-pointer ${
+                  isFlipped ? 'rotate-y-180' : ''
+                }`}
+                onClick={() => setIsFlipped(!isFlipped)}
+                style={{ 
+                  transformStyle: 'preserve-3d',
+                  perspective: '1000px'
+                }}
+              >
+                {/* Face avant - Image */}
+                <div 
+                  className="absolute inset-0 backface-hidden"
+                  style={{ backfaceVisibility: 'hidden' }}
+                >
+                  <img 
+                    src={fieldFertilization} 
+                    alt="Fertilisation dans un champ agricole" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Face arrière - Texte HLOA */}
+                <div 
+                  className="absolute inset-0 bg-primary flex items-center justify-center backface-hidden"
+                  style={{ 
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)'
+                  }}
+                >
+                  <div className="text-white text-6xl font-bold">HLOA</div>
+                </div>
+              </div>
             </div>
             
             <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
