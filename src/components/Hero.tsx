@@ -52,7 +52,7 @@ const Hero = () => {
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">0</div>
-              <div className="text-white/80">aucun achat de matériel supplémentaire</div>
+              <div className="text-white/80">aucun investissement dans le matériel agricole pour les producteurs</div>
             </div>
           </div>
         </div>
