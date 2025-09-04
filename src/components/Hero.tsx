@@ -37,7 +37,7 @@ const Hero = () => {
               className="px-8 py-3 bg-primary hover:bg-primary/90 text-white border-0"
               onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              {t('hero.cta')}
+              Découvrir notre portfolio 100% à base d'insectes
             </Button>
           </div>
           
