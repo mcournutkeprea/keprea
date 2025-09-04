@@ -124,7 +124,7 @@ const Production = () => {
                   {/* Étape 2: Collecte */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🪲</span>
+                      <span className="text-2xl">🜻</span>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-foreground">{t('production.process.step2')}</p>
