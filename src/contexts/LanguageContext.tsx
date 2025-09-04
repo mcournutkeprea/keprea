@@ -365,6 +365,12 @@ const translations: Translations = {
     es: 'Acompañamiento y consejos para uso óptimo en campo',
     pt: 'Acompanhamento e conselhos para uso otimizado no campo'
   },
+  'production.process.step6': {
+    fr: 'Export',
+    en: 'Export',
+    es: 'Exportación',
+    pt: 'Exportação'
+  },
   // Team section
   'team.title': {
     fr: 'Notre Équipe',
