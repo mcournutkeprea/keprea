@@ -51,10 +51,10 @@ const translations: Translations = {
   },
   // Hero section
   'hero.title': {
-    fr: 'Biosolutions révolutionnaires à base d\'insectes',
-    en: 'Revolutionary insect-based biosolutions',
-    es: 'Biosoluciones revolucionarias basadas en insectos',
-    pt: 'Biosoluções revolucionárias baseadas em insetos'
+    fr: 'Biosolutions performantes à base d\'insecte, inspiré du vivant',
+    en: 'High-performance insect-based biosolutions, inspired by nature',
+    es: 'Biosoluciones de alto rendimiento basadas en insectos, inspiradas en la naturaleza',
+    pt: 'Biosoluções de alto desempenho baseadas em insetos, inspiradas na natureza'
   },
   'hero.subtitle': {
     fr: 'Fertilisation, boosters et protection naturelle des cultures pour une agriculture durable et performante',
