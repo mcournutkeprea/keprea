@@ -18,16 +18,16 @@ const Navigation = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
                 {t('nav.solutions')}
               </a>
-              <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
                 {t('nav.innovation')}
               </a>
-              <a href="#production" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#production" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
                 {t('nav.production')}
               </a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
                 {t('nav.about')}
               </a>
             </div>
