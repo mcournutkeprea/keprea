@@ -6,57 +6,63 @@ const Innovation = () => {
   return (
     <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
-        {/* Premier bloc - Pleine largeur */}
+        {/* Premier bloc - Pleine largeur avec grid interne */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            {t('innovation.title')}
-          </h2>
-          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            {t('innovation.subtitle')}
-          </p>
-          
-          <div className="space-y-4">
-            <div className="flex items-start space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
-                <span className="text-white text-lg font-bold">🧬</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">{t('innovation.amino.title')}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t('innovation.amino.desc')}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Texte à gauche */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                {t('innovation.title')}
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                {t('innovation.subtitle')}
+              </p>
+              
+              <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
+                <p className="text-sm text-muted-foreground text-center">
+                  "{t('innovation.quote1')}"
                 </p>
               </div>
             </div>
             
-            <div className="flex items-start space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
-                <span className="text-white text-lg font-bold">🔬</span>
+            {/* 3 bulles à droite */}
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
+                  <span className="text-white text-lg font-bold">🧬</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">{t('innovation.amino.title')}</h3>
+                  <p className="text-muted-foreground text-sm">
+                    {t('innovation.amino.desc')}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">{t('innovation.chitin.title')}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t('innovation.chitin.desc')}
-                </p>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
+                  <span className="text-white text-lg font-bold">🔬</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">{t('innovation.chitin.title')}</h3>
+                  <p className="text-muted-foreground text-sm">
+                    {t('innovation.chitin.desc')}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
+                  <span className="text-white text-lg font-bold">🐛</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">{t('innovation.biocontrol.title')}</h3>
+                  <p className="text-muted-foreground text-sm">
+                    {t('innovation.biocontrol.desc')}
+                  </p>
+                </div>
               </div>
             </div>
-            
-            <div className="flex items-start space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
-                <span className="text-white text-lg font-bold">🐛</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">{t('innovation.biocontrol.title')}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t('innovation.biocontrol.desc')}
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
-            <p className="text-sm text-muted-foreground text-center">
-              "{t('innovation.quote1')}"
-            </p>
           </div>
         </div>
 
