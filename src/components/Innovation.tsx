@@ -52,6 +52,12 @@ const Innovation = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
+              <p className="text-sm text-muted-foreground text-center">
+                "{t('innovation.quote1')}"
+              </p>
+            </div>
           </div>
           
           <div className="space-y-6">
@@ -77,12 +83,6 @@ const Innovation = () => {
                   </div>
                   <div className="text-lg font-bold text-primary">{t('innovation.benefit3')}</div>
                 </div>
-              </div>
-              
-              <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
-                <p className="text-sm text-muted-foreground text-center">
-                  "{t('innovation.quote1')}"
-                </p>
               </div>
             </div>
 
