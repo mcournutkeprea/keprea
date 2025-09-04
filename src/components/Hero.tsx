@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in">
-            {t('hero.title')}
+            Biofertilisant Nutrition optimale des cultures Engrais organique naturel Amélioration de la fertilité du sol
           </h1>
           
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
