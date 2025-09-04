@@ -55,7 +55,7 @@ const Solutions = () => {
           {/* Section Booster */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px]">
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">{t('solutions.booster.title')}</h3>
+              <h3 className="text-xl font-extrabold mb-2 text-white">Boosters</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">{t('solutions.booster.subtitle')}</p>
               
               <div className="space-y-2 mb-4">
