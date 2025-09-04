@@ -1,6 +1,5 @@
 const ProductsSchema = () => {
-  return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background to-secondary/30">
+  return <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background to-secondary/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -13,9 +12,7 @@ const ProductsSchema = () => {
           <div className="relative">
             {/* Centre - Portfolio */}
             <div className="flex justify-center mb-12">
-              <div className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg text-center border-4 border-primary shadow-lg">
-                Portfolio 100% à base d'insectes
-              </div>
+              
             </div>
 
             {/* Cycle des solutions en cercle - SUPPRIMÉ */}
@@ -23,8 +20,6 @@ const ProductsSchema = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProductsSchema;
