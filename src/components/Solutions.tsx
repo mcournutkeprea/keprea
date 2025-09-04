@@ -33,6 +33,14 @@ const Solutions = () => {
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                   <span className="text-xs font-semibold text-white">Amélioration de la fertilité du sol</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">Amélioration de la biodiversité microbienne du sol</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">Augmentation de la biomasse et du rendement</span>
+                </div>
               </div>
 
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
