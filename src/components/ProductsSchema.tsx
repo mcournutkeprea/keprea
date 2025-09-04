@@ -9,7 +9,71 @@ const ProductsSchema = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Contenu supprimé */}
+          {/* Schéma principal inspiré du cycle */}
+          <div className="relative">
+            {/* Centre - Portfolio */}
+            <div className="flex justify-center mb-12">
+              <div className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg text-center border-4 border-primary shadow-lg">
+                Portfolio 100% à base d'insectes
+              </div>
+            </div>
+
+            {/* Cycle des solutions en cercle */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {/* Biofertilisants */}
+              <div className="text-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/f70fe1c8-b7e1-4261-bf4d-f1a469759696.png" 
+                    alt="Biofertilisants - granulés organiques" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-foreground mb-2">Biofertilisants</h3>
+                <p className="text-sm text-muted-foreground">Riche en matière organique et NPK</p>
+              </div>
+
+              {/* Booster */}
+              <div className="text-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-green-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/f27e5e5d-c3ab-4d85-b49e-823ca71f99df.png" 
+                    alt="Booster - pulvérisateur agricole" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-foreground mb-2">Booster</h3>
+                <p className="text-sm text-muted-foreground">Molécules d'intérêt contre l'ensemble des stress de la plante</p>
+              </div>
+
+              {/* Substances naturelles */}
+              <div className="text-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/0060df64-0588-4ee2-b979-e8184df4cf73.png" 
+                    alt="Substances naturelles - chrysope insecte aux ailes transparentes" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-foreground mb-2">Substances naturelles</h3>
+                <p className="text-sm text-muted-foreground">Extraits d'insectes pour lutter directement contre les pathogènes</p>
+              </div>
+
+              {/* Macro-organismes */}
+              <div className="text-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/bb39e7ca-e24b-4847-8e3a-787a037f3eb7.png" 
+                    alt="Macro-organismes - chrysope" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-foreground mb-2">Macro-organismes</h3>
+                <p className="text-sm text-muted-foreground">le vivant pour protéger les cultures</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
