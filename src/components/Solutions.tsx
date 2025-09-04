@@ -1,12 +1,11 @@
 import { Shield, Droplets, GitBranch, Wheat, Bug } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-
 console.log("Solutions component loading...");
-
 const Solutions = () => {
-  const { t } = useLanguage();
-  return (
-    <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
+  const {
+    t
+  } = useLanguage();
+  return <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4">
@@ -30,16 +29,8 @@ const Solutions = () => {
                   <span className="text-xs font-semibold text-white">Engrais organique naturel</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Amélioration de la fertilité du sol</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Amélioration de la biodiversité microbienne du sol</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Augmentation de la biomasse et du rendement</span>
+                  
+                  
                 </div>
               </div>
 
@@ -53,10 +44,9 @@ const Solutions = () => {
               </div>
             </div>
             
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/8448cf56-1922-4835-b234-3284ffdd0cc4.png')` }}
-            ></div>
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url('/lovable-uploads/8448cf56-1922-4835-b234-3284ffdd0cc4.png')`
+          }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
@@ -87,10 +77,9 @@ const Solutions = () => {
               </div>
             </div>
             
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')` }}
-            ></div>
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
+          }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
@@ -121,10 +110,9 @@ const Solutions = () => {
               </div>
             </div>
             
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')` }}
-            ></div>
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')`
+          }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
@@ -137,7 +125,7 @@ const Solutions = () => {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6 2C4.9 2 4 2.9 4 4V6C4 7.1 4.9 8 6 8H8C9.1 8 10 7.1 10 6V4C10 2.9 9.1 2 8 2H6M14 2C12.9 2 12 2.9 12 4V6C12 7.1 12.9 8 14 8H16C17.1 8 18 7.1 18 6V4C18 2.9 17.1 2 16 2H14M6 10C4.9 10 4 10.9 4 12V14C4 15.1 4.9 16 6 16H8C9.1 16 10 15.1 10 14V12C10 10.9 9.1 10 8 10H6M14 10C12.9 10 12 10.9 12 12V14C12 15.1 12.9 16 14 16H16C17.1 16 18 15.1 18 14V12C18 10.9 17.1 10 16 10H14M6 18C4.9 18 4 18.9 4 20V22C4 23.1 4.9 24 6 24H8C9.1 24 10 23.1 10 22V20C10 18.9 9.1 18 8 18H6Z"/>
+                    <path d="M6 2C4.9 2 4 2.9 4 4V6C4 7.1 4.9 8 6 8H8C9.1 8 10 7.1 10 6V4C10 2.9 9.1 2 8 2H6M14 2C12.9 2 12 2.9 12 4V6C12 7.1 12.9 8 14 8H16C17.1 8 18 7.1 18 6V4C18 2.9 17.1 2 16 2H14M6 10C4.9 10 4 10.9 4 12V14C4 15.1 4.9 16 6 16H8C9.1 16 10 15.1 10 14V12C10 10.9 9.1 10 8 10H6M14 10C12.9 10 12 10.9 12 12V14C12 15.1 12.9 16 14 16H16C17.1 16 18 15.1 18 14V12C18 10.9 17.1 10 16 10H14M6 18C4.9 18 4 18.9 4 20V22C4 23.1 4.9 24 6 24H8C9.1 24 10 23.1 10 22V20C10 18.9 9.1 18 8 18H6Z" />
                   </svg>
                   <span className="text-xs font-semibold text-white">{t('solutions.biocontrol.nematicide')}</span>
                 </div>
@@ -149,16 +137,13 @@ const Solutions = () => {
               </div>
             </div>
             
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')` }}
-            ></div>
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
+          }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Solutions;
