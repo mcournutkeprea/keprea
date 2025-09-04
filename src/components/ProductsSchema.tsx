@@ -50,8 +50,8 @@ const ProductsSchema = () => {
               <div className="text-center">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden">
                   <img 
-                    src="/lovable-uploads/9117a39b-c413-496a-a9cd-892017ab37b7.png" 
-                    alt="Substances naturelles - structure moléculaire huile" 
+                    src="/lovable-uploads/0060df64-0588-4ee2-b979-e8184df4cf73.png" 
+                    alt="Substances naturelles - chrysope insecte aux ailes transparentes" 
                     className="w-full h-full object-cover"
                   />
                 </div>
