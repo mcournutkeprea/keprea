@@ -63,7 +63,7 @@ const Innovation = () => {
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-lg font-bold text-primary">interagissent rapidement avec la plante et le sol, comme dans la nature</div>
+                  <div className="text-lg font-bold text-primary">interagissent rapidement avec la plante et le sol, naturellement</div>
                 </div>
               </div>
               <div className="text-center">
