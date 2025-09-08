@@ -1,7 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Check } from "lucide-react";
 import beeOnPlant from "@/assets/bee-on-plant.jpg";
-import fieldFertilization from "@/assets/field-fertilization.jpg";
+import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import { useState } from "react";
 
 const Innovation = () => {
@@ -94,8 +94,8 @@ const Innovation = () => {
                   }}
                 >
                   <img 
-                    src={fieldFertilization} 
-                    alt="Fertilisation dans un champ agricole" 
+                    src={cornLeavesDroplets} 
+                    alt="Gouttes sur feuilles de maïs" 
                     className="w-full h-full object-cover"
                   />
                 </div>
