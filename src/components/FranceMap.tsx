@@ -62,7 +62,25 @@ const FranceMap = () => {
           <div 
             ref={mapRef} 
             className="w-full h-full rounded-md overflow-hidden border border-border"
+            style={{
+              position: 'relative'
+            }}
           />
+          {/* CSS pour masquer les contrôles Leaflet */}
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              .leaflet-control-attribution {
+                display: none !important;
+              }
+              .leaflet-control-zoom {
+                display: none !important;
+              }
+              /* Masquer spécifiquement les éléments avec title "Mark" */
+              [title="Mark"] {
+                display: none !important;
+              }
+            `
+          }} />
         </div>
         
         <div className="mt-4 grid grid-cols-2 gap-2 text-xs">

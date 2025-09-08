@@ -42,10 +42,12 @@ const Production = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-accent/20 p-12 min-h-[500px]">
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-              <div>
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-accent/20 p-8 lg:p-12">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              {/* Colonne de gauche - Texte excellence */}
+              <div className="lg:col-span-4">
                 <h3 className="text-2xl font-bold mb-6 text-foreground">
                   {t('production.excellence')}
                 </h3>
@@ -57,7 +59,7 @@ const Production = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">{t('production.location.title')}</h4>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         {t('production.location.desc')}
                       </p>
                     </div>
@@ -69,7 +71,7 @@ const Production = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">{t('production.technology.title')}</h4>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         {t('production.technology.desc')}
                       </p>
                     </div>
@@ -81,26 +83,27 @@ const Production = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">{t('production.environment.title')}</h4>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         {t('production.environment.desc')}
                       </p>
                     </div>
                   </div>
                 </div>
-
               </div>
 
-              <div className="relative">
-                <div className="aspect-square rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
+              {/* Colonne du milieu - Image du bâtiment */}
+              <div className="lg:col-span-4">
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
                   <img 
                     src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png"
-                    alt="Site de production Keprea à Dole"
+                    alt="Site de production Keprea à Damparis"
                     className="w-full h-full object-cover animate-slow-pan-right"
                   />
                 </div>
               </div>
 
-              <div className="lg:col-span-1">
+              {/* Colonne de droite - Carte */}
+              <div className="lg:col-span-4">
                 <FranceMap />
               </div>
             </div>
