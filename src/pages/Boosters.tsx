@@ -1,10 +1,8 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const Boosters = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header Navigation */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -89,11 +87,8 @@ const Boosters = () => {
 
             {/* Fertilea432 */}
             <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-secondary mb-4">Fertilea432</h3>
-              <p className="text-muted-foreground mb-6">
-                Riche en matière organique, ce fertilisant améliore la structure du sol 
-                et nourrit durablement vos cultures.
-              </p>
+              <h3 className="text-2xl font-bold text-secondary mb-4">Soilea110</h3>
+              <p className="text-muted-foreground mb-6">2% de chitine pour stimuler l'activité chitinolitique des sols et favoriser la présence de bactéries qui améliorer le système de défense des plantes.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -102,11 +97,11 @@ const Boosters = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Améliore la structure du sol</span>
+                  <span className="text-sm">Stimule le SDP</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Nutrition longue durée</span>
+                  <span className="text-sm">Epandu avec un micro granulateur lors du semis</span>
                 </div>
               </div>
             </div>
@@ -191,8 +186,6 @@ const Boosters = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Boosters;
