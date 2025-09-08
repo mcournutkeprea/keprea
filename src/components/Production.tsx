@@ -157,23 +157,23 @@ const Production = () => {
                     </div>
                   </div>
                   
-                  {/* Étape 5: Conseil d'utilisation en plein champ */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">👨‍🌾</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
-                    </div>
-                  </div>
-                  
-                  {/* Étape 6: Export */}
+                  {/* Étape 5: Export */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">🚢</span>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-foreground">{t('production.process.step6')}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Étape 6: Conseil d'utilisation en plein champ */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                    <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">👨‍🌾</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
                     </div>
                   </div>
                 </div>
