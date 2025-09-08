@@ -9,9 +9,9 @@ const FranceMap = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Coordonnées exactes : 3 avenue Innovia, Damparis (Jura)
-    const lat = 47.074167;   // Zone Innovia Damparis
-    const lon = 5.426944;    // 3 avenue Innovia
+    // Coordonnées exactes : 47°03'16.5"N 5°25'57.0"E
+    const lat = 47.054583;   // 47°03'16.5"N
+    const lon = 5.4325;      // 5°25'57.0"E
 
     // 1) Carte en vue "globe" (zoom bas)
     const map = L.map(mapRef.current, { 
