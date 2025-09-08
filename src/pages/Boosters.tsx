@@ -86,21 +86,21 @@ const Boosters = () => {
             </div>
 
             {/* Fertilea432 */}
-            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-secondary mb-4">Soilea110</h3>
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
               <p className="text-muted-foreground mb-6">2% de chitine pour stimuler l'activité chitinolitique des sols et favoriser la présence de bactéries qui améliorer le système de défense des plantes.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-sm">Matière organique de qualité</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-sm">Stimule le SDP</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-sm">Epandu avec un micro granulateur lors du semis</span>
                 </div>
               </div>
