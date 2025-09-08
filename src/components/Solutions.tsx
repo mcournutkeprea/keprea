@@ -62,7 +62,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Booster */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px]">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300">
             <div className="relative z-10">
               <h3 className="text-xl font-extrabold mb-2 text-white">Boosters</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">{t('solutions.booster.subtitle')}</p>
@@ -92,14 +92,10 @@ const Solutions = () => {
             backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
-            
-            <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg z-20">
-              Pour en savoir plus
-            </div>
           </div>
 
           {/* Section Substances naturelles */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px]">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300">
             <div className="relative z-10">
               <h3 className="text-xl font-extrabold mb-2 text-white">Substances naturelles</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
@@ -130,14 +126,10 @@ const Solutions = () => {
             backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
-            
-            <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg z-20">
-              Pour en savoir plus
-            </div>
           </div>
 
           {/* Section Biocontrôle vivant */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px]">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300">
             <div className="relative z-10">
               <h3 className="text-xl font-extrabold mb-2 text-white">Biocontrôle vivant</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">{t('solutions.biocontrol.subtitle')}</p>
@@ -162,10 +154,6 @@ const Solutions = () => {
             backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
-            
-            <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg z-20">
-              Pour en savoir plus
-            </div>
           </div>
         </div>
       </div>
