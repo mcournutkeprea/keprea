@@ -40,10 +40,10 @@ const Solutions = () => {
                   transform: 'rotateY(0deg)'
                 }}
               >
-                <div className="absolute inset-0 bg-cover bg-center" style={{
+                <div className="absolute inset-0 bg-cover bg-center pointer-events-none" style={{
                   backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
                 }}></div>
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
                 
                 <div className="relative z-10 h-full">
                   <h3 className="text-xl font-extrabold mb-2 text-white">Biofertilisant</h3>
