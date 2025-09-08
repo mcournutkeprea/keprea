@@ -28,7 +28,7 @@ const Biofertilisant = () => {
             <div>
               <div className="bg-primary text-white p-8 rounded-2xl text-center mb-8">
                 <div className="text-6xl font-bold">NPK</div>
-                <div className="text-4xl font-bold">= 342</div>
+                <div className="text-4xl font-bold">= 432</div>
               </div>
             </div>
             <div>
