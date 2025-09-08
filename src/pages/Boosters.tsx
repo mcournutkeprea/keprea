@@ -151,7 +151,7 @@ const Boosters = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Compatible</h3>
                   <p className="text-muted-foreground text-sm">
-                    S'intègre parfaitement aux programmes de fertilisation
+                    S'intègre parfaitement aux programmes de fertilisation et traitements phytosanitaires
                   </p>
                 </div>
               </div>
