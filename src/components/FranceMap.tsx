@@ -9,9 +9,9 @@ const FranceMap = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Coordonnées de l'usine à Dole
-    const lat = 47.054611;   // 47°03'16.6"N
-    const lon = 5.432528;    // 5°25'57.1"E
+    // Coordonnées de l'usine à Damparis (Jura)
+    const lat = 47.073056;   // 47°04'23.0"N  
+    const lon = 5.425833;    // 5°25'33.0"E
 
     // 1) Carte en vue "globe" (zoom bas)
     const map = L.map(mapRef.current, { 
@@ -21,10 +21,10 @@ const FranceMap = () => {
 
     mapInstanceRef.current = map;
 
-    // 2) Tuiles OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
+    // 2) Tuiles Google Satellite (Earth view)
+    L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      attribution: '&copy; <a href="https://www.google.com/maps">Google</a>'
     }).addTo(map);
 
     // 3) Animation de vol vers le point
@@ -42,7 +42,7 @@ const FranceMap = () => {
       // Déposer le marqueur une fois l'animation terminée
       map.once('moveend', () => {
         L.marker([lat, lon]).addTo(map)
-          .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Dole, France')
+          .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Damparis, France')
           .openPopup();
       });
     }, 500);
