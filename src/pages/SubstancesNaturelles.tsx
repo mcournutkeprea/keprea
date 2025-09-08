@@ -8,13 +8,18 @@ const SubstancesNaturelles = () => {
       {/* Header Navigation */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center gap-2 text-primary hover:text-primary/80">
-              <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium">Retour à l'accueil</span>
-            </Link>
-            <div className="h-6 w-px bg-border"></div>
-            <h1 className="text-2xl font-bold text-foreground">Substances Naturelles</h1>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Link to="/" className="flex items-center gap-2 text-primary hover:text-primary/80">
+                <ArrowLeft className="w-5 h-5" />
+                <span className="font-medium">Retour à l'accueil</span>
+              </Link>
+              <div className="h-6 w-px bg-border"></div>
+              <h1 className="text-2xl font-bold text-foreground">Substances Naturelles</h1>
+            </div>
+            <div className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
+              En cours de développement
+            </div>
           </div>
         </div>
       </header>
@@ -115,10 +120,7 @@ const SubstancesNaturelles = () => {
                     <span className="text-blue-600 font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground">Application foliaire</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Pulvérisation directe sur les feuilles des plantes
-                    </p>
+                    <h4 className="font-medium text-foreground">Application foliaire ou application au sol</h4>
                   </div>
                 </div>
                 
@@ -129,31 +131,7 @@ const SubstancesNaturelles = () => {
                   <div>
                     <h4 className="font-medium text-foreground">Absorption</h4>
                     <p className="text-sm text-muted-foreground">
-                      Les substances actives pénètrent dans les tissus végétaux
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 font-bold">3</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground">Activation</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Déclenchement des mécanismes de défense naturels
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 font-bold">4</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground">Protection</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Renforcement de la résistance aux stress biotiques et abiotiques
+                      Les substances protègent les cultures via les feuilles directement ou via le sol en luttant contre les ravageurs présents autour des racines
                     </p>
                   </div>
                 </div>
