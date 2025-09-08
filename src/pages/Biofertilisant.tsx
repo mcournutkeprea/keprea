@@ -26,7 +26,7 @@ const Biofertilisant = () => {
       <section className="py-16 px-4 bg-secondary/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Composition NPK 4-3-2</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">4%</div>
               <h3 className="text-xl font-bold mb-2">Phosphore (P)</h3>
@@ -46,6 +46,13 @@ const Biofertilisant = () => {
               <h3 className="text-xl font-bold mb-2">Potassium (K)</h3>
               <p className="text-muted-foreground">
                 Renforce la résistance aux maladies et améliore la qualité des fruits
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
+              <div className="text-4xl font-bold text-primary mb-4">85%</div>
+              <h3 className="text-xl font-bold mb-2">Matière organique</h3>
+              <p className="text-muted-foreground">
+                Améliore la qualité du sol
               </p>
             </div>
           </div>

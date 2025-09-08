@@ -76,7 +76,14 @@ const FranceMap = () => {
                 display: none !important;
               }
               /* Masquer spécifiquement les éléments avec title "Mark" */
-              [title="Mark"] {
+              [title="Mark"], 
+              .leaflet-marker-icon,
+              .leaflet-marker-shadow,
+              .leaflet-div-icon {
+                display: none !important;
+              }
+              /* Masquer tous les marqueurs Leaflet */
+              .leaflet-marker-pane {
                 display: none !important;
               }
             `
