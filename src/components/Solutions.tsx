@@ -32,7 +32,7 @@ const Solutions = () => {
             onClick={handleBiofertilisantClick}
           >
             <div 
-              className={`relative w-full h-full transition-transform duration-700 ease-in-out`}
+              className="relative w-full h-full transition-transform duration-700 ease-in-out pointer-events-none"
               style={{ 
                 transformStyle: 'preserve-3d',
                 transform: isBiofertilisantFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
@@ -40,7 +40,7 @@ const Solutions = () => {
             >
               {/* Face avant - Contenu original */}
               <div 
-                className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/20 p-8"
+                className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/20 p-8 pointer-events-none"
                 style={{ 
                   backfaceVisibility: 'hidden',
                   transform: 'rotateY(0deg)'
