@@ -86,16 +86,16 @@ const Solutions = () => {
                   <GitBranch className="w-4 h-4 text-white" />
                 </div>
               </div>
-              
-              <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg">
-                Pour en savoir plus
-              </div>
             </div>
             
             <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
+            
+            <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg z-20">
+              Pour en savoir plus
+            </div>
           </div>
 
           {/* Section Substances naturelles */}
@@ -124,15 +124,16 @@ const Solutions = () => {
                 </div>
               </div>
               
-              <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg">
-                Pour en savoir plus
-              </div>
             </div>
             
             <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
+            
+            <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg z-20">
+              Pour en savoir plus
+            </div>
           </div>
 
           {/* Section Biocontrôle vivant */}
@@ -155,15 +156,16 @@ const Solutions = () => {
                 </div>
               </div>
               
-              <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg">
-                Pour en savoir plus
-              </div>
             </div>
             
             <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
+            
+            <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg z-20">
+              Pour en savoir plus
+            </div>
           </div>
         </div>
       </div>
