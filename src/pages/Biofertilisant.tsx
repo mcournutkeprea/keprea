@@ -21,63 +21,24 @@ const Biofertilisant = () => {
         </div>
       </header>
 
-      {/* Hero section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="bg-primary text-white p-8 rounded-2xl text-center mb-8">
-                <div className="text-6xl font-bold">NPK</div>
-                <div className="text-4xl font-bold">= 432</div>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Engrais organique naturel</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Notre biofertilisant combine des nutriments essentiels 
-                dans une formule équilibrée NPK 4-3-2, offrant une nutrition complète 
-                et naturelle pour toutes vos cultures.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-2">
-                  <Wheat className="w-5 h-5 text-primary" />
-                  <span className="font-medium">Rendement amélioré</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Droplets className="w-5 h-5 text-primary" />
-                  <span className="font-medium">Absorption optimale</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Leaf className="w-5 h-5 text-primary" />
-                  <span className="font-medium">100% naturel</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-primary" />
-                  <span className="font-medium">Respectueux du sol</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Composition section */}
       <section className="py-16 px-4 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Composition NPK 3-4-2</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Composition NPK 4-3-2</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
-              <div className="text-4xl font-bold text-primary mb-4">3%</div>
-              <h3 className="text-xl font-bold mb-2">Azote (N)</h3>
-              <p className="text-muted-foreground">
-                Favorise la croissance végétative et le développement des feuilles
-              </p>
-            </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">4%</div>
               <h3 className="text-xl font-bold mb-2">Phosphore (P)</h3>
               <p className="text-muted-foreground">
                 Stimule le développement racinaire et la floraison
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
+              <div className="text-4xl font-bold text-primary mb-4">3%</div>
+              <h3 className="text-xl font-bold mb-2">Azote (N)</h3>
+              <p className="text-muted-foreground">
+                Favorise la croissance végétative et le développement des feuilles
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
