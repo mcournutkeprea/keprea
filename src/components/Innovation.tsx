@@ -163,11 +163,6 @@ const Innovation = () => {
                 </div>
               </div>
               
-              <div className="mt-8 p-6 bg-secondary/50 rounded-lg">
-                <p className="text-sm text-muted-foreground text-center">
-                  "{t('innovation.quote2')}"
-                </p>
-              </div>
             </div>
           </div>
         </div>
