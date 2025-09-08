@@ -3,11 +3,11 @@ import FranceMap from "./FranceMap";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
-
 const Production = () => {
-  const { t } = useLanguage();
-  return (
-    <section id="production" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
+  const {
+    t
+  } = useLanguage();
+  return <section id="production" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -18,28 +18,7 @@ const Production = () => {
           </p>
           
           {/* Logo cliquable pour voir le processus de production */}
-          <div className="mt-8">
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="hover:scale-110 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-full">
-                  <img 
-                    src="/lovable-uploads/2aef602f-7a71-41fa-9ba0-e21e19b88e57.png"
-                    alt="Voir le processus de production"
-                    className="w-16 h-16 mx-auto cursor-pointer"
-                  />
-                </button>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl w-full">
-                <div className="p-4">
-                  <img 
-                    src="/lovable-uploads/fed1a5d0-31aa-4f79-92a2-9f46e3512478.png"
-                    alt="Processus de production - Blending, Spray Drying, Distillation, Spirulina"
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
+          
         </div>
 
         <div className="max-w-7xl mx-auto">
@@ -94,11 +73,7 @@ const Production = () => {
               {/* Colonne du milieu - Image du bâtiment */}
               <div className="lg:col-span-4">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
-                  <img 
-                    src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png"
-                    alt="Site de production Keprea à Damparis"
-                    className="w-full h-full object-cover animate-slow-pan-right"
-                  />
+                  <img src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png" alt="Site de production Keprea à Damparis" className="w-full h-full object-cover animate-slow-pan-right" />
                 </div>
               </div>
 
@@ -185,8 +160,6 @@ const Production = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Production;
