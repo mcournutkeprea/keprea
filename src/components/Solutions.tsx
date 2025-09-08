@@ -32,7 +32,7 @@ const Solutions = () => {
             onClick={handleBiofertilisantClick}
           >
             <div 
-              className="relative w-full h-full transition-transform duration-700 ease-in-out pointer-events-none"
+              className="relative w-full h-full transition-transform duration-700 ease-in-out"
               style={{ 
                 transformStyle: 'preserve-3d',
                 transform: isBiofertilisantFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
