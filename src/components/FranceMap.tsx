@@ -9,9 +9,9 @@ const FranceMap = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Coordonnées de l'usine à Damparis (Jura)
-    const lat = 47.073056;   // 47°04'23.0"N  
-    const lon = 5.425833;    // 5°25'33.0"E
+    // Coordonnées exactes : 3 avenue Innovia, Damparis (Jura)
+    const lat = 47.074167;   // Zone Innovia Damparis
+    const lon = 5.426944;    // 3 avenue Innovia
 
     // 1) Carte en vue "globe" (zoom bas)
     const map = L.map(mapRef.current, { 
