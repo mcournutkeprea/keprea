@@ -52,38 +52,38 @@ const Production = () => {
                   {t('production.excellence')}
                 </h3>
                 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
+                <div className="space-y-8">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-8 h-8 text-primary" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">{t('production.location.title')}</h4>
-                      <p className="text-muted-foreground text-sm">
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-2 text-lg">{t('production.location.title')}</h4>
+                      <p className="text-muted-foreground">
                         {t('production.location.desc')}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Factory className="w-6 h-6 text-primary" />
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Factory className="w-8 h-8 text-primary" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">{t('production.technology.title')}</h4>
-                      <p className="text-muted-foreground text-sm">
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-2 text-lg">{t('production.technology.title')}</h4>
+                      <p className="text-muted-foreground">
                         {t('production.technology.desc')}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Leaf className="w-6 h-6 text-primary" />
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Leaf className="w-8 h-8 text-primary" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">{t('production.environment.title')}</h4>
-                      <p className="text-muted-foreground text-sm">
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-2 text-lg">{t('production.environment.title')}</h4>
+                      <p className="text-muted-foreground">
                         {t('production.environment.desc')}
                       </p>
                     </div>
