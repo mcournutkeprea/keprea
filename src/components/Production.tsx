@@ -86,9 +86,9 @@ const Production = () => {
             {/* Processus de production en bas */}
             <div className="relative z-10 mt-8">
               <h4 className="text-lg font-semibold text-foreground mb-4 text-center">De la larve au champs</h4>
-              <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
-                {/* Première colonne - deux premiers carrés alignés verticalement */}
-                <div className="flex flex-col gap-4">
+              <div className="flex flex-col items-center justify-center space-y-6">
+                {/* Première ligne - deux premiers carrés alignés horizontalement */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   {/* Étape 1: Élevage d'insecte auxiliaire */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -110,8 +110,8 @@ const Production = () => {
                   </div>
                 </div>
                 
-                {/* Deuxième section - trois derniers carrés */}
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                {/* Deuxième ligne - quatre derniers carrés */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
                   {/* Étape 3: Transformation */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
