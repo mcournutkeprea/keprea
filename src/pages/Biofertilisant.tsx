@@ -34,8 +34,8 @@ const Biofertilisant = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">Engrais organique naturel</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Notre biofertilisant révolutionnaire combine des nutriments essentiels 
-                dans une formule équilibrée NPK 3-4-2, offrant une nutrition complète 
+                Notre biofertilisant combine des nutriments essentiels 
+                dans une formule équilibrée NPK 4-3-2, offrant une nutrition complète 
                 et naturelle pour toutes vos cultures.
               </p>
               <div className="grid grid-cols-2 gap-4">
