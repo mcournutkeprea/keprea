@@ -1,17 +1,13 @@
 import { Shield, Droplets, GitBranch, Wheat, Bug } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useState } from "react";
-console.log("Solutions component loading...");
+import { useNavigate } from "react-router-dom";
+
 const Solutions = () => {
-  const {
-    t
-  } = useLanguage();
-  const [isBiofertilisantFlipped, setIsBiofertilisantFlipped] = useState(false);
+  const { t } = useLanguage();
+  const navigate = useNavigate();
   
   const handleBiofertilisantClick = () => {
-    console.log("Biofertilisant clicked! Current state:", isBiofertilisantFlipped);
-    setIsBiofertilisantFlipped(!isBiofertilisantFlipped);
-    console.log("New state will be:", !isBiofertilisantFlipped);
+    navigate('/biofertilisant');
   };
   return <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -27,61 +23,40 @@ const Solutions = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Section Biofertilisant */}
           <div 
-            className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer" 
-            style={{ perspective: '1000px' }}
+            className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" 
             onClick={handleBiofertilisantClick}
           >
-            <div 
-              className="relative w-full h-full transition-transform duration-700 ease-in-out"
-              style={{ 
-                transformStyle: 'preserve-3d',
-                transform: isBiofertilisantFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-              }}
-            >
-              {/* Face avant - Contenu original */}
-              <div 
-                className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/20 p-8 pointer-events-none"
-                style={{ 
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(0deg)'
-                }}
-              >
-                <div className="absolute inset-0 bg-cover bg-center pointer-events-none" style={{
-                  backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
-                }}></div>
-                <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
-                
-                <div className="relative z-10 h-full">
-                  <h3 className="text-xl font-extrabold mb-2 text-white">Biofertilisant</h3>
-                  <p className="text-sm font-semibold text-white/90 mb-4">Nutrition optimale des cultures</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-white"></div>
-                      <span className="text-xs font-semibold text-white">Engrais organique naturel</span>
-                    </div>
-                  </div>
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+              backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
+            }}></div>
+            <div className="absolute inset-0 bg-black/40"></div>
+            
+            <div className="relative z-10 h-full p-8">
+              <h3 className="text-xl font-extrabold mb-2 text-white">Biofertilisant</h3>
+              <p className="text-sm font-semibold text-white/90 mb-4">Nutrition optimale des cultures</p>
+              
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">Engrais organique naturel</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">NPK = 3-4-2</span>
+                </div>
+              </div>
 
-                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                      <Wheat className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                      <Droplets className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
+                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                  <Wheat className="w-4 h-4 text-white" />
+                </div>
+                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                  <Droplets className="w-4 h-4 text-white" />
                 </div>
               </div>
               
-              {/* Face arrière - Texte NPK */}
-              <div 
-                className="absolute inset-0 bg-primary flex items-center justify-center"
-                style={{ 
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)'
-                }}
-              >
-                <div className="text-white text-4xl font-bold">NPK = 342</div>
+              <div className="absolute bottom-4 right-4 text-white/70 text-xs">
+                Cliquez pour en savoir plus →
               </div>
             </div>
           </div>
