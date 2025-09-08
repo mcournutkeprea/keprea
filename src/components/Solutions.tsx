@@ -86,6 +86,10 @@ const Solutions = () => {
                   <GitBranch className="w-4 h-4 text-white" />
                 </div>
               </div>
+              
+              <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg">
+                Pour en savoir plus
+              </div>
             </div>
             
             <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -119,6 +123,10 @@ const Solutions = () => {
                   <Droplets className="w-4 h-4 text-white" />
                 </div>
               </div>
+              
+              <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg">
+                Pour en savoir plus
+              </div>
             </div>
             
             <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -145,6 +153,10 @@ const Solutions = () => {
                   <Bug className="w-4 h-4 text-white" />
                   <span className="text-xs font-semibold text-white">{t('solutions.biocontrol.pest')}</span>
                 </div>
+              </div>
+              
+              <div className="absolute bottom-4 right-4 bg-primary text-white text-sm font-semibold px-3 py-2 rounded-lg">
+                Pour en savoir plus
               </div>
             </div>
             
