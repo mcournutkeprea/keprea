@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import Biofertilisant from "./pages/Biofertilisant";
+import Boosters from "./pages/Boosters";
+import SubstancesNaturelles from "./pages/SubstancesNaturelles";
+import BiocontroleVivant from "./pages/BiocontroleVivant";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +23,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/biofertilisant" element={<Biofertilisant />} />
+            <Route path="/boosters" element={<Boosters />} />
+            <Route path="/substances-naturelles" element={<SubstancesNaturelles />} />
+            <Route path="/biocontrole-vivant" element={<BiocontroleVivant />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
