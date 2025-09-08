@@ -7,6 +7,12 @@ const Solutions = () => {
     t
   } = useLanguage();
   const [isBiofertilisantFlipped, setIsBiofertilisantFlipped] = useState(false);
+  
+  const handleBiofertilisantClick = () => {
+    console.log("Biofertilisant clicked! Current state:", isBiofertilisantFlipped);
+    setIsBiofertilisantFlipped(!isBiofertilisantFlipped);
+    console.log("New state will be:", !isBiofertilisantFlipped);
+  };
   return <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
@@ -23,7 +29,7 @@ const Solutions = () => {
           <div 
             className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer" 
             style={{ perspective: '1000px' }}
-            onClick={() => setIsBiofertilisantFlipped(!isBiofertilisantFlipped)}
+            onClick={handleBiofertilisantClick}
           >
             <div 
               className={`relative w-full h-full transition-transform duration-700 ease-in-out`}
