@@ -20,10 +20,13 @@ const Solutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Section Biofertilisant */}
-          <div className="relative overflow-hidden rounded-2xl min-h-[300px]" style={{ perspective: '1000px' }}>
+          <div 
+            className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer" 
+            style={{ perspective: '1000px' }}
+            onClick={() => setIsBiofertilisantFlipped(!isBiofertilisantFlipped)}
+          >
             <div 
-              className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`}
-              onClick={() => setIsBiofertilisantFlipped(!isBiofertilisantFlipped)}
+              className={`relative w-full h-full transition-transform duration-700 ease-in-out`}
               style={{ 
                 transformStyle: 'preserve-3d',
                 transform: isBiofertilisantFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
@@ -37,7 +40,12 @@ const Solutions = () => {
                   transform: 'rotateY(0deg)'
                 }}
               >
-                <div className="relative z-10">
+                <div className="absolute inset-0 bg-cover bg-center" style={{
+                  backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
+                }}></div>
+                <div className="absolute inset-0 bg-black/40"></div>
+                
+                <div className="relative z-10 h-full">
                   <h3 className="text-xl font-extrabold mb-2 text-white">Biofertilisant</h3>
                   <p className="text-sm font-semibold text-white/90 mb-4">Nutrition optimale des cultures</p>
                   
@@ -45,10 +53,6 @@ const Solutions = () => {
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-white"></div>
                       <span className="text-xs font-semibold text-white">Engrais organique naturel</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      
-                      
                     </div>
                   </div>
 
@@ -61,11 +65,6 @@ const Solutions = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="absolute inset-0 bg-cover bg-center" style={{
-                backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
-              }}></div>
-                <div className="absolute inset-0 bg-black/40"></div>
               </div>
               
               {/* Face arrière - Texte NPK */}
