@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Check } from "lucide-react";
-import coccinelleJardin from "@/assets/coccinelle-jardin.jpg";
+import beeOnPlant from "@/assets/bee-on-plant.jpg";
 import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import { useState } from "react";
 const Innovation = () => {
@@ -125,7 +125,7 @@ const Innovation = () => {
           <div className="space-y-6">
             {/* Image abeille */}
             <div className="rounded-xl overflow-hidden shadow-sm">
-              <img src={coccinelleJardin} alt="Belle coccinelle rouge sur feuille verte" className="w-full h-48 object-cover" />
+              <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-48 object-cover" />
             </div>
             
             <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
