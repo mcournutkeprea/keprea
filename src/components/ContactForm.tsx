@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { t } = useLanguage();
@@ -44,37 +45,32 @@ const ContactForm = () => {
       // Construction du nom complet
       const fullName = `${formData.firstName} ${formData.lastName}`;
 
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
           name: fullName,
           email: formData.email,
           company: formData.company,
           phone: formData.phone,
           message: `Sujet: ${formData.subject}\n\n${formData.message}`,
-        }),
+        }
       });
 
-      const result = await response.json();
-
-      if (response.ok) {
-        toast.success("Votre message a été envoyé avec succès !");
-        // Réinitialiser le formulaire
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          company: "",
-          phone: "",
-          subject: "",
-          message: ""
-        });
-      } else {
-        throw new Error(result.error || "Erreur lors de l'envoi");
+      if (error) {
+        throw error;
       }
+
+      toast.success("Votre message a été envoyé avec succès !");
+      
+      // Réinitialiser le formulaire
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
     } catch (error) {
       console.error("Erreur:", error);
       toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
