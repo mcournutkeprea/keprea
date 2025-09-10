@@ -1,10 +1,8 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const BiocontroleVivant = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-6">
@@ -25,9 +23,7 @@ const BiocontroleVivant = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-8">
-            <div className="text-6xl font-extrabold text-secondary mb-4">
-              BIO
-            </div>
+            
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Biocontrôle Vivant
             </h2>
@@ -254,8 +250,6 @@ const BiocontroleVivant = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default BiocontroleVivant;
