@@ -134,7 +134,7 @@ const Innovation = () => {
                   alt="Abeille butinant sur une plante" 
                   className="w-full h-full object-cover" 
                   style={{
-                    objectPosition: 'center 70%',
+                    objectPosition: 'center 30%',
                     filter: 'brightness(1.2) contrast(1.1)'
                   }}
                 />
