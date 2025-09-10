@@ -1,4 +1,4 @@
-import { ArrowLeft, Bug } from "lucide-react";
+import { ArrowLeft, Bug, Worm } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 const BiocontroleVivant = () => {
@@ -51,7 +51,7 @@ const BiocontroleVivant = () => {
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🦋</span>
+                <Worm className="w-8 h-8 text-[#22c55e]" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pyrale</h3>
               <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
