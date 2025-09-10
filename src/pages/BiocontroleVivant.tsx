@@ -3,35 +3,25 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 const BiocontroleVivant = () => {
   return <div className="min-h-screen bg-background">
-      {/* Header avec bouton retour */}
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <Link to="/#solutions">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour aux biosolutions
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-[#22c55e]">Biocontrôle Vivant</h1>
-          <p className="text-xl text-muted-foreground mt-2">
-            Solutions biologiques vivantes pour une protection durable des cultures
-          </p>
-        </div>
-      </header>
-
-      {/* Hero Banner with Background Image */}
-      <section className="relative h-64 overflow-hidden">
+      {/* Header avec bouton retour et background */}
+      <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
         }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-2">Biocontrôle</h2>
-            <p className="text-xl">Protéger vos cultures avec le vivant</p>
-          </div>
+        <div className="relative z-10 container mx-auto px-4 py-6">
+          <Link to="/#solutions">
+            <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Retour aux biosolutions
+            </Button>
+          </Link>
+          <h1 className="text-4xl font-bold text-white">Biocontrôle Vivant</h1>
+          <p className="text-xl text-white/90 mt-2">
+            Solutions biologiques vivantes pour une protection durable des cultures
+          </p>
         </div>
-      </section>
+      </header>
 
       {/* Hero Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
