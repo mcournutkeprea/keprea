@@ -1,29 +1,24 @@
 import { Shield, Droplets, GitBranch, Wheat, Bug } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
-
 const Solutions = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const navigate = useNavigate();
-  
   const handleBiofertilisantClick = () => {
     navigate('/biofertilisant');
   };
-
   const handleBoostersClick = () => {
     navigate('/boosters');
   };
-
   const handleSubstancesClick = () => {
     navigate('/substances-naturelles');
   };
-
   const handleBiocontroleClick = () => {
     navigate('/biocontrole-vivant');
   };
-  
-  return (
-    <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
+  return <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4">
@@ -36,13 +31,10 @@ const Solutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Section Biofertilisant */}
-          <div 
-            className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" 
-            onClick={handleBiofertilisantClick}
-          >
+          <div className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiofertilisantClick}>
             <div className="absolute inset-0 bg-cover bg-center" style={{
-              backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
-            }}></div>
+            backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
+          }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
             
             <div className="relative z-10 h-full p-8">
@@ -56,7 +48,7 @@ const Solutions = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">NPK = 3-4-2</span>
+                  <span className="text-xs font-semibold text-white">Equilibre NPK</span>
                 </div>
               </div>
 
@@ -72,10 +64,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Booster */}
-          <div 
-            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300"
-            onClick={handleBoostersClick}
-          >
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
             <div className="relative z-10">
               <h3 className="text-xl font-extrabold mb-2 text-white">Boosters</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">{t('solutions.booster.subtitle')}</p>
@@ -87,7 +76,7 @@ const Solutions = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Fertilea432 - riche en matière organique</span>
+                  <span className="text-xs font-semibold text-white">Substance actives</span>
                 </div>
               </div>
 
@@ -108,10 +97,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Substances naturelles */}
-          <div 
-            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300"
-            onClick={handleSubstancesClick}
-          >
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
             <div className="relative z-10">
               <h3 className="text-xl font-extrabold mb-2 text-white">Substances naturelles</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
@@ -145,10 +131,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Biocontrôle vivant */}
-          <div 
-            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300"
-            onClick={handleBiocontroleClick}
-          >
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
             <div className="relative z-10">
               <h3 className="text-xl font-extrabold mb-2 text-white">Biocontrôle vivant</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">{t('solutions.biocontrol.subtitle')}</p>
@@ -176,7 +159,6 @@ const Solutions = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default Solutions;
