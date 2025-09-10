@@ -16,8 +16,8 @@ const Navigation = () => {
             />
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex items-baseline space-x-12">
               <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
                 {t('nav.solutions')}
               </a>
