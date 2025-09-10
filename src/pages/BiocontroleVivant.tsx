@@ -12,7 +12,7 @@ const BiocontroleVivant = () => {
               Retour aux biosolutions
             </Button>
           </Link>
-          <h1 className="text-4xl font-bold text-primary">Biocontrôle Vivant</h1>
+          <h1 className="text-4xl font-bold text-[#22c55e]">Biocontrôle Vivant</h1>
           <p className="text-xl text-muted-foreground mt-2">
             Solutions biologiques vivantes pour une protection durable des cultures
           </p>
@@ -62,11 +62,11 @@ const BiocontroleVivant = () => {
               <p className="text-sm text-muted-foreground">Coccinelles, chrysopes et parasitoïdes spécifiques</p>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🦋</span>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Pyrale</h3>
+              <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pyrale</h3>
               <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
             </div>
 
@@ -118,7 +118,7 @@ const BiocontroleVivant = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Découvrez nos solutions de protection biologique pour une agriculture durable et performante.
           </p>
-          <Button size="lg" className="bg-secondary hover:bg-secondary/90">
+          <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
             Nous contacter
           </Button>
         </div>
