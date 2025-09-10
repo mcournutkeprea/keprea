@@ -51,15 +51,6 @@ const Solutions = () => {
                   <span className="text-xs font-semibold text-white">Equilibre NPK</span>
                 </div>
               </div>
-
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
-                </div>
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
-                </div>
-              </div>
             </div>
           </div>
 
@@ -72,20 +63,11 @@ const Solutions = () => {
               <div className="space-y-2 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">riche en acides aminés libres</span>
+                  <span className="text-xs font-semibold text-white">Riche en acides aminés libres</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                   <span className="text-xs font-semibold text-white">Substance actives</span>
-                </div>
-              </div>
-
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
-                </div>
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
                 </div>
               </div>
             </div>
@@ -105,20 +87,11 @@ const Solutions = () => {
               <div className="space-y-2 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Extraits naturels d'insectes</span>
+                  <span className="text-xs font-semibold text-white">Extraits des molécules de protection</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Stimulation naturelle des défenses</span>
-                </div>
-              </div>
-
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
-                </div>
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
+                  <span className="text-xs font-semibold text-white">Substance actives</span>
                 </div>
               </div>
               
@@ -133,18 +106,18 @@ const Solutions = () => {
           {/* Section Biocontrôle vivant */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biocontrôle vivant</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">{t('solutions.biocontrol.subtitle')}</p>
+              <h3 className="text-xl font-extrabold mb-2 text-white">Biocontrôle</h3>
+              <p className="text-sm font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
               
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-white" />
-                  <span className="text-xs font-semibold text-white">{t('solutions.biocontrol.nematicide')}</span>
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">Contre les pucerons, la pyrale, la cochenille...</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-white" />
-                  <span className="text-xs font-semibold text-white">{t('solutions.biocontrol.pest')}</span>
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes et qualité performance optimisée</span>
                 </div>
               </div>
               
