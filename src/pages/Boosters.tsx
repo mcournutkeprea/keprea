@@ -9,7 +9,7 @@ const Boosters = () => {
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour à l'accueil
+              Retour aux biosolutions
             </Button>
           </Link>
           <h1 className="text-4xl font-bold text-primary">Boosters</h1>
