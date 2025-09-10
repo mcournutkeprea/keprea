@@ -3,12 +3,13 @@ import { Check } from "lucide-react";
 import beeOnPlant from "@/assets/bee-on-plant.jpg";
 import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import { useState } from "react";
+
 const Innovation = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
   const [isFlipped, setIsFlipped] = useState(false);
-  return <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+
+  return (
+    <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
         {/* Premier bloc - Pleine largeur avec grid interne */}
         <div className="mb-12">
@@ -21,7 +22,6 @@ const Innovation = () => {
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Nous exploitons le potentiel extraordinaire des insectes pour créer des solutions agricoles durables, performantes et abordables. Notre approche scientifique et technique combine savoir faire artisanal, industriel et agronomique pour répondre aux besoins des agriculteurs.
               </p>
-              
             </div>
             
             {/* 3 bulles à droite */}
@@ -69,9 +69,9 @@ const Innovation = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Colonne gauche - Bloc substances avec image intégrée */}
           <div className="space-y-6">
-            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image de fond avec flip */}
-              <div className="absolute top-4 right-4 w-24 h-24 rounded-xl overflow-hidden shadow-sm" style={{
+            <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
+              {/* Image bannière avec flip */}
+              <div className="absolute top-0 left-0 right-0 h-32 rounded-t-xl overflow-hidden" style={{
                 perspective: '1000px'
               }}>
                 <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
@@ -91,31 +91,34 @@ const Innovation = () => {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white text-xs font-bold">HLOA</div>
+                    <div className="text-white text-2xl font-bold">HLOA</div>
                   </div>
                 </div>
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
-                    <Check className="w-4 h-4 text-white" />
+              {/* Contenu principal */}
+              <div className="p-8 pt-36">
+                <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-lg font-bold text-primary">Interagissent rapidement avec la plante et le sol, naturellement</div>
                   </div>
-                  <div className="text-lg font-bold text-primary">Interagissent rapidement avec la plante et le sol, naturellement</div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
-                    <Check className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-lg font-bold text-primary">{t('innovation.benefit2')}</div>
                   </div>
-                  <div className="text-lg font-bold text-primary">{t('innovation.benefit2')}</div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
-                    <Check className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-lg font-bold text-primary">{t('innovation.benefit3')}</div>
                   </div>
-                  <div className="text-lg font-bold text-primary">{t('innovation.benefit3')}</div>
                 </div>
               </div>
             </div>
@@ -123,33 +126,37 @@ const Innovation = () => {
 
           {/* Colonne droite - Bloc organismes avec image intégrée */}
           <div className="space-y-6">
-            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image de l'abeille en arrière-plan */}
-              <div className="absolute top-4 right-4 w-24 h-24 rounded-xl overflow-hidden shadow-sm">
+            <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
+              {/* Image bannière abeille */}
+              <div className="absolute top-0 left-0 right-0 h-32 rounded-t-xl overflow-hidden">
                 <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-full object-cover" />
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">84%</div>
-                  <div className="text-sm text-muted-foreground">{t('innovation.stat1.desc')}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">5500</div>
-                  <div className="text-sm text-muted-foreground">{t('innovation.stat2.desc')}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">10 000</div>
-                  <div className="text-sm text-muted-foreground">{t('innovation.stat3.desc')}</div>
+              {/* Contenu principal */}
+              <div className="p-8 pt-36">
+                <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-primary mb-2">84%</div>
+                    <div className="text-sm text-muted-foreground">{t('innovation.stat1.desc')}</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-primary mb-2">5500</div>
+                    <div className="text-sm text-muted-foreground">{t('innovation.stat2.desc')}</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-primary mb-2">10 000</div>
+                    <div className="text-sm text-muted-foreground">{t('innovation.stat3.desc')}</div>
+                  </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Innovation;
