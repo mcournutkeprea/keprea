@@ -1,4 +1,4 @@
-import { MapPin, Factory, Leaf, Users } from "lucide-react";
+import { MapPin, Factory, Leaf, Users, ArrowDown, ArrowRight } from "lucide-react";
 import FranceMap from "./FranceMap";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -86,9 +86,10 @@ const Production = () => {
             {/* Processus de production en bas */}
             <div className="relative z-10 mt-8">
               <h4 className="text-lg font-semibold text-foreground mb-4 text-center">De la larve au champs</h4>
-              <div className="flex flex-col items-center justify-center space-y-6">
-                {/* Première ligne - deux premiers carrés alignés horizontalement */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col items-center justify-center space-y-8">
+                
+                {/* Première ligne - Élevage et Collecte alignés */}
+                <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 justify-center items-center">
                   {/* Étape 1: Élevage d'insecte auxiliaire */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -109,47 +110,62 @@ const Production = () => {
                     </div>
                   </div>
                 </div>
-                
-                {/* Deuxième ligne - quatre derniers carrés */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
-                  {/* Étape 3: Transformation */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">⚗️</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step3')}</p>
-                    </div>
+
+                {/* Flèches convergentes vers transformation */}
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center">
+                  <ArrowDown className="w-6 h-6 text-primary sm:hidden" />
+                  <div className="hidden sm:flex gap-8">
+                    <ArrowDown className="w-6 h-6 text-primary rotate-45" />
+                    <ArrowDown className="w-6 h-6 text-primary -rotate-45" />
                   </div>
-                  
-                  {/* Étape 4: Packaging */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">📦</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step4')}</p>
-                    </div>
+                </div>
+
+                {/* Étape 3: Transformation */}
+                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">⚗️</span>
                   </div>
-                  
-                  {/* Étape 5: Export */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
-                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🚢</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step6')}</p>
-                    </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{t('production.process.step3')}</p>
                   </div>
-                  
-                  {/* Étape 6: Conseil d'utilisation en plein champ */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">👨‍🌾</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
-                    </div>
+                </div>
+
+                {/* Flèche vers packaging */}
+                <ArrowDown className="w-6 h-6 text-primary" />
+
+                {/* Étape 4: Packaging */}
+                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">📦</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{t('production.process.step4')}</p>
+                  </div>
+                </div>
+
+                {/* Flèche vers export */}
+                <ArrowDown className="w-6 h-6 text-primary" />
+
+                {/* Étape 5: Export */}
+                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">🚢</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{t('production.process.step6')}</p>
+                  </div>
+                </div>
+
+                {/* Flèche vers conseil */}
+                <ArrowDown className="w-6 h-6 text-primary" />
+
+                {/* Étape 6: Conseil d'utilisation en plein champ */}
+                <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-48">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">👨‍🌾</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
                   </div>
                 </div>
               </div>
