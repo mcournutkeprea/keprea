@@ -77,19 +77,19 @@ const BiocontroleVivant = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-secondary mb-2">🌱 Naturel</h3>
+              <h3 className="font-semibold text-[#22c55e] mb-2">🌱 Naturel</h3>
               <p className="text-sm text-muted-foreground">Solutions 100% biologiques sans résidus chimiques</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-secondary mb-2">🎯 Sélectif</h3>
+              <h3 className="font-semibold text-[#22c55e] mb-2">🎯 Sélectif</h3>
               <p className="text-sm text-muted-foreground">Préserve les insectes bénéfiques et pollinisateurs</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-secondary mb-2">🔄 Durable</h3>
+              <h3 className="font-semibold text-[#22c55e] mb-2">🔄 Durable</h3>
               <p className="text-sm text-muted-foreground">Aucun développement de résistance</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-secondary mb-2">✅ Certifié bio</h3>
+              <h3 className="font-semibold text-[#22c55e] mb-2">✅ Certifié bio</h3>
               <p className="text-sm text-muted-foreground">Compatible agriculture biologique</p>
             </div>
           </div>
