@@ -115,8 +115,8 @@ const Production = () => {
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center">
                   <ArrowDown className="w-6 h-6 text-primary sm:hidden" />
                   <div className="hidden sm:flex gap-8">
+                    <ArrowDown className="w-6 h-6 text-primary rotate-[135deg]" />
                     <ArrowDown className="w-6 h-6 text-primary rotate-45" />
-                    <ArrowDown className="w-6 h-6 text-primary -rotate-45" />
                   </div>
                 </div>
 
