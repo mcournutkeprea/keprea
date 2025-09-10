@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/api/send-contact-email': {
-        target: 'https://byhxadxvoxczfqscucac.supabase.co/functions/v1/swift-responder',
+        target: 'https://byhxadxvoxczfqscucac.supabase.co/functions/v1/send-contact-email',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/send-contact-email/, ''),
       }
