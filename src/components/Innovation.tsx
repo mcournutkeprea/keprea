@@ -3,13 +3,12 @@ import { Check } from "lucide-react";
 import coccinelleJardin from "@/assets/coccinelle-jardin.jpg";
 import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import { useState } from "react";
-
 const Innovation = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [isFlipped, setIsFlipped] = useState(false);
-  
-  return (
-    <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+  return <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
         {/* Premier bloc - Pleine largeur avec grid interne */}
         <div className="mb-12">
@@ -71,38 +70,26 @@ const Innovation = () => {
           {/* Colonne gauche - Image fertilisation + bloc substances */}
           <div className="space-y-6">
             {/* Image fertilisation avec flip */}
-            <div className="rounded-xl overflow-hidden shadow-sm h-48" style={{ perspective: '1000px' }}>
-              <div 
-                className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`}
-                onClick={() => setIsFlipped(!isFlipped)}
-                style={{ 
-                  transformStyle: 'preserve-3d',
-                  transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-                }}
-              >
+            <div className="rounded-xl overflow-hidden shadow-sm h-48" style={{
+            perspective: '1000px'
+          }}>
+              <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
+              transformStyle: 'preserve-3d',
+              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
+            }}>
                 {/* Face avant - Image */}
-                <div 
-                  className="absolute inset-0"
-                  style={{ 
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(0deg)'
-                  }}
-                >
-                  <img 
-                    src={cornLeavesDroplets} 
-                    alt="Gouttes sur feuilles de maïs" 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="absolute inset-0" style={{
+                backfaceVisibility: 'hidden',
+                transform: 'rotateY(0deg)'
+              }}>
+                  <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
                 </div>
                 
                 {/* Face arrière - Texte HLOA */}
-                <div 
-                  className="absolute inset-0 bg-primary flex items-center justify-center"
-                  style={{ 
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(180deg)'
-                  }}
-                >
+                <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
+                backfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)'
+              }}>
                   <div className="text-white text-6xl font-bold">HLOA</div>
                 </div>
               </div>
@@ -116,7 +103,7 @@ const Innovation = () => {
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-lg font-bold text-primary">interagissent rapidement avec la plante et le sol, naturellement</div>
+                  <div className="text-lg font-bold text-primary">Interagissent rapidement avec la plante et le sol, naturellement</div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
@@ -138,11 +125,7 @@ const Innovation = () => {
           <div className="space-y-6">
             {/* Image abeille */}
             <div className="rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src={coccinelleJardin} 
-                alt="Belle coccinelle rouge sur feuille verte" 
-                className="w-full h-48 object-cover"
-              />
+              <img src={coccinelleJardin} alt="Belle coccinelle rouge sur feuille verte" className="w-full h-48 object-cover" />
             </div>
             
             <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
@@ -167,8 +150,6 @@ const Innovation = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Innovation;
