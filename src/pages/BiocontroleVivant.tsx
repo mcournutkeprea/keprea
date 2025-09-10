@@ -9,7 +9,7 @@ const BiocontroleVivant = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center gap-2 text-primary hover:text-primary/80">
+            <Link to="/#solutions" className="flex items-center gap-2 text-primary hover:text-primary/80">
               <ArrowLeft className="w-5 h-5" />
               <span className="font-medium">Retour à l'accueil</span>
             </Link>

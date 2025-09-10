@@ -8,7 +8,7 @@ const Biofertilisant = () => {
       {/* Header avec bouton retour */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-6">
-          <Link to="/">
+          <Link to="/#solutions">
             <Button variant="ghost" className="mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Retour à l'accueil
