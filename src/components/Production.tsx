@@ -79,7 +79,9 @@ const Production = () => {
 
               {/* Colonne de droite - Carte */}
               <div className="lg:col-span-4">
-                <FranceMap />
+                <div className="aspect-[4/3] rounded-xl overflow-hidden">
+                  <FranceMap />
+                </div>
               </div>
             </div>
 

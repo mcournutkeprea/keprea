@@ -56,9 +56,9 @@ const FranceMap = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-sm mx-auto">
-      <div className="relative bg-muted/30 rounded-lg p-4">
-        <div className="relative w-full h-64">
+    <div className="w-full h-full">
+      <div className="relative bg-muted/30 rounded-lg p-4 h-full">
+        <div className="relative w-full h-full">
           <div 
             ref={mapRef} 
             className="w-full h-full rounded-md overflow-hidden border border-border"
@@ -88,25 +88,6 @@ const FranceMap = () => {
               }
             `
           }} />
-        </div>
-        
-        <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
-          <div className="text-center p-2 bg-primary/5 rounded">
-            <p className="font-medium text-foreground">Paris</p>
-            <p className="text-muted-foreground">2h</p>
-          </div>
-          <div className="text-center p-2 bg-primary/5 rounded">
-            <p className="font-medium text-foreground">Lyon</p>
-            <p className="text-muted-foreground">2h</p>
-          </div>
-          <div className="text-center p-2 bg-primary/5 rounded">
-            <p className="font-medium text-foreground">Genève</p>
-            <p className="text-muted-foreground">2h</p>
-          </div>
-          <div className="text-center p-2 bg-primary/5 rounded">
-            <p className="font-medium text-foreground">Bâle</p>
-            <p className="text-muted-foreground">2h</p>
-          </div>
         </div>
       </div>
     </div>
