@@ -117,9 +117,9 @@ const Production = () => {
                   </div>
 
                   {/* Flèches convergentes */}
-                  <div className="flex flex-col items-center gap-1 relative h-16 w-8">
-                    <ArrowRight className="w-6 h-6 text-primary rotate-[-45deg] absolute top-0" />
-                    <ArrowRight className="w-6 h-6 text-primary rotate-[45deg] absolute bottom-0" />
+                  <div className="flex flex-col items-center gap-2">
+                    <ArrowRight className="w-6 h-6 text-primary" />
+                    <ArrowRight className="w-6 h-6 text-primary" />
                   </div>
 
                   {/* Étape 3: Transformation */}
