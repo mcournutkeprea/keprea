@@ -117,7 +117,7 @@ const Solutions = () => {
                 
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes et qualité performance optimisée</span>
+                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes et qualité des produits optimisée</span>
                 </div>
               </div>
               
