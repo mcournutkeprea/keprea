@@ -20,7 +20,7 @@ const BiocontroleVivant = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Insectes Auxiliaires
@@ -34,7 +34,7 @@ const BiocontroleVivant = () => {
       </section>
 
       {/* Ravageurs ciblés */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             Ravageurs ciblés
@@ -69,7 +69,7 @@ const BiocontroleVivant = () => {
       </section>
 
       {/* Avantages */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             Avantages du biocontrôle
@@ -97,7 +97,7 @@ const BiocontroleVivant = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/5">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-secondary/5">
         <div className="container mx-auto max-w-2xl text-center">
           
           <p className="text-lg text-muted-foreground mb-8">
