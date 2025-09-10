@@ -21,6 +21,20 @@ const Biofertilisant = () => {
         </div>
       </header>
 
+      {/* Hero Banner with Background Image */}
+      <section className="relative h-64 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
+        }}></div>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="text-center text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2">Biofertilisant</h2>
+            <p className="text-xl">Nutrition optimale des cultures</p>
+          </div>
+        </div>
+      </section>
+
 
       {/* Composition section */}
       <section className="py-16 px-4 bg-secondary/30">

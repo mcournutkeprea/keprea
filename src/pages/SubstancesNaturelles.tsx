@@ -21,6 +21,20 @@ const SubstancesNaturelles = () => {
         </div>
       </header>
 
+      {/* Hero Banner with Background Image */}
+      <section className="relative h-64 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')`
+        }}></div>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="text-center text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2">Substances naturelles</h2>
+            <p className="text-xl">Solutions écologiques innovantes</p>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-500/10 to-green-600/20">
         <div className="container mx-auto max-w-4xl text-center">
