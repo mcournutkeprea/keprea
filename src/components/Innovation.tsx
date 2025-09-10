@@ -67,35 +67,35 @@ const Innovation = () => {
 
         {/* Deuxième et troisième blocs - Grid 2 colonnes avec images */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Colonne gauche - Image fertilisation + bloc substances */}
+          {/* Colonne gauche - Bloc substances avec image intégrée */}
           <div className="space-y-6">
-            {/* Image fertilisation avec flip */}
-            <div className="rounded-xl overflow-hidden shadow-sm h-48" style={{
-            perspective: '1000px'
-          }}>
-              <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
-              transformStyle: 'preserve-3d',
-              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-            }}>
-                {/* Face avant - Image */}
-                <div className="absolute inset-0" style={{
-                backfaceVisibility: 'hidden',
-                transform: 'rotateY(0deg)'
+            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
+              {/* Image de fond avec flip */}
+              <div className="absolute top-4 right-4 w-24 h-24 rounded-xl overflow-hidden shadow-sm" style={{
+                perspective: '1000px'
               }}>
-                  <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
-                </div>
-                
-                {/* Face arrière - Texte HLOA */}
-                <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
-                backfaceVisibility: 'hidden',
-                transform: 'rotateY(180deg)'
-              }}>
-                  <div className="text-white text-6xl font-bold">HLOA</div>
+                <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
+                  transformStyle: 'preserve-3d',
+                  transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                }}>
+                  {/* Face avant - Image */}
+                  <div className="absolute inset-0" style={{
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(0deg)'
+                  }}>
+                    <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
+                  </div>
+                  
+                  {/* Face arrière - Texte HLOA */}
+                  <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)'
+                  }}>
+                    <div className="text-white text-xs font-bold">HLOA</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
+              
               <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
               
               <div className="space-y-4">
@@ -121,14 +121,14 @@ const Innovation = () => {
             </div>
           </div>
 
-          {/* Colonne droite - Image abeille + bloc organismes */}
+          {/* Colonne droite - Bloc organismes avec image intégrée */}
           <div className="space-y-6">
-            {/* Image abeille */}
-            <div className="rounded-xl overflow-hidden shadow-sm">
-              <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-48 object-cover" />
-            </div>
-            
-            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center">
+            <div className="bg-card p-8 rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
+              {/* Image de l'abeille en arrière-plan */}
+              <div className="absolute top-4 right-4 w-24 h-24 rounded-xl overflow-hidden shadow-sm">
+                <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-full object-cover" />
+              </div>
+              
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
