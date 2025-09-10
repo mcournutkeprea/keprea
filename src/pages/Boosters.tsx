@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 const Boosters = () => {
   return <div className="min-h-screen bg-background">
-      {/* Header Navigation */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-4">
-            <Link to="/#solutions" className="flex items-center gap-2 text-primary hover:text-primary/80">
-              <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium">Retour à l'accueil</span>
-            </Link>
-            <div className="h-6 w-px bg-border"></div>
-            <h1 className="text-2xl font-bold text-foreground">Boosters</h1>
-          </div>
+      {/* Header avec bouton retour */}
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-6">
+          <Link to="/#solutions">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Retour à l'accueil
+            </Button>
+          </Link>
+          <h1 className="text-4xl font-bold text-primary">Boosters</h1>
+          <p className="text-xl text-muted-foreground mt-2">
+            Solutions biostimulantes pour optimiser le potentiel de vos cultures
+          </p>
         </div>
       </header>
 
