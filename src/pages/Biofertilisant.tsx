@@ -5,35 +5,25 @@ import { Button } from "@/components/ui/button";
 const Biofertilisant = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header avec bouton retour */}
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <Link to="/#solutions">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour aux biosolutions
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-primary">Biofertilisant</h1>
-          <p className="text-xl text-muted-foreground mt-2">
-            Nutrition optimale des cultures
-          </p>
-        </div>
-      </header>
-
-      {/* Hero Banner with Background Image */}
-      <section className="relative h-64 overflow-hidden">
+      {/* Header avec bouton retour et background */}
+      <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
         }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-2">Biofertilisant</h2>
-            <p className="text-xl">Nutrition optimale des cultures</p>
-          </div>
+        <div className="relative z-10 container mx-auto px-4 py-6">
+          <Link to="/#solutions">
+            <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Retour aux biosolutions
+            </Button>
+          </Link>
+          <h1 className="text-4xl font-bold text-white">Biofertilisant</h1>
+          <p className="text-xl text-white/90 mt-2">
+            Nutrition optimale des cultures
+          </p>
         </div>
-      </section>
+      </header>
 
 
       {/* Composition section */}
