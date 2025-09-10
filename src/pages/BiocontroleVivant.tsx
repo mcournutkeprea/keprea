@@ -22,215 +22,88 @@ const BiocontroleVivant = () => {
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="mb-8">
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Biocontrôle Vivant
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Solutions biologiques vivantes pour une protection durable des cultures
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Insectes Auxiliaires
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Solutions d'insectes entomopathogènes et prédateurs pour lutter contre les principaux ravageurs des cultures
+          </p>
           
-          <div className="grid md:grid-cols-2 gap-6 text-left">
+          <div className="grid md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">✓ Nématicide biologique</h3>
-              <p className="text-sm text-muted-foreground">Contrôle efficace des nématodes parasites</p>
+              <h3 className="font-semibold text-secondary mb-2">🐞 Prédateurs</h3>
+              <p className="text-sm text-muted-foreground">Coccinelles, chrysopes contre pucerons</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">✓ Lutte intégrée</h3>
-              <p className="text-sm text-muted-foreground">Protection contre divers ravageurs</p>
+              <h3 className="font-semibold text-secondary mb-2">🦠 Entomopathogènes</h3>
+              <p className="text-sm text-muted-foreground">Champignons et bactéries infectieux</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">✓ Micro-organismes vivants</h3>
-              <p className="text-sm text-muted-foreground">Agents biologiques actifs et durables</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">✓ Zéro résidu</h3>
-              <p className="text-sm text-muted-foreground">Protection sans impact environnemental</p>
+              <h3 className="font-semibold text-secondary mb-2">🎯 Action ciblée</h3>
+              <p className="text-sm text-muted-foreground">Spécifiques aux ravageurs visés</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technology Section */}
+      {/* Ravageurs ciblés */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Nos solutions de biocontrôle
+            Ravageurs ciblés
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Nématicides */}
-            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-2xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🦠</span>
-                </div>
-                <h3 className="text-2xl font-bold text-secondary mb-2">Nématicides biologiques</h3>
-                <p className="text-muted-foreground">
-                  Micro-organismes spécialisés dans la lutte contre les nématodes parasites des racines
-                </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🐛</span>
               </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Champignons nématophages</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Bactéries antagonistes</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Action préventive et curative</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Compatible agriculture biologique</span>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-secondary mb-3">Pucerons</h3>
+              <p className="text-sm text-muted-foreground">Coccinelles, chrysopes et parasitoïdes spécifiques</p>
             </div>
 
-            {/* Lutte contre ravageurs */}
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🐛</span>
-                </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Lutte contre ravageurs</h3>
-                <p className="text-muted-foreground">
-                  Agents biologiques ciblés pour le contrôle spécifique des insectes nuisibles
-                </p>
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🦋</span>
               </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Bacillus thuringiensis</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Champignons entomopathogènes</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Spécificité d'action élevée</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Préservation des auxiliaires</span>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-primary mb-3">Pyrale</h3>
+              <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Mode d'action */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Mode d'action du biocontrôle
-          </h2>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📍</span>
+            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🪲</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Application ciblée</h3>
-              <p className="text-sm text-muted-foreground">
-                Application directe sur les zones à traiter (sol, semences, feuillage)
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🔍</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Recherche active</h3>
-              <p className="text-sm text-muted-foreground">
-                Les agents biologiques recherchent activement leurs cibles
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">⚡</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Action spécifique</h3>
-              <p className="text-sm text-muted-foreground">
-                Infection ou parasitisme spécifique des organismes nuisibles
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🛡️</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Protection durable</h3>
-              <p className="text-sm text-muted-foreground">
-                Établissement d'une protection à long terme dans l'écosystème
-              </p>
+              <h3 className="text-xl font-bold text-secondary mb-3">Cochenilles</h3>
+              <p className="text-sm text-muted-foreground">Prédateurs spécialisés et parasitoïdes</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Avantages */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Avantages du biocontrôle vivant
+            Avantages du biocontrôle
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-secondary mb-2">🌱 Durabilité</h3>
-                <p className="text-sm text-muted-foreground">
-                  Solution à long terme qui s'intègre naturellement dans l'écosystème
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-secondary mb-2">🎯 Spécificité</h3>
-                <p className="text-sm text-muted-foreground">
-                  Action ciblée sans impact sur les organismes non-cibles
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-secondary mb-2">💚 Zéro résidu</h3>
-                <p className="text-sm text-muted-foreground">
-                  Aucun résidu chimique dans les récoltes ou l'environnement
-                </p>
-              </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-secondary mb-2">🌱 Naturel</h3>
+              <p className="text-sm text-muted-foreground">Solutions 100% biologiques sans résidus chimiques</p>
             </div>
-            
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-secondary mb-2">🔄 Résistance</h3>
-                <p className="text-sm text-muted-foreground">
-                  Prévention du développement de résistances chez les ravageurs
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-secondary mb-2">🤝 Compatibilité</h3>
-                <p className="text-sm text-muted-foreground">
-                  Compatible avec l'agriculture biologique et les auxiliaires
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-secondary mb-2">📈 Efficacité</h3>
-                <p className="text-sm text-muted-foreground">
-                  Efficacité éprouvée dans des conditions d'utilisation optimales
-                </p>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-secondary mb-2">🎯 Sélectif</h3>
+              <p className="text-sm text-muted-foreground">Préserve les insectes bénéfiques et pollinisateurs</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-secondary mb-2">🔄 Durable</h3>
+              <p className="text-sm text-muted-foreground">Aucun développement de résistance</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-secondary mb-2">✅ Certifié bio</h3>
+              <p className="text-sm text-muted-foreground">Compatible agriculture biologique</p>
             </div>
           </div>
         </div>
