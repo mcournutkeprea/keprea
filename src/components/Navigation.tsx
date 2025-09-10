@@ -17,17 +17,17 @@ const Navigation = () => {
           </div>
           
           <div className="hidden md:flex flex-1 justify-center">
-            <div className="flex items-baseline space-x-12">
-              <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
+            <div className="flex items-baseline space-x-16">
+              <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.solutions')}
               </a>
-              <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
+              <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.innovation')}
               </a>
-              <a href="#production" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
+              <a href="#production" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.production')}
               </a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium">
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.about')}
               </a>
             </div>
