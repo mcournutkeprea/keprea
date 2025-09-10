@@ -129,7 +129,15 @@ const Innovation = () => {
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
               {/* Image bannière abeille */}
               <div className="absolute top-0 left-0 right-0 h-32 rounded-t-xl overflow-hidden">
-                <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-full object-cover" />
+                <img 
+                  src={beeOnPlant} 
+                  alt="Abeille butinant sur une plante" 
+                  className="w-full h-full object-cover" 
+                  style={{
+                    objectPosition: 'center 30%',
+                    filter: 'brightness(1.2) contrast(1.1)'
+                  }}
+                />
               </div>
               
               {/* Contenu principal */}
