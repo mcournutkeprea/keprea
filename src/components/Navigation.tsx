@@ -12,7 +12,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/0e951f6e-e749-4481-b6d1-6c680205357f.png" 
               alt="Keprea Logo" 
-              className="h-20 w-auto mx-4 my-2"
+              className="h-16 w-auto mx-4 my-2"
             />
           </div>
           
