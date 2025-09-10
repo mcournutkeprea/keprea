@@ -70,36 +70,16 @@ const Production = () => {
                 </div>
               </div>
 
-              {/* Colonne du milieu - Images des substances */}
-              <div className="lg:col-span-4 space-y-4">
-                {/* Substances issues d'insectes */}
-                <div className="aspect-video rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20 relative">
-                  <img src="/src/assets/corn-leaves-droplets.jpg" alt="Substances issues d'insectes" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-sm">Pourquoi les substances issues d'insectes ?</h4>
-                  </div>
-                </div>
-                
-                {/* Macro-organismes vivants */}
-                <div className="aspect-video rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20 relative">
-                  <img src="/src/assets/bee-on-plant.jpg" alt="Macro-organismes vivants" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-sm">Pourquoi les macro-organismes vivants ?</h4>
-                  </div>
+              {/* Colonne du milieu - Image du bâtiment */}
+              <div className="lg:col-span-4">
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
+                  <img src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png" alt="Site de production Keprea à Damparis" className="w-full h-full object-cover animate-slow-pan-right" />
                 </div>
               </div>
 
-              {/* Colonne de droite - Site de production et carte */}
-              <div className="lg:col-span-4 space-y-4">
-                {/* Site de production */}
-                <div className="aspect-video rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
-                  <img src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png" alt="Site de production Keprea à Damparis" className="w-full h-full object-cover" />
-                </div>
-                
-                {/* Carte de France */}
-                <div className="aspect-video rounded-xl overflow-hidden">
+              {/* Colonne de droite - Carte */}
+              <div className="lg:col-span-4">
+                <div className="aspect-[4/3] rounded-xl overflow-hidden">
                   <FranceMap />
                 </div>
               </div>
