@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { t } = useLanguage();
@@ -45,18 +44,24 @@ const ContactForm = () => {
       // Construction du nom complet
       const fullName = `${formData.firstName} ${formData.lastName}`;
 
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      // Appel direct à l'Edge Function via fetch
+      const response = await fetch('/api/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: fullName,
           email: formData.email,
           company: formData.company,
           phone: formData.phone,
           message: `Sujet: ${formData.subject}\n\n${formData.message}`,
-        }
+        }),
       });
 
-      if (error) {
-        throw error;
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Erreur HTTP: ${response.status}`);
       }
 
       toast.success("Votre message a été envoyé avec succès !");
