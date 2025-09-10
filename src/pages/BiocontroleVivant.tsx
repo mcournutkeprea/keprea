@@ -26,7 +26,7 @@ const BiocontroleVivant = () => {
             Insectes Auxiliaires
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Solutions d'insectes entomopathogènes et prédateurs pour lutter contre les principaux ravageurs des cultures
+            Solutions d'insectes pour lutter contre les principaux ravageurs des cultures
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 text-left">
