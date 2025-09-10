@@ -87,7 +87,7 @@ const Production = () => {
 
             {/* Processus de production en bas - Format horizontal */}
             <div className="relative z-10 mt-8">
-              <h4 className="text-lg font-semibold text-foreground mb-6 text-center">De la larve au champs</h4>
+              <h4 className="text-lg font-semibold text-primary mb-6 text-center">De la larve au champs</h4>
               
               <div className="overflow-x-auto">
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-6 min-w-max px-4">
