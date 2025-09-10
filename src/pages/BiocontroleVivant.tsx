@@ -41,11 +41,11 @@ const BiocontroleVivant = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🐛</span>
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-3">Pucerons</h3>
+              <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pucerons</h3>
               <p className="text-sm text-muted-foreground">Coccinelles, chrysopes et parasitoïdes spécifiques</p>
             </div>
 
@@ -57,11 +57,11 @@ const BiocontroleVivant = () => {
               <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
             </div>
 
-            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🪲</span>
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-3">Cochenilles</h3>
+              <h3 className="text-xl font-bold text-[#22c55e] mb-3">Cochenilles</h3>
               <p className="text-sm text-muted-foreground">Prédateurs spécialisés et parasitoïdes</p>
             </div>
           </div>
