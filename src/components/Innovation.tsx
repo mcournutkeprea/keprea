@@ -146,15 +146,15 @@ const Innovation = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-primary mb-2">84%</div>
+                    <div className="text-3xl font-bold text-primary mb-2">84%</div>
                     <div className="text-sm text-muted-foreground">{t('innovation.stat1.desc')}</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-primary mb-2">5500</div>
+                    <div className="text-3xl font-bold text-primary mb-2">5500</div>
                     <div className="text-sm text-muted-foreground">{t('innovation.stat2.desc')}</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-primary mb-2">10 000</div>
+                    <div className="text-3xl font-bold text-primary mb-2">10 000</div>
                     <div className="text-sm text-muted-foreground">{t('innovation.stat3.desc')}</div>
                   </div>
                 </div>
