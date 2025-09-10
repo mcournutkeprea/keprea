@@ -29,20 +29,7 @@ const BiocontroleVivant = () => {
             Solutions d'insectes pour lutter contre les principaux ravageurs des cultures
           </p>
           
-          <div className="grid md:grid-cols-3 gap-6 text-left">
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">🐞 Prédateurs</h3>
-              <p className="text-sm text-muted-foreground">Coccinelles, chrysopes contre pucerons</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">🦠 Entomopathogènes</h3>
-              <p className="text-sm text-muted-foreground">Champignons et bactéries infectieux</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-secondary mb-2">🎯 Action ciblée</h3>
-              <p className="text-sm text-muted-foreground">Spécifiques aux ravageurs visés</p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -112,9 +99,7 @@ const BiocontroleVivant = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/5">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
-            Adoptez le biocontrôle vivant
-          </h2>
+          
           <p className="text-lg text-muted-foreground mb-8">
             Découvrez nos solutions de protection biologique pour une agriculture durable et performante.
           </p>
