@@ -67,7 +67,7 @@ const Solutions = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Substance actives</span>
+                  <span className="text-xs font-semibold text-white">Substances actives</span>
                 </div>
               </div>
             </div>
