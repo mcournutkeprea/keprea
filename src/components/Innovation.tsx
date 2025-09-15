@@ -86,15 +86,24 @@ const Innovation = () => {
                   </div>
                   
                   {/* Face arrière - Texte HLOA */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
+                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-6" style={{
                   backfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)'
                 }}>
-                    <div className="text-white text-2xl font-bold">Interagissent rapidement avec la plante et le sol
-
-
-Respectent le sol dans aucun résidu toxique
-Améliorent le rendement</div>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3 text-white">
+                        <Check className="w-6 h-6 flex-shrink-0" />
+                        <span className="text-lg font-semibold">Interagissent rapidement avec la plante et le sol</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-white">
+                        <Check className="w-6 h-6 flex-shrink-0" />
+                        <span className="text-lg font-semibold">Respectent le sol sans aucun résidu toxique</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-white">
+                        <Check className="w-6 h-6 flex-shrink-0" />
+                        <span className="text-lg font-semibold">Améliorent le rendement</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
