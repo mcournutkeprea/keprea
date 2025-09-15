@@ -45,6 +45,13 @@ const Team = () => {
               alt="Équipe Keprea - Experts en agtech et biosolutions"
               className="w-full h-full object-cover animate-camera-sweep"
             />
+            
+            {/* Texte overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-black/60 text-white px-4 py-2 rounded-lg text-lg font-medium">
+                Photo à faire tous ensemble
+              </div>
+            </div>
 
             {/* Points interactifs pour chaque membre */}
             {teamMembers.map((member) => (
