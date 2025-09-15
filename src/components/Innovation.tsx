@@ -96,30 +96,7 @@ const Innovation = () => {
               </div>
               
               {/* Contenu principal */}
-              <div className="p-8 pt-52">
-                <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="text-lg font-bold text-primary">Interagissent rapidement avec la plante et le sol, naturellement</div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="text-lg font-bold text-primary">{t('innovation.benefit3')}</div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
 
