@@ -70,7 +70,7 @@ const Innovation = () => {
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
               {/* Image bannière avec flip */}
-              <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden" style={{
+              <div className="absolute top-0 left-0 right-0 h-32 rounded-t-xl overflow-hidden" style={{
               perspective: '1000px'
             }}>
                 <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
@@ -109,7 +109,7 @@ const Innovation = () => {
               </div>
               
               {/* Contenu principal */}
-              <div className="p-8 pt-52">
+              <div className="p-8 pt-36">
                 <h3 className="text-2xl font-bold text-foreground mb-6">{t('innovation.why.substances')}</h3>
                 
                 <div className="space-y-4">
@@ -140,7 +140,7 @@ const Innovation = () => {
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
               {/* Image bannière abeille */}
-              <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-32 rounded-t-xl overflow-hidden">
                 <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-full object-cover" style={{
                 objectPosition: 'center 30%',
                 filter: 'brightness(1.2) contrast(1.1)'
@@ -148,7 +148,7 @@ const Innovation = () => {
               </div>
               
               {/* Contenu principal */}
-              <div className="p-8 pt-52">
+              <div className="p-8 pt-36">
                 <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t('innovation.why.organisms')}</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
