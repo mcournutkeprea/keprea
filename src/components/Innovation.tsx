@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import beeOnPlant from "@/assets/bee-on-plant.jpg";
 import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import substancesBenefits from "@/assets/substances-insectes-benefits.png";
+import biocontrolInfographic from "@/assets/biocontrol-vivant-infographic.png";
 import { useState } from "react";
 
 const Innovation = () => {
@@ -139,25 +140,16 @@ const Innovation = () => {
                     </div>
                   </div>
                   
-                  {/* Face arrière - Statistiques */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-4" style={{
+                  {/* Face arrière - Infographie biocontrôle */}
+                  <div className="absolute inset-0 flex items-center justify-center" style={{
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white text-sm font-bold grid grid-cols-3 gap-2 text-center">
-                      <div>
-                        <div className="text-lg font-bold">84%</div>
-                        <div className="text-xs">des cultures dépendent des insectes pour leur qualité et rendement</div>
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold">5500</div>
-                        <div className="text-xs">auxiliaires utiles recensés en France</div>
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold">10 000</div>
-                        <div className="text-xs">individus actifs par m² en moyenne</div>
-                      </div>
-                    </div>
+                    <img 
+                      src={biocontrolInfographic} 
+                      alt="Biocontrôle vivant pour les cultures" 
+                      className="w-full h-full object-contain p-4"
+                    />
                   </div>
                 </div>
               </div>
