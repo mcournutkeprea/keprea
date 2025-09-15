@@ -81,7 +81,7 @@ const Solutions = () => {
           {/* Section Substances naturelles */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Substances naturelles</h3>
+              <h3 className="text-xl font-extrabold mb-2 text-white">Biopesticides</h3>
               <p className="text-sm font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
               
               <div className="space-y-2 mb-4">
