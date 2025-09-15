@@ -87,12 +87,25 @@ const Innovation = () => {
                     <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
                   </div>
                   
-                  {/* Face arrière - Texte HLOA */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
+                  {/* Face arrière - Texte avec checks */}
+                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-4" style={{
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white text-2xl font-bold">HLOA</div>
+                    <div className="text-white space-y-2 text-sm">
+                      <div className="flex items-start gap-2">
+                        <Check className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <span>Interagissent rapidement avec la plante et le sol, naturellement</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Check className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <span>Respectent le sol sans aucun résidu toxique</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Check className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <span>Améliorent le rendement</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
