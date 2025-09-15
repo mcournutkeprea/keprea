@@ -54,11 +54,10 @@ const ContactForm = () => {
                     <SelectValue placeholder={t('contact.form.subject.placeholder')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="booster">{t('contact.form.subject.booster')}</SelectItem>
-                    <SelectItem value="biocontrol">{t('contact.form.subject.biocontrol')}</SelectItem>
-                    <SelectItem value="pollinisation">{t('contact.form.subject.pollination')}</SelectItem>
-                    <SelectItem value="plusieurs-solutions">{t('contact.form.subject.multiple')}</SelectItem>
-                    <SelectItem value="information">{t('contact.form.subject.info')}</SelectItem>
+                    <SelectItem value="biofertilisant-boosters">Biofertilisant et Boosters</SelectItem>
+                    <SelectItem value="biopesticides">Biopesticides</SelectItem>
+                    <SelectItem value="biocontrole">Biocontrôle</SelectItem>
+                    <SelectItem value="information-generale">Demande d'information générale</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
