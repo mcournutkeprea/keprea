@@ -1,12 +1,13 @@
 import { Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
 const Solutions = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
   const navigate = useNavigate();
+  const [isFlipped, setIsFlipped] = useState(false);
+  
   const handleBiofertilisantClick = () => {
     navigate('/biofertilisant');
   };
@@ -14,7 +15,7 @@ const Solutions = () => {
     navigate('/boosters');
   };
   const handleSubstancesClick = () => {
-    navigate('/substances-naturelles');
+    setIsFlipped(!isFlipped);
   };
   const handleBiocontroleClick = () => {
     navigate('/biocontrole-vivant');
@@ -79,29 +80,64 @@ const Solutions = () => {
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
-          {/* Section Substances naturelles */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
-            <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biopesticides</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
-              
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Extraits des molécules de protection</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Substance actives</span>
+          {/* Section Substances naturelles - Flip Card */}
+          <div className="relative rounded-2xl min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" style={{ perspective: "1000px" }} onClick={handleSubstancesClick}>
+            <div 
+              className="relative w-full h-full transition-transform duration-700"
+              style={{ 
+                transformStyle: "preserve-3d",
+                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
+              }}
+            >
+              {/* Face avant */}
+              <div 
+                className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl"
+                style={{ backfaceVisibility: "hidden" }}
+              >
+                <div className="absolute inset-0 bg-cover bg-center" style={{
+                  backgroundImage: `url(${leavesDropletsBg})`
+                }}></div>
+                <div className="absolute inset-0 bg-black/50"></div>
+                
+                <div className="relative z-10 h-full flex items-center justify-center p-8">
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-white text-center leading-tight">
+                    Pourquoi les substances issues d'insectes ?
+                  </h3>
                 </div>
               </div>
               
+              {/* Face arrière */}
+              <div 
+                className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl bg-gradient-to-br from-green-600/90 to-green-800/90 p-8 flex flex-col justify-center"
+                style={{ 
+                  backfaceVisibility: "hidden",
+                  transform: "rotateY(180deg)"
+                }}
+              >
+                <div className="space-y-6">
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-300 mt-1 flex-shrink-0" />
+                    <span className="text-white font-medium text-sm">
+                      Interagissent rapidement avec la plante et le sol, naturellement
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-300 mt-1 flex-shrink-0" />
+                    <span className="text-white font-medium text-sm">
+                      Respectent le sol sans aucun résidu toxique
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-300 mt-1 flex-shrink-0" />
+                    <span className="text-white font-medium text-sm">
+                      Améliorent le rendement
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url(${leavesDropletsBg})`
-          }}></div>
-            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           {/* Section Biocontrôle vivant */}
