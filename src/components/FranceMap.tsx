@@ -22,9 +22,9 @@ const FranceMap = () => {
     mapInstanceRef.current = map;
 
     // 2) Tuiles OpenStreetMap (plan)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 20,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
     }).addTo(map);
 
     // 3) Animation de vol vers le point
@@ -66,7 +66,7 @@ const FranceMap = () => {
               position: 'relative'
             }}
           />
-          {/* CSS pour masquer les contrôles Leaflet et le texte Ynsect */}
+          {/* CSS pour masquer les contrôles Leaflet */}
           <style dangerouslySetInnerHTML={{
             __html: `
               .leaflet-control-attribution {
@@ -74,25 +74,6 @@ const FranceMap = () => {
               }
               .leaflet-control-zoom {
                 display: none !important;
-              }
-              .leaflet-container text[font-family] {
-                filter: blur(0px);
-              }
-              .leaflet-container text:contains("Ynsect"),
-              .leaflet-container text[text-anchor]:contains("Ynsect") {
-                display: none !important;
-                opacity: 0 !important;
-                visibility: hidden !important;
-              }
-              .leaflet-container .leaflet-marker-icon + .leaflet-marker-shadow {
-                filter: none;
-              }
-              /* Masquer tous les labels de texte sauf notre popup */
-              .leaflet-container .leaflet-tile-container text {
-                opacity: 0.3 !important;
-              }
-              .leaflet-container .leaflet-popup-content {
-                opacity: 1 !important;
               }
             `
           }} />
