@@ -71,8 +71,8 @@ const Innovation = () => {
           {/* Colonne gauche - Bloc substances avec image intégrée */}
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image bannière avec flip */}
-              <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden" style={{
+              {/* Image bannière avec flip - pleine hauteur */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden" style={{
                 perspective: '1000px'
               }}>
                 <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
@@ -85,6 +85,10 @@ const Innovation = () => {
                     transform: 'rotateY(0deg)'
                   }}>
                     <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
+                    {/* Titre overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
+                      <h3 className="text-xl font-bold text-white text-center">Pourquoi les substances issues d'insectes ?</h3>
+                    </div>
                   </div>
                   
                   {/* Face arrière - Texte avec checks */}
@@ -109,19 +113,14 @@ const Innovation = () => {
                   </div>
                 </div>
               </div>
-              
-              {/* Contenu principal */}
-              <div className="p-8 pt-52">
-                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Pourquoi les substances issues d'insectes ?</h3>
-              </div>
             </div>
           </div>
 
           {/* Colonne droite - Bloc organismes avec image intégrée */}
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image bannière abeille avec flip */}
-              <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden" style={{
+              {/* Image bannière abeille avec flip - pleine hauteur */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden" style={{
                 perspective: '1000px'
               }}>
                 <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlippedBee(!isFlippedBee)} style={{
@@ -142,6 +141,10 @@ const Innovation = () => {
                         filter: 'brightness(1.2) contrast(1.1)'
                       }}
                     />
+                    {/* Titre overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
+                      <h3 className="text-xl font-bold text-white text-center">Pourquoi le biocontrôle vivant ?</h3>
+                    </div>
                   </div>
                   
                   {/* Face arrière - Statistiques */}
@@ -152,7 +155,7 @@ const Innovation = () => {
                     <div className="text-white text-sm font-bold grid grid-cols-3 gap-2 text-center">
                       <div>
                         <div className="text-lg font-bold">84%</div>
-                        <div className="text-xs">des cultures dépendent des insectes</div>
+                        <div className="text-xs">des cultures dépendent des insectes pour leur qualité et rendement</div>
                       </div>
                       <div>
                         <div className="text-lg font-bold">5500</div>
@@ -160,16 +163,11 @@ const Innovation = () => {
                       </div>
                       <div>
                         <div className="text-lg font-bold">10 000</div>
-                        <div className="text-xs">individus actifs par m²</div>
+                        <div className="text-xs">individus actifs par m² en moyenne</div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Contenu principal */}
-              <div className="p-8 pt-52">
-                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Pourquoi le biocontrôle vivant ?</h3>
               </div>
             </div>
           </div>
