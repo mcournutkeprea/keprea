@@ -47,7 +47,7 @@ const Hero = () => {
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">10</div>
-              <div className="text-white/80">solutions développées dont 2 déjà disponibles</div>
+              <div className="text-white/80 font-bold">solutions développées dont 2 déjà disponibles</div>
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">0€</div>
