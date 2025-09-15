@@ -3,14 +3,12 @@ import { Check } from "lucide-react";
 import beeOnPlant from "@/assets/bee-on-plant.jpg";
 import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import { useState } from "react";
-
 const Innovation = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isFlippedBee, setIsFlippedBee] = useState(false);
-
-  return (
-    <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+  return <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
         {/* Premier bloc - Pleine largeur avec grid interne */}
         <div className="mb-12">
@@ -73,39 +71,26 @@ const Innovation = () => {
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
               {/* Image bannière avec flip */}
               <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden" style={{
-                perspective: '1000px'
-              }}>
+              perspective: '1000px'
+            }}>
                 <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
-                  transformStyle: 'preserve-3d',
-                  transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-                }}>
+                transformStyle: 'preserve-3d',
+                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
+              }}>
                   {/* Face avant - Image */}
                   <div className="absolute inset-0" style={{
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(0deg)'
-                  }}>
+                  backfaceVisibility: 'hidden',
+                  transform: 'rotateY(0deg)'
+                }}>
                     <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
                   </div>
                   
-                  {/* Face arrière - Texte avec checks */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-4" style={{
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(180deg)'
-                  }}>
-                    <div className="text-white space-y-3 text-base font-bold">
-                      <div className="flex items-start gap-2">
-                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span>Interagissent rapidement avec la plante et le sol, naturellement</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span>Respectent le sol sans aucun résidu toxique</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span>Améliorent le rendement</span>
-                      </div>
-                    </div>
+                  {/* Face arrière - Texte HLOA */}
+                  <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
+                  backfaceVisibility: 'hidden',
+                  transform: 'rotateY(180deg)'
+                }}>
+                    <div className="text-white text-2xl font-bold">HLOA</div>
                   </div>
                 </div>
               </div>
@@ -125,7 +110,7 @@ const Innovation = () => {
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
                       <Check className="w-4 h-4 text-white" />
                     </div>
-                    <div className="text-lg font-bold text-primary">{t('innovation.benefit2')}</div>
+                    
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md mt-1">
@@ -141,51 +126,12 @@ const Innovation = () => {
           {/* Colonne droite - Bloc organismes avec image intégrée */}
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image bannière abeille avec flip */}
-              <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden" style={{
-                perspective: '1000px'
-              }}>
-                <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlippedBee(!isFlippedBee)} style={{
-                  transformStyle: 'preserve-3d',
-                  transform: isFlippedBee ? 'rotateY(180deg)' : 'rotateY(0deg)'
-                }}>
-                  {/* Face avant - Image */}
-                  <div className="absolute inset-0" style={{
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(0deg)'
-                  }}>
-                    <img 
-                      src={beeOnPlant} 
-                      alt="Abeille butinant sur une plante" 
-                      className="w-full h-full object-cover" 
-                      style={{
-                        objectPosition: 'center 30%',
-                        filter: 'brightness(1.2) contrast(1.1)'
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Face arrière - Statistiques */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-4" style={{
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(180deg)'
-                  }}>
-                    <div className="text-white text-sm font-bold grid grid-cols-3 gap-2 text-center">
-                      <div>
-                        <div className="text-lg font-bold">84%</div>
-                        <div className="text-xs">des cultures dépendent des insectes</div>
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold">5500</div>
-                        <div className="text-xs">auxiliaires utiles recensés en France</div>
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold">10 000</div>
-                        <div className="text-xs">individus actifs par m²</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Image bannière abeille */}
+              <div className="absolute top-0 left-0 right-0 h-48 rounded-t-xl overflow-hidden">
+                <img src={beeOnPlant} alt="Abeille butinant sur une plante" className="w-full h-full object-cover" style={{
+                objectPosition: 'center 30%',
+                filter: 'brightness(1.2) contrast(1.1)'
+              }} />
               </div>
               
               {/* Contenu principal */}
@@ -211,8 +157,6 @@ const Innovation = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Innovation;
