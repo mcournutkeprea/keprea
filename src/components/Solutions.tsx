@@ -56,19 +56,22 @@ const Solutions = () => {
           </div>
 
           {/* Section Booster */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-6 min-h-[350px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Boosters</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">pour la santé des sols et la résiliences des plantes</p>
+              <h3 className="text-lg font-extrabold mb-6 text-white text-center">Pourquoi les substances issues d'insectes ?</h3>
               
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Riche en acides aminés libres</span>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
+                  <span className="text-sm font-semibold text-white">Interagissent rapidement avec la plante et le sol, naturellement</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Substances actives</span>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
+                  <span className="text-sm font-semibold text-white">Respectent le sol sans aucun résidu toxique</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
+                  <span className="text-sm font-semibold text-white">Améliorent le rendement</span>
                 </div>
               </div>
             </div>
