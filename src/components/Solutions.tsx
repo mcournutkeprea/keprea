@@ -48,7 +48,7 @@ const Solutions = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Equilibre NPK</span>
+                  <span className="text-xs font-semibold text-white">Concentration équilibrée en  NPK</span>
                 </div>
               </div>
             </div>
