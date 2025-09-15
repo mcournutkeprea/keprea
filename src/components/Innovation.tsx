@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Check } from "lucide-react";
 import beeOnPlant from "@/assets/bee-on-plant.jpg";
 import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
+import substancesBenefits from "@/assets/substances-insectes-benefits.png";
 import { useState } from "react";
 
 const Innovation = () => {
@@ -91,25 +92,16 @@ const Innovation = () => {
                     </div>
                   </div>
                   
-                  {/* Face arrière - Texte avec checks */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-4" style={{
+                  {/* Face arrière - Image des bénéfices */}
+                  <div className="absolute inset-0 flex items-center justify-center" style={{
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white space-y-3 text-base font-bold">
-                      <div className="flex items-start gap-2">
-                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span>Interagissent rapidement avec la plante et le sol, naturellement</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span>Respectent le sol sans aucun résidu toxique</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span>Améliorent le rendement</span>
-                      </div>
-                    </div>
+                    <img 
+                      src={substancesBenefits} 
+                      alt="Des substances d'insectes pour l'agriculture" 
+                      className="w-full h-full object-contain p-4"
+                    />
                   </div>
                 </div>
               </div>
