@@ -43,15 +43,15 @@ const Hero = () => {
         }}>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-white/80 font-bold">Naturel</div>
+              <div className="text-white font-bold">Naturel</div>
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">10</div>
-              <div className="text-white/80 font-bold">solutions développées dont 2 déjà disponibles</div>
+              <div className="text-white font-bold">solutions développées dont 2 déjà disponibles</div>
             </div>
             <div className="p-6 backdrop-blur-sm bg-white/10 rounded-lg border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">0€</div>
-              <div className="text-white/80 font-bold">aucun investissement dans le matériel agricole pour les producteurs</div>
+              <div className="text-white font-bold">aucun investissement dans le matériel agricole pour les producteurs</div>
             </div>
           </div>
         </div>
