@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
+import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
 const Solutions = () => {
   const {
     t
@@ -98,7 +99,7 @@ const Solutions = () => {
             </div>
             
             <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')`
+            backgroundImage: `url(${leavesDropletsBg})`
           }}></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
