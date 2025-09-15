@@ -112,6 +112,7 @@ const Innovation = () => {
               
               {/* Contenu principal */}
               <div className="p-8 pt-52">
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Pourquoi les substances issues d'insectes ?</h3>
               </div>
             </div>
           </div>
@@ -168,6 +169,7 @@ const Innovation = () => {
               
               {/* Contenu principal */}
               <div className="p-8 pt-52">
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Pourquoi le biocontrôle vivant ?</h3>
               </div>
             </div>
           </div>
