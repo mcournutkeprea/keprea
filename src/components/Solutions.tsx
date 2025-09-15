@@ -56,7 +56,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Booster */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-6 min-h-[350px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-6 min-h-[700px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
             <div className="relative z-10">
               <h3 className="text-lg font-extrabold mb-6 text-white text-center">Pourquoi les substances issues d'insectes ?</h3>
               
