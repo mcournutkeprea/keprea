@@ -1,12 +1,24 @@
 import { Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
 const Solutions = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
   const navigate = useNavigate();
+  const [flippedCards, setFlippedCards] = useState<{[key: string]: boolean}>({
+    biopesticides: false,
+    biocontrole: false
+  });
+
+  const handleFlipCard = (cardKey: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setFlippedCards(prev => ({
+      ...prev,
+      [cardKey]: !prev[cardKey]
+    }));
+  };
+
   const handleBiofertilisantClick = () => {
     navigate('/biofertilisant');
   };
@@ -79,55 +91,86 @@ const Solutions = () => {
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
-          {/* Section Substances naturelles */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
-            <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biopesticides</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
-              
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Extraits des molécules de protection</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Substance actives</span>
+          {/* Section Substances naturelles (Biopesticides) avec flip card */}
+          <div 
+            className="relative perspective-1000 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={(e) => handleFlipCard('biopesticides', e)}
+          >
+            <div className={`relative w-full h-full transition-transform duration-600 preserve-3d ${flippedCards.biopesticides ? 'animate-flip' : 'animate-flip-back'}`}>
+              {/* Face avant */}
+              <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden backface-hidden">
+                <div className="absolute inset-0 bg-cover bg-center" style={{
+                  backgroundImage: `url(${leavesDropletsBg})`
+                }}></div>
+                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="relative z-10 h-full p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-extrabold text-white text-center leading-tight">
+                    Pourquoi les substances issues d'insectes ?
+                  </h3>
                 </div>
               </div>
               
+              {/* Face arrière */}
+              <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden backface-hidden rotate-y-180 bg-gradient-to-br from-green-600 to-green-800">
+                <div className="relative z-10 h-full p-8 flex flex-col justify-center">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-semibold text-white">Interagissent rapidement avec la plante et le sol, naturellement</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-semibold text-white">Respectent le sol sans aucun résidu toxique</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-semibold text-white">Améliorent le rendement</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url(${leavesDropletsBg})`
-          }}></div>
-            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
-          {/* Section Biocontrôle vivant */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
-            <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biocontrôle</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
-              
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Contre les pucerons, la pyrale, la cochenille...</span>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes et qualité des produits optimisée</span>
+          {/* Section Biocontrôle vivant avec flip card */}
+          <div 
+            className="relative perspective-1000 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={(e) => handleFlipCard('biocontrole', e)}
+          >
+            <div className={`relative w-full h-full transition-transform duration-600 preserve-3d ${flippedCards.biocontrole ? 'animate-flip' : 'animate-flip-back'}`}>
+              {/* Face avant */}
+              <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden backface-hidden">
+                <div className="absolute inset-0 bg-cover bg-center" style={{
+                  backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
+                }}></div>
+                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="relative z-10 h-full p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-extrabold text-white text-center leading-tight">
+                    Pourquoi les macro-organismes vivants ?
+                  </h3>
                 </div>
               </div>
               
+              {/* Face arrière */}
+              <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden backface-hidden rotate-y-180 bg-gradient-to-br from-amber-600 to-orange-700">
+                <div className="relative z-10 h-full p-8 flex flex-col justify-center">
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <div className="text-4xl font-extrabold text-white mb-1">84%</div>
+                      <p className="text-xs font-semibold text-white/90">des cultures dépendent des insectes pour leur qualité et rendement</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-extrabold text-white mb-1">5500</div>
+                      <p className="text-xs font-semibold text-white/90">auxiliaires utiles recensés en France</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-extrabold text-white mb-1">10 000</div>
+                      <p className="text-xs font-semibold text-white/90">individus actifs par m² en moyenne</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
-          }}></div>
-            <div className="absolute inset-0 bg-black/40"></div>
           </div>
         </div>
       </div>

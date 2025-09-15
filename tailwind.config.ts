@@ -207,6 +207,22 @@ export default {
 						transform: 'scale(2)',
 						opacity: '0'
 					}
+				},
+				'flip': {
+					'0%': {
+						transform: 'rotateY(0deg)'
+					},
+					'100%': {
+						transform: 'rotateY(180deg)'
+					}
+				},
+				'flip-back': {
+					'0%': {
+						transform: 'rotateY(180deg)'
+					},
+					'100%': {
+						transform: 'rotateY(0deg)'
+					}
 				}
 			},
 			animation: {
@@ -226,7 +242,9 @@ export default {
 				'pan-right': 'pan-right 15s ease-in-out infinite',
 				'slow-pan-left': 'slow-pan-left 20s ease-in-out infinite',
 				'slow-pan-right': 'slow-pan-right 20s ease-in-out infinite',
-				'camera-sweep': 'camera-sweep 25s ease-in-out infinite'
+				'camera-sweep': 'camera-sweep 25s ease-in-out infinite',
+				'flip': 'flip 0.6s ease-in-out forwards',
+				'flip-back': 'flip-back 0.6s ease-in-out forwards'
 			}
 		}
 	},
