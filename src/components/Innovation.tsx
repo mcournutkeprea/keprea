@@ -92,17 +92,17 @@ const Innovation = () => {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white space-y-2 text-sm">
+                    <div className="text-white space-y-3 text-base font-bold">
                       <div className="flex items-start gap-2">
-                        <Check className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
                         <span>Interagissent rapidement avec la plante et le sol, naturellement</span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Check className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
                         <span>Respectent le sol sans aucun résidu toxique</span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Check className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
                         <span>Améliorent le rendement</span>
                       </div>
                     </div>
@@ -170,18 +170,18 @@ const Innovation = () => {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white text-xs grid grid-cols-3 gap-4 text-center">
+                    <div className="text-white text-sm font-bold grid grid-cols-3 gap-2 text-center">
                       <div>
-                        <div className="text-base font-bold">84%</div>
-                        <div>des cultures dépendent des insectes</div>
+                        <div className="text-lg font-bold">84%</div>
+                        <div className="text-xs">des cultures dépendent des insectes</div>
                       </div>
                       <div>
-                        <div className="text-base font-bold">5500</div>
-                        <div>auxiliaires utiles recensés en France</div>
+                        <div className="text-lg font-bold">5500</div>
+                        <div className="text-xs">auxiliaires utiles recensés en France</div>
                       </div>
                       <div>
-                        <div className="text-base font-bold">10 000</div>
-                        <div>individus actifs par m²</div>
+                        <div className="text-lg font-bold">10 000</div>
+                        <div className="text-xs">individus actifs par m²</div>
                       </div>
                     </div>
                   </div>
