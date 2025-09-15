@@ -165,12 +165,25 @@ const Innovation = () => {
                     />
                   </div>
                   
-                  {/* Face arrière - Texte */}
-                  <div className="absolute inset-0 bg-primary flex items-center justify-center" style={{
+                  {/* Face arrière - Statistiques */}
+                  <div className="absolute inset-0 bg-primary flex items-center justify-center p-4" style={{
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white text-2xl font-bold">BEE</div>
+                    <div className="text-white space-y-3 text-sm text-center">
+                      <div>
+                        <div className="text-lg font-bold">84%</div>
+                        <div>des cultures dépendent des insectes pour leur qualité et rendement</div>
+                      </div>
+                      <div>
+                        <div className="text-lg font-bold">5500</div>
+                        <div>auxiliaires utiles recensés en France</div>
+                      </div>
+                      <div>
+                        <div className="text-lg font-bold">10 000</div>
+                        <div>individus actifs par m² en moyenne</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
