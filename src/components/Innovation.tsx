@@ -170,18 +170,18 @@ const Innovation = () => {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)'
                   }}>
-                    <div className="text-white space-y-3 text-sm text-center">
+                    <div className="text-white text-xs grid grid-cols-3 gap-4 text-center">
                       <div>
-                        <div className="text-lg font-bold">84%</div>
-                        <div>des cultures dépendent des insectes pour leur qualité et rendement</div>
+                        <div className="text-base font-bold">84%</div>
+                        <div>des cultures dépendent des insectes</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold">5500</div>
+                        <div className="text-base font-bold">5500</div>
                         <div>auxiliaires utiles recensés en France</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold">10 000</div>
-                        <div>individus actifs par m² en moyenne</div>
+                        <div className="text-base font-bold">10 000</div>
+                        <div>individus actifs par m²</div>
                       </div>
                     </div>
                   </div>
