@@ -1,4 +1,5 @@
 import { ArrowLeft } from "lucide-react";
+import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -8,7 +9,7 @@ const SubstancesNaturelles = () => {
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('/lovable-uploads/728d038e-7d5f-4185-9cd3-77fbd3544cb5.png')`
+          backgroundImage: `url(${plantDropletsBg})`
         }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
