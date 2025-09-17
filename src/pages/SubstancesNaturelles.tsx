@@ -100,9 +100,7 @@ const SubstancesNaturelles = () => {
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Mécanisme d'action
-          </h2>
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Mécanisme d'action (voir jusqu'où on peut aller vs brevet/regul)</h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -125,9 +123,7 @@ const SubstancesNaturelles = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                Avantages clés
-              </h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Avantages clés</h3>
               
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
