@@ -9,15 +9,19 @@ const Solutions = () => {
   const navigate = useNavigate();
   const handleBiofertilisantClick = () => {
     navigate('/biofertilisant');
+    window.scrollTo(0, 0);
   };
   const handleBoostersClick = () => {
     navigate('/boosters');
+    window.scrollTo(0, 0);
   };
   const handleSubstancesClick = () => {
     navigate('/substances-naturelles');
+    window.scrollTo(0, 0);
   };
   const handleBiocontroleClick = () => {
     navigate('/biocontrole-vivant');
+    window.scrollTo(0, 0);
   };
   return <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
