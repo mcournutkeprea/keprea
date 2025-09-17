@@ -104,7 +104,7 @@ const Boosters = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Epandu avec un micro granulateur lors du semis</span>
+                  <span className="text-sm">Augmente la présence des bons microorganismes</span>
                 </div>
               </div>
             </div>
