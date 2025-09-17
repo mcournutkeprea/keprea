@@ -91,7 +91,7 @@ const Boosters = () => {
             {/* Fertilea432 */}
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
-              <p className="text-muted-foreground mb-6">2% de chitine pour stimuler l'activité chitinolitique des sols et favoriser la présence de bactéries qui améliorer le système de défense des plantes.</p>
+              <p className="text-muted-foreground mb-6">2% de chitine pure pour stimuler l'activité chitinolitique des sols et améliorer la système de défense des plantes.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
