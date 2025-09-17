@@ -13,29 +13,30 @@ const Biofertilisant = () => {
         }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
-          <div className="flex justify-between items-start">
-            <div>
-              <Link to="/#solutions">
-                <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Retour aux biosolutions
-                </Button>
-              </Link>
-              <h1 className="text-4xl font-bold text-white">Biofertilisant</h1>
-              <p className="text-xl text-white/90 mt-2">
-                Nutrition optimale des cultures
-              </p>
-            </div>
+          <div className="relative">
+            <Link to="/#solutions">
+              <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Retour aux biosolutions
+              </Button>
+            </Link>
+            <h1 className="text-4xl font-bold text-white">Biofertilisant</h1>
+            <p className="text-xl text-white/90 mt-2">
+              Nutrition optimale des cultures
+            </p>
+            
+            {/* Logo Nature positionné au centre-droite */}
             <a 
               href="https://www.nature.com/articles/s41598-020-61765-x" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-transform duration-300 hover:scale-110"
+              className="absolute top-1/2 right-8 transform -translate-y-1/2 transition-transform duration-300 hover:scale-110"
             >
               <img 
                 src={natureLogo} 
                 alt="Nature Journal" 
-                className="w-16 h-16 object-contain"
+                className="w-16 h-16 object-contain bg-transparent rounded-full"
+                style={{ backgroundColor: 'transparent' }}
               />
             </a>
           </div>
