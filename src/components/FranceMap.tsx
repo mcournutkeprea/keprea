@@ -75,6 +75,16 @@ const FranceMap = () => {
               .leaflet-control-zoom {
                 display: none !important;
               }
+              .leaflet-control-container .leaflet-control {
+                display: none !important;
+              }
+              .leaflet-marker-pane .leaflet-marker-icon {
+                filter: none !important;
+              }
+              .leaflet-popup-content-wrapper {
+                background: white;
+                border-radius: 4px;
+              }
             `
           }} />
         </div>
