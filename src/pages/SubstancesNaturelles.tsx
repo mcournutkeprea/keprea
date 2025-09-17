@@ -2,15 +2,13 @@ import { ArrowLeft } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const SubstancesNaturelles = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url(${plantDropletsBg})`
-        }}></div>
+        backgroundImage: `url(${plantDropletsBg})`
+      }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
@@ -20,9 +18,7 @@ const SubstancesNaturelles = () => {
             </Button>
           </Link>
           <h1 className="text-4xl font-bold text-white">Substances Naturelles</h1>
-          <p className="text-xl text-white/90 mt-2">
-            Solutions écologiques innovantes à base d'extraits naturels d'insectes
-          </p>
+          <p className="text-xl text-white/90 mt-2">Solutions cohérentes et performantes à base d'extraits naturels d'insectes</p>
         </div>
       </header>
 
@@ -36,9 +32,7 @@ const SubstancesNaturelles = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Substances Naturelles
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Solutions écologiques innovantes à base d'extraits naturels d'insectes
-            </p>
+            
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 text-left">
@@ -55,8 +49,8 @@ const SubstancesNaturelles = () => {
               <p className="text-sm text-muted-foreground">Solutions biodégradables et non toxiques</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Innovation biotechnologique</h3>
-              <p className="text-sm text-muted-foreground">Technologie de pointe pour l'agriculture durable</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">✓Solutions liquides et solides</h3>
+              <p className="text-sm text-muted-foreground">Contre les ravageurs du système foliaire et racinaire</p>
             </div>
           </div>
         </div>
@@ -122,21 +116,11 @@ const SubstancesNaturelles = () => {
                     <span className="text-[#22c55e] font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground">Application foliaire ou application au sol</h4>
+                    <h4 className="font-medium text-foreground">à voir si on communique / rester flou</h4>
                   </div>
                 </div>
                 
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#22c55e] font-bold">2</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground">Absorption</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Les substances protègent les cultures via les feuilles directement ou via le sol en luttant contre les ravageurs présents autour des racines
-                    </p>
-                  </div>
-                </div>
+                
               </div>
             </div>
             
@@ -186,8 +170,6 @@ const SubstancesNaturelles = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default SubstancesNaturelles;
