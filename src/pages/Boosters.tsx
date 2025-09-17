@@ -75,7 +75,7 @@ const Boosters = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Acides aminés libres concentrés</span>
+                  <span className="text-sm">Améliore la résistance aux stress hydrique et phytotoxiques</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
