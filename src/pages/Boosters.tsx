@@ -6,8 +6,8 @@ const Boosters = () => {
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
-        }}></div>
+        backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
+      }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
@@ -70,10 +70,7 @@ const Boosters = () => {
             {/* Boostea13 */}
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
-              <p className="text-muted-foreground mb-6">
-                Riche en acides aminés libres, ce booster favorise l'absorption des nutriments 
-                et stimule la croissance végétale naturellement.
-              </p>
+              <p className="text-muted-foreground mb-6">Riche en acides aminés libres, ce booster favorise l'absorption des nutriments, stimule la croissance végétale naturellement.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
