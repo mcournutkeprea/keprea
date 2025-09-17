@@ -9,8 +9,8 @@ const BiocontroleVivant = () => {
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
-        }}></div>
+        backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
+      }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
@@ -32,9 +32,7 @@ const BiocontroleVivant = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Insectes Auxiliaires
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Solutions d'insectes pour lutter contre les principaux ravageurs des cultures
-          </p>
+          <p className="text-lg text-muted-foreground mb-8">Solutions d'insectes pour lutter contre les principaux ravageurs des cultures</p>
           
           
         </div>
@@ -53,7 +51,7 @@ const BiocontroleVivant = () => {
                 <img src={aphidImage} alt="Pucerons" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pucerons</h3>
-              <p className="text-sm text-muted-foreground">Coccinelles, chrysopes et parasitoïdes spécifiques</p>
+              <p className="text-sm text-muted-foreground">Tout types de pucerons en champs et sous serre</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
@@ -61,7 +59,7 @@ const BiocontroleVivant = () => {
                 <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pyrale</h3>
-              <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
+              <p className="text-sm text-muted-foreground">et autres chenilles ravageuses</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
@@ -69,7 +67,7 @@ const BiocontroleVivant = () => {
                 <img src={cochenillesImage} alt="Cochenilles" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Cochenilles</h3>
-              <p className="text-sm text-muted-foreground">Prédateurs spécialisés et parasitoïdes</p>
+              <p className="text-sm text-muted-foreground">Cochenilles farineuse des arbres fruitiers</p>
             </div>
           </div>
         </div>
