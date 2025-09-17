@@ -49,7 +49,7 @@ const BiocontroleVivant = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
                 <img src={aphidImage} alt="Pucerons" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pucerons</h3>
@@ -57,16 +57,16 @@ const BiocontroleVivant = () => {
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
-                <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+                <img src={cochenillesImage} alt="Cochenilles" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pyrale</h3>
               <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
-                <img src={cochenillesImage} alt="Cochenilles" className="w-full h-full object-cover" />
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+                <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Cochenilles</h3>
               <p className="text-sm text-muted-foreground">Prédateurs spécialisés et parasitoïdes</p>
