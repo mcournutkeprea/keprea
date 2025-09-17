@@ -1,6 +1,7 @@
 import { ArrowLeft, Wheat, Droplets, Leaf, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import natureLogo from "@/assets/nature-logo.png";
 
 const Biofertilisant = () => {
   return (
@@ -118,6 +119,22 @@ const Biofertilisant = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Nature logo section */}
+      <section className="py-8 px-4 bg-white flex justify-center">
+        <a 
+          href="https://www.nature.com/articles/s41598-020-61765-x" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="transition-transform duration-300 hover:scale-110"
+        >
+          <img 
+            src={natureLogo} 
+            alt="Nature Journal" 
+            className="w-20 h-20 object-contain"
+          />
+        </a>
       </section>
 
       {/* CTA section */}
