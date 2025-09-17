@@ -165,9 +165,7 @@ const Boosters = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Support technique</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Accompagnement personnalisé pour optimiser l'utilisation
-                  </p>
+                  <p className="text-muted-foreground text-sm">Pas de modification de l'itinéraire technique, ni d'investissement dans le matériel agricole </p>
                 </div>
               </div>
             </div>
