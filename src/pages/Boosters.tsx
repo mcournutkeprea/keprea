@@ -39,22 +39,10 @@ const Boosters = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 text-left">
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">✓ Stimulation naturelle</h3>
-              <p className="text-sm text-muted-foreground">Activation des défenses naturelles des plantes</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">✓ Amélioration des rendements</h3>
-              <p className="text-sm text-muted-foreground">Optimisation de la croissance et de la productivité</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">✓ Résistance accrue</h3>
-              <p className="text-sm text-muted-foreground">Meilleure tolérance aux stress environnementaux</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">✓ Application facile</h3>
-              <p className="text-sm text-muted-foreground">Formulation adaptée aux équipements agricoles</p>
-            </div>
+            
+            
+            
+            
           </div>
         </div>
       </section>
