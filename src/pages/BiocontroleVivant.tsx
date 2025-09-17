@@ -1,6 +1,9 @@
-import { ArrowLeft, Bug, Worm, Circle } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import aphidImage from "@/assets/aphid.jpg";
+import pyraleImage from "@/assets/pyrale.jpg";
+import cochenillesImage from "@/assets/cochenilles.jpg";
 const BiocontroleVivant = () => {
   return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
@@ -46,24 +49,24 @@ const BiocontroleVivant = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bug className="w-8 h-8 text-[#22c55e]" />
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+                <img src={aphidImage} alt="Pucerons" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pucerons</h3>
               <p className="text-sm text-muted-foreground">Coccinelles, chrysopes et parasitoïdes spécifiques</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Worm className="w-8 h-8 text-[#22c55e]" />
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+                <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pyrale</h3>
               <p className="text-sm text-muted-foreground">Trichogrammes et agents entomopathogènes</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Circle className="w-8 h-8 text-[#22c55e] fill-current" />
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+                <img src={cochenillesImage} alt="Cochenilles" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Cochenilles</h3>
               <p className="text-sm text-muted-foreground">Prédateurs spécialisés et parasitoïdes</p>
