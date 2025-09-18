@@ -14,7 +14,7 @@ const Production = () => {
             {t('production.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('production.subtitle')}
+            Découvrez notre site de production moderne situé à Dole, en France, où nous développons et produisons nos biosolutions
           </p>
           
           {/* Logo cliquable pour voir le processus de production */}
