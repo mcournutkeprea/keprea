@@ -86,7 +86,18 @@ const Innovation = () => {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(0deg)'
                   }}>
-                    <img src={cornLeavesDroplets} alt="Gouttes sur feuilles de maïs" className="w-full h-full object-cover" />
+                    <video 
+                      src="/substances-video.mp4" 
+                      autoPlay 
+                      loop 
+                      muted 
+                      playsInline
+                      className="w-full h-full object-cover" 
+                      style={{
+                        objectPosition: 'center 30%',
+                        filter: 'brightness(1.2) contrast(1.1)'
+                      }}
+                    />
                     {/* Titre overlay */}
                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
                       <h3 className="text-xl font-bold text-white text-center">Pourquoi les substances issues d'insectes ?</h3>
