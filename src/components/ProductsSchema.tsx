@@ -15,21 +15,16 @@ const ProductsSchema = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    const handleVideoEnd = () => {
-      setCurrentVideo((prev) => (prev + 1) % videos.length);
-    };
-
-    video.addEventListener('ended', handleVideoEnd);
-    return () => video.removeEventListener('ended', handleVideoEnd);
-  }, [videos.length]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
     video.src = videos[currentVideo];
     video.load();
     video.play().catch(console.error);
+
+    // Switch to next video after 4 seconds
+    const timer = setTimeout(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 4000);
+
+    return () => clearTimeout(timer);
   }, [currentVideo, videos]);
 
   return (
