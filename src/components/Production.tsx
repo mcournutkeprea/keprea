@@ -156,7 +156,7 @@ const Production = () => {
                       <span className="text-2xl">🚢</span>
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-foreground">{t('production.process.step6')}</p>
+                      <p className="text-xs font-medium text-foreground">Transport</p>
                     </div>
                   </div>
 
