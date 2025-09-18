@@ -15,16 +15,31 @@ const ProductsSchema = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    video.src = videos[currentVideo];
-    video.load();
-    video.play().catch(console.error);
+    let timer: NodeJS.Timeout;
 
-    // Switch to next video after 4 seconds
-    const timer = setTimeout(() => {
+    const handleVideoEnd = () => {
+      clearTimeout(timer);
       setCurrentVideo((prev) => (prev + 1) % videos.length);
-    }, 4000);
+    };
 
-    return () => clearTimeout(timer);
+    const loadAndPlay = () => {
+      video.src = videos[currentVideo];
+      video.load();
+      video.play().catch(console.error);
+      
+      // Switch to next video after 4 seconds
+      timer = setTimeout(() => {
+        setCurrentVideo((prev) => (prev + 1) % videos.length);
+      }, 4000);
+    };
+
+    video.addEventListener('ended', handleVideoEnd);
+    loadAndPlay();
+
+    return () => {
+      video.removeEventListener('ended', handleVideoEnd);
+      clearTimeout(timer);
+    };
   }, [currentVideo, videos]);
 
   return (
