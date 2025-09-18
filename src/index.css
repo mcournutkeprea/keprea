@@ -8,22 +8,22 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100% / 0.95;
+    --background: 0 0% 100%;
     --foreground: 142 69% 8%;
 
-    --card: 0 0% 100% / 0.95;
+    --card: 0 0% 100%;
     --card-foreground: 142 69% 8%;
 
-    --popover: 0 0% 100% / 0.95;
+    --popover: 0 0% 100%;
     --popover-foreground: 142 69% 8%;
 
     --primary: 143 88% 57%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 120 60% 95% / 0.9;
+    --secondary: 120 60% 95%;
     --secondary-foreground: 142 69% 8%;
 
-    --muted: 120 60% 95% / 0.9;
+    --muted: 120 60% 95%;
     --muted-foreground: 142 20% 55%;
 
     --accent: 88 77% 45%;
@@ -56,13 +56,13 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 142 69% 8% / 0.9;
+    --background: 142 69% 8%;
     --foreground: 120 100% 98%;
 
-    --card: 142 50% 12% / 0.95;
+    --card: 142 50% 12%;
     --card-foreground: 120 100% 98%;
 
-    --popover: 142 50% 12% / 0.95;
+    --popover: 142 50% 12%;
     --popover-foreground: 120 100% 98%;
 
     --primary: 143 88% 57%;
@@ -100,13 +100,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground;
+    @apply bg-background text-foreground;
     font-family: 'Poppins', sans-serif;
-    background-image: url('../assets/cereal-field-dark-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
   }
 }
 
