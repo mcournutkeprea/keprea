@@ -125,9 +125,12 @@ const Innovation = () => {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(0deg)'
                   }}>
-                    <img 
-                      src={beeOnPlant} 
-                      alt="Abeille butinant sur une plante" 
+                    <video 
+                      src="/biocontrol-video.mp4" 
+                      autoPlay 
+                      loop 
+                      muted 
+                      playsInline
                       className="w-full h-full object-cover" 
                       style={{
                         objectPosition: 'center 30%',
