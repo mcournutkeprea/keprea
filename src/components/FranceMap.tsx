@@ -57,37 +57,35 @@ const FranceMap = () => {
 
   return (
     <div className="w-full h-full">
-      <div className="relative bg-muted/30 rounded-lg p-4 h-full">
-        <div className="relative w-full h-full">
-          <div 
-            ref={mapRef} 
-            className="w-full h-full rounded-md overflow-hidden border border-border"
-            style={{
-              position: 'relative'
-            }}
-          />
-          {/* CSS pour masquer les contrôles Leaflet */}
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              .leaflet-control-attribution {
-                display: none !important;
-              }
-              .leaflet-control-zoom {
-                display: none !important;
-              }
-              .leaflet-control-container .leaflet-control {
-                display: none !important;
-              }
-              .leaflet-marker-pane .leaflet-marker-icon {
-                filter: none !important;
-              }
-              .leaflet-popup-content-wrapper {
-                background: white;
-                border-radius: 4px;
-              }
-            `
-          }} />
-        </div>
+      <div className="relative w-full h-full">
+        <div 
+          ref={mapRef} 
+          className="w-full h-full rounded-xl overflow-hidden"
+          style={{
+            position: 'relative'
+          }}
+        />
+        {/* CSS pour masquer les contrôles Leaflet */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .leaflet-control-attribution {
+              display: none !important;
+            }
+            .leaflet-control-zoom {
+              display: none !important;
+            }
+            .leaflet-control-container .leaflet-control {
+              display: none !important;
+            }
+            .leaflet-marker-pane .leaflet-marker-icon {
+              filter: none !important;
+            }
+            .leaflet-popup-content-wrapper {
+              background: white;
+              border-radius: 4px;
+            }
+          `
+        }} />
       </div>
     </div>
   );
