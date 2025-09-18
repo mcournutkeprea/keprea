@@ -58,8 +58,8 @@ const BiocontroleVivant = () => {
               <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
                 <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pyrale</h3>
-              <p className="text-sm text-muted-foreground">et autres chenilles ravageuses</p>
+              <h3 className="text-xl font-bold text-[#22c55e] mb-3">Chenilles ravageuses</h3>
+              <p className="text-sm text-muted-foreground">Pyrale, carpocapse, </p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
