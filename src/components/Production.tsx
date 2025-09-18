@@ -73,14 +73,7 @@ const Production = () => {
               {/* Colonne du milieu - Image du bâtiment */}
               <div className="lg:col-span-4">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden bg-primary/5 border-2 border-primary/20">
-                  <video 
-                    src="/production-video.mp4" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.png" alt="Site de production Keprea à Damparis" className="w-full h-full object-cover animate-slow-pan-right" />
                 </div>
               </div>
 
