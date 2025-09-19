@@ -89,33 +89,38 @@ const Production = () => {
             <div className="relative z-10 mt-8">
               <h4 className="text-lg font-semibold text-primary mb-6 text-center">De la larve au champs</h4>
               
-              {/* Version mobile - Format vertical */}
+              {/* Version mobile - Format vertical avec convergence */}
               <div className="block lg:hidden">
                 <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
                   
-                  {/* Étape 1: Élevage d'insecte auxiliaire */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🐛</span>
+                  {/* Première section - Élevage et Collecte côte à côte */}
+                  <div className="flex justify-center gap-4 w-full">
+                    {/* Étape 1: Élevage d'insecte auxiliaire */}
+                    <div className="flex flex-col items-center gap-3 p-3 bg-background/50 rounded-lg text-center flex-1 max-w-[140px]">
+                      <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">🐛</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step1')}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step1')}</p>
+                    
+                    {/* Étape 2: Collecte */}
+                    <div className="flex flex-col items-center gap-3 p-3 bg-background/50 rounded-lg text-center flex-1 max-w-[140px]">
+                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">🜻</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step2')}</p>
+                      </div>
                     </div>
                   </div>
                   
-                  <ArrowDown className="w-6 h-6 text-primary" />
-                  
-                  {/* Étape 2: Collecte */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🜻</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step2')}</p>
-                    </div>
+                  {/* Flèches de convergence */}
+                  <div className="flex justify-center gap-4">
+                    <ArrowDown className="w-5 h-5 text-primary" />
+                    <ArrowDown className="w-5 h-5 text-primary" />
                   </div>
-
-                  <ArrowDown className="w-6 h-6 text-primary" />
 
                   {/* Étape 3: Transformation */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
