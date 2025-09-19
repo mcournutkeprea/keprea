@@ -123,7 +123,7 @@ Nous exploitons le potentiel extraordinaire des insectes pour créer des solutio
                 
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes et qualité des produits optimisée</span>
+                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes pour une meilleur performance</span>
                 </div>
               </div>
               
