@@ -379,7 +379,7 @@ const translations: Translations = {
     pt: 'Nossa Equipe'
   },
   'team.subtitle': {
-    fr: 'Une équipe passionnée d\'experts en biotechnologie, agriculture, industrie et politiques agricoles',
+    fr: 'Une équipe passionnée d\'experts en agriculture, industrie et politiques agricoles',
     en: 'A passionate team of experts in biotechnology, agriculture, industry and agricultural policies',
     es: 'Un equipo apasionado de expertos en biotecnología, agricultura, industria y políticas agrícolas',
     pt: 'Uma equipe apaixonada de especialistas em biotecnologia, agricultura, indústria e políticas agrícolas'
