@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const ProductsSchema = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
   const [activePlayer, setActivePlayer] = useState(0);
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
+  const isMobile = useIsMobile();
   
   const videos = [
     '/portfolio-video-1.mp4',
@@ -37,13 +39,15 @@ const ProductsSchema = () => {
       currentVideoElement.addEventListener('canplay', playVideo, { once: true });
     }
 
-    // Preload next video after a short delay to avoid competing for bandwidth
-    preloadTimer = setTimeout(() => {
-      const nextVideoIndex = (currentVideo + 1) % videos.length;
-      nextVideoElement.src = videos[nextVideoIndex];
-      nextVideoElement.preload = 'metadata';
-      nextVideoElement.load();
-    }, 1000);
+    // Preload next video after a short delay (disabled on mobile to save bandwidth)
+    if (!isMobile) {
+      preloadTimer = setTimeout(() => {
+        const nextVideoIndex = (currentVideo + 1) % videos.length;
+        nextVideoElement.src = videos[nextVideoIndex];
+        nextVideoElement.preload = 'metadata';
+        nextVideoElement.load();
+      }, 1000);
+    }
 
     const switchToNext = () => {
       const nextVideoIndex = (currentVideo + 1) % videos.length;
@@ -67,7 +71,9 @@ const ProductsSchema = () => {
       <div className="absolute inset-0 z-0">
         <video
           ref={video1Ref}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${
+          className={`w-full h-full object-cover ${
+            isMobile ? 'transition-opacity duration-300' : 'transition-opacity duration-500'
+          } ${
             activePlayer === 0 ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ position: 'absolute', top: 0, left: 0 }}
@@ -77,7 +83,9 @@ const ProductsSchema = () => {
         />
         <video
           ref={video2Ref}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${
+          className={`w-full h-full object-cover ${
+            isMobile ? 'transition-opacity duration-300' : 'transition-opacity duration-500'
+          } ${
             activePlayer === 1 ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ position: 'absolute', top: 0, left: 0 }}
