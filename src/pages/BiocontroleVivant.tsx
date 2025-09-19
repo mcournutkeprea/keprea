@@ -94,8 +94,8 @@ const BiocontroleVivant = () => {
               <p className="text-sm text-muted-foreground">Aucun développement de résistance</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✅ Certifié bio</h3>
-              <p className="text-sm text-muted-foreground">Compatible agriculture biologique</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">✅ Utilisable en agriculture biologique</h3>
+              <p className="text-sm text-muted-foreground">Préserve la santé des champs et des utilisateurs</p>
             </div>
           </div>
         </div>
