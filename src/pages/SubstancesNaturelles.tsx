@@ -37,12 +37,12 @@ const SubstancesNaturelles = () => {
           
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Stimulation des défenses</h3>
-              <p className="text-sm text-muted-foreground">Contre les ravageurs des feuilles, de la tige et des système racinaire</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Protection des cultures et des sols</h3>
+              <p className="text-sm text-muted-foreground">Substances actives naturelles issues d'insectes</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Extraits d'insectes</h3>
-              <p className="text-sm text-muted-foreground">Substances actives naturelles issues d'insectes</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Stimulation des défenses</h3>
+              <p className="text-sm text-muted-foreground">Contre les ravageurs des feuilles, de la tige et des système racinaire</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-[#22c55e] mb-2">✓ Respect de l'environnement</h3>
