@@ -29,9 +29,10 @@ const Solutions = () => {
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4">
             {t('solutions.title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Répondre aux défis majeurs des agriculteurs du monde entier : compétitivité, productivité, préservation des sols, de la biodiversité et du climat
-          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Répondre aux défis majeurs des agriculteurs du monde entier : compétitivité, productivité, préservation des sols, de la biodiversité et du climat
+
+
+Nous exploitons le potentiel extraordinaire des insectes pour créer des solutions agricoles durables, performantes et abordables. Notre approche scientifique et technique combine savoir faire artisanal, industriel et agronomique pour répondre aux besoins des agriculteurs.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
