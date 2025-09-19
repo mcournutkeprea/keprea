@@ -51,7 +51,7 @@ const BiocontroleVivant = () => {
                 <img src={aphidImage} alt="Pucerons" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Pucerons</h3>
-              <p className="text-sm text-muted-foreground">Tout types de pucerons en champs et sous serre</p>
+              <p className="text-sm text-muted-foreground">Contre tout types de pucerons en champs et sous serre</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
@@ -59,7 +59,7 @@ const BiocontroleVivant = () => {
                 <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Chenilles ravageuses</h3>
-              <p className="text-sm text-muted-foreground">Pyrale, carpocapse, </p>
+              <p className="text-sm text-muted-foreground">contre les pyrales et carpocapses, noctuelles...</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
@@ -67,7 +67,7 @@ const BiocontroleVivant = () => {
                 <img src={cochenillesImage} alt="Cochenilles" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Cochenilles</h3>
-              <p className="text-sm text-muted-foreground">Cochenilles farineuse des arbres fruitiers</p>
+              <p className="text-sm text-muted-foreground">Contre les cochenilles farineuses des arbres fruitiers</p>
             </div>
           </div>
         </div>
