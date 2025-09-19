@@ -50,7 +50,7 @@ Nous exploitons le potentiel extraordinaire des insectes pour créer des solutio
               <div className="space-y-2 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Engrais organique naturel</span>
+                  <span className="text-sm font-bold text-green-400">Engrais organique naturel</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
@@ -69,7 +69,7 @@ Nous exploitons le potentiel extraordinaire des insectes pour créer des solutio
               <div className="space-y-2 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Riche en acides aminés libres</span>
+                  <span className="text-xs font-semibold text-white">Riche en <span className="text-sm font-bold text-green-400">acides aminés libres</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
@@ -93,7 +93,7 @@ Nous exploitons le potentiel extraordinaire des insectes pour créer des solutio
               <div className="space-y-2 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Extraits des molécules de protection</span>
+                  <span className="text-xs font-semibold text-white">Extraits des <span className="text-sm font-bold text-green-400">molécules de protection</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
@@ -118,7 +118,7 @@ Nous exploitons le potentiel extraordinaire des insectes pour créer des solutio
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Contre les pucerons, la pyrale, la cochenille...</span>
+                  <span className="text-xs font-semibold text-white">Contre les <span className="text-sm font-bold text-green-400">pucerons, la pyrale, la cochenille</span>...</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
