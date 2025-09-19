@@ -26,10 +26,8 @@ const Innovation = () => {
                   <span className="text-white text-lg font-bold">🧬</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('innovation.amino.title')}</h3>
-                  <p className="text-muted-foreground text-sm">
-                    {t('innovation.amino.desc')}
-                  </p>
+                  
+                  
                 </div>
               </div>
               
@@ -38,10 +36,8 @@ const Innovation = () => {
                   <span className="text-white text-lg font-bold">🔬</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('innovation.chitin.title')}</h3>
-                  <p className="text-muted-foreground text-sm">
-                    {t('innovation.chitin.desc')}
-                  </p>
+                  
+                  
                 </div>
               </div>
               
