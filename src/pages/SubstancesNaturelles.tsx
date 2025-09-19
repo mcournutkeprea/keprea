@@ -18,7 +18,7 @@ const SubstancesNaturelles = () => {
             </Button>
           </Link>
           <h1 className="text-4xl font-bold text-white">Substances Naturelles</h1>
-          <p className="text-xl text-white/90 mt-2">Solutions cohérentes et performantes à base d'extraits naturels d'insectes</p>
+          <p className="text-xl text-white/90 mt-2">Solutions performantes à base d'extraits naturels d'insectes</p>
         </div>
       </header>
 
@@ -42,7 +42,7 @@ const SubstancesNaturelles = () => {
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-[#22c55e] mb-2">✓ Stimulation des défenses</h3>
-              <p className="text-sm text-muted-foreground">Activation naturelle des mécanismes de protection</p>
+              <p className="text-sm text-muted-foreground">Contre les ravageurs des feuilles, de la tige et des système racinaire</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-[#22c55e] mb-2">✓ Respect de l'environnement</h3>
@@ -50,7 +50,7 @@ const SubstancesNaturelles = () => {
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-[#22c55e] mb-2">✓Solutions liquides et solides</h3>
-              <p className="text-sm text-muted-foreground">Contre les ravageurs du système foliaire et racinaire</p>
+              <p className="text-sm text-muted-foreground">En pulvérisation et en micro-granulateurs </p>
             </div>
           </div>
         </div>
