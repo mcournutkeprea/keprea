@@ -13,16 +13,16 @@ const Team = () => {
   const { t } = useLanguage();
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   
-  // Positions des membres sur la photo d'équipe (sur la poitrine)
+  // Positions des membres sur la photo d'équipe (alignées sur les points rouges de référence)
   const teamMembers: TeamMember[] = [
-    { id: 1, name: "Emilien Bohuon", role: "Directeur R&D agronomique", x: 12, y: 40 },
-    { id: 2, name: "Pascal Maignet", role: "Directeur R&D biocontrole", x: 24, y: 38 },
-    { id: 3, name: "Béatrice Vassy", role: "Directrice financière", x: 36, y: 42 },
-    { id: 4, name: "Guillaume Daoulas", role: "Directeur de business development", x: 48, y: 39 },
-    { id: 5, name: "Thibault Du Jonchay", role: "Directeur industriel", x: 60, y: 41 },
-    { id: 6, name: "Antoine Hubert", role: "Président directeur général", x: 72, y: 38 },
-    { id: 7, name: "Julien Denormandie", role: "Président du conseil de surveillance", x: 84, y: 40 },
-    { id: 8, name: "Thierry Dumbardon Martial", role: "Entomologiste", x: 95, y: 39 },
+    { id: 1, name: "Emilien Bohuon", role: "Directeur R&D agronomique", x: 9, y: 50 },
+    { id: 2, name: "Pascal Maignet", role: "Directeur R&D biocontrole", x: 19, y: 48 },
+    { id: 3, name: "Béatrice Vassy", role: "Directrice financière", x: 29, y: 50 },
+    { id: 4, name: "Guillaume Daoulas", role: "Directeur de business development", x: 39, y: 46 },
+    { id: 5, name: "Thibault Du Jonchay", role: "Directeur industriel", x: 49, y: 48 },
+    { id: 6, name: "Antoine Hubert", role: "Président directeur général", x: 60, y: 50 },
+    { id: 7, name: "Julien Denormandie", role: "Président du conseil de surveillance", x: 72, y: 48 },
+    { id: 8, name: "Thierry Dumbardon Martial", role: "Entomologiste", x: 85, y: 49 },
   ];
 
   return (
