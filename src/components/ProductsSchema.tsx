@@ -75,7 +75,7 @@ const ProductsSchema = () => {
       <div className="relative z-10 container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Notre portfolio de biosolutions couvre les besoins agricoles pour toute culture
+            Notre portfolio de biosolutions couvre les besoins agricoles pour toutes les cultures
           </h2>
         </div>
 
