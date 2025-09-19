@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 
 const ProductsSchema = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [activePlayer, setActivePlayer] = useState(0);
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
   
   const videos = [
     '/portfolio-video-1.mp4',
@@ -12,43 +14,56 @@ const ProductsSchema = () => {
   ];
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const currentVideoElement = activePlayer === 0 ? video1Ref.current : video2Ref.current;
+    const nextVideoElement = activePlayer === 0 ? video2Ref.current : video1Ref.current;
+    
+    if (!currentVideoElement || !nextVideoElement) return;
 
     let timer: NodeJS.Timeout;
 
-    const handleVideoEnd = () => {
-      clearTimeout(timer);
-      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    // Preload next video
+    const nextVideoIndex = (currentVideo + 1) % videos.length;
+    nextVideoElement.src = videos[nextVideoIndex];
+    nextVideoElement.load();
+
+    // Play current video
+    currentVideoElement.src = videos[currentVideo];
+    currentVideoElement.load();
+    currentVideoElement.play().catch(console.error);
+
+    const switchToNext = () => {
+      setCurrentVideo(nextVideoIndex);
+      setActivePlayer(prev => prev === 0 ? 1 : 0);
     };
 
-    const loadAndPlay = () => {
-      video.src = videos[currentVideo];
-      video.load();
-      video.play().catch(console.error);
-      
-      // Switch to next video after 4 seconds
-      timer = setTimeout(() => {
-        setCurrentVideo((prev) => (prev + 1) % videos.length);
-      }, 4000);
-    };
-
-    video.addEventListener('ended', handleVideoEnd);
-    loadAndPlay();
+    // Switch after 4 seconds
+    timer = setTimeout(switchToNext, 4000);
 
     return () => {
-      video.removeEventListener('ended', handleVideoEnd);
       clearTimeout(timer);
     };
-  }, [currentVideo, videos]);
+  }, [currentVideo, activePlayer, videos]);
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
-          ref={videoRef}
-          className="w-full h-full object-cover"
+          ref={video1Ref}
+          className={`w-full h-full object-cover transition-opacity duration-100 ${
+            activePlayer === 0 ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ position: 'absolute', top: 0, left: 0 }}
+          autoPlay
+          muted
+          playsInline
+        />
+        <video
+          ref={video2Ref}
+          className={`w-full h-full object-cover transition-opacity duration-100 ${
+            activePlayer === 1 ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ position: 'absolute', top: 0, left: 0 }}
           autoPlay
           muted
           playsInline
