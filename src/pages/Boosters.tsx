@@ -27,15 +27,9 @@ const Boosters = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-8">
-            <div className="text-6xl font-extrabold text-primary mb-4">
-              BOOST
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Boosters de croissance
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Solutions biostimulantes pour optimiser le potentiel de vos cultures
-            </p>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Des solutions liquides ou solides pour booster la santé de vos cultures</h2>
+            
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 text-left">
