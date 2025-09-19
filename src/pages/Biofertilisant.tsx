@@ -47,7 +47,7 @@ const Biofertilisant = () => {
       {/* Composition section */}
       <section className="py-16 px-4 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Composition NPK 4-3-2</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 whitespace-nowrap">Composition NPK 4-3-2</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">4%</div>
