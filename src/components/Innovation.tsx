@@ -19,40 +19,6 @@ const Innovation = () => {
             {/* Texte à gauche */}
             
             
-            {/* 3 bulles à droite */}
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
-                  <span className="text-white text-lg font-bold">🧬</span>
-                </div>
-                <div>
-                  
-                  
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
-                  <span className="text-white text-lg font-bold">🔬</span>
-                </div>
-                <div>
-                  
-                  
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-md">
-                  <span className="text-white text-lg font-bold">🐛</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('innovation.biocontrol.title')}</h3>
-                  <p className="text-muted-foreground text-sm">
-                    {t('innovation.biocontrol.desc')}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
