@@ -50,7 +50,7 @@ const ProductsSchema = () => {
       <div className="absolute inset-0 z-0">
         <video
           ref={video1Ref}
-          className={`w-full h-full object-cover transition-opacity duration-100 ${
+          className={`w-full h-full object-cover ${
             activePlayer === 0 ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ position: 'absolute', top: 0, left: 0 }}
@@ -60,7 +60,7 @@ const ProductsSchema = () => {
         />
         <video
           ref={video2Ref}
-          className={`w-full h-full object-cover transition-opacity duration-100 ${
+          className={`w-full h-full object-cover ${
             activePlayer === 1 ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ position: 'absolute', top: 0, left: 0 }}
