@@ -112,12 +112,50 @@ const FranceMap = () => {
             .leaflet-control-container .leaflet-control {
               display: none !important;
             }
+            .leaflet-control-container {
+              display: none !important;
+            }
+            .leaflet-bottom {
+              display: none !important;
+            }
+            .leaflet-right {
+              display: none !important;
+            }
+            .leaflet-left {
+              display: none !important;
+            }
+            .leaflet-top {
+              display: none !important;
+            }
+            a[href*="leafletjs"] {
+              display: none !important;
+            }
+            a[href*="openstreetmap"] {
+              display: none !important;
+            }
             .leaflet-marker-pane .leaflet-marker-icon {
               filter: none !important;
             }
             .leaflet-popup-content-wrapper {
               background: white;
               border-radius: 4px;
+            }
+            /* Masquer spécifiquement les attributions sur mobile */
+            @media (max-width: 768px) {
+              .leaflet-control-attribution,
+              .leaflet-control-container,
+              .leaflet-control-container *,
+              .leaflet-bottom,
+              .leaflet-right,
+              .leaflet-left,
+              .leaflet-top,
+              a[href*="leafletjs"],
+              a[href*="openstreetmap"],
+              .leaflet-control {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+              }
             }
           `
         }} />
