@@ -85,91 +85,170 @@ const Production = () => {
               </div>
             </div>
 
-            {/* Processus de production en bas - Format horizontal */}
+            {/* Processus de production en bas - Responsive */}
             <div className="relative z-10 mt-8">
               <h4 className="text-lg font-semibold text-primary mb-6 text-center">De la larve au champs</h4>
               
-              <div className="overflow-x-auto">
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-6 min-w-max px-4">
+              {/* Version mobile - Format vertical */}
+              <div className="block lg:hidden">
+                <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
                   
-                  {/* Première section - Élevage et Collecte avec convergence */}
-                  <div className="flex flex-col items-center gap-4">
-                    {/* Les deux étapes initiales */}
-                    <div className="flex flex-col gap-4">
-                      {/* Étape 1: Élevage d'insecte auxiliaire */}
-                      <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
-                        <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-2xl">🐛</span>
-                        </div>
-                        <div>
-                          <p className="text-xs font-medium text-foreground">{t('production.process.step1')}</p>
-                        </div>
-                      </div>
-                      
-                      {/* Étape 2: Collecte */}
-                      <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
-                        <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-2xl">🜻</span>
-                        </div>
-                        <div>
-                          <p className="text-xs font-medium text-foreground">{t('production.process.step2')}</p>
-                        </div>
-                      </div>
+                  {/* Étape 1: Élevage d'insecte auxiliaire */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🐛</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step1')}</p>
+                    </div>
+                  </div>
+                  
+                  <ArrowDown className="w-6 h-6 text-primary" />
+                  
+                  {/* Étape 2: Collecte */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🜻</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step2')}</p>
                     </div>
                   </div>
 
-                  {/* Flèches convergentes */}
-                  <div className="flex flex-col items-center gap-2">
-                    <ArrowRight className="w-6 h-6 text-primary" />
-                    <ArrowRight className="w-6 h-6 text-primary" />
-                  </div>
+                  <ArrowDown className="w-6 h-6 text-primary" />
 
                   {/* Étape 3: Transformation */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">⚗️</span>
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-foreground">{t('production.process.step3')}</p>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step3')}</p>
                     </div>
                   </div>
 
-                  {/* Flèche vers packaging */}
-                  <ArrowRight className="w-6 h-6 text-primary" />
+                  <ArrowDown className="w-6 h-6 text-primary" />
 
                   {/* Étape 4: Packaging */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">📦</span>
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-foreground">{t('production.process.step4')}</p>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step4')}</p>
                     </div>
                   </div>
 
-                  {/* Flèche vers export */}
-                  <ArrowRight className="w-6 h-6 text-primary" />
+                  <ArrowDown className="w-6 h-6 text-primary" />
 
-                  {/* Étape 5: Export */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                  {/* Étape 5: Transport */}
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">🚢</span>
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-foreground">Transport</p>
+                      <p className="text-sm font-medium text-foreground">Transport</p>
                     </div>
                   </div>
 
-                  {/* Flèche vers conseil */}
-                  <ArrowRight className="w-6 h-6 text-primary" />
+                  <ArrowDown className="w-6 h-6 text-primary" />
 
                   {/* Étape 6: Conseil d'utilisation en plein champ */}
-                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                  <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">👨‍🌾</span>
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-foreground">{t('production.process.step5')}</p>
+                      <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Version desktop - Format horizontal avec scroll */}
+              <div className="hidden lg:block">
+                <div className="overflow-x-auto">
+                  <div className="flex items-center justify-center gap-6 min-w-max px-4">
+                    
+                    {/* Première section - Élevage et Collecte avec convergence */}
+                    <div className="flex flex-col items-center gap-4">
+                      {/* Les deux étapes initiales */}
+                      <div className="flex flex-col gap-4">
+                        {/* Étape 1: Élevage d'insecte auxiliaire */}
+                        <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                          <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xl">🐛</span>
+                          </div>
+                          <div>
+                            <p className="text-xs font-medium text-foreground">{t('production.process.step1')}</p>
+                          </div>
+                        </div>
+                        
+                        {/* Étape 2: Collecte */}
+                        <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                          <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xl">🜻</span>
+                          </div>
+                          <div>
+                            <p className="text-xs font-medium text-foreground">{t('production.process.step2')}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Flèches convergentes */}
+                    <div className="flex flex-col items-center gap-2">
+                      <ArrowRight className="w-6 h-6 text-primary" />
+                      <ArrowRight className="w-6 h-6 text-primary" />
+                    </div>
+
+                    {/* Étape 3: Transformation */}
+                    <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">⚗️</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step3')}</p>
+                      </div>
+                    </div>
+
+                    {/* Flèche vers packaging */}
+                    <ArrowRight className="w-6 h-6 text-primary" />
+
+                    {/* Étape 4: Packaging */}
+                    <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">📦</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step4')}</p>
+                      </div>
+                    </div>
+
+                    {/* Flèche vers export */}
+                    <ArrowRight className="w-6 h-6 text-primary" />
+
+                    {/* Étape 5: Export */}
+                    <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                      <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">🚢</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">Transport</p>
+                      </div>
+                    </div>
+
+                    {/* Flèche vers conseil */}
+                    <ArrowRight className="w-6 h-6 text-primary" />
+
+                    {/* Étape 6: Conseil d'utilisation en plein champ */}
+                    <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
+                      <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">👨‍🌾</span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-foreground">{t('production.process.step5')}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
