@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { Plus, Minus } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const FranceMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -55,6 +57,18 @@ const FranceMap = () => {
     };
   }, []);
 
+  const handleZoomIn = () => {
+    if (mapInstanceRef.current) {
+      mapInstanceRef.current.zoomIn();
+    }
+  };
+
+  const handleZoomOut = () => {
+    if (mapInstanceRef.current) {
+      mapInstanceRef.current.zoomOut();
+    }
+  };
+
   return (
     <div className="w-full h-full">
       <div className="relative w-full h-full">
@@ -65,6 +79,27 @@ const FranceMap = () => {
             position: 'relative'
           }}
         />
+        
+        {/* Boutons de zoom personnalisés */}
+        <div className="absolute top-4 right-4 flex flex-col gap-2 z-[1000]">
+          <Button
+            size="sm"
+            variant="secondary"
+            className="w-8 h-8 p-0 bg-background/90 backdrop-blur-sm border shadow-lg hover:bg-background"
+            onClick={handleZoomIn}
+          >
+            <Plus className="w-4 h-4" />
+          </Button>
+          <Button
+            size="sm"
+            variant="secondary"
+            className="w-8 h-8 p-0 bg-background/90 backdrop-blur-sm border shadow-lg hover:bg-background"
+            onClick={handleZoomOut}
+          >
+            <Minus className="w-4 h-4" />
+          </Button>
+        </div>
+        
         {/* CSS pour masquer les contrôles Leaflet */}
         <style dangerouslySetInnerHTML={{
           __html: `
