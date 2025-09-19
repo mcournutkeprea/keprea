@@ -79,9 +79,7 @@ const SubstancesNaturelles = () => {
                 <span className="text-2xl">⚗️</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">Extraction douce</h3>
-              <p className="text-sm text-muted-foreground">
-                Procédés d'extraction préservant l'intégrité des molécules actives
-              </p>
+              <p className="text-sm text-muted-foreground">Procédés d'extraction sans solvant préservant l'intégrité des molécules actives</p>
             </div>
             
             <div className="text-center">
@@ -89,78 +87,20 @@ const SubstancesNaturelles = () => {
                 <span className="text-2xl">🌱</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">Formulation</h3>
-              <p className="text-sm text-muted-foreground">
-                Développement de solutions prêtes à l'emploi pour l'agriculture
-              </p>
+              <p className="text-sm text-muted-foreground">Développement de solutions prêtes à l'emploi </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Mécanisme d'action (voir jusqu'où on peut aller vs brevet/regul/confidentialité)</h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                Comment ça fonctionne ?
-              </h3>
-              
-              <div className="space-y-4">
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#22c55e] font-bold">1</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground">à voir si on communique / rester flou</h4>
-                  </div>
-                </div>
-                
-                
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-6">Avantages clés</h3>
-              
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-[#22c55e] mb-2">🌿 Respectueux de l'environnement</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Solutions biodégradables qui ne laissent pas de résidus dans l'environnement
-                  </p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-[#22c55e] mb-2">🛡️ Mode d'action naturel</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Stimulation des défenses endogènes sans perturber l'équilibre naturel
-                  </p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-[#22c55e] mb-2">🔄 Durabilité</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Contribue à une agriculture durable et respectueuse de la biodiversité
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-green-50">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
-            Découvrez l'innovation naturelle
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Rejoignez la révolution de l'agriculture écologique avec nos substances naturelles innovantes.
-          </p>
+          
+          
           <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
             Nous contacter
           </Button>
