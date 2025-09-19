@@ -20,27 +20,44 @@ const ProductsSchema = () => {
     if (!currentVideoElement || !nextVideoElement) return;
 
     let timer: NodeJS.Timeout;
+    let preloadTimer: NodeJS.Timeout;
 
-    // Preload next video
-    const nextVideoIndex = (currentVideo + 1) % videos.length;
-    nextVideoElement.src = videos[nextVideoIndex];
-    nextVideoElement.load();
-
-    // Play current video
+    // Play current video immediately
     currentVideoElement.src = videos[currentVideo];
     currentVideoElement.load();
-    currentVideoElement.play().catch(console.error);
+    
+    // Wait for video to be ready before playing
+    const playVideo = () => {
+      currentVideoElement.play().catch(console.error);
+    };
+    
+    if (currentVideoElement.readyState >= 2) {
+      playVideo();
+    } else {
+      currentVideoElement.addEventListener('canplay', playVideo, { once: true });
+    }
+
+    // Preload next video after a short delay to avoid competing for bandwidth
+    preloadTimer = setTimeout(() => {
+      const nextVideoIndex = (currentVideo + 1) % videos.length;
+      nextVideoElement.src = videos[nextVideoIndex];
+      nextVideoElement.preload = 'metadata';
+      nextVideoElement.load();
+    }, 1000);
 
     const switchToNext = () => {
+      const nextVideoIndex = (currentVideo + 1) % videos.length;
       setCurrentVideo(nextVideoIndex);
       setActivePlayer(prev => prev === 0 ? 1 : 0);
     };
 
-    // Switch after 4 seconds
-    timer = setTimeout(switchToNext, 4000);
+    // Switch after 6 seconds (increased from 4)
+    timer = setTimeout(switchToNext, 6000);
 
     return () => {
       clearTimeout(timer);
+      clearTimeout(preloadTimer);
+      currentVideoElement.removeEventListener('canplay', playVideo);
     };
   }, [currentVideo, activePlayer, videos]);
 
@@ -50,7 +67,7 @@ const ProductsSchema = () => {
       <div className="absolute inset-0 z-0">
         <video
           ref={video1Ref}
-          className={`w-full h-full object-cover ${
+          className={`w-full h-full object-cover transition-opacity duration-500 ${
             activePlayer === 0 ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ position: 'absolute', top: 0, left: 0 }}
@@ -60,7 +77,7 @@ const ProductsSchema = () => {
         />
         <video
           ref={video2Ref}
-          className={`w-full h-full object-cover ${
+          className={`w-full h-full object-cover transition-opacity duration-500 ${
             activePlayer === 1 ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ position: 'absolute', top: 0, left: 0 }}
