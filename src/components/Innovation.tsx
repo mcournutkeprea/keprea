@@ -55,7 +55,7 @@ const Innovation = () => {
                   backfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)'
                 }}>
-                    <img src={substancesBenefits} alt="Des substances d'insectes pour l'agriculture" className="w-full h-full object-contain p-4" />
+                    <img src={substancesBenefits} alt="Des substances d'insectes pour l'agriculture - améliorent le rendement et la résistance aux différents stress" className="w-full h-full object-contain p-4" />
                   </div>
                 </div>
               </div>
