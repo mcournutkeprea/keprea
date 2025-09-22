@@ -22,9 +22,16 @@ const ProductsSchema = () => {
     if (!currentVideoElement || !nextVideoElement) return;
 
     let timer: NodeJS.Timeout;
-    let preloadTimer: NodeJS.Timeout;
 
-    // Play current video immediately
+    // Preload and prepare next video first (disabled on mobile to save bandwidth)
+    if (!isMobile) {
+      const nextVideoIndex = (currentVideo + 1) % videos.length;
+      nextVideoElement.src = videos[nextVideoIndex];
+      nextVideoElement.preload = 'auto';
+      nextVideoElement.load();
+    }
+
+    // Set current video source
     currentVideoElement.src = videos[currentVideo];
     currentVideoElement.load();
     
@@ -39,31 +46,31 @@ const ProductsSchema = () => {
       currentVideoElement.addEventListener('canplay', playVideo, { once: true });
     }
 
-    // Preload next video after a short delay (disabled on mobile to save bandwidth)
-    if (!isMobile) {
-      preloadTimer = setTimeout(() => {
-        const nextVideoIndex = (currentVideo + 1) % videos.length;
-        nextVideoElement.src = videos[nextVideoIndex];
-        nextVideoElement.preload = 'metadata';
-        nextVideoElement.load();
-      }, 1000);
-    }
-
     const switchToNext = () => {
       const nextVideoIndex = (currentVideo + 1) % videos.length;
+      
+      // Preload next video if it's not already loaded (for mobile)
+      if (isMobile) {
+        const nextVideoElement = activePlayer === 0 ? video2Ref.current : video1Ref.current;
+        if (nextVideoElement && nextVideoElement.src !== videos[nextVideoIndex]) {
+          nextVideoElement.src = videos[nextVideoIndex];
+          nextVideoElement.preload = 'auto';
+          nextVideoElement.load();
+        }
+      }
+      
       setCurrentVideo(nextVideoIndex);
       setActivePlayer(prev => prev === 0 ? 1 : 0);
     };
 
-    // Switch after 6 seconds (increased from 4)
+    // Switch after 6 seconds
     timer = setTimeout(switchToNext, 6000);
 
     return () => {
       clearTimeout(timer);
-      clearTimeout(preloadTimer);
       currentVideoElement.removeEventListener('canplay', playVideo);
     };
-  }, [currentVideo, activePlayer, videos]);
+  }, [currentVideo, activePlayer, videos, isMobile]);
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -76,7 +83,7 @@ const ProductsSchema = () => {
           } ${
             activePlayer === 0 ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ position: 'absolute', top: 0, left: 0 }}
+          style={{ position: 'absolute', top: 0, left: 0, backgroundColor: 'black' }}
           autoPlay
           muted
           playsInline
@@ -88,7 +95,7 @@ const ProductsSchema = () => {
           } ${
             activePlayer === 1 ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ position: 'absolute', top: 0, left: 0 }}
+          style={{ position: 'absolute', top: 0, left: 0, backgroundColor: 'black' }}
           autoPlay
           muted
           playsInline
