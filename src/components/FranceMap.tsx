@@ -15,39 +15,36 @@ const FranceMap = () => {
     const lat = 47.054583;   // 47°03'16.5"N
     const lon = 5.4325;      // 5°25'57.0"E
 
-    // 1) Carte en vue "globe" (zoom bas)
+    // Carte centrée directement sur Keprea
     const map = L.map(mapRef.current, { 
-      zoomControl: true,
+      zoomControl: false,
       attributionControl: false 
-    }).setView([20, 0], 2);
+    }).setView([lat, lon], 15);
 
     mapInstanceRef.current = map;
 
-    // 2) Tuiles OpenStreetMap (plan)
+    // Tuiles OpenStreetMap
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 20,
       attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
     }).addTo(map);
 
-    // 3) Animation de vol vers le point
-    const targetZoom = 17;    // niveau de zoom pour voir le bâtiment
-    const durationSec = 3;    // durée de l'animation (secondes)
+    // Ajouter le marqueur immédiatement
+    const marker = L.marker([lat, lon]).addTo(map)
+      .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Damparis, France')
+      .openPopup();
 
-    // Lancement après un petit délai pour que la carte se charge
-    setTimeout(() => {
-      map.flyTo([lat, lon], targetZoom, {
-        animate: true,
-        duration: durationSec,
-        easeLinearity: 0.25
-      });
+    // Fonction pour ouvrir Google Maps
+    const openGoogleMaps = () => {
+      const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lon}&z=17&t=h`;
+      window.open(googleMapsUrl, '_blank');
+    };
 
-      // Déposer le marqueur une fois l'animation terminée
-      map.once('moveend', () => {
-        L.marker([lat, lon]).addTo(map)
-          .bindPopup('<strong>Keprea</strong><br>3 avenue Innovia<br>Damparis, France')
-          .openPopup();
-      });
-    }, 500);
+    // Ajouter l'événement de clic sur la carte
+    map.on('click', openGoogleMaps);
+    
+    // Ajouter l'événement de clic sur le marqueur
+    marker.on('click', openGoogleMaps);
 
     return () => {
       if (mapInstanceRef.current) {
