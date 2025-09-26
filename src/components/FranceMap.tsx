@@ -15,18 +15,18 @@ const FranceMap = () => {
     const lat = 47.054583;   // 47°03'16.5"N
     const lon = 5.4325;      // 5°25'57.0"E
 
-    // Carte centrée directement sur Keprea
+    // Carte centrée directement sur Keprea avec moins de zoom
     const map = L.map(mapRef.current, { 
       zoomControl: false,
       attributionControl: false 
-    }).setView([lat, lon], 15);
+    }).setView([lat, lon], 12);
 
     mapInstanceRef.current = map;
 
-    // Tuiles OpenStreetMap
-    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      maxZoom: 20,
-      attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
+    // Tuiles OpenStreetMap (format plan)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
     // Ajouter le marqueur immédiatement
@@ -71,7 +71,7 @@ const FranceMap = () => {
       <div className="relative w-full h-full">
         <div 
           ref={mapRef} 
-          className="w-full h-full rounded-xl overflow-hidden"
+          className="w-full h-full rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105"
           style={{
             position: 'relative'
           }}
