@@ -147,7 +147,7 @@ const Biofertilisant = () => {
           <p className="text-xl mb-8 opacity-90">
             Contactez-nous pour découvrir comment notre biofertilisant peut transformer votre agriculture.
           </p>
-          <Link to="/#contact">
+          <Link to="/#contact-form">
             <Button size="lg" variant="secondary">
               Nous contacter
             </Button>

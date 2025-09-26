@@ -108,9 +108,11 @@ const BiocontroleVivant = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Découvrez nos solutions de protection biologique pour une agriculture durable et performante.
           </p>
-          <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
-            Nous contacter
-          </Button>
+          <Link to="/#contact-form">
+            <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
+              Nous contacter
+            </Button>
+          </Link>
         </div>
       </section>
     </div>;

@@ -101,9 +101,11 @@ const SubstancesNaturelles = () => {
         <div className="container mx-auto max-w-2xl text-center">
           
           
-          <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
-            Nous contacter
-          </Button>
+          <Link to="/#contact-form">
+            <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
+              Nous contacter
+            </Button>
+          </Link>
         </div>
       </section>
     </div>;

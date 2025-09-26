@@ -164,9 +164,11 @@ const Boosters = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Contactez notre équipe pour découvrir comment nos boosters peuvent améliorer vos rendements.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
-            Nous contacter
-          </Button>
+          <Link to="/#contact-form">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Nous contacter
+            </Button>
+          </Link>
         </div>
       </section>
     </div>;
