@@ -41,17 +41,11 @@ const Team = () => {
           {/* Photo d'équipe */}
           <div className="relative overflow-hidden rounded-lg shadow-lg aspect-[16/10]">
             <img 
-              src="/lovable-uploads/a9befb70-02c2-43d9-96de-99567fb9d734.png" 
+              src="/lovable-uploads/team-photo-new.jpg" 
               alt="Équipe Keprea - Experts en agtech et biosolutions"
               className="w-full h-full object-cover"
             />
             
-            {/* Texte overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-black/60 text-white px-4 py-2 rounded-lg text-lg font-medium">
-                Photo à faire tous ensemble
-              </div>
-            </div>
 
             {/* Points interactifs pour chaque membre */}
             {teamMembers.map((member) => (
