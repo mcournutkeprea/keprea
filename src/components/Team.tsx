@@ -13,16 +13,14 @@ const Team = () => {
   const { t } = useLanguage();
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   
-  // Positions des membres sur la photo d'équipe (alignées sur les points rouges de référence)
+  // Positions des membres sur la photo d'équipe (selon les points colorés de référence)
   const teamMembers: TeamMember[] = [
-    { id: 1, name: "Emilien Bohuon", role: "Directeur R&D agronomique", x: 9, y: 50 },
-    { id: 2, name: "Pascal Maignet", role: "Directeur R&D biocontrole", x: 19, y: 48 },
-    { id: 3, name: "Béatrice Vassy", role: "Directrice financière", x: 29, y: 50 },
-    { id: 4, name: "Guillaume Daoulas", role: "Directeur de business development", x: 39, y: 46 },
-    { id: 5, name: "Thibault Du Jonchay", role: "Directeur industriel", x: 49, y: 48 },
-    { id: 6, name: "Antoine Hubert", role: "Président directeur général", x: 60, y: 50 },
-    { id: 7, name: "Julien Denormandie", role: "Président du conseil de surveillance", x: 72, y: 48 },
-    { id: 8, name: "Thierry Dumbardon Martial", role: "Entomologiste", x: 85, y: 49 },
+    { id: 1, name: "Emilien Bohuon", role: "Directeur R&D agronomique", x: 50, y: 35 }, // Point rouge
+    { id: 2, name: "Pascal Maignet", role: "Directeur R&D biocontrole", x: 25, y: 82 }, // Point rose
+    { id: 3, name: "Antoine Hubert", role: "Président directeur général", x: 25, y: 45 }, // Point jaune
+    { id: 4, name: "Julien Denormandie", role: "Président du conseil de surveillance", x: 75, y: 55 }, // Gros point vert
+    { id: 5, name: "Valentin Frenceshi", role: "Conducteur de ligne", x: 10, y: 70 }, // Point noir
+    { id: 6, name: "Antoine Lescouet", role: "Conducteur de ligne", x: 75, y: 75 }, // Point violet
   ];
 
   return (
