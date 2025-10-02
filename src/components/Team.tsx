@@ -44,6 +44,12 @@ const Team = () => {
               className="w-full h-full object-cover"
             />
             
+            {/* Texte overlay */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-border">
+              <p className="text-sm font-medium text-foreground">
+                Photo à faire ensemble le 15 OCT
+              </p>
+            </div>
 
             {/* Points interactifs pour chaque membre */}
             {teamMembers.map((member) => (
