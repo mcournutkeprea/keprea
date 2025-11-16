@@ -6,7 +6,9 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const Hero = () => {
   const { t } = useLanguage();
   const [currentVideo, setCurrentVideo] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [activePlayer, setActivePlayer] = useState<1 | 2>(1);
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
   const isMobile = useIsMobile();
   
   const videos = [
@@ -17,54 +19,76 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const videoElement = videoRef.current;
-    if (!videoElement) return;
+    const currentRef = activePlayer === 1 ? video1Ref.current : video2Ref.current;
+    const nextRef = activePlayer === 1 ? video2Ref.current : video1Ref.current;
+    
+    if (!currentRef || !nextRef) return;
 
     let timer: NodeJS.Timeout;
 
     const loadAndPlayVideo = () => {
-      videoElement.src = videos[currentVideo];
-      videoElement.load();
+      currentRef.src = videos[currentVideo];
+      currentRef.load();
       
       const playVideo = () => {
-        videoElement.play().catch(console.error);
+        currentRef.play().catch(console.error);
       };
       
-      if (videoElement.readyState >= 2) {
+      if (currentRef.readyState >= 2) {
         playVideo();
       } else {
-        videoElement.addEventListener('canplay', playVideo, { once: true });
+        currentRef.addEventListener('canplay', playVideo, { once: true });
       }
+
+      // Précharger la vidéo suivante
+      const nextVideoIndex = (currentVideo + 1) % videos.length;
+      nextRef.src = videos[nextVideoIndex];
+      nextRef.load();
     };
 
     loadAndPlayVideo();
 
-    // Switch to next video after 10 seconds (increased from 6 to reduce frequent switches)
     timer = setTimeout(() => {
       setCurrentVideo(prev => (prev + 1) % videos.length);
+      setActivePlayer(prev => prev === 1 ? 2 : 1);
     }, 10000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [currentVideo, videos]);
+  }, [currentVideo, activePlayer, videos]);
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
-          ref={videoRef}
-          className="w-full h-full object-cover transition-opacity duration-1000"
-          style={{ position: 'absolute', top: 0, left: 0, backgroundColor: 'black' }}
+          ref={video1Ref}
+          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+            activePlayer === 1 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'
+          }`}
           autoPlay
           muted
           playsInline
           loop={false}
           onEnded={() => {
-            // When video ends, immediately switch to next
             setCurrentVideo(prev => (prev + 1) % videos.length);
+            setActivePlayer(2);
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <video
+          ref={video2Ref}
+          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+            activePlayer === 2 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'
+          }`}
+          autoPlay
+          muted
+          playsInline
+          loop={false}
+          onEnded={() => {
+            setCurrentVideo(prev => (prev + 1) % videos.length);
+            setActivePlayer(1);
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40 z-20" />
       </div>
 
       {/* Content */}
