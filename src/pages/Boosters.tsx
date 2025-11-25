@@ -52,7 +52,7 @@ const Boosters = () => {
             {/* Boostea13 */}
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
-              <p className="text-muted-foreground mb-6">Riche en acides aminés libres, ce booster favorise l'absorption des nutriments, stimule la croissance végétale naturellement.</p>
+              <p className="text-muted-foreground mb-6">Riche en acides aminés libres et en polypeptides, Boostea13 augmente la resistence face aux stress abiotiques                              </p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
