@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { Sprout, CheckCircle, TrendingUp } from "lucide-react";
+import biocontrolInfographic from "@/assets/biocontrol-vivant-infographic.png";
 
 const Innovation = () => {
   const { t } = useLanguage();
@@ -114,7 +115,11 @@ const Innovation = () => {
                     </div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                    <BiocontrolInfographic />
+                    <img 
+                      src={biocontrolInfographic} 
+                      alt="Biocontrôle vivant infographic"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
