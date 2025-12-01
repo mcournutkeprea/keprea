@@ -59,7 +59,7 @@ const BiocontroleVivant = () => {
                 <img src={pyraleImage} alt="Pyrale" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-[#22c55e] mb-3">Chenilles ravageuses</h3>
-              <p className="text-sm text-muted-foreground">contre les pyrales et carpocapses, noctuelles...</p>
+              <p className="text-sm text-muted-foreground">contre les pyrales</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
