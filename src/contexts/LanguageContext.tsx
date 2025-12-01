@@ -877,6 +877,527 @@ const translations: Translations = {
     en: 'This game helps understand the importance of insects in the agricultural ecosystem and learn to distinguish allies from pests.',
     es: 'Este juego ayuda a entender la importancia de los insectos en el ecosistema agrícola y aprender a distinguir aliados de plagas.',
     pt: 'Este jogo ajuda a entender a importância dos insetos no ecossistema agrícola e aprender a distinguir aliados de pragas.'
+  },
+  // Product pages - Common
+  'product.back': {
+    fr: 'Retour aux biosolutions',
+    en: 'Back to biosolutions',
+    es: 'Volver a las biosoluciones',
+    pt: 'Voltar às biosoluções'
+  },
+  'product.contact': {
+    fr: 'Nous contacter',
+    en: 'Contact us',
+    es: 'Contáctanos',
+    pt: 'Entre em contato'
+  },
+  // SubstancesNaturelles page
+  'substances.title': {
+    fr: 'Substances Naturelles',
+    en: 'Natural Substances',
+    es: 'Sustancias Naturales',
+    pt: 'Substâncias Naturais'
+  },
+  'substances.subtitle': {
+    fr: 'Solutions performantes à base d\'extraits naturels d\'insectes',
+    en: 'High-performance solutions based on natural insect extracts',
+    es: 'Soluciones de alto rendimiento basadas en extractos naturales de insectos',
+    pt: 'Soluções de alto desempenho baseadas em extratos naturais de insetos'
+  },
+  'substances.highlight': {
+    fr: '100% Substances Naturelles',
+    en: '100% Natural Substances',
+    es: '100% Sustancias Naturales',
+    pt: '100% Substâncias Naturais'
+  },
+  'substances.benefit1.title': {
+    fr: '✓ Protection des cultures et des sols',
+    en: '✓ Crop and soil protection',
+    es: '✓ Protección de cultivos y suelos',
+    pt: '✓ Proteção de culturas e solos'
+  },
+  'substances.benefit1.desc': {
+    fr: 'Substances actives naturelles issues d\'insectes',
+    en: 'Natural active substances derived from insects',
+    es: 'Sustancias activas naturales derivadas de insectos',
+    pt: 'Substâncias ativas naturais derivadas de insetos'
+  },
+  'substances.benefit2.title': {
+    fr: '✓ Stimulation des défenses',
+    en: '✓ Defense stimulation',
+    es: '✓ Estimulación de las defensas',
+    pt: '✓ Estimulação das defesas'
+  },
+  'substances.benefit2.desc': {
+    fr: 'Contre les ravageurs des feuilles, de la tige et des système racinaire',
+    en: 'Against leaf, stem and root system pests',
+    es: 'Contra las plagas de hojas, tallos y sistema radicular',
+    pt: 'Contra pragas de folhas, caules e sistema radicular'
+  },
+  'substances.benefit3.title': {
+    fr: '✓ Respect de l\'environnement',
+    en: '✓ Environmental respect',
+    es: '✓ Respeto al medio ambiente',
+    pt: '✓ Respeito ao meio ambiente'
+  },
+  'substances.benefit3.desc': {
+    fr: 'Solutions biodégradables et non toxiques',
+    en: 'Biodegradable and non-toxic solutions',
+    es: 'Soluciones biodegradables y no tóxicas',
+    pt: 'Soluções biodegradáveis e não tóxicas'
+  },
+  'substances.benefit4.title': {
+    fr: '✓ Solutions liquides et solides',
+    en: '✓ Liquid and solid solutions',
+    es: '✓ Soluciones líquidas y sólidas',
+    pt: '✓ Soluções líquidas e sólidas'
+  },
+  'substances.benefit4.desc': {
+    fr: 'En pulvérisation et en micro-granulateurs',
+    en: 'For spraying and micro-granulators',
+    es: 'En pulverización y micro-granuladores',
+    pt: 'Em pulverização e micro-granuladores'
+  },
+  'substances.tech.title': {
+    fr: 'Notre technologie d\'extraction',
+    en: 'Our extraction technology',
+    es: 'Nuestra tecnología de extracción',
+    pt: 'Nossa tecnologia de extração'
+  },
+  'substances.tech.step1.title': {
+    fr: 'Sélection d\'insectes',
+    en: 'Insect selection',
+    es: 'Selección de insectos',
+    pt: 'Seleção de insetos'
+  },
+  'substances.tech.step1.desc': {
+    fr: 'Choix rigoureux d\'espèces d\'insectes aux propriétés spécifiques',
+    en: 'Rigorous selection of insect species with specific properties',
+    es: 'Selección rigurosa de especies de insectos con propiedades específicas',
+    pt: 'Seleção rigorosa de espécies de insetos com propriedades específicas'
+  },
+  'substances.tech.step2.title': {
+    fr: 'Extraction douce',
+    en: 'Gentle extraction',
+    es: 'Extracción suave',
+    pt: 'Extração suave'
+  },
+  'substances.tech.step2.desc': {
+    fr: 'Procédés d\'extraction sans solvant préservant l\'intégrité des molécules actives',
+    en: 'Solvent-free extraction processes preserving the integrity of active molecules',
+    es: 'Procesos de extracción sin solventes que preservan la integridad de las moléculas activas',
+    pt: 'Processos de extração sem solventes preservando a integridade das moléculas ativas'
+  },
+  'substances.tech.step3.title': {
+    fr: 'Formulation',
+    en: 'Formulation',
+    es: 'Formulación',
+    pt: 'Formulação'
+  },
+  'substances.tech.step3.desc': {
+    fr: 'Développement de solutions prêtes à l\'emploi',
+    en: 'Development of ready-to-use solutions',
+    es: 'Desarrollo de soluciones listas para usar',
+    pt: 'Desenvolvimento de soluções prontas para uso'
+  },
+  // BiocontroleVivant page
+  'biocontrole.title': {
+    fr: 'Bioprotection',
+    en: 'Bioprotection',
+    es: 'Bioprotección',
+    pt: 'Bioproteção'
+  },
+  'biocontrole.subtitle': {
+    fr: 'Solutions biologiques vivantes pour une protection durable des cultures',
+    en: 'Living biological solutions for sustainable crop protection',
+    es: 'Soluciones biológicas vivas para una protección sostenible de los cultivos',
+    pt: 'Soluções biológicas vivas para proteção sustentável das culturas'
+  },
+  'biocontrole.auxiliary': {
+    fr: 'Insectes Auxiliaires',
+    en: 'Beneficial Insects',
+    es: 'Insectos Auxiliares',
+    pt: 'Insetos Auxiliares'
+  },
+  'biocontrole.auxiliary.desc': {
+    fr: 'Solutions d\'insectes pour lutter contre les principaux ravageurs des cultures',
+    en: 'Insect solutions to combat major crop pests',
+    es: 'Soluciones de insectos para combatir las principales plagas de los cultivos',
+    pt: 'Soluções de insetos para combater as principais pragas das culturas'
+  },
+  'biocontrole.pests.title': {
+    fr: 'Ravageurs ciblés',
+    en: 'Targeted pests',
+    es: 'Plagas objetivo',
+    pt: 'Pragas alvo'
+  },
+  'biocontrole.pest1.title': {
+    fr: 'Pucerons',
+    en: 'Aphids',
+    es: 'Pulgones',
+    pt: 'Pulgões'
+  },
+  'biocontrole.pest1.desc': {
+    fr: 'Contre tout types de pucerons en champs et sous serre',
+    en: 'Against all types of aphids in fields and greenhouses',
+    es: 'Contra todo tipo de pulgones en campos e invernaderos',
+    pt: 'Contra todos os tipos de pulgões em campos e estufas'
+  },
+  'biocontrole.pest2.title': {
+    fr: 'Chenilles ravageuses',
+    en: 'Destructive caterpillars',
+    es: 'Orugas destructivas',
+    pt: 'Lagartas destrutivas'
+  },
+  'biocontrole.pest2.desc': {
+    fr: 'contre les pyrales',
+    en: 'against corn borers',
+    es: 'contra las polillas',
+    pt: 'contra as brocas'
+  },
+  'biocontrole.pest3.title': {
+    fr: 'Cochenilles',
+    en: 'Scale insects',
+    es: 'Cochinillas',
+    pt: 'Cochonilhas'
+  },
+  'biocontrole.pest3.desc': {
+    fr: 'Contre les cochenilles farineuses des arbres fruitiers',
+    en: 'Against mealybugs on fruit trees',
+    es: 'Contra las cochinillas harinosas de los árboles frutales',
+    pt: 'Contra cochonilhas farinhentas em árvores frutíferas'
+  },
+  'biocontrole.advantages.title': {
+    fr: 'Avantages du biocontrôle',
+    en: 'Benefits of biocontrol',
+    es: 'Ventajas del biocontrol',
+    pt: 'Vantagens do biocontrole'
+  },
+  'biocontrole.adv1.title': {
+    fr: '🌱 Naturel',
+    en: '🌱 Natural',
+    es: '🌱 Natural',
+    pt: '🌱 Natural'
+  },
+  'biocontrole.adv1.desc': {
+    fr: 'Solutions 100% biologiques sans résidus chimiques',
+    en: '100% biological solutions without chemical residues',
+    es: 'Soluciones 100% biológicas sin residuos químicos',
+    pt: 'Soluções 100% biológicas sem resíduos químicos'
+  },
+  'biocontrole.adv2.title': {
+    fr: '🎯 Sélectif',
+    en: '🎯 Selective',
+    es: '🎯 Selectivo',
+    pt: '🎯 Seletivo'
+  },
+  'biocontrole.adv2.desc': {
+    fr: 'Préserve les insectes bénéfiques et pollinisateurs',
+    en: 'Preserves beneficial insects and pollinators',
+    es: 'Preserva los insectos beneficiosos y polinizadores',
+    pt: 'Preserva insetos benéficos e polinizadores'
+  },
+  'biocontrole.adv3.title': {
+    fr: '🔄 Durable',
+    en: '🔄 Sustainable',
+    es: '🔄 Sostenible',
+    pt: '🔄 Sustentável'
+  },
+  'biocontrole.adv3.desc': {
+    fr: 'Aucun développement de résistance',
+    en: 'No resistance development',
+    es: 'Sin desarrollo de resistencia',
+    pt: 'Sem desenvolvimento de resistência'
+  },
+  'biocontrole.adv4.title': {
+    fr: '✅ Utilisable en agriculture biologique',
+    en: '✅ Suitable for organic farming',
+    es: '✅ Apto para agricultura ecológica',
+    pt: '✅ Adequado para agricultura orgânica'
+  },
+  'biocontrole.adv4.desc': {
+    fr: 'Préserve la santé des champs et des utilisateurs',
+    en: 'Preserves the health of fields and users',
+    es: 'Preserva la salud de los campos y usuarios',
+    pt: 'Preserva a saúde dos campos e usuários'
+  },
+  'biocontrole.cta': {
+    fr: 'Découvrez nos solutions de protection biologique pour une agriculture durable et performante.',
+    en: 'Discover our biological protection solutions for sustainable and efficient agriculture.',
+    es: 'Descubra nuestras soluciones de protección biológica para una agricultura sostenible y eficiente.',
+    pt: 'Descubra nossas soluções de proteção biológica para uma agricultura sustentável e eficiente.'
+  },
+  // Biofertilisant page
+  'biofertilisant.title': {
+    fr: 'Biofertilisant',
+    en: 'Biofertilizer',
+    es: 'Biofertilizante',
+    pt: 'Biofertilizante'
+  },
+  'biofertilisant.subtitle': {
+    fr: 'Nutrition optimale des cultures',
+    en: 'Optimal crop nutrition',
+    es: 'Nutrición óptima de cultivos',
+    pt: 'Nutrição ideal das culturas'
+  },
+  'biofertilisant.npk': {
+    fr: 'Composition NPK 4-3-2',
+    en: 'NPK 4-3-2 Composition',
+    es: 'Composición NPK 4-3-2',
+    pt: 'Composição NPK 4-3-2'
+  },
+  'biofertilisant.phosphore': {
+    fr: 'Phosphore (P)',
+    en: 'Phosphorus (P)',
+    es: 'Fósforo (P)',
+    pt: 'Fósforo (P)'
+  },
+  'biofertilisant.phosphore.desc': {
+    fr: 'Stimule le développement racinaire et la floraison',
+    en: 'Stimulates root development and flowering',
+    es: 'Estimula el desarrollo radicular y la floración',
+    pt: 'Estimula o desenvolvimento radicular e a floração'
+  },
+  'biofertilisant.azote': {
+    fr: 'Azote (N)',
+    en: 'Nitrogen (N)',
+    es: 'Nitrógeno (N)',
+    pt: 'Nitrogênio (N)'
+  },
+  'biofertilisant.azote.desc': {
+    fr: 'Favorise la croissance végétative et le développement des feuilles',
+    en: 'Promotes vegetative growth and leaf development',
+    es: 'Favorece el crecimiento vegetativo y el desarrollo de las hojas',
+    pt: 'Promove o crescimento vegetativo e o desenvolvimento das folhas'
+  },
+  'biofertilisant.potassium': {
+    fr: 'Potassium (K)',
+    en: 'Potassium (K)',
+    es: 'Potasio (K)',
+    pt: 'Potássio (K)'
+  },
+  'biofertilisant.potassium.desc': {
+    fr: 'Renforce la résistance aux maladies et améliore la qualité des fruits',
+    en: 'Strengthens disease resistance and improves fruit quality',
+    es: 'Fortalece la resistencia a las enfermedades y mejora la calidad de los frutos',
+    pt: 'Fortalece a resistência a doenças e melhora a qualidade dos frutos'
+  },
+  'biofertilisant.organic': {
+    fr: 'Matière organique',
+    en: 'Organic matter',
+    es: 'Materia orgánica',
+    pt: 'Matéria orgânica'
+  },
+  'biofertilisant.organic.desc': {
+    fr: 'Améliore la qualité du sol',
+    en: 'Improves soil quality',
+    es: 'Mejora la calidad del suelo',
+    pt: 'Melhora a qualidade do solo'
+  },
+  'biofertilisant.advantages': {
+    fr: 'Avantages clés',
+    en: 'Key benefits',
+    es: 'Ventajas clave',
+    pt: 'Vantagens principais'
+  },
+  'biofertilisant.adv1.title': {
+    fr: 'Origine 100% naturelle',
+    en: '100% natural origin',
+    es: 'Origen 100% natural',
+    pt: 'Origem 100% natural'
+  },
+  'biofertilisant.adv1.desc': {
+    fr: 'Formulé à partir de matières organiques premium, sans produits chimiques de synthèse.',
+    en: 'Formulated from premium organic materials, without synthetic chemicals.',
+    es: 'Formulado a partir de materiales orgánicos premium, sin productos químicos sintéticos.',
+    pt: 'Formulado a partir de materiais orgânicos premium, sem produtos químicos sintéticos.'
+  },
+  'biofertilisant.adv2.title': {
+    fr: 'Absorption rapide',
+    en: 'Rapid absorption',
+    es: 'Absorción rápida',
+    pt: 'Absorção rápida'
+  },
+  'biofertilisant.adv2.desc': {
+    fr: 'Les nutriments sont immédiatement disponibles pour les plantes.',
+    en: 'Nutrients are immediately available to plants.',
+    es: 'Los nutrientes están inmediatamente disponibles para las plantas.',
+    pt: 'Os nutrientes estão imediatamente disponíveis para as plantas.'
+  },
+  'biofertilisant.adv3.title': {
+    fr: 'Améliore la structure du sol',
+    en: 'Improves soil structure',
+    es: 'Mejora la estructura del suelo',
+    pt: 'Melhora a estrutura do solo'
+  },
+  'biofertilisant.adv3.desc': {
+    fr: 'Enrichit la terre et favorise l\'activité microbienne bénéfique.',
+    en: 'Enriches the soil and promotes beneficial microbial activity.',
+    es: 'Enriquece la tierra y favorece la actividad microbiana beneficiosa.',
+    pt: 'Enriquece o solo e promove a atividade microbiana benéfica.'
+  },
+  'biofertilisant.adv4.title': {
+    fr: 'Rendements supérieurs',
+    en: 'Superior yields',
+    es: 'Rendimientos superiores',
+    pt: 'Rendimentos superiores'
+  },
+  'biofertilisant.adv4.desc': {
+    fr: 'Augmente significativement la productivité de vos cultures.',
+    en: 'Significantly increases the productivity of your crops.',
+    es: 'Aumenta significativamente la productividad de sus cultivos.',
+    pt: 'Aumenta significativamente a produtividade das suas culturas.'
+  },
+  'biofertilisant.cta.title': {
+    fr: 'Prêt à optimiser vos cultures ?',
+    en: 'Ready to optimize your crops?',
+    es: '¿Listo para optimizar sus cultivos?',
+    pt: 'Pronto para otimizar suas culturas?'
+  },
+  'biofertilisant.cta.desc': {
+    fr: 'Contactez-nous pour découvrir comment notre biofertilisant peut transformer votre agriculture.',
+    en: 'Contact us to discover how our biofertilizer can transform your agriculture.',
+    es: 'Contáctenos para descubrir cómo nuestro biofertilizante puede transformar su agricultura.',
+    pt: 'Entre em contato para descobrir como nosso biofertilizante pode transformar sua agricultura.'
+  },
+  // Boosters page
+  'boosters.title': {
+    fr: 'Boosters',
+    en: 'Boosters',
+    es: 'Potenciadores',
+    pt: 'Potenciadores'
+  },
+  'boosters.subtitle': {
+    fr: 'Solutions biostimulantes pour optimiser le potentiel de vos cultures',
+    en: 'Biostimulant solutions to optimize the potential of your crops',
+    es: 'Soluciones bioestimulantes para optimizar el potencial de sus cultivos',
+    pt: 'Soluções bioestimulantes para otimizar o potencial das suas culturas'
+  },
+  'boosters.headline': {
+    fr: 'Des solutions liquides ou solides pour booster la santé de vos cultures',
+    en: 'Liquid or solid solutions to boost the health of your crops',
+    es: 'Soluciones líquidas o sólidas para potenciar la salud de sus cultivos',
+    pt: 'Soluções líquidas ou sólidas para potenciar a saúde das suas culturas'
+  },
+  'boosters.range.title': {
+    fr: 'Notre gamme de boosters',
+    en: 'Our range of boosters',
+    es: 'Nuestra gama de potenciadores',
+    pt: 'Nossa gama de potenciadores'
+  },
+  'boosters.boostea.desc': {
+    fr: 'Riche en polypeptides de très petites tailles et en acides aminés libres (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l\'activité du sol.',
+    en: 'Rich in very small polypeptides and free amino acids (proline), Boostea13 increases resistance to abiotic stress and improves soil activity.',
+    es: 'Rico en polipéptidos de muy pequeño tamaño y aminoácidos libres (prolina), Boostea13 aumenta la resistencia al estrés abiótico y mejora la actividad del suelo.',
+    pt: 'Rico em polipeptídeos de tamanho muito pequeno e aminoácidos livres (prolina), Boostea13 aumenta a resistência ao estresse abiótico e melhora a atividade do solo.'
+  },
+  'boosters.boostea.benefit1': {
+    fr: 'Améliore la résistance aux stress hydrique et phytotoxiques',
+    en: 'Improves resistance to water and phytotoxic stress',
+    es: 'Mejora la resistencia al estrés hídrico y fitotóxico',
+    pt: 'Melhora a resistência ao estresse hídrico e fitotóxico'
+  },
+  'boosters.boostea.benefit2': {
+    fr: 'Améliore l\'assimilation nutritive',
+    en: 'Improves nutrient assimilation',
+    es: 'Mejora la asimilación de nutrientes',
+    pt: 'Melhora a assimilação de nutrientes'
+  },
+  'boosters.boostea.benefit3': {
+    fr: 'Stimule la photosynthèse',
+    en: 'Stimulates photosynthesis',
+    es: 'Estimula la fotosíntesis',
+    pt: 'Estimula a fotossíntese'
+  },
+  'boosters.soilea.desc': {
+    fr: '2% de chitine pure pour stimuler l\'activité chitinolitique des sols et améliorer la système de défense des plantes.',
+    en: '2% pure chitin to stimulate soil chitinolytic activity and improve plant defense systems.',
+    es: '2% de quitina pura para estimular la actividad quitinolítica de los suelos y mejorar el sistema de defensa de las plantas.',
+    pt: '2% de quitina pura para estimular a atividade quitinolítica dos solos e melhorar o sistema de defesa das plantas.'
+  },
+  'boosters.soilea.benefit1': {
+    fr: 'Matière organique de qualité',
+    en: 'Quality organic matter',
+    es: 'Materia orgánica de calidad',
+    pt: 'Matéria orgânica de qualidade'
+  },
+  'boosters.soilea.benefit2': {
+    fr: 'Stimule le SDP',
+    en: 'Stimulates the PDS',
+    es: 'Estimula el SDP',
+    pt: 'Estimula o SDP'
+  },
+  'boosters.soilea.benefit3': {
+    fr: 'Augmente la présence des bons microorganismes',
+    en: 'Increases the presence of beneficial microorganisms',
+    es: 'Aumenta la presencia de microorganismos beneficiosos',
+    pt: 'Aumenta a presença de microorganismos benéficos'
+  },
+  'boosters.why.title': {
+    fr: 'Pourquoi choisir nos boosters ?',
+    en: 'Why choose our boosters?',
+    es: '¿Por qué elegir nuestros potenciadores?',
+    pt: 'Por que escolher nossos potenciadores?'
+  },
+  'boosters.why1.title': {
+    fr: 'Efficacité prouvée',
+    en: 'Proven effectiveness',
+    es: 'Eficacia probada',
+    pt: 'Eficácia comprovada'
+  },
+  'boosters.why1.desc': {
+    fr: 'Résultats mesurables sur la croissance et les rendements',
+    en: 'Measurable results on growth and yields',
+    es: 'Resultados medibles en el crecimiento y los rendimientos',
+    pt: 'Resultados mensuráveis no crescimento e nos rendimentos'
+  },
+  'boosters.why2.title': {
+    fr: '100% naturel',
+    en: '100% natural',
+    es: '100% natural',
+    pt: '100% natural'
+  },
+  'boosters.why2.desc': {
+    fr: 'Formulations respectueuses de l\'environnement',
+    en: 'Environmentally friendly formulations',
+    es: 'Formulaciones respetuosas con el medio ambiente',
+    pt: 'Formulações respeitadoras do meio ambiente'
+  },
+  'boosters.why3.title': {
+    fr: 'Compatible',
+    en: 'Compatible',
+    es: 'Compatible',
+    pt: 'Compatível'
+  },
+  'boosters.why3.desc': {
+    fr: 'S\'intègre parfaitement aux programmes de fertilisation et traitements phytosanitaires',
+    en: 'Integrates perfectly with fertilization programs and plant protection treatments',
+    es: 'Se integra perfectamente con los programas de fertilización y tratamientos fitosanitarios',
+    pt: 'Integra-se perfeitamente aos programas de fertilização e tratamentos fitossanitários'
+  },
+  'boosters.why4.title': {
+    fr: 'Support technique',
+    en: 'Technical support',
+    es: 'Soporte técnico',
+    pt: 'Suporte técnico'
+  },
+  'boosters.why4.desc': {
+    fr: 'Pas de modification de l\'itinéraire technique, ni d\'investissement dans le matériel agricole : application foliaire ou au sol.',
+    en: 'No modification of the technical itinerary, no investment in agricultural equipment: foliar or soil application.',
+    es: 'Sin modificación del itinerario técnico, ni inversión en equipos agrícolas: aplicación foliar o al suelo.',
+    pt: 'Sem modificação do itinerário técnico, nem investimento em equipamentos agrícolas: aplicação foliar ou no solo.'
+  },
+  'boosters.cta.title': {
+    fr: 'Prêt à booster vos cultures ?',
+    en: 'Ready to boost your crops?',
+    es: '¿Listo para potenciar sus cultivos?',
+    pt: 'Pronto para potenciar suas culturas?'
+  },
+  'boosters.cta.desc': {
+    fr: 'Contactez notre équipe pour découvrir comment nos boosters peuvent améliorer vos rendements.',
+    en: 'Contact our team to discover how our boosters can improve your yields.',
+    es: 'Contacte a nuestro equipo para descubrir cómo nuestros potenciadores pueden mejorar sus rendimientos.',
+    pt: 'Entre em contato com nossa equipe para descobrir como nossos potenciadores podem melhorar seus rendimentos.'
   }
 };
 
