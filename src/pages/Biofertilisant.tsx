@@ -25,20 +25,6 @@ const Biofertilisant = () => {
               Nutrition optimale des cultures
             </p>
             
-            {/* Logo Nature positionné au centre-droite */}
-            <a 
-              href="https://www.nature.com/articles/s41598-020-61765-x" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="absolute top-1/2 right-8 transform -translate-y-1/2 transition-transform duration-300 hover:scale-110"
-            >
-              <img 
-                src={natureLogo} 
-                alt="Nature Journal" 
-                className="w-16 h-16 object-contain bg-transparent rounded-full"
-                style={{ backgroundColor: 'transparent' }}
-              />
-            </a>
           </div>
           
           <div className="mt-12 mb-8 text-center">
@@ -86,7 +72,21 @@ const Biofertilisant = () => {
       {/* Avantages section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Avantages clés</h2>
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <h2 className="text-3xl font-bold text-center">Avantages clés</h2>
+            <a 
+              href="https://www.nature.com/articles/s41598-020-61765-x" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src={natureLogo} 
+                alt="Nature Journal" 
+                className="w-12 h-12 object-contain rounded-full"
+              />
+            </a>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex gap-4">
