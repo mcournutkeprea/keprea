@@ -1,13 +1,15 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
 const Boosters = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
-      }}></div>
+          backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
+        }}></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
@@ -27,16 +29,10 @@ const Boosters = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-8">
-            
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Des solutions liquides ou solides pour booster la santé de vos cultures</h2>
-            
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 text-left">
-            
-            
-            
-            
           </div>
         </div>
       </section>
@@ -48,11 +44,11 @@ const Boosters = () => {
             Notre gamme de boosters
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Boostea13 */}
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
-              <p className="text-muted-foreground mb-6">Riche en acides aminés libres et en polypeptides, Boostea13 augmente la résistance face aux stress abiotiques et améliore l'activité du sol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </p>
+              <p className="text-muted-foreground mb-6">Riche en polypeptides de très petite taille et en acides aminés d'intérêts (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l'activité du sol.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -70,7 +66,7 @@ const Boosters = () => {
               </div>
             </div>
 
-            {/* Fertilea432 */}
+            {/* Soilea110 */}
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
               <p className="text-muted-foreground mb-6">2% de chitine pure pour stimuler l'activité chitinolitique des sols et améliorer la système de défense des plantes.</p>
@@ -147,7 +143,7 @@ const Boosters = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Support technique</h3>
-                  <p className="text-muted-foreground text-sm">Pas de modification de l'itinéraire technique, ni d'investissement dans le matériel agricole : application foliaire ou au sol .</p>
+                  <p className="text-muted-foreground text-sm">Pas de modification de l'itinéraire technique, ni d'investissement dans le matériel agricole : application foliaire ou au sol.</p>
                 </div>
               </div>
             </div>
@@ -171,6 +167,8 @@ const Boosters = () => {
           </Link>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Boosters;
