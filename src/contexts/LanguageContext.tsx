@@ -130,10 +130,10 @@ const translations: Translations = {
     pt: 'competitividade, produtividade, preservação dos solos, biodiversidade e clima'
   },
   'solutions.approach': {
-    fr: 'Pour cela, nous exploitons le potentiel extraordinaire des insectes pour créer des solutions agricoles durables, performantes et abordables. Notre approche scientifique et technique combine',
-    en: 'To achieve this, we harness the extraordinary potential of insects to create sustainable, efficient and affordable agricultural solutions. Our scientific and technical approach combines',
-    es: 'Para ello, aprovechamos el extraordinario potencial de los insectos para crear soluciones agrícolas sostenibles, eficientes y asequibles. Nuestro enfoque científico y técnico combina',
-    pt: 'Para isso, aproveitamos o extraordinário potencial dos insetos para criar soluções agrícolas sustentáveis, eficientes e acessíveis. Nossa abordagem científica e técnica combina'
+    fr: 'Pour cela, nous exploitons le potentiel des insectes pour créer des solutions agricoles durables, performantes et abordables. Notre approche scientifique et technique combine',
+    en: 'To achieve this, we harness the potential of insects to create sustainable, efficient and affordable agricultural solutions. Our scientific and technical approach combines',
+    es: 'Para ello, aprovechamos el potencial de los insectos para crear soluciones agrícolas sostenibles, eficientes y asequibles. Nuestro enfoque científico y técnico combina',
+    pt: 'Para isso, aproveitamos o potencial dos insetos para criar soluções agrícolas sustentáveis, eficientes e acessíveis. Nossa abordagem científica e técnica combina'
   },
   'solutions.expertise': {
     fr: 'savoir faire artisanal, industriel et agronomique',
