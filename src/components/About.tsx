@@ -43,15 +43,15 @@ const About = () => {
         {/* Notre histoire */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-background rounded-2xl p-8 shadow-lg border border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Notre Mission</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">Notre Histoire</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Keprea est une entreprise française spécialisée dans le développement et la production de <strong className="text-foreground">biosolutions pour l'agriculture</strong>. Notre mission est de proposer des alternatives naturelles et efficaces aux intrants chimiques, en exploitant le potentiel unique des insectes.
+              Fondée en <strong className="text-foreground">2025</strong> par <strong className="text-foreground">7 associés experts</strong> — agriculteurs, entomologistes, agronomes et entrepreneurs — Keprea est née d'une vision commune : révolutionner l'agriculture grâce aux biosolutions issues d'insectes.
             </p>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Grâce à notre expertise en entomologie et en agronomie, nous développons une gamme complète de produits : <strong className="text-foreground">biofertilisants</strong> enrichis en substances naturelles, <strong className="text-foreground">boosters de croissance</strong> pour stimuler les défenses des plantes, et <strong className="text-foreground">solutions de biocontrôle vivant</strong> avec des insectes auxiliaires.
+              Implantée à proximité de <strong className="text-foreground">Dole dans le Jura</strong>, notre site de production de <strong className="text-foreground">3 000 m²</strong> nous permet de développer une gamme complète de produits : <strong className="text-foreground">biofertilisants</strong> enrichis en substances naturelles, <strong className="text-foreground">boosters de croissance</strong> pour stimuler les défenses des plantes, et <strong className="text-foreground">solutions de biocontrôle vivant</strong> avec des insectes auxiliaires.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Implantée en Bretagne, notre unité de production nous permet de maîtriser l'ensemble de la chaîne de valeur, de l'élevage d'insectes à la formulation de nos produits, garantissant une <strong className="text-foreground">qualité et une traçabilité optimales</strong>.
+              Notre expertise en <strong className="text-foreground">process industriels</strong> nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.
             </p>
           </div>
         </div>
