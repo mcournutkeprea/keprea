@@ -1,24 +1,20 @@
-import { MapPin, Factory, Leaf, Users, ArrowDown, ArrowRight } from "lucide-react";
+import { MapPin, Factory, Leaf, ArrowDown, ArrowRight } from "lucide-react";
 import FranceMap from "./FranceMap";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
+
 const Production = () => {
-  const {
-    t
-  } = useLanguage();
-  return <section id="production" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
+  const { t } = useLanguage();
+
+  return (
+    <section id="production" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             {t('production.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Découvrez notre site de production moderne situé à Dole, en France, où nous développons et produisons nos biosolutions
+            {t('production.subtitle')}
           </p>
-          
-          {/* Logo cliquable pour voir le processus de production */}
-          
         </div>
 
         <div className="max-w-7xl mx-auto">
@@ -51,7 +47,7 @@ const Production = () => {
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground mb-2 text-lg">{t('production.technology.title')}</h4>
                       <p className="text-muted-foreground">
-                        Équipements de pointe pour la production de solutions de bioprotection et de boosters
+                        {t('production.technology.desc')}
                       </p>
                     </div>
                   </div>
@@ -87,7 +83,7 @@ const Production = () => {
 
             {/* Processus de production en bas - Responsive */}
             <div className="relative z-10 mt-8">
-              <h4 className="text-lg font-semibold text-primary mb-6 text-center">De la larve au champ</h4>
+              <h4 className="text-lg font-semibold text-primary mb-6 text-center">{t('production.process.title')}</h4>
               
               {/* Version mobile - Format vertical avec convergence */}
               <div className="block lg:hidden">
@@ -152,7 +148,7 @@ const Production = () => {
                       <span className="text-2xl">🚢</span>
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-foreground">Transport</p>
+                      <p className="text-sm font-bold text-foreground">{t('production.process.transport')}</p>
                     </div>
                   </div>
 
@@ -239,7 +235,7 @@ const Production = () => {
                         <span className="text-2xl">🚢</span>
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-foreground">Transport</p>
+                        <p className="text-xs font-bold text-foreground">{t('production.process.transport')}</p>
                       </div>
                     </div>
 
@@ -265,6 +261,8 @@ const Production = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Production;

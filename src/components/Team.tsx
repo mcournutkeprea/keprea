@@ -5,22 +5,21 @@ interface TeamMember {
   id: number;
   name: string;
   role: string;
-  x: number; // Position X en pourcentage
-  y: number; // Position Y en pourcentage
+  x: number;
+  y: number;
 }
 
 const Team = () => {
   const { t } = useLanguage();
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   
-  // Positions des membres sur la photo d'équipe (selon les points colorés de référence)
   const teamMembers: TeamMember[] = [
-    { id: 1, name: "Emilien Bohuon", role: "Directeur R&D agronomique", x: 44, y: 35 }, // Point rouge (décalé à gauche)
-    { id: 2, name: "Pascal Maignet", role: "Directeur R&D biocontrole", x: 25, y: 82 }, // Point rose
-    { id: 3, name: "Antoine Hubert", role: "Président directeur général", x: 25, y: 45 }, // Point jaune
-    { id: 4, name: "Julien Denormandie", role: "Président du conseil de surveillance", x: 32, y: 40 }, // Juste derrière Antoine
-    { id: 5, name: "Valentin Frenceshi", role: "Conducteur de ligne", x: 10, y: 70 }, // Point noir
-    { id: 6, name: "Antoine Lescouet", role: "Conducteur de ligne", x: 75, y: 75 }, // Point violet
+    { id: 1, name: "Emilien Bohuon", role: "Directeur R&D agronomique", x: 44, y: 35 },
+    { id: 2, name: "Pascal Maignet", role: "Directeur R&D biocontrole", x: 25, y: 82 },
+    { id: 3, name: "Antoine Hubert", role: "Président directeur général", x: 25, y: 45 },
+    { id: 4, name: "Julien Denormandie", role: "Président du conseil de surveillance", x: 32, y: 40 },
+    { id: 5, name: "Valentin Frenceshi", role: "Conducteur de ligne", x: 10, y: 70 },
+    { id: 6, name: "Antoine Lescouet", role: "Conducteur de ligne", x: 75, y: 75 },
   ];
 
   return (
@@ -47,7 +46,7 @@ const Team = () => {
             {/* Texte overlay */}
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-border">
               <p className="text-sm font-medium text-foreground">
-                Photo à faire ensemble le 15 OCT
+                {t('team.photoNote')}
               </p>
             </div>
 
