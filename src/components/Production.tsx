@@ -101,7 +101,7 @@ const Production = () => {
                         <span className="text-2xl">🐛</span>
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-foreground">{t('production.process.step1')}</p>
+                        <p className="text-xs font-bold text-foreground">{t('production.process.step1')}</p>
                       </div>
                     </div>
                     
@@ -111,7 +111,7 @@ const Production = () => {
                         <span className="text-2xl">🜻</span>
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-foreground">{t('production.process.step2')}</p>
+                        <p className="text-xs font-bold text-foreground">{t('production.process.step2')}</p>
                       </div>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ const Production = () => {
                       <span className="text-2xl">⚗️</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step3')}</p>
+                      <p className="text-sm font-bold text-foreground">{t('production.process.step3')}</p>
                     </div>
                   </div>
 
@@ -140,7 +140,7 @@ const Production = () => {
                       <span className="text-2xl">📦</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step4')}</p>
+                      <p className="text-sm font-bold text-foreground">{t('production.process.step4')}</p>
                     </div>
                   </div>
 
@@ -152,7 +152,7 @@ const Production = () => {
                       <span className="text-2xl">🚢</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">Transport</p>
+                      <p className="text-sm font-bold text-foreground">Transport</p>
                     </div>
                   </div>
 
@@ -164,7 +164,7 @@ const Production = () => {
                       <span className="text-2xl">👨‍🌾</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">{t('production.process.step5')}</p>
+                      <p className="text-sm font-bold text-foreground">{t('production.process.step5')}</p>
                     </div>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ const Production = () => {
                             <span className="text-2xl">🐛</span>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-foreground">{t('production.process.step1')}</p>
+                            <p className="text-xs font-bold text-foreground">{t('production.process.step1')}</p>
                           </div>
                         </div>
                         
@@ -195,7 +195,7 @@ const Production = () => {
                             <span className="text-2xl">🜻</span>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-foreground">{t('production.process.step2')}</p>
+                            <p className="text-xs font-bold text-foreground">{t('production.process.step2')}</p>
                           </div>
                         </div>
                       </div>
@@ -213,7 +213,7 @@ const Production = () => {
                         <span className="text-2xl">⚗️</span>
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-foreground">{t('production.process.step3')}</p>
+                        <p className="text-xs font-bold text-foreground">{t('production.process.step3')}</p>
                       </div>
                     </div>
 
@@ -226,7 +226,7 @@ const Production = () => {
                         <span className="text-2xl">📦</span>
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-foreground">{t('production.process.step4')}</p>
+                        <p className="text-xs font-bold text-foreground">{t('production.process.step4')}</p>
                       </div>
                     </div>
 
@@ -239,7 +239,7 @@ const Production = () => {
                         <span className="text-2xl">🚢</span>
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-foreground">Transport</p>
+                        <p className="text-xs font-bold text-foreground">Transport</p>
                       </div>
                     </div>
 
@@ -252,7 +252,7 @@ const Production = () => {
                         <span className="text-2xl">👨‍🌾</span>
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-foreground">{t('production.process.step5')}</p>
+                        <p className="text-xs font-bold text-foreground">{t('production.process.step5')}</p>
                       </div>
                     </div>
                   </div>

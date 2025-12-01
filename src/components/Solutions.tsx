@@ -36,21 +36,21 @@ const Solutions = () => {
           {/* Section Booster */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Boosters</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">pour la santé des sols et la résiliences des plantes</p>
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Boosters</h3>
+              <p className="text-base font-semibold text-white/90 mb-4">pour la santé des sols et la résiliences des plantes</p>
               
-              <div className="space-y-2 mb-4">
+              <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Riche en <span className="text-sm font-bold text-green-400">Polypeptides</span></span>
+                  <span className="text-sm font-semibold text-white">Riche en <span className="text-base font-bold text-green-400">Polypeptides</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Riche en <span className="text-sm font-bold text-green-400">Proline</span></span>
+                  <span className="text-sm font-semibold text-white">Riche en <span className="text-base font-bold text-green-400">Proline</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Substances actives</span>
+                  <span className="text-sm font-semibold text-white">Substances actives</span>
                 </div>
               </div>
             </div>
@@ -69,17 +69,17 @@ const Solutions = () => {
             <div className="absolute inset-0 bg-black/40"></div>
             
             <div className="relative z-10 h-full p-8">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biofertilisant</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">Nutrition optimale des cultures</p>
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Biofertilisant</h3>
+              <p className="text-base font-semibold text-white/90 mb-4">Nutrition optimale des cultures</p>
               
-              <div className="space-y-2 mb-4">
+              <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-bold text-green-400">Engrais organique naturel</span>
+                  <span className="text-base font-bold text-green-400">Engrais organique naturel</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Concentration équilibrée en  NPK</span>
+                  <span className="text-sm font-semibold text-white">Concentration équilibrée en  NPK</span>
                 </div>
               </div>
             </div>
@@ -88,17 +88,17 @@ const Solutions = () => {
           {/* Section Substances naturelles */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biopesticides</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Biopesticides</h3>
+              <p className="text-base font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
               
-              <div className="space-y-2 mb-4">
+              <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Extraits des <span className="text-sm font-bold text-green-400">molécules de protection</span></span>
+                  <span className="text-sm font-semibold text-white">Extraits des <span className="text-base font-bold text-green-400">molécules de protection</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Agents actifs naturels</span>
+                  <span className="text-sm font-semibold text-white">Agents actifs naturels</span>
                 </div>
               </div>
               
@@ -113,18 +113,18 @@ const Solutions = () => {
           {/* Section Biocontrôle vivant */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
             <div className="relative z-10">
-              <h3 className="text-xl font-extrabold mb-2 text-white">Biocontrôle</h3>
-              <p className="text-sm font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Biocontrôle</h3>
+              <p className="text-base font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
               
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Contre les <span className="text-sm font-bold text-green-400">pucerons, la pyrale, la cochenille</span>...</span>
+                  <span className="text-sm font-semibold text-white">Contre les <span className="text-base font-bold text-green-400">pucerons, la pyrale, la cochenille</span>...</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Solutions d'application innovantes pour une meilleur performance</span>
+                  <span className="text-sm font-semibold text-white">Solutions d'application innovantes pour une meilleur performance</span>
                 </div>
               </div>
               
