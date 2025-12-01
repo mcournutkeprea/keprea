@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import biocontrolInfographic from "@/assets/biocontrol-vivant-infographic.png";
 import biocontrolInfographicEs from "@/assets/biocontrol-vivant-infographic-es.png";
+import biocontrolInfographicEn from "@/assets/biocontrol-vivant-infographic-en.png";
 import substancesInfographic from "@/assets/substances-insectes-benefits.png";
 import substancesInfographicEs from "@/assets/substances-insectes-benefits-es.png";
 
@@ -11,7 +12,7 @@ const Innovation = () => {
   const [isFlippedBee, setIsFlippedBee] = useState(false);
 
   const currentSubstancesInfographic = language === 'es' ? substancesInfographicEs : substancesInfographic;
-  const currentBiocontrolInfographic = language === 'es' ? biocontrolInfographicEs : biocontrolInfographic;
+  const currentBiocontrolInfographic = language === 'es' ? biocontrolInfographicEs : language === 'en' ? biocontrolInfographicEn : biocontrolInfographic;
 
   return (
     <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
