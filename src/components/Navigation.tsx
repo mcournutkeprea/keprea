@@ -29,7 +29,8 @@ const Navigation = () => {
               <a href="#production" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.production')}
               </a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap flex items-center gap-1">
+                <span className="text-sm">🐞</span>
                 {t('nav.about')}
               </a>
             </div>
