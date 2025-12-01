@@ -2,42 +2,33 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from '@/hooks/use-mobile';
-
 const Hero = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [currentVideo, setCurrentVideo] = useState(0);
   const [activePlayer, setActivePlayer] = useState<1 | 2>(1);
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
   const isMobile = useIsMobile();
-  
-  const videos = [
-    '/portfolio-video-1.mp4',
-    '/portfolio-video-2.mp4', 
-    '/portfolio-video-3.mp4',
-    '/portfolio-video-4.mp4'
-  ];
-
+  const videos = ['/portfolio-video-1.mp4', '/portfolio-video-2.mp4', '/portfolio-video-3.mp4', '/portfolio-video-4.mp4'];
   useEffect(() => {
     const currentRef = activePlayer === 1 ? video1Ref.current : video2Ref.current;
     const nextRef = activePlayer === 1 ? video2Ref.current : video1Ref.current;
-    
     if (!currentRef || !nextRef) return;
-
     let timer: NodeJS.Timeout;
-
     const loadAndPlayVideo = () => {
       currentRef.src = videos[currentVideo];
       currentRef.load();
-      
       const playVideo = () => {
         currentRef.play().catch(console.error);
       };
-      
       if (currentRef.readyState >= 2) {
         playVideo();
       } else {
-        currentRef.addEventListener('canplay', playVideo, { once: true });
+        currentRef.addEventListener('canplay', playVideo, {
+          once: true
+        });
       }
 
       // Précharger la vidéo suivante
@@ -45,14 +36,11 @@ const Hero = () => {
       nextRef.src = videos[nextVideoIndex];
       nextRef.load();
     };
-
     loadAndPlayVideo();
-
     timer = setTimeout(() => {
       setCurrentVideo(prev => (prev + 1) % videos.length);
       setActivePlayer(prev => prev === 1 ? 2 : 1);
     }, 10000);
-
     return () => {
       clearTimeout(timer);
     };
@@ -60,34 +48,14 @@ const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={video1Ref}
-          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
-            activePlayer === 1 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'
-          }`}
-          autoPlay
-          muted
-          playsInline
-          loop={false}
-          onEnded={() => {
-            setCurrentVideo(prev => (prev + 1) % videos.length);
-            setActivePlayer(2);
-          }}
-        />
-        <video
-          ref={video2Ref}
-          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
-            activePlayer === 2 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'
-          }`}
-          autoPlay
-          muted
-          playsInline
-          loop={false}
-          onEnded={() => {
-            setCurrentVideo(prev => (prev + 1) % videos.length);
-            setActivePlayer(1);
-          }}
-        />
+        <video ref={video1Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${activePlayer === 1 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
+        setCurrentVideo(prev => (prev + 1) % videos.length);
+        setActivePlayer(2);
+      }} />
+        <video ref={video2Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${activePlayer === 2 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
+        setCurrentVideo(prev => (prev + 1) % videos.length);
+        setActivePlayer(1);
+      }} />
         <div className="absolute inset-0 bg-black/40 z-20" />
       </div>
 
@@ -98,9 +66,7 @@ const Hero = () => {
           
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
           animationDelay: '0.2s'
-        }}>
-            Fertilisation, boosters et protection naturelle à base d'insectes pour une agriculture performante
-          </p>
+        }}>Biocontrôle, boosters et biofertilisation à base d'insectes pour une agriculture performante</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{
           animationDelay: '0.4s'
