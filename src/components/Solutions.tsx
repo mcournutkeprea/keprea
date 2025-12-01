@@ -36,7 +36,7 @@ const Solutions = () => {
           {/* Section Biocontrôle - Haut gauche */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
             <div className="relative z-10">
-              <h3 className="text-2xl font-extrabold mb-2 text-white">Biocontrôle</h3>
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Bioprotection</h3>
               <p className="text-base font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
               
               <div className="space-y-3">
