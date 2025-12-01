@@ -5,13 +5,14 @@ import biocontrolInfographicEs from "@/assets/biocontrol-vivant-infographic-es.p
 import biocontrolInfographicEn from "@/assets/biocontrol-vivant-infographic-en.png";
 import substancesInfographic from "@/assets/substances-insectes-benefits.png";
 import substancesInfographicEs from "@/assets/substances-insectes-benefits-es.png";
+import substancesInfographicEn from "@/assets/substances-insectes-benefits-en.png";
 
 const Innovation = () => {
   const { t, language } = useLanguage();
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFlippedBee, setIsFlippedBee] = useState(false);
 
-  const currentSubstancesInfographic = language === 'es' ? substancesInfographicEs : substancesInfographic;
+  const currentSubstancesInfographic = language === 'es' ? substancesInfographicEs : language === 'en' ? substancesInfographicEn : substancesInfographic;
   const currentBiocontrolInfographic = language === 'es' ? biocontrolInfographicEs : language === 'en' ? biocontrolInfographicEn : biocontrolInfographic;
 
   return (
