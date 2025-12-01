@@ -42,7 +42,11 @@ const Solutions = () => {
               <div className="space-y-2 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-xs font-semibold text-white">Riche en <span className="text-sm font-bold text-green-400">acides aminés libres</span></span>
+                  <span className="text-xs font-semibold text-white">Riche en <span className="text-sm font-bold text-green-400">Polypeptides</span></span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-xs font-semibold text-white">Riche en <span className="text-sm font-bold text-green-400">Proline</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
