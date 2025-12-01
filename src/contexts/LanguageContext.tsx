@@ -629,10 +629,10 @@ const translations: Translations = {
     pt: 'Impacto Mensurável'
   },
   'about.value4.desc': {
-    fr: 'Nos biosolutions offrent des résultats concrets : protection des cultures, amélioration des rendements et réduction des intrants chimiques.',
-    en: 'Our biosolutions offer concrete results: crop protection, improved yields and reduced chemical inputs.',
-    es: 'Nuestras biosoluciones ofrecen resultados concretos: protección de cultivos, mejora de rendimientos y reducción de insumos químicos.',
-    pt: 'Nossas biosoluções oferecem resultados concretos: proteção de culturas, melhoria de rendimentos e redução de insumos químicos.'
+    fr: 'Nous accompagnons les agriculteurs dans leur transition vers des pratiques plus durables avec des solutions adaptées, conçues par des agriculteurs pour des agriculteurs.',
+    en: 'We support farmers in their transition to more sustainable practices with tailored solutions, designed by farmers for farmers.',
+    es: 'Acompañamos a los agricultores en su transición hacia prácticas más sostenibles con soluciones adaptadas, diseñadas por agricultores para agricultores.',
+    pt: 'Acompanhamos os agricultores na sua transição para práticas mais sustentáveis com soluções adaptadas, concebidas por agricultores para agricultores.'
   },
   // Team section
   'team.title': {
