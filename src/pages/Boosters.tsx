@@ -44,9 +44,9 @@ const Boosters = () => {
             Notre gamme de boosters
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {/* Boostea13 */}
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
               <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
               <p className="text-muted-foreground mb-6">Riche en polypeptides de très petites tailles et en acides aminés libres (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l'activité du sol.</p>
               
@@ -67,7 +67,7 @@ const Boosters = () => {
             </div>
 
             {/* Soilea110 */}
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
               <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
               <p className="text-muted-foreground mb-6">2% de chitine pure pour stimuler l'activité chitinolitique des sols et améliorer la système de défense des plantes.</p>
               
