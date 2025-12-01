@@ -72,70 +72,70 @@ const Biofertilisant = () => {
       {/* Avantages section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <h2 className="text-3xl font-bold text-center">Avantages clés</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Avantages clés</h2>
+          <div className="flex items-center gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1">
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Leaf className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-2">Origine 100% naturelle</h3>
+                    <p className="text-muted-foreground">
+                      Formulé à partir de matières organiques premium, sans produits chimiques de synthèse.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Droplets className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-2">Absorption rapide</h3>
+                    <p className="text-muted-foreground">
+                      Les nutriments sont immédiatement disponibles pour les plantes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-2">Améliore la structure du sol</h3>
+                    <p className="text-muted-foreground">
+                      Enrichit la terre et favorise l'activité microbienne bénéfique.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Wheat className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-2">Rendements supérieurs</h3>
+                    <p className="text-muted-foreground">
+                      Augmente significativement la productivité de vos cultures.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <a 
               href="https://www.nature.com/articles/s41598-020-61765-x" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-transform duration-300 hover:scale-110"
+              className="hidden md:flex transition-transform duration-300 hover:scale-110"
             >
               <img 
                 src={natureLogo} 
                 alt="Nature Journal" 
-                className="w-12 h-12 object-contain rounded-full"
+                className="w-16 h-16 object-contain rounded-full"
               />
             </a>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Leaf className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-2">Origine 100% naturelle</h3>
-                  <p className="text-muted-foreground">
-                    Formulé à partir de matières organiques premium, sans produits chimiques de synthèse.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Droplets className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-2">Absorption rapide</h3>
-                  <p className="text-muted-foreground">
-                    Les nutriments sont immédiatement disponibles pour les plantes.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-2">Améliore la structure du sol</h3>
-                  <p className="text-muted-foreground">
-                    Enrichit la terre et favorise l'activité microbienne bénéfique.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Wheat className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-2">Rendements supérieurs</h3>
-                  <p className="text-muted-foreground">
-                    Augmente significativement la productivité de vos cultures.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
