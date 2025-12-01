@@ -40,13 +40,13 @@ const About = () => {
           <div className="bg-background rounded-2xl p-8 shadow-lg border border-border">
             <h3 className="text-2xl font-bold text-foreground mb-6">Notre Histoire</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Fondée en 2025 par 7 associés experts (agriculteurs, entomologistes, agronomes et entrepreneurs) Keprea est née d'une vision commune : révolutionner l'agriculture grâce aux biosolutions issues d'insectes.
+              Fondée en <strong className="text-primary font-semibold">2025</strong> par <strong className="text-primary font-semibold">7 associés experts</strong> (agriculteurs, entomologistes, agronomes et entrepreneurs) Keprea est née d'une vision commune : révolutionner l'agriculture grâce aux biosolutions issues d'insectes.
             </p>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Implantée à proximité de Dole dans le Jura, notre site de production de 3 000 m² nous permet de développer une gamme complète de solutions pour les agriculteurs : boosters pour la résistance des cultures contre les stress abiotiques, solutions de protection naturelles avec des insectes auxiliaires abordables et performants, biofertilisants. Toutes ces solutions étant utilisables en agriculture biologique.
+              Implantée à proximité de <strong className="text-primary font-semibold">Dole dans le Jura</strong>, notre site de production de <strong className="text-primary font-semibold">3 000 m²</strong> nous permet de développer une gamme complète de solutions pour les agriculteurs : <strong className="text-primary font-semibold">boosters</strong> pour la résistance des cultures contre les stress abiotiques, <strong className="text-primary font-semibold">solutions de protection naturelles</strong> avec des insectes auxiliaires abordables et performants, <strong className="text-primary font-semibold">biofertilisants</strong>. Toutes ces solutions étant utilisables en <strong className="text-primary font-semibold">agriculture biologique</strong>.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Notre expertise en process industriels et agriculture nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.
+              Notre expertise en <strong className="text-primary font-semibold">process industriels et agriculture</strong> nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.
             </p>
           </div>
         </div>
