@@ -33,7 +33,58 @@ const Solutions = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Section Booster */}
+          {/* Section Biocontrôle - Haut gauche */}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Biocontrôle</h3>
+              <p className="text-base font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
+              
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-sm font-semibold text-white">Contre les <span className="text-base font-bold text-green-400">pucerons, la pyrale, la cochenille</span>...</span>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-sm font-semibold text-white">Solutions d'application innovantes pour une meilleur performance</span>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
+          }}></div>
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+
+          {/* Section Biopesticides - Haut droit */}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-extrabold mb-2 text-white">Biopesticides</h3>
+              <p className="text-base font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
+              
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-sm font-semibold text-white">Extraits des <span className="text-base font-bold text-green-400">molécules de protection</span></span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <span className="text-sm font-semibold text-white">Agents actifs naturels</span>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url(${leavesDropletsBg})`
+          }}></div>
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+
+          {/* Section Boosters - Bas gauche */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBoostersClick}>
             <div className="relative z-10">
               <h3 className="text-2xl font-extrabold mb-2 text-white">Boosters</h3>
@@ -61,7 +112,7 @@ const Solutions = () => {
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
-          {/* Section Biofertilisant */}
+          {/* Section Biofertilisant - Bas droit */}
           <div className="relative overflow-hidden rounded-2xl min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiofertilisantClick}>
             <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
@@ -83,57 +134,6 @@ const Solutions = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Section Substances naturelles */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-extrabold mb-2 text-white">Biopesticides</h3>
-              <p className="text-base font-semibold text-white/90 mb-4">Solutions écologiques innovantes</p>
-              
-              <div className="space-y-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">Extraits des <span className="text-base font-bold text-green-400">molécules de protection</span></span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">Agents actifs naturels</span>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url(${leavesDropletsBg})`
-          }}></div>
-            <div className="absolute inset-0 bg-black/40"></div>
-          </div>
-
-          {/* Section Biocontrôle vivant */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleBiocontroleClick}>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-extrabold mb-2 text-white">Biocontrôle</h3>
-              <p className="text-base font-semibold text-white/90 mb-4">Protéger vos cultures avec le vivant</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">Contre les <span className="text-base font-bold text-green-400">pucerons, la pyrale, la cochenille</span>...</span>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">Solutions d'application innovantes pour une meilleur performance</span>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
-          }}></div>
-            <div className="absolute inset-0 bg-black/40"></div>
           </div>
         </div>
       </div>
