@@ -66,7 +66,7 @@ const Hero = () => {
           
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
           animationDelay: '0.2s'
-        }}>Biocontrôle, boosters et biofertilisation à base d'insectes pour une agriculture performante</p>
+        }}>Bioprotection, boosters et biofertilisation à base d'insectes pour une agriculture performante</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{
           animationDelay: '0.4s'
