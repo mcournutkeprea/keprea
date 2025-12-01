@@ -96,7 +96,7 @@ const Innovation = () => {
                     </div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                    <SubstancesInfographic />
+                    <img src="/lovable-uploads/fed1a5d0-31aa-4f79-92a2-9f46e3512478.png" alt="Substances d'insectes infographie" className="w-full h-full object-contain bg-[#f5f0e6]" />
                   </div>
                 </div>
               </div>
@@ -114,7 +114,7 @@ const Innovation = () => {
                     </div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                    <BiocontrolInfographic />
+                    <img src="/lovable-uploads/0184afb4-2ca6-4b4a-9a71-b9ddf5b1c906.png" alt="Biocontrôle vivant infographie" className="w-full h-full object-contain bg-[#f5f0e6]" />
                   </div>
                 </div>
               </div>
