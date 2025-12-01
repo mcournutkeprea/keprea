@@ -1,98 +1,50 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Check } from "lucide-react";
-import beeOnPlant from "@/assets/bee-on-plant.jpg";
-import cornLeavesDroplets from "@/assets/corn-leaves-droplets.jpg";
 import substancesBenefits from "@/assets/substances-insectes-benefits.png";
 import biocontrolInfographic from "@/assets/biocontrol-vivant-infographic.png";
 import { useState } from "react";
+
 const Innovation = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFlippedBee, setIsFlippedBee] = useState(false);
-  return <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+
+  return (
+    <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
-        {/* Premier bloc - Pleine largeur avec grid interne */}
         <div className="mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Texte à gauche */}
-            
-            
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"></div>
         </div>
 
-        {/* Deuxième et troisième blocs - Grid 2 colonnes avec images */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Colonne gauche - Bloc substances avec image intégrée */}
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image bannière avec flip - pleine hauteur */}
-              <div className="absolute inset-0 rounded-xl overflow-hidden" style={{
-              perspective: '1000px'
-            }}>
-                <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlipped(!isFlipped)} style={{
-                transformStyle: 'preserve-3d',
-                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-              }}>
-                  {/* Face avant - Image */}
-                  <div className="absolute inset-0" style={{
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(0deg)'
-                }}>
-                    <video src="/substances-video.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" style={{
-                    objectPosition: 'center 30%',
-                    filter: 'brightness(1.2) contrast(1.1)'
-                  }} />
-                    {/* Titre overlay */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden" style={{ perspective: '1000px' }}>
+                <div className="relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out" onClick={() => setIsFlipped(!isFlipped)} style={{ transformStyle: 'preserve-3d', transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
+                  <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(0deg)' }}>
+                    <video src="/substances-video.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" style={{ objectPosition: 'center 30%', filter: 'brightness(1.2) contrast(1.1)' }} />
                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
-                      <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">Pourquoi protéger vos cultures avec des substances d'insectes? ?</h3>
+                      <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">{t('innovation.substances.question')}</h3>
                     </div>
                   </div>
-                  
-                  {/* Face arrière - Image des bénéfices */}
-                  <div className="absolute inset-0 flex items-center justify-center" style={{
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)'
-                }}>
-                    <img src={substancesBenefits} alt="Des substances d'insectes pour l'agriculture - améliorent le rendement et la résistance aux différents stress" className="w-full h-full object-contain p-4" />
+                  <div className="absolute inset-0 flex items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+                    <img src={substancesBenefits} alt="Des substances d'insectes pour l'agriculture" className="w-full h-full object-contain p-4" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Colonne droite - Bloc organismes avec image intégrée */}
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-sm aspect-square flex flex-col justify-center relative overflow-hidden">
-              {/* Image bannière abeille avec flip - pleine hauteur */}
-              <div className="absolute inset-0 rounded-xl overflow-hidden" style={{
-              perspective: '1000px'
-            }}>
-                <div className={`relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out`} onClick={() => setIsFlippedBee(!isFlippedBee)} style={{
-                transformStyle: 'preserve-3d',
-                transform: isFlippedBee ? 'rotateY(180deg)' : 'rotateY(0deg)'
-              }}>
-                  {/* Face avant - Image */}
-                  <div className="absolute inset-0" style={{
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(0deg)'
-                }}>
-                    <video src="/biocontrol-video.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" style={{
-                    objectPosition: 'center 30%',
-                    filter: 'brightness(1.2) contrast(1.1)'
-                  }} />
-                    {/* Titre overlay */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden" style={{ perspective: '1000px' }}>
+                <div className="relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out" onClick={() => setIsFlippedBee(!isFlippedBee)} style={{ transformStyle: 'preserve-3d', transform: isFlippedBee ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
+                  <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(0deg)' }}>
+                    <video src="/biocontrol-video.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" style={{ objectPosition: 'center 30%', filter: 'brightness(1.2) contrast(1.1)' }} />
                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
-                      <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">Pourquoi protéger vos cultures avec des insectes auxiliaires?</h3>
+                      <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">{t('innovation.biocontrol.question')}</h3>
                     </div>
                   </div>
-                  
-                  {/* Face arrière - Infographie biocontrôle */}
-                  <div className="absolute inset-0 flex items-center justify-center" style={{
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)'
-                }}>
+                  <div className="absolute inset-0 flex items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
                     <img src={biocontrolInfographic} alt="Biocontrôle vivant pour les cultures" className="w-full h-full object-contain p-4" />
                   </div>
                 </div>
@@ -101,6 +53,8 @@ const Innovation = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Innovation;

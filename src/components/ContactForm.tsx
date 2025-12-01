@@ -27,8 +27,8 @@ const ContactForm = () => {
     
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       toast({
-        title: "Erreur",
-        description: "Veuillez remplir tous les champs obligatoires",
+        title: t('toast.error'),
+        description: t('toast.error.required'),
         variant: "destructive",
       });
       return;
@@ -44,8 +44,8 @@ const ContactForm = () => {
       if (error) throw error;
 
       toast({
-        title: "Message envoyé !",
-        description: "Nous avons bien reçu votre message et vous répondrons rapidement.",
+        title: t('toast.success'),
+        description: t('toast.success.desc'),
       });
 
       // Reset form
@@ -60,8 +60,8 @@ const ContactForm = () => {
     } catch (error) {
       console.error('Error sending contact form:', error);
       toast({
-        title: "Erreur",
-        description: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
+        title: t('toast.error'),
+        description: t('toast.error.send'),
         variant: "destructive",
       });
     } finally {
@@ -143,10 +143,10 @@ const ContactForm = () => {
                     <SelectValue placeholder={t('contact.form.subject.placeholder')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="biofertilisant-boosters">Biofertilisant et Boosters</SelectItem>
-                    <SelectItem value="biopesticides">Biopesticides</SelectItem>
-                    <SelectItem value="biocontrole">Biocontrôle</SelectItem>
-                    <SelectItem value="information-generale">Demande d'information générale</SelectItem>
+                    <SelectItem value="biofertilisant-boosters">{t('contact.form.subject.biofertilisant')}</SelectItem>
+                    <SelectItem value="biopesticides">{t('contact.form.subject.biopesticides')}</SelectItem>
+                    <SelectItem value="biocontrole">{t('contact.form.subject.biocontrol')}</SelectItem>
+                    <SelectItem value="information-generale">{t('contact.form.subject.info')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -164,7 +164,7 @@ const ContactForm = () => {
               </div>
               
               <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? "Envoi en cours..." : t('contact.form.submit')}
+                {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
               </Button>
             </form>
             
