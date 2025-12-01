@@ -70,10 +70,10 @@ const translations: Translations = {
   },
   // Solutions section
   'solutions.title': {
-    fr: 'Nos Biosolutions',
-    en: 'Our Biosolutions',
-    es: 'Nuestras Biosoluciones',
-    pt: 'Nossas Biosoluções'
+    fr: 'Nos biosolutions, pensées par des agriculteurs, pour des agriculteurs',
+    en: 'Our biosolutions, designed by farmers, for farmers',
+    es: 'Nuestras biosoluciones, pensadas por agricultores, para agricultores',
+    pt: 'Nossas biosoluções, pensadas por agricultores, para agricultores'
   },
   'solutions.subtitle': {
     fr: 'Répondre aux défis majeurs des agriculteurs du monde entier : compétitivité, productivité, préservation de l\'environnement',
