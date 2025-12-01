@@ -84,7 +84,7 @@ const Innovation = () => {
                   }} />
                     {/* Titre overlay */}
                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
-                      <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">Pourquoi le biocontrôle vivant ?</h3>
+                      <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">pourquoi protéger vos cultures avec des insectes auxiliaires?</h3>
                     </div>
                   </div>
                   
