@@ -10,7 +10,7 @@ const Boosters = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
         }}></div>
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
@@ -22,20 +22,12 @@ const Boosters = () => {
           <p className="text-xl text-white/90 mt-2">
             Solutions biostimulantes pour optimiser le potentiel de vos cultures
           </p>
+          
+          <div className="mt-12 mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">Des solutions liquides ou solides pour booster la santé de vos cultures</h2>
+          </div>
         </div>
       </header>
-
-      {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Des solutions liquides ou solides pour booster la santé de vos cultures</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6 text-left">
-          </div>
-        </div>
-      </section>
 
       {/* Produits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
