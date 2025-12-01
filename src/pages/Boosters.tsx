@@ -48,7 +48,7 @@ const Boosters = () => {
             {/* Boostea13 */}
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
-              <p className="text-muted-foreground mb-6">Riche en polypeptides de très petite taille et en acides aminés d'intérêts (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l'activité du sol.</p>
+              <p className="text-muted-foreground mb-6">Riche en polypeptides de très petites tailles et en acides aminés libres (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l'activité du sol.</p>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
