@@ -245,10 +245,10 @@ const translations: Translations = {
     pt: 'Nutrição ideal das culturas'
   },
   'solutions.biofertilisant.organic': {
-    fr: 'Engrais organique naturel',
-    en: 'Natural organic fertilizer',
-    es: 'Fertilizante orgánico natural',
-    pt: 'Fertilizante orgânico natural'
+    fr: 'Riche en matière organique',
+    en: 'Rich in organic matter',
+    es: 'Rico en materia orgánica',
+    pt: 'Rico em matéria orgânica'
   },
   'solutions.biofertilisant.npk': {
     fr: 'Concentration équilibrée en  NPK',
