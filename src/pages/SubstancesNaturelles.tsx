@@ -2,14 +2,16 @@ import { ArrowLeft } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
 const SubstancesNaturelles = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${plantDropletsBg})`
-      }}></div>
-        <div className="absolute inset-0 bg-black/40"></div>
+          backgroundImage: `url(${plantDropletsBg})`
+        }}></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
@@ -19,22 +21,21 @@ const SubstancesNaturelles = () => {
           </Link>
           <h1 className="text-4xl font-bold text-white">Substances Naturelles</h1>
           <p className="text-xl text-white/90 mt-2">Solutions performantes à base d'extraits naturels d'insectes</p>
+          
+          <div className="mt-12 mb-8 text-center">
+            <div className="text-6xl font-extrabold text-white drop-shadow-lg mb-4">
+              100%
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+              Substances Naturelles
+            </h2>
+          </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-500/10 to-green-600/20">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="mb-8">
-            <div className="text-6xl font-extrabold text-[#22c55e] mb-4">
-              100%
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Substances Naturelles
-            </h2>
-            
-          </div>
-          
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-[#22c55e] mb-2">✓ Protection des cultures et des sols</h3>
@@ -50,7 +51,7 @@ const SubstancesNaturelles = () => {
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-[#22c55e] mb-2">✓Solutions liquides et solides</h3>
-              <p className="text-sm text-muted-foreground">En pulvérisation et en micro-granulateurs </p>
+              <p className="text-sm text-muted-foreground">En pulvérisation et en micro-granulateurs</p>
             </div>
           </div>
         </div>
@@ -87,20 +88,15 @@ const SubstancesNaturelles = () => {
                 <span className="text-2xl">🌱</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">Formulation</h3>
-              <p className="text-sm text-muted-foreground">Développement de solutions prêtes à l'emploi </p>
+              <p className="text-sm text-muted-foreground">Développement de solutions prêtes à l'emploi</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-green-50">
         <div className="container mx-auto max-w-2xl text-center">
-          
-          
           <Link to="/#contact-form">
             <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
               Nous contacter
@@ -108,6 +104,8 @@ const SubstancesNaturelles = () => {
           </Link>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default SubstancesNaturelles;
