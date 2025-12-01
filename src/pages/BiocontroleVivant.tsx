@@ -11,7 +11,7 @@ const BiocontroleVivant = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url('/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png')`
       }}></div>
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
@@ -23,20 +23,15 @@ const BiocontroleVivant = () => {
           <p className="text-xl text-white/90 mt-2">
             Solutions biologiques vivantes pour une protection durable des cultures
           </p>
+          
+          <div className="mt-12 mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
+              Insectes Auxiliaires
+            </h2>
+            <p className="text-lg text-white/90 drop-shadow-lg">Solutions d'insectes pour lutter contre les principaux ravageurs des cultures</p>
+          </div>
         </div>
       </header>
-
-      {/* Hero Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Insectes Auxiliaires
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">Solutions d'insectes pour lutter contre les principaux ravageurs des cultures</p>
-          
-          
-        </div>
-      </section>
 
       {/* Ravageurs ciblés */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
