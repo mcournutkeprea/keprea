@@ -306,7 +306,7 @@ const translations: Translations = {
     pt: 'Um processo industrial controlado para bioestimulantes de qualidade superior'
   },
   'production.process.step1': {
-    fr: 'Élevage d\'insecte auxiliaire',
+    fr: 'Élevage d\'insectes auxiliaires',
     en: 'Beneficial Insect Breeding',
     es: 'Cría de insectos auxiliares',
     pt: 'Criação de insetos auxiliares'
