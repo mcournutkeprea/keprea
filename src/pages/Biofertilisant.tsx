@@ -2,8 +2,11 @@ import { ArrowLeft, Wheat, Droplets, Leaf, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import natureLogo from "@/assets/nature-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Biofertilisant = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
@@ -17,18 +20,17 @@ const Biofertilisant = () => {
             <Link to="/#solutions">
               <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Retour aux biosolutions
+                {t('product.back')}
               </Button>
             </Link>
-            <h1 className="text-4xl font-bold text-white">Biofertilisant</h1>
+            <h1 className="text-4xl font-bold text-white">{t('biofertilisant.title')}</h1>
             <p className="text-xl text-white/90 mt-2">
-              Nutrition optimale des cultures
+              {t('biofertilisant.subtitle')}
             </p>
-            
           </div>
           
           <div className="mt-12 mb-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg whitespace-nowrap">Composition NPK 4-3-2</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg whitespace-nowrap">{t('biofertilisant.npk')}</h2>
           </div>
         </div>
       </header>
@@ -39,30 +41,30 @@ const Biofertilisant = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">4%</div>
-              <h3 className="text-xl font-bold mb-2">Phosphore (P)</h3>
+              <h3 className="text-xl font-bold mb-2">{t('biofertilisant.phosphore')}</h3>
               <p className="text-muted-foreground">
-                Stimule le développement racinaire et la floraison
+                {t('biofertilisant.phosphore.desc')}
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">3%</div>
-              <h3 className="text-xl font-bold mb-2">Azote (N)</h3>
+              <h3 className="text-xl font-bold mb-2">{t('biofertilisant.azote')}</h3>
               <p className="text-muted-foreground">
-                Favorise la croissance végétative et le développement des feuilles
+                {t('biofertilisant.azote.desc')}
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">2%</div>
-              <h3 className="text-xl font-bold mb-2">Potassium (K)</h3>
+              <h3 className="text-xl font-bold mb-2">{t('biofertilisant.potassium')}</h3>
               <p className="text-muted-foreground">
-                Renforce la résistance aux maladies et améliore la qualité des fruits
+                {t('biofertilisant.potassium.desc')}
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
               <div className="text-4xl font-bold text-primary mb-4">85%</div>
-              <h3 className="text-xl font-bold mb-2">Matière organique</h3>
+              <h3 className="text-xl font-bold mb-2">{t('biofertilisant.organic')}</h3>
               <p className="text-muted-foreground">
-                Améliore la qualité du sol
+                {t('biofertilisant.organic.desc')}
               </p>
             </div>
           </div>
@@ -72,7 +74,7 @@ const Biofertilisant = () => {
       {/* Avantages section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Avantages clés</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('biofertilisant.advantages')}</h2>
           <div className="flex items-center gap-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1">
               <div className="space-y-6">
@@ -81,9 +83,9 @@ const Biofertilisant = () => {
                     <Leaf className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Origine 100% naturelle</h3>
+                    <h3 className="font-bold mb-2">{t('biofertilisant.adv1.title')}</h3>
                     <p className="text-muted-foreground">
-                      Formulé à partir de matières organiques premium, sans produits chimiques de synthèse.
+                      {t('biofertilisant.adv1.desc')}
                     </p>
                   </div>
                 </div>
@@ -92,9 +94,9 @@ const Biofertilisant = () => {
                     <Droplets className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Absorption rapide</h3>
+                    <h3 className="font-bold mb-2">{t('biofertilisant.adv2.title')}</h3>
                     <p className="text-muted-foreground">
-                      Les nutriments sont immédiatement disponibles pour les plantes.
+                      {t('biofertilisant.adv2.desc')}
                     </p>
                   </div>
                 </div>
@@ -105,9 +107,9 @@ const Biofertilisant = () => {
                     <Shield className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Améliore la structure du sol</h3>
+                    <h3 className="font-bold mb-2">{t('biofertilisant.adv3.title')}</h3>
                     <p className="text-muted-foreground">
-                      Enrichit la terre et favorise l'activité microbienne bénéfique.
+                      {t('biofertilisant.adv3.desc')}
                     </p>
                   </div>
                 </div>
@@ -116,9 +118,9 @@ const Biofertilisant = () => {
                     <Wheat className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Rendements supérieurs</h3>
+                    <h3 className="font-bold mb-2">{t('biofertilisant.adv4.title')}</h3>
                     <p className="text-muted-foreground">
-                      Augmente significativement la productivité de vos cultures.
+                      {t('biofertilisant.adv4.desc')}
                     </p>
                   </div>
                 </div>
@@ -144,14 +146,14 @@ const Biofertilisant = () => {
       <section className="py-16 px-4 bg-primary text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">
-            Prêt à optimiser vos cultures ?
+            {t('biofertilisant.cta.title')}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Contactez-nous pour découvrir comment notre biofertilisant peut transformer votre agriculture.
+            {t('biofertilisant.cta.desc')}
           </p>
           <Link to="/#contact-form">
             <Button size="lg" variant="secondary">
-              Nous contacter
+              {t('product.contact')}
             </Button>
           </Link>
         </div>

@@ -2,8 +2,11 @@ import { ArrowLeft } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SubstancesNaturelles = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
@@ -16,18 +19,18 @@ const SubstancesNaturelles = () => {
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour aux biosolutions
+              {t('product.back')}
             </Button>
           </Link>
-          <h1 className="text-4xl font-bold text-white">Substances Naturelles</h1>
-          <p className="text-xl text-white/90 mt-2">Solutions performantes à base d'extraits naturels d'insectes</p>
+          <h1 className="text-4xl font-bold text-white">{t('substances.title')}</h1>
+          <p className="text-xl text-white/90 mt-2">{t('substances.subtitle')}</p>
           
           <div className="mt-12 mb-8 text-center">
             <div className="text-6xl font-extrabold text-white drop-shadow-lg mb-4">
               100%
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-              Substances Naturelles
+              {t('substances.highlight')}
             </h2>
           </div>
         </div>
@@ -38,20 +41,20 @@ const SubstancesNaturelles = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Protection des cultures et des sols</h3>
-              <p className="text-sm text-muted-foreground">Substances actives naturelles issues d'insectes</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit1.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('substances.benefit1.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Stimulation des défenses</h3>
-              <p className="text-sm text-muted-foreground">Contre les ravageurs des feuilles, de la tige et des système racinaire</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit2.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('substances.benefit2.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓ Respect de l'environnement</h3>
-              <p className="text-sm text-muted-foreground">Solutions biodégradables et non toxiques</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit3.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('substances.benefit3.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">✓Solutions liquides et solides</h3>
-              <p className="text-sm text-muted-foreground">En pulvérisation et en micro-granulateurs</p>
+              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit4.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('substances.benefit4.desc')}</p>
             </div>
           </div>
         </div>
@@ -61,7 +64,7 @@ const SubstancesNaturelles = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Notre technologie d'extraction
+            {t('substances.tech.title')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -69,9 +72,9 @@ const SubstancesNaturelles = () => {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🦗</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Sélection d'insectes</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step1.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Choix rigoureux d'espèces d'insectes aux propriétés spécifiques
+                {t('substances.tech.step1.desc')}
               </p>
             </div>
             
@@ -79,16 +82,16 @@ const SubstancesNaturelles = () => {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚗️</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Extraction douce</h3>
-              <p className="text-sm text-muted-foreground">Procédés d'extraction sans solvant préservant l'intégrité des molécules actives</p>
+              <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step2.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('substances.tech.step2.desc')}</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌱</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Formulation</h3>
-              <p className="text-sm text-muted-foreground">Développement de solutions prêtes à l'emploi</p>
+              <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step3.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('substances.tech.step3.desc')}</p>
             </div>
           </div>
         </div>
@@ -99,7 +102,7 @@ const SubstancesNaturelles = () => {
         <div className="container mx-auto max-w-2xl text-center">
           <Link to="/#contact-form">
             <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
-              Nous contacter
+              {t('product.contact')}
             </Button>
           </Link>
         </div>
