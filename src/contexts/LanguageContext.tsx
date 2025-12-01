@@ -275,6 +275,74 @@ const translations: Translations = {
     es: '¿Por qué proteger sus cultivos con insectos auxiliares?',
     pt: 'Por que proteger suas culturas com insetos auxiliares?'
   },
+  // Infographic - Substances
+  'innovation.infographic.substances.title': {
+    fr: 'Des substances d\'insectes pour l\'agriculture',
+    en: 'Insect substances for agriculture',
+    es: 'Sustancias de insectos para la agricultura',
+    pt: 'Substâncias de insetos para a agricultura'
+  },
+  'innovation.infographic.substances.benefit1': {
+    fr: 'Interagissent rapidement avec la plante et le sol, naturellement',
+    en: 'Interact quickly with the plant and soil, naturally',
+    es: 'Interactúan rápidamente con la planta y el suelo, naturalmente',
+    pt: 'Interagem rapidamente com a planta e o solo, naturalmente'
+  },
+  'innovation.infographic.substances.benefit2': {
+    fr: 'Respectent le sol sans aucun résidu toxique',
+    en: 'Respect the soil without any toxic residue',
+    es: 'Respetan el suelo sin ningún residuo tóxico',
+    pt: 'Respeitam o solo sem nenhum resíduo tóxico'
+  },
+  'innovation.infographic.substances.benefit3': {
+    fr: 'Améliorent le rendement',
+    en: 'Improve yield',
+    es: 'Mejoran el rendimiento',
+    pt: 'Melhoram o rendimento'
+  },
+  // Infographic - Biocontrol
+  'innovation.infographic.biocontrol.title': {
+    fr: 'Biocontrôle vivant pour les cultures',
+    en: 'Living biocontrol for crops',
+    es: 'Biocontrol vivo para los cultivos',
+    pt: 'Biocontrole vivo para as culturas'
+  },
+  'innovation.infographic.biocontrol.stat1.value': {
+    fr: '84%',
+    en: '84%',
+    es: '84%',
+    pt: '84%'
+  },
+  'innovation.infographic.biocontrol.stat1.label': {
+    fr: 'des cultures dépendent des insectes pour leur qualité et rendement',
+    en: 'of crops depend on insects for their quality and yield',
+    es: 'de los cultivos dependen de los insectos para su calidad y rendimiento',
+    pt: 'das culturas dependem dos insetos para sua qualidade e rendimento'
+  },
+  'innovation.infographic.biocontrol.stat2.value': {
+    fr: '5500',
+    en: '5500',
+    es: '5500',
+    pt: '5500'
+  },
+  'innovation.infographic.biocontrol.stat2.label': {
+    fr: 'auxiliaires utiles recensés en France',
+    en: 'useful auxiliaries recorded in France',
+    es: 'auxiliares útiles registrados en Francia',
+    pt: 'auxiliares úteis registrados na França'
+  },
+  'innovation.infographic.biocontrol.stat3.value': {
+    fr: '10 000',
+    en: '10,000',
+    es: '10 000',
+    pt: '10 000'
+  },
+  'innovation.infographic.biocontrol.stat3.label': {
+    fr: 'individus actifs par m² en moyenne',
+    en: 'active individuals per m² on average',
+    es: 'individuos activos por m² en promedio',
+    pt: 'indivíduos ativos por m² em média'
+  },
   // Production section
   'production.title': {
     fr: 'Notre site de production',
