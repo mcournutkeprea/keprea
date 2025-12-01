@@ -87,7 +87,7 @@ const Production = () => {
 
             {/* Processus de production en bas - Responsive */}
             <div className="relative z-10 mt-8">
-              <h4 className="text-lg font-semibold text-primary mb-6 text-center">De la larve au champs</h4>
+              <h4 className="text-lg font-semibold text-primary mb-6 text-center">De la larve au champ</h4>
               
               {/* Version mobile - Format vertical avec convergence */}
               <div className="block lg:hidden">
