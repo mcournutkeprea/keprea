@@ -128,12 +128,12 @@ const Biofertilisant = () => {
               href="https://www.nature.com/articles/s41598-020-61765-x" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hidden md:flex transition-transform duration-300 hover:scale-110"
+              className="hidden md:flex transition-transform duration-300 hover:scale-125"
             >
               <img 
                 src={natureLogo} 
                 alt="Nature Journal" 
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-24 h-24 object-contain rounded-full"
               />
             </a>
           </div>
