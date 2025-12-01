@@ -51,7 +51,7 @@ const Production = () => {
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground mb-2 text-lg">{t('production.technology.title')}</h4>
                       <p className="text-muted-foreground">
-                        {t('production.technology.desc')}
+                        Équipements de pointe pour la production de solutions de bioprotection et de boosters
                       </p>
                     </div>
                   </div>
