@@ -19,7 +19,7 @@ const BiocontroleVivant = () => {
               Retour aux biosolutions
             </Button>
           </Link>
-          <h1 className="text-4xl font-bold text-white">Biocontrôle Vivant</h1>
+          <h1 className="text-4xl font-bold text-white">Bioprotection Vivant</h1>
           <p className="text-xl text-white/90 mt-2">
             Solutions biologiques vivantes pour une protection durable des cultures
           </p>
