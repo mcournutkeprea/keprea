@@ -1,9 +1,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Leaf, FlaskConical, Users, Target } from "lucide-react";
+
 const About = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
+  
   const values = [{
     icon: Leaf,
     title: "Innovation Naturelle",
@@ -21,7 +21,9 @@ const About = () => {
     title: "Impact Mesurable",
     description: "Nos biosolutions offrent des résultats concrets : protection des cultures, amélioration des rendements et réduction des intrants chimiques."
   }];
-  return <section id="about" className="py-20 bg-muted/30">
+
+  return (
+    <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* En-tête */}
         <div className="text-center mb-16">
@@ -37,19 +39,22 @@ const About = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-background rounded-2xl p-8 shadow-lg border border-border">
             <h3 className="text-2xl font-bold text-foreground mb-6">Notre Histoire</h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">Fondée en 2025 par 7 associés experts (agriculteurs, entomologistes, agronomes et entrepreneurs) Keprea est née d'une vision commune : révolutionner l'agriculture grâce aux biosolutions issues d'insectes.<strong className="text-foreground">2025</strong> par <strong className="text-foreground">7 associés experts</strong> — agriculteurs, entomologistes, agronomes et entrepreneurs — Keprea est née d'une vision commune : révolutionner l'agriculture grâce aux biosolutions issues d'insectes.
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Fondée en 2025 par 7 associés experts (agriculteurs, entomologistes, agronomes et entrepreneurs) Keprea est née d'une vision commune : révolutionner l'agriculture grâce aux biosolutions issues d'insectes.
             </p>
-            <p className="text-muted-foreground mb-4 leading-relaxed">Implantée à proximité de Dole dans le Jura, notre site de production de 3 000 m² nous permet de développer une gamme complète de solutions pour les agriculteurs :  boosters pour améliorer la résistence des cultures contre les stress abiotiques,  solutions de protection naturelles avec des nsectes auxiliaires abordables,  biofertilisants,  boosters de croissance pour stimuler les défenses des plantes, et solutions de biocontrôle vivant avec des insectes auxiliaires.<strong className="text-foreground">Dole dans le Jura</strong>, notre site de production de <strong className="text-foreground">3 000 m²</strong> nous permet de développer une gamme complète de produits : <strong className="text-foreground">biofertilisants</strong> enrichis en substances naturelles, <strong className="text-foreground">boosters de croissance</strong> pour stimuler les défenses des plantes, et <strong className="text-foreground">solutions de biocontrôle vivant</strong> avec des insectes auxiliaires.
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Implantée à proximité de Dole dans le Jura, notre site de production de 3 000 m² nous permet de développer une gamme complète de solutions pour les agriculteurs : boosters pour la résistance des cultures contre les stress abiotiques, solutions de protection naturelles avec des insectes auxiliaires abordables et performants, biofertilisants. Toutes ces solutions étant utilisables en agriculture biologique.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Notre expertise en <strong className="text-foreground">process industriels</strong> nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.
+              Notre expertise en process industriels et agriculture nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.
             </p>
           </div>
         </div>
 
         {/* Nos valeurs */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((value, index) => <div key={index} className="bg-background rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow">
+          {values.map((value, index) => (
+            <div key={index} className="bg-background rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <value.icon className="w-6 h-6 text-primary" />
               </div>
@@ -59,9 +64,12 @@ const About = () => {
               <p className="text-sm text-muted-foreground">
                 {value.description}
               </p>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default About;
