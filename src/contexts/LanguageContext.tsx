@@ -112,10 +112,10 @@ const translations: Translations = {
     pt: 'Nossas biosoluções, pensadas por agricultores, para agricultores'
   },
   'solutions.subtitle': {
-    fr: 'Nos solutions sont pensées par les agriculteurs et pour les agriculteurs.',
-    en: 'Our solutions are designed by farmers and for farmers.',
-    es: 'Nuestras soluciones están pensadas por agricultores y para agricultores.',
-    pt: 'Nossas soluções são pensadas por agricultores e para agricultores.'
+    fr: 'Nos solutions sont pensées par les agriculteurs que nous sommes et pour les agriculteurs.',
+    en: 'Our solutions are designed by the farmers we are and for farmers.',
+    es: 'Nuestras soluciones están pensadas por los agricultores que somos y para los agricultores.',
+    pt: 'Nossas soluções são pensadas pelos agricultores que somos e para os agricultores.'
   },
   'solutions.subtitle2': {
     fr: 'Nous répondons aux défis majeurs des agriculteurs du monde entier :',
