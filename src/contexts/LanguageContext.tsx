@@ -562,10 +562,22 @@ const translations: Translations = {
     pt: 'potenciadores'
   },
   'about.history.p2.activators': {
-    fr: 'et activateurs de sols pour la résistance des cultures contre les stress abiotiques. Toutes ces solutions étant utilisables en',
-    en: 'and soil activators for crop resistance against abiotic stress. All these solutions can be used in',
-    es: 'y activadores de suelo para la resistencia de los cultivos contra el estrés abiótico. Todas estas soluciones se pueden usar en',
-    pt: 'e ativadores de solo para a resistência das culturas contra o estresse abiótico. Todas essas soluções podem ser usadas em'
+    fr: 'et activateurs de sols pour la résistance des cultures contre les stress abiotiques,',
+    en: 'and soil activators for crop resistance against abiotic stress,',
+    es: 'y activadores de suelo para la resistencia de los cultivos contra el estrés abiótico,',
+    pt: 'e ativadores de solo para a resistência das culturas contra o estresse abiótico,'
+  },
+  'about.history.p2.biofertilisants': {
+    fr: 'biofertilisants',
+    en: 'biofertilizers',
+    es: 'biofertilizantes',
+    pt: 'biofertilizantes'
+  },
+  'about.history.p2.biofertilisants.desc': {
+    fr: 'pour régénérer les sols et nourrir les cultures. Toutes ces solutions étant utilisables en',
+    en: 'to regenerate soils and nourish crops. All these solutions can be used in',
+    es: 'para regenerar los suelos y nutrir los cultivos. Todas estas soluciones se pueden usar en',
+    pt: 'para regenerar os solos e nutrir as culturas. Todas essas soluções podem ser usadas em'
   },
   'about.history.p2.organic': {
     fr: 'agriculture biologique',
