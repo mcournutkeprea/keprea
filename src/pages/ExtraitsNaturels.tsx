@@ -3,17 +3,16 @@ import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-
 const ExtraitsNaturels = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <div className="min-h-screen bg-background">
+  const {
+    t
+  } = useLanguage();
+  return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url(${plantDropletsBg})`
-        }}></div>
+        backgroundImage: `url(${plantDropletsBg})`
+      }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <Link to="/#solutions">
@@ -26,12 +25,8 @@ const ExtraitsNaturels = () => {
           <p className="text-xl text-white/90 mt-2">{t('substances.subtitle')}</p>
           
           <div className="mt-12 mb-8 text-center">
-            <div className="text-6xl font-extrabold text-white drop-shadow-lg mb-4">
-              100%
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-              {t('substances.highlight')}
-            </h2>
+            
+            
           </div>
         </div>
       </header>
@@ -107,8 +102,6 @@ const ExtraitsNaturels = () => {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ExtraitsNaturels;
