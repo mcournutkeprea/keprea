@@ -502,10 +502,10 @@ const translations: Translations = {
     pt: '(agricultores, entomologistas, agrônomos e empresários)'
   },
   'about.history.p1.vision': {
-    fr: 'Keprea est née d\'une vision commune : révolutionner l\'agriculture grâce aux biosolutions issues d\'insectes.',
-    en: 'Keprea was born from a common vision: revolutionizing agriculture through insect-based biosolutions.',
-    es: 'Keprea nació de una visión común: revolucionar la agricultura gracias a las biosoluciones derivadas de insectos.',
-    pt: 'A Keprea nasceu de uma visão comum: revolucionar a agricultura através de biosoluções derivadas de insetos.'
+    fr: 'Keprea est née d\'une vision commune : que le vivant revienne au cœur de la gestion de la ferme.',
+    en: 'Keprea was born from a common vision: bringing life back to the heart of farm management.',
+    es: 'Keprea nació de una visión común: que lo vivo vuelva al corazón de la gestión de la granja.',
+    pt: 'A Keprea nasceu de uma visão comum: trazer a vida de volta ao coração da gestão da fazenda.'
   },
   'about.history.p2.location': {
     fr: 'Implantée à proximité de',
