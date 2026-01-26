@@ -36,19 +36,19 @@ const ExtraitsNaturels = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit1.title')}</h3>
+              <h3 className="font-semibold text-primary text-lg mb-2">{t('substances.benefit1.title')}</h3>
               <p className="text-base text-muted-foreground">{t('substances.benefit1.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit2.title')}</h3>
+              <h3 className="font-semibold text-primary text-lg mb-2">{t('substances.benefit2.title')}</h3>
               <p className="text-base text-muted-foreground">{t('substances.benefit2.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit3.title')}</h3>
+              <h3 className="font-semibold text-primary text-lg mb-2">{t('substances.benefit3.title')}</h3>
               <p className="text-base text-muted-foreground">{t('substances.benefit3.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit4.title')}</h3>
+              <h3 className="font-semibold text-primary text-lg mb-2">{t('substances.benefit4.title')}</h3>
               <p className="text-base text-muted-foreground">{t('substances.benefit4.desc')}</p>
             </div>
           </div>
