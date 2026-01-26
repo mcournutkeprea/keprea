@@ -1067,6 +1067,18 @@ const translations: Translations = {
     es: 'Contra las cochinillas harinosas de los árboles frutales',
     pt: 'Contra cochonilhas farinhentas em árvores frutíferas'
   },
+  'biocontrole.pest4.title': {
+    fr: 'Mouches Blanches',
+    en: 'Whiteflies',
+    es: 'Moscas Blancas',
+    pt: 'Moscas Brancas'
+  },
+  'biocontrole.pest4.desc': {
+    fr: 'Contre les mouches blanches (aleurodes) des tomates, concombres, courgettes...',
+    en: 'Against whiteflies on tomatoes, cucumbers, zucchini...',
+    es: 'Contra las moscas blancas (aleuródidos) de tomates, pepinos, calabacines...',
+    pt: 'Contra moscas brancas (aleuroídeos) de tomates, pepinos, abobrinhas...'
+  },
   'biocontrole.advantages.title': {
     fr: 'Avantages du biocontrôle',
     en: 'Benefits of biocontrol',

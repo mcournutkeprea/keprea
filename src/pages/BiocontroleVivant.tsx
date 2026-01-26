@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import aphidImage from "@/assets/aphid.jpg";
 import pyraleImage from "@/assets/pyrale.jpg";
 import cochenillesImage from "@/assets/cochenilles.jpg";
+import aleurodeImage from "@/assets/aleurode.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const BiocontroleVivant = () => {
@@ -45,29 +46,37 @@ const BiocontroleVivant = () => {
             {t('biocontrole.pests.title')}
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                 <img src={aphidImage} alt={t('biocontrole.pest1.title')} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-[#22c55e] mb-3">{t('biocontrole.pest1.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.pest1.desc')}</p>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest1.title')}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest1.desc')}</p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                 <img src={pyraleImage} alt={t('biocontrole.pest2.title')} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-[#22c55e] mb-3">{t('biocontrole.pest2.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.pest2.desc')}</p>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest2.title')}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest2.desc')}</p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                 <img src={cochenillesImage} alt={t('biocontrole.pest3.title')} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-[#22c55e] mb-3">{t('biocontrole.pest3.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.pest3.desc')}</p>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest3.title')}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest3.desc')}</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
+                <img src={aleurodeImage} alt={t('biocontrole.pest4.title')} className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest4.title')}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest4.desc')}</p>
             </div>
           </div>
         </div>
@@ -81,20 +90,20 @@ const BiocontroleVivant = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('biocontrole.adv1.title')}</h3>
+            <div className="bg-card p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv1.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('biocontrole.adv1.desc')}</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('biocontrole.adv2.title')}</h3>
+            <div className="bg-card p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv2.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('biocontrole.adv2.desc')}</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('biocontrole.adv3.title')}</h3>
+            <div className="bg-card p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv3.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('biocontrole.adv3.desc')}</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('biocontrole.adv4.title')}</h3>
+            <div className="bg-card p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv4.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('biocontrole.adv4.desc')}</p>
             </div>
           </div>
@@ -108,7 +117,7 @@ const BiocontroleVivant = () => {
             {t('biocontrole.cta')}
           </p>
           <Link to="/#contact-form">
-            <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               {t('product.contact')}
             </Button>
           </Link>
