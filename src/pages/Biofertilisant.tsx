@@ -2,17 +2,16 @@ import { ArrowLeft, Wheat, Droplets, Leaf, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-
 const Biofertilisant = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <div className="min-h-screen bg-background">
+  const {
+    t
+  } = useLanguage();
+  return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
-        }}></div>
+        backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
+      }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="relative">
@@ -29,7 +28,7 @@ const Biofertilisant = () => {
           </div>
           
           <div className="mt-12 mb-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg whitespace-nowrap">{t('biofertilisant.npk')}</h2>
+            
           </div>
         </div>
       </header>
@@ -145,8 +144,6 @@ const Biofertilisant = () => {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Biofertilisant;
