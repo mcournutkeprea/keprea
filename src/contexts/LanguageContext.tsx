@@ -57,10 +57,10 @@ const translations: Translations = {
     pt: 'A natureza a serviço das suas culturas'
   },
   'hero.subtitle': {
-    fr: 'Bioprotection, boosters et biofertilisation à base d\'insectes pour une agriculture performante',
-    en: 'Insect-based bioprotection, boosters and biofertilization for high-performance agriculture',
-    es: 'Bioprotección, potenciadores y biofertilización a base de insectos para una agricultura de alto rendimiento',
-    pt: 'Bioproteção, potenciadores e biofertilização à base de insetos para uma agricultura de alto desempenho'
+    fr: 'Bioprotection, boosters et biofertilisation à base d\'insectes pour une agriculture performante et régénérative',
+    en: 'Insect-based bioprotection, boosters and biofertilization for high-performance and regenerative agriculture',
+    es: 'Bioprotección, potenciadores y biofertilización a base de insectos para una agricultura de alto rendimiento y regenerativa',
+    pt: 'Bioproteção, potenciadores e biofertilização à base de insetos para uma agricultura de alto desempenho e regenerativa'
   },
   'hero.cta': {
     fr: 'Découvrir notre portfolio',
