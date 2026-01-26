@@ -8,7 +8,7 @@ const Boosters = () => {
   } = useLanguage();
   return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
-      <header className="relative shadow-sm">
+      <header className="relative shadow-sm min-h-[280px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
       }}></div>

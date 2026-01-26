@@ -8,7 +8,7 @@ const Biofertilisant = () => {
   } = useLanguage();
   return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
-      <header className="relative shadow-sm">
+      <header className="relative shadow-sm min-h-[280px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
       }}></div>
