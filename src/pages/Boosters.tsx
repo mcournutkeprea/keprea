@@ -13,7 +13,7 @@ const Boosters = () => {
         backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
       }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-6">
+        <div className="relative z-10 container mx-auto px-4 py-20">
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
               <ArrowLeft className="w-4 h-4 mr-2" />
