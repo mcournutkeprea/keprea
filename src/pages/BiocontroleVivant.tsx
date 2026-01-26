@@ -46,7 +46,7 @@ const BiocontroleVivant = () => {
                 <img src={aphidImage} alt={t('biocontrole.pest1.title')} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest1.title')}</h3>
-              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest1.desc')}</p>
+              <p className="text-sm md:text-base text-muted-foreground">{t('biocontrole.pest1.desc')}</p>
             </div>
 
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
@@ -54,7 +54,7 @@ const BiocontroleVivant = () => {
                 <img src={pyraleImage} alt={t('biocontrole.pest2.title')} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest2.title')}</h3>
-              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest2.desc')}</p>
+              <p className="text-sm md:text-base text-muted-foreground">{t('biocontrole.pest2.desc')}</p>
             </div>
 
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
@@ -62,7 +62,7 @@ const BiocontroleVivant = () => {
                 <img src={cochenillesImage} alt={t('biocontrole.pest3.title')} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest3.title')}</h3>
-              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest3.desc')}</p>
+              <p className="text-sm md:text-base text-muted-foreground">{t('biocontrole.pest3.desc')}</p>
             </div>
 
             <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
@@ -70,7 +70,7 @@ const BiocontroleVivant = () => {
                 <img src={aleurodeImage} alt={t('biocontrole.pest4.title')} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t('biocontrole.pest4.title')}</h3>
-              <p className="text-xs md:text-sm text-muted-foreground">{t('biocontrole.pest4.desc')}</p>
+              <p className="text-sm md:text-base text-muted-foreground">{t('biocontrole.pest4.desc')}</p>
             </div>
           </div>
         </div>
@@ -86,19 +86,19 @@ const BiocontroleVivant = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-card p-6 rounded-lg shadow-sm">
               <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv1.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.adv1.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('biocontrole.adv1.desc')}</p>
             </div>
             <div className="bg-card p-6 rounded-lg shadow-sm">
               <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv2.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.adv2.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('biocontrole.adv2.desc')}</p>
             </div>
             <div className="bg-card p-6 rounded-lg shadow-sm">
               <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv3.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.adv3.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('biocontrole.adv3.desc')}</p>
             </div>
             <div className="bg-card p-6 rounded-lg shadow-sm">
               <h3 className="font-semibold text-primary mb-2">{t('biocontrole.adv4.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('biocontrole.adv4.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('biocontrole.adv4.desc')}</p>
             </div>
           </div>
         </div>

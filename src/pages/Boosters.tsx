@@ -47,15 +47,15 @@ const Boosters = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">{t('boosters.boostea.benefit1')}</span>
+                  <span className="text-base">{t('boosters.boostea.benefit1')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">{t('boosters.boostea.benefit2')}</span>
+                  <span className="text-base">{t('boosters.boostea.benefit2')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">{t('boosters.boostea.benefit3')}</span>
+                  <span className="text-base">{t('boosters.boostea.benefit3')}</span>
                 </div>
               </div>
             </div>
@@ -68,15 +68,15 @@ const Boosters = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">{t('boosters.soilea.benefit1')}</span>
+                  <span className="text-base">{t('boosters.soilea.benefit1')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">{t('boosters.soilea.benefit2')}</span>
+                  <span className="text-base">{t('boosters.soilea.benefit2')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">{t('boosters.soilea.benefit3')}</span>
+                  <span className="text-base">{t('boosters.soilea.benefit3')}</span>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ const Boosters = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">{t('boosters.why1.title')}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     {t('boosters.why1.desc')}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ const Boosters = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">{t('boosters.why2.title')}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     {t('boosters.why2.desc')}
                   </p>
                 </div>
@@ -125,7 +125,7 @@ const Boosters = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">{t('boosters.why3.title')}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     {t('boosters.why3.desc')}
                   </p>
                 </div>
@@ -137,7 +137,7 @@ const Boosters = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">{t('boosters.why4.title')}</h3>
-                  <p className="text-muted-foreground text-sm">{t('boosters.why4.desc')}</p>
+                  <p className="text-muted-foreground text-base">{t('boosters.why4.desc')}</p>
                 </div>
               </div>
             </div>
