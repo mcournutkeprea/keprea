@@ -1280,10 +1280,10 @@ const translations: Translations = {
     pt: 'Potenciadores'
   },
   'boosters.subtitle': {
-    fr: 'Solutions biostimulantes pour optimiser le potentiel de vos cultures',
-    en: 'Biostimulant solutions to optimize the potential of your crops',
-    es: 'Soluciones bioestimulantes para optimizar el potencial de sus cultivos',
-    pt: 'Soluções bioestimulantes para otimizar o potencial das suas culturas'
+    fr: 'Solutions biostimulantes liquides ou solides pour optimiser le potentiel de vos cultures et vos sols',
+    en: 'Liquid or solid biostimulant solutions to optimize the potential of your crops and soils',
+    es: 'Soluciones bioestimulantes líquidas o sólidas para optimizar el potencial de sus cultivos y sus suelos',
+    pt: 'Soluções bioestimulantes líquidas ou sólidas para otimizar o potencial das suas culturas e solos'
   },
   'boosters.headline': {
     fr: 'Des solutions liquides ou solides pour booster la santé de vos cultures',
