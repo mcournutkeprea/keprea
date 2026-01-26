@@ -4,17 +4,17 @@ import biocontrolInfographic from "@/assets/biocontrol-vivant-infographic.png";
 import biocontrolInfographicEs from "@/assets/biocontrol-vivant-infographic-es.png";
 import biocontrolInfographicEn from "@/assets/biocontrol-vivant-infographic-en.png";
 import biocontrolInfographicPt from "@/assets/biocontrol-vivant-infographic-pt.png";
-import substancesInfographic from "@/assets/substances-insectes-benefits.png";
-import substancesInfographicEs from "@/assets/substances-insectes-benefits-es.png";
-import substancesInfographicEn from "@/assets/substances-insectes-benefits-en.png";
-import substancesInfographicPt from "@/assets/substances-insectes-benefits-pt.png";
+import extraitsInfographic from "@/assets/substances-insectes-benefits.png";
+import extraitsInfographicEs from "@/assets/substances-insectes-benefits-es.png";
+import extraitsInfographicEn from "@/assets/substances-insectes-benefits-en.png";
+import extraitsInfographicPt from "@/assets/substances-insectes-benefits-pt.png";
 
 const Innovation = () => {
   const { t, language } = useLanguage();
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFlippedBee, setIsFlippedBee] = useState(false);
 
-  const currentSubstancesInfographic = language === 'es' ? substancesInfographicEs : language === 'en' ? substancesInfographicEn : language === 'pt' ? substancesInfographicPt : substancesInfographic;
+  const currentExtraitsInfographic = language === 'es' ? extraitsInfographicEs : language === 'en' ? extraitsInfographicEn : language === 'pt' ? extraitsInfographicPt : extraitsInfographic;
   const currentBiocontrolInfographic = language === 'es' ? biocontrolInfographicEs : language === 'en' ? biocontrolInfographicEn : language === 'pt' ? biocontrolInfographicPt : biocontrolInfographic;
 
   return (
@@ -37,8 +37,8 @@ const Innovation = () => {
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
                     <img 
-                      src={currentSubstancesInfographic} 
-                      alt="Substances d'insectes infographic"
+                      src={currentExtraitsInfographic} 
+                      alt="Extraits d'insectes infographic"
                       className="w-full h-full object-cover"
                     />
                   </div>

@@ -227,10 +227,10 @@ const translations: Translations = {
     pt: 'Rico em'
   },
   'solutions.boosters.substances': {
-    fr: 'Substances actives',
-    en: 'Active substances',
-    es: 'Sustancias activas',
-    pt: 'Substâncias ativas'
+    fr: 'Extraits actifs',
+    en: 'Active extracts',
+    es: 'Extractos activos',
+    pt: 'Extratos ativos'
   },
   'solutions.biofertilisant.title': {
     fr: 'Biofertilisant',
@@ -264,10 +264,10 @@ const translations: Translations = {
     pt: 'Inovação através de insetos'
   },
   'innovation.substances.question': {
-    fr: 'Pourquoi protéger vos cultures avec des substances d\'insectes?',
-    en: 'Why protect your crops with insect substances?',
-    es: '¿Por qué proteger sus cultivos con sustancias de insectos?',
-    pt: 'Por que proteger suas culturas com substâncias de insetos?'
+    fr: 'Pourquoi protéger vos cultures avec des extraits d\'insectes?',
+    en: 'Why protect your crops with insect extracts?',
+    es: '¿Por qué proteger sus cultivos con extractos de insectos?',
+    pt: 'Por que proteger suas culturas com extratos de insetos?'
   },
   'innovation.biocontrol.question': {
     fr: 'Pourquoi protéger vos cultures avec des insectes auxiliaires?',
@@ -277,10 +277,10 @@ const translations: Translations = {
   },
   // Infographic - Substances
   'innovation.infographic.substances.title': {
-    fr: 'Des substances d\'insectes pour l\'agriculture',
-    en: 'Insect substances for agriculture',
-    es: 'Sustancias de insectos para la agricultura',
-    pt: 'Substâncias de insetos para a agricultura'
+    fr: 'Des extraits d\'insectes pour l\'agriculture',
+    en: 'Insect extracts for agriculture',
+    es: 'Extractos de insectos para la agricultura',
+    pt: 'Extratos de insetos para a agricultura'
   },
   'innovation.infographic.substances.benefit1': {
     fr: 'Interagissent rapidement avec la plante et le sol, naturellement',
@@ -893,10 +893,10 @@ const translations: Translations = {
   },
   // SubstancesNaturelles page
   'substances.title': {
-    fr: 'Substances Naturelles',
-    en: 'Natural Substances',
-    es: 'Sustancias Naturales',
-    pt: 'Substâncias Naturais'
+    fr: 'Extraits Naturels',
+    en: 'Natural Extracts',
+    es: 'Extractos Naturales',
+    pt: 'Extratos Naturais'
   },
   'substances.subtitle': {
     fr: 'Solutions performantes à base d\'extraits naturels d\'insectes',
@@ -905,10 +905,10 @@ const translations: Translations = {
     pt: 'Soluções de alto desempenho baseadas em extratos naturais de insetos'
   },
   'substances.highlight': {
-    fr: '100% Substances Naturelles',
-    en: '100% Natural Substances',
-    es: '100% Sustancias Naturales',
-    pt: '100% Substâncias Naturais'
+    fr: '100% Extraits Naturels',
+    en: '100% Natural Extracts',
+    es: '100% Extractos Naturales',
+    pt: '100% Extratos Naturais'
   },
   'substances.benefit1.title': {
     fr: '✓ Protection des cultures et des sols',
@@ -917,10 +917,10 @@ const translations: Translations = {
     pt: '✓ Proteção de culturas e solos'
   },
   'substances.benefit1.desc': {
-    fr: 'Substances actives naturelles issues d\'insectes',
-    en: 'Natural active substances derived from insects',
-    es: 'Sustancias activas naturales derivadas de insectos',
-    pt: 'Substâncias ativas naturais derivadas de insetos'
+    fr: 'Extraits actifs naturels issus d\'insectes',
+    en: 'Natural active extracts derived from insects',
+    es: 'Extractos activos naturales derivados de insectos',
+    pt: 'Extratos ativos naturais derivados de insetos'
   },
   'substances.benefit2.title': {
     fr: '✓ Stimulation des défenses',

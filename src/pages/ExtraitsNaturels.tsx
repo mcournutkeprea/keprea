@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const SubstancesNaturelles = () => {
+const ExtraitsNaturels = () => {
   const { t } = useLanguage();
   
   return (
@@ -41,19 +41,19 @@ const SubstancesNaturelles = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit1.title')}</h3>
+              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit1.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('substances.benefit1.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit2.title')}</h3>
+              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit2.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('substances.benefit2.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit3.title')}</h3>
+              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit3.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('substances.benefit3.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-[#22c55e] mb-2">{t('substances.benefit4.title')}</h3>
+              <h3 className="font-semibold text-primary mb-2">{t('substances.benefit4.title')}</h3>
               <p className="text-sm text-muted-foreground">{t('substances.benefit4.desc')}</p>
             </div>
           </div>
@@ -69,7 +69,7 @@ const SubstancesNaturelles = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🦗</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step1.title')}</h3>
@@ -79,7 +79,7 @@ const SubstancesNaturelles = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚗️</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step2.title')}</h3>
@@ -87,7 +87,7 @@ const SubstancesNaturelles = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌱</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step3.title')}</h3>
@@ -98,10 +98,10 @@ const SubstancesNaturelles = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-green-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary">
         <div className="container mx-auto max-w-2xl text-center">
           <Link to="/#contact-form">
-            <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-white">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               {t('product.contact')}
             </Button>
           </Link>
@@ -111,4 +111,4 @@ const SubstancesNaturelles = () => {
   );
 };
 
-export default SubstancesNaturelles;
+export default ExtraitsNaturels;

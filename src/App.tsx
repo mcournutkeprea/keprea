@@ -7,7 +7,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import Biofertilisant from "./pages/Biofertilisant";
 import Boosters from "./pages/Boosters";
-import SubstancesNaturelles from "./pages/SubstancesNaturelles";
+import ExtraitsNaturels from "./pages/ExtraitsNaturels";
 import BiocontroleVivant from "./pages/BiocontroleVivant";
 import NotFound from "./pages/NotFound";
 
@@ -24,7 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/biofertilisant" element={<Biofertilisant />} />
             <Route path="/boosters" element={<Boosters />} />
-            <Route path="/substances-naturelles" element={<SubstancesNaturelles />} />
+            <Route path="/extraits-naturels" element={<ExtraitsNaturels />} />
             <Route path="/biocontrole-vivant" element={<BiocontroleVivant />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

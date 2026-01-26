@@ -14,8 +14,8 @@ const Solutions = () => {
     navigate('/boosters');
     window.scrollTo(0, 0);
   };
-  const handleSubstancesClick = () => {
-    navigate('/substances-naturelles');
+  const handleExtraitsClick = () => {
+    navigate('/extraits-naturels');
     window.scrollTo(0, 0);
   };
   const handleBiocontroleClick = () => {
@@ -62,7 +62,7 @@ const Solutions = () => {
           </div>
 
           {/* Section Biopesticides - Haut droit */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleSubstancesClick}>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-8 min-h-[300px] cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleExtraitsClick}>
             <div className="relative z-10">
               <h3 className="text-2xl font-extrabold mb-2 text-white">{t('solutions.biopesticides.title')}</h3>
               <p className="text-base font-semibold text-white/90 mb-4">{t('solutions.biopesticides.subtitle')}</p>
