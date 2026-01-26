@@ -37,19 +37,19 @@ const ExtraitsNaturels = () => {
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-primary mb-2">{t('substances.benefit1.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('substances.benefit1.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('substances.benefit1.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-primary mb-2">{t('substances.benefit2.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('substances.benefit2.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('substances.benefit2.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-primary mb-2">{t('substances.benefit3.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('substances.benefit3.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('substances.benefit3.desc')}</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg">
               <h3 className="font-semibold text-primary mb-2">{t('substances.benefit4.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('substances.benefit4.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('substances.benefit4.desc')}</p>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ const ExtraitsNaturels = () => {
                 <span className="text-2xl">🦗</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step1.title')}</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 {t('substances.tech.step1.desc')}
               </p>
             </div>
@@ -78,7 +78,7 @@ const ExtraitsNaturels = () => {
                 <span className="text-2xl">⚗️</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step2.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('substances.tech.step2.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('substances.tech.step2.desc')}</p>
             </div>
             
             <div className="text-center">
@@ -86,7 +86,7 @@ const ExtraitsNaturels = () => {
                 <span className="text-2xl">🌱</span>
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step3.title')}</h3>
-              <p className="text-sm text-muted-foreground">{t('substances.tech.step3.desc')}</p>
+              <p className="text-base text-muted-foreground">{t('substances.tech.step3.desc')}</p>
             </div>
           </div>
         </div>
