@@ -592,10 +592,10 @@ const translations: Translations = {
     pt: 'Nossa experiência em'
   },
   'about.history.p3.process': {
-    fr: 'process industriels et agriculture',
-    en: 'industrial processes and agriculture',
-    es: 'procesos industriales y agricultura',
-    pt: 'processos industriais e agricultura'
+    fr: 'biofabrique et agriculture',
+    en: 'biomanufacturing and agriculture',
+    es: 'biofábrica y agricultura',
+    pt: 'biofábrica e agricultura'
   },
   'about.history.p3.guarantee': {
     fr: 'nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.',
