@@ -87,10 +87,10 @@ const translations: Translations = {
     pt: '10'
   },
   'hero.stat2.label': {
-    fr: 'solutions développées dont 2 déjà disponibles',
-    en: 'solutions developed, 2 already available',
-    es: 'soluciones desarrolladas, 2 ya disponibles',
-    pt: 'soluções desenvolvidas, 2 já disponíveis'
+    fr: 'solutions développées dont 3 déjà disponibles',
+    en: 'solutions developed, 3 already available',
+    es: 'soluciones desarrolladas, 3 ya disponibles',
+    pt: 'soluções desenvolvidas, 3 já disponíveis'
   },
   'hero.stat3.value': {
     fr: '0€',
