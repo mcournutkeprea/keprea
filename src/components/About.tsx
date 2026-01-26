@@ -23,7 +23,7 @@ const About = () => {
           <div className="bg-background rounded-2xl p-8 shadow-lg border border-border">
             <h3 className="text-2xl font-bold text-foreground mb-6">{t('about.history.title')}</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              {t('about.history.p1')} <strong className="text-primary font-semibold">{t('about.history.p1.year')}</strong> {t('about.history.p1.by')} <strong className="text-primary font-semibold">{t('about.history.p1.associates')}</strong> {t('about.history.p1.roles')} {t('about.history.p1.vision')}
+              {t('about.history.p1')} <strong className="text-primary font-semibold">{t('about.history.p1.year')}</strong> {t('about.history.p1.by')} <strong className="text-primary font-semibold">{t('about.history.p1.associates')}</strong> {t('about.history.p1.roles')} {t('about.history.p1.vision.intro')} <strong className="text-primary font-semibold">{t('about.history.p1.vision.bold')}</strong>
             </p>
             <p className="text-muted-foreground mb-4 leading-relaxed">
               {t('about.history.p2.location')} <strong className="text-primary font-semibold">{t('about.history.p2.city')}</strong>{t('about.history.p2.site')} <strong className="text-primary font-semibold">{t('about.history.p2.size')}</strong> {t('about.history.p2.develop')} <strong className="text-primary font-semibold">{t('about.history.p2.bioprotection')}</strong> {t('about.history.p2.rest')} <strong className="text-primary font-semibold">{t('about.history.p2.boosters')}</strong> {t('about.history.p2.activators')} <strong className="text-primary font-semibold">{t('about.history.p2.organic')}</strong>.

@@ -501,11 +501,17 @@ const translations: Translations = {
     es: '(agricultores, entomólogos, agrónomos y empresarios)',
     pt: '(agricultores, entomologistas, agrônomos e empresários)'
   },
-  'about.history.p1.vision': {
-    fr: 'Keprea est née d\'une vision commune : que le vivant revienne au cœur de la gestion de la ferme.',
-    en: 'Keprea was born from a common vision: bringing life back to the heart of farm management.',
-    es: 'Keprea nació de una visión común: que lo vivo vuelva al corazón de la gestión de la granja.',
-    pt: 'A Keprea nasceu de uma visão comum: trazer a vida de volta ao coração da gestão da fazenda.'
+  'about.history.p1.vision.intro': {
+    fr: 'Keprea est née d\'une vision commune :',
+    en: 'Keprea was born from a common vision:',
+    es: 'Keprea nació de una visión común:',
+    pt: 'A Keprea nasceu de uma visão comum:'
+  },
+  'about.history.p1.vision.bold': {
+    fr: 'que le vivant revienne au cœur de la gestion de la ferme.',
+    en: 'bringing life back to the heart of farm management.',
+    es: 'que lo vivo vuelva al corazón de la gestión de la granja.',
+    pt: 'trazer a vida de volta ao coração da gestão da fazenda.'
   },
   'about.history.p2.location': {
     fr: 'Implantée à proximité de',
