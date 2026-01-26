@@ -13,7 +13,7 @@ const Biofertilisant = () => {
         backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
       }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-12">
+        <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="relative">
             <Link to="/#solutions">
               <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
