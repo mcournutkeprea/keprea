@@ -30,12 +30,6 @@ const BiocontroleVivant = () => {
             {t('biocontrole.subtitle')}
           </p>
           
-          <div className="mt-12 mb-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
-              {t('biocontrole.auxiliary')}
-            </h2>
-            <p className="text-lg text-white/90 drop-shadow-lg">{t('biocontrole.auxiliary.desc')}</p>
-          </div>
         </div>
       </header>
 
