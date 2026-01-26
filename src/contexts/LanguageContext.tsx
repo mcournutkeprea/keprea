@@ -136,10 +136,10 @@ const translations: Translations = {
     pt: 'Para isso, aproveitamos o potencial dos insetos para criar soluções agrícolas sustentáveis, eficientes e acessíveis. Nossa abordagem científica e técnica combina'
   },
   'solutions.expertise': {
-    fr: 'savoir faire artisanal, industriel et agronomique',
-    en: 'artisanal, industrial and agronomic expertise',
-    es: 'saber hacer artesanal, industrial y agronómico',
-    pt: 'saber fazer artesanal, industrial e agronômico'
+    fr: 'savoir faire artisanal, maîtrise de la production et compétences agronomiques',
+    en: 'artisanal expertise, production mastery and agronomic skills',
+    es: 'saber hacer artesanal, dominio de la producción y competencias agronómicas',
+    pt: 'saber fazer artesanal, domínio da produção e competências agronômicas'
   },
   'solutions.forFarmers': {
     fr: 'pour répondre aux besoins des agriculteurs.',
