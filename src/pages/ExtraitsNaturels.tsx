@@ -14,7 +14,7 @@ const ExtraitsNaturels = () => {
         backgroundImage: `url(${plantDropletsBg})`
       }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-6">
+        <div className="relative z-10 container mx-auto px-4 py-12">
           <Link to="/#solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
               <ArrowLeft className="w-4 h-4 mr-2" />
