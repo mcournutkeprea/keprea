@@ -215,10 +215,10 @@ const translations: Translations = {
     pt: 'Potenciadores'
   },
   'solutions.boosters.subtitle': {
-    fr: 'activateur de sol et augmentation de la tolérance des cultures aux stress abiotiques',
-    en: 'soil activator and increased crop tolerance to abiotic stress',
-    es: 'activador de suelo y aumento de la tolerancia de los cultivos al estrés abiótico',
-    pt: 'ativador de solo e aumento da tolerância das culturas ao estresse abiótico'
+    fr: 'Activateur de sol et augmentation de la tolérance des cultures aux stress abiotiques',
+    en: 'Soil activator and increased crop tolerance to abiotic stress',
+    es: 'Activador de suelo y aumento de la tolerancia de los cultivos al estrés abiótico',
+    pt: 'Ativador de solo e aumento da tolerância das culturas ao estresse abiótico'
   },
   'solutions.boosters.polypeptides': {
     fr: 'Riche en',
