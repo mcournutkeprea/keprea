@@ -460,10 +460,10 @@ const translations: Translations = {
     pt: 'Sobre a Keprea'
   },
   'about.subtitle': {
-    fr: 'Pionniers des biosolutions agricoles en France',
-    en: 'Pioneers of agricultural biosolutions in France',
-    es: 'Pioneros de las biosoluciones agrícolas en Francia',
-    pt: 'Pioneiros das biosoluções agrícolas na França'
+    fr: 'Producteurs de biosolutions Made in France',
+    en: 'Producers of biosolutions Made in France',
+    es: 'Productores de biosoluciones Made in France',
+    pt: 'Produtores de biosoluções Made in France'
   },
   'about.history.title': {
     fr: 'Notre Histoire',
