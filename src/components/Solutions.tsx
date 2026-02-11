@@ -45,7 +45,7 @@ const Solutions = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.pests')} <span className="text-base font-bold text-green-400">{t('solutions.bioprotection.pestsList')}</span>...</span>
+                  <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.pests')} <span className="text-base font-bold text-primary">{t('solutions.bioprotection.pestsList')}</span>...</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
@@ -70,7 +70,7 @@ const Solutions = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.biopesticides.molecules')} <span className="text-base font-bold text-green-400">{t('solutions.biopesticides.protection')}</span></span>
+                  <span className="text-sm font-semibold text-white">{t('solutions.biopesticides.molecules')} <span className="text-base font-bold text-primary">{t('solutions.biopesticides.protection')}</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
@@ -94,11 +94,11 @@ const Solutions = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-green-400">Polypeptides</span></span>
+                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-primary">Polypeptides</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-green-400">Proline</span></span>
+                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-primary">Proline</span></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
@@ -127,7 +127,7 @@ const Solutions = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-base font-bold text-green-400">{t('solutions.biofertilisant.organic')}</span>
+                  <span className="text-base font-bold text-primary">{t('solutions.biofertilisant.organic')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
