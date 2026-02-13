@@ -54,13 +54,13 @@ const translations: Translations = {
     fr: 'La nature au service de vos cultures',
     en: 'Nature at the service of your crops',
     es: 'La naturaleza al servicio de sus cultivos',
-    pt: 'A natureza a serviço das suas culturas'
+    pt: 'A natureza a trabalhar pelas suas culturas'
   },
   'hero.subtitle': {
     fr: 'Bioprotection, boosters et biofertilisation à base d\'insectes pour une agriculture performante et régénérative',
     en: 'Insect-based bioprotection, boosters and biofertilization for high-performance and regenerative agriculture',
     es: 'Bioprotección, potenciadores y biofertilización a base de insectos para una agricultura de alto rendimiento y regenerativa',
-    pt: 'Bioproteção, potenciadores e biofertilização à base de insetos para uma agricultura de alto desempenho e regenerativa'
+    pt: 'Soluções à base de insetos para bioproteção, biofertilização e bioestimulação, para uma agricultura regenerativa e de alto desempenho.'
   },
   'hero.cta': {
     fr: 'Découvrir notre portfolio',
@@ -115,13 +115,13 @@ const translations: Translations = {
     fr: 'Nos solutions sont pensées par les agriculteurs que nous sommes et pour les agriculteurs.',
     en: 'Our solutions are designed by the farmers we are and for farmers.',
     es: 'Nuestras soluciones están pensadas por los agricultores que somos y para los agricultores.',
-    pt: 'Nossas soluções são pensadas pelos agricultores que somos e para os agricultores.'
+    pt: 'Nossas soluções são pensadas por agricultores, como nós, e para agricultores.'
   },
   'solutions.subtitle2': {
     fr: 'Nous répondons aux défis majeurs des agriculteurs du monde entier :',
     en: 'We address the major challenges faced by farmers worldwide:',
     es: 'Respondemos a los principales desafíos de los agricultores de todo el mundo:',
-    pt: 'Respondemos aos principais desafios enfrentados pelos agricultores em todo o mundo:'
+    pt: 'Respondemos aos principais desafios enfrentados no campo em todo o mundo:'
   },
   'solutions.challenges': {
     fr: 'compétitivité, productivité, préservation des sols, de la biodiversité et du climat',
@@ -139,7 +139,7 @@ const translations: Translations = {
     fr: 'savoir faire artisanal, maîtrise de la production et compétences agronomiques',
     en: 'artisanal expertise, production mastery and agronomic skills',
     es: 'saber hacer artesanal, dominio de la producción y competencias agronómicas',
-    pt: 'saber fazer artesanal, domínio da produção e competências agronômicas'
+    pt: 'saber-fazer artesanal, excelência produtiva e competências agronômicas'
   },
   'solutions.forFarmers': {
     fr: 'pour répondre aux besoins des agriculteurs.',
@@ -164,19 +164,19 @@ const translations: Translations = {
     fr: 'Contre les',
     en: 'Against',
     es: 'Contra',
-    pt: 'Contra'
+    pt: 'Controle'
   },
   'solutions.bioprotection.pestsList': {
     fr: 'pucerons, la pyrale, la cochenille',
     en: 'aphids, corn borer, scale insects',
     es: 'pulgones, la polilla, la cochinilla',
-    pt: 'pulgões, a broca, a cochonilha'
+    pt: 'pulgões, broca, cochonilhas e outras pragas.'
   },
   'solutions.bioprotection.innovation': {
     fr: 'Solutions d\'application innovantes pour une meilleur performance',
     en: 'Innovative application solutions for better performance',
     es: 'Soluciones de aplicación innovadoras para un mejor rendimiento',
-    pt: 'Soluções de aplicação inovadoras para melhor desempenho'
+    pt: 'Tecnologias de aplicação inovadoras para máximo desempenho.'
   },
   'solutions.biopesticides.title': {
     fr: 'Biopesticides',
@@ -194,31 +194,31 @@ const translations: Translations = {
     fr: 'Extraits des',
     en: 'Extracts of',
     es: 'Extractos de',
-    pt: 'Extratos de'
+    pt: 'Moléculas e extratos naturais para'
   },
   'solutions.biopesticides.protection': {
     fr: 'molécules de protection',
     en: 'protective molecules',
     es: 'moléculas de protección',
-    pt: 'moléculas de proteção'
+    pt: 'proteção'
   },
   'solutions.biopesticides.agents': {
     fr: 'Agents actifs naturels',
     en: 'Natural active agents',
     es: 'Agentes activos naturales',
-    pt: 'Agentes ativos naturais'
+    pt: 'Ingredientes ativos de origem natural'
   },
   'solutions.boosters.title': {
     fr: 'Boosters',
     en: 'Boosters',
     es: 'Potenciadores',
-    pt: 'Potenciadores'
+    pt: 'Bioestimulante'
   },
   'solutions.boosters.subtitle': {
     fr: 'Activateur de sol et augmentation de la tolérance des cultures aux stress abiotiques',
     en: 'Soil activator and increased crop tolerance to abiotic stress',
     es: 'Activador de suelo y aumento de la tolerancia de los cultivos al estrés abiótico',
-    pt: 'Ativador de solo e aumento da tolerância das culturas ao estresse abiótico'
+    pt: 'Promove a saúde do solo e aumenta a tolerância das culturas ao estresse abiótico'
   },
   'solutions.boosters.polypeptides': {
     fr: 'Riche en',
@@ -230,7 +230,7 @@ const translations: Translations = {
     fr: 'Extraits actifs',
     en: 'Active extracts',
     es: 'Extractos activos',
-    pt: 'Extratos ativos'
+    pt: 'Extratos bioativos'
   },
   'solutions.biofertilisant.title': {
     fr: 'Biofertilisant',
@@ -242,7 +242,7 @@ const translations: Translations = {
     fr: 'Nutrition optimale des cultures',
     en: 'Optimal crop nutrition',
     es: 'Nutrición óptima de cultivos',
-    pt: 'Nutrição ideal das culturas'
+    pt: 'Nutrição completa para suas culturas'
   },
   'solutions.biofertilisant.organic': {
     fr: 'Riche en matière organique',
@@ -254,7 +254,7 @@ const translations: Translations = {
     fr: 'Concentration équilibrée en  NPK',
     en: 'Balanced NPK concentration',
     es: 'Concentración equilibrada de NPK',
-    pt: 'Concentração equilibrada de NPK'
+    pt: 'Equilíbrio de NPK para melhor desempenho'
   },
   // Innovation section
   'innovation.title': {
@@ -354,7 +354,7 @@ const translations: Translations = {
     fr: 'Découvrez notre site de production moderne situé à Dole, en France, où nous développons et produisons nos biosolutions',
     en: 'Discover our modern production site located in Dole, France, where we develop and produce our biosolutions',
     es: 'Descubra nuestro moderno sitio de producción ubicado en Dole, Francia, donde desarrollamos y producimos nuestras biosoluciones',
-    pt: 'Descubra nosso moderno local de produção localizado em Dole, França, onde desenvolvemos e produzimos nossas biosoluções'
+    pt: 'Descubra a nossa moderna unidade de produção, localizada em Dole, França, onde desenvolvemos e produzimos as nossas biosoluções.'
   },
   'production.excellence': {
     fr: 'Un site d\'excellence',
@@ -372,7 +372,7 @@ const translations: Translations = {
     fr: 'Situé sur la ville de Dole, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d\'un important bassin céréalier et viticole français.',
     en: 'Located in the city of Dole, our site is only 2 hours from Paris, Basel, Geneva and Lyon, in the heart of an important French cereal and wine-growing basin.',
     es: 'Situado en la ciudad de Dole, nuestro sitio está a solo 2 horas de París, Basilea, Ginebra y Lyon, en el corazón de una importante cuenca cerealera y vitícola francesa.',
-    pt: 'Localizado na cidade de Dole, nosso local fica a apenas 2 horas de Paris, Basileia, Genebra e Lyon, no coração de uma importante bacia cerealífera e vitícola francesa.'
+    pt: 'Localizado na cidade de Dole, nossa unidade fica a apenas 2 horas de Paris, Basileia, Genebra e Lyon, no coração de uma importante região produtora de cereais e cultivo de uva para vinho na França.'
   },
   'production.technology.title': {
     fr: 'Technologies modernes',
@@ -444,7 +444,7 @@ const translations: Translations = {
     fr: 'Conseil d\'utilisation en plein champ',
     en: 'Field Application Advice',
     es: 'Consejo de uso en campo',
-    pt: 'Conselho de uso no campo'
+    pt: 'Orientação de uso no campo'
   },
   'production.process.transport': {
     fr: 'Transport',
@@ -493,7 +493,7 @@ const translations: Translations = {
     fr: '7 associés experts',
     en: '7 expert associates',
     es: '7 socios expertos',
-    pt: '7 associados especialistas'
+    pt: 'sete sócios especialistas'
   },
   'about.history.p1.roles': {
     fr: '(agriculteurs, entomologistes, agronomes et entrepreneurs)',
@@ -505,13 +505,13 @@ const translations: Translations = {
     fr: 'Keprea est née d\'une vision commune :',
     en: 'Keprea was born from a common vision:',
     es: 'Keprea nació de una visión común:',
-    pt: 'A Keprea nasceu de uma visão comum:'
+    pt: 'a Keprea nasceu de uma visão comum:'
   },
   'about.history.p1.vision.bold': {
     fr: 'que le vivant revienne au cœur de la gestion de la ferme.',
     en: 'bringing life back to the heart of farm management.',
     es: 'que lo vivo vuelva al corazón de la gestión de la granja.',
-    pt: 'trazer a vida de volta ao coração da gestão da fazenda.'
+    pt: 'trazer a vida de volta ao centro da gestão da fazenda.'
   },
   'about.history.p2.location': {
     fr: 'Implantée à proximité de',
@@ -529,7 +529,7 @@ const translations: Translations = {
     fr: ', notre site de production de',
     en: ', our production site of',
     es: ', nuestro sitio de producción de',
-    pt: ', nosso local de produção de'
+    pt: ', a nossa unidade de produção, com'
   },
   'about.history.p2.size': {
     fr: '3 000 m²',
@@ -541,7 +541,7 @@ const translations: Translations = {
     fr: 'nous permet de développer une gamme complète de solutions pour les agriculteurs : solutions de',
     en: 'allows us to develop a complete range of solutions for farmers: solutions of',
     es: 'nos permite desarrollar una gama completa de soluciones para los agricultores: soluciones de',
-    pt: 'nos permite desenvolver uma gama completa de soluções para os agricultores: soluções de'
+    pt: ', nos permite desenvolver uma gama completa de soluções para os agricultores: soluções de'
   },
   'about.history.p2.bioprotection': {
     fr: 'bioprotection',
@@ -565,7 +565,7 @@ const translations: Translations = {
     fr: 'et activateurs de sols pour la résistance des cultures contre les stress abiotiques,',
     en: 'and soil activators for crop resistance against abiotic stress,',
     es: 'y activadores de suelo para la resistencia de los cultivos contra el estrés abiótico,',
-    pt: 'e ativadores de solo para a resistência das culturas contra o estresse abiótico,'
+    pt: 'e ativadores de solo para reforçar a resistência das culturas ao estresse abiótico,'
   },
   'about.history.p2.biofertilisants': {
     fr: 'biofertilisants',
@@ -577,13 +577,13 @@ const translations: Translations = {
     fr: 'pour régénérer les sols et nourrir les cultures. Toutes ces solutions étant utilisables en',
     en: 'to regenerate soils and nourish crops. All these solutions can be used in',
     es: 'para regenerar los suelos y nutrir los cultivos. Todas estas soluciones se pueden usar en',
-    pt: 'para regenerar os solos e nutrir as culturas. Todas essas soluções podem ser usadas em'
+    pt: 'para regenerar os solos e nutrir as culturas. Todas essas soluções podem ser utilizadas na'
   },
   'about.history.p2.organic': {
     fr: 'agriculture biologique',
     en: 'organic farming',
     es: 'agricultura ecológica',
-    pt: 'agricultura orgânica'
+    pt: 'agricultura orgânica.'
   },
   'about.history.p3': {
     fr: 'Notre expertise en',
@@ -601,7 +601,7 @@ const translations: Translations = {
     fr: 'nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.',
     en: 'allows us to guarantee products of stable and reproducible quality, meeting the strictest requirements of the agricultural world.',
     es: 'nos permite garantizar productos de calidad estable y reproducible, que cumplen con los requisitos más estrictos del mundo agrícola.',
-    pt: 'nos permite garantir produtos de qualidade estável e reproduzível, atendendo aos requisitos mais rigorosos do mundo agrícola.'
+    pt: 'garante produtos de qualidade, que atendem aos requisitos mais rigorosos do setor agrícola.'
   },
   // About values
   'about.value1.title': {
