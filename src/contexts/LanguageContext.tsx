@@ -1355,7 +1355,7 @@ const translations: Translations = {
     fr: 'Stimule le SDP',
     en: 'Stimulates the PDS',
     es: 'Estimula el SDP',
-    pt: 'Estimula o SDP'
+    pt: 'Estimula as defesas naturais das plantas'
   },
   'boosters.soilea.benefit3': {
     fr: 'Augmente la présence des bons microorganismes',
