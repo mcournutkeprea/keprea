@@ -45,7 +45,7 @@ const Solutions = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.pests')} <span className="text-base font-bold text-primary">{t('solutions.bioprotection.pestsList')}</span>...</span>
+                  <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.pests')} <span className="text-base font-bold text-primary">{t('solutions.bioprotection.pestsList')}</span></span>
                 </div>
                 
                 <div className="flex items-center gap-2">
