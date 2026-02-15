@@ -11,7 +11,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <a href="/" className="inline-block">
               <img 
-                src="/lovable-uploads/eprea_Main_Logo_800x600.jpg" 
+                src="/lovable-uploads/eprea_Main_Logo.png" 
                 alt="Keprea Logo" 
                 className="h-16 w-auto mx-4 my-2 cursor-pointer hover:opacity-80 transition-opacity"
               />
