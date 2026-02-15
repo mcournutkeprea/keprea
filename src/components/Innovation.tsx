@@ -4,6 +4,7 @@ import biocontrolInfographic from "@/assets/biocontrol-vivant-infographic.png";
 import biocontrolInfographicEs from "@/assets/biocontrol-vivant-infographic-es.png";
 import biocontrolInfographicEn from "@/assets/biocontrol-vivant-infographic-en.png";
 import biocontrolInfographicPt from "@/assets/biocontrol-vivant-infographic-pt.png";
+import biocontrolInfographicDe from "@/assets/biocontrol-vivant-infographic-de.png";
 import extraitsInfographic from "@/assets/substances-insectes-benefits.png";
 import extraitsInfographicEs from "@/assets/substances-insectes-benefits-es.png";
 import extraitsInfographicEn from "@/assets/substances-insectes-benefits-en.png";
@@ -15,7 +16,7 @@ const Innovation = () => {
   const [isFlippedBee, setIsFlippedBee] = useState(false);
 
   const currentExtraitsInfographic = language === 'es' ? extraitsInfographicEs : language === 'en' ? extraitsInfographicEn : language === 'pt' ? extraitsInfographicPt : extraitsInfographic;
-  const currentBiocontrolInfographic = language === 'es' ? biocontrolInfographicEs : language === 'en' ? biocontrolInfographicEn : language === 'pt' ? biocontrolInfographicPt : biocontrolInfographic;
+  const currentBiocontrolInfographic = language === 'es' ? biocontrolInfographicEs : language === 'en' ? biocontrolInfographicEn : language === 'pt' ? biocontrolInfographicPt : language === 'de' ? biocontrolInfographicDe : biocontrolInfographic;
 
   return (
     <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
