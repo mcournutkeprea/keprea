@@ -20,16 +20,16 @@ const Navigation = () => {
           
           <div className="hidden md:flex flex-1 justify-center">
             <div className="flex items-baseline space-x-16">
-              <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
+              <a href="#solutions" className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.solutions')}
               </a>
-              <a href="#innovation" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
+              <a href="#innovation" className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.innovation')}
               </a>
-              <a href="#production" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap">
+              <a href="#production" className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap">
                 {t('nav.production')}
               </a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-lg font-medium whitespace-nowrap flex items-center gap-1">
+              <a href="#about" className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap flex items-center gap-1">
                 {t('nav.about')}
                 <span className="text-sm">🐞</span>
               </a>
