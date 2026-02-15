@@ -43,15 +43,15 @@ const Solutions = () => {
               <p className="text-base font-semibold text-white/90 mb-4">{t('solutions.bioprotection.subtitle')}</p>
               
               <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.pests')} <span className="text-base font-bold text-primary">{t('solutions.bioprotection.pestsList')}</span></span>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.innovation')}</span>
-                </div>
+                <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.pests')} <span className="text-base font-bold text-primary">{t('solutions.bioprotection.pestsList')}</span></span>
+                 </div>
+                 
+                 <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.bioprotection.innovation')}</span>
+                 </div>
               </div>
             </div>
             
@@ -68,14 +68,14 @@ const Solutions = () => {
               <p className="text-base font-semibold text-white/90 mb-4">{t('solutions.biopesticides.subtitle')}</p>
               
               <div className="space-y-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.biopesticides.molecules')} <span className="text-base font-bold text-primary">{t('solutions.biopesticides.protection')}</span></span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.biopesticides.agents')}</span>
-                </div>
+                <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.biopesticides.molecules')} <span className="text-base font-bold text-primary">{t('solutions.biopesticides.protection')}</span></span>
+                 </div>
+                 <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.biopesticides.agents')}</span>
+                 </div>
               </div>
             </div>
             
@@ -92,18 +92,18 @@ const Solutions = () => {
               <p className="text-base font-semibold text-white/90 mb-4">{t('solutions.boosters.subtitle')}</p>
               
               <div className="space-y-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-primary">Polypeptides</span></span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-primary">Proline</span></span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.boosters.substances')}</span>
-                </div>
+                <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-primary">Polypeptides</span></span>
+                 </div>
+                 <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.boosters.polypeptides')} <span className="text-base font-bold text-primary">Proline</span></span>
+                 </div>
+                 <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.boosters.substances')}</span>
+                 </div>
               </div>
             </div>
             
@@ -125,14 +125,14 @@ const Solutions = () => {
               <p className="text-base font-semibold text-white/90 mb-4">{t('solutions.biofertilisant.subtitle')}</p>
               
               <div className="space-y-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-base font-bold text-primary">{t('solutions.biofertilisant.organic')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                  <span className="text-sm font-semibold text-white">{t('solutions.biofertilisant.npk')}</span>
-                </div>
+                <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-base font-bold text-primary">{t('solutions.biofertilisant.organic')}</span>
+                 </div>
+                 <div className="flex items-start gap-3">
+                   <div className="w-3 h-3 rounded-full bg-white mt-1 shrink-0"></div>
+                   <span className="text-sm font-semibold text-white">{t('solutions.biofertilisant.npk')}</span>
+                 </div>
               </div>
             </div>
           </div>
