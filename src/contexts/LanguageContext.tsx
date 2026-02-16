@@ -1059,11 +1059,11 @@ const translations: Translations = {
   },
   // SubstancesNaturelles page
   'substances.title': {
-    fr: 'Extraits Naturels',
-    en: 'Natural Extracts',
-    es: 'Extractos Naturales',
-    pt: 'Extratos Naturais',
-    de: 'Natürliche Extrakte'
+    fr: 'Biopesticides',
+    en: 'Biopesticides',
+    es: 'Biopesticidas',
+    pt: 'Biopesticidas',
+    de: 'Biopestizide'
   },
   'substances.subtitle': {
     fr: 'Solutions performantes à base d\'extraits naturels d\'insectes',
