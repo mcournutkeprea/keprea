@@ -1,4 +1,5 @@
 import { ArrowLeft, Wheat, Droplets, Leaf, Shield } from "lucide-react";
+import logoAb from "@/assets/logo-ab.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -8,7 +9,7 @@ const Biofertilisant = () => {
   } = useLanguage();
   return <div className="min-h-screen bg-background">
       {/* Header avec bouton retour et background */}
-      <header className="relative shadow-sm min-h-[280px]">
+       <header className="relative shadow-sm min-h-[280px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
       }}></div>
@@ -26,11 +27,8 @@ const Biofertilisant = () => {
               {t('biofertilisant.subtitle')}
             </p>
           </div>
-          
-          <div className="mt-12 mb-8 text-center">
-            
-          </div>
         </div>
+        <img src={logoAb} alt="Agriculture Biologique" className="absolute bottom-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-10" />
       </header>
 
       {/* Composition section */}
