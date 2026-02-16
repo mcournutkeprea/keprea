@@ -32,14 +32,11 @@ const Biofertilisant = () => {
       </header>
 
       {/* Nom du produit */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold text-primary">Fertea432</h2>
-        </div>
-      </section>
-
       {/* Composition section */}
-      <section className="py-16 px-4">
+      <section className="pt-10 pb-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-2xl font-bold text-primary mb-8">Fertea432</h2>
+        </div>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl text-center shadow-lg">
