@@ -31,6 +31,13 @@ const Biofertilisant = () => {
         <img src={logoAb} alt="Agriculture Biologique" className="absolute bottom-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-10" />
       </header>
 
+      {/* Nom du produit */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-2xl font-bold text-primary">Fertea432</h2>
+        </div>
+      </section>
+
       {/* Composition section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
