@@ -1,59 +1,24 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
   const { t } = useLanguage();
-  const [currentVideo, setCurrentVideo] = useState(0);
-  const [activePlayer, setActivePlayer] = useState<1 | 2>(1);
-  const video1Ref = useRef<HTMLVideoElement>(null);
-  const video2Ref = useRef<HTMLVideoElement>(null);
-  const isMobile = useIsMobile();
-  const videos = ['/portfolio-video-1.mp4', '/portfolio-video-2.mp4', '/portfolio-video-3.mp4', '/portfolio-video-4.mp4'];
-
-  useEffect(() => {
-    const currentRef = activePlayer === 1 ? video1Ref.current : video2Ref.current;
-    const nextRef = activePlayer === 1 ? video2Ref.current : video1Ref.current;
-    if (!currentRef || !nextRef) return;
-    let timer: NodeJS.Timeout;
-    const loadAndPlayVideo = () => {
-      currentRef.src = videos[currentVideo];
-      currentRef.load();
-      const playVideo = () => {
-        currentRef.play().catch(console.error);
-      };
-      if (currentRef.readyState >= 2) {
-        playVideo();
-      } else {
-        currentRef.addEventListener('canplay', playVideo, { once: true });
-      }
-      const nextVideoIndex = (currentVideo + 1) % videos.length;
-      nextRef.src = videos[nextVideoIndex];
-      nextRef.load();
-    };
-    loadAndPlayVideo();
-    timer = setTimeout(() => {
-      setCurrentVideo(prev => (prev + 1) % videos.length);
-      setActivePlayer(prev => prev === 1 ? 2 : 1);
-    }, 10000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [currentVideo, activePlayer, videos]);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video ref={video1Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${activePlayer === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
-          setCurrentVideo(prev => (prev + 1) % videos.length);
-          setActivePlayer(2);
-        }} />
-        <video ref={video2Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${activePlayer === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
-          setCurrentVideo(prev => (prev + 1) % videos.length);
-          setActivePlayer(1);
-        }} />
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover absolute inset-0"
+          autoPlay
+          muted
+          playsInline
+          loop
+          src="/portfolio-video-1.mp4"
+        />
         <div className="absolute inset-0 bg-black/40 z-20" />
       </div>
 
