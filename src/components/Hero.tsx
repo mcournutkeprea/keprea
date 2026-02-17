@@ -17,7 +17,7 @@ const Hero = () => {
           muted
           playsInline
           loop
-          src="/portfolio-video-1.mp4"
+          src="/portfolio-video-3.mp4"
         />
         <div className="absolute inset-0 bg-black/40 z-20" />
       </div>
