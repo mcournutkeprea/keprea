@@ -46,11 +46,11 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video ref={video1Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${activePlayer === 1 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
+        <video ref={video1Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${activePlayer === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
           setCurrentVideo(prev => (prev + 1) % videos.length);
           setActivePlayer(2);
         }} />
-        <video ref={video2Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${activePlayer === 2 ? 'opacity-100 z-10' : isMobile ? 'opacity-0 z-0' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
+        <video ref={video2Ref} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${activePlayer === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} autoPlay muted playsInline loop={false} onEnded={() => {
           setCurrentVideo(prev => (prev + 1) % videos.length);
           setActivePlayer(1);
         }} />
