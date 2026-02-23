@@ -19,7 +19,7 @@ const Hero = () => {
           loop
           src="/portfolio-video-4.mp4"
         />
-        <div className="absolute inset-0 bg-black/40 z-20" />
+        <div className="absolute inset-0 bg-black/25 z-20" />
       </div>
 
       {/* Content */}
