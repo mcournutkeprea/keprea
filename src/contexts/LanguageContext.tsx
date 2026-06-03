@@ -107,18 +107,18 @@ const translations: Translations = {
     de: 'entwickelte Lösungen, davon 3 bereits verfügbar'
   },
   'hero.stat3.value': {
-    fr: '0€',
-    en: '€0',
-    es: '0€',
-    pt: '0€',
-    de: '0€'
+    fr: '✓',
+    en: '✓',
+    es: '✓',
+    pt: '✓',
+    de: '✓'
   },
   'hero.stat3.label': {
-    fr: 'aucun investissement dans du nouveau matériel agricole pour les producteurs',
-    en: 'no investment in new agricultural equipment for producers',
-    es: 'sin inversión en nuevo equipo agrícola para los productores',
-    pt: 'nenhum investimento em novos equipamentos agrícolas para os produtores',
-    de: 'keine Investition in neue landwirtschaftliche Ausrüstung für Erzeuger'
+    fr: 'Compatible avec votre équipement agricole existant',
+    en: 'Compatible with your existing farm equipment',
+    es: 'Compatible con su equipo agrícola existente',
+    pt: 'Compatível com o seu equipamento agrícola existente',
+    de: 'Kompatibel mit Ihrer bestehenden landwirtschaftlichen Ausrüstung'
   },
   // Solutions section
   'solutions.title': {
