@@ -45,7 +45,6 @@ const Navigation = () => {
                   className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap"
                 >
                   {item.label}
-                  {item.id === 'about' && <span className="text-sm ml-1">🐞</span>}
                 </a>
               ))}
             </div>
@@ -87,7 +86,7 @@ const Navigation = () => {
                 className="text-primary hover:text-primary/80 text-lg font-medium text-left"
               >
                 {item.label}
-                {item.id === 'about' && <span className="text-sm ml-1">🐞</span>}
+                
               </button>
             ))}
             <Button
