@@ -21,7 +21,7 @@ const ProductsSchema = () => {
     
     if (!currentVideoElement || !nextVideoElement) return;
 
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
 
     // Preload and prepare next video first (disabled on mobile to save bandwidth)
     if (!isMobile) {
