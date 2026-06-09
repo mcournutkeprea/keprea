@@ -27,7 +27,7 @@ const Solutions = () => {
     <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-red-600 mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4">
             {t('solutions.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
