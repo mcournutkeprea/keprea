@@ -200,7 +200,7 @@ const translations: Translations = {
     de: 'Blattläuse, Maiszünsler, Schildläuse'
   },
   'solutions.bioprotection.innovation': {
-    fr: 'Solutions d\'application innovantes pour une meilleur performance',
+    fr: 'Solutions d\'application innovantes pour une meilleure performance',
     en: 'Innovative application solutions for better performance',
     es: 'Soluciones de aplicación innovadoras para un mejor rendimiento',
     pt: 'Tecnologias de aplicação inovadoras para máximo desempenho.',
@@ -291,7 +291,7 @@ const translations: Translations = {
     de: 'Reich an organischer Substanz'
   },
   'solutions.biofertilisant.npk': {
-    fr: 'Concentration équilibrée en  NPK',
+    fr: 'Concentration équilibrée en NPK',
     en: 'Balanced NPK concentration',
     es: 'Concentración equilibrada de NPK',
     pt: 'Equilíbrio de NPK para melhor desempenho',
@@ -1101,7 +1101,7 @@ const translations: Translations = {
     de: '✓ Abwehrstimulation'
   },
   'substances.benefit2.desc': {
-    fr: 'Contre les ravageurs des feuilles, de la tige et des système racinaire',
+    fr: 'Contre les ravageurs des feuilles, de la tige et du système racinaire',
     en: 'Against leaf, stem and root system pests',
     es: 'Contra las plagas de hojas, tallos y sistema radicular',
     pt: 'Contra pragas de folhas, caules e sistema radicular',
@@ -1129,7 +1129,7 @@ const translations: Translations = {
     de: '✓ Flüssige und feste Lösungen'
   },
   'substances.benefit4.desc': {
-    fr: 'En pulvérisation et en micro-granulateurs',
+    fr: 'En pulvérisation et en micro-granulés',
     en: 'For spraying and micro-granulators',
     es: 'En pulverización y micro-granuladores',
     pt: 'Em pulverização e micro-granuladores',
@@ -1228,7 +1228,7 @@ const translations: Translations = {
     de: 'Blattläuse'
   },
   'biocontrole.pest1.desc': {
-    fr: 'Contre tout types de pucerons en champs et sous serre',
+    fr: 'Contre tous types de pucerons en champs et sous serre',
     en: 'Against all types of aphids in fields and greenhouses',
     es: 'Contra todo tipo de pulgones en campos e invernaderos',
     pt: 'Contra todos os tipos de pulgões em campos e estufas',
@@ -1559,7 +1559,7 @@ const translations: Translations = {
     de: 'Stimuliert die Photosynthese'
   },
   'boosters.soilea.desc': {
-    fr: '2% de chitine pure pour stimuler l\'activité chitinolitique des sols et améliorer la système de défense des plantes.',
+    fr: '2% de chitine pure pour stimuler l\'activité chitinolytique des sols et améliorer le système de défense des plantes.',
     en: '2% pure chitin to stimulate soil chitinolytic activity and improve plant defense systems.',
     es: '2% de quitina pura para estimular la actividad quitinolítica de los suelos y mejorar el sistema de defensa de las plantas.',
     pt: '2% de quitina pura para estimular a atividade quitinolítica dos solos e melhorar o sistema de defesa das plantas.',
