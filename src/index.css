@@ -292,3 +292,10 @@ All colors MUST be HSL.
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* Hide Lovable badge */
+#lovable-badge,
+[data-lovable-badge],
+.lovable-badge {
+  display: none !important;
+}
