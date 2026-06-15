@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "./LanguageSelector";
@@ -7,19 +8,36 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Navigation = () => {
   const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleNavClick = (sectionId: string) => {
+  const isHomePage = location.pathname === "/";
+
+  const handleSectionClick = (sectionId: string) => {
     setMobileMenuOpen(false);
-    setTimeout(() => {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    if (isHomePage) {
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
+  const handleContactClick = () => {
+    setMobileMenuOpen(false);
+    if (isHomePage) {
+      document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/contact");
+    }
   };
 
   const navItems = [
-    { id: 'solutions', label: t('nav.solutions') },
-    { id: 'innovation', label: t('nav.innovation') },
-    { id: 'production', label: t('nav.production') },
-    { id: 'about', label: t('nav.about') },
+    { id: "solutions", label: t("nav.solutions"), href: "/solutions" },
+    { id: "innovation", label: t("nav.innovation"), href: null },
+    { id: "production", label: t("nav.production"), href: "/notre-production" },
+    { id: "about", label: t("nav.about"), href: "/qui-sommes-nous" },
   ];
 
   return (
@@ -27,37 +45,43 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <a href="/" className="inline-block">
-              <img 
-                src="/lovable-uploads/eprea_Main_Logo.png" 
-                alt="Keprea Logo" 
+            <Link to="/" className="inline-block">
+              <img
+                src="/lovable-uploads/eprea_Main_Logo.png"
+                alt="Keprea Logo"
                 className="h-16 w-auto mx-4 my-2 cursor-pointer hover:opacity-80 transition-opacity"
               />
-            </a>
+            </Link>
           </div>
-          
+
           <div className="hidden md:flex flex-1 justify-center">
             <div className="flex items-baseline space-x-16">
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                item.href ? (
+                  <Link
+                    key={item.id}
+                    to={item.href}
+                    className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.id}
+                    href={isHomePage ? `#${item.id}` : `/#${item.id}`}
+                    className="text-primary hover:text-primary/80 transition-colors text-lg font-medium whitespace-nowrap"
+                  >
+                    {item.label}
+                  </a>
+                )
+              )}
             </div>
           </div>
-          
+
           <div className="hidden md:flex items-center gap-4">
             <LanguageSelector />
-            <Button 
-              variant="default" 
-              size="sm"
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              {t('nav.contact')}
+            <Button variant="default" size="sm" onClick={handleContactClick}>
+              {t("nav.contact")}
             </Button>
           </div>
 
@@ -75,27 +99,37 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile menu dropdown */}
+      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <div className="flex flex-col px-6 py-4 space-y-4">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className="text-primary hover:text-primary/80 text-lg font-medium text-left"
-              >
-                {item.label}
-                
-              </button>
-            ))}
+            {navItems.map((item) =>
+              item.href ? (
+                <Link
+                  key={item.id}
+                  to={item.href}
+                  className="text-primary hover:text-primary/80 text-lg font-medium text-left"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => handleSectionClick(item.id)}
+                  className="text-primary hover:text-primary/80 text-lg font-medium text-left"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
             <Button
               variant="default"
               size="sm"
               className="w-fit"
-              onClick={() => handleNavClick('contact-form')}
+              onClick={handleContactClick}
             >
-              {t('nav.contact')}
+              {t("nav.contact")}
             </Button>
           </div>
         </div>

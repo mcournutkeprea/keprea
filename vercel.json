@@ -1,5 +1,28 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/biofertilisant",
+      "destination": "/solutions/biofertilisant",
+      "permanent": true
+    },
+    {
+      "source": "/boosters",
+      "destination": "/solutions/boosters",
+      "permanent": true
+    },
+    {
+      "source": "/extraits-naturels",
+      "destination": "/solutions/biopesticides",
+      "permanent": true
+    },
+    {
+      "source": "/biocontrole-vivant",
+      "destination": "/solutions/bioprotection",
+      "permanent": true
+    }
+  ]
 }

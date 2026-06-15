@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { ArrowLeft, Leaf, FlaskConical } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
@@ -8,6 +9,10 @@ const ExtraitsNaturels = () => {
     t
   } = useLanguage();
   return <div className="min-h-screen bg-background">
+      <Head>
+        <title>Biopesticides Naturels Keprea | Extraits d'Insectes</title>
+        <meta name="description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
+      </Head>
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm min-h-[280px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -15,7 +20,7 @@ const ExtraitsNaturels = () => {
       }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <Link to="/#solutions">
+          <Link to="/solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t('product.back')}

@@ -45,7 +45,8 @@
 | Décision | Statut |
 |----------|--------|
 | Migration vers GitHub + Vercel | Planifiée (Phase 2) |
-| Architecture multi-pages (12 URLs cibles) | Validée |
+| Architecture multi-pages (12 URLs cibles) | **Implémentée (Phase 5.3)** |
+| Pré-rendu statique (option A : vite-react-ssg) | **Implémentée (Phase 5.2)** |
 | Suppression du badge Lovable | Corrigé (Phase 0) |
 | Ajout témoignages agriculteurs | Priorité absolue |
 | Page « Pourquoi le biocontrôle ? » | À créer (Phase 2) |
@@ -146,3 +147,4 @@
 | 15 juin 2026 | Phase 0 complétée : badge Lovable supprimé, emojis → icônes lucide, description dupliquée corrigée. Nouvelle erreur découverte : `lang="en"` dans `index.html`. |
 | 15 juin 2026 | Phase 1 Conformité complétée : `lang="fr"`, Footer, Mentions légales, Politique de confidentialité, CookieBanner, case RGPD formulaire. SIRET/capital/hébergeur restent à renseigner dans `MentionsLegales.tsx`. |
 | 15 juin 2026 | Phase 1 Conversion complétée : formulaire réduit à 5 champs (Prénom, Entreprise, Email, Message, RGPD), contraste CTA corrigé (primaire 37%→30% L, WCAG AA ≥ 4.5:1), poster ajouté sur 3 vidéos. |
+| 15 juin 2026 | Phase 5.2 + 5.3 complétées : migration SPA → SSG avec `vite-react-ssg` (option A), 17 pages HTML statiques pré-rendues. 12 routes cibles implémentées + redirections 301 Vercel + React Router pour anciennes URLs. `<Head>` (react-helmet-async SSG) injecté sur toutes les pages. Navigation mise à jour multi-page. |

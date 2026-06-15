@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Solutions from "@/components/Solutions";
@@ -13,6 +14,13 @@ import CookieBanner from "@/components/CookieBanner";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Keprea — Biosolutions Agricoles à base d'Insectes | Dole, Jura</title>
+        <meta
+          name="description"
+          content="Keprea développe des biosolutions à base d'insectes pour l'agriculture : bioprotection vivante, biopesticides naturels, boosters de croissance et biofertilisants. Dole (39)."
+        />
+      </Head>
       <Navigation />
       <Hero />
       <Solutions />

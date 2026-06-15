@@ -7,19 +7,19 @@ const Solutions = () => {
   const navigate = useNavigate();
 
   const handleBiofertilisantClick = () => {
-    navigate('/biofertilisant');
+    navigate('/solutions/biofertilisant');
     window.scrollTo(0, 0);
   };
   const handleBoostersClick = () => {
-    navigate('/boosters');
+    navigate('/solutions/boosters');
     window.scrollTo(0, 0);
   };
   const handleExtraitsClick = () => {
-    navigate('/extraits-naturels');
+    navigate('/solutions/biopesticides');
     window.scrollTo(0, 0);
   };
   const handleBiocontroleClick = () => {
-    navigate('/biocontrole-vivant');
+    navigate('/solutions/bioprotection');
     window.scrollTo(0, 0);
   };
 

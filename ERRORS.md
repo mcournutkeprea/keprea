@@ -122,3 +122,5 @@
 | 15/06/2026 | Emojis non-pro (×9) | Icônes lucide dans `Production.tsx`, `ExtraitsNaturels.tsx`, `LanguageContext.tsx` |
 | 15/06/2026 | Cartes valeurs dupliquées | Description "Impact Mesurable" différenciée dans `LanguageContext.tsx` |
 | 15/06/2026 | Faute "meilleur performance" | Déjà correcte dans le code source — aucune action requise |
+| 15/06/2026 | `localStorage` appelé au niveau module dans `supabase/client.ts` | Gardé `typeof window !== 'undefined'` pour compatibilité SSG Node.js |
+| 15/06/2026 | Architecture SPA sans pré-rendu HTML (frein SEO) | Migration vers `vite-react-ssg` — 17 pages HTML statiques générées au build |

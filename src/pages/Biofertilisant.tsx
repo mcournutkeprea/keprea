@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { ArrowLeft, Wheat, Droplets, Leaf, Shield } from "lucide-react";
 import logoAb from "@/assets/logo-ab.png";
 import { Link } from "react-router-dom";
@@ -8,6 +9,10 @@ const Biofertilisant = () => {
     t
   } = useLanguage();
   return <div className="min-h-screen bg-background">
+      <Head>
+        <title>Fertea432 — Biofertilisant Keprea | Fertilisation Organique NPK</title>
+        <meta name="description" content="Fertea432, biofertilisant à base d'insectes Keprea : 4% P, 3% N, 2% K, 85% matière organique. Homologué agriculture biologique. Améliore la structure du sol." />
+      </Head>
       {/* Header avec bouton retour et background */}
        <header className="relative shadow-sm min-h-[280px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -16,7 +21,7 @@ const Biofertilisant = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="relative">
-            <Link to="/#solutions">
+            <Link to="/solutions">
               <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 {t('product.back')}

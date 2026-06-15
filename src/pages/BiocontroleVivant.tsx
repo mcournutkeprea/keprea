@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,10 @@ const BiocontroleVivant = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs</title>
+        <meta name="description" content="Biocontrôle vivant Keprea : auxiliaires entomophages pour lutter contre pucerons, pyrales, cochenilles et aleurodes. Solutions naturelles homologuées AB." />
+      </Head>
       {/* Header avec bouton retour et background */}
       <header className="relative shadow-sm min-h-[280px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -19,7 +24,7 @@ const BiocontroleVivant = () => {
         }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <Link to="/#solutions">
+          <Link to="/solutions">
             <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t('product.back')}
