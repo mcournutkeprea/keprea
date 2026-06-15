@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -90,11 +89,8 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">{t('contact.form.title')}</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
+        <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
+          <h3 className="text-xl font-semibold text-foreground text-center mb-6">{t('contact.form.title')}</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName">{t('contact.form.firstName')} *</Label>
@@ -161,9 +157,7 @@ const ContactForm = () => {
                 {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
               </Button>
             </form>
-            
-          </CardContent>
-        </Card>
+        </div>
       </div>
     </section>
   );
