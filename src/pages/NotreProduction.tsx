@@ -14,6 +14,17 @@ const NotreProduction = () => (
     </Head>
     <Navigation />
     <main className="flex-1 pt-20">
+      <section className="py-12 px-4 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Notre Production
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            De l'élevage d'insectes à la formulation finale : un process maîtrisé
+            de bout en bout depuis notre site de Dole, dans le Jura.
+          </p>
+        </div>
+      </section>
       <Production />
     </main>
     <Footer />

@@ -38,6 +38,7 @@ const Navigation = () => {
     { id: "innovation", label: t("nav.innovation"), href: null },
     { id: "production", label: t("nav.production"), href: "/notre-production" },
     { id: "about", label: t("nav.about"), href: "/qui-sommes-nous" },
+    { id: "ressources", label: "Ressources", href: "/ressources" },
   ];
 
   return (

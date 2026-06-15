@@ -50,6 +50,16 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <Link to="/ressources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Ressources
+                </Link>
+              </li>
+              <li>
+                <Link to="/pourquoi-le-biocontrole" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Pourquoi le biocontrôle ?
+                </Link>
+              </li>
             </ul>
           </div>
 

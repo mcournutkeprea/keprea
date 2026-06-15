@@ -15,6 +15,17 @@ const QuiSommesNous = () => (
     </Head>
     <Navigation />
     <main className="flex-1 pt-20">
+      <section className="py-12 px-4 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Qui Sommes-Nous
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Une équipe pluridisciplinaire au service d'une agriculture plus durable,
+            réunie autour de la biologie des insectes.
+          </p>
+        </div>
+      </section>
       <About />
       <Team />
     </main>
