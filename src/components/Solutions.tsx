@@ -24,18 +24,13 @@ const Solutions = () => {
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-3">
             {t('solutions.title')}
           </h2>
-          <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">
-            <span className="text-foreground font-medium">{t('solutions.subtitle')}</span>{' '}
-            {t('solutions.subtitle2')}{' '}
-            <span className="text-primary font-semibold">{t('solutions.challenges')}</span>.{' '}
-            {t('solutions.approach')}{' '}
-            <span className="text-primary font-semibold">{t('solutions.expertise')}</span>{' '}
-            {t('solutions.forFarmers')}
+          <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
+            {t('solutions.subtitle')}
           </p>
         </div>
 
         {/* Asymmetric 3-column brick grid: [2/3 + 1/3] then [1/3 + 2/3] */}
-        <div ref={gridRef as RefObject<HTMLDivElement>} className={`grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl reveal reveal-delay-1${gridVisible ? ' is-visible' : ''}`}>
+        <div ref={gridRef as RefObject<HTMLDivElement>} className={`grid grid-cols-1 md:grid-cols-3 gap-5 reveal reveal-delay-1${gridVisible ? ' is-visible' : ''}`}>
 
           {/* Bioprotection — featured, spans 2 columns */}
           <div className={`${cardBase} md:col-span-2 min-h-[340px]`} onClick={() => handleNav('/solutions/bioprotection')}>

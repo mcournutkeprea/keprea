@@ -65,11 +65,11 @@ const translations: Translations = {
     de: 'Die Natur im Dienste Ihrer Kulturen'
   },
   'hero.subtitle': {
-    fr: 'Bioprotection, boosters et biofertilisation à base d\'insectes pour une agriculture performante et régénérative',
-    en: 'Insect-based bioprotection, boosters and biofertilization for high-performance and regenerative agriculture',
-    es: 'Bioprotección, potenciadores y biofertilización a base de insectos para una agricultura de alto rendimiento y regenerativa',
-    pt: 'Soluções à base de insetos para bioproteção, biofertilização e bioestimulação, para uma agricultura regenerativa e de alto desempenho.',
-    de: 'Insektenbasierter Bioschutz, Booster und Biodüngung für eine leistungsstarke und regenerative Landwirtschaft'
+    fr: 'Protégez, stimulez et nourrissez vos cultures grâce à la puissance des insectes.',
+    en: 'Protect, stimulate and nourish your crops with the power of insects.',
+    es: 'Proteja, estimule y nutra sus cultivos con el poder de los insectos.',
+    pt: 'Proteja, estimule e nutra as suas culturas com o poder dos insetos.',
+    de: 'Schützen, stimulieren und nähren Sie Ihre Kulturen mit der Kraft von Insekten.'
   },
   'hero.cta': {
     fr: 'Découvrir notre portfolio',
@@ -100,11 +100,11 @@ const translations: Translations = {
     de: '10'
   },
   'hero.stat2.label': {
-    fr: 'solutions développées dont 3 déjà disponibles',
-    en: 'solutions developed, 3 already available',
-    es: 'soluciones desarrolladas, 3 ya disponibles',
-    pt: 'soluções desenvolvidas, 3 já disponíveis',
-    de: 'entwickelte Lösungen, davon 3 bereits verfügbar'
+    fr: 'solutions en développement',
+    en: 'solutions in development',
+    es: 'soluciones en desarrollo',
+    pt: 'soluções em desenvolvimento',
+    de: 'Lösungen in Entwicklung'
   },
   'hero.stat3.value': {
     fr: '✓',
@@ -114,26 +114,26 @@ const translations: Translations = {
     de: '✓'
   },
   'hero.stat3.label': {
-    fr: 'Compatible avec votre équipement agricole existant',
-    en: 'Compatible with your existing farm equipment',
-    es: 'Compatible con su equipo agrícola existente',
-    pt: 'Compatível com o seu equipamento agrícola existente',
-    de: 'Kompatibel mit Ihrer bestehenden landwirtschaftlichen Ausrüstung'
+    fr: 'Prêt à l\'emploi',
+    en: 'Ready to use',
+    es: 'Listo para usar',
+    pt: 'Pronto para usar',
+    de: 'Sofort einsatzbereit'
   },
   // Solutions section
   'solutions.title': {
-    fr: 'Nos biosolutions, pensées par des agriculteurs, pour des agriculteurs',
-    en: 'Our biosolutions, designed by farmers, for farmers',
-    es: 'Nuestras biosoluciones, pensadas por agricultores, para agricultores',
-    pt: 'Nossas biosoluções, pensadas por agricultores, para agricultores',
-    de: 'Unsere Biolösungen – von Landwirten für Landwirte entwickelt'
+    fr: '4 gammes pour une agriculture sans compromis',
+    en: '4 ranges for uncompromising agriculture',
+    es: '4 gamas para una agricultura sin compromisos',
+    pt: '4 linhas para uma agricultura sem compromissos',
+    de: '4 Produktlinien für eine kompromisslose Landwirtschaft'
   },
   'solutions.subtitle': {
-    fr: 'Nos solutions sont pensées par les agriculteurs que nous sommes et pour les agriculteurs.',
-    en: 'Our solutions are designed by the farmers we are and for farmers.',
-    es: 'Nuestras soluciones están pensadas por los agricultores que somos y para los agricultores.',
-    pt: 'Nossas soluções são pensadas por agricultores, como nós, e para agricultores.',
-    de: 'Unsere Lösungen werden von uns als Landwirte für Landwirte entwickelt.'
+    fr: 'Issues de la biologie des insectes, nos solutions remplacent les intrants chimiques sans sacrifier votre rendement.',
+    en: 'Derived from insect biology, our solutions replace chemical inputs without sacrificing your yield.',
+    es: 'Basadas en la biología de los insectos, nuestras soluciones sustituyen los insumos químicos sin sacrificar el rendimiento.',
+    pt: 'Baseadas na biologia dos insetos, nossas soluções substituem os insumos químicos sem sacrificar a produtividade.',
+    de: 'Basierend auf der Insektenbiologie ersetzen unsere Lösungen chemische Inputs, ohne Ihren Ertrag zu beeinträchtigen.'
   },
   'solutions.subtitle2': {
     fr: 'Nous répondons aux défis majeurs des agriculteurs du monde entier :',
@@ -249,11 +249,11 @@ const translations: Translations = {
     de: 'Booster'
   },
   'solutions.boosters.subtitle': {
-    fr: 'Activateur de sol et augmentation de la tolérance des cultures aux stress abiotiques',
-    en: 'Soil activator and increased crop tolerance to abiotic stress',
-    es: 'Activador de suelo y aumento de la tolerancia de los cultivos al estrés abiótico',
-    pt: 'Promove a saúde do solo e aumenta a tolerância das culturas ao estresse abiótico',
-    de: 'Bodenaktivator und erhöhte Toleranz der Kulturen gegenüber abiotischem Stress'
+    fr: 'Activateur de sol et résistance aux stress',
+    en: 'Soil activator and stress resistance',
+    es: 'Activador de suelo y resistencia al estrés',
+    pt: 'Ativador de solo e resistência ao estresse',
+    de: 'Bodenaktivator und Stressresistenz'
   },
   'solutions.boosters.polypeptides': {
     fr: 'Riche en',
