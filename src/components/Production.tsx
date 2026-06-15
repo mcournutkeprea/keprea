@@ -1,4 +1,4 @@
-import { MapPin, Factory, Leaf, ArrowDown, ArrowRight } from "lucide-react";
+import { MapPin, Factory, Leaf, ArrowDown, ArrowRight, Bug, Archive, FlaskConical, Package, Truck, Users } from "lucide-react";
 import FranceMap from "./FranceMap";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -94,7 +94,7 @@ const Production = () => {
                     {/* Étape 1: Élevage d'insecte auxiliaire */}
                     <div className="flex flex-col items-center gap-3 p-3 bg-background/50 rounded-lg text-center flex-1 max-w-[140px]">
                       <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">🐛</span>
+                        <Bug className="w-6 h-6 text-purple-600" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-foreground">{t('production.process.step1')}</p>
@@ -104,7 +104,7 @@ const Production = () => {
                     {/* Étape 2: Collecte */}
                     <div className="flex flex-col items-center gap-3 p-3 bg-background/50 rounded-lg text-center flex-1 max-w-[140px]">
                       <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">🜻</span>
+                        <Archive className="w-6 h-6 text-orange-600" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-foreground">{t('production.process.step2')}</p>
@@ -121,7 +121,7 @@ const Production = () => {
                   {/* Étape 3: Transformation */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">⚗️</span>
+                      <FlaskConical className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
                       <p className="text-sm font-bold text-foreground">{t('production.process.step3')}</p>
@@ -133,7 +133,7 @@ const Production = () => {
                   {/* Étape 4: Packaging */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">📦</span>
+                      <Package className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
                       <p className="text-sm font-bold text-foreground">{t('production.process.step4')}</p>
@@ -145,7 +145,7 @@ const Production = () => {
                   {/* Étape 5: Transport */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🚢</span>
+                      <Truck className="w-6 h-6 text-red-600" />
                     </div>
                     <div>
                       <p className="text-sm font-bold text-foreground">{t('production.process.transport')}</p>
@@ -157,7 +157,7 @@ const Production = () => {
                   {/* Étape 6: Conseil d'utilisation en plein champ */}
                   <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-full">
                     <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">👨‍🌾</span>
+                      <Users className="w-6 h-6 text-yellow-600" />
                     </div>
                     <div>
                       <p className="text-sm font-bold text-foreground">{t('production.process.step5')}</p>
@@ -178,7 +178,7 @@ const Production = () => {
                         {/* Étape 1: Élevage d'insecte auxiliaire */}
                         <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
                           <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl">🐛</span>
+                            <Bug className="w-6 h-6 text-purple-600" />
                           </div>
                           <div>
                             <p className="text-xs font-bold text-foreground">{t('production.process.step1')}</p>
@@ -188,7 +188,7 @@ const Production = () => {
                         {/* Étape 2: Collecte */}
                         <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
                           <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl">🜻</span>
+                            <Archive className="w-6 h-6 text-orange-600" />
                           </div>
                           <div>
                             <p className="text-xs font-bold text-foreground">{t('production.process.step2')}</p>
@@ -206,7 +206,7 @@ const Production = () => {
                     {/* Étape 3: Transformation */}
                     <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
                       <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">⚗️</span>
+                        <FlaskConical className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-foreground">{t('production.process.step3')}</p>
@@ -219,7 +219,7 @@ const Production = () => {
                     {/* Étape 4: Packaging */}
                     <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">📦</span>
+                        <Package className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-foreground">{t('production.process.step4')}</p>
@@ -232,7 +232,7 @@ const Production = () => {
                     {/* Étape 5: Export */}
                     <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
                       <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">🚢</span>
+                        <Truck className="w-6 h-6 text-red-600" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-foreground">{t('production.process.transport')}</p>
@@ -245,7 +245,7 @@ const Production = () => {
                     {/* Étape 6: Conseil d'utilisation en plein champ */}
                     <div className="flex flex-col items-center gap-3 p-4 bg-background/50 rounded-lg text-center w-40">
                       <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">👨‍🌾</span>
+                        <Users className="w-6 h-6 text-yellow-600" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-foreground">{t('production.process.step5')}</p>

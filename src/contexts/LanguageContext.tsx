@@ -752,11 +752,11 @@ const translations: Translations = {
     de: 'Messbare Wirkung'
   },
   'about.value4.desc': {
-    fr: 'Nous accompagnons les agriculteurs dans leur transition vers des pratiques plus durables avec des solutions adaptées, conçues par des agriculteurs pour des agriculteurs.',
-    en: 'We support farmers in their transition to more sustainable practices with tailored solutions, designed by farmers for farmers.',
-    es: 'Acompañamos a los agricultores en su transición hacia prácticas más sostenibles con soluciones adaptadas, diseñadas por agricultores para agricultores.',
-    pt: 'Acompanhamos os agricultores na sua transição para práticas mais sustentáveis com soluções adaptadas, concebidas por agricultores para agricultores.',
-    de: 'Wir begleiten Landwirte bei der Umstellung auf nachhaltigere Praktiken mit maßgeschneiderten Lösungen – von Landwirten für Landwirte entwickelt.'
+    fr: 'Des résultats concrets et quantifiables sur le terrain : réduction des intrants chimiques, amélioration des rendements et protection de la biodiversité.',
+    en: 'Concrete, measurable results in the field: reduction of chemical inputs, improved yields and protection of biodiversity.',
+    es: 'Resultados concretos y cuantificables en el campo: reducción de insumos químicos, mejora de los rendimientos y protección de la biodiversidad.',
+    pt: 'Resultados concretos e quantificáveis no campo: redução de insumos químicos, melhoria dos rendimentos e proteção da biodiversidade.',
+    de: 'Konkrete und messbare Ergebnisse im Feld: Reduzierung chemischer Betriebsmittel, Ertragssteigerung und Schutz der Biodiversität.'
   },
   // Team section
   'team.title': {
@@ -1284,11 +1284,11 @@ const translations: Translations = {
     de: 'Vorteile der Biokontrolle'
   },
   'biocontrole.adv1.title': {
-    fr: '🌱 Naturel',
-    en: '🌱 Natural',
-    es: '🌱 Natural',
-    pt: '🌱 Natural',
-    de: '🌱 Natürlich'
+    fr: 'Naturel',
+    en: 'Natural',
+    es: 'Natural',
+    pt: 'Natural',
+    de: 'Natürlich'
   },
   'biocontrole.adv1.desc': {
     fr: 'Solutions 100% biologiques sans résidus chimiques',
@@ -1298,11 +1298,11 @@ const translations: Translations = {
     de: '100% biologische Lösungen ohne chemische Rückstände'
   },
   'biocontrole.adv2.title': {
-    fr: '🎯 Sélectif',
-    en: '🎯 Selective',
-    es: '🎯 Selectivo',
-    pt: '🎯 Seletivo',
-    de: '🎯 Selektiv'
+    fr: 'Sélectif',
+    en: 'Selective',
+    es: 'Selectivo',
+    pt: 'Seletivo',
+    de: 'Selektiv'
   },
   'biocontrole.adv2.desc': {
     fr: 'Préserve les insectes bénéfiques et pollinisateurs',
@@ -1312,11 +1312,11 @@ const translations: Translations = {
     de: 'Schont Nützlinge und Bestäuber'
   },
   'biocontrole.adv3.title': {
-    fr: '🔄 Durable',
-    en: '🔄 Sustainable',
-    es: '🔄 Sostenible',
-    pt: '🔄 Sustentável',
-    de: '🔄 Nachhaltig'
+    fr: 'Durable',
+    en: 'Sustainable',
+    es: 'Sostenible',
+    pt: 'Sustentável',
+    de: 'Nachhaltig'
   },
   'biocontrole.adv3.desc': {
     fr: 'Aucun développement de résistance',
@@ -1326,11 +1326,11 @@ const translations: Translations = {
     de: 'Keine Resistenzentwicklung'
   },
   'biocontrole.adv4.title': {
-    fr: '✅ Utilisable en agriculture biologique',
-    en: '✅ Suitable for organic farming',
-    es: '✅ Apto para agricultura ecológica',
-    pt: '✅ Adequado para agricultura orgânica',
-    de: '✅ Geeignet für den ökologischen Landbau'
+    fr: 'Utilisable en agriculture biologique',
+    en: 'Suitable for organic farming',
+    es: 'Apto para agricultura ecológica',
+    pt: 'Adequado para agricultura orgânica',
+    de: 'Geeignet für den ökologischen Landbau'
   },
   'biocontrole.adv4.desc': {
     fr: 'Préserve la santé des champs et des utilisateurs',

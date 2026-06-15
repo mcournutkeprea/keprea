@@ -18,6 +18,7 @@ const Hero = () => {
           playsInline
           loop
           src="/portfolio-video-4.mp4"
+          poster="/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png"
         />
         <div className="absolute inset-0 bg-black/25 z-20" />
       </div>

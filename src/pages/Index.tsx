@@ -6,6 +6,8 @@ import Production from "@/components/Production";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 
 const Index = () => {
@@ -19,6 +21,8 @@ const Index = () => {
       <About />
       <Contact />
       <ContactForm />
+      <Footer />
+      <CookieBanner />
     </div>
   );
 };

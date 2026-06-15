@@ -9,6 +9,8 @@ import Biofertilisant from "./pages/Biofertilisant";
 import Boosters from "./pages/Boosters";
 import ExtraitsNaturels from "./pages/ExtraitsNaturels";
 import BiocontroleVivant from "./pages/BiocontroleVivant";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
             <Route path="/boosters" element={<Boosters />} />
             <Route path="/extraits-naturels" element={<ExtraitsNaturels />} />
             <Route path="/biocontrole-vivant" element={<BiocontroleVivant />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

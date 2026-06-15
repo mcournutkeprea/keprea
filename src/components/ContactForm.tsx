@@ -3,11 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   const { t } = useLanguage();
@@ -15,20 +16,28 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName: "",
     email: "",
     company: "",
-    subject: "",
     message: "",
   });
+  const [rgpdAccepted, setRgpdAccepted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+
+    if (!formData.firstName || !formData.email || !formData.message) {
       toast({
         title: t('toast.error'),
         description: t('toast.error.required'),
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!rgpdAccepted) {
+      toast({
+        title: t('toast.error'),
+        description: "Vous devez accepter la politique de confidentialité pour envoyer votre message.",
         variant: "destructive",
       });
       return;
@@ -48,17 +57,13 @@ const ContactForm = () => {
         description: t('toast.success.desc'),
       });
 
-      // Reset form
       setFormData({
         firstName: "",
-        lastName: "",
         email: "",
         company: "",
-        subject: "",
         message: "",
       });
     } catch (error) {
-      console.error('Error sending contact form:', error);
       toast({
         title: t('toast.error'),
         description: t('toast.error.send'),
@@ -84,86 +89,75 @@ const ContactForm = () => {
             {t('contact.subtitle')}
           </p>
         </div>
-        
+
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl text-center">{t('contact.form.title')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName">{t('contact.form.firstName')} *</Label>
-                  <Input 
-                    id="firstName" 
-                    value={formData.firstName}
-                    onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    placeholder={t('contact.form.firstName.placeholder')} 
-                    required 
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName">{t('contact.form.lastName')} *</Label>
-                  <Input 
-                    id="lastName" 
-                    value={formData.lastName}
-                    onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    placeholder={t('contact.form.lastName.placeholder')} 
-                    required 
-                  />
-                </div>
-              </div>
-              
               <div className="space-y-2">
-                <Label htmlFor="email">Email *</Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
-                  placeholder={t('contact.form.email.placeholder')} 
-                  required 
+                <Label htmlFor="firstName">{t('contact.form.firstName')} *</Label>
+                <Input
+                  id="firstName"
+                  value={formData.firstName}
+                  onChange={(e) => handleInputChange('firstName', e.target.value)}
+                  placeholder={t('contact.form.firstName.placeholder')}
+                  required
                 />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="company">{t('contact.form.company')}</Label>
-                <Input 
-                  id="company" 
+                <Input
+                  id="company"
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
-                  placeholder={t('contact.form.company.placeholder')} 
+                  placeholder={t('contact.form.company.placeholder')}
                 />
               </div>
-              
+
               <div className="space-y-2">
-                <Label htmlFor="subject">{t('contact.form.subject')}</Label>
-                <Select value={formData.subject} onValueChange={(value) => handleInputChange('subject', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder={t('contact.form.subject.placeholder')} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="biofertilisant-boosters">{t('contact.form.subject.biofertilisant')}</SelectItem>
-                    <SelectItem value="biopesticides">{t('contact.form.subject.biopesticides')}</SelectItem>
-                    <SelectItem value="biocontrole">{t('contact.form.subject.biocontrol')}</SelectItem>
-                    <SelectItem value="information-generale">{t('contact.form.subject.info')}</SelectItem>
-                  </SelectContent>
-                </Select>
+                <Label htmlFor="email">Email *</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  placeholder={t('contact.form.email.placeholder')}
+                  required
+                />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="message">{t('contact.form.message')} *</Label>
-                <Textarea 
-                  id="message" 
+                <Textarea
+                  id="message"
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
-                  placeholder={t('contact.form.message.placeholder')} 
+                  placeholder={t('contact.form.message.placeholder')}
                   rows={5}
-                  required 
+                  required
                 />
               </div>
               
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <div className="flex items-start gap-3">
+                <Checkbox
+                  id="rgpd"
+                  checked={rgpdAccepted}
+                  onCheckedChange={(checked) => setRgpdAccepted(checked === true)}
+                  aria-required="true"
+                />
+                <Label htmlFor="rgpd" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                  J'accepte que mes données soient traitées par Keprea dans le but de répondre à ma demande, conformément à la{" "}
+                  <Link to="/politique-confidentialite" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                    politique de confidentialité
+                  </Link>
+                  . *
+                </Label>
+              </div>
+
+              <Button type="submit" className="w-full" disabled={isSubmitting || !rgpdAccepted}>
                 {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
               </Button>
             </form>

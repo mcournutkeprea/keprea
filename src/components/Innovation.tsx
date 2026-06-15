@@ -32,7 +32,7 @@ const Innovation = () => {
               <div className="absolute inset-0 rounded-xl overflow-hidden" style={{ perspective: '1000px' }}>
                 <div className="relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out" onClick={() => setIsFlipped(!isFlipped)} style={{ transformStyle: 'preserve-3d', transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
                   <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(0deg)' }}>
-                    <video src="/substances-video.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" style={{ objectPosition: 'center 30%', filter: 'brightness(1.2) contrast(1.1)' }} />
+                    <video src="/substances-video.mp4" autoPlay loop muted playsInline poster="/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 30%', filter: 'brightness(1.2) contrast(1.1)' }} />
                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
                       <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">{t('innovation.substances.question')}</h3>
                     </div>
@@ -54,7 +54,7 @@ const Innovation = () => {
               <div className="absolute inset-0 rounded-xl overflow-hidden" style={{ perspective: '1000px' }}>
                 <div className="relative w-full h-full cursor-pointer transition-transform duration-700 ease-in-out" onClick={() => setIsFlippedBee(!isFlippedBee)} style={{ transformStyle: 'preserve-3d', transform: isFlippedBee ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
                   <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(0deg)' }}>
-                    <video src="/biocontrol-video.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" style={{ objectPosition: 'center 30%', filter: 'brightness(1.2) contrast(1.1)' }} />
+                    <video src="/biocontrol-video.mp4" autoPlay loop muted playsInline poster="/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 30%', filter: 'brightness(1.2) contrast(1.1)' }} />
                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6">
                       <h3 className="text-xl font-bold text-white text-center transition-transform duration-300 hover:scale-110 cursor-pointer">{t('innovation.biocontrol.question')}</h3>
                     </div>

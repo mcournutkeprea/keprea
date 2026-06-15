@@ -1,73 +1,125 @@
-# Welcome to your Lovable project
+# Keprea — Refonte du site web
 
-## Project info
+> Document destiné aux humains (développeurs, contributeurs, collaborateurs).  
+> Pour le contexte agent, voir CLAUDE.md. Pour la mémoire stratégique, voir MEMORY.md.
 
-**URL**: https://lovable.dev/projects/4a418652-8561-4172-9bae-198a8bd83a2e
+---
 
-## How can I edit this code?
+## Présentation du projet
 
-There are several ways of editing your application.
+**Keprea** est une startup agricole fondée en 2025 à Dole (Jura, France), spécialisée dans les **biosolutions à base d'insectes** pour l'agriculture. Son offre couvre quatre catégories :
 
-**Use Lovable**
+- **Bioprotection** — protection biologique des cultures
+- **Biopesticides** — alternatives aux pesticides chimiques
+- **Boosters** — stimulateurs de croissance et de défenses naturelles
+- **Biofertilisant** — fertilisation organique d'origine insecte
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4a418652-8561-4172-9bae-198a8bd83a2e) and start prompting.
+L'objectif de cette refonte est de **faire passer le site d'une carte de visite digitale à un outil commercial crédible**, SEO-friendly et orienté conversion.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Objectifs de la refonte
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Crédibiliser l'offre auprès des agriculteurs et distributeurs
+2. Structurer un parcours de conversion clair (découverte → conviction → contact)
+3. Rendre le site indexable et référenceable (SEO technique + contenu)
+4. Intégrer des preuves sociales réelles (témoignages agriculteurs — levier n°1)
+5. Mettre en conformité RGPD (mentions légales, consentement cookies, politique de confidentialité)
+6. Migrer vers une stack maintenable (GitHub + Vercel + Claude Code)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Architecture cible (pages à créer)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+| URL | Contenu |
+|-----|---------|
+| `/` | Accueil — storytelling en 7 étapes, CTA visibles, preuves sociales |
+| `/solutions/` | Hub des 4 gammes produits |
+| `/solutions/bioprotection/` | Page produit enrichie |
+| `/solutions/biopesticides/` | Page produit enrichie |
+| `/solutions/boosters/` | Page produit enrichie |
+| `/solutions/biofertilisant/` | Page produit enrichie |
+| `/pourquoi-le-biocontrole/` | Page pédagogique — argumentaire biocontrôle |
+| `/qui-sommes-nous/` | Équipe, histoire, valeurs, mission |
+| `/notre-production/` | Process de production (responsive) |
+| `/ressources/` | Blog, fiches techniques téléchargeables, newsletter |
+| `/contact/` | Formulaire simplifié + consentement RGPD explicite |
+| `/mentions-legales/` | Mentions légales obligatoires |
+| `/politique-confidentialite/` | Politique de confidentialité RGPD |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Phases de travail
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Phase 0 — Corrections urgentes (avant toute migration)
+- Supprimer le badge « Edit with Lovable »
+- Corriger la faute « une meilleur performance »
+- Corriger l'emoji cassé `ð` et supprimer les emojis non professionnels de l'UI
+- Déduplication des cartes valeurs
+- Ajouter `poster` aux balises `<video>` pour éviter les écrans blancs
+
+### Phase 1 — Fondations (sur le site actuel)
+- Ajouter mentions légales et politique de confidentialité
+- Intégrer un bandeau de consentement cookies RGPD
+- Rendre les CTA visibles et contrastés
+- Améliorer le formulaire de contact (champs minimaux + RGPD)
+- Commencer à collecter des témoignages agriculteurs
+
+### Phase 2 — Architecture (après migration GitHub/Vercel)
+- Implémenter les nouvelles pages selon l'architecture cible
+- Créer les pages produits enrichies avec fiches techniques
+- Construire la page « Pourquoi le biocontrôle ? »
+- Intégrer les preuves sociales (témoignages, logos partenaires)
+- Mettre en place le maillage interne
+- Configurer Google Analytics et Google Search Console
+
+### Phase 3 — Croissance
+- Lancer le blog/ressources avec contenus SEO
+- Activer les fiches techniques téléchargeables
+- Déployer la newsletter
+- Optimiser selon les métriques de performance
+
+---
+
+## Critères de succès (à 6 mois)
+
+- Taux de rebond < 60 %
+- Temps moyen sur site > 2 minutes
+- Nombre de formulaires soumis × 3
+- > 3 pages vues par session
+- Croissance du trafic organique à partir du mois 3
+- > 20 téléchargements de fiches techniques / mois
+- > 50 abonnés newsletter en 3 mois
+
+---
+
+## Installation & développement
+
+> ⚠️ Ces instructions sont à compléter après inspection du dépôt Git.
+
+```bash
+# Cloner le dépôt
+git clone <repo-url>
+cd keprea-site
+
+# Installer les dépendances (adapter selon la stack détectée)
+npm install
+
+# Lancer en développement
 npm run dev
+
+# Build de production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+**Stack supposée** : à détecter en inspectant `package.json` et la structure du projet.  
+Voir CLAUDE.md pour les conventions de développement à respecter.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Ressources clés
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4a418652-8561-4172-9bae-198a8bd83a2e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Rapport complet : « Stratégie & Refonte du Site Web Keprea — Juin 2026 »
+- Mémoire stratégique : `MEMORY.md`
+- Erreurs connues : `ERRORS.md`
+- Briefing agent : `CLAUDE.md`

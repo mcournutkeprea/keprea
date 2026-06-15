@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Leaf, FlaskConical } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -75,7 +75,7 @@ const ExtraitsNaturels = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚗️</span>
+                <FlaskConical className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step2.title')}</h3>
               <p className="text-base text-muted-foreground">{t('substances.tech.step2.desc')}</p>
@@ -83,7 +83,7 @@ const ExtraitsNaturels = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🌱</span>
+                <Leaf className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step3.title')}</h3>
               <p className="text-base text-muted-foreground">{t('substances.tech.step3.desc')}</p>
