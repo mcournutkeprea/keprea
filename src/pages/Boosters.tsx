@@ -1,171 +1,255 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+
 const Boosters = () => {
-  const {
-    t
-  } = useLanguage();
-  return <div className="min-h-screen bg-background">
+  const { t } = useLanguage();
+
+  return (
+    <div className="min-h-screen bg-background flex flex-col">
       <Head>
         <title>Boosters de Croissance Keprea | Boostea13 et Soilea110</title>
         <meta name="description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
       </Head>
-      {/* Header avec bouton retour et background */}
-      <header className="relative shadow-sm min-h-[280px]">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
-      }}></div>
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <Link to="/solutions">
-            <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {t('product.back')}
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-white">{t('boosters.title')}</h1>
-          <p className="text-xl text-white/90 mt-2">
-            {t('boosters.subtitle')}
-          </p>
-          
-          <div className="mt-12 mb-8 text-center">
-            
+      <Navigation />
+      <main className="flex-1 pt-20">
+        <header className="relative shadow-sm min-h-[280px]">
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
+          }}></div>
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20">
+            <Link to="/solutions">
+              <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {t('product.back')}
+              </Button>
+            </Link>
+            <h1 className="text-4xl font-bold text-white">{t('boosters.title')}</h1>
+            <p className="text-xl text-white/90 mt-2">{t('boosters.subtitle')}</p>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Produits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            {t('boosters.range.title')}
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {/* Boostea13 */}
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
-              <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
-              <p className="text-muted-foreground mb-6">{t('boosters.boostea.desc')}</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-base">{t('boosters.boostea.benefit1')}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-base">{t('boosters.boostea.benefit2')}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-base">{t('boosters.boostea.benefit3')}</span>
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              {t('boosters.range.title')}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 items-stretch">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
+                <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
+                <p className="text-muted-foreground mb-6">{t('boosters.boostea.desc')}</p>
+                <div className="space-y-3">
+                  {[t('boosters.boostea.benefit1'), t('boosters.boostea.benefit2'), t('boosters.boostea.benefit3')].map((b) => (
+                    <div key={b} className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                      <span className="text-base">{b}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-
-            {/* Soilea110 */}
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
-              <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
-              <p className="text-muted-foreground mb-6">{t('boosters.soilea.desc')}</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-base">{t('boosters.soilea.benefit1')}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-base">{t('boosters.soilea.benefit2')}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-base">{t('boosters.soilea.benefit3')}</span>
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
+                <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
+                <p className="text-muted-foreground mb-6">{t('boosters.soilea.desc')}</p>
+                <div className="space-y-3">
+                  {[t('boosters.soilea.benefit1'), t('boosters.soilea.benefit2'), t('boosters.soilea.benefit3')].map((b) => (
+                    <div key={b} className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                      <span className="text-base">{b}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Avantages Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            {t('boosters.why.title')}
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              {t('boosters.why.title')}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {[
+                  { n: 1, title: t('boosters.why1.title'), desc: t('boosters.why1.desc') },
+                  { n: 2, title: t('boosters.why2.title'), desc: t('boosters.why2.desc') },
+                ].map(({ n, title, desc }) => (
+                  <div key={n} className="flex gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-xl">{n}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">{title}</h3>
+                      <p className="text-muted-foreground text-base">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-6">
+                {[
+                  { n: 3, title: t('boosters.why3.title'), desc: t('boosters.why3.desc') },
+                  { n: 4, title: t('boosters.why4.title'), desc: t('boosters.why4.desc') },
+                ].map(({ n, title, desc }) => (
+                  <div key={n} className="flex gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-xl">{n}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">{title}</h3>
+                      <p className="text-muted-foreground text-base">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Cultures cibles</h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              Nos biostimulants Boostea13 et Soilea110 s'appliquent sur l'ensemble des grandes cultures
+              et productions spécialisées, pour renforcer la vigueur et la résistance aux stress.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              {[
+                "Céréales — blé, orge, triticale, seigle, avoine",
+                "Oléagineux — colza, tournesol, soja",
+                "Maïs — grain et fourrage",
+                "Maraîchage sous serre et plein champ",
+                "Arboriculture fruitière — pommier, poirier, cerisier",
+                "Viticulture — renforcement de la vigueur et résistance",
+              ].map((culture) => (
+                <div key={culture} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-foreground">{culture}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-6">Boostea13</h3>
+                <div className="space-y-5">
+                  {[
+                    { step: 1, title: "Application foliaire", desc: "Diluer à 0,5–1 L/ha dans l'eau de pulvérisation. Appliquer en conditions fraîches (matin ou soir)." },
+                    { step: 2, title: "Stades clés", desc: "Tallage et montaison pour les céréales, floraison et nouaison pour le maraîchage et l'arboriculture." },
+                    { step: 3, title: "Fréquence", desc: "2 à 3 applications par cycle cultural selon la culture et les objectifs de rendement." },
+                  ].map(({ step, title, desc }) => (
+                    <div key={step} className="flex gap-4">
+                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm">
+                        {step}
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground text-sm">{title}</p>
+                        <p className="text-muted-foreground text-sm">{desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-6">Soilea110</h3>
+                <div className="space-y-5">
+                  {[
+                    { step: 1, title: "Application au sol", desc: "Épandage avant semis ou lors de la plantation. Incorporer lors du travail du sol à 15–20 cm." },
+                    { step: 2, title: "Dosage", desc: "150 à 300 L/ha selon le type de sol, la culture et les objectifs de fertilité." },
+                    { step: 3, title: "Compatibilité", desc: "Compatible avec d'autres amendements organiques. Favorise la microfaune du sol et le développement racinaire." },
+                  ].map(({ step, title, desc }) => (
+                    <div key={step} className="flex gap-4">
+                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm">
+                        {step}
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground text-sm">{title}</p>
+                        <p className="text-muted-foreground text-sm">{desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold text-xl">1</span>
+              {[
+                {
+                  q: "Les biostimulants Keprea sont-ils compatibles avec les engrais minéraux ?",
+                  a: "Oui, nos boosters sont formulés pour être compatibles avec la majorité des engrais et produits phytosanitaires. Un test de miscibilité est recommandé avant tout mélange en cuve. Notre équipe technique vous accompagne."
+                },
+                {
+                  q: "En combien de temps observe-t-on les effets des biostimulants ?",
+                  a: "Les premiers effets (meilleur enracinement, reprise de vigueur) sont observables en 10 à 21 jours. Les bénéfices sur rendement et résistance aux stress abiotiques (sécheresse, gel tardif) se mesurent en fin de cycle."
+                },
+                {
+                  q: "Boostea13 et Soilea110 sont-ils utilisables en agriculture biologique ?",
+                  a: "Nos biostimulants à base d'extraits d'insectes sont compatibles avec les principes de l'agriculture biologique. Vérifiez la conformité avec votre organisme certificateur avant utilisation."
+                },
+              ].map(({ q, a }, i) => (
+                <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
+                  <h3 className="font-semibold text-foreground mb-3">{q}</h3>
+                  <p className="text-muted-foreground">{a}</p>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">{t('boosters.why1.title')}</h3>
-                  <p className="text-muted-foreground text-base">
-                    {t('boosters.why1.desc')}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold text-xl">2</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">{t('boosters.why2.title')}</h3>
-                  <p className="text-muted-foreground text-base">
-                    {t('boosters.why2.desc')}
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold text-xl">3</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">{t('boosters.why3.title')}</h3>
-                  <p className="text-muted-foreground text-base">
-                    {t('boosters.why3.desc')}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold text-xl">4</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">{t('boosters.why4.title')}</h3>
-                  <p className="text-muted-foreground text-base">{t('boosters.why4.desc')}</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary/5">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
-            {t('boosters.cta.title')}
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            {t('boosters.cta.desc')}
-          </p>
-          <Link to="/#contact-form">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              {t('product.contact')}
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>;
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+          <div className="container mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold mb-6">{t('boosters.cta.title')}</h2>
+            <p className="text-lg opacity-90 mb-8">{t('boosters.cta.desc')}</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" variant="secondary">{t('product.contact')}</Button>
+              </Link>
+              <Link to="/pourquoi-le-biocontrole">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+                  Pourquoi le biocontrôle ?
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Complétez votre programme avec nos autres solutions</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+                <h3 className="font-semibold text-primary mb-2">Bioprotection vivante</h3>
+                <p className="text-sm text-muted-foreground">Auxiliaires entomophages pour lutter contre les ravageurs</p>
+              </Link>
+              <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+                <h3 className="font-semibold text-primary mb-2">Biopesticides</h3>
+                <p className="text-sm text-muted-foreground">Extraits d'insectes pour une protection foliaire naturelle</p>
+              </Link>
+              <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+                <h3 className="font-semibold text-primary mb-2">Biofertilisant</h3>
+                <p className="text-sm text-muted-foreground">Fertea432 pour améliorer la fertilité et la structure du sol</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
 };
+
 export default Boosters;

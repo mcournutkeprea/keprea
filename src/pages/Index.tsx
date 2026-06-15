@@ -8,9 +8,6 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
-
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -30,7 +27,6 @@ const Index = () => {
       <Contact />
       <ContactForm />
       <Footer />
-      <CookieBanner />
     </div>
   );
 };

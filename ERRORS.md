@@ -124,3 +124,10 @@
 | 15/06/2026 | Faute "meilleur performance" | Déjà correcte dans le code source — aucune action requise |
 | 15/06/2026 | `localStorage` appelé au niveau module dans `supabase/client.ts` | Gardé `typeof window !== 'undefined'` pour compatibilité SSG Node.js |
 | 15/06/2026 | Architecture SPA sans pré-rendu HTML (frein SEO) | Migration vers `vite-react-ssg` — 17 pages HTML statiques générées au build |
+| 15/06/2026 | Navigation + Footer absents des 4 pages produits (BiocontroleVivant, ExtraitsNaturels, Boosters, Biofertilisant) | Navigation et Footer ajoutés sur toutes les pages produits (Phase 5.4) |
+| 15/06/2026 | Emoji `🦗` dans `ExtraitsNaturels.tsx` (Technology section) | Remplacé par icône `Bug` (lucide-react) |
+| 15/06/2026 | `console.error` dans `NotFound.tsx` | Supprimé — page 404 traduite en français et simplifiée |
+| 15/06/2026 | CookieBanner absent de toutes les pages hors Index (SSG = pages HTML indépendantes) | Déplacé dans `RootLayout.tsx` — présent sur toutes les pages |
+| 15/06/2026 | CTA produits pointaient vers `/#contact-form` au lieu de `/contact` | Liens corrigés vers `/contact` sur les 4 pages produits |
+| 15/06/2026 | Contenu thin sur pages produits (pas de cultures cibles, mode d'emploi, FAQ) | Sections ajoutées sur 4 pages produits + maillage interne (Phase 5.4) |
+| 15/06/2026 | Sitemap.xml absent | `public/sitemap.xml` créé avec 13 URLs + `robots.txt` mis à jour |
