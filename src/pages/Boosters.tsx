@@ -219,7 +219,7 @@ const Boosters = () => {
                 <Button size="lg" variant="secondary">{t('product.contact')}</Button>
               </Link>
               <Link to="/pourquoi-le-biocontrole">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+                <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
                   Pourquoi le biocontrôle ?
                 </Button>
               </Link>

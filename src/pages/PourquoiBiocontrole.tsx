@@ -152,7 +152,7 @@ const PourquoiBiocontrole = () => (
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+              <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
                 Nous contacter
               </Button>
             </Link>
