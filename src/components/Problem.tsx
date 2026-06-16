@@ -1,25 +1,25 @@
 import type { RefObject } from "react";
-import { AlertTriangle, TrendingDown, ShieldOff } from "lucide-react";
+import { Leaf, ShieldCheck, Sprout } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 
 const challenges = [
   {
-    icon: ShieldOff,
-    stat: "+40%",
-    title: "Résistances en hausse",
-    desc: "Les bioagresseurs développent des résistances aux traitements chimiques répétés, réduisant leur efficacité d'année en année.",
+    icon: Leaf,
+    stat: "84%",
+    title: "Des cultures liées au vivant",
+    desc: "84 % des cultures dépendent des insectes pour leur qualité et leur rendement. Keprea exploite cette relation naturelle pour protéger et stimuler vos parcelles.",
   },
   {
-    icon: AlertTriangle,
-    stat: "–60%",
-    title: "Réduction des intrants imposée",
-    desc: "Le plan Écophyto impose une réduction drastique des pesticides chimiques. Les agriculteurs doivent trouver des alternatives fiables.",
+    icon: ShieldCheck,
+    stat: "100%",
+    title: "Naturel et sans résidu chimique",
+    desc: "Toutes nos formulations sont d'origine naturelle, sans résidu toxique. Compatibles avec les certifications bio, HVE et les exigences croissantes des filières.",
   },
   {
-    icon: TrendingDown,
-    stat: "×3",
-    title: "Pression sur les marges",
-    desc: "Coûts des intrants en hausse, revenus sous tension. L'efficacité de chaque traitement devient un enjeu économique direct.",
+    icon: Sprout,
+    stat: "5 500",
+    title: "Espèces auxiliaires mobilisées",
+    desc: "La France recense 5 500 espèces d'insectes auxiliaires utiles. Keprea sélectionne et formule les plus efficaces pour chaque culture et chaque besoin.",
   },
 ];
 
@@ -37,14 +37,14 @@ const Problem = () => {
           className={`mb-14 max-w-2xl reveal${headerVisible ? " is-visible" : ""}`}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35 mb-3">
-            Le contexte agricole actuel
+            L'agriculture en transition
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-5">
-            L'agriculture fait face à des défis sans précédent
+            Une protection des cultures plus ciblée, plus performante
           </h2>
           <p className="text-base text-white/60 leading-relaxed">
-            Les modèles de protection des cultures hérités des années 70–90 atteignent leurs limites.
-            Les résistances s'accumulent, la réglementation se resserre, et les agriculteurs cherchent des solutions qui fonctionnent vraiment.
+            L'agriculture française évolue vers des pratiques plus intelligentes et plus durables.
+            Les agriculteurs recherchent des solutions efficaces, traçables et adaptées aux réalités du terrain. Keprea a développé ses biosolutions exactement pour ça.
           </p>
         </div>
 

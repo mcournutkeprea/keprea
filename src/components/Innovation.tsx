@@ -79,7 +79,7 @@ const Innovation = () => {
                 {extraitsBenefits.map((benefit, i) => (
                   <li key={i} className="flex gap-5 items-start py-5 first:pt-0 last:pb-0">
                     <span
-                      className="text-[11px] font-bold tabular-nums shrink-0 mt-0.5 w-5 leading-none"
+                      className="text-3xl font-extrabold tabular-nums shrink-0 leading-none w-10"
                       style={{ color: 'hsl(var(--primary))' }}
                       aria-hidden="true"
                     >
