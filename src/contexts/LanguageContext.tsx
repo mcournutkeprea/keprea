@@ -72,11 +72,11 @@ const translations: Translations = {
     de: 'Schützen, stimulieren und nähren Sie Ihre Kulturen mit der Kraft von Insekten.'
   },
   'hero.cta': {
-    fr: 'Découvrir notre portfolio',
-    en: 'Discover our portfolio',
-    es: 'Descubrir nuestro portafolio',
-    pt: 'Descobrir nosso portfólio',
-    de: 'Unser Portfolio entdecken'
+    fr: 'Voir nos solutions',
+    en: 'Discover our solutions',
+    es: 'Ver nuestras soluciones',
+    pt: 'Ver as nossas soluções',
+    de: 'Unsere Lösungen entdecken'
   },
   'hero.stat1.value': {
     fr: '100%',
@@ -107,18 +107,18 @@ const translations: Translations = {
     de: 'Lösungen in Entwicklung'
   },
   'hero.stat3.value': {
-    fr: '✓',
-    en: '✓',
-    es: '✓',
-    pt: '✓',
-    de: '✓'
+    fr: 'Jura',
+    en: 'Jura',
+    es: 'Jura',
+    pt: 'Jura',
+    de: 'Jura'
   },
   'hero.stat3.label': {
-    fr: 'Prêt à l\'emploi',
-    en: 'Ready to use',
-    es: 'Listo para usar',
-    pt: 'Pronto para usar',
-    de: 'Sofort einsatzbereit'
+    fr: 'Site de production',
+    en: 'Production site',
+    es: 'Sitio de producción',
+    pt: 'Local de produção',
+    de: 'Produktionsstandort'
   },
   // Solutions section
   'solutions.title': {
@@ -595,6 +595,13 @@ const translations: Translations = {
     es: 'que lo vivo vuelva al corazón de la gestión de la granja.',
     pt: 'trazer a vida de volta ao centro da gestão da fazenda.',
     de: 'das Lebendige wieder in den Mittelpunkt der Betriebsführung zu stellen.'
+  },
+  'about.history.body': {
+    fr: 'Implantée à Dole dans le Jura, notre site de 3 000 m² produit des biosolutions de qualité stable et reproductible, toutes utilisables en agriculture biologique.',
+    en: 'Based in Dole, Jura, our 3,000 m² facility produces biosolutions of stable, reproducible quality — all compatible with organic farming.',
+    es: 'Con sede en Dole, en el Jura, nuestro sitio de 3.000 m² produce biosoluciones de calidad estable y reproducible, todas compatibles con la agricultura ecológica.',
+    pt: 'Sediada em Dole, no Jura, a nossa unidade de 3.000 m² produz biosoluções de qualidade estável e reprodutível, todas compatíveis com a agricultura biológica.',
+    de: 'In Dole im Jura entwickelt unser 3.000 m² großer Standort Biolösungen von stabiler, reproduzierbarer Qualität – alle für den ökologischen Landbau geeignet.'
   },
   'about.history.p2.location': {
     fr: 'Implantée à proximité de',

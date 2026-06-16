@@ -17,76 +17,122 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-14 reveal${headerVisible ? ' is-visible' : ''}`}>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">{t('about.title')}</h2>
-          <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">{t('about.subtitle')}</p>
+    <section id="about" className="py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(var(--muted)/0.45) 0%, hsl(var(--background)) 100%)' }}>
+
+      {/* Ambient radial orb — purely decorative */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full"
+          style={{ background: 'radial-gradient(ellipse at center, hsl(var(--primary)/0.07) 0%, transparent 68%)' }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative">
+
+        {/* ── Header ── */}
+        <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-16 reveal${headerVisible ? ' is-visible' : ''}`}>
+          <div className="inline-flex items-center mb-5">
+            <span
+              className="inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-medium text-primary"
+              style={{ background: 'hsl(var(--primary)/0.07)', border: '1px solid hsl(var(--primary)/0.22)' }}
+            >
+              Keprea · Made in France
+            </span>
+          </div>
+          <h2
+            className="text-4xl md:text-5xl font-bold text-foreground mb-3"
+            style={{ letterSpacing: '-0.025em' }}
+          >
+            {t('about.title')}
+          </h2>
+          <p className="text-base text-muted-foreground max-w-xl leading-relaxed">{t('about.subtitle')}</p>
         </div>
 
-        {/* History block — Double-Bezel (outer shell + inner core) */}
-        <div ref={historyRef as RefObject<HTMLDivElement>} className={`max-w-4xl mb-14 reveal reveal-delay-1${historyVisible ? ' is-visible' : ''}`}>
+        {/* ── Histoire — Double-Bezel ── */}
+        <div ref={historyRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto mb-16 reveal reveal-delay-1${historyVisible ? ' is-visible' : ''}`}>
           {/* Outer shell */}
-          <div className="p-2 rounded-[2rem] border bg-primary/4" style={{ borderColor: 'hsl(var(--primary) / 0.12)', boxShadow: '0 4px 32px rgba(0,0,0,0.04)' }}>
-          {/* Inner core */}
           <div
-            className="bg-background rounded-[calc(2rem-0.5rem)] p-7"
+            className="p-2 rounded-[2rem]"
             style={{
-              borderLeft: '4px solid hsl(var(--primary))',
-              boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.8)',
+              background: 'hsl(var(--primary)/0.04)',
+              border: '1px solid hsl(var(--primary)/0.11)',
+              boxShadow: '0 12px 48px hsl(var(--primary)/0.07), 0 2px 8px rgba(0,0,0,0.03)',
             }}
           >
-            <h3 className="text-xl font-semibold text-foreground mb-5">{t('about.history.title')}</h3>
-            <div className="space-y-4">
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {t('about.history.p1')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p1.year')}</strong>{' '}
-                {t('about.history.p1.by')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p1.associates')}</strong>{' '}
-                {t('about.history.p1.roles')}{' '}
-                {t('about.history.p1.vision.intro')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p1.vision.bold')}</strong>
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {t('about.history.p2.location')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p2.city')}</strong>
-                {t('about.history.p2.site')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p2.size')}</strong>{' '}
-                {t('about.history.p2.develop')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p2.bioprotection')}</strong>{' '}
-                {t('about.history.p2.rest')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p2.boosters')}</strong>{' '}
-                {t('about.history.p2.activators')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p2.biofertilisants')}</strong>{' '}
-                {t('about.history.p2.biofertilisants.desc')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p2.organic')}</strong>.
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {t('about.history.p3')}{' '}
-                <strong className="text-primary font-semibold">{t('about.history.p3.process')}</strong>{' '}
-                {t('about.history.p3.guarantee')}
-              </p>
+            {/* Inner core */}
+            <div
+              className="bg-background rounded-[calc(2rem-0.5rem)] px-8 py-9 md:px-10"
+              style={{
+                borderLeft: '3px solid hsl(var(--primary))',
+                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.92)',
+              }}
+            >
+              <h3 className="text-lg font-semibold text-foreground mb-5" style={{ letterSpacing: '-0.01em' }}>
+                {t('about.history.title')}
+              </h3>
+              <div className="space-y-3">
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {t('about.history.p1')}{' '}
+                  <strong className="text-foreground font-semibold">{t('about.history.p1.year')}</strong>{' '}
+                  {t('about.history.p1.by')}{' '}
+                  <strong className="text-foreground font-semibold">{t('about.history.p1.associates')}</strong>{' '}
+                  {t('about.history.p1.roles')}{' '}
+                  {t('about.history.p1.vision.intro')}{' '}
+                  <strong className="text-primary font-semibold">{t('about.history.p1.vision.bold')}</strong>
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {t('about.history.body')}
+                </p>
+              </div>
             </div>
-          </div>
           </div>
         </div>
 
-        {/* Values — 2×2 grid with left-accent border, not generic icon-in-box */}
-        <div ref={valuesRef as RefObject<HTMLDivElement>} className={`grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
+        {/* ── Valeurs — Double-Bezel cards, icon-top centered ── */}
+        <div ref={valuesRef as RefObject<HTMLDivElement>} className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex gap-5 p-6 rounded-xl border border-border bg-background shadow-sm hover:shadow-md transition-shadow"
-              style={{ borderLeftWidth: '4px', borderLeftColor: 'hsl(var(--primary))' }}
+              className="group p-1.5 rounded-[1.75rem] transition-all"
+              style={{
+                background: 'hsl(var(--muted)/0.55)',
+                border: '1px solid hsl(var(--border)/0.7)',
+                transitionDuration: '600ms',
+                transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
+              }}
             >
-              <value.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <div>
-                <h4 className="text-base font-semibold text-foreground mb-1">{t(value.titleKey)}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{t(value.descKey)}</p>
+              {/* Inner core */}
+              <div
+                className="flex flex-col items-center text-center gap-4 p-7 rounded-[calc(1.75rem-0.375rem)] bg-background transition-all"
+                style={{
+                  boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.95)',
+                  transitionDuration: '600ms',
+                  transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
+                }}
+              >
+                {/* Icon shell */}
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform"
+                  style={{
+                    background: 'hsl(var(--primary)/0.08)',
+                    border: '1px solid hsl(var(--primary)/0.16)',
+                    transitionDuration: '500ms',
+                    transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
+                  }}
+                >
+                  <value.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" strokeWidth={1.5} style={{ transitionDuration: '500ms', transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)' }} />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1.5" style={{ letterSpacing: '-0.01em' }}>
+                    {t(value.titleKey)}
+                  </h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{t(value.descKey)}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
