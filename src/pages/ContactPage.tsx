@@ -38,11 +38,10 @@ const ContactPage = () => {
                 Nous contacter
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-6">
-                Parlons de<br className="hidden sm:block" /> votre projet
+                Parlons de votre projet
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Une question sur nos biosolutions, un essai terrain ou un projet de partenariat ?
-                Notre équipe vous répond sous 48 heures.
+              <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+                Une question sur nos biosolutions, un essai terrain ou un projet de partenariat ? Notre équipe vous répond sous 48 heures.
               </p>
             </div>
           </div>

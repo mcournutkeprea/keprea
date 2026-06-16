@@ -26,11 +26,7 @@ const Navigation = () => {
 
   const handleContactClick = () => {
     setMobileMenuOpen(false);
-    if (isHomePage) {
-      document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate("/contact");
-    }
+    navigate("/contact");
   };
 
   const navItems = [
