@@ -96,6 +96,14 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    --warm: 38 68% 48%;
+    --warm-foreground: 0 0% 100%;
+    --warm-subtle: 38 40% 96%;
+  }
+}
+
+@layer base {
+  :root {
     --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-out: cubic-bezier(0.32, 0.72, 0, 1);
   }
@@ -136,193 +144,6 @@ All colors MUST be HSL.
   }
 }
 
-/* Custom animations */
-@keyframes gentle-zoom {
-  0%, 100% { 
-    transform: scale(1); 
-  }
-  50% { 
-    transform: scale(1.05); 
-  }
-}
-
-@keyframes float {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg); 
-  }
-  50% { 
-    transform: translateY(-10px) rotate(180deg); 
-  }
-}
-
-@keyframes drift {
-  0% { 
-    transform: translateX(-50px) translateY(0px); 
-    opacity: 0;
-  }
-  50% { 
-    opacity: 1;
-  }
-  100% { 
-    transform: translateX(50px) translateY(-20px); 
-    opacity: 0;
-  }
-}
-
-@keyframes sparkle {
-  0%, 100% { 
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% { 
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes sway {
-  0%, 100% { 
-    transform: scale(1.02) translateX(0px) rotate(0deg);
-  }
-  25% { 
-    transform: scale(1.03) translateX(-2px) rotate(-0.5deg);
-  }
-  75% { 
-    transform: scale(1.03) translateX(2px) rotate(0.5deg);
-  }
-}
-
-@keyframes pan-up {
-  0% { 
-    transform: scale(1.05) translateY(10px);
-  }
-  25% { 
-    transform: scale(1.06) translateY(5px);
-  }
-  50% { 
-    transform: scale(1.05) translateY(0px);
-  }
-  75% { 
-    transform: scale(1.06) translateY(-5px);
-  }
-  100% { 
-    transform: scale(1.05) translateY(-10px);
-  }
-}
-
-@keyframes slow-zoom {
-  0% { 
-    transform: scale(1);
-    filter: brightness(1) contrast(1);
-  }
-  50% { 
-    transform: scale(1.1);
-    filter: brightness(1.05) contrast(1.1);
-  }
-  100% { 
-    transform: scale(1);
-    filter: brightness(1) contrast(1);
-  }
-}
-
-@keyframes water-drop {
-  0% { 
-    transform: translateY(-20px) scaleY(1);
-    opacity: 0;
-  }
-  10% { 
-    opacity: 1;
-    transform: translateY(0px) scaleY(1.2);
-  }
-  90% { 
-    opacity: 1;
-    transform: translateY(100vh) scaleY(1.5);
-  }
-  100% { 
-    opacity: 0;
-    transform: translateY(100vh) scaleY(1.5);
-  }
-}
-
-@keyframes ripple {
-  0% { 
-    transform: scale(0);
-    opacity: 0.8;
-  }
-  50% { 
-    transform: scale(1.5);
-    opacity: 0.4;
-  }
-  100% { 
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes pan-left {
-  0% { 
-    transform: translateX(0%) scale(1.1);
-  }
-  100% { 
-    transform: translateX(-5%) scale(1.1);
-  }
-}
-
-@keyframes pan-right {
-  0% { 
-    transform: translateX(-5%) scale(1.1);
-  }
-  100% { 
-    transform: translateX(0%) scale(1.1);
-  }
-}
-
-@keyframes slow-pan-left {
-  0% { 
-    transform: translateX(0%) scale(1.05);
-  }
-  100% { 
-    transform: translateX(-3%) scale(1.05);
-  }
-}
-
-@keyframes slow-pan-right {
-  0% { 
-    transform: translateX(-3%) scale(1.05);
-  }
-  100% { 
-    transform: translateX(0%) scale(1.05);
-  }
-}
-
-@keyframes camera-sweep {
-  0% { 
-    transform: translateX(2%) scale(1.08);
-  }
-  50% { 
-    transform: translateX(-2%) scale(1.08);
-  }
-  100% { 
-    transform: translateX(2%) scale(1.08);
-  }
-}
-
-/* 3D Flip Animation Classes */
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
 
 /* Hide Lovable badge */
 #lovable-badge,
@@ -357,5 +178,22 @@ All colors MUST be HSL.
     transform: none;
     filter: none;
     transition: none;
+  }
+}
+
+/* Ken Burns — slow zoom + subtle pan, GPU-safe (transform only) */
+@keyframes ken-burns {
+  from { transform: scale(1) translate(0, 0); }
+  to   { transform: scale(1.09) translate(-1.5%, -1%); }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 14s ease-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ken-burns {
+    animation: none;
   }
 }

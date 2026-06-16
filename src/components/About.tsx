@@ -1,9 +1,14 @@
 import type { RefObject } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Leaf, FlaskConical, Users, Target } from "lucide-react";
+import { Leaf, FlaskConical, Users, Target, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useInView } from "@/hooks/useInView";
 
-const About = () => {
+interface AboutProps {
+  teaser?: boolean;
+}
+
+const About = ({ teaser = false }: AboutProps) => {
   const { t } = useLanguage();
   const { ref: headerRef, inView: headerVisible } = useInView();
   const { ref: historyRef, inView: historyVisible } = useInView();
@@ -88,50 +93,62 @@ const About = () => {
           </div>
         </div>
 
-        {/* ── Valeurs — Double-Bezel cards, icon-top centered ── */}
-        <div ref={valuesRef as RefObject<HTMLDivElement>} className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="group p-1.5 rounded-[1.75rem] transition-all"
-              style={{
-                background: 'hsl(var(--muted)/0.55)',
-                border: '1px solid hsl(var(--border)/0.7)',
-                transitionDuration: '600ms',
-                transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
-              }}
+        {/* Valeurs (page dédiée) ou lien vers la page (teaser accueil) */}
+        {teaser ? (
+          <div ref={valuesRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
+            <Link
+              to="/qui-sommes-nous"
+              className="group inline-flex items-center gap-3 rounded-full border border-primary/25 bg-primary/5 hover:bg-primary/10 text-primary pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300"
             >
-              {/* Inner core */}
+              Découvrir notre équipe et nos valeurs
+              <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
+                <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </span>
+            </Link>
+          </div>
+        ) : (
+          <div ref={valuesRef as RefObject<HTMLDivElement>} className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
+            {values.map((value, index) => (
               <div
-                className="flex flex-col items-center text-center gap-4 p-7 rounded-[calc(1.75rem-0.375rem)] bg-background transition-all"
+                key={index}
+                className="group p-1.5 rounded-[1.75rem] transition-all"
                 style={{
-                  boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.95)',
+                  background: 'hsl(var(--muted)/0.55)',
+                  border: '1px solid hsl(var(--border)/0.7)',
                   transitionDuration: '600ms',
                   transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
                 }}
               >
-                {/* Icon shell */}
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform"
+                  className="flex flex-col items-center text-center gap-4 p-7 rounded-[calc(1.75rem-0.375rem)] bg-background transition-all"
                   style={{
-                    background: 'hsl(var(--primary)/0.08)',
-                    border: '1px solid hsl(var(--primary)/0.16)',
-                    transitionDuration: '500ms',
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.95)',
+                    transitionDuration: '600ms',
                     transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
                   }}
                 >
-                  <value.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" strokeWidth={1.5} style={{ transitionDuration: '500ms', transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)' }} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1.5" style={{ letterSpacing: '-0.01em' }}>
-                    {t(value.titleKey)}
-                  </h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{t(value.descKey)}</p>
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform"
+                    style={{
+                      background: 'hsl(var(--primary)/0.08)',
+                      border: '1px solid hsl(var(--primary)/0.16)',
+                      transitionDuration: '500ms',
+                      transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
+                    }}
+                  >
+                    <value.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" strokeWidth={1.5} style={{ transitionDuration: '500ms', transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)' }} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-foreground mb-1.5" style={{ letterSpacing: '-0.01em' }}>
+                      {t(value.titleKey)}
+                    </h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{t(value.descKey)}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
       </div>
     </section>

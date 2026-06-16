@@ -8,6 +8,7 @@ import BiopesticidesPage from "@/pages/ExtraitsNaturels";
 import BoostersPage from "@/pages/Boosters";
 import BiofertilisantPage from "@/pages/Biofertilisant";
 import PourquoiBiocontrole from "@/pages/PourquoiBiocontrole";
+import InnovationPage from "@/pages/InnovationPage";
 import QuiSommesNous from "@/pages/QuiSommesNous";
 import NotreProduction from "@/pages/NotreProduction";
 import Ressources from "@/pages/Ressources";
@@ -28,6 +29,7 @@ export const routes: RouteRecord[] = [
       { path: "solutions/boosters", Component: BoostersPage },
       { path: "solutions/biofertilisant", Component: BiofertilisantPage },
       { path: "pourquoi-le-biocontrole", Component: PourquoiBiocontrole },
+      { path: "innovation", Component: InnovationPage },
       { path: "qui-sommes-nous", Component: QuiSommesNous },
       { path: "notre-production", Component: NotreProduction },
       { path: "ressources", Component: Ressources },

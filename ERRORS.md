@@ -96,11 +96,17 @@
 ---
 
 ### URLs non optimisées pour le SEO
-- **Statut** : Ouvert
-- **Priorité** : Phase 2
-- **Symptôme** : URLs génériques, sans mots-clés
-- **Cause** : Structure par défaut du générateur de site initial
-- **Correction** : Adopter les URLs cibles (voir README.md). Redirections 301 obligatoires pour toute URL modifiée.
+- **Statut** : Partiellement corrigé (15/06/2026 — Redesign)
+- Nouvelles routes `/solutions/*`, `/contact`, `/qui-sommes-nous`, etc. ajoutées dans `App.tsx`
+- Anciennes routes (`/biofertilisant`, etc.) maintenues comme alias pour éviter les 404
+- Redirections 301 Vercel à configurer en production pour consolider le juice SEO
+
+---
+
+### Page `/innovation` renvoyait une 404
+- **Statut** : Corrigé (16/06/2026)
+- **Cause** : `InnovationPage` importée dans `App.tsx` (non utilisé côté SSG) mais absente de `routes.tsx` (utilisé par `ViteReactSSG`)
+- **Correction** : Import + route `{ path: "innovation", Component: InnovationPage }` ajoutés dans `routes.tsx`
 
 ---
 
@@ -112,6 +118,45 @@
 - **Build cache** : Un cache Vercel non invalidé peut servir une version obsolète après déploiement
 
 ---
+
+### App.css contient du CSS Vite template parasite (`#root { max-width:1280px; text-align:center }`)
+- **Statut** : Corrigé (15/06/2026 — Redesign)
+- Ces styles auraient pu casser les layouts full-width. Remplacé par un commentaire vide.
+
+### App.tsx routes incohérentes avec Navigation + Solutions
+- **Statut** : Corrigé (15/06/2026 — Redesign)
+- Toutes les routes manquantes ajoutées dans `App.tsx` (13 routes actives + aliases)
+
+### Contact.tsx retournait `null`
+- **Statut** : Corrigé (15/06/2026 — Redesign)
+- Composant documenté. La section contact homepage utilise `ContactForm.tsx` directement.
+
+### Cards Solutions sans `role="button"` ni `tabindex` (accessibilité)
+- **Statut** : Corrigé (15/06/2026 — Redesign)
+- `role="button"`, `tabIndex={0}`, `onKeyDown`, `focus-visible:ring` ajoutés sur chaque card
+- Arrow icon d'indication ajouté (apparaît au hover avec translate)
+
+### Contenu Innovation enfermé dans images/vidéos (non indexable)
+- **Statut** : Corrigé (15/06/2026 — Redesign v2)
+- Section Innovation refondée : intro textuelle indexable (3 piliers) + onglets tabpanel accessibles
+- Flip-cards supprimées (UX non-intuitive mobile) → infographies affichées directement via tab switcher
+
+### Hero CTA "Découvrir notre portfolio" inadapté au B2B agri-tech
+- **Statut** : Corrigé (15/06/2026 — Redesign v2)
+- Remplacé par "Voir nos solutions" + CTA secondaire "Demander un essai"
+
+### Hero stat3 "✓ Prêt à l'emploi" — checkmark pas une statistique
+- **Statut** : Corrigé (15/06/2026 — Redesign v2)
+- Remplacé par "Jura / Site de production" — ancrage territorial crédible
+
+### Testimonials avec 3 placeholders "en cours de collecte" — signal de faiblesse
+- **Statut** : Corrigé (15/06/2026 — Redesign v2)
+- Refonte complète : section TrustSection "Nos garanties" — stats + 3 cartes garanties + CTA essais
+
+### CSS mort — ~15 keyframes inutilisées + classes 3D flip orphelines
+- **Statut** : Corrigé (15/06/2026 — Redesign v2)
+- Supprimé : gentle-zoom, float, drift, sparkle, sway, pan-up, slow-zoom, water-drop, ripple, pan-left, pan-right, slow-pan-left, slow-pan-right, camera-sweep
+- Supprimé : .perspective-1000, .preserve-3d, .backface-hidden, .rotate-y-180
 
 ## Journal des corrections
 
@@ -131,3 +176,5 @@
 | 15/06/2026 | CTA produits pointaient vers `/#contact-form` au lieu de `/contact` | Liens corrigés vers `/contact` sur les 4 pages produits |
 | 15/06/2026 | Contenu thin sur pages produits (pas de cultures cibles, mode d'emploi, FAQ) | Sections ajoutées sur 4 pages produits + maillage interne (Phase 5.4) |
 | 15/06/2026 | Sitemap.xml absent | `public/sitemap.xml` créé avec 13 URLs + `robots.txt` mis à jour |
+| 15/06/2026 | Redesign complet | App.css nettoyé, App.tsx routes corrigées (13 routes), Problem + HowToGet créés, Innovation refondée (contenu indexable), Solutions accessible (role/tabIndex/focus), Production titre aligné, Testimonials restructurées, Index.tsx parcours conversationnel |
+| 16/06/2026 | Page contact — formulaire étroit sur colonne droite, layout trop serré | ContactPage.tsx redesigné : hero éditorial + split 3/5·2/5 (form gauche, info droite), Double-Bezel sur form + cards, scroll-reveal staggeré. ContactForm.tsx : prop `embedded` ajoutée, grille 2-col Prénom/Entreprise, inputs premium, bouton pill button-in-button. Build 17 pages OK, 0 erreur TS. |

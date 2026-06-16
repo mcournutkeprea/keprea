@@ -1,73 +1,126 @@
 import type { RefObject } from "react";
-import { Quote, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle, FlaskConical, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from "@/hooks/useInView";
 
-const profiles = [
-  { type: "Grandes cultures", region: "Bourgogne-Franche-Comté", product: "Bioprotection" },
-  { type: "Maraîchage", region: "Rhône-Alpes", product: "Biopesticides" },
-  { type: "Viticulture", region: "Alsace", product: "Boosters" },
+const BG = "hsl(145 68% 14%)";
+const CARD_BG = "rgba(255,255,255,0.06)";
+const CARD_BORDER = "1px solid rgba(255,255,255,0.1)";
+
+const credibilityStats = [
+  { value: "2025", label: "Fondée à Dole, Jura" },
+  { value: "4", label: "Gammes de biosolutions" },
+  { value: "100%", label: "Origine naturelle" },
+  { value: "Terrain", label: "Suivi agronomique inclus" },
 ];
 
-const BG = 'hsl(145 68% 14%)';
-const CARD_BG = 'rgba(255,255,255,0.06)';
-const CARD_BORDER = '1px solid rgba(255,255,255,0.1)';
+const guarantees = [
+  {
+    icon: CheckCircle,
+    title: "Traçabilité complète",
+    desc: "Chaque lot est tracé de la filière insecte jusqu'à la formulation finale. Origine 100% française, aucun intermédiaire inconnu.",
+  },
+  {
+    icon: FlaskConical,
+    title: "Essai terrain sans engagement",
+    desc: "Nous organisons un essai sur votre exploitation avant tout engagement commercial. Vous validez les résultats dans vos conditions réelles.",
+  },
+  {
+    icon: Users,
+    title: "Accompagnement agronomique",
+    desc: "Un technicien Keprea suit chaque essai de A à Z : protocole, interprétation des résultats, recommandations adaptées à votre système.",
+  },
+];
 
-const Testimonials = () => {
-  const { ref, inView } = useInView(0.08);
+const TrustSection = () => {
+  const { ref: statsRef, inView: statsVisible } = useInView(0.08);
+  const { ref: guaranteesRef, inView: guaranteesVisible } = useInView(0.05);
 
   return (
     <section style={{ backgroundColor: BG }} className="py-20 px-4 sm:px-6 lg:px-8">
-      <div ref={ref as RefObject<HTMLDivElement>} className={`container mx-auto reveal${inView ? ' is-visible' : ''}`}>
+      <div className="container mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-white/35 mb-3">Retours terrain</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35 mb-3">
+              Nos garanties
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Ce que disent nos agriculteurs
+              Des biosolutions développées avec rigueur
             </h2>
           </div>
-          <p className="text-white/55 text-sm max-w-xs leading-relaxed md:text-right">
-            Témoignages en cours de collecte auprès de nos premiers partenaires.
+          <p className="text-white/50 text-sm max-w-xs leading-relaxed md:text-right">
+            Une startup de 2025 qui mise sur la transparence et les résultats mesurables.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-          {profiles.map((item, i) => (
+        {/* Credibility stats */}
+        <div
+          ref={statsRef as RefObject<HTMLDivElement>}
+          className={`grid grid-cols-2 md:grid-cols-4 gap-px mb-12 reveal${statsVisible ? " is-visible" : ""}`}
+          style={{
+            backgroundColor: "rgba(255,255,255,0.06)",
+            borderRadius: "0.75rem",
+            overflow: "hidden",
+          }}
+        >
+          {credibilityStats.map((s, i) => (
             <div
               key={i}
-              className="rounded-xl p-6 flex flex-col gap-5"
-              style={{ backgroundColor: CARD_BG, border: CARD_BORDER }}
+              className="flex flex-col gap-1 px-6 py-5"
+              style={{ backgroundColor: BG }}
             >
-              <Quote className="w-6 h-6 text-primary/50" />
-              <div className="flex-1 flex items-center">
-                <p className="text-white/30 text-sm italic">Témoignage en cours de collecte...</p>
-              </div>
-              <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }} className="pt-4">
-                <p className="text-white/75 text-sm font-medium">{item.type}</p>
-                <p className="text-white/35 text-xs mt-0.5">{item.region} · {item.product}</p>
-              </div>
+              <span
+                className="text-2xl font-bold text-primary tracking-tight"
+                style={{ fontVariantNumeric: "tabular-nums" }}
+              >
+                {s.value}
+              </span>
+              <span className="text-xs text-white/45 leading-snug">{s.label}</span>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <p className="text-white/45 text-sm">
-            Vous utilisez nos produits ? Votre retour aide d'autres agriculteurs.
-          </p>
-          <Link to="/contact">
-            <Button
-              variant="outline"
-              size="sm"
-              className="shrink-0 border-white/30 text-white bg-transparent hover:bg-white hover:text-primary transition-colors"
+        {/* Guarantee cards */}
+        <div
+          ref={guaranteesRef as RefObject<HTMLDivElement>}
+          className={`grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 reveal reveal-delay-1${guaranteesVisible ? " is-visible" : ""}`}
+        >
+          {guarantees.map((item, i) => (
+            <div
+              key={i}
+              className="rounded-xl p-6 flex flex-col gap-4"
+              style={{ backgroundColor: CARD_BG, border: CARD_BORDER }}
             >
-              Partager mon expérience
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                style={{ backgroundColor: "hsl(var(--primary) / 0.3)" }}
+              >
+                <item.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+              </div>
+              <h3 className="text-base font-semibold text-white">{item.title}</h3>
+              <p className="text-sm text-white/60 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
+        >
+          <p className="text-white/40 text-sm leading-relaxed max-w-md">
+            Les premiers témoignages de nos partenaires agriculteurs seront publiés à l'issue des essais terrain 2026.
+          </p>
+          <Link
+            to="/contact"
+            className="group shrink-0 inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-5 pr-2 py-2 text-sm font-semibold transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          >
+            Rejoindre les premiers essais
+            <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
+              <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+            </span>
           </Link>
         </div>
 
@@ -76,4 +129,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TrustSection;

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
@@ -43,16 +44,24 @@ const Hero = () => {
             {t('hero.subtitle')}
           </p>
 
-          {/* Button-in-button CTA */}
-          <button
-            onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-6 pr-2 py-2 font-semibold text-sm transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
-          >
-            {t('hero.cta')}
-            <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </button>
+          {/* CTA group */}
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-6 pr-2 py-2 font-semibold text-sm transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            >
+              {t('hero.cta')}
+              <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            </button>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/8 hover:bg-white/15 text-white px-5 py-2.5 font-medium text-sm transition-all duration-300"
+            >
+              Demander un essai
+            </Link>
+          </div>
 
           {/* Stats — inline with pipe separators, not 3 equal cards */}
           <div className="flex flex-wrap gap-x-0 mt-10 border-t border-white/20 pt-6">

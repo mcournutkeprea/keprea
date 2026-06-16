@@ -35,7 +35,7 @@ const Navigation = () => {
 
   const navItems = [
     { id: "solutions", label: t("nav.solutions"), href: "/solutions" },
-    { id: "innovation", label: t("nav.innovation"), href: null },
+    { id: "innovation", label: t("nav.innovation"), href: "/innovation" },
     { id: "production", label: "Production", href: "/notre-production" },
     { id: "about", label: t("nav.about"), href: "/qui-sommes-nous" },
     { id: "ressources", label: "Ressources", href: "/ressources" },
