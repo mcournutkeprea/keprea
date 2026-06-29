@@ -37,7 +37,7 @@ const InnovationPage = () => {
                 Innovation
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.05] mb-6">
-                Une source de molécules<br className="hidden sm:block" /> que la chimie<br className="hidden sm:block" /> ne peut pas reproduire
+                Une source de molécules que la chimie ne peut pas reproduire
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
                 Les insectes ont co-evolué avec les plantes pendant 400 millions d'années. Keprea extrait et formule ces actifs biologiques pour en faire des biosolutions agricoles sans aucun résidu chimique.

@@ -19,6 +19,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
+    lastName: "",
     email: "",
     company: "",
     message: "",
@@ -28,7 +29,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.email || !formData.message) {
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.company || !formData.message) {
       toast({
         title: t('toast.error'),
         description: t('toast.error.required'),
@@ -60,7 +61,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
         description: t('toast.success.desc'),
       });
 
-      setFormData({ firstName: "", email: "", company: "", message: "" });
+      setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
       setRgpdAccepted(false);
     } catch (error) {
       toast({
@@ -110,15 +111,28 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="company">{t('contact.form.company')}</Label>
+            <Label htmlFor="lastName">{t('contact.form.lastName')} *</Label>
             <Input
-              id="company"
-              value={formData.company}
-              onChange={(e) => handleInputChange('company', e.target.value)}
-              placeholder={t('contact.form.company.placeholder')}
+              id="lastName"
+              value={formData.lastName}
+              onChange={(e) => handleInputChange('lastName', e.target.value)}
+              placeholder={t('contact.form.lastName.placeholder')}
+              required
               className={inputClass}
             />
           </div>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="company">{t('contact.form.company')} *</Label>
+          <Input
+            id="company"
+            value={formData.company}
+            onChange={(e) => handleInputChange('company', e.target.value)}
+            placeholder={t('contact.form.company.placeholder')}
+            required
+            className={inputClass}
+          />
         </div>
 
         <div className="space-y-2">

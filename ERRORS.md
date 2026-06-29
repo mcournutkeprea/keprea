@@ -24,7 +24,7 @@
 
 ### Absence de mentions légales
 - **Statut** : Corrigé (15/06/2026)
-- Page `/mentions-legales` créée — SIRET et capital social à renseigner (marqués `[À compléter]`)
+- Page `/mentions-legales` créée — SIRET, capital social et hébergeur renseignés (29/06/2026)
 
 ---
 
