@@ -60,11 +60,9 @@
 ---
 
 ### Absence de Google Analytics et Google Search Console
-- **Statut** : Ouvert
-- **Priorité** : Phase 1
-- **Symptôme** : Aucune donnée de trafic, site non déclaré en Search Console
-- **Cause** : Non configuré
-- **Correction** : Intégrer GA4 (après consentement RGPD) et soumettre le sitemap à la Search Console
+- **Statut** : Partiellement corrigé (29/06/2026)
+- GA4 intégré dans le code (`G-8J2LKBGHD7`), chargement conditionnel après consentement RGPD — actif sur `keprea.vercel.app`
+- Search Console : impossible à configurer sur `keprea.vercel.app` (contrainte www + certificat SSL). **À faire après déploiement sur `keprea.com`** : créer une propriété Search Console, valider via fichier HTML déjà en place (`google6f688f2466a68243.html`), soumettre `sitemap.xml` (remettre les URLs en `https://keprea.com` d'abord)
 
 ---
 
@@ -114,8 +112,14 @@
 
 - **Migration GitHub/Vercel** : Documenter `.env` avant migration (risque perte config Supabase/Mapbox)
 - **Redirections 301** : Toute URL modifiée sans redirection fait perdre le juice SEO acquis
-- **CORS / API** : Vérifier les headers CORS de la fonction Supabase `send-contact-email` en production
+- **CORS / API** : ~~Vérifier les headers CORS de la fonction Supabase `send-contact-email` en production~~ — Vérifié OK (29/06/2026), emails reçus + insertions visibles dans Supabase
 - **Build cache** : Un cache Vercel non invalidé peut servir une version obsolète après déploiement
+- **Déploiement keprea.com** : Checklist avant/après bascule sur le domaine final :
+  1. Remettre les URLs du `sitemap.xml` en `https://keprea.com`
+  2. Créer une propriété Google Search Console pour `keprea.com` (fichier `google6f688f2466a68243.html` déjà en place)
+  3. Soumettre le sitemap sur la nouvelle propriété
+  4. Configurer les redirections 301 Vercel des anciennes URLs
+  5. Vérifier que GA4 (`G-8J2LKBGHD7`) remonte bien des données sur le nouveau domaine
 
 ---
 
