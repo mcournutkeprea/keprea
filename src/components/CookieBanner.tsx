@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { initGA4 } from "@/lib/analytics";
 
 const STORAGE_KEY = "keprea_cookie_consent";
 
@@ -13,13 +14,14 @@ const CookieBanner = () => {
     const stored = localStorage.getItem(STORAGE_KEY) as ConsentStatus;
     if (stored === "accepted" || stored === "refused") {
       setStatus(stored);
+      if (stored === "accepted") initGA4();
     }
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem(STORAGE_KEY, "accepted");
     setStatus("accepted");
-    // GA4 sera activé ici quand il sera intégré
+    initGA4();
   };
 
   const handleRefuse = () => {
