@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
 import { useInView } from "@/hooks/useInView";
 import { ArrowRight } from "lucide-react";
@@ -96,7 +96,7 @@ const Solutions = () => {
           ref={gridRef as RefObject<HTMLDivElement>}
           className={`grid grid-cols-1 md:grid-cols-3 gap-5 reveal reveal-delay-1${gridVisible ? " is-visible" : ""}`}
         >
-          {cards.map((card, i) => (
+          {cards.map((card, _i) => (
             <div
               key={card.path}
               className={`relative overflow-hidden rounded-2xl cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl min-h-[340px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2${card.wide ? " md:col-span-2" : ""}`}
@@ -138,6 +138,24 @@ const Solutions = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Programme intégré */}
+        <div className="mt-8 border border-primary/20 rounded-xl px-6 py-5 bg-primary/5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary/60 flex-shrink-0">Programme intégré</span>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-foreground">
+            <span className="font-semibold text-primary">Protéger</span>
+            <span className="text-muted-foreground">Bioprotection + Biopesticides</span>
+            <span className="text-primary/70">→</span>
+            <span className="font-semibold text-primary">Stimuler</span>
+            <span className="text-muted-foreground">Boosters</span>
+            <span className="text-primary/70">→</span>
+            <span className="font-semibold text-primary">Nourrir</span>
+            <span className="text-muted-foreground">Biofertilisant</span>
+          </div>
+          <Link to="/pourquoi-le-biocontrole" className="text-xs text-primary underline underline-offset-2 hover:opacity-80 sm:ml-auto flex-shrink-0">
+            Découvrir le programme intégré →
+          </Link>
         </div>
 
       </div>

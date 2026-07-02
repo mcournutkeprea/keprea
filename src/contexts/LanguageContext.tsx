@@ -186,18 +186,18 @@ const translations: Translations = {
     de: 'Schützen Sie Ihre Kulturen mit Lebewesen'
   },
   'solutions.bioprotection.pests': {
-    fr: 'Contre les',
-    en: 'Against',
-    es: 'Contra',
-    pt: 'Controle',
-    de: 'Gegen'
+    fr: 'Lâchers d\'insectes prédateurs',
+    en: 'Releases of predatory insects',
+    es: 'Suelta de insectos depredadores',
+    pt: 'Liberação de insetos predadores',
+    de: 'Ausbringung von Nützlingen'
   },
   'solutions.bioprotection.pestsList': {
-    fr: 'pucerons, la pyrale, la cochenille',
-    en: 'aphids, corn borer, scale insects',
-    es: 'pulgones, la polilla, la cochinilla',
-    pt: 'pulgões, broca, cochonilhas e outras pragas.',
-    de: 'Blattläuse, Maiszünsler, Schildläuse'
+    fr: 'contre pucerons, pyrales et cochenilles',
+    en: 'against aphids, borers and scale insects',
+    es: 'contra pulgones, polillas y cochinillas',
+    pt: 'contra pulgões, brocas e cochonilhas',
+    de: 'gegen Blattläuse, Zünsler und Schildläuse'
   },
   'solutions.bioprotection.innovation': {
     fr: 'Solutions d\'application innovantes pour une meilleure performance',
@@ -1073,25 +1073,25 @@ const translations: Translations = {
     de: '100% Natürliche Extrakte'
   },
   'substances.benefit1.title': {
-    fr: '✓ Protection des cultures et des sols',
-    en: '✓ Crop and soil protection',
-    es: '✓ Protección de cultivos y suelos',
-    pt: '✓ Proteção de culturas e solos',
-    de: '✓ Kultur- und Bodenschutz'
+    fr: 'Protection foliaire, racinaire et aérienne',
+    en: 'Foliar, root and aerial protection',
+    es: 'Protección foliar, radicular y aérea',
+    pt: 'Proteção foliar, radicular e aérea',
+    de: 'Blatt-, Wurzel- und Luftschutz'
   },
   'substances.benefit1.desc': {
-    fr: 'Extraits actifs naturels issus d\'insectes',
-    en: 'Natural active extracts derived from insects',
-    es: 'Extractos activos naturales derivados de insectos',
-    pt: 'Extratos ativos naturais derivados de insetos',
-    de: 'Natürliche Wirkstoffextrakte aus Insekten'
+    fr: 'Agit sur les ravageurs suceurs, broyeurs et fouisseurs grâce à des molécules bioactives spécifiques.',
+    en: 'Acts on sucking, chewing and burrowing pests through specific bioactive molecules.',
+    es: 'Actúa sobre plagas succionadoras, masticadoras y excavadoras mediante moléculas bioactivas específicas.',
+    pt: 'Age sobre pragas sugadoras, mastigadoras e mineiras através de moléculas bioativas específicas.',
+    de: 'Wirkt gegen saugende, beißende und grabende Schädlinge durch spezifische bioaktive Moleküle.'
   },
   'substances.benefit2.title': {
-    fr: '✓ Stimulation des défenses',
-    en: '✓ Defense stimulation',
-    es: '✓ Estimulación de las defensas',
-    pt: '✓ Estimulação das defesas',
-    de: '✓ Abwehrstimulation'
+    fr: 'Stimulation des défenses',
+    en: 'Defense stimulation',
+    es: 'Estimulación de las defensas',
+    pt: 'Estimulação das defesas',
+    de: 'Abwehrstimulation'
   },
   'substances.benefit2.desc': {
     fr: 'Contre les ravageurs des feuilles, de la tige et du système racinaire',
@@ -1101,11 +1101,11 @@ const translations: Translations = {
     de: 'Gegen Schädlinge an Blättern, Stängeln und Wurzelsystemen'
   },
   'substances.benefit3.title': {
-    fr: '✓ Respect de l\'environnement',
-    en: '✓ Environmental respect',
-    es: '✓ Respeto al medio ambiente',
-    pt: '✓ Respeito ao meio ambiente',
-    de: '✓ Umweltschonung'
+    fr: 'Respect de l\'environnement',
+    en: 'Environmental respect',
+    es: 'Respeto al medio ambiente',
+    pt: 'Respeito ao meio ambiente',
+    de: 'Umweltschonung'
   },
   'substances.benefit3.desc': {
     fr: 'Solutions biodégradables et non toxiques',
@@ -1115,18 +1115,18 @@ const translations: Translations = {
     de: 'Biologisch abbaubare und ungiftige Lösungen'
   },
   'substances.benefit4.title': {
-    fr: '✓ Solutions liquides et solides',
-    en: '✓ Liquid and solid solutions',
-    es: '✓ Soluciones líquidas y sólidas',
-    pt: '✓ Soluções líquidas e sólidas',
-    de: '✓ Flüssige und feste Lösungen'
+    fr: 'Compatible avec votre matériel existant',
+    en: 'Compatible with your existing equipment',
+    es: 'Compatible con su maquinaria existente',
+    pt: 'Compatível com seu equipamento existente',
+    de: 'Kompatibel mit Ihren bestehenden Geräten'
   },
   'substances.benefit4.desc': {
-    fr: 'En pulvérisation et en micro-granulés',
-    en: 'For spraying and micro-granulators',
-    es: 'En pulverización y micro-granuladores',
-    pt: 'Em pulverização e micro-granuladores',
-    de: 'Zum Sprühen und als Mikrogranulat'
+    fr: 'Formulations liquides ou granulées applicables avec vos pulvérisateurs et épandeurs habituels. Aucun investissement matériel.',
+    en: 'Liquid or granular formulations applicable with your usual sprayers and spreaders. No equipment investment.',
+    es: 'Formulaciones líquidas o granuladas aplicables con sus pulverizadores y distribuidores habituales. Sin inversión en maquinaria.',
+    pt: 'Formulações líquidas ou granuladas aplicáveis com seus pulverizadores e distribuidores habituais. Sem investimento em equipamentos.',
+    de: 'Flüssige oder granulare Formulierungen für Ihre Spritz- und Streugeräte. Keine Geräteinvestitionen.'
   },
   'substances.tech.title': {
     fr: 'Notre technologie d\'extraction',
@@ -1298,11 +1298,11 @@ const translations: Translations = {
     de: 'Selektiv'
   },
   'biocontrole.adv2.desc': {
-    fr: 'Préserve les insectes bénéfiques et pollinisateurs',
-    en: 'Preserves beneficial insects and pollinators',
-    es: 'Preserva los insectos beneficiosos y polinizadores',
-    pt: 'Preserva insetos benéficos e polinizadores',
-    de: 'Schont Nützlinge und Bestäuber'
+    fr: 'Les auxiliaires s\'attaquent exclusivement à leurs espèces hôtes cibles, sans risque pour les abeilles ni la faune utile environnante.',
+    en: 'Beneficial insects exclusively target their host pest species, with no risk to bees or other beneficial fauna.',
+    es: 'Los auxiliares atacan exclusivamente a sus especies huésped, sin riesgo para las abejas ni la fauna útil.',
+    pt: 'Os auxiliares atacam exclusivamente as suas espécies hospedeiras alvo, sem risco para abelhas ou fauna útil.',
+    de: 'Nützlinge greifen ausschließlich ihre Zielwirtsarten an, ohne Risiko für Bienen oder andere nützliche Fauna.'
   },
   'biocontrole.adv3.title': {
     fr: 'Durable',
@@ -1552,11 +1552,11 @@ const translations: Translations = {
     de: 'Stimuliert die Photosynthese'
   },
   'boosters.soilea.desc': {
-    fr: '2% de chitine pure pour stimuler l\'activité chitinolytique des sols et améliorer le système de défense des plantes.',
-    en: '2% pure chitin to stimulate soil chitinolytic activity and improve plant defense systems.',
-    es: '2% de quitina pura para estimular la actividad quitinolítica de los suelos y mejorar el sistema de defensa de las plantas.',
-    pt: '2% de quitina pura para estimular a atividade quitinolítica dos solos e melhorar o sistema de defesa das plantas.',
-    de: '2% reine Chitine zur Stimulation der chitinolytischen Bodenaktivität und Verbesserung des pflanzlichen Abwehrsystems.'
+    fr: '2% de chitine pure pour activer les micro-organismes du sol qui renforcent naturellement les défenses des plantes et améliorent leur résistance aux maladies racinaires.',
+    en: '2% pure chitin to activate soil microorganisms that naturally strengthen plant defenses and improve resistance to root diseases.',
+    es: '2% de quitina pura para activar los microorganismos del suelo que refuerzan naturalmente las defensas de las plantas y mejoran su resistencia a las enfermedades radiculares.',
+    pt: '2% de quitina pura para ativar os microorganismos do solo que fortalecem naturalmente as defesas das plantas e melhoram sua resistência a doenças radiculares.',
+    de: '2% reine Chitine zur Aktivierung der Bodenmikroorganismen, die natürlich die Pflanzenabwehr stärken und die Resistenz gegen Wurzelkrankheiten verbessern.'
   },
   'boosters.soilea.benefit1': {
     fr: 'Matière organique de qualité',
@@ -1566,11 +1566,11 @@ const translations: Translations = {
     de: 'Hochwertige organische Substanz'
   },
   'boosters.soilea.benefit2': {
-    fr: 'Stimule le SDP',
-    en: 'Stimulates the PDS',
-    es: 'Estimula el SDP',
-    pt: 'Estimula as defesas naturais das plantas',
-    de: 'Stimuliert die Pflanzenabwehr'
+    fr: 'Stimule les défenses naturelles de la plante (SDP)',
+    en: 'Stimulates the plant\'s natural defenses (ISR)',
+    es: 'Estimula las defensas naturales de la planta (SDP)',
+    pt: 'Estimula as defesas naturais das plantas (SDP)',
+    de: 'Stimuliert die natürlichen Abwehrkräfte der Pflanze (ISR)'
   },
   'boosters.soilea.benefit3': {
     fr: 'Augmente la présence des bons microorganismes',

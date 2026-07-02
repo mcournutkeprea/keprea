@@ -94,61 +94,50 @@ const Innovation = () => {
             </div>
           </div>
 
-          {/* ── Carte 2 : Biocontrôle vivant (sombre) ── */}
+          {/* ── Carte 2 : Biocontrôle vivant (claire) ── */}
           <div
             className="p-[3px] rounded-[2rem]"
             style={{
-              background: 'linear-gradient(145deg, hsl(var(--primary)/0.40) 0%, hsl(var(--primary)/0.08) 100%)',
-              boxShadow: '0 4px 40px hsl(var(--primary)/0.12), 0 1px 3px rgba(0,0,0,0.06)',
+              background: 'linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)',
+              boxShadow: '0 4px 40px hsl(var(--primary)/0.09), 0 1px 3px rgba(0,0,0,0.04)',
             }}
           >
             <div
               className="rounded-[calc(2rem-3px)] px-8 py-9 h-full relative overflow-hidden"
               style={{
-                background: 'hsl(142, 69%, 8%)',
-                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06)',
+                background: 'radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))',
+                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.92)',
               }}
             >
-              {/* Radial glow at bottom */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: 'radial-gradient(ellipse at 50% 120%, hsl(var(--primary)/0.28) 0%, transparent 60%)',
-                }}
-                aria-hidden="true"
-              />
+              {/* Eyebrow */}
+              <span
+                className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
+                style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
+              >
+                Biocontrôle vivant
+              </span>
 
-              <div className="relative">
-                {/* Eyebrow */}
-                <span
-                  className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
-                  style={{ background: 'hsl(var(--primary)/0.12)', border: '1px solid hsl(var(--primary)/0.28)' }}
-                >
-                  Biocontrôle vivant
-                </span>
+              <h3
+                className="text-lg font-bold text-foreground mb-8 leading-snug max-w-[30ch]"
+                style={{ letterSpacing: '-0.01em' }}
+              >
+                {t("innovation.biocontrol.question")}
+              </h3>
 
-                <h3
-                  className="text-lg font-bold text-white mb-8 leading-snug max-w-[30ch]"
-                  style={{ letterSpacing: '-0.01em' }}
-                >
-                  {t("innovation.biocontrol.question")}
-                </h3>
-
-                <div className="flex flex-col divide-y" style={{ borderColor: 'rgba(255,255,255,0.07)' }}>
-                  {biocontrolStats.map((stat, i) => (
-                    <div key={i} className="py-5 first:pt-0 last:pb-0">
-                      <span
-                        className="text-5xl font-extrabold tracking-tight leading-none tabular-nums"
-                        style={{ color: 'hsl(var(--primary))' }}
-                      >
-                        {stat.value}
-                      </span>
-                      <p className="text-sm leading-relaxed mt-2" style={{ color: 'rgba(255,255,255,0.50)' }}>
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+              <div className="flex flex-col divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }}>
+                {biocontrolStats.map((stat, i) => (
+                  <div key={i} className="py-5 first:pt-0 last:pb-0">
+                    <span
+                      className="text-5xl font-extrabold tracking-tight leading-none tabular-nums"
+                      style={{ color: 'hsl(var(--primary))' }}
+                    >
+                      {stat.value}
+                    </span>
+                    <p className="text-sm leading-relaxed mt-2 text-muted-foreground">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

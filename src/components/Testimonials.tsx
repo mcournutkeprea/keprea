@@ -3,9 +3,6 @@ import { CheckCircle, FlaskConical, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from "@/hooks/useInView";
 
-const BG = "hsl(145 68% 14%)";
-const CARD_BG = "rgba(255,255,255,0.06)";
-const CARD_BORDER = "1px solid rgba(255,255,255,0.1)";
 
 const credibilityStats = [
   { value: "2025", label: "Fondée à Dole, Jura" },
@@ -37,20 +34,20 @@ const TrustSection = () => {
   const { ref: guaranteesRef, inView: guaranteesVisible } = useInView(0.05);
 
   return (
-    <section style={{ backgroundColor: BG }} className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary/5">
       <div className="container mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/50 mb-3">
               Nos garanties
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Des biosolutions développées avec rigueur
             </h2>
           </div>
-          <p className="text-white/50 text-sm max-w-xs leading-relaxed md:text-right">
+          <p className="text-muted-foreground text-sm max-w-xs leading-relaxed md:text-right">
             Une startup de 2025 qui mise sur la transparence et les résultats mesurables.
           </p>
         </div>
@@ -58,18 +55,12 @@ const TrustSection = () => {
         {/* Credibility stats */}
         <div
           ref={statsRef as RefObject<HTMLDivElement>}
-          className={`grid grid-cols-2 md:grid-cols-4 gap-px mb-12 reveal${statsVisible ? " is-visible" : ""}`}
-          style={{
-            backgroundColor: "rgba(255,255,255,0.06)",
-            borderRadius: "0.75rem",
-            overflow: "hidden",
-          }}
+          className={`grid grid-cols-2 md:grid-cols-4 gap-px mb-12 rounded-xl overflow-hidden bg-border/30 reveal${statsVisible ? " is-visible" : ""}`}
         >
           {credibilityStats.map((s, i) => (
             <div
               key={i}
-              className="flex flex-col gap-1 px-6 py-5"
-              style={{ backgroundColor: BG }}
+              className="flex flex-col gap-1 px-6 py-5 bg-background"
             >
               <span
                 className="text-2xl font-bold text-primary tracking-tight"
@@ -77,7 +68,7 @@ const TrustSection = () => {
               >
                 {s.value}
               </span>
-              <span className="text-xs text-white/45 leading-snug">{s.label}</span>
+              <span className="text-xs text-muted-foreground leading-snug">{s.label}</span>
             </div>
           ))}
         </div>
@@ -90,27 +81,23 @@ const TrustSection = () => {
           {guarantees.map((item, i) => (
             <div
               key={i}
-              className="rounded-xl p-6 flex flex-col gap-4"
-              style={{ backgroundColor: CARD_BG, border: CARD_BORDER }}
+              className="rounded-xl p-6 flex flex-col gap-4 bg-background border border-border"
             >
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ backgroundColor: "hsl(var(--primary) / 0.3)" }}
+                style={{ backgroundColor: "hsl(var(--primary) / 0.1)" }}
               >
                 <item.icon className="w-5 h-5 text-primary" aria-hidden="true" />
               </div>
-              <h3 className="text-base font-semibold text-white">{item.title}</h3>
-              <p className="text-sm text-white/60 leading-relaxed">{item.desc}</p>
+              <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div
-          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
-        >
-          <p className="text-white/40 text-sm leading-relaxed max-w-md">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-border">
+          <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
             Les premiers témoignages de nos partenaires agriculteurs seront publiés à l'issue des essais terrain 2026.
           </p>
           <Link
