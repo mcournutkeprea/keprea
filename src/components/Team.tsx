@@ -7,14 +7,14 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   { name: "Antoine Hubert", role: "Président directeur général" },
-  { name: "Emilien Bohuon", role: "Directeur R&D agronomique" },
-  { name: "Pascal Maignet", role: "Directeur R&D biocontrole" },
   { name: "Julien Denormandie", role: "Président du conseil de surveillance" },
-  { name: "Valentin Frenceshi", role: "Conducteur de ligne" },
-  { name: "Antoine Lescouet", role: "Conducteur de ligne" },
   { name: "Béatrice Vassy", role: "Directrice administrative et financière" },
   { name: "Thibault Sarton du Jonchay", role: "Directeur des opérations" },
-  { name: "Guillaume Bohuon", role: "Directeur marketing" },
+  { name: "Guillaume Daoulas", role: "Directeur marketing" },
+  { name: "Emilien Bohuon", role: "Directeur R&D agronomique" },
+  { name: "Pascal Maignet", role: "Directeur R&D biocontrole" },
+  { name: "Valentin Frenceshi", role: "Conducteur de ligne" },
+  { name: "Antoine Lescouet", role: "Conducteur de ligne" },
 ];
 
 const getInitials = (name: string) => {
