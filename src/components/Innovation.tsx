@@ -1,4 +1,5 @@
 import type { RefObject } from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 
@@ -39,6 +40,13 @@ const Innovation = () => {
             Ils ont développé des actifs biologiques d'une efficacité que la chimie de synthèse ne peut pas reproduire.
             Keprea extrait et formule ces substances pour les rendre accessibles aux agriculteurs.
           </p>
+          <Link
+            to="/pourquoi-le-biocontrole"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:opacity-80 transition-opacity mt-4"
+          >
+            Pourquoi le biocontrôle ?
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
 
         {/* Two-column layout */}
@@ -124,21 +132,21 @@ const Innovation = () => {
                 {t("innovation.biocontrol.question")}
               </h3>
 
-              <div className="flex flex-col divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }}>
+              <ul className="flex flex-col gap-0 divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }} role="list">
                 {biocontrolStats.map((stat, i) => (
-                  <div key={i} className="py-5 first:pt-0 last:pb-0">
+                  <li key={i} className="flex gap-5 items-start py-5 first:pt-0 last:pb-0">
                     <span
-                      className="text-5xl font-extrabold tracking-tight leading-none tabular-nums"
+                      className="text-3xl font-extrabold tabular-nums shrink-0 leading-none min-w-10"
                       style={{ color: 'hsl(var(--primary))' }}
                     >
                       {stat.value}
                     </span>
-                    <p className="text-sm leading-relaxed mt-2 text-muted-foreground">
+                    <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--foreground)/0.78)' }}>
                       {stat.label}
                     </p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
 

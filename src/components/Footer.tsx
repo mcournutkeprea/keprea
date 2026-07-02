@@ -12,13 +12,13 @@ const Footer = () => {
           <div>
             <img
               src="/lovable-uploads/eprea_Main_Logo.png"
-              alt="Keprea — Biosolutions Agricoles"
+              alt="Keprea : Biosolutions Agricoles"
               className="h-12 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Biosolutions à base d'insectes pour une agriculture performante et régénérative.
             </p>
-            <p className="text-sm text-muted-foreground mt-2">Dole (39100) — Jura, France</p>
+            <p className="text-sm text-muted-foreground mt-2">Dole (39100), Jura, France</p>
           </div>
 
           {/* Navigation */}

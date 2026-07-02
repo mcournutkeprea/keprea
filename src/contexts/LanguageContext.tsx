@@ -28,6 +28,13 @@ const translations: Translations = {
     pt: 'Inovação',
     de: 'Innovation'
   },
+  'nav.biocontrole': {
+    fr: 'Biocontrôle',
+    en: 'Biocontrol',
+    es: 'Biocontrol',
+    pt: 'Biocontrole',
+    de: 'Biokontrolle'
+  },
   'nav.production': {
     fr: 'Notre site de production',
     en: 'Our production site',
@@ -598,10 +605,10 @@ const translations: Translations = {
   },
   'about.history.body': {
     fr: 'Made in France, notre site de 3 000 m² produit des biosolutions de qualité stable et reproductible, toutes utilisables en agriculture biologique.',
-    en: 'Made in France, our 3,000 m² facility produces biosolutions of stable, reproducible quality — all compatible with organic farming.',
+    en: 'Made in France, our 3,000 m² facility produces biosolutions of stable, reproducible quality, all compatible with organic farming.',
     es: 'Made in France, nuestro sitio de 3.000 m² produce biosoluciones de calidad estable y reproducible, todas compatibles con la agricultura ecológica.',
     pt: 'Made in France, a nossa unidade de 3.000 m² produz biosoluções de qualidade estável e reprodutível, todas compatíveis com a agricultura biológica.',
-    de: 'Made in France entwickelt unser 3.000 m² großer Standort Biolösungen von stabiler, reproduzierbarer Qualität – alle für den ökologischen Landbau geeignet.'
+    de: 'Made in France entwickelt unser 3.000 m² großer Standort Biolösungen von stabiler, reproduzierbarer Qualität, alle für den ökologischen Landbau geeignet.'
   },
   'about.history.p2.location': {
     fr: 'Implantée à proximité de',
@@ -1496,11 +1503,11 @@ const translations: Translations = {
   },
   // Boosters page
   'boosters.title': {
-    fr: 'Boosters — Biostimulants Agricoles',
-    en: 'Boosters — Agricultural Biostimulants',
-    es: 'Potenciadores — Bioestimulantes Agrícolas',
-    pt: 'Potenciadores — Bioestimulantes Agrícolas',
-    de: 'Booster — Landwirtschaftliche Biostimulanzien'
+    fr: 'Boosters : Biostimulants Agricoles',
+    en: 'Boosters : Agricultural Biostimulants',
+    es: 'Potenciadores : Bioestimulantes Agrícolas',
+    pt: 'Potenciadores : Bioestimulantes Agrícolas',
+    de: 'Booster : Landwirtschaftliche Biostimulanzien'
   },
   'boosters.subtitle': {
     fr: 'Solutions biostimulantes liquides ou solides pour optimiser le potentiel de vos cultures et vos sols',

@@ -1,8 +1,9 @@
 import { Head } from "vite-react-ssg";
-import { MapPin, Bug, Archive, FlaskConical, Package, Truck, Users, CheckCircle2 } from "lucide-react";
+import { Bug, Archive, FlaskConical, Package, Truck, Users, CheckCircle2 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Production from "@/components/Production";
+import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const NotreProduction = () => (
@@ -32,17 +33,16 @@ const NotreProduction = () => (
     </Head>
     <Navigation />
     <main className="flex-1 pt-20">
-      <section className="py-12 px-4 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Notre Production
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            De l'élevage d'insectes à la formulation finale : un process maîtrisé
-            de bout en bout, made in France.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Fabrication française"
+        title="Notre Production"
+        lead="De l'élevage d'insectes à la formulation finale : un process maîtrisé de bout en bout, made in France."
+        stats={[
+          { value: "3 000 m²", label: "Surface du site" },
+          { value: "6", label: "Étapes maîtrisées" },
+          { value: "100%", label: "Made in France" },
+        ]}
+      />
 
       {/* Pourquoi produire en France */}
       <section className="py-12 px-4">
@@ -55,8 +55,8 @@ const NotreProduction = () => (
               Maîtriser l'élevage d'insectes et l'extraction des molécules actives sur un
               site unique nous permet de garantir une traçabilité complète, du lot d'élevage
               au produit fini. Cette intégration verticale limite notre dépendance aux
-              approvisionnements internationaux — un enjeu particulièrement sensible pour
-              des matières premières vivantes — et raccourcit les délais entre la production
+              approvisionnements internationaux, un enjeu particulièrement sensible pour
+              des matières premières vivantes, et raccourcit les délais entre la production
               et la livraison aux exploitations agricoles françaises.
             </p>
           </div>
@@ -77,7 +77,7 @@ const NotreProduction = () => (
           </p>
           <div className="space-y-6">
             {[
-              { icon: Bug, title: "Élevage d'insectes auxiliaires", desc: "Élevage en conditions contrôlées (température, hygrométrie, alimentation) sur notre site en France — une matière première disponible toute l'année, indépendante des aléas climatiques." },
+              { icon: Bug, title: "Élevage d'insectes auxiliaires", desc: "Élevage en conditions contrôlées (température, hygrométrie, alimentation) sur notre site en France, une matière première disponible toute l'année, indépendante des aléas climatiques." },
               { icon: Archive, title: "Collecte de co-produits", desc: "Valorisation des co-produits issus de l'élevage, dans une logique d'économie circulaire limitant les intrants externes." },
               { icon: FlaskConical, title: "Préparation ou transformation", desc: "Extraction des molécules actives (peptides antimicrobiens, chitine, acides aminés) par nos procédés propriétaires, puis formulation selon la gamme de destination." },
               { icon: Package, title: "Packaging", desc: "Conditionnement adapté à chaque format de vente : sachets et tubes pour les auxiliaires vivants, bidons pour les biopesticides et boosters, big-bags et sacs pour le biofertilisant Fertea432." },
@@ -111,7 +111,7 @@ const NotreProduction = () => (
             </div>
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">2h</div>
-              <p className="text-sm text-muted-foreground">De Paris, Bâle, Genève et Lyon — au cœur d'un bassin céréalier et viticole</p>
+              <p className="text-sm text-muted-foreground">De Paris, Bâle, Genève et Lyon, au cœur d'un bassin céréalier et viticole</p>
             </div>
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">6</div>
@@ -123,7 +123,7 @@ const NotreProduction = () => (
               "Site implanté en France, à proximité d'un important bassin céréalier et viticole français",
               "Élevage d'insectes en conditions contrôlées, garantissant une matière première traçable toute l'année",
               "Produits formulés pour répondre aux exigences de l'agriculture biologique (règlement (UE) 2018/848)",
-              "Société immatriculée en France (SAS Keprea) — mentions légales et SIRET disponibles en pied de page",
+              "Société immatriculée en France (SAS Keprea), mentions légales et SIRET disponibles en pied de page",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -131,11 +131,6 @@ const NotreProduction = () => (
               </div>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-8 italic">
-            <MapPin className="w-3 h-3 inline mr-1" />
-            Nous mettrons à jour cette page avec nos certifications qualité et volumes de production
-            dès leur formalisation.
-          </p>
         </div>
       </section>
 

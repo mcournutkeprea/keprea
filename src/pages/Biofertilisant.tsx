@@ -43,12 +43,12 @@ const Biofertilisant = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Head>
-        <title>Fertea432 — Biofertilisant Keprea | Fertilisation Organique NPK</title>
+        <title>Fertea432 : Biofertilisant Keprea | Fertilisation Organique NPK</title>
         <meta name="description" content="Fertea432, biofertilisant à base d'insectes Keprea : 4% P, 3% N, 2% K, 85% matière organique. Homologué agriculture biologique. Améliore la structure du sol." />
         <link rel="canonical" href="https://keprea.vercel.app/solutions/biofertilisant" />
         <meta property="og:url" content="https://keprea.vercel.app/solutions/biofertilisant" />
-        <meta property="og:title" content="Fertea432 — Biofertilisant Keprea | Fertilisation Organique NPK" />
-        <meta name="twitter:title" content="Fertea432 — Biofertilisant Keprea | Fertilisation Organique NPK" />
+        <meta property="og:title" content="Fertea432 : Biofertilisant Keprea | Fertilisation Organique NPK" />
+        <meta name="twitter:title" content="Fertea432 : Biofertilisant Keprea | Fertilisation Organique NPK" />
         <meta property="og:description" content="Fertea432, biofertilisant à base d'insectes Keprea : 4% P, 3% N, 2% K, 85% matière organique. Homologué agriculture biologique. Améliore la structure du sol." />
         <meta name="twitter:description" content="Fertea432, biofertilisant à base d'insectes Keprea : 4% P, 3% N, 2% K, 85% matière organique. Homologué agriculture biologique. Améliore la structure du sol." />
         <script type="application/ld+json">{breadcrumbJsonLd([
@@ -58,7 +58,7 @@ const Biofertilisant = () => {
         ])}</script>
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
-          name: "Fertea432 — biofertilisant organique",
+          name: "Fertea432 : biofertilisant organique",
           description: "Biofertilisant organique à libération lente (85% matière organique, NPK 4-3-2) à base d'insectes élevés en France, pour l'amélioration de la fertilité et de la structure du sol.",
           path: "/solutions/biofertilisant",
           serviceType: "Fertilisation organique",
@@ -142,10 +142,10 @@ const Biofertilisant = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {[
-                "Grandes cultures — blé, maïs, colza, tournesol, betterave",
-                "Légumineuses — soja, pois, féverole",
-                "Maraîchage — tomate, courgette, poivron, laitue",
-                "Arboriculture — pommier, poirier, cerisier, vigne",
+                "Grandes cultures : blé, maïs, colza, tournesol, betterave",
+                "Légumineuses : soja, pois, féverole",
+                "Maraîchage : tomate, courgette, poivron, laitue",
+                "Arboriculture : pommier, poirier, cerisier, vigne",
                 "Prairies et cultures fourragères",
                 "Toutes cultures en agriculture biologique (AB)",
               ].map((culture) => (
@@ -163,7 +163,7 @@ const Biofertilisant = () => {
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
             <div className="space-y-6">
               {[
-                { step: 1, title: "Dosage et conditionnement", desc: "200 à 500 kg/ha selon la culture, l'analyse de sol et les objectifs de fertilité. Disponible en big-bags de 500 kg et sacs de 25 kg — contactez-nous pour le prix à la tonne selon volume." },
+                { step: 1, title: "Dosage et conditionnement", desc: "200 à 500 kg/ha selon la culture, l'analyse de sol et les objectifs de fertilité. Disponible en big-bags de 500 kg et sacs de 25 kg, contactez-nous pour le prix à la tonne selon volume." },
                 { step: 2, title: "Moment d'application", desc: "En engrais de fond, 2 à 4 semaines avant le semis ou la plantation. Permet une pré-décomposition optimale avant le développement racinaire." },
                 { step: 3, title: "Incorporation au sol", desc: "Mélanger au sol lors du travail en profondeur (15 à 20 cm). Un labour peu profond suffit pour une bonne distribution." },
                 { step: 4, title: "Compatibilité", desc: "Compatible avec d'autres amendements organiques. Peut compléter un programme de fertilisation conventionnel ou biologique." },
@@ -217,7 +217,7 @@ const Biofertilisant = () => {
             <p className="text-xs text-muted-foreground text-center mt-4">
               Données internes Keprea, campagnes 2023–2024, mesurées selon des méthodes d'analyse de sol
               inspirées des référentiels Comifer. Résultats variables selon le type de sol et l'historique
-              cultural — communiqués à titre indicatif.
+              cultural, communiqués à titre indicatif.
             </p>
           </div>
         </section>

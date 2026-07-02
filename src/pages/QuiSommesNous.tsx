@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Team from "@/components/Team";
+import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const QuiSommesNous = () => (
@@ -33,17 +34,16 @@ const QuiSommesNous = () => (
     </Head>
     <Navigation />
     <main className="flex-1 pt-20">
-      <section className="py-12 px-4 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Qui sommes-nous ?
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Une équipe pluridisciplinaire au service d'une agriculture plus durable,
-            réunie autour de la biologie des insectes.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="L'équipe Keprea"
+        title="Qui sommes-nous ?"
+        lead="Une équipe pluridisciplinaire au service d'une agriculture plus durable, réunie autour de la biologie des insectes."
+        stats={[
+          { value: "2024", label: "Année de création" },
+          { value: "7", label: "Associés fondateurs" },
+          { value: "3 000 m²", label: "Site de production France" },
+        ]}
+      />
       {/* Mission */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-3xl">
@@ -51,8 +51,8 @@ const QuiSommesNous = () => (
             <h2 className="text-2xl font-bold text-foreground mb-4">Notre mission</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Faire de la biologie des insectes un levier concret pour la transition
-              agroécologique. Nous convertissons les propriétés biologiques des insectes —
-              peptides antimicrobiens, chitine, acides aminés — en solutions de protection
+              agroécologique. Nous convertissons les propriétés biologiques des insectes
+              (peptides antimicrobiens, chitine, acides aminés) en solutions de protection
               et de nutrition des cultures, conçues pour répondre aux contraintes réelles
               du terrain : coût, simplicité d'usage, conformité réglementaire.
             </p>
@@ -78,8 +78,8 @@ const QuiSommesNous = () => (
           <div className="max-w-2xl mx-auto space-y-4">
             {[
               {
-                title: "2025 — Création de Keprea (SAS)",
-                desc: "Fondée par 7 associés experts — agriculteurs, entomologistes, agronomes et entrepreneurs — réunis autour d'une même conviction : faire revenir le vivant au cœur de la gestion de la ferme.",
+                title: "2024 : Création de Keprea (SAS)",
+                desc: "Fondée par 7 associés experts (agriculteurs, entomologistes, agronomes et entrepreneurs), réunis autour d'une même conviction : faire revenir le vivant au cœur de la gestion de la ferme.",
               },
               {
                 title: "Implantation du site de production en France",
@@ -87,7 +87,7 @@ const QuiSommesNous = () => (
               },
               {
                 title: "Une gamme de 4 familles de biosolutions",
-                desc: "Bioprotection vivante (auxiliaires entomophages), biopesticides (extraits d'insectes), boosters (biostimulants) et biofertilisant — développés pour couvrir l'ensemble d'un programme de protection et de nutrition des cultures.",
+                desc: "Bioprotection vivante (auxiliaires entomophages), biopesticides (extraits d'insectes), boosters (biostimulants) et biofertilisant, développés pour couvrir l'ensemble d'un programme de protection et de nutrition des cultures.",
               },
               {
                 title: "Des formulations pensées pour l'agriculture biologique",
@@ -103,9 +103,6 @@ const QuiSommesNous = () => (
               </div>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-8 italic">
-            Nous mettrons à jour cette page avec nos certifications qualité dès leur formalisation.
-          </p>
         </div>
       </section>
 

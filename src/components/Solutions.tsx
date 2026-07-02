@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate, Link } from "react-router-dom";
 import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
 import { useInView } from "@/hooks/useInView";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Lightbulb } from "lucide-react";
 
 const Solutions = () => {
   const { t } = useLanguage();
@@ -67,8 +67,8 @@ const Solutions = () => {
       descKey: null,
       descText: (
         <>
-          <strong className="text-primary">{t("solutions.biofertilisant.organic")}</strong>{" "}
-          — {t("solutions.biofertilisant.npk")}
+          <strong className="text-primary">{t("solutions.biofertilisant.organic")}</strong>{", "}
+          {t("solutions.biofertilisant.npk")}
         </>
       ),
       wide: true,
@@ -90,6 +90,28 @@ const Solutions = () => {
             {t("solutions.subtitle")}
           </p>
         </div>
+
+        {/* Pourquoi le biocontrôle — banner CTA, positioned before the choice */}
+        <Link
+          to="/pourquoi-le-biocontrole"
+          className="group/banner mb-8 flex flex-col sm:flex-row sm:items-center gap-5 rounded-2xl border border-primary/20 bg-primary/5 hover:bg-primary/[0.07] transition-colors duration-300 p-6 sm:p-7"
+        >
+          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <Lightbulb className="w-6 h-6 text-primary" aria-hidden="true" />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-bold text-foreground mb-1">Pourquoi le biocontrôle ?</h3>
+            <p className="text-sm text-muted-foreground max-w-xl leading-relaxed">
+              Cadre réglementaire, enjeux agronomiques et données clés : à lire avant de choisir votre solution.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-3 rounded-full bg-primary text-white pl-5 pr-2 py-2 font-semibold text-sm flex-shrink-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/banner:bg-primary/90">
+            Découvrir
+            <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover/banner:translate-x-0.5 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+            </span>
+          </span>
+        </Link>
 
         {/* Asymmetric 3-col brick grid */}
         <div
@@ -153,9 +175,6 @@ const Solutions = () => {
             <span className="font-semibold text-primary">Nourrir</span>
             <span className="text-muted-foreground">Biofertilisant</span>
           </div>
-          <Link to="/pourquoi-le-biocontrole" className="text-xs text-primary underline underline-offset-2 hover:opacity-80 sm:ml-auto flex-shrink-0">
-            Découvrir le programme intégré →
-          </Link>
         </div>
 
       </div>

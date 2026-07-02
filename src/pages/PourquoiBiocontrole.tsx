@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: "Pourquoi utiliser des insectes comme matière première en biocontrôle ?",
     answer:
-      "Les insectes comme Hermetia illucens (mouche soldat noire) ou les vers de farine produisent naturellement des molécules de défense — peptides antimicrobiens, chitine, acides aminés — développées au cours de leur évolution pour résister à leurs propres agresseurs (bactéries, champignons). L'élevage contrôlé permet d'obtenir une matière première standardisée, traçable et disponible toute l'année, contrairement à certaines ressources végétales soumises aux aléas de récolte.",
+      "Les insectes comme Hermetia illucens (mouche soldat noire) ou les vers de farine produisent naturellement des molécules de défense (peptides antimicrobiens, chitine, acides aminés) développées au cours de leur évolution pour résister à leurs propres agresseurs (bactéries, champignons). L'élevage contrôlé permet d'obtenir une matière première standardisée, traçable et disponible toute l'année, contrairement à certaines ressources végétales soumises aux aléas de récolte.",
   },
   {
     question: "Quelle est la différence entre biocontrôle, biostimulant et biofertilisant ?",
@@ -39,15 +39,15 @@ const faqItems = [
 const PourquoiBiocontrole = () => (
   <div className="min-h-screen bg-background flex flex-col">
     <Head>
-      <title>Pourquoi le Biocontrôle ? | Agriculture Durable — Keprea</title>
+      <title>Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea</title>
       <meta
         name="description"
         content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
       />
       <link rel="canonical" href="https://keprea.vercel.app/pourquoi-le-biocontrole" />
       <meta property="og:url" content="https://keprea.vercel.app/pourquoi-le-biocontrole" />
-      <meta property="og:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable — Keprea" />
-      <meta name="twitter:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable — Keprea" />
+      <meta property="og:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea" />
+      <meta name="twitter:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea" />
       <meta
         property="og:description"
         content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
@@ -103,7 +103,7 @@ const PourquoiBiocontrole = () => (
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La liste officielle des produits de biocontrôle est publiée et actualisée chaque
-              mois au Bulletin officiel du ministère de l'Agriculture — un statut réglementaire
+              mois au Bulletin officiel du ministère de l'Agriculture : un statut réglementaire
               distinct de celui des produits phytopharmaceutiques classiques, avec ses propres
               procédures d'homologation.
             </p>
@@ -156,7 +156,7 @@ const PourquoiBiocontrole = () => (
               <Bug className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-semibold text-foreground mb-2">Substances naturelles</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                D'origine végétale, animale ou minérale — c'est dans cette catégorie que
+                D'origine végétale, animale ou minérale, c'est dans cette catégorie que
                 s'inscrivent les extraits d'insectes développés par Keprea.
               </p>
             </div>
@@ -188,7 +188,7 @@ const PourquoiBiocontrole = () => (
               <div className="text-3xl font-bold text-primary mb-2">-20 %</div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Baisse déjà constatée de l'usage des produits phytopharmaceutiques de synthèse
-                en 2022 par rapport à la moyenne 2015-2017 — première baisse depuis 2009
+                en 2022 par rapport à la moyenne 2015-2017, première baisse depuis 2009
                 (données Ecophyto II+).
               </p>
             </div>
@@ -208,7 +208,7 @@ const PourquoiBiocontrole = () => (
             </div>
           </div>
           <p className="text-xs text-muted-foreground text-center italic">
-            Chiffres tiers cités à titre indicatif — sources : agriculture.gouv.fr (stratégie Écophyto 2030,
+            Chiffres tiers cités à titre indicatif, sources : agriculture.gouv.fr (stratégie Écophyto 2030,
             mai 2024), Alliance Biocontrôle (Baromètre du Biocontrôle 2024), Légifrance (article L.253-6
             du Code rural). Ces données évoluent chaque année ; nous les mettons à jour lors de nos revues
             de contenu périodiques.

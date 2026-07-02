@@ -24,7 +24,7 @@ const faqItems = [
   },
   {
     q: "Faut-il choisir entre Boostea13 et Soilea110 ou peut-on utiliser les deux ?",
-    a: "Les deux produits ciblent des leviers différents — vigueur aérienne pour Boostea13, santé du sol pour Soilea110 — et sont conçus pour être utilisés ensemble sur un même itinéraire technique. En cas de budget limité pour une première saison d'essai, privilégiez le produit correspondant à votre contrainte la plus limitante identifiée par diagnostic (foliaire ou racinaire)."
+    a: "Les deux produits ciblent des leviers différents (vigueur aérienne pour Boostea13, santé du sol pour Soilea110) et sont conçus pour être utilisés ensemble sur un même itinéraire technique. En cas de budget limité pour une première saison d'essai, privilégiez le produit correspondant à votre contrainte la plus limitante identifiée par diagnostic (foliaire ou racinaire)."
   },
 ];
 
@@ -78,7 +78,7 @@ const Boosters = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-3">Qu'est-ce qu'un biostimulant agricole ?</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante — nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité) — sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir d'extraits d'insectes (polypeptides, proline, acides aminés) : le premier en application foliaire pour la vigueur aérienne, le second au sol pour la santé racinaire et microbienne.
+              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante : nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité), sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir d'extraits d'insectes (polypeptides, proline, acides aminés) : le premier en application foliaire pour la vigueur aérienne, le second au sol pour la santé racinaire et microbienne.
             </p>
           </div>
         </section>
@@ -88,17 +88,17 @@ const Boosters = () => {
             <h2 className="text-2xl font-bold text-center text-foreground mb-6">Quel produit choisir ?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <h3 className="font-bold text-primary mb-2">Boostea13 — Application foliaire</h3>
+                <h3 className="font-bold text-primary mb-2">Boostea13 : Application foliaire</h3>
                 <p className="text-sm text-muted-foreground mb-3">Votre priorité est la <strong className="text-foreground">vigueur aérienne</strong> : manque de résistance à la sécheresse, stress post-gel, assimilation nutritive insuffisante.</p>
                 <p className="text-sm text-muted-foreground">→ Pulvérisation foliaire aux stades clés (tallage, floraison…)</p>
               </div>
               <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <h3 className="font-bold text-primary mb-2">Soilea110 — Application au sol</h3>
+                <h3 className="font-bold text-primary mb-2">Soilea110 : Application au sol</h3>
                 <p className="text-sm text-muted-foreground mb-3">Votre priorité est la <strong className="text-foreground">santé du sol</strong> : structure dégradée, faible activité microbienne, résistance aux maladies racinaires.</p>
                 <p className="text-sm text-muted-foreground">→ Incorporation avant semis ou plantation</p>
               </div>
             </div>
-            <p className="text-sm text-center text-muted-foreground mt-4">Les deux produits sont <strong className="text-foreground">complémentaires</strong> — utilisés ensemble, ils couvrent l'ensemble du programme de stimulation.</p>
+            <p className="text-sm text-center text-muted-foreground mt-4">Les deux produits sont <strong className="text-foreground">complémentaires</strong>, utilisés ensemble, ils couvrent l'ensemble du programme de stimulation.</p>
           </div>
         </section>
 
@@ -159,12 +159,12 @@ const Boosters = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {[
-                "Céréales — blé, orge, triticale, seigle, avoine",
-                "Oléagineux — colza, tournesol, soja",
-                "Maïs — grain et fourrage",
+                "Céréales : blé, orge, triticale, seigle, avoine",
+                "Oléagineux : colza, tournesol, soja",
+                "Maïs : grain et fourrage",
                 "Maraîchage sous serre et plein champ",
-                "Arboriculture fruitière — pommier, poirier, cerisier",
-                "Viticulture — renforcement de la vigueur et résistance",
+                "Arboriculture fruitière : pommier, poirier, cerisier",
+                "Viticulture : renforcement de la vigueur et résistance",
               ].map((culture) => (
                 <div key={culture} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -257,7 +257,7 @@ const Boosters = () => {
             <p className="text-xs text-muted-foreground text-center mt-3">
               Données internes Keprea, essais agronomiques 2023–2024, mesurés selon un protocole inspiré
               des méthodologies ARVALIS. Résultats variables selon la culture et les conditions
-              pédoclimatiques — communiqués à titre indicatif. Soilea110 : amélioration de l'activité
+              pédoclimatiques, communiqués à titre indicatif. Soilea110 : amélioration de l'activité
               microbienne et de la structure du sol observée dès la 2ᵉ application.
             </p>
           </div>

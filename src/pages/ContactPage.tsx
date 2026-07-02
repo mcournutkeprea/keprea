@@ -24,7 +24,7 @@ const ContactPage = () => {
         <title>Contactez Keprea | Biosolutions Agricoles à Dole (39)</title>
         <meta
           name="description"
-          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura — réponse sous 48h."
+          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura, réponse sous 48h."
         />
         <link rel="canonical" href="https://keprea.vercel.app/contact" />
         <meta property="og:url" content="https://keprea.vercel.app/contact" />
@@ -32,11 +32,11 @@ const ContactPage = () => {
         <meta name="twitter:title" content="Contactez Keprea | Biosolutions Agricoles à Dole (39)" />
         <meta
           property="og:description"
-          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura — réponse sous 48h."
+          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura, réponse sous 48h."
         />
         <meta
           name="twitter:description"
-          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura — réponse sous 48h."
+          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura, réponse sous 48h."
         />
         <script type="application/ld+json">{breadcrumbJsonLd([
           { name: "Accueil", path: "/" },
@@ -92,7 +92,7 @@ const ContactPage = () => {
                           </div>
                           <div>
                             <p className="text-sm font-semibold text-foreground mb-0.5">Siège social</p>
-                            <p className="text-sm text-muted-foreground">Dole (39100) — Jura, France</p>
+                            <p className="text-sm text-muted-foreground">Dole (39100), Jura, France</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-4">

@@ -32,7 +32,7 @@ const faqItems = [
   },
   {
     q: "Faut-il renouveler les lâchers d'auxiliaires chaque saison ?",
-    a: "Oui, dans la grande majorité des cas. Les auxiliaires introduits ne s'établissent pas de façon pérenne sur la parcelle une fois le ravageur cible éliminé — faute de proie disponible, leur population décline naturellement. Un programme de lâchers est donc à reconduire à chaque nouvelle saison culturale, en ajustant les quantités selon la pression observée l'année précédente."
+    a: "Oui, dans la grande majorité des cas. Les auxiliaires introduits ne s'établissent pas de façon pérenne sur la parcelle une fois le ravageur cible éliminé, faute de proie disponible, leur population décline naturellement. Un programme de lâchers est donc à reconduire à chaque nouvelle saison culturale, en ajustant les quantités selon la pression observée l'année précédente."
   },
 ];
 
@@ -57,7 +57,7 @@ const BiocontroleVivant = () => {
         ])}</script>
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
-          name: "Bioprotection vivante — lâchers d'auxiliaires",
+          name: "Bioprotection vivante : lâchers d'auxiliaires",
           description: "Fourniture d'insectes auxiliaires vivants (Aphidius colemani, Trichogramma brassicae, Cryptolaemus montrouzieri, Encarsia formosa) pour la lutte biologique contre les ravageurs des cultures.",
           path: "/solutions/bioprotection",
           serviceType: "Biocontrôle agricole",
@@ -86,7 +86,7 @@ const BiocontroleVivant = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="max-w-2xl mx-auto mb-10 text-center">
               <p className="text-base text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Le principe :</strong> nous élevons des insectes prédateurs naturels que vous libérez sur vos parcelles. Ils chassent et éliminent les ravageurs cibles — sans intervention chimique, sans résidu, sans développement de résistance.
+                <strong className="text-foreground">Le principe :</strong> nous élevons des insectes prédateurs naturels que vous libérez sur vos parcelles. Ils chassent et éliminent les ravageurs cibles : sans intervention chimique, sans résidu, sans développement de résistance.
               </p>
             </div>
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
@@ -139,12 +139,12 @@ const BiocontroleVivant = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {[
-                "Maïs — lutte contre la pyrale (Ostrinia nubilalis)",
-                "Grandes cultures — betterave, blé, colza (pucerons)",
-                "Maraîchage sous serre — tomate, poivron, concombre",
-                "Maraîchage plein champ — laitue, courgette",
-                "Arboriculture fruitière — pomme, poire, cerise",
-                "Viticulture — tordeuses et cicadelles",
+                "Maïs : lutte contre la pyrale (Ostrinia nubilalis)",
+                "Grandes cultures : betterave, blé, colza (pucerons)",
+                "Maraîchage sous serre : tomate, poivron, concombre",
+                "Maraîchage plein champ : laitue, courgette",
+                "Arboriculture fruitière : pomme, poire, cerise",
+                "Viticulture : tordeuses et cicadelles",
               ].map((culture) => (
                 <div key={culture} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -170,12 +170,12 @@ const BiocontroleVivant = () => {
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">0 résidu</div>
                 <div className="text-sm text-muted-foreground">chimique de synthèse</div>
-                <div className="text-xs text-muted-foreground mt-1">Éligible AB — vérifier avec votre certificateur</div>
+                <div className="text-xs text-muted-foreground mt-1">Éligible AB, vérifier avec votre certificateur</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
               Données internes Keprea, essais en parcelles pilotes 2023–2024. Résultats variables selon
-              l'espèce ravageur, la pression parasitaire et les conditions climatiques — communiqués à
+              l'espèce ravageur, la pression parasitaire et les conditions climatiques, communiqués à
               titre indicatif, hors valeur d'engagement contractuel.
             </p>
           </div>

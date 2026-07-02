@@ -39,7 +39,7 @@ const MentionsLegales = () => {
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-foreground mb-3">Directeur de la publication</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Mathieu Cournut — <a href="mailto:m.cournut@keprea.com" className="text-primary hover:underline">m.cournut@keprea.com</a>
+            Mathieu Cournut, <a href="mailto:m.cournut@keprea.com" className="text-primary hover:underline">m.cournut@keprea.com</a>
           </p>
         </section>
 
@@ -47,7 +47,7 @@ const MentionsLegales = () => {
           <h2 className="text-xl font-semibold text-foreground mb-3">Hébergement</h2>
           <p className="text-muted-foreground leading-relaxed">
               <strong className="text-foreground">GoDaddy.com, LLC</strong><br />
-            100 S. Mill Ave, Suite 1600 — Tempe, Arizona 85281, États-Unis<br />
+            100 S. Mill Ave, Suite 1600, Tempe, Arizona 85281, États-Unis<br />
             <a href="https://www.godaddy.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.godaddy.com</a>
           </p>
         </section>

@@ -58,7 +58,7 @@ const ExtraitsNaturels = () => {
         ])}</script>
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
-          name: "Biopesticides ExtracBio — extraits d'insectes",
+          name: "Biopesticides ExtracBio : extraits d'insectes",
           description: "Protection foliaire des cultures à base d'extraits bioactifs d'insectes (peptides antimicrobiens, chitine), pour lutte contre les ravageurs sans résidu chimique de synthèse.",
           path: "/solutions/biopesticides",
           serviceType: "Biocontrôle agricole",
@@ -87,11 +87,11 @@ const ExtraitsNaturels = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Gamme ExtracBio</h2>
-              <p className="text-sm text-muted-foreground max-w-xl mx-auto">Biopesticides à base d'extraits d'insectes — protection foliaire naturelle pour vos cultures</p>
+              <p className="text-sm text-muted-foreground max-w-xl mx-auto">Biopesticides à base d'extraits d'insectes : protection foliaire naturelle pour vos cultures</p>
             </div>
             <div className="bg-primary/5 border border-primary/15 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
-                <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles — ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures. Le mode d'action par contact et ingestion, combiné à une dégradation rapide dans l'environnement, limite le risque de sélection de populations résistantes — un enjeu croissant à mesure que les substances actives conventionnelles se raréfient.
+                <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles : ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures. Le mode d'action par contact et ingestion, combiné à une dégradation rapide dans l'environnement, limite le risque de sélection de populations résistantes, un enjeu croissant à mesure que les substances actives conventionnelles se raréfient.
               </p>
             </div>
             <AdvantageGrid
@@ -146,12 +146,12 @@ const ExtraitsNaturels = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {[
-                "Céréales — blé, orge, triticale, seigle",
-                "Oléagineux — colza, tournesol, soja",
-                "Maïs — grandes cultures",
-                "Maraîchage — tomate, poivron, laitue, cucurbitacées",
-                "Viticulture — ravageurs foliaires et maladies cryptogamiques",
-                "Arboriculture fruitière — pommier, poirier, cerisier",
+                "Céréales : blé, orge, triticale, seigle",
+                "Oléagineux : colza, tournesol, soja",
+                "Maïs : grandes cultures",
+                "Maraîchage : tomate, poivron, laitue, cucurbitacées",
+                "Viticulture : ravageurs foliaires et maladies cryptogamiques",
+                "Arboriculture fruitière : pommier, poirier, cerisier",
               ].map((culture) => (
                 <div key={culture} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -215,12 +215,12 @@ const ExtraitsNaturels = () => {
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">0 résidu</div>
-                <div className="text-sm text-muted-foreground">chimique de synthèse — filières bio et premium</div>
+                <div className="text-sm text-muted-foreground">chimique de synthèse, filières bio et premium</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
               Données internes Keprea, essais en parcelles pilotes 2023–2024, sur légumes, céréales et vigne.
-              Résultats variables selon la culture et la pression parasitaire — communiqués à titre indicatif,
+              Résultats variables selon la culture et la pression parasitaire, communiqués à titre indicatif,
               hors valeur d'engagement contractuel.
             </p>
           </div>

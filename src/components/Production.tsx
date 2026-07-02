@@ -87,7 +87,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border-2 border-primary/20">
                   <img
                     src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.webp"
-                    alt="Site de production Keprea à Damparis — bâtiment d'élevage et de transformation"
+                    alt="Site de production Keprea à Damparis, bâtiment d'élevage et de transformation"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />

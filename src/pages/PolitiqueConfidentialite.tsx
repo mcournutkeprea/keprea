@@ -28,7 +28,7 @@ const PolitiqueConfidentialite = () => {
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-foreground mb-3">Responsable du traitement</h2>
           <p className="text-muted-foreground leading-relaxed">
-            KEPREA — Dole (39100), France<br />
+            KEPREA, Dole (39100), France<br />
             Email : <a href="mailto:contact@keprea.com" className="text-primary hover:underline">contact@keprea.com</a>
           </p>
         </section>

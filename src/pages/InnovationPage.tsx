@@ -287,7 +287,7 @@ const InnovationPage = () => {
                       "Zéro résidu toxique",
                       "Compatible bio et HVE",
                       "Efficacité testée en conditions réelles",
-                      "Traçabilité totale — Made in France",
+                      "Traçabilité totale, Made in France",
                       "Accompagnement technique inclus",
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
