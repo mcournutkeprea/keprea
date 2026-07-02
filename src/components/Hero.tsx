@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-[100dvh] flex items-end overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-neutral-900">
         <video
           ref={videoRef}
           className="w-full h-full object-cover absolute inset-0"
@@ -18,8 +18,9 @@ const Hero = () => {
           muted
           playsInline
           loop
+          preload="auto"
           src="/portfolio-video-4.mp4"
-          poster="/lovable-uploads/bf0fefed-2323-4a06-a4f9-b4681de73dfe.png"
+          poster="/lovable-uploads/hero-poster-frame.jpg"
         />
         {/* Gradient: darker at bottom for text, lighter at top to show video */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/38 to-black/12 z-10" />
