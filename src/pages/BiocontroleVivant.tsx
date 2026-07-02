@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Leaf, Target, Recycle, BadgeCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import aphidImage from "@/assets/aphid.jpg";
@@ -9,6 +9,7 @@ import aleurodeImage from "@/assets/aleurode.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AdvantageGrid from "@/components/AdvantageGrid";
 
 const BiocontroleVivant = () => {
   const { t } = useLanguage();
@@ -64,22 +65,15 @@ const BiocontroleVivant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              {t('biocontrole.advantages.title')}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: t('biocontrole.adv1.title'), desc: t('biocontrole.adv1.desc') },
-                { title: t('biocontrole.adv2.title'), desc: t('biocontrole.adv2.desc') },
-                { title: t('biocontrole.adv3.title'), desc: t('biocontrole.adv3.desc') },
-                { title: t('biocontrole.adv4.title'), desc: t('biocontrole.adv4.desc') },
-              ].map(({ title, desc }) => (
-                <div key={title} className="bg-card p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-primary mb-2">{title}</h3>
-                  <p className="text-base text-muted-foreground">{desc}</p>
-                </div>
-              ))}
-            </div>
+            <AdvantageGrid
+              title={t('biocontrole.advantages.title')}
+              advantages={[
+                { icon: Leaf, title: t('biocontrole.adv1.title'), description: t('biocontrole.adv1.desc') },
+                { icon: Target, title: t('biocontrole.adv2.title'), description: t('biocontrole.adv2.desc') },
+                { icon: Recycle, title: t('biocontrole.adv3.title'), description: t('biocontrole.adv3.desc') },
+                { icon: BadgeCheck, title: t('biocontrole.adv4.title'), description: t('biocontrole.adv4.desc') },
+              ]}
+            />
           </div>
         </section>
 

@@ -1,10 +1,11 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, TrendingUp, Leaf, Puzzle, LifeBuoy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AdvantageGrid from "@/components/AdvantageGrid";
 
 const Boosters = () => {
   const { t } = useLanguage();
@@ -70,43 +71,15 @@ const Boosters = () => {
 
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              {t('boosters.why.title')}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                {[
-                  { n: 1, title: t('boosters.why1.title'), desc: t('boosters.why1.desc') },
-                  { n: 2, title: t('boosters.why2.title'), desc: t('boosters.why2.desc') },
-                ].map(({ n, title, desc }) => (
-                  <div key={n} className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary font-bold text-xl">{n}</span>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-                      <p className="text-muted-foreground text-base">{desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="space-y-6">
-                {[
-                  { n: 3, title: t('boosters.why3.title'), desc: t('boosters.why3.desc') },
-                  { n: 4, title: t('boosters.why4.title'), desc: t('boosters.why4.desc') },
-                ].map(({ n, title, desc }) => (
-                  <div key={n} className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary font-bold text-xl">{n}</span>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-                      <p className="text-muted-foreground text-base">{desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <AdvantageGrid
+              title={t('boosters.why.title')}
+              advantages={[
+                { icon: TrendingUp, title: t('boosters.why1.title'), description: t('boosters.why1.desc') },
+                { icon: Leaf, title: t('boosters.why2.title'), description: t('boosters.why2.desc') },
+                { icon: Puzzle, title: t('boosters.why3.title'), description: t('boosters.why3.desc') },
+                { icon: LifeBuoy, title: t('boosters.why4.title'), description: t('boosters.why4.desc') },
+              ]}
+            />
           </div>
         </section>
 

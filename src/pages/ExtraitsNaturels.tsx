@@ -1,11 +1,12 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, Leaf, FlaskConical, Bug, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Leaf, FlaskConical, Bug, CheckCircle2, ShieldCheck, ShieldPlus, Recycle, Settings2 } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AdvantageGrid from "@/components/AdvantageGrid";
 
 const ExtraitsNaturels = () => {
   const { t } = useLanguage();
@@ -37,20 +38,15 @@ const ExtraitsNaturels = () => {
 
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Pourquoi choisir nos biopesticides ?</h2>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              {[
-                { title: t('substances.benefit1.title'), desc: t('substances.benefit1.desc') },
-                { title: t('substances.benefit2.title'), desc: t('substances.benefit2.desc') },
-                { title: t('substances.benefit3.title'), desc: t('substances.benefit3.desc') },
-                { title: t('substances.benefit4.title'), desc: t('substances.benefit4.desc') },
-              ].map(({ title, desc }) => (
-                <div key={title} className="bg-white/50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-primary text-lg mb-2">{title}</h3>
-                  <p className="text-base text-muted-foreground">{desc}</p>
-                </div>
-              ))}
-            </div>
+            <AdvantageGrid
+              title="Pourquoi choisir nos biopesticides ?"
+              advantages={[
+                { icon: ShieldCheck, title: t('substances.benefit1.title'), description: t('substances.benefit1.desc') },
+                { icon: ShieldPlus, title: t('substances.benefit2.title'), description: t('substances.benefit2.desc') },
+                { icon: Recycle, title: t('substances.benefit3.title'), description: t('substances.benefit3.desc') },
+                { icon: Settings2, title: t('substances.benefit4.title'), description: t('substances.benefit4.desc') },
+              ]}
+            />
           </div>
         </section>
 

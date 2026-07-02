@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AdvantageGrid from "@/components/AdvantageGrid";
 
 const Biofertilisant = () => {
   const { t } = useLanguage();
@@ -58,25 +59,15 @@ const Biofertilisant = () => {
 
         <section className="py-16 px-4 bg-muted/30">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl font-bold text-center mb-12">{t('biofertilisant.advantages')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { Icon: Leaf, title: t('biofertilisant.adv1.title'), desc: t('biofertilisant.adv1.desc') },
-                { Icon: Droplets, title: t('biofertilisant.adv2.title'), desc: t('biofertilisant.adv2.desc') },
-                { Icon: Shield, title: t('biofertilisant.adv3.title'), desc: t('biofertilisant.adv3.desc') },
-                { Icon: Wheat, title: t('biofertilisant.adv4.title'), desc: t('biofertilisant.adv4.desc') },
-              ].map(({ Icon, title, desc }) => (
-                <div key={title} className="flex gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-2">{title}</h3>
-                    <p className="text-muted-foreground">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <AdvantageGrid
+              title={t('biofertilisant.advantages')}
+              advantages={[
+                { icon: Leaf, title: t('biofertilisant.adv1.title'), description: t('biofertilisant.adv1.desc') },
+                { icon: Droplets, title: t('biofertilisant.adv2.title'), description: t('biofertilisant.adv2.desc') },
+                { icon: Shield, title: t('biofertilisant.adv3.title'), description: t('biofertilisant.adv3.desc') },
+                { icon: Wheat, title: t('biofertilisant.adv4.title'), description: t('biofertilisant.adv4.desc') },
+              ]}
+            />
           </div>
         </section>
 
