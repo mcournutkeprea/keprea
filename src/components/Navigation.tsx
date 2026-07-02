@@ -31,7 +31,6 @@ const Navigation = () => {
 
   const navItems = [
     { id: "solutions", label: t("nav.solutions"), href: "/solutions" },
-    { id: "biocontrole", label: t("nav.biocontrole"), href: "/pourquoi-le-biocontrole" },
     { id: "innovation", label: t("nav.innovation"), href: "/innovation" },
     { id: "production", label: "Production", href: "/notre-production" },
     { id: "about", label: t("nav.about"), href: "/qui-sommes-nous" },

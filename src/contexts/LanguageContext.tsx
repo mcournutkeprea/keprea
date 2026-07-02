@@ -28,13 +28,6 @@ const translations: Translations = {
     pt: 'Inovação',
     de: 'Innovation'
   },
-  'nav.biocontrole': {
-    fr: 'Biocontrôle',
-    en: 'Biocontrol',
-    es: 'Biocontrol',
-    pt: 'Biocontrole',
-    de: 'Biokontrolle'
-  },
   'nav.production': {
     fr: 'Notre site de production',
     en: 'Our production site',

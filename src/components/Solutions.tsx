@@ -83,7 +83,7 @@ const Solutions = () => {
           ref={headerRef as RefObject<HTMLDivElement>}
           className={`mb-12 reveal${headerVisible ? " is-visible" : ""}`}
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-3">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-3">
             {t("solutions.title")}
           </h2>
           <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
@@ -160,21 +160,6 @@ const Solutions = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Programme intégré */}
-        <div className="mt-8 border border-primary/20 rounded-xl px-6 py-5 bg-primary/5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary/60 flex-shrink-0">Programme intégré</span>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-foreground">
-            <span className="font-semibold text-primary">Protéger</span>
-            <span className="text-muted-foreground">Bioprotection + Biopesticides</span>
-            <span className="text-primary/70">→</span>
-            <span className="font-semibold text-primary">Stimuler</span>
-            <span className="text-muted-foreground">Boosters</span>
-            <span className="text-primary/70">→</span>
-            <span className="font-semibold text-primary">Nourrir</span>
-            <span className="text-muted-foreground">Biofertilisant</span>
-          </div>
         </div>
 
       </div>
