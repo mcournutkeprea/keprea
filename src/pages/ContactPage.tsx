@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { MapPin, Mail, Clock, Leaf, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -25,22 +26,39 @@ const ContactPage = () => {
           name="description"
           content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura — réponse sous 48h."
         />
+        <link rel="canonical" href="https://keprea.vercel.app/contact" />
+        <meta property="og:url" content="https://keprea.vercel.app/contact" />
+        <meta property="og:title" content="Contactez Keprea | Biosolutions Agricoles à Dole (39)" />
+        <meta name="twitter:title" content="Contactez Keprea | Biosolutions Agricoles à Dole (39)" />
+        <meta
+          property="og:description"
+          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura — réponse sous 48h."
+        />
+        <meta
+          name="twitter:description"
+          content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura — réponse sous 48h."
+        />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}</script>
       </Head>
       <Navigation />
 
       <main className="flex-1 pt-20">
 
         {/* ── Hero ── */}
-        <section className="pt-24 pb-14 px-4 sm:px-6 lg:px-8">
+        {/* Espacements et tailles réduits sur mobile pour que le formulaire soit accessible sans scroll excessif (audit SEO 02/07/2026) */}
+        <section className="pt-8 pb-6 sm:pt-24 sm:pb-14 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="reveal">
-              <span className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold bg-primary/10 text-primary mb-6">
+              <span className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold bg-primary/10 text-primary mb-3 sm:mb-6">
                 Nous contacter
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-6">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-3 sm:mb-6">
                 Parlons de votre projet
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
                 Une question sur nos biosolutions, un essai terrain ou un projet de partenariat ? Notre équipe vous répond sous 48 heures.
               </p>
             </div>

@@ -20,6 +20,18 @@ const Index = () => {
           name="description"
           content="Keprea développe des biosolutions à base d'insectes pour l'agriculture : bioprotection vivante, biopesticides naturels, boosters de croissance et biofertilisants. Dole (39)."
         />
+        <link rel="canonical" href="https://keprea.vercel.app/" />
+        <meta property="og:url" content="https://keprea.vercel.app/" />
+        <meta property="og:title" content="Keprea — Biosolutions Agricoles à base d'Insectes | Dole, Jura" />
+        <meta name="twitter:title" content="Keprea — Biosolutions Agricoles à base d'Insectes | Dole, Jura" />
+        <meta
+          property="og:description"
+          content="Keprea développe des biosolutions à base d'insectes pour l'agriculture : bioprotection vivante, biopesticides naturels, boosters de croissance et biofertilisants. Dole (39)."
+        />
+        <meta
+          name="twitter:description"
+          content="Keprea développe des biosolutions à base d'insectes pour l'agriculture : bioprotection vivante, biopesticides naturels, boosters de croissance et biofertilisants. Dole (39)."
+        />
       </Head>
       <Navigation />
       {/* 1. Identité & promesse */}

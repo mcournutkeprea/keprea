@@ -9,26 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Keprea — Biosolutions Agricoles</title>
-    <meta name="description" content="Keprea développe des biosolutions à base d'insectes pour l'agriculture durable : bioprotection, biopesticides, boosters de croissance et biofertilisants.">
+    <!-- Pas de <title>/<meta name="description"> ici : chaque page les définit via son composant <Head> (vite-react-ssg).
+         Les laisser ici dupliquait ces balises sur les 18 pages du build SSG (audit SEO 02/07/2026). -->
 
-
+    <!-- og:title/og:description/twitter:title/twitter:description définis par page (voir <Head> de chaque page) —
+         les laisser ici en plus dupliquait ces balises sur les 18 pages (même bug que le <title>, audit SEO 02/07/2026).
+         og:image/twitter:image restent ici en valeur par défaut partagée : pas d'image sociale dédiée par page pour l'instant. -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://keprea.com/lovable-uploads/eprea_Main_Logo_800x600.jpg">
+    <meta property="og:image" content="https://keprea.vercel.app/lovable-uploads/eprea_Main_Logo_800x600.jpg">
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://keprea.com/lovable-uploads/eprea_Main_Logo_800x600.jpg">
-    <meta property="og:title" content="Keprea — Biosolutions Agricoles à base d'Insectes">
-  <meta name="twitter:title" content="Keprea — Biosolutions Agricoles à base d'Insectes">
-  <meta property="og:description" content="Keprea développe des biosolutions à base d'insectes pour l'agriculture durable : bioprotection, biopesticides, boosters de croissance et biofertilisants.">
-  <meta name="twitter:description" content="Keprea développe des biosolutions à base d'insectes pour l'agriculture durable : bioprotection, biopesticides, boosters de croissance et biofertilisants.">
+    <meta name="twitter:image" content="https://keprea.vercel.app/lovable-uploads/eprea_Main_Logo_800x600.jpg">
+  <!-- NOTE MIGRATION : url/logo/images alignés sur le domaine live actuel (keprea.vercel.app).
+       À rebasculer sur https://keprea.com le jour de la bascule vers le domaine définitif — voir ERRORS.md. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Keprea",
-    "url": "https://keprea.com",
-    "logo": "https://keprea.com/lovable-uploads/eprea_Main_Logo.png",
+    "url": "https://keprea.vercel.app",
+    "logo": "https://keprea.vercel.app/lovable-uploads/eprea_Main_Logo.png",
     "description": "Keprea développe des biosolutions à base d'insectes pour l'agriculture durable.",
     "address": {
       "@type": "PostalAddress",

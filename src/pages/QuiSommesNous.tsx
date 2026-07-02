@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Team from "@/components/Team";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const QuiSommesNous = () => (
   <div className="min-h-screen bg-background flex flex-col">
@@ -12,6 +13,22 @@ const QuiSommesNous = () => (
         name="description"
         content="Keprea, startup de biosolutions agricoles à Dole (Jura). Découvrez notre équipe d'experts, notre histoire et notre mission : des biosolutions à base d'insectes pour une agriculture durable."
       />
+      <link rel="canonical" href="https://keprea.vercel.app/qui-sommes-nous" />
+      <meta property="og:url" content="https://keprea.vercel.app/qui-sommes-nous" />
+      <meta property="og:title" content="Qui Sommes-Nous | Équipe et Mission Keprea" />
+      <meta name="twitter:title" content="Qui Sommes-Nous | Équipe et Mission Keprea" />
+      <meta
+        property="og:description"
+        content="Keprea, startup de biosolutions agricoles à Dole (Jura). Découvrez notre équipe d'experts, notre histoire et notre mission : des biosolutions à base d'insectes pour une agriculture durable."
+      />
+      <meta
+        name="twitter:description"
+        content="Keprea, startup de biosolutions agricoles à Dole (Jura). Découvrez notre équipe d'experts, notre histoire et notre mission : des biosolutions à base d'insectes pour une agriculture durable."
+      />
+      <script type="application/ld+json">{breadcrumbJsonLd([
+        { name: "Accueil", path: "/" },
+        { name: "Qui sommes-nous", path: "/qui-sommes-nous" },
+      ])}</script>
     </Head>
     <Navigation />
     <main className="flex-1 pt-20">

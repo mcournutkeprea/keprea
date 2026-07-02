@@ -4,6 +4,7 @@ import { Leaf, ShieldCheck, FlaskConical, TrendingUp, Bug, Sprout, Award, ArrowR
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const PourquoiBiocontrole = () => (
   <div className="min-h-screen bg-background flex flex-col">
@@ -13,6 +14,22 @@ const PourquoiBiocontrole = () => (
         name="description"
         content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
       />
+      <link rel="canonical" href="https://keprea.vercel.app/pourquoi-le-biocontrole" />
+      <meta property="og:url" content="https://keprea.vercel.app/pourquoi-le-biocontrole" />
+      <meta property="og:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable — Keprea" />
+      <meta name="twitter:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable — Keprea" />
+      <meta
+        property="og:description"
+        content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
+      />
+      <meta
+        name="twitter:description"
+        content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
+      />
+      <script type="application/ld+json">{breadcrumbJsonLd([
+        { name: "Accueil", path: "/" },
+        { name: "Pourquoi le biocontrôle ?", path: "/pourquoi-le-biocontrole" },
+      ])}</script>
     </Head>
     <Navigation />
 

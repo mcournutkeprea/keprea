@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const BiocontroleVivant = () => {
   const { t } = useLanguage();
@@ -19,6 +20,17 @@ const BiocontroleVivant = () => {
       <Head>
         <title>Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs</title>
         <meta name="description" content="Biocontrôle vivant Keprea : auxiliaires entomophages pour lutter contre pucerons, pyrales, cochenilles et aleurodes. Solutions naturelles homologuées AB." />
+        <link rel="canonical" href="https://keprea.vercel.app/solutions/bioprotection" />
+        <meta property="og:url" content="https://keprea.vercel.app/solutions/bioprotection" />
+        <meta property="og:title" content="Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs" />
+        <meta name="twitter:title" content="Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs" />
+        <meta property="og:description" content="Biocontrôle vivant Keprea : auxiliaires entomophages pour lutter contre pucerons, pyrales, cochenilles et aleurodes. Solutions naturelles homologuées AB." />
+        <meta name="twitter:description" content="Biocontrôle vivant Keprea : auxiliaires entomophages pour lutter contre pucerons, pyrales, cochenilles et aleurodes. Solutions naturelles homologuées AB." />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Solutions", path: "/solutions" },
+          { name: "Bioprotection", path: "/solutions/bioprotection" },
+        ])}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -41,22 +53,32 @@ const BiocontroleVivant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
+            <div className="max-w-2xl mx-auto mb-10 text-center">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Le principe :</strong> nous élevons des insectes prédateurs naturels que vous libérez sur vos parcelles. Ils chassent et éliminent les ravageurs cibles — sans intervention chimique, sans résidu, sans développement de résistance.
+              </p>
+            </div>
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
               {t('biocontrole.pests.title')}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { img: aphidImage, alt: t('biocontrole.pest1.title'), title: t('biocontrole.pest1.title'), desc: t('biocontrole.pest1.desc') },
-                { img: pyraleImage, alt: t('biocontrole.pest2.title'), title: t('biocontrole.pest2.title'), desc: t('biocontrole.pest2.desc') },
-                { img: cochenillesImage, alt: t('biocontrole.pest3.title'), title: t('biocontrole.pest3.title'), desc: t('biocontrole.pest3.desc') },
-                { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title'), desc: t('biocontrole.pest4.desc') },
-              ].map(({ img, alt, title, desc }) => (
+                { img: aphidImage, alt: t('biocontrole.pest1.title'), title: t('biocontrole.pest1.title'), desc: t('biocontrole.pest1.desc'), auxiliary: 'Aphidius colemani, Adalia bipunctata' },
+                { img: pyraleImage, alt: t('biocontrole.pest2.title'), title: t('biocontrole.pest2.title'), desc: t('biocontrole.pest2.desc'), auxiliary: 'Trichogramma brassicae' },
+                { img: cochenillesImage, alt: t('biocontrole.pest3.title'), title: t('biocontrole.pest3.title'), desc: t('biocontrole.pest3.desc'), auxiliary: 'Cryptolaemus montrouzieri' },
+                { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title'), desc: t('biocontrole.pest4.desc'), auxiliary: 'Encarsia formosa, Macrolophus' },
+              ].map(({ img, alt, title, desc, auxiliary }) => (
                 <div key={title} className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
+                  <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-3">Ravageur cible</p>
                   <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                     <img src={img} alt={alt} className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{title}</h3>
-                  <p className="text-sm md:text-base text-muted-foreground">{desc}</p>
+                  <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{title}</h3>
+                  <p className="text-xs text-muted-foreground mb-3">{desc}</p>
+                  <div className="border-t border-primary/15 pt-3">
+                    <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-1">Auxiliaire utilisé</p>
+                    <p className="text-xs text-primary font-medium">{auxiliary}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -102,9 +124,40 @@ const BiocontroleVivant = () => {
           </div>
         </section>
 
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">70–90%</div>
+                <div className="text-sm text-muted-foreground">de réduction des ravageurs en 14 jours</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">48–72h</div>
+                <div className="text-sm text-muted-foreground">délai d'action après le lâcher</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">0 résidu</div>
+                <div className="text-sm text-muted-foreground">chimique de synthèse</div>
+                <div className="text-xs text-muted-foreground mt-1">Éligible AB — vérifier avec votre certificateur</div>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-4">Source : données essais IBMA France / Koppert Biological Systems</p>
+          </div>
+        </section>
+
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Mode d'emploi</h2>
+            <p className="text-muted-foreground text-center mb-4 max-w-2xl mx-auto">
+              Un <strong className="text-foreground">lâcher</strong> consiste à ouvrir des sachets ou boîtes contenant des auxiliaires vivants et à les déposer sur les plantes ou dans les rangs. Voici le déroulé type.
+            </p>
+            <div className="bg-primary/5 border border-primary/10 rounded-lg px-5 py-4 mb-4 max-w-2xl mx-auto text-sm text-muted-foreground">
+              <strong className="text-foreground">Format de livraison :</strong> sachets ou tubes de 250 à 1 000 individus selon l'espèce. Conservation : 24–48h à 10°C. Application le jour de réception recommandée.
+            </div>
+            <p className="text-sm text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <strong className="text-foreground">En résumé :</strong> diagnostiquer → planifier → lâcher tôt le matin → éviter les insecticides 48h avant et après → observer à J+7.
+            </p>
             <div className="space-y-6">
               {[
                 { step: 1, title: "Diagnostic ravageur", desc: "Identifier l'espèce ravageur, évaluer la pression parasitaire et choisir l'auxiliaire adapté à votre situation culturale." },
@@ -134,7 +187,7 @@ const BiocontroleVivant = () => {
               {[
                 {
                   q: "En combien de temps les auxiliaires réduisent-ils les populations ravageurs ?",
-                  a: "Les auxiliaires entomophages commencent à agir en 48 à 72h. La réduction visible des populations ravageurs s'observe généralement entre 7 et 21 jours selon la pression initiale et les conditions climatiques."
+                  a: "Les auxiliaires commencent à agir en 48 à 72h. La réduction visible des populations ravageurs s'observe généralement entre 7 et 21 jours selon la pression initiale et les conditions climatiques."
                 },
                 {
                   q: "Le biocontrôle vivant est-il efficace en agriculture conventionnelle ?",
@@ -142,7 +195,7 @@ const BiocontroleVivant = () => {
                 },
                 {
                   q: "Peut-on combiner lâchers d'auxiliaires et biopesticides Keprea ?",
-                  a: "Oui, nos produits sont conçus pour fonctionner en programme intégré. Biopesticides et auxiliaires vivants sont complémentaires. Notre équipe technique vous accompagne pour définir un programme cohérent."
+                  a: "Oui, nos produits sont conçus pour fonctionner en programme intégré. Nos biopesticides à base d'extraits d'insectes et les auxiliaires vivants sont complémentaires. Notre équipe technique vous accompagne pour définir un programme cohérent."
                 },
               ].map(({ q, a }, i) => (
                 <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
@@ -150,6 +203,20 @@ const BiocontroleVivant = () => {
                   <p className="text-muted-foreground">{a}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
+            <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
+              Vous utilisez nos auxiliaires ? Votre retour d'expérience aide d'autres agriculteurs à décider.
+            </p>
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
+              <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
+                Partager votre expérience avec nos auxiliaires →
+              </Link>
             </div>
           </div>
         </section>

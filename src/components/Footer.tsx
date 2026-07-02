@@ -26,29 +26,29 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/#solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Nos solutions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#innovation" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/innovation" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Innovation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#production" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/notre-production" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Notre production
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/qui-sommes-nous" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   À propos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#contact-form" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/ressources" className="text-sm text-muted-foreground hover:text-primary transition-colors">

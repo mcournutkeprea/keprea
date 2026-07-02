@@ -43,6 +43,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://keprea.vercel.app/innovation</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://keprea.vercel.app/qui-sommes-nous</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>

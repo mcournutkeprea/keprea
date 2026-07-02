@@ -1,9 +1,25 @@
+import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const MentionsLegales = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Mentions Légales | Keprea</title>
+        <meta name="description" content="Mentions légales de Keprea (SAS) : éditeur du site, hébergeur, SIRET, siège social à Dole (39)." />
+        <link rel="canonical" href="https://keprea.vercel.app/mentions-legales" />
+        <meta property="og:url" content="https://keprea.vercel.app/mentions-legales" />
+        <meta property="og:title" content="Mentions Légales | Keprea" />
+        <meta name="twitter:title" content="Mentions Légales | Keprea" />
+        <meta property="og:description" content="Mentions légales de Keprea (SAS) : éditeur du site, hébergeur, SIRET, siège social à Dole (39)." />
+        <meta name="twitter:description" content="Mentions légales de Keprea (SAS) : éditeur du site, hébergeur, SIRET, siège social à Dole (39)." />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Mentions légales", path: "/mentions-legales" },
+        ])}</script>
+      </Head>
       <Navigation />
       <main className="container mx-auto max-w-3xl px-4 py-32">
         <h1 className="text-3xl font-bold text-foreground mb-8">Mentions légales</h1>

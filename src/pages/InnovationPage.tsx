@@ -3,6 +3,7 @@ import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, Leaf, Shield, Zap, CheckCircle2, X } from "lucide-react";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const InnovationPage = () => {
   useEffect(() => {
@@ -24,6 +25,22 @@ const InnovationPage = () => {
           name="description"
           content="Keprea exploite 400 millions d'années de co-évolution entre insectes et plantes pour créer des biosolutions agricoles uniques : sans résidu chimique, efficaces, tracées depuis le Jura."
         />
+        <link rel="canonical" href="https://keprea.vercel.app/innovation" />
+        <meta property="og:url" content="https://keprea.vercel.app/innovation" />
+        <meta property="og:title" content="Notre Innovation - Biosolutions à base d'insectes | Keprea" />
+        <meta name="twitter:title" content="Notre Innovation - Biosolutions à base d'insectes | Keprea" />
+        <meta
+          property="og:description"
+          content="Keprea exploite 400 millions d'années de co-évolution entre insectes et plantes pour créer des biosolutions agricoles uniques : sans résidu chimique, efficaces, tracées depuis le Jura."
+        />
+        <meta
+          name="twitter:description"
+          content="Keprea exploite 400 millions d'années de co-évolution entre insectes et plantes pour créer des biosolutions agricoles uniques : sans résidu chimique, efficaces, tracées depuis le Jura."
+        />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Innovation", path: "/innovation" },
+        ])}</script>
       </Head>
       <Navigation />
 
@@ -154,37 +171,30 @@ const InnovationPage = () => {
                 </div>
               </div>
 
-              {/* Pilier 2 - carte sombre */}
+              {/* Pilier 2 - carte claire */}
               <div
                 className="p-[3px] rounded-[2rem]"
                 style={{
-                  background: "linear-gradient(145deg, hsl(var(--primary)/0.40) 0%, hsl(var(--primary)/0.08) 100%)",
-                  boxShadow: "0 4px 40px hsl(var(--primary)/0.12)",
+                  background: "linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)",
+                  boxShadow: "0 4px 40px hsl(var(--primary)/0.09)",
                 }}
               >
                 <div
-                  className="rounded-[calc(2rem-3px)] px-8 py-9 h-full relative overflow-hidden reveal"
+                  className="rounded-[calc(2rem-3px)] px-8 py-9 h-full reveal"
                   style={{
-                    background: "hsl(142, 69%, 8%)",
-                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
+                    background: "radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))",
+                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.92)",
                   }}
                 >
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{ background: "radial-gradient(ellipse at 50% 120%, hsl(var(--primary)/0.28) 0%, transparent 60%)" }}
-                    aria-hidden="true"
-                  />
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/15 flex items-center justify-center mb-6">
-                      <Shield className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3" style={{ letterSpacing: "-0.01em" }}>
-                      Zéro résidu chimique, zéro restriction
-                    </h3>
-                    <p className="text-sm leading-relaxed max-w-[50ch]" style={{ color: "rgba(255,255,255,0.65)" }}>
-                      Les biosolutions Keprea sont entièrement d'origine naturelle. Aucun résidu toxique dans le sol, les eaux ou les récoltes. Compatibles avec les cahiers des charges bio, les certifications HVE et les exigences des grandes et moyennes surfaces.
-                    </p>
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                    <Shield className="w-5 h-5 text-primary" strokeWidth={1.5} />
                   </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3" style={{ letterSpacing: "-0.01em" }}>
+                    Zéro résidu chimique, zéro restriction
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-[50ch]">
+                    Les biosolutions Keprea sont entièrement d'origine naturelle. Aucun résidu toxique dans le sol, les eaux ou les récoltes. Compatibles avec les cahiers des charges bio, les certifications HVE et les exigences des grandes et moyennes surfaces.
+                  </p>
                 </div>
               </div>
 
@@ -250,24 +260,24 @@ const InnovationPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 
-              {/* Keprea - carte sombre */}
+              {/* Keprea - carte claire (accent) */}
               <div
                 className="p-[3px] rounded-[2rem] reveal"
                 style={{
-                  background: "linear-gradient(145deg, hsl(var(--primary)/0.40) 0%, hsl(var(--primary)/0.08) 100%)",
-                  boxShadow: "0 4px 40px hsl(var(--primary)/0.12)",
+                  background: "linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)",
+                  boxShadow: "0 4px 40px hsl(var(--primary)/0.09)",
                 }}
               >
                 <div
                   className="rounded-[calc(2rem-3px)] px-7 py-8 h-full"
                   style={{
-                    background: "hsl(142, 69%, 8%)",
-                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
+                    background: "radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))",
+                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.92)",
                   }}
                 >
                   <span
                     className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary border rounded-full px-3 py-1 inline-block mb-6"
-                    style={{ background: "hsl(var(--primary)/0.15)", borderColor: "hsl(var(--primary)/0.28)" }}
+                    style={{ background: "hsl(var(--primary)/0.08)", borderColor: "hsl(var(--primary)/0.18)" }}
                   >
                     Biosolutions Keprea
                   </span>
@@ -282,7 +292,7 @@ const InnovationPage = () => {
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                        <span className="text-sm" style={{ color: "rgba(255,255,255,0.80)" }}>{item}</span>
+                        <span className="text-sm text-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -356,15 +366,15 @@ const InnovationPage = () => {
               <div
                 className="rounded-[calc(2rem-3px)] px-10 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
                 style={{
-                  background: "hsl(142, 69%, 8%)",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
+                  background: "radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))",
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.92)",
                 }}
               >
                 <div className="max-w-lg">
-                  <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-3">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-3">
                     Convaincu ? Testez sur vos parcelles.
                   </h2>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.60)" }}>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     Nous proposons des essais terrain avec accompagnement technique. Parlez-nous de vos cultures, nous adaptons la solution.
                   </p>
                 </div>
@@ -380,8 +390,7 @@ const InnovationPage = () => {
                   </a>
                   <a
                     href="mailto:contact@keprea.com?subject=Demande%20essai%20terrain"
-                    className="inline-flex items-center justify-center rounded-full h-11 px-6 text-sm font-semibold border text-white transition-colors duration-200 hover:bg-white/10"
-                    style={{ borderColor: "rgba(255,255,255,0.20)" }}
+                    className="inline-flex items-center justify-center rounded-full h-11 px-6 text-sm font-semibold border border-primary/30 text-primary transition-colors duration-200 hover:bg-primary/5"
                   >
                     Demander un essai
                   </a>

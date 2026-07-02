@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const Boosters = () => {
   const { t } = useLanguage();
@@ -13,8 +14,19 @@ const Boosters = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Head>
-        <title>Boosters de Croissance Keprea | Boostea13 et Soilea110</title>
+        <title>Biostimulants Agricoles Keprea | Boostea13 & Soilea110</title>
         <meta name="description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
+        <link rel="canonical" href="https://keprea.vercel.app/solutions/boosters" />
+        <meta property="og:url" content="https://keprea.vercel.app/solutions/boosters" />
+        <meta property="og:title" content="Biostimulants Agricoles Keprea | Boostea13 & Soilea110" />
+        <meta name="twitter:title" content="Biostimulants Agricoles Keprea | Boostea13 & Soilea110" />
+        <meta property="og:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
+        <meta name="twitter:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Solutions", path: "/solutions" },
+          { name: "Boosters", path: "/solutions/boosters" },
+        ])}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -34,6 +46,34 @@ const Boosters = () => {
             <p className="text-xl text-white/90 mt-2">{t('boosters.subtitle')}</p>
           </div>
         </header>
+
+        <section className="py-10 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-foreground mb-3">Qu'est-ce qu'un biostimulant agricole ?</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante — nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité) — sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir d'extraits d'insectes (polypeptides, proline, acides aminés) : le premier en application foliaire pour la vigueur aérienne, le second au sol pour la santé racinaire et microbienne.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-center text-foreground mb-6">Quel produit choisir ?</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-card border border-primary/20 rounded-xl p-5">
+                <h3 className="font-bold text-primary mb-2">Boostea13 — Application foliaire</h3>
+                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la <strong className="text-foreground">vigueur aérienne</strong> : manque de résistance à la sécheresse, stress post-gel, assimilation nutritive insuffisante.</p>
+                <p className="text-sm text-muted-foreground">→ Pulvérisation foliaire aux stades clés (tallage, floraison…)</p>
+              </div>
+              <div className="bg-card border border-primary/20 rounded-xl p-5">
+                <h3 className="font-bold text-primary mb-2">Soilea110 — Application au sol</h3>
+                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la <strong className="text-foreground">santé du sol</strong> : structure dégradée, faible activité microbienne, résistance aux maladies racinaires.</p>
+                <p className="text-sm text-muted-foreground">→ Incorporation avant semis ou plantation</p>
+              </div>
+            </div>
+            <p className="text-sm text-center text-muted-foreground mt-4">Les deux produits sont <strong className="text-foreground">complémentaires</strong> — utilisés ensemble, ils couvrent l'ensemble du programme de stimulation.</p>
+          </div>
+        </section>
 
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
@@ -183,6 +223,41 @@ const Boosters = () => {
           </div>
         </section>
 
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">+8–15%</div>
+                <div className="text-sm text-muted-foreground">de rendement en grandes cultures (Boostea13)</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">10–21j</div>
+                <div className="text-sm text-muted-foreground">pour observer les premiers effets de vigueur</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">2–3</div>
+                <div className="text-sm text-muted-foreground">applications par cycle cultural (Boostea13)</div>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-3">Source : essais agronomiques internes 2023–2024 (protocoles ARVALIS) · Soilea110 : amélioration de l'activité microbienne et de la structure du sol dès la 2e application</p>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
+            <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
+              Vous utilisez Boostea13 ou Soilea110 ? Votre retour d'expérience aide d'autres agriculteurs à décider.
+            </p>
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
+              <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
+                Partager votre expérience avec nos boosters →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-white">
           <div className="container mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold mb-6">{t('boosters.cta.title')}</h2>
@@ -190,11 +265,6 @@ const Boosters = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" variant="secondary">{t('product.contact')}</Button>
-              </Link>
-              <Link to="/pourquoi-le-biocontrole">
-                <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
-                  Pourquoi le biocontrôle ?
-                </Button>
               </Link>
             </div>
           </div>
@@ -206,7 +276,7 @@ const Boosters = () => {
             <div className="grid sm:grid-cols-3 gap-4">
               <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
                 <h3 className="font-semibold text-primary mb-2">Bioprotection vivante</h3>
-                <p className="text-sm text-muted-foreground">Auxiliaires entomophages pour lutter contre les ravageurs</p>
+                <p className="text-sm text-muted-foreground">Insectes prédateurs pour éliminer les ravageurs de vos cultures</p>
               </Link>
               <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
                 <h3 className="font-semibold text-primary mb-2">Biopesticides</h3>

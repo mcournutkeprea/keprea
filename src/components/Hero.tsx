@@ -18,7 +18,7 @@ const Hero = () => {
           muted
           playsInline
           loop
-          preload="auto"
+          preload="metadata"
           src="/portfolio-video-4.mp4"
           poster="/lovable-uploads/hero-poster-frame.jpg"
         />

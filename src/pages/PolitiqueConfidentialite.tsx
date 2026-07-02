@@ -1,9 +1,25 @@
+import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const PolitiqueConfidentialite = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Politique de Confidentialité | Keprea</title>
+        <meta name="description" content="Politique de confidentialité Keprea : données collectées, finalités du traitement et droits RGPD des utilisateurs du site." />
+        <link rel="canonical" href="https://keprea.vercel.app/politique-confidentialite" />
+        <meta property="og:url" content="https://keprea.vercel.app/politique-confidentialite" />
+        <meta property="og:title" content="Politique de Confidentialité | Keprea" />
+        <meta name="twitter:title" content="Politique de Confidentialité | Keprea" />
+        <meta property="og:description" content="Politique de confidentialité Keprea : données collectées, finalités du traitement et droits RGPD des utilisateurs du site." />
+        <meta name="twitter:description" content="Politique de confidentialité Keprea : données collectées, finalités du traitement et droits RGPD des utilisateurs du site." />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Politique de confidentialité", path: "/politique-confidentialite" },
+        ])}</script>
+      </Head>
       <Navigation />
       <main className="container mx-auto max-w-3xl px-4 py-32">
         <h1 className="text-3xl font-bold text-foreground mb-2">Politique de confidentialité</h1>

@@ -1496,11 +1496,11 @@ const translations: Translations = {
   },
   // Boosters page
   'boosters.title': {
-    fr: 'Boosters',
-    en: 'Boosters',
-    es: 'Potenciadores',
-    pt: 'Potenciadores',
-    de: 'Booster'
+    fr: 'Boosters — Biostimulants Agricoles',
+    en: 'Boosters — Agricultural Biostimulants',
+    es: 'Potenciadores — Bioestimulantes Agrícolas',
+    pt: 'Potenciadores — Bioestimulantes Agrícolas',
+    de: 'Booster — Landwirtschaftliche Biostimulanzien'
   },
   'boosters.subtitle': {
     fr: 'Solutions biostimulantes liquides ou solides pour optimiser le potentiel de vos cultures et vos sols',

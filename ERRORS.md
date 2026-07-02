@@ -10,6 +10,24 @@
 
 ---
 
+### Audit SEO complet 02/07/2026 — score santé 53/100 (keprea.vercel.app)
+- **Statut** : Phases 1-2 corrigées (02/07/2026) — reste Phases 3-4, plan complet dans `keprea.vercel.app-audit/ACTION-PLAN.md`
+- ~~Note interne "Photo à faire ensemble le 15 OCT"~~, ~~title/meta doublés~~, ~~canonicals absents~~, ~~`/solutions/boosters` sans "biostimulant"~~ — Corrigés (02/07/2026), voir journal
+- Personnalités nommées sur la page Team : confirmées par l'utilisateur (accord obtenu de tous) le 02/07/2026 ; bios complètes = contenu à enrichir en Phase 3
+- ~~Vidéo hero 13 Mo `preload="auto"`~~ — Corrigé (02/07/2026) : réencodée à 1,9 Mo (ffmpeg, 960px/CRF30), `preload="metadata"`
+- ~~PNG 2,49 Mo non compressé (section production)~~ — Corrigé (02/07/2026) : converti en WebP 68 Ko
+- ~~`/innovation` absent du sitemap.xml~~ — Corrigé (02/07/2026), + lien Footer `/#innovation`→`/innovation` aligné sur Navigation
+- ~~Aucun schema `BreadcrumbList`~~ — Corrigé (02/07/2026), ajouté sur les 13 pages internes (`src/lib/breadcrumb.ts`)
+- ~~`/contact` : rien d'actionnable au-dessus de la ligne de flottaison mobile~~ — Corrigé (02/07/2026) : hero mobile resserré (padding + tailles de police réduites <640px)
+- ~~OG/Twitter tags statiques et dupliqués~~ — Corrigé (02/07/2026) : og:title/description/url par page ; og:image reste partagé (pas d'image sociale dédiée par page)
+- ~~Headers de sécurité absents~~ — Partiellement corrigé (02/07/2026) : X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy ajoutés dans `vercel.json`. **CSP volontairement non ajoutée** : nécessite de lister précisément tous les domaines utilisés (Supabase `fhukegvicebiaopvgtzt.supabase.co`, GA4 `googletagmanager.com`/`google-analytics.com`, Google Fonts) et un test réel en preview avant activation — une CSP mal calibrée casserait silencieusement le formulaire de contact ou GA4.
+- **Ouvert** — Contenu thin : pages produits 523-589 mots (seuil 800), `/ressources` quasi vide (Phase 3)
+- ~~~64 Mo de vidéos orphelines dans `public/`~~ — Corrigé (02/07/2026) : `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés, ainsi que `ProductsSchema.tsx` (composant mort qui les référençait, jamais importé nulle part). `public/` : 85 Mo → 18 Mo.
+- ~~Footer avec ancres homepage `/#solutions`/`/#production`/`/#about`/`/#contact-form`~~ — Corrigé (02/07/2026) : les 4 liens (+ Innovation) basculés en `<Link>` React Router vers les pages dédiées (`/solutions`, `/notre-production`, `/qui-sommes-nous`, `/contact`), alignés sur Navigation.
+- **⚠️ À REBASCULER AU LANCEMENT keprea.com** : JSON-LD Organization + og:image/twitter:image (`index.html`) et les 14 `<link rel="canonical">`/`og:url` par page pointent volontairement vers `keprea.vercel.app` en attendant la migration — voir checklist "Déploiement keprea.com" ci-dessous
+
+---
+
 ### `<html lang="en">` — attribut de langue incorrect
 - **Statut** : Corrigé (15/06/2026)
 - Remplacé par `lang="fr"` dans `index.html`
@@ -120,6 +138,7 @@
   3. Soumettre le sitemap sur la nouvelle propriété
   4. Configurer les redirections 301 Vercel des anciennes URLs
   5. Vérifier que GA4 (`G-8J2LKBGHD7`) remonte bien des données sur le nouveau domaine
+  6. Remettre `https://keprea.com` dans : JSON-LD Organization + `og:image`/`twitter:image` (`index.html`), et les 14 `<link rel="canonical">`/`og:url` par page (actuellement en `keprea.vercel.app`)
 
 ---
 
@@ -166,24 +185,11 @@
 
 | Date | Problème | Correction appliquée |
 |------|----------|----------------------|
-| 15/06/2026 | Badge « Edit with Lovable » | Supprimé de `vite.config.ts`, `package.json`, `index.html` |
-| 15/06/2026 | Emoji cassé `🜻` (×2) | Remplacé par icône `Archive` (lucide) dans `Production.tsx` |
-| 15/06/2026 | Emojis non-pro (×9) | Icônes lucide dans `Production.tsx`, `ExtraitsNaturels.tsx`, `LanguageContext.tsx` |
-| 15/06/2026 | Cartes valeurs dupliquées | Description "Impact Mesurable" différenciée dans `LanguageContext.tsx` |
-| 15/06/2026 | Faute "meilleur performance" | Déjà correcte dans le code source — aucune action requise |
-| 15/06/2026 | `localStorage` appelé au niveau module dans `supabase/client.ts` | Gardé `typeof window !== 'undefined'` pour compatibilité SSG Node.js |
-| 15/06/2026 | Architecture SPA sans pré-rendu HTML (frein SEO) | Migration vers `vite-react-ssg` — 17 pages HTML statiques générées au build |
-| 15/06/2026 | Navigation + Footer absents des 4 pages produits (BiocontroleVivant, ExtraitsNaturels, Boosters, Biofertilisant) | Navigation et Footer ajoutés sur toutes les pages produits (Phase 5.4) |
-| 15/06/2026 | Emoji `🦗` dans `ExtraitsNaturels.tsx` (Technology section) | Remplacé par icône `Bug` (lucide-react) |
-| 15/06/2026 | `console.error` dans `NotFound.tsx` | Supprimé — page 404 traduite en français et simplifiée |
-| 15/06/2026 | CookieBanner absent de toutes les pages hors Index (SSG = pages HTML indépendantes) | Déplacé dans `RootLayout.tsx` — présent sur toutes les pages |
-| 15/06/2026 | CTA produits pointaient vers `/#contact-form` au lieu de `/contact` | Liens corrigés vers `/contact` sur les 4 pages produits |
-| 15/06/2026 | Contenu thin sur pages produits (pas de cultures cibles, mode d'emploi, FAQ) | Sections ajoutées sur 4 pages produits + maillage interne (Phase 5.4) |
-| 15/06/2026 | Sitemap.xml absent | `public/sitemap.xml` créé avec 13 URLs + `robots.txt` mis à jour |
-| 15/06/2026 | Redesign complet | App.css nettoyé, App.tsx routes corrigées (13 routes), Problem + HowToGet créés, Innovation refondée (contenu indexable), Solutions accessible (role/tabIndex/focus), Production titre aligné, Testimonials restructurées, Index.tsx parcours conversationnel |
+| 15/06/2026 | Refonte complète (Phases 0-5.4) | Badge Lovable supprimé, emojis→icônes lucide (×12), SSG vite-react-ssg (17 pages), Nav/Footer sur pages produits, CTA `/contact` corrigés, sitemap.xml + robots.txt créés, contenu thin enrichi (cultures/mode d'emploi/FAQ), App.css nettoyé, routes corrigées, CookieBanner global, `console.error` supprimé de `NotFound.tsx` |
 | 16/06/2026 | Page contact — formulaire étroit sur colonne droite, layout trop serré | ContactPage.tsx redesigné : hero éditorial + split 3/5·2/5 (form gauche, info droite), Double-Bezel sur form + cards, scroll-reveal staggeré. ContactForm.tsx : prop `embedded` ajoutée, grille 2-col Prénom/Entreprise, inputs premium, bouton pill button-in-button. Build 17 pages OK, 0 erreur TS. |
 | 01/07/2026 | Incohérence couleur verte : 3 valeurs dark green différentes coexistaient (Problem, Testimonials, Innovation, InnovationPage) vs style clair des pages Solutions | Harmonisation site-wide → `bg-primary/5` / `bg-background` + `text-foreground`/`text-muted-foreground`. Build 18 pages OK. |
-| 02/07/2026 | Poster vidéo Hero = photo de coccinelle (hors-sujet), flash visible avant chargement de la vidéo | Poster remplacé par une image extraite de `portfolio-video-4.mp4` elle-même (`hero-poster-frame.jpg`) → transition poster→vidéo invisible. Vérifié par capture d'écran (Playwright) avant/après chargement. |
-| 02/07/2026 | Sections "Avantages"/"Pourquoi choisir" (4 pages produits) — cartes plates sans interaction, jugées "fade" | Composants `AdvantageCard`/`AdvantageGrid` créés : icône Lucide contextuelle, numéro décoratif en filigrane, hover lift + glow + soulignement progressif, scroll-reveal stagger (transform/opacity only, respecte `prefers-reduced-motion`). Appliqué à BiocontroleVivant, ExtraitsNaturels, Boosters, Biofertilisant. Préfixes "✓ " redondants supprimés de 4 clés `substances.benefit*.title` (5 langues). Build 18 pages OK, 0 erreur TS. |
-| 02/07/2026 | Essai : `AdvantageGrid` en pile de cartes cliquables (une raison à la fois, clic pour révéler la suivante) | **Revert demandé par l'utilisateur** ("c'était mieux avant") → retour à la grille statique 2 colonnes avec hover (version du 02/07 ci-dessus). Ne pas réintroduire cette variante sans validation explicite. |
-| 02/07/2026 | `Team.tsx` : photo de groupe unique + hotspots hover positionnés en `%` codés en dur (cassant au moindre recadrage, inutilisables au tactile) + note interne "Photo à faire ensemble le 15 OCT" affichée en live (5 langues) | Grille de portraits individuels (placeholder initiales en attendant les vraies photos), nom + rôle affichés sous chaque photo, mis en valeur au survol (couleur + soulignement). Clés `team.hover`/`team.photoNote` supprimées de `LanguageContext.tsx`. Titre changé en "Qui sommes-nous ?" (5 langues). Antoine Hubert repositionné en premier + 3 membres ajoutés (Béatrice Vassy, Thibault Sarton du Jonchay, Guillaume Bohuon). **Reste à faire** : vraies photos individuelles des 9 membres. Build 18 pages OK, 0 erreur TS. |
+| 02/07/2026 | Poster vidéo Hero hors-sujet (coccinelle) ; cartes "Avantages" jugées "fade" sur les 4 pages produits | Poster remplacé par une frame de `portfolio-video-4.mp4` elle-même. `AdvantageCard`/`AdvantageGrid` créés (icône, hover lift+glow, scroll-reveal) ; essai en pile cliquable **reverté** à la demande de l'utilisateur → grille statique conservée, ne pas réintroduire sans validation. |
+| 02/07/2026 | `Team.tsx` : photo de groupe unique + hotspots hover positionnés en `%` codés en dur (cassant au moindre recadrage, inutilisables au tactile) + note interne "Photo à faire ensemble le 15 OCT" affichée en live (5 langues) | Grille de portraits individuels (placeholder initiales en attendant les vraies photos), nom + rôle affichés sous chaque photo, mis en valeur au survol (couleur + soulignement). Clés `team.hover`/`team.photoNote` supprimées de `LanguageContext.tsx`. **Reste à faire** : vraies photos individuelles des 6 membres. Build 18 pages OK, 0 erreur TS. |
+| 02/07/2026 | Audit SEO Phase 1 (score 53/100) : title/meta dupliqués, canonicals absents, JSON-LD sur mauvais domaine, `/solutions/boosters` sans le mot "biostimulant" | `index.html` : suppression du `<title>`/`<meta description>` génériques dupliqués ; JSON-LD Organization `url`/`logo` basculés sur `keprea.vercel.app` (note migration). `<link rel="canonical">` auto-référent ajouté aux 14 pages (`Head` créé sur `MentionsLegales.tsx`/`PolitiqueConfidentialite.tsx` qui n'en avaient aucun). `Boosters.tsx` : title/H1 (5 langues) + section explicative "biostimulant" ajoutés. Personnalités Team confirmées par l'utilisateur. Build 18 pages OK, 0 erreur TS. |
+| 02/07/2026 | Audit SEO Phase 2 : vidéo hero 13 Mo, PNG 2,49 Mo, `/innovation` absent du sitemap, pas de BreadcrumbList, `/contact` mobile sans élément actionnable au-dessus du pli, OG/Twitter statiques, headers de sécurité absents | Vidéo hero réencodée 13→1,9 Mo (ffmpeg CRF30/960px, qualité vérifiée visuellement) + `preload="metadata"`. PNG production 2,49 Mo→WebP 68 Ko (Pillow). `/innovation` ajouté au sitemap. `src/lib/breadcrumb.ts` créé, `BreadcrumbList` JSON-LD sur les 13 pages internes (attention : `Head` = react-helmet-async, le JSON-LD doit être un enfant texte `{json}`, pas `dangerouslySetInnerHTML` qui est silencieusement ignoré). `ContactPage.tsx` : hero mobile resserré (padding/tailles réduites <640px). OG/Twitter title/description/url ajoutés par page ; retirés d'`index.html` (même bug de duplication que le `<title>`). `vercel.json` : headers X-Content-Type-Options/X-Frame-Options/Referrer-Policy/Permissions-Policy ajoutés (CSP différée). Build 18 pages OK, 0 erreur TS. |
+| 02/07/2026 | Nettoyage : ~64 Mo de vidéos orphelines dans `public/` (jamais chargées par aucune page) ; Footer avec ancres homepage (`/#solutions`, `/#production`, `/#about`, `/#contact-form`) au lieu des pages dédiées | `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés + `ProductsSchema.tsx` (composant mort, seul référent, jamais importé) supprimé — `public/` 85→18 Mo. Footer : les 5 liens de navigation basculés en `<Link>` React Router vers `/solutions`, `/innovation`, `/notre-production`, `/qui-sommes-nous`, `/contact` (alignés sur `Navigation.tsx`). Build 18 pages OK, 0 erreur TS. |

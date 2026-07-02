@@ -4,6 +4,7 @@ import { FileText, BookOpen, Mail, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const Ressources = () => (
   <div className="min-h-screen bg-background flex flex-col">
@@ -13,6 +14,22 @@ const Ressources = () => (
         name="description"
         content="Fiches techniques, articles et guides sur le biocontrôle et la biofertilisation. Ressources pratiques pour les agriculteurs et conseillers agricoles."
       />
+      <link rel="canonical" href="https://keprea.vercel.app/ressources" />
+      <meta property="og:url" content="https://keprea.vercel.app/ressources" />
+      <meta property="og:title" content="Ressources Keprea | Fiches Techniques et Articles Biocontrôle" />
+      <meta name="twitter:title" content="Ressources Keprea | Fiches Techniques et Articles Biocontrôle" />
+      <meta
+        property="og:description"
+        content="Fiches techniques, articles et guides sur le biocontrôle et la biofertilisation. Ressources pratiques pour les agriculteurs et conseillers agricoles."
+      />
+      <meta
+        name="twitter:description"
+        content="Fiches techniques, articles et guides sur le biocontrôle et la biofertilisation. Ressources pratiques pour les agriculteurs et conseillers agricoles."
+      />
+      <script type="application/ld+json">{breadcrumbJsonLd([
+        { name: "Accueil", path: "/" },
+        { name: "Ressources", path: "/ressources" },
+      ])}</script>
     </Head>
     <Navigation />
 

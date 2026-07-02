@@ -93,13 +93,10 @@
 
 - [ ] Témoignages agriculteurs (texte + photo, idéalement vidéo)
 - [ ] Fiches techniques PDF pour chaque gamme (téléchargeables)
-- [ ] Page « Pourquoi le biocontrôle ? » (argumentaire pédagogique)
-- [ ] Biographies équipe avec photos
-- [ ] Articles de blog SEO (cibler requêtes longue traîne agricoles)
+- [ ] Biographies équipe avec photos (voir aussi ERRORS.md : vérifier identité/consentement des personnes nommées)
+- [ ] Articles de blog SEO (cibler requêtes longue traîne agricoles) — `/ressources` actuellement vide
 - [ ] Logos et références clients/partenaires
 - [ ] Schéma de production responsive
-- [ ] Mentions légales (éditeur, hébergeur, SIRET, etc.)
-- [ ] Politique de confidentialité conforme RGPD
 
 ---
 
@@ -139,20 +136,15 @@
 
 ---
 
-## Historique des sessions
+## Historique des sessions (résumé)
 
-| Date | Décisions / apprentissages |
-|------|---------------------------|
-| Juin 2026 | Rapport stratégique complet produit. Initialisation du projet Claude Code. |
-| 15 juin 2026 | Phase 0 complétée : badge Lovable supprimé, emojis → icônes lucide, description dupliquée corrigée. Nouvelle erreur découverte : `lang="en"` dans `index.html`. |
-| 15 juin 2026 | Phase 1 Conformité complétée : `lang="fr"`, Footer, Mentions légales, Politique de confidentialité, CookieBanner, case RGPD formulaire. SIRET/capital/hébergeur restent à renseigner dans `MentionsLegales.tsx`. |
-| 15 juin 2026 | Phase 1 Conversion complétée : formulaire réduit à 5 champs (Prénom, Entreprise, Email, Message, RGPD), contraste CTA corrigé (primaire 37%→30% L, WCAG AA ≥ 4.5:1), poster ajouté sur 3 vidéos. |
-| 15 juin 2026 | Phase 5.2 + 5.3 complétées : migration SPA → SSG avec `vite-react-ssg` (option A), 17 pages HTML statiques pré-rendues. 12 routes cibles implémentées + redirections 301 Vercel + React Router pour anciennes URLs. `<Head>` (react-helmet-async SSG) injecté sur toutes les pages. Navigation mise à jour multi-page. |
-| 15 juin 2026 | Phase 5.4 complétée : Navigation+Footer ajoutés sur 4 pages produits, emoji → icône lucide, CookieBanner déplacé dans RootLayout, CTA corrigés vers /contact, sections cultures cibles + mode d'emploi + FAQ + maillage interne ajoutées sur 4 pages produits, sitemap.xml créé (13 URLs), robots.txt mis à jour, NotFound traduit en français. |
-| 15 juin 2026 | Redesign UX appliqué : fond blanc pur → crème chaleureux, tracking-tight sur H1 hero, text-wrap:balance + letter-spacing sur tous les titres, scroll-behavior:smooth, button:active press state, navigation active-state indicator (underline vert), About 4-cartes génériques → 2×2 border-left accent, hover Solutions scale→translate, section Testimonials placeholder créée (dark green, 3 cards + CTA /contact), ContactForm card générique → flat design. Build 17 pages OK, TypeScript 0 erreur. |
-| 15 juin 2026 | design-taste-frontend appliqué (DESIGN_VARIANCE:7, MOTION:4, DENSITY:4) : Hero centré → bottom-left asymétrique + gradient overlay t→b + stats inline avec séparateurs (plus de 3 cards égales) + scroll indicator supprimé. Solutions 2×2 égaux → grille 3-col asymétrique briques [2/3+1/3 / 1/3+2/3] + contenu repositionné en bas. Hook useInView créé (IntersectionObserver, 0 dep). CSS scroll-reveal (.reveal/.is-visible) avec prefers-reduced-motion. About + Testimonials : scroll-reveal appliqué. Build 17 pages OK, 0 erreur TS. |
-| 15 juin 2026 | high-end-visual-design appliqué : Nav → floating pill desktop (h-20 outer wrapper conservé pour pt-20 pages) + hamburger animé morphing en X. Hero → eyebrow tag pill + button-in-button CTA (ArrowRight dans cercle bg-white/15 + group-hover translate). About → Double-Bezel history block (outer shell p-2 rounded-[2rem] + inner core shadow inset). Scroll-reveal upgradé avec blur(6px→0) pour heavy fade-up. Grain overlay CSS (body::after, fixed, pointer-events-none, opacity 0.022). CSS vars --ease-spring + --ease-out. Build 17 pages OK, 0 erreur TS. |
-| 15 juin 2026 | Redesign UX/Conversion complet : App.css nettoyé (CSS Vite template supprimé), App.tsx routes corrigées (13 routes actives + aliases backward-compat), nouvelles sections Problem.tsx (contexte agricole, 3 défis + pivot Keprea) et HowToGet.tsx (3 étapes essai terrain + CTA email), Innovation refondée (intro textuelle indexable + flip cards accessibles), Solutions.tsx accessibilité (role/tabIndex/focus-visible/arrow icon), Production.tsx titre éditorial gauche + process sans overflow parasite, Testimonials restructurées (compteurs crédibilité + slots prêts pour vrais témoignages), Index.tsx nouveau parcours : Hero→Problem→Solutions→Innovation→Testimonials→Production→About→HowToGet→ContactForm. Build 17 pages SSG OK, 0 erreur TS. |
-| 15 juin 2026 | Redesign v2 (strategy-driven, /ui-ux-pro-max + /high-end-visual-design) : CSS mort nettoyé (~15 keyframes + classes 3D flip supprimées), token --warm ajouté au design system, Hero CTA "portfolio"→"Voir nos solutions" + CTA secondaire "Demander un essai", stat3 "✓"→"Jura / Site de production", Innovation flip-cards supprimées → 2-col (benefits + tabbed infographic avec role=tablist/tabpanel), Testimonials refondues en TrustSection "Nos garanties" (3 cartes traçabilité/essai/accompagnement + CTA essais), HowToGet numéros étapes 01/02/03 décoratifs larges (5xl, opacity 18%), ContactForm header left-aligned. Build 17 pages SSG OK, 0 erreur TS. |
-| 16 juin 2026 | Redesign page contact (/high-end-visual-design) : ContactPage.tsx — hero éditorial (eyebrow pill + H1 7xl) + layout split 3/5·2/5 (form gauche / coords+agri droite), scroll-reveal staggeré via useEffect IntersectionObserver. ContactForm.tsx — prop `embedded` (Double-Bezel form card, grille 2-col Prénom/Entreprise, inputs premium bg-muted/40, bouton pill button-in-button ArrowRight), mode non-embedded inchangé pour homepage. Build 17 pages SSG OK, 0 erreur TS. |
-| 16 juin 2026 | Correction 404 + refonte page Innovation (/design-taste-frontend) : route `innovation` absente de `routes.tsx` (utilisé SSG) — corrigé. InnovationPage.tsx réécrite : hero éditorial gauche + stats inline + 3 sections (défi agricole en 3 cards numérotées, 3 piliers insecte en grille asymétrique double-bezel, comparaison Keprea/Chimie/Biocontrôle générique en 3 cards + CTA sombre). 0 erreur TS. |
+| Période | Décisions / apprentissages clés |
+|---------|----------------------------------|
+| Juin 2026 | Rapport stratégique. Initialisation Claude Code. |
+| 15-16 juin 2026 | Phases 0→5.4 : badge Lovable, RGPD complet, SSG vite-react-ssg 17 pages, 13 routes actives, redesigns UX (high-end-visual-design + design-taste-frontend). Page contact refondée (split 3/5·2/5). Correction 404 Innovation, InnovationPage.tsx réécrite. |
+| 29 juin 2026 | SIRET/capital/hébergeur renseignés dans MentionsLegales.tsx. GA4 (G-8J2LKBGHD7) intégré avec consentement RGPD. Sitemap mis à jour. |
+| 01 juil. 2026 | Round 1 UX (20 friction points) : Solutions hub, BiocontroleVivant, ExtraitsNaturels, Boosters, Biofertilisant retravaillés. Round 2 UX (22 points) : grilles stats responsive, noms produits (ExtracBio, Fertea432, Boostea13/Soilea110), ordre sections Boosters, témoignages placeholder → invitation neutre. |
+| 01 juil. 2026 | Harmonisation couleur site-wide : toutes les sections dark (Problem, Testimonials/TrustSection, Innovation carte 2, InnovationPage pilier 2 + comparaison + CTA) converties au style clair (bg-primary/5 ou bg-background, text-foreground/muted). Build 18 pages OK, 0 erreur TS. |
+| 02 juil. 2026 | Audit SEO complet (`/seo audit`) : score santé 53/100 (détails `keprea.vercel.app-audit/`). Phase 1 exécutée : title/meta dupliqués supprimés, canonicals (14 pages), JSON-LD Organization aligné sur keprea.vercel.app (à rebasculer à la migration), `/solutions/boosters` optimisé "biostimulant", Team confirmée par l'utilisateur. |
+| 02 juil. 2026 | Phase 2 SEO exécutée : vidéo hero 13→1,9 Mo + PNG production→WebP 68 Ko, `/innovation` ajouté au sitemap, `BreadcrumbList` sur 13 pages, `/contact` mobile resserré, OG/Twitter par page, headers sécurité `vercel.json` (CSP différée). |
+| 02 juil. 2026 | Nettoyage : ~64 Mo de vidéos orphelines + composant mort `ProductsSchema.tsx` supprimés (`public/` 85→18 Mo). Footer aligné sur Navigation (5 liens `/#ancre`→pages dédiées). Build 18 pages OK. |

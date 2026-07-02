@@ -2,6 +2,7 @@ import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Production from "@/components/Production";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const NotreProduction = () => (
   <div className="min-h-screen bg-background flex flex-col">
@@ -11,6 +12,22 @@ const NotreProduction = () => (
         name="description"
         content="Découvrez notre process de production de biosolutions à Dole (39) : élevage d'insectes, extraction des principes actifs et formulation de biopesticides et biofertilisants."
       />
+      <link rel="canonical" href="https://keprea.vercel.app/notre-production" />
+      <meta property="og:url" content="https://keprea.vercel.app/notre-production" />
+      <meta property="og:title" content="Notre Production Keprea | Site de Production à Dole, Jura" />
+      <meta name="twitter:title" content="Notre Production Keprea | Site de Production à Dole, Jura" />
+      <meta
+        property="og:description"
+        content="Découvrez notre process de production de biosolutions à Dole (39) : élevage d'insectes, extraction des principes actifs et formulation de biopesticides et biofertilisants."
+      />
+      <meta
+        name="twitter:description"
+        content="Découvrez notre process de production de biosolutions à Dole (39) : élevage d'insectes, extraction des principes actifs et formulation de biopesticides et biofertilisants."
+      />
+      <script type="application/ld+json">{breadcrumbJsonLd([
+        { name: "Accueil", path: "/" },
+        { name: "Notre production", path: "/notre-production" },
+      ])}</script>
     </Head>
     <Navigation />
     <main className="flex-1 pt-20">

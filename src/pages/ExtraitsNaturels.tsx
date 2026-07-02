@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, Leaf, FlaskConical, Bug, CheckCircle2, ShieldCheck, ShieldPlus, Recycle, Settings2 } from "lucide-react";
+import { ArrowLeft, Leaf, FlaskConical, Microscope, CheckCircle2, ShieldCheck, ShieldPlus, Recycle, Settings2 } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const ExtraitsNaturels = () => {
   const { t } = useLanguage();
@@ -16,6 +17,17 @@ const ExtraitsNaturels = () => {
       <Head>
         <title>Biopesticides Naturels Keprea | Extraits d'Insectes</title>
         <meta name="description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
+        <link rel="canonical" href="https://keprea.vercel.app/solutions/biopesticides" />
+        <meta property="og:url" content="https://keprea.vercel.app/solutions/biopesticides" />
+        <meta property="og:title" content="Biopesticides Naturels Keprea | Extraits d'Insectes" />
+        <meta name="twitter:title" content="Biopesticides Naturels Keprea | Extraits d'Insectes" />
+        <meta property="og:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
+        <meta name="twitter:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
+        <script type="application/ld+json">{breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Solutions", path: "/solutions" },
+          { name: "Biopesticides", path: "/solutions/biopesticides" },
+        ])}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -38,6 +50,15 @@ const ExtraitsNaturels = () => {
 
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-primary mb-2">Gamme ExtracBio</h2>
+              <p className="text-sm text-muted-foreground max-w-xl mx-auto">Biopesticides à base d'extraits d'insectes — protection foliaire naturelle pour vos cultures</p>
+            </div>
+            <div className="bg-primary/5 border border-primary/15 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
+              <p className="text-base text-foreground leading-relaxed">
+                <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles — ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures.
+              </p>
+            </div>
             <AdvantageGrid
               title="Pourquoi choisir nos biopesticides ?"
               advantages={[
@@ -58,7 +79,7 @@ const ExtraitsNaturels = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Bug className="w-8 h-8 text-primary" />
+                  <Microscope className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{t('substances.tech.step1.title')}</h3>
                 <p className="text-base text-muted-foreground">{t('substances.tech.step1.desc')}</p>
@@ -158,6 +179,41 @@ const ExtraitsNaturels = () => {
           </div>
         </section>
 
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">80–95%</div>
+                <div className="text-sm text-muted-foreground">d'efficacité contre les principaux ravageurs (légumes, céréales, vigne)</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">7–14j</div>
+                <div className="text-sm text-muted-foreground">fréquence de traitement selon la pression parasitaire</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">0 résidu</div>
+                <div className="text-sm text-muted-foreground">chimique de synthèse — filières bio et premium</div>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-4">Source : données internes / ITAB (Institut Technique de l'Agriculture Biologique)</p>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
+            <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
+              Vous utilisez nos biopesticides ? Votre retour d'expérience aide d'autres agriculteurs à décider.
+            </p>
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
+              <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
+                Partager votre expérience avec la gamme ExtracBio →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-white">
           <div className="container mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold mb-4">Protégez vos cultures naturellement</h2>
@@ -183,7 +239,7 @@ const ExtraitsNaturels = () => {
             <div className="grid sm:grid-cols-3 gap-4">
               <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
                 <h3 className="font-semibold text-primary mb-2">Bioprotection vivante</h3>
-                <p className="text-sm text-muted-foreground">Auxiliaires entomophages pour lutter contre les ravageurs</p>
+                <p className="text-sm text-muted-foreground">Insectes prédateurs pour éliminer les ravageurs de vos cultures</p>
               </Link>
               <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
                 <h3 className="font-semibold text-primary mb-2">Boosters de croissance</h3>
