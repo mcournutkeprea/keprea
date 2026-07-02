@@ -767,11 +767,11 @@ const translations: Translations = {
   },
   // Team section
   'team.title': {
-    fr: 'Notre Équipe',
-    en: 'Our Team',
-    es: 'Nuestro Equipo',
-    pt: 'Nossa Equipe',
-    de: 'Unser Team'
+    fr: 'Qui sommes-nous ?',
+    en: 'Who we are',
+    es: '¿Quiénes somos?',
+    pt: 'Quem somos',
+    de: 'Wer wir sind'
   },
   'team.subtitle': {
     fr: 'Une équipe passionnée d\'experts en agriculture, industrie et politiques agricoles',
@@ -779,20 +779,6 @@ const translations: Translations = {
     es: 'Un equipo apasionado de expertos en biotecnología, agricultura, industria y políticas agrícolas',
     pt: 'Uma equipe apaixonada de especialistas em biotecnologia, agricultura, indústria e políticas agrícolas',
     de: 'Ein leidenschaftliches Expertenteam für Landwirtschaft, Industrie und Agrarpolitik'
-  },
-  'team.hover': {
-    fr: 'Survolez les points sur la photo pour découvrir notre équipe',
-    en: 'Hover over the points on the photo to discover our team',
-    es: 'Pase el cursor sobre los puntos de la foto para descubrir nuestro equipo',
-    pt: 'Passe o cursor sobre os pontos da foto para descobrir nossa equipe',
-    de: 'Fahren Sie über die Punkte auf dem Foto, um unser Team zu entdecken'
-  },
-  'team.photoNote': {
-    fr: 'Photo à faire ensemble le 15 OCT',
-    en: 'Photo to take together on OCT 15',
-    es: 'Foto para tomar juntos el 15 de OCT',
-    pt: 'Foto para tirar juntos em 15 de OUT',
-    de: 'Gemeinsames Foto am 15. OKT'
   },
   // Contact form
   'contact.title': {
