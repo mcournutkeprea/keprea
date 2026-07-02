@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView";
 
 
 const credibilityStats = [
-  { value: "2025", label: "Fondée à Dole, Jura" },
+  { value: "2025", label: "Fondée en France" },
   { value: "4", label: "Gammes de biosolutions" },
   { value: "100%", label: "Origine naturelle" },
   { value: "Terrain", label: "Suivi agronomique inclus" },

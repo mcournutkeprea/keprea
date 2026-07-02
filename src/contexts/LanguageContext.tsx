@@ -107,18 +107,18 @@ const translations: Translations = {
     de: 'Lösungen in Entwicklung'
   },
   'hero.stat3.value': {
-    fr: 'Jura',
-    en: 'Jura',
-    es: 'Jura',
-    pt: 'Jura',
-    de: 'Jura'
+    fr: 'France',
+    en: 'France',
+    es: 'Francia',
+    pt: 'França',
+    de: 'Frankreich'
   },
   'hero.stat3.label': {
-    fr: 'Site de production',
-    en: 'Production site',
-    es: 'Sitio de producción',
-    pt: 'Local de produção',
-    de: 'Produktionsstandort'
+    fr: 'Made in France',
+    en: 'Made in France',
+    es: 'Made in France',
+    pt: 'Made in France',
+    de: 'Made in France'
   },
   // Solutions section
   'solutions.title': {
@@ -407,11 +407,11 @@ const translations: Translations = {
     de: 'Unser Produktionsstandort'
   },
   'production.subtitle': {
-    fr: 'Découvrez notre site de production moderne situé à Dole, en France, où nous développons et produisons nos biosolutions',
-    en: 'Discover our modern production site located in Dole, France, where we develop and produce our biosolutions',
-    es: 'Descubra nuestro moderno sitio de producción ubicado en Dole, Francia, donde desarrollamos y producimos nuestras biosoluciones',
-    pt: 'Descubra a nossa moderna unidade de produção, localizada em Dole, França, onde desenvolvemos e produzimos as nossas biosoluções.',
-    de: 'Entdecken Sie unseren modernen Produktionsstandort in Dole, Frankreich, wo wir unsere Biolösungen entwickeln und herstellen'
+    fr: 'Découvrez notre site de production moderne, made in France, où nous développons et produisons nos biosolutions',
+    en: 'Discover our modern production site, made in France, where we develop and produce our biosolutions',
+    es: 'Descubra nuestro moderno sitio de producción, made in France, donde desarrollamos y producimos nuestras biosoluciones',
+    pt: 'Descubra a nossa moderna unidade de produção, made in France, onde desenvolvemos e produzimos as nossas biosoluções.',
+    de: 'Entdecken Sie unseren modernen Produktionsstandort, made in France, wo wir unsere Biolösungen entwickeln und herstellen'
   },
   'production.excellence': {
     fr: 'Un site d\'excellence',
@@ -428,11 +428,11 @@ const translations: Translations = {
     de: 'Strategische Lage'
   },
   'production.location.desc': {
-    fr: 'Situé sur la ville de Dole, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d\'un important bassin céréalier et viticole français.',
-    en: 'Located in the city of Dole, our site is only 2 hours from Paris, Basel, Geneva and Lyon, in the heart of an important French cereal and wine-growing basin.',
-    es: 'Situado en la ciudad de Dole, nuestro sitio está a solo 2 horas de París, Basilea, Ginebra y Lyon, en el corazón de una importante cuenca cerealera y vitícola francesa.',
-    pt: 'Localizado na cidade de Dole, nossa unidade fica a apenas 2 horas de Paris, Basileia, Genebra e Lyon, no coração de uma importante região produtora de cereais e cultivo de uva para vinho na França.',
-    de: 'In der Stadt Dole gelegen, ist unser Standort nur 2 Stunden von Paris, Basel, Genf und Lyon entfernt, im Herzen eines wichtigen französischen Getreide- und Weinanbaugebiets.'
+    fr: 'Situé en France, notre site est à seulement 2 heures de Paris, Bâle, Genève et Lyon, au cœur d\'un important bassin céréalier et viticole français.',
+    en: 'Located in France, our site is only 2 hours from Paris, Basel, Geneva and Lyon, in the heart of an important French cereal and wine-growing basin.',
+    es: 'Situado en Francia, nuestro sitio está a solo 2 horas de París, Basilea, Ginebra y Lyon, en el corazón de una importante cuenca cerealera y vitícola francesa.',
+    pt: 'Localizada em França, a nossa unidade fica a apenas 2 horas de Paris, Basileia, Genebra e Lyon, no coração de uma importante região produtora de cereais e cultivo de uva para vinho na França.',
+    de: 'Gelegen in Frankreich, ist unser Standort nur 2 Stunden von Paris, Basel, Genf und Lyon entfernt, im Herzen eines wichtigen französischen Getreide- und Weinanbaugebiets.'
   },
   'production.technology.title': {
     fr: 'Technologies modernes',
@@ -597,11 +597,11 @@ const translations: Translations = {
     de: 'das Lebendige wieder in den Mittelpunkt der Betriebsführung zu stellen.'
   },
   'about.history.body': {
-    fr: 'Implantée à Dole dans le Jura, notre site de 3 000 m² produit des biosolutions de qualité stable et reproductible, toutes utilisables en agriculture biologique.',
-    en: 'Based in Dole, Jura, our 3,000 m² facility produces biosolutions of stable, reproducible quality — all compatible with organic farming.',
-    es: 'Con sede en Dole, en el Jura, nuestro sitio de 3.000 m² produce biosoluciones de calidad estable y reproducible, todas compatibles con la agricultura ecológica.',
-    pt: 'Sediada em Dole, no Jura, a nossa unidade de 3.000 m² produz biosoluções de qualidade estável e reprodutível, todas compatíveis com a agricultura biológica.',
-    de: 'In Dole im Jura entwickelt unser 3.000 m² großer Standort Biolösungen von stabiler, reproduzierbarer Qualität – alle für den ökologischen Landbau geeignet.'
+    fr: 'Made in France, notre site de 3 000 m² produit des biosolutions de qualité stable et reproductible, toutes utilisables en agriculture biologique.',
+    en: 'Made in France, our 3,000 m² facility produces biosolutions of stable, reproducible quality — all compatible with organic farming.',
+    es: 'Made in France, nuestro sitio de 3.000 m² produce biosoluciones de calidad estable y reproducible, todas compatibles con la agricultura ecológica.',
+    pt: 'Made in France, a nossa unidade de 3.000 m² produz biosoluções de qualidade estável e reprodutível, todas compatíveis com a agricultura biológica.',
+    de: 'Made in France entwickelt unser 3.000 m² großer Standort Biolösungen von stabiler, reproduzierbarer Qualität – alle für den ökologischen Landbau geeignet.'
   },
   'about.history.p2.location': {
     fr: 'Implantée à proximité de',

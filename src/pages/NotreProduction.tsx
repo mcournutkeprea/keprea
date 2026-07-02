@@ -39,7 +39,7 @@ const NotreProduction = () => (
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             De l'élevage d'insectes à la formulation finale : un process maîtrisé
-            de bout en bout depuis notre site de Dole, dans le Jura.
+            de bout en bout, made in France.
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ const NotreProduction = () => (
           </p>
           <div className="space-y-6">
             {[
-              { icon: Bug, title: "Élevage d'insectes auxiliaires", desc: "Élevage en conditions contrôlées (température, hygrométrie, alimentation) sur notre site de Dole, dans le Jura — une matière première disponible toute l'année, indépendante des aléas climatiques." },
+              { icon: Bug, title: "Élevage d'insectes auxiliaires", desc: "Élevage en conditions contrôlées (température, hygrométrie, alimentation) sur notre site en France — une matière première disponible toute l'année, indépendante des aléas climatiques." },
               { icon: Archive, title: "Collecte de co-produits", desc: "Valorisation des co-produits issus de l'élevage, dans une logique d'économie circulaire limitant les intrants externes." },
               { icon: FlaskConical, title: "Préparation ou transformation", desc: "Extraction des molécules actives (peptides antimicrobiens, chitine, acides aminés) par nos procédés propriétaires, puis formulation selon la gamme de destination." },
               { icon: Package, title: "Packaging", desc: "Conditionnement adapté à chaque format de vente : sachets et tubes pour les auxiliaires vivants, bidons pour les biopesticides et boosters, big-bags et sacs pour le biofertilisant Fertea432." },
@@ -102,12 +102,12 @@ const NotreProduction = () => (
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-10">
-            Une implantation stratégique dans le Jura
+            Une implantation stratégique en France
           </h2>
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">3 000 m²</div>
-              <p className="text-sm text-muted-foreground">Surface de notre site de production à Dole (39)</p>
+              <p className="text-sm text-muted-foreground">Surface de notre site de production, made in France</p>
             </div>
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">2h</div>
@@ -120,7 +120,7 @@ const NotreProduction = () => (
           </div>
           <div className="max-w-2xl mx-auto space-y-3">
             {[
-              "Site implanté à Dole, dans le Jura (39), à proximité d'un important bassin céréalier et viticole français",
+              "Site implanté en France, à proximité d'un important bassin céréalier et viticole français",
               "Élevage d'insectes en conditions contrôlées, garantissant une matière première traçable toute l'année",
               "Produits formulés pour répondre aux exigences de l'agriculture biologique (règlement (UE) 2018/848)",
               "Société immatriculée en France (SAS Keprea) — mentions légales et SIRET disponibles en pied de page",

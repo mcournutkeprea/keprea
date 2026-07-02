@@ -273,7 +273,7 @@ const PourquoiBiocontrole = () => (
               {
                 icon: FlaskConical,
                 title: "Extraction innovante",
-                desc: "Nos procédés d'extraction préservent les molécules actives : peptides antimicrobiens, chitine, acides aminés. Une technologie propriétaire développée à Dole (39)."
+                desc: "Nos procédés d'extraction préservent les molécules actives : peptides antimicrobiens, chitine, acides aminés. Une technologie propriétaire développée en France."
               },
               {
                 icon: Sprout,

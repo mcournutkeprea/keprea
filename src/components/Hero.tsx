@@ -33,7 +33,7 @@ const Hero = () => {
           {/* Eyebrow tag */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/8 px-3 py-1 mb-6">
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
-              Biosolutions agricoles · Dole, France
+              Biosolutions agricoles · Made in France
             </span>
           </div>
 

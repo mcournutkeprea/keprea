@@ -82,7 +82,7 @@ const QuiSommesNous = () => (
                 desc: "Fondée par 7 associés experts — agriculteurs, entomologistes, agronomes et entrepreneurs — réunis autour d'une même conviction : faire revenir le vivant au cœur de la gestion de la ferme.",
               },
               {
-                title: "Implantation du site de production à Dole, dans le Jura (39)",
+                title: "Implantation du site de production en France",
                 desc: "Sur 3 000 m², à environ 2 heures de Paris, Bâle, Genève et Lyon, au cœur d'un important bassin céréalier et viticole français.",
               },
               {
