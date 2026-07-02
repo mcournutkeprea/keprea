@@ -767,11 +767,11 @@ const translations: Translations = {
   },
   // Team section
   'team.title': {
-    fr: 'Qui sommes-nous ?',
-    en: 'Who we are',
-    es: '¿Quiénes somos?',
-    pt: 'Quem somos',
-    de: 'Wer wir sind'
+    fr: 'Notre équipe',
+    en: 'Our team',
+    es: 'Nuestro equipo',
+    pt: 'Nossa equipe',
+    de: 'Unser Team'
   },
   'team.subtitle': {
     fr: 'Une équipe passionnée d\'experts en agriculture, industrie et politiques agricoles',

@@ -8,15 +8,15 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 const QuiSommesNous = () => (
   <div className="min-h-screen bg-background flex flex-col">
     <Head>
-      <title>Qui Sommes-Nous | Équipe et Mission Keprea</title>
+      <title>Qui sommes-nous ? | Équipe et Mission Keprea</title>
       <meta
         name="description"
         content="Keprea, startup de biosolutions agricoles à Dole (Jura). Découvrez notre équipe d'experts, notre histoire et notre mission : des biosolutions à base d'insectes pour une agriculture durable."
       />
       <link rel="canonical" href="https://keprea.vercel.app/qui-sommes-nous" />
       <meta property="og:url" content="https://keprea.vercel.app/qui-sommes-nous" />
-      <meta property="og:title" content="Qui Sommes-Nous | Équipe et Mission Keprea" />
-      <meta name="twitter:title" content="Qui Sommes-Nous | Équipe et Mission Keprea" />
+      <meta property="og:title" content="Qui sommes-nous ? | Équipe et Mission Keprea" />
+      <meta name="twitter:title" content="Qui sommes-nous ? | Équipe et Mission Keprea" />
       <meta
         property="og:description"
         content="Keprea, startup de biosolutions agricoles à Dole (Jura). Découvrez notre équipe d'experts, notre histoire et notre mission : des biosolutions à base d'insectes pour une agriculture durable."
@@ -35,7 +35,7 @@ const QuiSommesNous = () => (
       <section className="py-12 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Qui Sommes-Nous
+            Qui sommes-nous ?
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Une équipe pluridisciplinaire au service d'une agriculture plus durable,
@@ -43,7 +43,7 @@ const QuiSommesNous = () => (
           </p>
         </div>
       </section>
-      <About />
+      <About showTitle={false} />
       <Team />
     </main>
     <Footer />

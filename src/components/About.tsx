@@ -6,9 +6,10 @@ import { useInView } from "@/hooks/useInView";
 
 interface AboutProps {
   teaser?: boolean;
+  showTitle?: boolean;
 }
 
-const About = ({ teaser = false }: AboutProps) => {
+const About = ({ teaser = false, showTitle = true }: AboutProps) => {
   const { t } = useLanguage();
   const { ref: headerRef, inView: headerVisible } = useInView();
   const { ref: historyRef, inView: historyVisible } = useInView();
@@ -35,23 +36,25 @@ const About = ({ teaser = false }: AboutProps) => {
       <div className="container mx-auto px-4 relative">
 
         {/* ── Header ── */}
-        <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-16 reveal${headerVisible ? ' is-visible' : ''}`}>
-          <div className="inline-flex items-center mb-5">
-            <span
-              className="inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-medium text-primary"
-              style={{ background: 'hsl(var(--primary)/0.07)', border: '1px solid hsl(var(--primary)/0.22)' }}
+        {showTitle && (
+          <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-16 reveal${headerVisible ? ' is-visible' : ''}`}>
+            <div className="inline-flex items-center mb-5">
+              <span
+                className="inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-medium text-primary"
+                style={{ background: 'hsl(var(--primary)/0.07)', border: '1px solid hsl(var(--primary)/0.22)' }}
+              >
+                Keprea · Made in France
+              </span>
+            </div>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-foreground mb-3"
+              style={{ letterSpacing: '-0.025em' }}
             >
-              Keprea · Made in France
-            </span>
+              {t('about.title')}
+            </h2>
+            <p className="text-base text-muted-foreground max-w-xl leading-relaxed">{t('about.subtitle')}</p>
           </div>
-          <h2
-            className="text-4xl md:text-5xl font-bold text-foreground mb-3"
-            style={{ letterSpacing: '-0.025em' }}
-          >
-            {t('about.title')}
-          </h2>
-          <p className="text-base text-muted-foreground max-w-xl leading-relaxed">{t('about.subtitle')}</p>
-        </div>
+        )}
 
         {/* ── Histoire — Double-Bezel ── */}
         <div ref={historyRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto mb-16 reveal reveal-delay-1${historyVisible ? ' is-visible' : ''}`}>
