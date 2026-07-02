@@ -8,6 +8,34 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
+import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
+
+const faqItems = [
+  {
+    q: "Les biopesticides Keprea laissent-ils des résidus sur les cultures ?",
+    a: "Nos biopesticides à base d'extraits d'insectes se dégradent rapidement par les UV et l'humidité. Ils ne laissent pas de résidus chimiques de synthèse, ce qui les rend compatibles avec les exigences des filières biologiques et premium."
+  },
+  {
+    q: "Y a-t-il un délai avant récolte (DAR) à respecter ?",
+    a: "Le délai avant récolte dépend du produit et de la culture. Consultez la fiche technique de chaque produit ou contactez notre équipe technique pour les informations réglementaires précises."
+  },
+  {
+    q: "Nos biopesticides sont-ils compatibles avec les lâchers d'auxiliaires ?",
+    a: "Oui, nos biopesticides sont formulés pour être compatibles avec le biocontrôle vivant. Utilisés en programme intégré, ils se complètent pour une protection optimale de vos cultures."
+  },
+  {
+    q: "Peut-on mélanger la gamme ExtracBio avec d'autres produits en cuve ?",
+    a: "Un test de miscibilité préalable est recommandé avant tout mélange extemporané, en particulier avec des produits fortement acides ou basiques. Notre équipe technique peut vous confirmer la compatibilité avec les principaux intrants du marché sur simple demande."
+  },
+  {
+    q: "Comment conserver la gamme ExtracBio avant utilisation ?",
+    a: "Stocker à l'abri de la lumière directe et de la chaleur excessive (idéalement entre 5°C et 25°C), dans l'emballage d'origine fermé. Une fois la bouillie préparée, l'appliquer dans les heures qui suivent pour préserver l'activité des molécules bioactives."
+  },
+  {
+    q: "Nos biopesticides sont-ils dangereux pour les abeilles et pollinisateurs ?",
+    a: "Les molécules actives d'ExtracBio ciblent spécifiquement le système nerveux ou digestif des ravageurs cibles, sans effet démontré sur les pollinisateurs aux doses recommandées. Nous recommandons néanmoins d'éviter les traitements en pleine floraison et de privilégier les heures où les pollinisateurs sont peu actifs (tôt le matin ou en soirée), par précaution et conformément aux bonnes pratiques phytosanitaires générales."
+  },
+];
 
 const ExtraitsNaturels = () => {
   const { t } = useLanguage();
@@ -28,6 +56,13 @@ const ExtraitsNaturels = () => {
           { name: "Solutions", path: "/solutions" },
           { name: "Biopesticides", path: "/solutions/biopesticides" },
         ])}</script>
+        <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
+        <script type="application/ld+json">{serviceJsonLd({
+          name: "Biopesticides ExtracBio — extraits d'insectes",
+          description: "Protection foliaire des cultures à base d'extraits bioactifs d'insectes (peptides antimicrobiens, chitine), pour lutte contre les ravageurs sans résidu chimique de synthèse.",
+          path: "/solutions/biopesticides",
+          serviceType: "Biocontrôle agricole",
+        })}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -56,7 +91,7 @@ const ExtraitsNaturels = () => {
             </div>
             <div className="bg-primary/5 border border-primary/15 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
-                <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles — ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures.
+                <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles — ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures. Le mode d'action par contact et ingestion, combiné à une dégradation rapide dans l'environnement, limite le risque de sélection de populations résistantes — un enjeu croissant à mesure que les substances actives conventionnelles se raréfient.
               </p>
             </div>
             <AdvantageGrid
@@ -156,20 +191,7 @@ const ExtraitsNaturels = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
             <div className="space-y-6">
-              {[
-                {
-                  q: "Les biopesticides Keprea laissent-ils des résidus sur les cultures ?",
-                  a: "Nos biopesticides à base d'extraits d'insectes se dégradent rapidement par les UV et l'humidité. Ils ne laissent pas de résidus chimiques de synthèse, ce qui les rend compatibles avec les exigences des filières biologiques et premium."
-                },
-                {
-                  q: "Y a-t-il un délai avant récolte (DAR) à respecter ?",
-                  a: "Le délai avant récolte dépend du produit et de la culture. Consultez la fiche technique de chaque produit ou contactez notre équipe technique pour les informations réglementaires précises."
-                },
-                {
-                  q: "Nos biopesticides sont-ils compatibles avec les lâchers d'auxiliaires ?",
-                  a: "Oui, nos biopesticides sont formulés pour être compatibles avec le biocontrôle vivant. Utilisés en programme intégré, ils se complètent pour une protection optimale de vos cultures."
-                },
-              ].map(({ q, a }, i) => (
+              {faqItems.map(({ q, a }, i) => (
                 <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
                   <h3 className="font-semibold text-foreground mb-3">{q}</h3>
                   <p className="text-muted-foreground">{a}</p>
@@ -196,7 +218,11 @@ const ExtraitsNaturels = () => {
                 <div className="text-sm text-muted-foreground">chimique de synthèse — filières bio et premium</div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-4">Source : données internes / ITAB (Institut Technique de l'Agriculture Biologique)</p>
+            <p className="text-xs text-muted-foreground text-center mt-4">
+              Données internes Keprea, essais en parcelles pilotes 2023–2024, sur légumes, céréales et vigne.
+              Résultats variables selon la culture et la pression parasitaire — communiqués à titre indicatif,
+              hors valeur d'engagement contractuel.
+            </p>
           </div>
         </section>
 
@@ -252,6 +278,10 @@ const ExtraitsNaturels = () => {
             </div>
           </div>
         </section>
+
+        <p className="text-xs text-muted-foreground text-center py-6">
+          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
+        </p>
       </main>
       <Footer />
     </div>

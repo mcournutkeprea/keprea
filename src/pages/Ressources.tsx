@@ -15,6 +15,7 @@ const Ressources = () => (
         content="Fiches techniques, articles et guides sur le biocontrôle et la biofertilisation. Ressources pratiques pour les agriculteurs et conseillers agricoles."
       />
       <link rel="canonical" href="https://keprea.vercel.app/ressources" />
+      <meta name="robots" content="noindex, follow" />
       <meta property="og:url" content="https://keprea.vercel.app/ressources" />
       <meta property="og:title" content="Ressources Keprea | Fiches Techniques et Articles Biocontrôle" />
       <meta name="twitter:title" content="Ressources Keprea | Fiches Techniques et Articles Biocontrôle" />

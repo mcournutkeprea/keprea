@@ -8,6 +8,34 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
+import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
+
+const faqItems = [
+  {
+    q: "Fertea432 peut-il remplacer les engrais minéraux ?",
+    a: "Fertea432 enrichit la matière organique du sol et améliore sa structure. En agriculture biologique, il constitue la base de la fertilisation. En conventionnel, il s'intègre en complément pour réduire les doses d'engrais minéraux de synthèse et améliorer durablement la structure du sol."
+  },
+  {
+    q: "Puis-je épandre Fertea432 en contact direct avec les semences ?",
+    a: "Oui, sans risque. Fertea432 est un biofertilisant à libération lente : il ne contient pas d'azote minéral concentré susceptible de brûler les racines ou les semences. Son application est sécurisée même en contact direct."
+  },
+  {
+    q: "Comment Fertea432 améliore-t-il la structure du sol ?",
+    a: "En pratique : votre sol retient mieux l'eau, les racines se développent plus facilement et le travail du sol devient progressivement moins énergivore. Avec 85% de matière organique, Fertea432 stimule l'activité de la faune du sol (vers de terre, bactéries, champignons mycorhiziens) et améliore la rétention en eau, la porosité et la capacité d'échange cationique (CEC) sur le long terme."
+  },
+  {
+    q: "Quelle est la durée de conservation de Fertea432 avant épandage ?",
+    a: "Stocké au sec, à l'abri de l'humidité et des rongeurs, dans son conditionnement d'origine (big-bag ou sac fermé), Fertea432 se conserve plusieurs mois sans perte significative de valeur agronomique. Éviter le stockage prolongé en extérieur sans protection contre les intempéries."
+  },
+  {
+    q: "Fertea432 est-il adapté à tous les types de sol ?",
+    a: "Fertea432 convient à la majorité des types de sol agricole français, y compris les sols pauvres en matière organique ou en cours de reconversion vers l'agriculture biologique. Sur sols très calcaires ou hydromorphes, un diagnostic préalable avec notre équipe technique permet d'ajuster la dose et le calendrier d'incorporation."
+  },
+  {
+    q: "Quelle différence entre Fertea432 et un compost classique ?",
+    a: "Contrairement à un compost dont la composition varie selon les intrants et le processus de compostage, Fertea432 présente une composition standardisée et constante (85% de matière organique, NPK 4-3-2) grâce à une matière première homogène issue de l'élevage d'insectes contrôlé. Cette régularité facilite le calcul des doses et la planification de la fertilisation d'une campagne à l'autre."
+  },
+];
 
 const Biofertilisant = () => {
   const { t } = useLanguage();
@@ -28,6 +56,13 @@ const Biofertilisant = () => {
           { name: "Solutions", path: "/solutions" },
           { name: "Biofertilisant", path: "/solutions/biofertilisant" },
         ])}</script>
+        <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
+        <script type="application/ld+json">{serviceJsonLd({
+          name: "Fertea432 — biofertilisant organique",
+          description: "Biofertilisant organique à libération lente (85% matière organique, NPK 4-3-2) à base d'insectes élevés en France, pour l'amélioration de la fertilité et de la structure du sol.",
+          path: "/solutions/biofertilisant",
+          serviceType: "Fertilisation organique",
+        })}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -58,7 +93,7 @@ const Biofertilisant = () => {
               <div className="text-center sm:text-left">
                 <div className="text-7xl font-bold leading-none mb-2">85%</div>
                 <div className="text-xl font-semibold opacity-90">{t('biofertilisant.organic')}</div>
-                <p className="opacity-75 mt-2 max-w-sm">Libération lente, enrichissement progressif du sol sur plusieurs années. Aucun risque de brûlure racinaire.</p>
+                <p className="opacity-75 mt-2 max-w-sm">Libération lente, enrichissement progressif du sol sur plusieurs années. Aucun risque de brûlure racinaire, même en cas d'application proche du semis ou de la plantation.</p>
               </div>
               <div className="sm:ml-auto text-sm opacity-80 text-center sm:text-right">
                 <p>Contrairement aux engrais minéraux concentrés</p>
@@ -152,20 +187,7 @@ const Biofertilisant = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
             <div className="space-y-6">
-              {[
-                {
-                  q: "Fertea432 peut-il remplacer les engrais minéraux ?",
-                  a: "Fertea432 enrichit la matière organique du sol et améliore sa structure. En agriculture biologique, il constitue la base de la fertilisation. En conventionnel, il s'intègre en complément pour réduire les doses d'engrais minéraux de synthèse et améliorer durablement la structure du sol."
-                },
-                {
-                  q: "Puis-je épandre Fertea432 en contact direct avec les semences ?",
-                  a: "Oui, sans risque. Fertea432 est un biofertilisant à libération lente : il ne contient pas d'azote minéral concentré susceptible de brûler les racines ou les semences. Son application est sécurisée même en contact direct."
-                },
-                {
-                  q: "Comment Fertea432 améliore-t-il la structure du sol ?",
-                  a: "En pratique : votre sol retient mieux l'eau, les racines se développent plus facilement et le travail du sol devient progressivement moins énergivore. Avec 85% de matière organique, Fertea432 stimule l'activité de la faune du sol (vers de terre, bactéries, champignons mycorhiziens) et améliore la rétention en eau, la porosité et la capacité d'échange cationique (CEC) sur le long terme."
-                },
-              ].map(({ q, a }, i) => (
+              {faqItems.map(({ q, a }, i) => (
                 <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
                   <h3 className="font-semibold text-foreground mb-3">{q}</h3>
                   <p className="text-muted-foreground">{a}</p>
@@ -192,7 +214,11 @@ const Biofertilisant = () => {
                 <div className="text-sm text-muted-foreground">suffit pour maintenir et améliorer la fertilité</div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-4">Source : données internes / protocoles Comifer, campagnes 2023–2024</p>
+            <p className="text-xs text-muted-foreground text-center mt-4">
+              Données internes Keprea, campagnes 2023–2024, mesurées selon des méthodes d'analyse de sol
+              inspirées des référentiels Comifer. Résultats variables selon le type de sol et l'historique
+              cultural — communiqués à titre indicatif.
+            </p>
           </div>
         </section>
 
@@ -246,6 +272,10 @@ const Biofertilisant = () => {
             </div>
           </div>
         </section>
+
+        <p className="text-xs text-muted-foreground text-center py-6">
+          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
+        </p>
       </main>
       <Footer />
     </div>

@@ -11,9 +11,9 @@
 ---
 
 ### Audit SEO complet 02/07/2026 — score santé 53/100 (keprea.vercel.app)
-- **Statut** : Phases 1-2 corrigées (02/07/2026) — reste Phases 3-4, plan complet dans `keprea.vercel.app-audit/ACTION-PLAN.md`
+- **Statut** : Phases 1-3 corrigées (02/07/2026) — reste Phase 4 (monitoring/CWV réel, cutover keprea.com), plan complet dans `keprea.vercel.app-audit/ACTION-PLAN.md`
 - ~~Note interne "Photo à faire ensemble le 15 OCT"~~, ~~title/meta doublés~~, ~~canonicals absents~~, ~~`/solutions/boosters` sans "biostimulant"~~ — Corrigés (02/07/2026), voir journal
-- Personnalités nommées sur la page Team : confirmées par l'utilisateur (accord obtenu de tous) le 02/07/2026 ; bios complètes = contenu à enrichir en Phase 3
+- Personnalités nommées sur la page Team : confirmées par l'utilisateur (accord obtenu de tous) le 02/07/2026 ; bios individuelles complètes et vraies photos = toujours en attente
 - ~~Vidéo hero 13 Mo `preload="auto"`~~ — Corrigé (02/07/2026) : réencodée à 1,9 Mo (ffmpeg, 960px/CRF30), `preload="metadata"`
 - ~~PNG 2,49 Mo non compressé (section production)~~ — Corrigé (02/07/2026) : converti en WebP 68 Ko
 - ~~`/innovation` absent du sitemap.xml~~ — Corrigé (02/07/2026), + lien Footer `/#innovation`→`/innovation` aligné sur Navigation
@@ -21,7 +21,7 @@
 - ~~`/contact` : rien d'actionnable au-dessus de la ligne de flottaison mobile~~ — Corrigé (02/07/2026) : hero mobile resserré (padding + tailles de police réduites <640px)
 - ~~OG/Twitter tags statiques et dupliqués~~ — Corrigé (02/07/2026) : og:title/description/url par page ; og:image reste partagé (pas d'image sociale dédiée par page)
 - ~~Headers de sécurité absents~~ — Partiellement corrigé (02/07/2026) : X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy ajoutés dans `vercel.json`. **CSP volontairement non ajoutée** : nécessite de lister précisément tous les domaines utilisés (Supabase `fhukegvicebiaopvgtzt.supabase.co`, GA4 `googletagmanager.com`/`google-analytics.com`, Google Fonts) et un test réel en preview avant activation — une CSP mal calibrée casserait silencieusement le formulaire de contact ou GA4.
-- **Ouvert** — Contenu thin : pages produits 523-589 mots (seuil 800), `/ressources` quasi vide (Phase 3)
+- ~~Contenu thin : pages produits 523-589 mots (seuil 800), `/ressources` quasi vide~~ — Corrigé (02/07/2026, Phase 3) : 4 pages produits portées à 820-848 mots (FAQ enrichies + FAQPage schema), `/pourquoi-le-biocontrole` porté à 1055 mots (Article+FAQPage schema, stats sourcées Ecophyto/Alliance Biocontrôle), `/qui-sommes-nous` et `/notre-production` portés à 550/510 mots (jalons, chiffres, mission). `/ressources` passé en `noindex, follow` (retiré du sitemap) faute de vrai contenu — à ré-indexer quand du contenu réel existera.
 - ~~~64 Mo de vidéos orphelines dans `public/`~~ — Corrigé (02/07/2026) : `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés, ainsi que `ProductsSchema.tsx` (composant mort qui les référençait, jamais importé nulle part). `public/` : 85 Mo → 18 Mo.
 - ~~Footer avec ancres homepage `/#solutions`/`/#production`/`/#about`/`/#contact-form`~~ — Corrigé (02/07/2026) : les 4 liens (+ Innovation) basculés en `<Link>` React Router vers les pages dédiées (`/solutions`, `/notre-production`, `/qui-sommes-nous`, `/contact`), alignés sur Navigation.
 - **⚠️ À REBASCULER AU LANCEMENT keprea.com** : JSON-LD Organization + og:image/twitter:image (`index.html`) et les 14 `<link rel="canonical">`/`og:url` par page pointent volontairement vers `keprea.vercel.app` en attendant la migration — voir checklist "Déploiement keprea.com" ci-dessous
@@ -90,15 +90,6 @@
 - **Symptôme** : Google ne peut pas lire certains contenus clés
 - **Cause** : Textes intégrés dans des assets visuels sans équivalent HTML
 - **Correction** : Redoubler en HTML visible ou ALT text exhaustif
-
----
-
-### Pages produits trop minces (thin content)
-- **Statut** : Ouvert
-- **Priorité** : Phase 2
-- **Symptôme** : Peu de contenu textuel → mauvais classement SEO
-- **Cause** : Pages insuffisamment développées
-- **Correction** : Enrichir chaque page : description, mode d'emploi, cultures cibles, témoignages, FAQ, fiche PDF
 
 ---
 
@@ -193,3 +184,5 @@
 | 02/07/2026 | Audit SEO Phase 1 (score 53/100) : title/meta dupliqués, canonicals absents, JSON-LD sur mauvais domaine, `/solutions/boosters` sans le mot "biostimulant" | `index.html` : suppression du `<title>`/`<meta description>` génériques dupliqués ; JSON-LD Organization `url`/`logo` basculés sur `keprea.vercel.app` (note migration). `<link rel="canonical">` auto-référent ajouté aux 14 pages (`Head` créé sur `MentionsLegales.tsx`/`PolitiqueConfidentialite.tsx` qui n'en avaient aucun). `Boosters.tsx` : title/H1 (5 langues) + section explicative "biostimulant" ajoutés. Personnalités Team confirmées par l'utilisateur. Build 18 pages OK, 0 erreur TS. |
 | 02/07/2026 | Audit SEO Phase 2 : vidéo hero 13 Mo, PNG 2,49 Mo, `/innovation` absent du sitemap, pas de BreadcrumbList, `/contact` mobile sans élément actionnable au-dessus du pli, OG/Twitter statiques, headers de sécurité absents | Vidéo hero réencodée 13→1,9 Mo (ffmpeg CRF30/960px, qualité vérifiée visuellement) + `preload="metadata"`. PNG production 2,49 Mo→WebP 68 Ko (Pillow). `/innovation` ajouté au sitemap. `src/lib/breadcrumb.ts` créé, `BreadcrumbList` JSON-LD sur les 13 pages internes (attention : `Head` = react-helmet-async, le JSON-LD doit être un enfant texte `{json}`, pas `dangerouslySetInnerHTML` qui est silencieusement ignoré). `ContactPage.tsx` : hero mobile resserré (padding/tailles réduites <640px). OG/Twitter title/description/url ajoutés par page ; retirés d'`index.html` (même bug de duplication que le `<title>`). `vercel.json` : headers X-Content-Type-Options/X-Frame-Options/Referrer-Policy/Permissions-Policy ajoutés (CSP différée). Build 18 pages OK, 0 erreur TS. |
 | 02/07/2026 | Nettoyage : ~64 Mo de vidéos orphelines dans `public/` (jamais chargées par aucune page) ; Footer avec ancres homepage (`/#solutions`, `/#production`, `/#about`, `/#contact-form`) au lieu des pages dédiées | `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés + `ProductsSchema.tsx` (composant mort, seul référent, jamais importé) supprimé — `public/` 85→18 Mo. Footer : les 5 liens de navigation basculés en `<Link>` React Router vers `/solutions`, `/innovation`, `/notre-production`, `/qui-sommes-nous`, `/contact` (alignés sur `Navigation.tsx`). Build 18 pages OK, 0 erreur TS. |
+| 02/07/2026 | Audit SEO Phase 3 (contenu & autorité) : pages produits/hub thin, pas de schema Article/FAQPage/Service, stats produits attribuées à tort à des orgs tierces (IBMA/Koppert/Comifer/ARVALIS), `/ressources` vide mais indexée | `src/lib/schema.ts` créé (faqJsonLd/articleJsonLd/serviceJsonLd). `/pourquoi-le-biocontrole` : 335→1055 mots, stats sourcées et vérifiées par recherche web (Ecophyto 2030, Alliance Biocontrôle, Code rural L.253-6 — **Farm to Fork -50% UE écarté car retiré par la Commission en 2024, ne pas citer**), Article+FAQPage schema. 4 pages produits : 595-747→820-848 mots (FAQ étendues), FAQPage+Service schema (factuel, sans offers/ratings). `/qui-sommes-nous` 222→553 mots et `/notre-production` 145→512 mots (jalons, chiffres réels : 3000m², 7 associés, 2025). Stats internes reformulées "données internes Keprea" + note méthodologique, dissociées des orgs tierces citées à tort comme source. `/ressources` passé `noindex, follow` + retiré du sitemap. Byline "Rédigé par l'équipe Keprea · Dernière mise à jour" ajouté sur les 7 pages à claims réglementaires. Build 18 pages OK, 0 erreur TS. |
+| 02/07/2026 | Incohérence relevée (non corrigée) : `Production.tsx` légende l'image du site "Site de production Keprea à Damparis", alors que SIRET/mentions légales et tout le reste du site situent l'entreprise à Dole (39) | À vérifier avec l'utilisateur : Damparis est une commune limitrophe de Dole — s'assurer que ce n'est pas une erreur avant la prochaine mise à jour de contenu |

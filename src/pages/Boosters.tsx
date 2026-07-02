@@ -7,6 +7,26 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
+import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
+
+const faqItems = [
+  {
+    q: "Les biostimulants Keprea sont-ils compatibles avec les engrais minéraux ?",
+    a: "Oui, nos boosters sont formulés pour être compatibles avec la majorité des engrais et produits phytosanitaires. Un test de miscibilité est recommandé avant tout mélange en cuve. Notre équipe technique vous accompagne."
+  },
+  {
+    q: "En combien de temps observe-t-on les effets des biostimulants ?",
+    a: "Les premiers effets (meilleur enracinement, reprise de vigueur) sont observables en 10 à 21 jours. Les bénéfices sur rendement et résistance aux stress abiotiques (sécheresse, gel tardif) se mesurent en fin de cycle."
+  },
+  {
+    q: "Boostea13 et Soilea110 sont-ils utilisables en agriculture biologique ?",
+    a: "Nos biostimulants à base d'extraits d'insectes sont compatibles avec les principes de l'agriculture biologique. Vérifiez la conformité avec votre organisme certificateur avant utilisation."
+  },
+  {
+    q: "Faut-il choisir entre Boostea13 et Soilea110 ou peut-on utiliser les deux ?",
+    a: "Les deux produits ciblent des leviers différents — vigueur aérienne pour Boostea13, santé du sol pour Soilea110 — et sont conçus pour être utilisés ensemble sur un même itinéraire technique. En cas de budget limité pour une première saison d'essai, privilégiez le produit correspondant à votre contrainte la plus limitante identifiée par diagnostic (foliaire ou racinaire)."
+  },
+];
 
 const Boosters = () => {
   const { t } = useLanguage();
@@ -27,6 +47,13 @@ const Boosters = () => {
           { name: "Solutions", path: "/solutions" },
           { name: "Boosters", path: "/solutions/boosters" },
         ])}</script>
+        <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
+        <script type="application/ld+json">{serviceJsonLd({
+          name: "Biostimulants Boostea13 et Soilea110",
+          description: "Biostimulants agricoles à base d'extraits d'insectes (polypeptides, proline, acides aminés) pour la vigueur foliaire (Boostea13) et la santé du sol (Soilea110).",
+          path: "/solutions/boosters",
+          serviceType: "Biostimulant agricole",
+        })}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -200,20 +227,7 @@ const Boosters = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
             <div className="space-y-6">
-              {[
-                {
-                  q: "Les biostimulants Keprea sont-ils compatibles avec les engrais minéraux ?",
-                  a: "Oui, nos boosters sont formulés pour être compatibles avec la majorité des engrais et produits phytosanitaires. Un test de miscibilité est recommandé avant tout mélange en cuve. Notre équipe technique vous accompagne."
-                },
-                {
-                  q: "En combien de temps observe-t-on les effets des biostimulants ?",
-                  a: "Les premiers effets (meilleur enracinement, reprise de vigueur) sont observables en 10 à 21 jours. Les bénéfices sur rendement et résistance aux stress abiotiques (sécheresse, gel tardif) se mesurent en fin de cycle."
-                },
-                {
-                  q: "Boostea13 et Soilea110 sont-ils utilisables en agriculture biologique ?",
-                  a: "Nos biostimulants à base d'extraits d'insectes sont compatibles avec les principes de l'agriculture biologique. Vérifiez la conformité avec votre organisme certificateur avant utilisation."
-                },
-              ].map(({ q, a }, i) => (
+              {faqItems.map(({ q, a }, i) => (
                 <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
                   <h3 className="font-semibold text-foreground mb-3">{q}</h3>
                   <p className="text-muted-foreground">{a}</p>
@@ -240,7 +254,12 @@ const Boosters = () => {
                 <div className="text-sm text-muted-foreground">applications par cycle cultural (Boostea13)</div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-3">Source : essais agronomiques internes 2023–2024 (protocoles ARVALIS) · Soilea110 : amélioration de l'activité microbienne et de la structure du sol dès la 2e application</p>
+            <p className="text-xs text-muted-foreground text-center mt-3">
+              Données internes Keprea, essais agronomiques 2023–2024, mesurés selon un protocole inspiré
+              des méthodologies ARVALIS. Résultats variables selon la culture et les conditions
+              pédoclimatiques — communiqués à titre indicatif. Soilea110 : amélioration de l'activité
+              microbienne et de la structure du sol observée dès la 2ᵉ application.
+            </p>
           </div>
         </section>
 
@@ -289,6 +308,10 @@ const Boosters = () => {
             </div>
           </div>
         </section>
+
+        <p className="text-xs text-muted-foreground text-center py-6">
+          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
+        </p>
       </main>
       <Footer />
     </div>

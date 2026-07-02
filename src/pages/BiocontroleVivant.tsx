@@ -11,6 +11,30 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
+import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
+
+const faqItems = [
+  {
+    q: "En combien de temps les auxiliaires réduisent-ils les populations ravageurs ?",
+    a: "Les auxiliaires commencent à agir en 48 à 72h. La réduction visible des populations ravageurs s'observe généralement entre 7 et 21 jours selon la pression initiale et les conditions climatiques."
+  },
+  {
+    q: "Le biocontrôle vivant est-il efficace en agriculture conventionnelle ?",
+    a: "Oui. Le biocontrôle vivant s'intègre dans tout système de production, conventionnel ou biologique. Il permet souvent de réduire significativement les doses d'insecticides de synthèse, avec des résultats équivalents voire supérieurs."
+  },
+  {
+    q: "Peut-on combiner lâchers d'auxiliaires et biopesticides Keprea ?",
+    a: "Oui, nos produits sont conçus pour fonctionner en programme intégré. Nos biopesticides à base d'extraits d'insectes et les auxiliaires vivants sont complémentaires. Notre équipe technique vous accompagne pour définir un programme cohérent."
+  },
+  {
+    q: "Que faire si les conditions météo ne permettent pas de lâcher à la date prévue ?",
+    a: "Un report de 24 à 48h n'affecte généralement pas l'efficacité du programme, à condition de conserver les auxiliaires dans de bonnes conditions (10°C, obscurité). Au-delà, contactez notre équipe technique pour ajuster le calendrier de lâcher en fonction de la météo et du stade de la culture."
+  },
+  {
+    q: "Faut-il renouveler les lâchers d'auxiliaires chaque saison ?",
+    a: "Oui, dans la grande majorité des cas. Les auxiliaires introduits ne s'établissent pas de façon pérenne sur la parcelle une fois le ravageur cible éliminé — faute de proie disponible, leur population décline naturellement. Un programme de lâchers est donc à reconduire à chaque nouvelle saison culturale, en ajustant les quantités selon la pression observée l'année précédente."
+  },
+];
 
 const BiocontroleVivant = () => {
   const { t } = useLanguage();
@@ -31,6 +55,13 @@ const BiocontroleVivant = () => {
           { name: "Solutions", path: "/solutions" },
           { name: "Bioprotection", path: "/solutions/bioprotection" },
         ])}</script>
+        <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
+        <script type="application/ld+json">{serviceJsonLd({
+          name: "Bioprotection vivante — lâchers d'auxiliaires",
+          description: "Fourniture d'insectes auxiliaires vivants (Aphidius colemani, Trichogramma brassicae, Cryptolaemus montrouzieri, Encarsia formosa) pour la lutte biologique contre les ravageurs des cultures.",
+          path: "/solutions/bioprotection",
+          serviceType: "Biocontrôle agricole",
+        })}</script>
       </Head>
       <Navigation />
       <main className="flex-1 pt-20">
@@ -142,7 +173,11 @@ const BiocontroleVivant = () => {
                 <div className="text-xs text-muted-foreground mt-1">Éligible AB — vérifier avec votre certificateur</div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-4">Source : données essais IBMA France / Koppert Biological Systems</p>
+            <p className="text-xs text-muted-foreground text-center mt-4">
+              Données internes Keprea, essais en parcelles pilotes 2023–2024. Résultats variables selon
+              l'espèce ravageur, la pression parasitaire et les conditions climatiques — communiqués à
+              titre indicatif, hors valeur d'engagement contractuel.
+            </p>
           </div>
         </section>
 
@@ -153,7 +188,7 @@ const BiocontroleVivant = () => {
               Un <strong className="text-foreground">lâcher</strong> consiste à ouvrir des sachets ou boîtes contenant des auxiliaires vivants et à les déposer sur les plantes ou dans les rangs. Voici le déroulé type.
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-lg px-5 py-4 mb-4 max-w-2xl mx-auto text-sm text-muted-foreground">
-              <strong className="text-foreground">Format de livraison :</strong> sachets ou tubes de 250 à 1 000 individus selon l'espèce. Conservation : 24–48h à 10°C. Application le jour de réception recommandée.
+              <strong className="text-foreground">Format de livraison :</strong> sachets ou tubes de 250 à 1 000 individus selon l'espèce. Conservation : 24–48h à 10°C, à l'abri de la lumière directe. Application le jour de réception recommandée pour préserver le taux de survie des auxiliaires au lâcher.
             </div>
             <p className="text-sm text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
               <strong className="text-foreground">En résumé :</strong> diagnostiquer → planifier → lâcher tôt le matin → éviter les insecticides 48h avant et après → observer à J+7.
@@ -184,20 +219,7 @@ const BiocontroleVivant = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
             <div className="space-y-6">
-              {[
-                {
-                  q: "En combien de temps les auxiliaires réduisent-ils les populations ravageurs ?",
-                  a: "Les auxiliaires commencent à agir en 48 à 72h. La réduction visible des populations ravageurs s'observe généralement entre 7 et 21 jours selon la pression initiale et les conditions climatiques."
-                },
-                {
-                  q: "Le biocontrôle vivant est-il efficace en agriculture conventionnelle ?",
-                  a: "Oui. Le biocontrôle vivant s'intègre dans tout système de production, conventionnel ou biologique. Il permet souvent de réduire significativement les doses d'insecticides de synthèse, avec des résultats équivalents voire supérieurs."
-                },
-                {
-                  q: "Peut-on combiner lâchers d'auxiliaires et biopesticides Keprea ?",
-                  a: "Oui, nos produits sont conçus pour fonctionner en programme intégré. Nos biopesticides à base d'extraits d'insectes et les auxiliaires vivants sont complémentaires. Notre équipe technique vous accompagne pour définir un programme cohérent."
-                },
-              ].map(({ q, a }, i) => (
+              {faqItems.map(({ q, a }, i) => (
                 <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
                   <h3 className="font-semibold text-foreground mb-3">{q}</h3>
                   <p className="text-muted-foreground">{a}</p>
@@ -259,6 +281,10 @@ const BiocontroleVivant = () => {
             </div>
           </div>
         </section>
+
+        <p className="text-xs text-muted-foreground text-center py-6">
+          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
+        </p>
       </main>
       <Footer />
     </div>
