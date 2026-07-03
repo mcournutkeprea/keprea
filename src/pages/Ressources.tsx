@@ -1,9 +1,8 @@
 import { Head } from "vite-react-ssg";
-import { Link } from "react-router-dom";
-import { FileText, BookOpen, Mail, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FileText, BookOpen, Mail } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GradientCTA from "@/components/GradientCTA";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const Ressources = () => (
@@ -84,24 +83,14 @@ const Ressources = () => (
               </div>
             ))}
           </div>
-
-          <div className="bg-primary/5 rounded-2xl p-8 text-center border border-primary/10">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              Vous souhaitez être informé de nos publications ?
-            </h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Contactez-nous pour être ajouté à notre liste de diffusion et recevoir
-              nos fiches techniques dès leur parution.
-            </p>
-            <Link to="/contact">
-              <Button size="lg">
-                Nous contacter
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
+
+      <GradientCTA
+        title="Vous souhaitez être informé de nos publications ?"
+        description="Contactez-nous pour être ajouté à notre liste de diffusion et recevoir nos fiches techniques dès leur parution."
+        primary={{ label: "Nous contacter", to: "/contact" }}
+      />
     </main>
 
     <Footer />

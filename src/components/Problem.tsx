@@ -5,19 +5,19 @@ import { useInView } from "@/hooks/useInView";
 const challenges = [
   {
     icon: Leaf,
-    stat: "84%",
+    stat: "XXX",
     title: "Des cultures liées au vivant",
     desc: "84 % des cultures dépendent des insectes pour leur qualité et leur rendement. Keprea exploite cette relation naturelle pour protéger et stimuler vos parcelles.",
   },
   {
     icon: ShieldCheck,
-    stat: "100%",
+    stat: "XXX",
     title: "Naturel et sans résidu chimique",
     desc: "Toutes nos formulations sont d'origine naturelle, sans résidu toxique. Compatibles avec les certifications bio, HVE et les exigences croissantes des filières.",
   },
   {
     icon: Sprout,
-    stat: "5 500",
+    stat: "XXX",
     title: "Espèces auxiliaires mobilisées",
     desc: "La France recense 5 500 espèces d'insectes auxiliaires utiles. Keprea sélectionne et formule les plus efficaces pour chaque culture et chaque besoin.",
   },

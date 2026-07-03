@@ -52,9 +52,9 @@ const ContactPage = () => {
         <section className="pt-8 pb-6 sm:pt-24 sm:pb-14 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="reveal">
-              <span className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold bg-primary/10 text-primary mb-3 sm:mb-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3 sm:mb-6">
                 Nous contacter
-              </span>
+              </p>
               <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-3 sm:mb-6">
                 Parlons de votre projet
               </h1>

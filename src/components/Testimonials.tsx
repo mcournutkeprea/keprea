@@ -15,7 +15,7 @@ const guarantees = [
   {
     icon: CheckCircle,
     title: "Traçabilité complète",
-    desc: "Chaque lot est tracé de la filière insecte jusqu'à la formulation finale. Origine 100% française, aucun intermédiaire inconnu.",
+    desc: "Chaque lot est tracé de la filière insecte jusqu'à la formulation finale, sans intermédiaire inconnu.",
   },
   {
     icon: FlaskConical,
@@ -38,18 +38,13 @@ const TrustSection = () => {
       <div className="container mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/50 mb-3">
-              Nos garanties
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Des biosolutions développées avec rigueur
-            </h2>
-          </div>
-          <p className="text-muted-foreground text-sm max-w-xs leading-relaxed md:text-right">
-            Une startup de 2024 qui mise sur la transparence et les résultats mesurables.
+        <div className="mb-12">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
+            Nos garanties
           </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            Des biosolutions développées avec rigueur
+          </h2>
         </div>
 
         {/* Credibility stats */}
@@ -95,10 +90,7 @@ const TrustSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-border">
-          <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-            Les premiers témoignages de nos partenaires agriculteurs seront publiés à l'issue des essais terrain 2026.
-          </p>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-end gap-6 pt-8 border-t border-border">
           <Link
             to="/contact"
             className="group shrink-0 inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-5 pr-2 py-2 text-sm font-semibold transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"

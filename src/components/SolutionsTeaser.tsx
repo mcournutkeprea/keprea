@@ -53,9 +53,9 @@ const SolutionsTeaser = () => {
 
           {/* ── Colonne gauche : texte + CTA ── */}
           <div className="reveal">
-            <span className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold bg-primary/10 text-primary mb-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
               Nos gammes
-            </span>
+            </p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-5">
               {t("solutions.title")}
             </h2>

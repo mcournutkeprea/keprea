@@ -1,15 +1,18 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, CheckCircle2, Leaf, Target, Recycle, BadgeCheck } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Leaf, Target, Recycle, BadgeCheck, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import aphidImage from "@/assets/aphid.jpg";
 import pyraleImage from "@/assets/pyrale.jpg";
 import cochenillesImage from "@/assets/cochenilles.jpg";
 import aleurodeImage from "@/assets/aleurode.jpg";
+import logoAb from "@/assets/logo-ab.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
+import GradientCTA from "@/components/GradientCTA";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
@@ -58,7 +61,7 @@ const BiocontroleVivant = () => {
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
           name: "Bioprotection vivante : lâchers d'auxiliaires",
-          description: "Fourniture d'insectes auxiliaires vivants (Aphidius colemani, Trichogramma brassicae, Cryptolaemus montrouzieri, Encarsia formosa) pour la lutte biologique contre les ravageurs des cultures.",
+          description: "Fourniture d'insectes auxiliaires vivants pour la lutte biologique contre les ravageurs des cultures.",
           path: "/solutions/bioprotection",
           serviceType: "Biocontrôle agricole",
         })}</script>
@@ -94,22 +97,31 @@ const BiocontroleVivant = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { img: aphidImage, alt: t('biocontrole.pest1.title'), title: t('biocontrole.pest1.title'), desc: t('biocontrole.pest1.desc'), auxiliary: 'Aphidius colemani, Adalia bipunctata' },
-                { img: pyraleImage, alt: t('biocontrole.pest2.title'), title: t('biocontrole.pest2.title'), desc: t('biocontrole.pest2.desc'), auxiliary: 'Trichogramma brassicae' },
-                { img: cochenillesImage, alt: t('biocontrole.pest3.title'), title: t('biocontrole.pest3.title'), desc: t('biocontrole.pest3.desc'), auxiliary: 'Cryptolaemus montrouzieri' },
-                { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title'), desc: t('biocontrole.pest4.desc'), auxiliary: 'Encarsia formosa, Macrolophus' },
-              ].map(({ img, alt, title, desc, auxiliary }) => (
+                { img: aphidImage, alt: t('biocontrole.pest1.title'), title: t('biocontrole.pest1.title'), desc: t('biocontrole.pest1.desc') },
+                { img: pyraleImage, alt: t('biocontrole.pest2.title'), title: t('biocontrole.pest2.title'), desc: t('biocontrole.pest2.desc') },
+                { img: cochenillesImage, alt: t('biocontrole.pest3.title'), title: t('biocontrole.pest3.title'), desc: t('biocontrole.pest3.desc') },
+                { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title'), desc: t('biocontrole.pest4.desc') },
+              ].map(({ img, alt, title, desc }) => (
                 <div key={title} className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
                   <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-3">Ravageur cible</p>
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
-                    <img src={img} alt={alt} className="w-full h-full object-cover" />
+                  <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-4">
+                    <div className="w-full h-full rounded-full overflow-hidden border-2 border-primary/20">
+                      <img src={img} alt={alt} className="w-full h-full object-cover" />
+                    </div>
+                    <span
+                      className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-primary border-2 border-background shadow-sm"
+                      title="Ciblé par nos solutions de bioprotection"
+                      aria-hidden="true"
+                    >
+                      <ShieldCheck className="w-4 h-4 text-primary-foreground" />
+                    </span>
                   </div>
                   <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{title}</h3>
                   <p className="text-xs text-muted-foreground mb-3">{desc}</p>
-                  <div className="border-t border-primary/10 pt-3">
-                    <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-1">Auxiliaire utilisé</p>
-                    <p className="text-xs text-primary font-medium">{auxiliary}</p>
-                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                    <ShieldCheck className="w-3 h-3" aria-hidden="true" />
+                    Neutralisé par Keprea
+                  </span>
                 </div>
               ))}
             </div>
@@ -124,7 +136,18 @@ const BiocontroleVivant = () => {
                 { icon: Leaf, title: t('biocontrole.adv1.title'), description: t('biocontrole.adv1.desc') },
                 { icon: Target, title: t('biocontrole.adv2.title'), description: t('biocontrole.adv2.desc') },
                 { icon: Recycle, title: t('biocontrole.adv3.title'), description: t('biocontrole.adv3.desc') },
-                { icon: BadgeCheck, title: t('biocontrole.adv4.title'), description: t('biocontrole.adv4.desc') },
+                {
+                  icon: BadgeCheck,
+                  title: t('biocontrole.adv4.title'),
+                  description: t('biocontrole.adv4.desc'),
+                  badge: (
+                    <img
+                      src={logoAb}
+                      alt="Logo Agriculture Biologique (AB)"
+                      className="h-6 w-6 flex-shrink-0 object-contain"
+                    />
+                  ),
+                },
               ]}
             />
           </div>
@@ -142,9 +165,9 @@ const BiocontroleVivant = () => {
                 "Maïs : lutte contre la pyrale (Ostrinia nubilalis)",
                 "Grandes cultures : betterave, blé, colza (pucerons)",
                 "Maraîchage sous serre : tomate, poivron, concombre",
-                "Maraîchage plein champ : laitue, courgette",
-                "Arboriculture fruitière : pomme, poire, cerise",
-                "Viticulture : tordeuses et cicadelles",
+                "Maraîchage plein champ : laitue, courgette, aubergine, carotte, oignon",
+                "Arboriculture fruitière : pomme, poire, cerise, kiwi",
+                "Viticulture : tordeuse de la vigne (ver de la grappe), vecteur de la flavescence dorée",
               ].map((culture) => (
                 <div key={culture} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -218,13 +241,19 @@ const BiocontroleVivant = () => {
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
-            <div className="space-y-6">
-              {faqItems.map(({ q, a }, i) => (
-                <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-                  <h3 className="font-semibold text-foreground mb-3">{q}</h3>
-                  <p className="text-muted-foreground">{a}</p>
-                </div>
-              ))}
+            <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
+              <Accordion type="single" collapsible>
+                {faqItems.map(({ q, a }, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="border-none">
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                      {q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-5">
+                      {a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
@@ -243,24 +272,12 @@ const BiocontroleVivant = () => {
           </div>
         </section>
 
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-foreground text-white">
-          <div className="container mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Prêt à protéger vos cultures naturellement ?</h2>
-            <p className="text-lg opacity-90 mb-8">
-              Contactez notre équipe technique pour un conseil personnalisé et un programme de bioprotection adapté à votre exploitation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" variant="secondary">Demander un conseil</Button>
-              </Link>
-              <Link to="/pourquoi-le-biocontrole">
-                <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
-                  Pourquoi le biocontrôle ?
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <GradientCTA
+          title="Prêt à protéger vos cultures naturellement ?"
+          description="Contactez notre équipe technique pour un conseil personnalisé et un programme de bioprotection adapté à votre exploitation."
+          primary={{ label: "Demander un conseil", to: "/contact" }}
+          secondary={{ label: "Pourquoi le biocontrôle ?", to: "/pourquoi-le-biocontrole" }}
+        />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
@@ -282,9 +299,6 @@ const BiocontroleVivant = () => {
           </div>
         </section>
 
-        <p className="text-xs text-muted-foreground text-center py-6">
-          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
-        </p>
       </main>
       <Footer />
     </div>

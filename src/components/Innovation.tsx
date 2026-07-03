@@ -17,7 +17,6 @@ const Innovation = () => {
   const biocontrolStats = [
     { value: t("innovation.infographic.biocontrol.stat1.value"), label: t("innovation.infographic.biocontrol.stat1.label") },
     { value: t("innovation.infographic.biocontrol.stat2.value"), label: t("innovation.infographic.biocontrol.stat2.label") },
-    { value: t("innovation.infographic.biocontrol.stat3.value"), label: t("innovation.infographic.biocontrol.stat3.label") },
   ];
 
   return (

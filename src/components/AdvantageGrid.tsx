@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import type { RefObject } from "react";
+import type { ReactNode, RefObject } from "react";
 import { useInView } from "@/hooks/useInView";
 import AdvantageCard from "./AdvantageCard";
 
@@ -7,6 +7,7 @@ interface Advantage {
   icon: LucideIcon;
   title: string;
   description: string;
+  badge?: ReactNode;
 }
 
 interface AdvantageGridProps {
@@ -34,6 +35,7 @@ const AdvantageGrid = ({ title, advantages }: AdvantageGridProps) => {
               index={i}
               title={advantage.title}
               description={advantage.description}
+              badge={advantage.badge}
             />
           </div>
         ))}

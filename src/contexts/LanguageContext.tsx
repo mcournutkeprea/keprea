@@ -100,11 +100,11 @@ const translations: Translations = {
     de: '10'
   },
   'hero.stat2.label': {
-    fr: 'solutions en développement',
-    en: 'solutions in development',
-    es: 'soluciones en desarrollo',
-    pt: 'soluções em desenvolvimento',
-    de: 'Lösungen in Entwicklung'
+    fr: 'solutions en développement, dont 5 déjà sur le marché',
+    en: 'solutions in development, including 5 already on the market',
+    es: 'soluciones en desarrollo, 5 ya en el mercado',
+    pt: 'soluções em desenvolvimento, 5 já no mercado',
+    de: 'Lösungen in Entwicklung, davon 5 bereits am Markt'
   },
   'hero.stat3.value': {
     fr: 'Made in France',
@@ -378,7 +378,7 @@ const translations: Translations = {
     de: '5500'
   },
   'innovation.infographic.biocontrol.stat2.label': {
-    fr: 'auxiliaires utiles recensés en France',
+    fr: 'auxiliaires utiles recensés en France, sélectionnés par Keprea pour une application en plein champ',
     en: 'useful auxiliaries recorded in France',
     es: 'auxiliares útiles registrados en Francia',
     pt: 'auxiliares úteis registrados na França',
@@ -407,7 +407,7 @@ const translations: Translations = {
     de: 'Unser Produktionsstandort'
   },
   'production.subtitle': {
-    fr: 'Découvrez notre site de production moderne, made in France, où nous développons et produisons nos biosolutions',
+    fr: 'Découvrez notre biofabrique moderne, made in France, où nous développons et produisons nos biosolutions',
     en: 'Discover our modern production site, made in France, where we develop and produce our biosolutions',
     es: 'Descubra nuestro moderno sitio de producción, made in France, donde desarrollamos y producimos nuestras biosoluciones',
     pt: 'Descubra a nossa moderna unidade de produção, made in France, onde desenvolvemos e produzimos as nossas biosoluções.',
@@ -491,7 +491,7 @@ const translations: Translations = {
     de: 'Nützlingszucht'
   },
   'production.process.step2': {
-    fr: 'Collecte de Co-produits',
+    fr: 'Collecte de co-produits d\'insectes',
     en: 'Co-product Collection',
     es: 'Recolección de Co-productos',
     pt: 'Coleta de Co-produtos',
@@ -1122,11 +1122,11 @@ const translations: Translations = {
     de: 'Kompatibel mit Ihren bestehenden Geräten'
   },
   'substances.benefit4.desc': {
-    fr: 'Formulations liquides ou granulées applicables avec vos pulvérisateurs et épandeurs habituels. Aucun investissement matériel.',
-    en: 'Liquid or granular formulations applicable with your usual sprayers and spreaders. No equipment investment.',
-    es: 'Formulaciones líquidas o granuladas aplicables con sus pulverizadores y distribuidores habituales. Sin inversión en maquinaria.',
-    pt: 'Formulações líquidas ou granuladas aplicáveis com seus pulverizadores e distribuidores habituais. Sem investimento em equipamentos.',
-    de: 'Flüssige oder granulare Formulierungen für Ihre Spritz- und Streugeräte. Keine Geräteinvestitionen.'
+    fr: 'Formulations liquides ou granulées applicables avec vos pulvérisateurs, atomiseurs et épandeurs habituels. Application par drone également à l\'étude. Aucun investissement matériel.',
+    en: 'Liquid or granular formulations applicable with your usual sprayers, atomizers and spreaders. Drone application is also being explored. No equipment investment.',
+    es: 'Formulaciones líquidas o granuladas aplicables con sus pulverizadores, atomizadores y distribuidores habituales. También se estudia la aplicación por dron. Sin inversión en maquinaria.',
+    pt: 'Formulações líquidas ou granuladas aplicáveis com seus pulverizadores, atomizadores e distribuidores habituais. A aplicação por drone também está a ser estudada. Sem investimento em equipamentos.',
+    de: 'Flüssige oder granulare Formulierungen für Ihre Spritz-, Zerstäubungs- und Streugeräte. Auch die Anwendung per Drohne wird geprüft. Keine Geräteinvestitionen.'
   },
   'substances.tech.title': {
     fr: 'Notre technologie d\'extraction',
@@ -1566,10 +1566,10 @@ const translations: Translations = {
     de: 'Hochwertige organische Substanz'
   },
   'boosters.soilea.benefit2': {
-    fr: 'Stimule les défenses naturelles de la plante (SDP)',
+    fr: 'Stimule les défenses naturelles de la plante (SDN)',
     en: 'Stimulates the plant\'s natural defenses (ISR)',
-    es: 'Estimula las defensas naturales de la planta (SDP)',
-    pt: 'Estimula as defesas naturais das plantas (SDP)',
+    es: 'Estimula las defensas naturales de la planta (SDN)',
+    pt: 'Estimula as defesas naturais das plantas (SDN)',
     de: 'Stimuliert die natürlichen Abwehrkräfte der Pflanze (ISR)'
   },
   'boosters.soilea.benefit3': {

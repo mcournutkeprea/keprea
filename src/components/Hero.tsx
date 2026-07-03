@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
             <div className="border-l border-white/20 px-8">
               <div className="text-3xl font-bold text-white tracking-tight">{t('hero.stat2.value')}</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[130px] leading-tight">{t('hero.stat2.label')}</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[190px] leading-tight">{t('hero.stat2.label')}</div>
             </div>
             <div className="border-l border-white/20 pl-8">
               <div className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">{t('hero.stat3.value')}</div>

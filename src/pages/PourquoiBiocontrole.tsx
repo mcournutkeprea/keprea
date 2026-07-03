@@ -1,9 +1,8 @@
 import { Head } from "vite-react-ssg";
-import { Link } from "react-router-dom";
-import { Leaf, ShieldCheck, FlaskConical, TrendingUp, Bug, Sprout, Award, ArrowRight, Microscope, Feather, TestTube, Scale } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Leaf, ShieldCheck, FlaskConical, TrendingUp, Bug, Sprout, Award, Microscope, Feather, TestTube, Scale, Tractor } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GradientCTA from "@/components/GradientCTA";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, articleJsonLd } from "@/lib/schema";
 
@@ -108,7 +107,7 @@ const PourquoiBiocontrole = () => (
               procédures d'homologation.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Keprea développe des solutions à base d'<strong className="text-foreground">insectes élevés en France</strong>,
+              Keprea développe des solutions à base d'<strong className="text-foreground">insectes</strong>,
               exploitant leurs propriétés biologiques uniques pour créer des produits efficaces,
               traçables et conformes aux cahiers des charges agriculture biologique
               (règlement (UE) 2018/848).
@@ -268,7 +267,7 @@ const PourquoiBiocontrole = () => (
               {
                 icon: Bug,
                 title: "Matière première insecte",
-                desc: "Nos insectes (Hermetia illucens, vers de farine) sont élevés en France dans des conditions contrôlées, garantissant la traçabilité et la qualité constante de nos extraits."
+                desc: "Nos insectes sont élevés dans des conditions contrôlées garantissant la traçabilité et la qualité constante de nos extraits."
               },
               {
                 icon: FlaskConical,
@@ -284,9 +283,14 @@ const PourquoiBiocontrole = () => (
                 icon: Award,
                 title: "Homologations & cahiers des charges",
                 desc: "Nos produits répondent aux exigences de l'agriculture biologique (norme UE 2018/848) et sont développés dans le respect des bonnes pratiques phytosanitaires."
+              },
+              {
+                icon: Tractor,
+                title: "Application en plein champ",
+                desc: "Au-delà de la production, Keprea développe des solutions d'application pensées pour le plein champ, notamment par pulvérisation, afin de rendre compétitive l'utilisation des insectes auxiliaires et des extraits d'insectes à l'échelle de l'exploitation agricole."
               }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6">
+              <div key={i} className={`flex gap-6${i === 4 ? " md:col-span-2" : ""}`}>
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -317,37 +321,12 @@ const PourquoiBiocontrole = () => (
         </div>
       </section>
 
-      {/* Byline / dernière mise à jour */}
-      <section className="py-6 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <p className="text-xs text-muted-foreground text-center">
-            Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
-          </p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-4 bg-foreground text-white">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Prêt à passer au biocontrôle ?</h2>
-          <p className="text-lg opacity-90 mb-8">
-            Découvrez nos gammes de solutions ou contactez-nous pour un conseil personnalisé.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/solutions">
-              <Button size="lg" variant="secondary">
-                Voir nos solutions
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
-                Nous contacter
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <GradientCTA
+        title="Prêt à passer au biocontrôle ?"
+        description="Découvrez nos gammes de solutions ou contactez-nous pour un conseil personnalisé."
+        primary={{ label: "Voir nos solutions", to: "/solutions" }}
+        secondary={{ label: "Nous contacter", to: "/contact" }}
+      />
     </main>
 
     <Footer />

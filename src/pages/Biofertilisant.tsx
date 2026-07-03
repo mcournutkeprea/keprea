@@ -7,13 +7,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
+import GradientCTA from "@/components/GradientCTA";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
 const faqItems = [
   {
     q: "Fertea432 peut-il remplacer les engrais minéraux ?",
-    a: "Fertea432 enrichit la matière organique du sol et améliore sa structure. En agriculture biologique, il constitue la base de la fertilisation. En conventionnel, il s'intègre en complément pour réduire les doses d'engrais minéraux de synthèse et améliorer durablement la structure du sol."
+    a: "Fertea432 enrichit la matière organique du sol et améliore sa structure. Il peut remplacer un apport d'engrais minéral, en particulier en agriculture biologique où il constitue la base de la fertilisation, ou l'accompagner en conventionnel pour réduire les doses d'engrais minéraux de synthèse et améliorer durablement la structure du sol. Il améliore par ailleurs la solubilisation du phosphore déjà présent dans le sol, le rendant plus disponible pour la plante."
   },
   {
     q: "Puis-je épandre Fertea432 en contact direct avec les semences ?",
@@ -29,11 +31,11 @@ const faqItems = [
   },
   {
     q: "Fertea432 est-il adapté à tous les types de sol ?",
-    a: "Fertea432 convient à la majorité des types de sol agricole français, y compris les sols pauvres en matière organique ou en cours de reconversion vers l'agriculture biologique. Sur sols très calcaires ou hydromorphes, un diagnostic préalable avec notre équipe technique permet d'ajuster la dose et le calendrier d'incorporation."
+    a: "Fertea432 convient à la majorité des types de sol agricole français, y compris les sols pauvres en matière organique ou en cours de reconversion vers l'agriculture biologique."
   },
   {
     q: "Quelle différence entre Fertea432 et un compost classique ?",
-    a: "Contrairement à un compost dont la composition varie selon les intrants et le processus de compostage, Fertea432 présente une composition standardisée et constante (85% de matière organique, NPK 4-3-2) grâce à une matière première homogène issue de l'élevage d'insectes contrôlé. Cette régularité facilite le calcul des doses et la planification de la fertilisation d'une campagne à l'autre."
+    a: "Contrairement à un compost dont la composition varie selon les intrants et le processus de compostage, Fertea432 présente une composition standardisée et constante (85% de matière organique, NPK 4-3-2) grâce à une matière première homogène issue de l'élevage d'insectes contrôlé. C'est aussi un produit sec et inodore, facile à intégrer dans un épandeur ou à épandre à la main, sans les contraintes de manipulation d'un compost humide. Cette régularité facilite le calcul des doses et la planification de la fertilisation d'une campagne à l'autre."
   },
 ];
 
@@ -59,7 +61,7 @@ const Biofertilisant = () => {
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
           name: "Fertea432 : biofertilisant organique",
-          description: "Biofertilisant organique à libération lente (85% matière organique, NPK 4-3-2) à base d'insectes élevés en France, pour l'amélioration de la fertilité et de la structure du sol.",
+          description: "Biofertilisant organique à libération lente (85% matière organique, NPK 4-3-2) à base d'insectes, pour l'amélioration de la fertilité et de la structure du sol.",
           path: "/solutions/biofertilisant",
           serviceType: "Fertilisation organique",
         })}</script>
@@ -86,7 +88,19 @@ const Biofertilisant = () => {
 
         <section className="pt-10 pb-16 px-4">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-2xl font-bold text-primary mb-8">Composition certifiée Fertea432</h2>
+            <h2 className="text-2xl font-bold text-primary mb-2">Composition certifiée Fertea432</h2>
+            <p className="text-sm text-muted-foreground mb-8">
+              Résultats issus d'une étude scientifique publiée dans Nature :{" "}
+              <a
+                href="https://www.nature.com/articles/s41598-025-87075-8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline underline-offset-2 hover:opacity-80"
+              >
+                consulter la publication
+              </a>
+              .
+            </p>
 
             {/* Stat principale : matière organique */}
             <div className="bg-primary text-white rounded-2xl p-8 mb-6 flex flex-col sm:flex-row items-center gap-6">
@@ -144,7 +158,7 @@ const Biofertilisant = () => {
               {[
                 "Grandes cultures : blé, maïs, colza, tournesol, betterave",
                 "Légumineuses : soja, pois, féverole",
-                "Maraîchage : tomate, courgette, poivron, laitue",
+                "Maraîchage : tomate, courgette, poivron, laitue, aubergine, carotte, oignon",
                 "Arboriculture : pommier, poirier, cerisier, vigne",
                 "Prairies et cultures fourragères",
                 "Toutes cultures en agriculture biologique (AB)",
@@ -163,9 +177,9 @@ const Biofertilisant = () => {
             <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
             <div className="space-y-6">
               {[
-                { step: 1, title: "Dosage et conditionnement", desc: "200 à 500 kg/ha selon la culture, l'analyse de sol et les objectifs de fertilité. Disponible en big-bags de 500 kg et sacs de 25 kg, contactez-nous pour le prix à la tonne selon volume." },
-                { step: 2, title: "Moment d'application", desc: "En engrais de fond, 2 à 4 semaines avant le semis ou la plantation. Permet une pré-décomposition optimale avant le développement racinaire." },
-                { step: 3, title: "Incorporation au sol", desc: "Mélanger au sol lors du travail en profondeur (15 à 20 cm). Un labour peu profond suffit pour une bonne distribution." },
+                { step: 1, title: "Dosage et conditionnement", desc: "2 à 3 tonnes par hectare selon la culture, l'analyse de sol et les objectifs de fertilité, ou une poignée par plant en application localisée. Disponible en big-bags de 500 kg et sacs de 25 kg, contactez-nous pour le prix à la tonne selon volume." },
+                { step: 2, title: "Moment d'application", desc: "Avant le semis (idéalement 2 à 4 semaines avant, pour une pré-décomposition optimale) ou après le semis, lors de la plantation ou après la plantation." },
+                { step: 3, title: "Incorporation au sol", desc: "Un griffage superficiel du sol après épandage optimise la vitesse d'absorption des nutriments. Recommandé mais pas indispensable : un simple épandage en surface reste efficace." },
                 { step: 4, title: "Compatibilité", desc: "Compatible avec d'autres amendements organiques. Peut compléter un programme de fertilisation conventionnel ou biologique." },
                 { step: 5, title: "Fréquence d'application", desc: "Une application par an maintient et améliore la fertilité du sol. Le taux de matière organique augmente progressivement sur plusieurs années." },
               ].map(({ step, title, desc }) => (
@@ -183,42 +197,44 @@ const Biofertilisant = () => {
           </div>
         </section>
 
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
-            <div className="space-y-6">
-              {faqItems.map(({ q, a }, i) => (
-                <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-                  <h3 className="font-semibold text-foreground mb-3">{q}</h3>
-                  <p className="text-muted-foreground">{a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">+18 pts</div>
-                <div className="text-sm text-muted-foreground">de CEC (Capacité d'Échange Cationique) en 3 ans</div>
+                <div className="text-3xl font-bold text-primary mb-1">+20%</div>
+                <div className="text-sm text-muted-foreground">sur la biomasse aérienne et racinaire du colza</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">+27%</div>
-                <div className="text-sm text-muted-foreground">d'activité microbienne du sol après 2 applications</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">1×/an</div>
-                <div className="text-sm text-muted-foreground">suffit pour maintenir et améliorer la fertilité</div>
+                <div className="text-3xl font-bold text-primary mb-1">+18%</div>
+                <div className="text-sm text-muted-foreground">sur l'activité bactérienne du sol</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
-              Données internes Keprea, campagnes 2023–2024, mesurées selon des méthodes d'analyse de sol
+              Données internes Keprea, mesurées selon des méthodes d'analyse de sol
               inspirées des référentiels Comifer. Résultats variables selon le type de sol et l'historique
               cultural, communiqués à titre indicatif.
             </p>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
+            <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
+              <Accordion type="single" collapsible>
+                {faqItems.map(({ q, a }, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="border-none">
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                      {q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-5">
+                      {a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </section>
 
@@ -236,22 +252,12 @@ const Biofertilisant = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-foreground text-white">
-          <div className="container mx-auto text-center max-w-2xl">
-            <h2 className="text-3xl font-bold mb-6">{t('biofertilisant.cta.title')}</h2>
-            <p className="text-xl mb-8 opacity-90">{t('biofertilisant.cta.desc')}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" variant="secondary">{t('product.contact')}</Button>
-              </Link>
-              <Link to="/notre-production">
-                <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
-                  Notre processus de production
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <GradientCTA
+          title={t('biofertilisant.cta.title')}
+          description={t('biofertilisant.cta.desc')}
+          primary={{ label: t('product.contact'), to: "/contact" }}
+          secondary={{ label: "Notre processus de production", to: "/notre-production" }}
+        />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
@@ -273,9 +279,6 @@ const Biofertilisant = () => {
           </div>
         </section>
 
-        <p className="text-xs text-muted-foreground text-center py-6">
-          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
-        </p>
       </main>
       <Footer />
     </div>

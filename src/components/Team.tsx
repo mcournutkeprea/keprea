@@ -6,15 +6,17 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-  { name: "Antoine Hubert", role: "Président directeur général" },
-  { name: "Julien Denormandie", role: "Président du conseil de surveillance" },
-  { name: "Béatrice Vassy", role: "Directrice administrative et financière" },
-  { name: "Thibault Sarton du Jonchay", role: "Directeur des opérations" },
-  { name: "Guillaume Daoulas", role: "Directeur marketing" },
-  { name: "Emilien Bohuon", role: "Directeur R&D agronomique" },
-  { name: "Pascal Maignet", role: "Directeur R&D biocontrole" },
-  { name: "Valentin Frenceshi", role: "Conducteur de ligne" },
-  { name: "Antoine Lescouet", role: "Conducteur de ligne" },
+  { name: "Alexandre Pernot", role: "Production Manager" },
+  { name: "Antoine Hubert", role: "CEO" },
+  { name: "Béatrice Vassy", role: "CFO" },
+  { name: "Emilien Bohuon", role: "Head of R&D Biostimulants" },
+  { name: "Guillaume Daoulas", role: "Head of Sales" },
+  { name: "Isabelle Couvert", role: "Supply and Logistics Manager" },
+  { name: "Julien Denormandie", role: "Chairman of the Strategic Committee" },
+  { name: "Pascal Maignet", role: "Head of R&D Insects" },
+  { name: "Thibault Sarton du Jonchay", role: "Head of Operations" },
+  { name: "Thierry Dumbardon Martial", role: "R&D Engineer Insects" },
+  { name: "Valentin Frenceshi", role: "Line Operator" },
 ];
 
 const getInitials = (name: string) => {

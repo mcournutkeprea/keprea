@@ -1,13 +1,15 @@
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 
 interface AdvantageCardProps {
   icon: LucideIcon;
   index: number;
   title: string;
   description: string;
+  badge?: ReactNode;
 }
 
-const AdvantageCard = ({ icon: Icon, index, title, description }: AdvantageCardProps) => {
+const AdvantageCard = ({ icon: Icon, index, title, description, badge }: AdvantageCardProps) => {
   return (
     <div
       className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-7 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
@@ -23,7 +25,10 @@ const AdvantageCard = ({ icon: Icon, index, title, description }: AdvantageCardP
         <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-3 group-hover:bg-primary group-hover:text-primary-foreground motion-reduce:transform-none">
           <Icon className="h-6 w-6" aria-hidden="true" />
         </div>
-        <h3 className="mb-2 text-lg font-semibold text-foreground">{title}</h3>
+        <h3 className="mb-2 flex items-center gap-2 text-lg font-semibold text-foreground">
+          {title}
+          {badge}
+        </h3>
         <p className="text-base leading-relaxed text-muted-foreground">{description}</p>
       </div>
 

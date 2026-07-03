@@ -106,7 +106,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
                         De l'élevage d'insectes à la formulation finale
                       </p>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Découvrez notre chaîne de production maîtrisée de bout en bout : élevage, extraction, formulation, livraison.
+                        Découvrez notre chaîne de production maîtrisée : collecte de co-produits, extraction, formulation, livraison.
                       </p>
                     </div>
                     <Link

@@ -36,7 +36,7 @@ const NotreProduction = () => (
       <PageHero
         eyebrow="Fabrication française"
         title="Notre Production"
-        lead="De l'élevage d'insectes à la formulation finale : un process maîtrisé de bout en bout, made in France."
+        lead="De la collecte de co-produits d'insectes à la formulation finale : un process maîtrisé, made in France."
         stats={[
           { value: "3 000 m²", label: "Surface du site" },
           { value: "6", label: "Étapes maîtrisées" },
@@ -78,7 +78,7 @@ const NotreProduction = () => (
           <div className="space-y-6">
             {[
               { icon: Bug, title: "Élevage d'insectes auxiliaires", desc: "Élevage en conditions contrôlées (température, hygrométrie, alimentation) sur notre site en France, une matière première disponible toute l'année, indépendante des aléas climatiques." },
-              { icon: Archive, title: "Collecte de co-produits", desc: "Valorisation des co-produits issus de l'élevage, dans une logique d'économie circulaire limitant les intrants externes." },
+              { icon: Archive, title: "Collecte de co-produits d'insectes", desc: "Valorisation des co-produits issus de l'élevage d'autres insectes (mouche soldat noire, ténébrion meunier)." },
               { icon: FlaskConical, title: "Préparation ou transformation", desc: "Extraction des molécules actives (peptides antimicrobiens, chitine, acides aminés) par nos procédés propriétaires, puis formulation selon la gamme de destination." },
               { icon: Package, title: "Packaging", desc: "Conditionnement adapté à chaque format de vente : sachets et tubes pour les auxiliaires vivants, bidons pour les biopesticides et boosters, big-bags et sacs pour le biofertilisant Fertea432." },
               { icon: Truck, title: "Transport", desc: "Logistique organisée pour préserver la viabilité des produits vivants et la stabilité des formulations liquides jusqu'à la parcelle." },
@@ -115,7 +115,7 @@ const NotreProduction = () => (
             </div>
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">6</div>
-              <p className="text-sm text-muted-foreground">Étapes maîtrisées de bout en bout, de l'élevage au conseil terrain</p>
+              <p className="text-sm text-muted-foreground">Étapes maîtrisées, de la collecte de co-produits au conseil terrain</p>
             </div>
           </div>
           <div className="max-w-2xl mx-auto space-y-3">
@@ -134,9 +134,6 @@ const NotreProduction = () => (
         </div>
       </section>
 
-      <p className="text-xs text-muted-foreground text-center py-6">
-        Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
-      </p>
     </main>
     <Footer />
   </div>

@@ -10,6 +10,11 @@
 
 ---
 
+### Claims "élevage/origine France" potentiellement incohérents (03/07/2026)
+Retiré "Hermetia illucens/vers de farine élevés en France" (`/pourquoi-le-biocontrole`, JSON-LD Biofertilisant, incohérent avec "collecte de co-produits d'*autres* élevages") et "Origine 100% française" (`Testimonials.tsx`, ingrédients hors France). Deux points restent non corrigés, hors périmètre demandé, décision utilisateur nécessaire : `NotreProduction.tsx` step 1 affirme encore un élevage "sur notre site en France" (probablement les auxiliaires vivants, cohérent — à confirmer que ça n'inclut pas la matière première extraits) ; `Hero.tsx` (`hero.stat3`) affiche toujours "Made in France" en 3ᵉ stat homepage, même risque factuel.
+
+---
+
 ### Audit SEO complet 02/07/2026 — score santé 53/100 (keprea.vercel.app)
 - **Statut** : Phases 1-3 corrigées, Phase 4 partiellement traitée (02/07/2026) — plan complet dans `keprea.vercel.app-audit/ACTION-PLAN.md`
 - **Phase 4 — fait (02/07/2026)** : `robots.txt` pointait vers `https://keprea.com/sitemap.xml` (domaine pas encore live → 404 permanent) alors que `sitemap.xml` référence déjà `keprea.vercel.app` — corrigé pour cohérence, **à rebasculer sur `keprea.com` au cutover** (même liste que le point ci-dessous). `public/llms.txt` créé (résumé du site + pages clés pour crawlers IA), même note de migration de domaine.

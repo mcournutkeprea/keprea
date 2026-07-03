@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowRight, Leaf, Shield, Zap, CheckCircle2, X } from "lucide-react";
+import GradientCTA from "@/components/GradientCTA";
+import { Leaf, Shield, Zap, CheckCircle2, X } from "lucide-react";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const InnovationPage = () => {
@@ -50,9 +51,9 @@ const InnovationPage = () => {
         <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="reveal max-w-3xl">
-              <span className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold bg-primary/10 text-primary mb-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
                 Innovation
-              </span>
+              </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.05] mb-6">
                 Une source de molécules que la chimie ne peut pas reproduire
               </h1>
@@ -228,8 +229,7 @@ const InnovationPage = () => {
                     <div className="grid grid-cols-2 gap-4">
                       {[
                         { value: "84%", label: "des cultures dépendent des insectes pour leur rendement" },
-                        { value: "5 500", label: "espèces auxiliaires utiles recensées en France" },
-                        { value: "10 000", label: "individus actifs par m² en moyenne" },
+                        { value: "5 500", label: "espèces auxiliaires utiles recensées en France, exploitables en plein champ" },
                         { value: "100%", label: "naturel, sans résidu chimique" },
                       ].map((stat, i) => (
                         <div key={i} className="bg-primary/5 rounded-xl p-4">
@@ -353,52 +353,12 @@ const InnovationPage = () => {
           </div>
         </section>
 
-        {/* ── CTA ── */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-6xl">
-            <div
-              className="p-[3px] rounded-[2rem] reveal"
-              style={{
-                background: "linear-gradient(145deg, hsl(var(--primary)/0.40) 0%, hsl(var(--primary)/0.08) 100%)",
-                boxShadow: "0 4px 40px hsl(var(--primary)/0.12)",
-              }}
-            >
-              <div
-                className="rounded-[calc(2rem-3px)] px-10 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
-                style={{
-                  background: "radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.92)",
-                }}
-              >
-                <div className="max-w-lg">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-3">
-                    Convaincu ? Testez sur vos parcelles.
-                  </h2>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Nous proposons des essais terrain avec accompagnement technique. Parlez-nous de vos cultures, nous adaptons la solution.
-                  </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-                  <a
-                    href="/solutions"
-                    className="inline-flex items-center justify-center gap-3 rounded-full h-11 px-6 text-sm font-semibold bg-primary text-white group transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-primary/90"
-                  >
-                    <span>Voir nos solutions</span>
-                    <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
-                      <ArrowRight className="w-3 h-3" strokeWidth={1.5} />
-                    </span>
-                  </a>
-                  <a
-                    href="mailto:contact@keprea.com?subject=Demande%20essai%20terrain"
-                    className="inline-flex items-center justify-center rounded-full h-11 px-6 text-sm font-semibold border border-primary/20 text-primary transition-colors duration-200 hover:bg-primary/5"
-                  >
-                    Demander un essai
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <GradientCTA
+          title="Convaincu ? Testez sur vos parcelles."
+          description="Nous proposons des essais terrain avec accompagnement technique. Parlez-nous de vos cultures, nous adaptons la solution."
+          primary={{ label: "Voir nos solutions", to: "/solutions" }}
+          secondary={{ label: "Demander un essai", href: "mailto:contact@keprea.com?subject=Demande%20essai%20terrain" }}
+        />
 
       </main>
 

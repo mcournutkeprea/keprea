@@ -7,6 +7,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
+import GradientCTA from "@/components/GradientCTA";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
@@ -24,16 +26,16 @@ const faqItems = [
     a: "Oui, nos biopesticides sont formulés pour être compatibles avec le biocontrôle vivant. Utilisés en programme intégré, ils se complètent pour une protection optimale de vos cultures."
   },
   {
-    q: "Peut-on mélanger la gamme ExtracBio avec d'autres produits en cuve ?",
+    q: "Peut-on mélanger nos biopesticides avec d'autres produits en cuve ?",
     a: "Un test de miscibilité préalable est recommandé avant tout mélange extemporané, en particulier avec des produits fortement acides ou basiques. Notre équipe technique peut vous confirmer la compatibilité avec les principaux intrants du marché sur simple demande."
   },
   {
-    q: "Comment conserver la gamme ExtracBio avant utilisation ?",
+    q: "Comment conserver nos biopesticides avant utilisation ?",
     a: "Stocker à l'abri de la lumière directe et de la chaleur excessive (idéalement entre 5°C et 25°C), dans l'emballage d'origine fermé. Une fois la bouillie préparée, l'appliquer dans les heures qui suivent pour préserver l'activité des molécules bioactives."
   },
   {
     q: "Nos biopesticides sont-ils dangereux pour les abeilles et pollinisateurs ?",
-    a: "Les molécules actives d'ExtracBio ciblent spécifiquement le système nerveux ou digestif des ravageurs cibles, sans effet démontré sur les pollinisateurs aux doses recommandées. Nous recommandons néanmoins d'éviter les traitements en pleine floraison et de privilégier les heures où les pollinisateurs sont peu actifs (tôt le matin ou en soirée), par précaution et conformément aux bonnes pratiques phytosanitaires générales."
+    a: "Les molécules actives de nos biopesticides ciblent spécifiquement le système nerveux ou digestif des ravageurs cibles, sans effet démontré sur les pollinisateurs aux doses recommandées. Nous recommandons néanmoins d'éviter les traitements en pleine floraison et de privilégier les heures où les pollinisateurs sont peu actifs (tôt le matin ou en soirée), par précaution et conformément aux bonnes pratiques phytosanitaires générales."
   },
 ];
 
@@ -44,13 +46,13 @@ const ExtraitsNaturels = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Head>
         <title>Biopesticides Naturels Keprea | Extraits d'Insectes</title>
-        <meta name="description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
+        <meta name="description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Compatibles agriculture biologique, zéro résidu chimique, en cours d'homologation." />
         <link rel="canonical" href="https://keprea.vercel.app/solutions/biopesticides" />
         <meta property="og:url" content="https://keprea.vercel.app/solutions/biopesticides" />
         <meta property="og:title" content="Biopesticides Naturels Keprea | Extraits d'Insectes" />
         <meta name="twitter:title" content="Biopesticides Naturels Keprea | Extraits d'Insectes" />
-        <meta property="og:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
-        <meta name="twitter:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Homologués agriculture biologique, zéro résidu chimique." />
+        <meta property="og:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Compatibles agriculture biologique, zéro résidu chimique, en cours d'homologation." />
+        <meta name="twitter:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Compatibles agriculture biologique, zéro résidu chimique, en cours d'homologation." />
         <script type="application/ld+json">{breadcrumbJsonLd([
           { name: "Accueil", path: "/" },
           { name: "Solutions", path: "/solutions" },
@@ -58,7 +60,7 @@ const ExtraitsNaturels = () => {
         ])}</script>
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
-          name: "Biopesticides ExtracBio : extraits d'insectes",
+          name: "Biopesticides Keprea : extraits d'insectes",
           description: "Protection foliaire des cultures à base d'extraits bioactifs d'insectes (peptides antimicrobiens, chitine), pour lutte contre les ravageurs sans résidu chimique de synthèse.",
           path: "/solutions/biopesticides",
           serviceType: "Biocontrôle agricole",
@@ -86,7 +88,7 @@ const ExtraitsNaturels = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Gamme ExtracBio</h2>
+              <h2 className="text-2xl font-bold text-primary mb-2">Nos biopesticides</h2>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">Biopesticides à base d'extraits d'insectes : protection foliaire naturelle pour vos cultures</p>
             </div>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
@@ -149,9 +151,9 @@ const ExtraitsNaturels = () => {
                 "Céréales : blé, orge, triticale, seigle",
                 "Oléagineux : colza, tournesol, soja",
                 "Maïs : grandes cultures",
-                "Maraîchage : tomate, poivron, laitue, cucurbitacées",
-                "Viticulture : ravageurs foliaires et maladies cryptogamiques",
-                "Arboriculture fruitière : pommier, poirier, cerisier",
+                "Maraîchage : tomate, poivron, laitue, courgette, aubergine, carotte, oignon, cucurbitacées",
+                "Viticulture : ravageurs foliaires (dont tordeuse de la vigne), insectes vecteurs de la flavescence dorée et maladies cryptogamiques",
+                "Arboriculture fruitière : pommier, poirier, cerisier, kiwi",
               ].map((culture) => (
                 <div key={culture} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -187,20 +189,6 @@ const ExtraitsNaturels = () => {
           </div>
         </section>
 
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
-            <div className="space-y-6">
-              {faqItems.map(({ q, a }, i) => (
-                <div key={i} className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-                  <h3 className="font-semibold text-foreground mb-3">{q}</h3>
-                  <p className="text-muted-foreground">{a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
@@ -226,6 +214,26 @@ const ExtraitsNaturels = () => {
           </div>
         </section>
 
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
+            <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
+              <Accordion type="single" collapsible>
+                {faqItems.map(({ q, a }, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="border-none">
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                      {q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-5">
+                      {a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
@@ -234,30 +242,18 @@ const ExtraitsNaturels = () => {
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
               <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
-                Partager votre expérience avec la gamme ExtracBio →
+                Partager votre expérience avec nos biopesticides →
               </Link>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-foreground text-white">
-          <div className="container mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Protégez vos cultures naturellement</h2>
-            <p className="text-lg opacity-90 mb-8">
-              Contactez notre équipe pour un conseil personnalisé sur nos biopesticides et la constitution d'un programme de protection intégré.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" variant="secondary">Demander un conseil</Button>
-              </Link>
-              <Link to="/pourquoi-le-biocontrole">
-                <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/20">
-                  Pourquoi le biocontrôle ?
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <GradientCTA
+          title="Protégez vos cultures naturellement"
+          description="Contactez notre équipe pour un conseil personnalisé sur nos biopesticides et la constitution d'un programme de protection intégré."
+          primary={{ label: "Demander un conseil", to: "/contact" }}
+          secondary={{ label: "Pourquoi le biocontrôle ?", to: "/pourquoi-le-biocontrole" }}
+        />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
@@ -279,9 +275,6 @@ const ExtraitsNaturels = () => {
           </div>
         </section>
 
-        <p className="text-xs text-muted-foreground text-center py-6">
-          Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
-        </p>
       </main>
       <Footer />
     </div>

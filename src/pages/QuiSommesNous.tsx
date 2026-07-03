@@ -82,7 +82,7 @@ const QuiSommesNous = () => (
                 desc: "Fondée par 7 associés experts (agriculteurs, entomologistes, agronomes et entrepreneurs), réunis autour d'une même conviction : faire revenir le vivant au cœur de la gestion de la ferme.",
               },
               {
-                title: "Implantation du site de production en France",
+                title: "2025 : implantation du site de production en France",
                 desc: "Sur 3 000 m², à environ 2 heures de Paris, Bâle, Genève et Lyon, au cœur d'un important bassin céréalier et viticole français.",
               },
               {
@@ -126,9 +126,6 @@ const QuiSommesNous = () => (
 
       <Team />
 
-      <p className="text-xs text-muted-foreground text-center py-6">
-        Rédigé par l'équipe Keprea · Dernière mise à jour : 2 juillet 2026
-      </p>
     </main>
     <Footer />
   </div>
