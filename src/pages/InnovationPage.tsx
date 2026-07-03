@@ -390,7 +390,7 @@ const InnovationPage = () => {
                   </a>
                   <a
                     href="mailto:contact@keprea.com?subject=Demande%20essai%20terrain"
-                    className="inline-flex items-center justify-center rounded-full h-11 px-6 text-sm font-semibold border border-primary/30 text-primary transition-colors duration-200 hover:bg-primary/5"
+                    className="inline-flex items-center justify-center rounded-full h-11 px-6 text-sm font-semibold border border-primary/20 text-primary transition-colors duration-200 hover:bg-primary/5"
                   >
                     Demander un essai
                   </a>

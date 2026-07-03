@@ -89,7 +89,7 @@ const ExtraitsNaturels = () => {
               <h2 className="text-2xl font-bold text-primary mb-2">Gamme ExtracBio</h2>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">Biopesticides à base d'extraits d'insectes : protection foliaire naturelle pour vos cultures</p>
             </div>
-            <div className="bg-primary/5 border border-primary/15 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
                 <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles : ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures. Le mode d'action par contact et ingestion, combiné à une dégradation rapide dans l'environnement, limite le risque de sélection de populations résistantes, un enjeu croissant à mesure que les substances actives conventionnelles se raréfient.
               </p>

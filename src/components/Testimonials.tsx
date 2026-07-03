@@ -84,8 +84,7 @@ const TrustSection = () => {
               className="rounded-xl p-6 flex flex-col gap-4 bg-background border border-border"
             >
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ backgroundColor: "hsl(var(--primary) / 0.1)" }}
+                className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"
               >
                 <item.icon className="w-5 h-5 text-primary" aria-hidden="true" />
               </div>

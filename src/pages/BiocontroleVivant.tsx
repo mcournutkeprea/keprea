@@ -106,7 +106,7 @@ const BiocontroleVivant = () => {
                   </div>
                   <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{title}</h3>
                   <p className="text-xs text-muted-foreground mb-3">{desc}</p>
-                  <div className="border-t border-primary/15 pt-3">
+                  <div className="border-t border-primary/10 pt-3">
                     <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-1">Auxiliaire utilisé</p>
                     <p className="text-xs text-primary font-medium">{auxiliary}</p>
                   </div>

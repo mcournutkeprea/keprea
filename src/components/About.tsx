@@ -45,9 +45,9 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
           <div
             className="p-2 rounded-[2rem]"
             style={{
-              background: 'hsl(var(--primary)/0.04)',
-              border: '1px solid hsl(var(--primary)/0.11)',
-              boxShadow: '0 12px 48px hsl(var(--primary)/0.07), 0 2px 8px rgba(0,0,0,0.03)',
+              background: 'hsl(var(--primary)/0.05)',
+              border: '1px solid hsl(var(--primary)/0.09)',
+              boxShadow: '0 12px 48px hsl(var(--primary)/0.08), 0 2px 8px rgba(0,0,0,0.03)',
             }}
           >
             {/* Inner core */}
@@ -84,7 +84,7 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
           <div ref={valuesRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
             <Link
               to="/qui-sommes-nous"
-              className="group inline-flex items-center gap-3 rounded-full border border-primary/25 bg-primary/5 hover:bg-primary/10 text-primary pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300"
+              className="group inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 hover:bg-primary/10 text-primary pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300"
             >
               Découvrir notre équipe et nos valeurs
               <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
@@ -117,7 +117,7 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
                     className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform"
                     style={{
                       background: 'hsl(var(--primary)/0.08)',
-                      border: '1px solid hsl(var(--primary)/0.16)',
+                      border: '1px solid hsl(var(--primary)/0.18)',
                       transitionDuration: '500ms',
                       transitionTimingFunction: 'cubic-bezier(0.32,0.72,0,1)',
                     }}

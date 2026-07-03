@@ -9,7 +9,7 @@ const processSteps = [
   { icon: Bug, color: "bg-purple-100 text-purple-600", labelKey: "production.process.step1" },
   { icon: Archive, color: "bg-orange-100 text-orange-600", labelKey: "production.process.step2" },
   { icon: FlaskConical, color: "bg-blue-100 text-blue-600", labelKey: "production.process.step3" },
-  { icon: Package, color: "bg-green-100 text-green-600", labelKey: "production.process.step4" },
+  { icon: Package, color: "bg-fuchsia-100 text-fuchsia-600", labelKey: "production.process.step4" },
   { icon: Truck, color: "bg-red-100 text-red-600", labelKey: "production.process.transport" },
   { icon: Users, color: "bg-yellow-100 text-yellow-600", labelKey: "production.process.step5" },
 ];
