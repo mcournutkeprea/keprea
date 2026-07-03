@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Head } from "vite-react-ssg";
 import { Leaf, ShieldCheck, FlaskConical, TrendingUp, Bug, Sprout, Award, Microscope, Feather, TestTube, Scale, Tractor } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -6,6 +7,44 @@ import GradientCTA from "@/components/GradientCTA";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, articleJsonLd } from "@/lib/schema";
+
+const franceStats = [
+  {
+    value: "-50 %",
+    desc: (
+      <>
+        Objectif de réduction de l'usage et des risques des produits phytopharmaceutiques
+        fixé par la stratégie <strong className="text-foreground">Ecophyto 2030</strong>
+        {" "}d'ici 2030, par rapport à la moyenne 2011-2013 — la déclinaison française de la
+        directive européenne 2009/128/CE sur l'utilisation durable des pesticides (stratégie
+        publiée le 6 mai 2024).
+      </>
+    ),
+  },
+  {
+    value: "-20 %",
+    desc: "Baisse déjà constatée de l'usage des produits phytopharmaceutiques de synthèse en 2022 par rapport à la moyenne 2015-2017, première baisse depuis 2009 (données Ecophyto II+).",
+  },
+  {
+    value: "770",
+    desc: "Produits de biocontrôle homologués en France en janvier 2025, couvrant 56 % des usages phytosanitaires (source : ministère de l'Agriculture).",
+  },
+  {
+    value: "30 %",
+    desc: "Part de marché visée par la filière biocontrôle en France à l'horizon 2030, contre environ 12 % en 2024 (Baromètre du Biocontrôle, Alliance Biocontrôle, 2025).",
+  },
+];
+
+const europeStats = [
+  {
+    value: "1,6 Md€",
+    desc: "Valeur du marché européen du biocontrôle en 2023, soit près de 10 % du marché européen de la protection des cultures (source : IBMA, association professionnelle européenne du secteur, enquête membres 2024).",
+  },
+  {
+    value: "+10 %/an",
+    desc: "Croissance annuelle du marché européen du biocontrôle, contre environ 4 % par an pour le marché conventionnel de la protection des cultures (source : IBMA, 2024).",
+  },
+];
 
 const faqItems = [
   {
@@ -41,7 +80,10 @@ const faqItems = [
 ];
 
 
-const PourquoiBiocontrole = () => (
+const PourquoiBiocontrole = () => {
+  const [statsScope, setStatsScope] = useState<"france" | "europe">("france");
+
+  return (
   <div className="min-h-screen bg-background flex flex-col">
     <Head>
       <title>Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea</title>
@@ -98,25 +140,33 @@ const PourquoiBiocontrole = () => (
             <h2 className="text-2xl font-bold text-foreground mb-4">
               Qu'est-ce que le biocontrôle ?
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Le biocontrôle regroupe l'ensemble des méthodes de protection des végétaux
-              utilisant des <strong className="text-foreground">mécanismes et agents naturels</strong>.
-              Au niveau européen, le <strong className="text-foreground">règlement (CE) n° 1107/2009</strong> encadre
-              la mise sur le marché des produits phytopharmaceutiques dans toute l'Union et introduit
-              la notion de « substances actives à faible risque », sur laquelle s'appuient les cadres
-              nationaux de chaque État membre. En France, l'article L.253-6 du Code rural en donne la
-              déclinaison légale précise : il s'agit des agents et produits utilisant des mécanismes
-              naturels dans le cadre de la lutte intégrée contre les ennemis des cultures. Quatre
-              grandes catégories sont reconnues, en cohérence avec la classification utilisée à
-              l'échelle européenne, et détaillées ci-dessous.
+              utilisant des <strong className="text-foreground">mécanismes et agents naturels</strong>,
+              en alternative aux pesticides chimiques de synthèse.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              En France, la liste officielle des produits de biocontrôle est publiée et actualisée
-              chaque mois au Bulletin officiel du ministère de l'Agriculture : un statut réglementaire
-              distinct de celui des produits phytopharmaceutiques classiques, avec ses propres
-              procédures d'homologation. Chaque État membre de l'UE applique le règlement (CE) 1107/2009
-              via sa propre procédure nationale d'autorisation de mise sur le marché (AMM).
-            </p>
+            <div className="grid sm:grid-cols-2 gap-6 mb-6">
+              <div className="bg-background rounded-xl p-5 border border-border">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">En France</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  L'article L.253-6 du Code rural donne une définition légale précise : les agents
+                  et produits utilisant des mécanismes naturels dans le cadre de la lutte intégrée
+                  contre les ennemis des cultures, répartis en quatre catégories détaillées
+                  ci-dessous. La liste officielle est publiée et actualisée chaque mois au Bulletin
+                  officiel du ministère de l'Agriculture, avec ses propres procédures d'homologation.
+                </p>
+              </div>
+              <div className="bg-background rounded-xl p-5 border border-border">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">En Europe</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Le règlement (CE) n° 1107/2009 encadre la mise sur le marché des produits
+                  phytopharmaceutiques dans toute l'Union et introduit la notion de « substances
+                  actives à faible risque », sur laquelle s'appuient les cadres nationaux. Chaque
+                  État membre applique ce règlement via sa propre procédure nationale d'autorisation
+                  de mise sur le marché (AMM).
+                </p>
+              </div>
+            </div>
             <p className="text-muted-foreground leading-relaxed">
               Keprea développe des solutions à base d'<strong className="text-foreground">insectes</strong>,
               exploitant leurs propriétés biologiques uniques pour créer des produits efficaces,
@@ -183,69 +233,72 @@ const PourquoiBiocontrole = () => (
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
             Un contexte réglementaire et économique qui accélère, en France comme en Europe
           </h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
             Le retrait progressif des substances actives conventionnelles et la structuration
             de la filière biocontrôle transforment rapidement le marché de la protection
             des cultures, à l'échelle française et européenne.
           </p>
-          <div className="grid sm:grid-cols-2 gap-6 mb-6">
-            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
-              <div className="text-3xl font-bold text-primary mb-2">-50 %</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Objectif de réduction de l'usage et des risques des produits phytopharmaceutiques
-                fixé par la stratégie <strong className="text-foreground">Ecophyto 2030</strong>
-                {" "}d'ici 2030, par rapport à la moyenne 2011-2013 — la déclinaison française de la
-                directive européenne 2009/128/CE sur l'utilisation durable des pesticides (stratégie
-                publiée le 6 mai 2024).
-              </p>
-            </div>
-            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
-              <div className="text-3xl font-bold text-primary mb-2">-20 %</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Baisse déjà constatée de l'usage des produits phytopharmaceutiques de synthèse
-                en 2022 par rapport à la moyenne 2015-2017, première baisse depuis 2009
-                (données Ecophyto II+).
-              </p>
-            </div>
-            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
-              <div className="text-3xl font-bold text-primary mb-2">770</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Produits de biocontrôle homologués en France en janvier 2025, couvrant 56 %
-                des usages phytosanitaires (source : ministère de l'Agriculture).
-              </p>
-            </div>
-            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
-              <div className="text-3xl font-bold text-primary mb-2">30 %</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Part de marché visée par la filière biocontrôle en France à l'horizon 2030,
-                contre environ 12 % en 2024 (Baromètre du Biocontrôle, Alliance Biocontrôle, 2025).
-              </p>
-            </div>
+
+          <div role="tablist" aria-label="Périmètre des statistiques" className="flex justify-center gap-2 mb-8">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={statsScope === "france"}
+              onClick={() => setStatsScope("france")}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+                statsScope === "france"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-background border border-border text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              France
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={statsScope === "europe"}
+              onClick={() => setStatsScope("europe")}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+                statsScope === "europe"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-background border border-border text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Europe
+            </button>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6 mb-10">
-            <div className="bg-background rounded-2xl p-6 border border-border">
-              <div className="text-3xl font-bold text-primary mb-2">1,6 Md€</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Valeur du marché européen du biocontrôle en 2023, soit près de 10 % du marché
-                européen de la protection des cultures (source : IBMA, association professionnelle
-                européenne du secteur, enquête membres 2024).
-              </p>
-            </div>
-            <div className="bg-background rounded-2xl p-6 border border-border">
-              <div className="text-3xl font-bold text-primary mb-2">+10 %/an</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Croissance annuelle du marché européen du biocontrôle, contre environ 4 % par an
-                pour le marché conventionnel de la protection des cultures (source : IBMA, 2024).
-              </p>
-            </div>
+
+          <div role="tabpanel" className={`grid sm:grid-cols-2 gap-6 mb-8${statsScope === "france" ? "" : " hidden"}`}>
+            {franceStats.map((item, i) => (
+              <div key={i} className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+                <div className="text-3xl font-bold text-primary mb-2">{item.value}</div>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-xs text-muted-foreground text-center italic">
-            Chiffres tiers cités à titre indicatif, sources : agriculture.gouv.fr (stratégie Écophyto 2030,
-            mai 2024), Alliance Biocontrôle (Baromètre du Biocontrôle 2024), Légifrance (article L.253-6
-            du Code rural, règlement (CE) n° 1107/2009, directive 2009/128/CE), IBMA (enquête membres 2024,
-            marché européen du biocontrôle). Ces données évoluent chaque année ; nous les mettons à jour
-            lors de nos revues de contenu périodiques.
-          </p>
+          <div role="tabpanel" className={`grid sm:grid-cols-2 gap-6 mb-8${statsScope === "europe" ? "" : " hidden"}`}>
+            {europeStats.map((item, i) => (
+              <div key={i} className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+                <div className="text-3xl font-bold text-primary mb-2">{item.value}</div>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <Accordion type="single" collapsible>
+            <AccordionItem value="sources" className="border-none">
+              <AccordionTrigger className="justify-center gap-2 text-xs text-muted-foreground hover:no-underline py-0">
+                Sources et méthodologie
+              </AccordionTrigger>
+              <AccordionContent className="text-xs text-muted-foreground text-center italic pt-3">
+                Chiffres tiers cités à titre indicatif, sources : agriculture.gouv.fr (stratégie Écophyto 2030,
+                mai 2024), Alliance Biocontrôle (Baromètre du Biocontrôle 2024), Légifrance (article L.253-6
+                du Code rural, règlement (CE) n° 1107/2009, directive 2009/128/CE), IBMA (enquête membres 2024,
+                marché européen du biocontrôle). Ces données évoluent chaque année ; nous les mettons à jour
+                lors de nos revues de contenu périodiques.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
@@ -372,6 +425,7 @@ const PourquoiBiocontrole = () => (
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default PourquoiBiocontrole;
