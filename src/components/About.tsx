@@ -23,41 +23,24 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
   ];
 
   return (
-    <section id="about" className="py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(var(--muted)/0.45) 0%, hsl(var(--background)) 100%)' }}>
-
-      {/* Ambient radial orb — purely decorative */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div
-          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full"
-          style={{ background: 'radial-gradient(ellipse at center, hsl(var(--primary)/0.07) 0%, transparent 68%)' }}
-        />
-      </div>
-
-      <div className="container mx-auto px-4 relative">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto">
 
         {/* ── Header ── */}
         {showTitle && (
-          <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-16 reveal${headerVisible ? ' is-visible' : ''}`}>
-            <div className="inline-flex items-center mb-5">
-              <span
-                className="inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-medium text-primary"
-                style={{ background: 'hsl(var(--primary)/0.07)', border: '1px solid hsl(var(--primary)/0.22)' }}
-              >
-                Keprea · Made in France
-              </span>
-            </div>
-            <h2
-              className="text-4xl md:text-5xl font-bold text-foreground mb-3"
-              style={{ letterSpacing: '-0.025em' }}
-            >
+          <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-12 max-w-2xl reveal${headerVisible ? ' is-visible' : ''}`}>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
+              Qui sommes-nous ?
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('about.title')}
             </h2>
-            <p className="text-base text-muted-foreground max-w-xl leading-relaxed">{t('about.subtitle')}</p>
+            <p className="text-base text-muted-foreground leading-relaxed">{t('about.subtitle')}</p>
           </div>
         )}
 
         {/* ── Histoire — Double-Bezel ── */}
-        <div ref={historyRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto mb-16 reveal reveal-delay-1${historyVisible ? ' is-visible' : ''}`}>
+        <div ref={historyRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto mb-12 reveal reveal-delay-1${historyVisible ? ' is-visible' : ''}`}>
           {/* Outer shell */}
           <div
             className="p-2 rounded-[2rem]"

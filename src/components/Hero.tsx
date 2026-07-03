@@ -33,7 +33,7 @@ const Hero = () => {
           {/* Eyebrow tag */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/8 px-3 py-1 mb-6">
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
-              Biosolutions agricoles · Made in France
+              Biosolutions agricoles
             </span>
           </div>
 
@@ -75,7 +75,7 @@ const Hero = () => {
               <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[130px] leading-tight">{t('hero.stat2.label')}</div>
             </div>
             <div className="border-l border-white/20 pl-8">
-              <div className="text-3xl font-bold text-primary">{t('hero.stat3.value')}</div>
+              <div className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">{t('hero.stat3.value')}</div>
               <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[160px] leading-tight">{t('hero.stat3.label')}</div>
             </div>
           </div>

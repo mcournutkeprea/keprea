@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView";
 
 
 const credibilityStats = [
-  { value: "2025", label: "Fondée en France" },
+  { value: "2024", label: "Fondée en France" },
   { value: "4", label: "Gammes de biosolutions" },
   { value: "100%", label: "Origine naturelle" },
   { value: "Terrain", label: "Suivi agronomique inclus" },
@@ -48,7 +48,7 @@ const TrustSection = () => {
             </h2>
           </div>
           <p className="text-muted-foreground text-sm max-w-xs leading-relaxed md:text-right">
-            Une startup de 2025 qui mise sur la transparence et les résultats mesurables.
+            Une startup de 2024 qui mise sur la transparence et les résultats mesurables.
           </p>
         </div>
 

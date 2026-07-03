@@ -107,18 +107,18 @@ const translations: Translations = {
     de: 'Lösungen in Entwicklung'
   },
   'hero.stat3.value': {
-    fr: 'France',
-    en: 'France',
-    es: 'Francia',
-    pt: 'França',
-    de: 'Frankreich'
-  },
-  'hero.stat3.label': {
     fr: 'Made in France',
     en: 'Made in France',
     es: 'Made in France',
     pt: 'Made in France',
     de: 'Made in France'
+  },
+  'hero.stat3.label': {
+    fr: 'Origine',
+    en: 'Origin',
+    es: 'Origen',
+    pt: 'Origem',
+    de: 'Herkunft'
   },
   // Solutions section
   'solutions.title': {
@@ -555,11 +555,11 @@ const translations: Translations = {
     de: 'Gegründet im Jahr'
   },
   'about.history.p1.year': {
-    fr: '2025',
-    en: '2025',
-    es: '2025',
-    pt: '2025',
-    de: '2025'
+    fr: '2024',
+    en: '2024',
+    es: '2024',
+    pt: '2024',
+    de: '2024'
   },
   'about.history.p1.by': {
     fr: 'par',

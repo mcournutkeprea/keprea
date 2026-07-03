@@ -36,7 +36,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
             Site de production
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t("production.title")}
           </h2>
           <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">
