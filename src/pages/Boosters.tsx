@@ -277,7 +277,7 @@ const Boosters = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-foreground text-white">
           <div className="container mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold mb-6">{t('boosters.cta.title')}</h2>
             <p className="text-lg opacity-90 mb-8">{t('boosters.cta.desc')}</p>

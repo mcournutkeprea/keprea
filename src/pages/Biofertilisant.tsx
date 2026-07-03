@@ -236,7 +236,7 @@ const Biofertilisant = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-primary text-white">
+        <section className="py-16 px-4 bg-foreground text-white">
           <div className="container mx-auto text-center max-w-2xl">
             <h2 className="text-3xl font-bold mb-6">{t('biofertilisant.cta.title')}</h2>
             <p className="text-xl mb-8 opacity-90">{t('biofertilisant.cta.desc')}</p>

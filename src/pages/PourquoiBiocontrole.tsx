@@ -327,7 +327,7 @@ const PourquoiBiocontrole = () => (
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-primary text-white">
+      <section className="py-16 px-4 bg-foreground text-white">
         <div className="container mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold mb-4">Prêt à passer au biocontrôle ?</h2>
           <p className="text-lg opacity-90 mb-8">
