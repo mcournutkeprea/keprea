@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://keprea.com/sitemap.xml
+Sitemap: https://keprea.vercel.app/sitemap.xml

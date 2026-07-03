@@ -11,7 +11,10 @@
 ---
 
 ### Audit SEO complet 02/07/2026 — score santé 53/100 (keprea.vercel.app)
-- **Statut** : Phases 1-3 corrigées (02/07/2026) — reste Phase 4 (monitoring/CWV réel, cutover keprea.com), plan complet dans `keprea.vercel.app-audit/ACTION-PLAN.md`
+- **Statut** : Phases 1-3 corrigées, Phase 4 partiellement traitée (02/07/2026) — plan complet dans `keprea.vercel.app-audit/ACTION-PLAN.md`
+- **Phase 4 — fait (02/07/2026)** : `robots.txt` pointait vers `https://keprea.com/sitemap.xml` (domaine pas encore live → 404 permanent) alors que `sitemap.xml` référence déjà `keprea.vercel.app` — corrigé pour cohérence, **à rebasculer sur `keprea.com` au cutover** (même liste que le point ci-dessous). `public/llms.txt` créé (résumé du site + pages clés pour crawlers IA), même note de migration de domaine.
+- **Phase 4 — décision** : pas d'ajout de sources INRAE/FAO sur les stats produits ("Résultats mesurés sur le terrain" des 4 pages produits) — ce sont des essais internes Keprea (déjà correctement libellés "données internes" + méthodologie Comifer/ARVALIS en Phase 3) et non des données publiées par un tiers ; leur associer une citation académique laisserait croire à une validation externe qui n'existe pas. Seule `/pourquoi-le-biocontrole` cite des tiers (Ecophyto, Alliance Biocontrôle, Légifrance) et c'est déjà fait.
+- **Phase 4 — bloqué** : CWV réel (pas de `GOOGLE_API_KEY` fourni), monitoring Search Console (nécessite le cutover keprea.com), témoignages agriculteurs réels (dépend de la collecte externe, voir §7 `PLAN-ACTION.md`)
 - ~~Note interne "Photo à faire ensemble le 15 OCT"~~, ~~title/meta doublés~~, ~~canonicals absents~~, ~~`/solutions/boosters` sans "biostimulant"~~ — Corrigés (02/07/2026), voir journal
 - Personnalités nommées sur la page Team : confirmées par l'utilisateur (accord obtenu de tous) le 02/07/2026 ; bios individuelles complètes et vraies photos = toujours en attente
 - ~~Vidéo hero 13 Mo `preload="auto"`~~ — Corrigé (02/07/2026) : réencodée à 1,9 Mo (ffmpeg, 960px/CRF30), `preload="metadata"`
@@ -24,7 +27,7 @@
 - ~~Contenu thin : pages produits 523-589 mots (seuil 800), `/ressources` quasi vide~~ — Corrigé (02/07/2026, Phase 3) : 4 pages produits portées à 820-848 mots (FAQ enrichies + FAQPage schema), `/pourquoi-le-biocontrole` porté à 1055 mots (Article+FAQPage schema, stats sourcées Ecophyto/Alliance Biocontrôle), `/qui-sommes-nous` et `/notre-production` portés à 550/510 mots (jalons, chiffres, mission). `/ressources` passé en `noindex, follow` (retiré du sitemap) faute de vrai contenu — à ré-indexer quand du contenu réel existera.
 - ~~~64 Mo de vidéos orphelines dans `public/`~~ — Corrigé (02/07/2026) : `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés, ainsi que `ProductsSchema.tsx` (composant mort qui les référençait, jamais importé nulle part). `public/` : 85 Mo → 18 Mo.
 - ~~Footer avec ancres homepage `/#solutions`/`/#production`/`/#about`/`/#contact-form`~~ — Corrigé (02/07/2026) : les 4 liens (+ Innovation) basculés en `<Link>` React Router vers les pages dédiées (`/solutions`, `/notre-production`, `/qui-sommes-nous`, `/contact`), alignés sur Navigation.
-- **⚠️ À REBASCULER AU LANCEMENT keprea.com** : JSON-LD Organization + og:image/twitter:image (`index.html`) et les 14 `<link rel="canonical">`/`og:url` par page pointent volontairement vers `keprea.vercel.app` en attendant la migration — voir checklist "Déploiement keprea.com" ci-dessous
+- **⚠️ À REBASCULER AU LANCEMENT keprea.com** : JSON-LD Organization + og:image/twitter:image (`index.html`), les 14 `<link rel="canonical">`/`og:url` par page, `robots.txt` (ligne `Sitemap:`) et `llms.txt` pointent volontairement vers `keprea.vercel.app` en attendant la migration — voir checklist "Déploiement keprea.com" ci-dessous
 
 ---
 
@@ -129,7 +132,9 @@
   3. Soumettre le sitemap sur la nouvelle propriété
   4. Configurer les redirections 301 Vercel des anciennes URLs
   5. Vérifier que GA4 (`G-8J2LKBGHD7`) remonte bien des données sur le nouveau domaine
-  6. Remettre `https://keprea.com` dans : JSON-LD Organization + `og:image`/`twitter:image` (`index.html`), et les 14 `<link rel="canonical">`/`og:url` par page (actuellement en `keprea.vercel.app`)
+  6. Remettre `https://keprea.com` dans : JSON-LD Organization + `og:image`/`twitter:image` (`index.html`), les 14 `<link rel="canonical">`/`og:url` par page, `robots.txt` (ligne `Sitemap:`) et `llms.txt` (actuellement en `keprea.vercel.app`)
+  7. Supprimer les routes legacy `/biofertilisant`, `/boosters`, `/extraits-naturels`, `/biocontrole-vivant` dans `App.tsx` (alias pré-refonte, gardés pour éviter les 404 le temps que l'ancien référencement se purge — à retirer seulement après avoir confirmé qu'ils ne reçoivent plus de trafic organique/backlinks)
+  8. Configurer un vrai audit CWV (`GOOGLE_API_KEY` PageSpeed/CrUX) pour remplacer les estimations labo de l'audit du 02/07/2026
 
 ---
 
