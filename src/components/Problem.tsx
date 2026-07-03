@@ -36,10 +36,10 @@ const Problem = () => {
           ref={headerRef as RefObject<HTMLDivElement>}
           className={`mb-14 max-w-2xl reveal${headerVisible ? " is-visible" : ""}`}
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/50 mb-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
             L'agriculture en transition
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-5">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-5">
             Une protection des cultures plus ciblée, plus performante
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed">
