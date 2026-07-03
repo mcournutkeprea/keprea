@@ -28,6 +28,11 @@ const faqItems = [
       "Les insectes comme Hermetia illucens (mouche soldat noire) ou les vers de farine produisent naturellement des molécules de défense (peptides antimicrobiens, chitine, acides aminés) développées au cours de leur évolution pour résister à leurs propres agresseurs (bactéries, champignons). L'élevage contrôlé permet d'obtenir une matière première standardisée, traçable et disponible toute l'année, contrairement à certaines ressources végétales soumises aux aléas de récolte.",
   },
   {
+    question: "Le biocontrôle est-il reconnu au niveau européen, ou seulement en France ?",
+    answer:
+      "Le biocontrôle en tant que catégorie juridique nommée est une spécificité française (article L.253-6 du Code rural), mais le principe repose sur un socle européen commun : le règlement (CE) n° 1107/2009 encadre la mise sur le marché des produits phytopharmaceutiques dans toute l'Union et définit les substances actives à faible risque, sur lesquelles s'appuient les cadres nationaux. La filière professionnelle européenne (IBMA) utilise une classification proche de celle du droit français (micro-organismes, invertébrés, médiateurs chimiques, substances naturelles), et le marché européen du biocontrôle représentait 1,6 milliard d'euros en 2023, avec une croissance annuelle d'environ 10 %.",
+  },
+  {
     question: "Quelle est la différence entre biocontrôle, biostimulant et biofertilisant ?",
     answer:
       "Le biocontrôle vise la protection des cultures contre les bioagresseurs (insectes ravageurs, champignons pathogènes). Le biostimulant améliore la nutrition, la tolérance au stress abiotique ou les caractéristiques qualitatives de la culture, sans action directe contre les bioagresseurs. Le biofertilisant apporte ou améliore la disponibilité des éléments nutritifs. Les trois catégories relèvent de cadres réglementaires distincts, et une même gamme de produits peut combiner plusieurs de ces fonctions.",
@@ -41,7 +46,7 @@ const PourquoiBiocontrole = () => (
       <title>Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea</title>
       <meta
         name="description"
-        content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
+        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux pesticides chimiques pour protéger vos cultures."
       />
       <link rel="canonical" href="https://keprea.vercel.app/pourquoi-le-biocontrole" />
       <meta property="og:url" content="https://keprea.vercel.app/pourquoi-le-biocontrole" />
@@ -49,11 +54,11 @@ const PourquoiBiocontrole = () => (
       <meta name="twitter:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea" />
       <meta
         property="og:description"
-        content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
+        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux pesticides chimiques pour protéger vos cultures."
       />
       <meta
         name="twitter:description"
-        content="Comprendre le biocontrôle : alternatives naturelles aux pesticides chimiques pour protéger vos cultures, préserver la biodiversité et respecter la réglementation."
+        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux pesticides chimiques pour protéger vos cultures."
       />
       <script type="application/ld+json">{breadcrumbJsonLd([
         { name: "Accueil", path: "/" },
@@ -61,10 +66,10 @@ const PourquoiBiocontrole = () => (
       ])}</script>
       <script type="application/ld+json">{articleJsonLd({
         headline: "Pourquoi le Biocontrôle ? Comprendre les enjeux pour l'agriculture durable",
-        description: "Comprendre le biocontrôle : cadre réglementaire, marché français, catégories de solutions et alternatives naturelles aux pesticides chimiques.",
+        description: "Comprendre le biocontrôle : cadre réglementaire français et européen, marché en croissance, catégories de solutions et alternatives naturelles aux pesticides chimiques.",
         path: "/pourquoi-le-biocontrole",
         datePublished: "2026-06-15",
-        dateModified: "2026-07-02",
+        dateModified: "2026-07-03",
       })}</script>
       <script type="application/ld+json">{faqJsonLd(faqItems)}</script>
     </Head>
@@ -95,16 +100,21 @@ const PourquoiBiocontrole = () => (
             <p className="text-muted-foreground leading-relaxed mb-4">
               Le biocontrôle regroupe l'ensemble des méthodes de protection des végétaux
               utilisant des <strong className="text-foreground">mécanismes et agents naturels</strong>.
-              L'article L.253-6 du Code rural en donne une définition légale précise : il s'agit
-              des agents et produits utilisant des mécanismes naturels dans le cadre de la lutte
-              intégrée contre les ennemis des cultures. Quatre grandes catégories sont reconnues
-              par la réglementation française et détaillées ci-dessous.
+              Au niveau européen, le <strong className="text-foreground">règlement (CE) n° 1107/2009</strong> encadre
+              la mise sur le marché des produits phytopharmaceutiques dans toute l'Union et introduit
+              la notion de « substances actives à faible risque », sur laquelle s'appuient les cadres
+              nationaux de chaque État membre. En France, l'article L.253-6 du Code rural en donne la
+              déclinaison légale précise : il s'agit des agents et produits utilisant des mécanismes
+              naturels dans le cadre de la lutte intégrée contre les ennemis des cultures. Quatre
+              grandes catégories sont reconnues, en cohérence avec la classification utilisée à
+              l'échelle européenne, et détaillées ci-dessous.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La liste officielle des produits de biocontrôle est publiée et actualisée chaque
-              mois au Bulletin officiel du ministère de l'Agriculture : un statut réglementaire
+              En France, la liste officielle des produits de biocontrôle est publiée et actualisée
+              chaque mois au Bulletin officiel du ministère de l'Agriculture : un statut réglementaire
               distinct de celui des produits phytopharmaceutiques classiques, avec ses propres
-              procédures d'homologation.
+              procédures d'homologation. Chaque État membre de l'UE applique le règlement (CE) 1107/2009
+              via sa propre procédure nationale d'autorisation de mise sur le marché (AMM).
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Keprea développe des solutions à base d'<strong className="text-foreground">insectes</strong>,
@@ -124,7 +134,10 @@ const PourquoiBiocontrole = () => (
           </h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
             Le Code rural (article L.253-6) distingue quatre familles d'agents et de produits
-            de biocontrôle, chacune avec ses propres mécanismes d'action.
+            de biocontrôle, chacune avec ses propres mécanismes d'action — une classification
+            qui recoupe celle utilisée par la filière au niveau européen (micro-organismes,
+            invertébrés, médiateurs chimiques, substances naturelles, selon l'IBMA, l'association
+            professionnelle du secteur en Europe).
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-background rounded-2xl p-6 border border-border">
@@ -167,20 +180,22 @@ const PourquoiBiocontrole = () => (
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
-            Un contexte réglementaire et économique qui accélère
+            Un contexte réglementaire et économique qui accélère, en France comme en Europe
           </h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
             Le retrait progressif des substances actives conventionnelles et la structuration
             de la filière biocontrôle transforment rapidement le marché de la protection
-            des cultures en France.
+            des cultures, à l'échelle française et européenne.
           </p>
-          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+          <div className="grid sm:grid-cols-2 gap-6 mb-6">
             <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
               <div className="text-3xl font-bold text-primary mb-2">-50 %</div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Objectif de réduction de l'usage et des risques des produits phytopharmaceutiques
                 fixé par la stratégie <strong className="text-foreground">Ecophyto 2030</strong>
-                {" "}d'ici 2030, par rapport à la moyenne 2011-2013 (stratégie publiée le 6 mai 2024).
+                {" "}d'ici 2030, par rapport à la moyenne 2011-2013 — la déclinaison française de la
+                directive européenne 2009/128/CE sur l'utilisation durable des pesticides (stratégie
+                publiée le 6 mai 2024).
               </p>
             </div>
             <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
@@ -206,11 +221,29 @@ const PourquoiBiocontrole = () => (
               </p>
             </div>
           </div>
+          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+            <div className="bg-background rounded-2xl p-6 border border-border">
+              <div className="text-3xl font-bold text-primary mb-2">1,6 Md€</div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Valeur du marché européen du biocontrôle en 2023, soit près de 10 % du marché
+                européen de la protection des cultures (source : IBMA, association professionnelle
+                européenne du secteur, enquête membres 2024).
+              </p>
+            </div>
+            <div className="bg-background rounded-2xl p-6 border border-border">
+              <div className="text-3xl font-bold text-primary mb-2">+10 %/an</div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Croissance annuelle du marché européen du biocontrôle, contre environ 4 % par an
+                pour le marché conventionnel de la protection des cultures (source : IBMA, 2024).
+              </p>
+            </div>
+          </div>
           <p className="text-xs text-muted-foreground text-center italic">
             Chiffres tiers cités à titre indicatif, sources : agriculture.gouv.fr (stratégie Écophyto 2030,
             mai 2024), Alliance Biocontrôle (Baromètre du Biocontrôle 2024), Légifrance (article L.253-6
-            du Code rural). Ces données évoluent chaque année ; nous les mettons à jour lors de nos revues
-            de contenu périodiques.
+            du Code rural, règlement (CE) n° 1107/2009, directive 2009/128/CE), IBMA (enquête membres 2024,
+            marché européen du biocontrôle). Ces données évoluent chaque année ; nous les mettons à jour
+            lors de nos revues de contenu périodiques.
           </p>
         </div>
       </section>
@@ -228,8 +261,9 @@ const PourquoiBiocontrole = () => (
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">Conformité réglementaire</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Plan Ecophyto 2+, retrait des substances actives critiques, exigences HVE
-                et AB : le biocontrôle sécurise votre conformité aujourd'hui et demain.
+                Règlement européen (CE) 1107/2009, plan Ecophyto 2030, retrait des substances
+                actives critiques, exigences HVE et AB : le biocontrôle sécurise votre conformité
+                aujourd'hui et demain, en France comme dans le reste de l'UE.
               </p>
             </div>
             <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
