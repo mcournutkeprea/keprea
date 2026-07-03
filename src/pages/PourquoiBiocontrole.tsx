@@ -3,6 +3,7 @@ import { Leaf, ShieldCheck, FlaskConical, TrendingUp, Bug, Sprout, Award, Micros
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GradientCTA from "@/components/GradientCTA";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, articleJsonLd } from "@/lib/schema";
 
@@ -344,13 +345,19 @@ const PourquoiBiocontrole = () => (
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             Questions fréquentes
           </h2>
-          <div className="space-y-6">
-            {faqItems.map((item, i) => (
-              <div key={i} className="bg-background rounded-2xl p-6 border border-border">
-                <h3 className="font-semibold text-foreground mb-2">{item.question}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.answer}</p>
-              </div>
-            ))}
+          <div className="bg-background rounded-xl border border-border divide-y divide-border px-6">
+            <Accordion type="single" collapsible>
+              {faqItems.map((item, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border-none">
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
