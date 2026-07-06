@@ -1,3 +1,6 @@
+import type { LucideIcon } from "lucide-react";
+import { Leaf, Sprout, Wheat, ShieldCheck, FlaskConical, Beaker, Droplets, CalendarClock, Repeat, Puzzle, Tag, Microscope } from "lucide-react";
+
 export interface SpecRow {
   labelKey: string;
   valueKey: string;
@@ -9,6 +12,7 @@ export interface TechnicalSheetEntry {
   name?: string;
   /** i18n key for a translated name — used when there is no fixed brand name. */
   nameKey?: string;
+  icon: LucideIcon;
   rangePath: string;
   rangeLabelKey: string;
   rows: SpecRow[];
@@ -20,6 +24,7 @@ export const technicalSheets: TechnicalSheetEntry[] = [
   {
     slug: "boostea13",
     name: "Boostea13",
+    icon: Leaf,
     rangePath: "/solutions/boosters",
     rangeLabelKey: "boosters.title",
     rows: [
@@ -35,6 +40,7 @@ export const technicalSheets: TechnicalSheetEntry[] = [
   {
     slug: "soilea110",
     name: "Soilea110",
+    icon: Sprout,
     rangePath: "/solutions/boosters",
     rangeLabelKey: "boosters.title",
     rows: [
@@ -50,6 +56,7 @@ export const technicalSheets: TechnicalSheetEntry[] = [
   {
     slug: "fertea432",
     name: "Fertea432",
+    icon: Wheat,
     rangePath: "/solutions/biofertilisant",
     rangeLabelKey: "biofertilisant.title",
     rows: [
@@ -65,6 +72,7 @@ export const technicalSheets: TechnicalSheetEntry[] = [
   {
     slug: "bioprotection",
     nameKey: "biocontrole.title",
+    icon: ShieldCheck,
     rangePath: "/solutions/bioprotection",
     rangeLabelKey: "biocontrole.title",
     rows: [
@@ -78,6 +86,7 @@ export const technicalSheets: TechnicalSheetEntry[] = [
   {
     slug: "biopesticides",
     nameKey: "substances.title",
+    icon: FlaskConical,
     rangePath: "/solutions/biopesticides",
     rangeLabelKey: "substances.title",
     rows: [
@@ -93,3 +102,16 @@ export const technicalSheets: TechnicalSheetEntry[] = [
 ];
 
 export const getTechnicalSheet = (slug: string) => technicalSheets.find((entry) => entry.slug === slug);
+
+/** Icon shown next to each spec row on the detail page, keyed by the row's labelKey. */
+export const specRowIcons: Record<string, LucideIcon> = {
+  "techsheet.label.compositionEffect": Beaker,
+  "techsheet.label.description": Beaker,
+  "techsheet.label.application": Droplets,
+  "techsheet.label.technology": Microscope,
+  "techsheet.label.stages": CalendarClock,
+  "techsheet.label.frequency": Repeat,
+  "techsheet.label.dosage": Droplets,
+  "techsheet.label.compatibility": Puzzle,
+  "techsheet.label.category": Tag,
+};
