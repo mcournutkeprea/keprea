@@ -1,35 +1,32 @@
 import type { RefObject } from "react";
-import { CheckCircle, FlaskConical, Users, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from "@/hooks/useInView";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 
 const credibilityStats = [
-  { value: "2024", label: "Fondée en France" },
-  { value: "4", label: "Gammes de biosolutions" },
-  { value: "100%", label: "Origine naturelle" },
-  { value: "Terrain", label: "Suivi agronomique inclus" },
+  { valueKey: "testimonials.stat1.value", labelKey: "testimonials.stat1.label" },
+  { valueKey: "testimonials.stat2.value", labelKey: "testimonials.stat2.label" },
+  { valueKey: "testimonials.stat3.value", labelKey: "testimonials.stat3.label" },
+  { valueKey: "testimonials.stat4.value", labelKey: "testimonials.stat4.label" },
 ];
 
 const guarantees = [
   {
     icon: CheckCircle,
-    title: "Traçabilité complète",
-    desc: "Chaque lot est tracé de la filière insecte jusqu'à la formulation finale, sans intermédiaire inconnu.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Essai terrain sans engagement",
-    desc: "Nous organisons un essai sur votre exploitation avant tout engagement commercial. Vous validez les résultats dans vos conditions réelles.",
+    titleKey: "testimonials.guarantee1.title",
+    descKey: "testimonials.guarantee1.desc",
   },
   {
     icon: Users,
-    title: "Accompagnement agronomique",
-    desc: "Un technicien Keprea suit chaque essai de A à Z : protocole, interprétation des résultats, recommandations adaptées à votre système.",
+    titleKey: "testimonials.guarantee2.title",
+    descKey: "testimonials.guarantee2.desc",
   },
 ];
 
 const TrustSection = () => {
+  const { t } = useLanguage();
   const { ref: statsRef, inView: statsVisible } = useInView(0.08);
   const { ref: guaranteesRef, inView: guaranteesVisible } = useInView(0.05);
 
@@ -40,10 +37,10 @@ const TrustSection = () => {
         {/* Header */}
         <div className="mb-12">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-            Nos garanties
+            {t("testimonials.eyebrow")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Des biosolutions développées avec rigueur
+            {t("testimonials.title")}
           </h2>
         </div>
 
@@ -61,9 +58,9 @@ const TrustSection = () => {
                 className="text-2xl font-bold text-primary tracking-tight"
                 style={{ fontVariantNumeric: "tabular-nums" }}
               >
-                {s.value}
+                {t(s.valueKey)}
               </span>
-              <span className="text-xs text-muted-foreground leading-snug">{s.label}</span>
+              <span className="text-xs text-muted-foreground leading-snug">{t(s.labelKey)}</span>
             </div>
           ))}
         </div>
@@ -71,7 +68,7 @@ const TrustSection = () => {
         {/* Guarantee cards */}
         <div
           ref={guaranteesRef as RefObject<HTMLDivElement>}
-          className={`grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 reveal reveal-delay-1${guaranteesVisible ? " is-visible" : ""}`}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 reveal reveal-delay-1${guaranteesVisible ? " is-visible" : ""}`}
         >
           {guarantees.map((item, i) => (
             <div
@@ -83,8 +80,8 @@ const TrustSection = () => {
               >
                 <item.icon className="w-5 h-5 text-primary" aria-hidden="true" />
               </div>
-              <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              <h3 className="text-base font-semibold text-foreground">{t(item.titleKey)}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
             </div>
           ))}
         </div>
@@ -95,7 +92,7 @@ const TrustSection = () => {
             to="/contact"
             className="group shrink-0 inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-5 pr-2 py-2 text-sm font-semibold transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
-            Rejoindre les premiers essais
+            {t("testimonials.cta")}
             <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
               <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
             </span>

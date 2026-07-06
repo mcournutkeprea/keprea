@@ -41,7 +41,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
     if (!rgpdAccepted) {
       toast({
         title: t('toast.error'),
-        description: "Vous devez accepter la politique de confidentialité pour envoyer votre message.",
+        description: t('toast.error.rgpd'),
         variant: "destructive",
       });
       return;
@@ -136,7 +136,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="email">Email *</Label>
+          <Label htmlFor="email">{t('contact.form.email')} *</Label>
           <Input
             id="email"
             type="email"
@@ -169,9 +169,9 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
             aria-required="true"
           />
           <Label htmlFor="rgpd" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-            J'accepte que mes données soient traitées par Keprea dans le but de répondre à ma demande, conformément à la{" "}
+            {t('contact.form.rgpd.pre')}{" "}
             <Link to="/politique-confidentialite" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-              politique de confidentialité
+              {t('contact.form.rgpd.link')}
             </Link>
             . *
           </Label>
@@ -216,7 +216,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
       <div className="container mx-auto max-w-2xl">
         <div className="mb-12">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-            Contact
+            {t('contact.form.eyebrow')}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t('contact.title')}

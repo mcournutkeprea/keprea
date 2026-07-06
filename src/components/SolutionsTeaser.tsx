@@ -54,7 +54,7 @@ const SolutionsTeaser = () => {
           {/* ── Colonne gauche : texte + CTA ── */}
           <div className="reveal">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-              Nos gammes
+              {t("solutionsTeaser.eyebrow")}
             </p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-5">
               {t("solutions.title")}
@@ -66,7 +66,7 @@ const SolutionsTeaser = () => {
               to="/solutions"
               className="inline-flex items-center justify-between gap-4 h-12 rounded-full bg-primary text-primary-foreground font-semibold text-sm px-5 group transition-all duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-primary/90 active:scale-[0.98]"
             >
-              <span>Voir toutes nos solutions</span>
+              <span>{t("solutionsTeaser.cta")}</span>
               <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-px transition-transform duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
                 <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
               </span>

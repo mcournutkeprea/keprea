@@ -1,32 +1,31 @@
 import type { RefObject } from "react";
 import { MessageSquare, FlaskConical, PackageCheck } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const steps = [
   {
     number: "01",
     icon: MessageSquare,
-    title: "Prenez contact",
-    desc: "Décrivez votre contexte : culture, pression parasitaire, objectifs. Notre équipe revient vers vous rapidement.",
-    cta: null,
+    titleKey: "howtoget.step1.title",
+    descKey: "howtoget.step1.desc",
   },
   {
     number: "02",
     icon: FlaskConical,
-    title: "Essai terrain",
-    desc: "Nous organisons un essai sur votre exploitation avec suivi technique. Vous observez les résultats dans vos conditions réelles.",
-    cta: null,
+    titleKey: "howtoget.step2.title",
+    descKey: "howtoget.step2.desc",
   },
   {
     number: "03",
     icon: PackageCheck,
-    title: "Déploiement & suivi",
-    desc: "Passage à l'échelle selon vos résultats, avec un accompagnement agronomique continu. Pas d'engagement avant conviction.",
-    cta: null,
+    titleKey: "howtoget.step3.title",
+    descKey: "howtoget.step3.desc",
   },
 ];
 
 const HowToGet = () => {
+  const { t } = useLanguage();
   const { ref: headerRef, inView: headerVisible } = useInView();
   const { ref: stepsRef, inView: stepsVisible } = useInView(0.05);
 
@@ -40,14 +39,13 @@ const HowToGet = () => {
           className={`mb-14 reveal${headerVisible ? " is-visible" : ""}`}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-            Comment ça marche
+            {t("howtoget.eyebrow")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Tester nos solutions en 3 étapes
+            {t("howtoget.title")}
           </h2>
           <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
-            Nous accompagnons chaque agriculteur du premier contact jusqu'au résultat terrain.
-            Pas de signature avant d'avoir vu les effets sur votre exploitation.
+            {t("howtoget.subtitle")}
           </p>
         </div>
 
@@ -81,8 +79,8 @@ const HowToGet = () => {
                 >
                   <step.icon className="w-5 h-5 text-primary" aria-hidden="true" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mt-1">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                <h3 className="text-lg font-semibold text-foreground mt-1">{t(step.titleKey)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(step.descKey)}</p>
               </div>
             </div>
           ))}

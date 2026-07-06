@@ -5,8 +5,50 @@ import Footer from "@/components/Footer";
 import GradientCTA from "@/components/GradientCTA";
 import { Leaf, Shield, Zap, CheckCircle2, X } from "lucide-react";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const challenges = [
+  { titleKey: "innovationpage.challenge1.title", textKey: "innovationpage.challenge1.text" },
+  { titleKey: "innovationpage.challenge2.title", textKey: "innovationpage.challenge2.text" },
+  { titleKey: "innovationpage.challenge3.title", textKey: "innovationpage.challenge3.text" },
+];
+
+const pillar3Stats = [
+  { value: "84%", labelKey: "innovationpage.pillar3.stat1.label" },
+  { value: "5 500", labelKey: "innovationpage.pillar3.stat2.label" },
+  { value: "100%", labelKey: "innovationpage.pillar3.stat3.label" },
+];
+
+const kepreaItems = [
+  "innovationpage.comparison.keprea.item1",
+  "innovationpage.comparison.keprea.item2",
+  "innovationpage.comparison.keprea.item3",
+  "innovationpage.comparison.keprea.item4",
+  "innovationpage.comparison.keprea.item5",
+  "innovationpage.comparison.keprea.item6",
+];
+
+const chimieItems = [
+  { ok: false, key: "innovationpage.comparison.chimie.item1" },
+  { ok: false, key: "innovationpage.comparison.chimie.item2" },
+  { ok: false, key: "innovationpage.comparison.chimie.item3" },
+  { ok: false, key: "innovationpage.comparison.chimie.item4" },
+  { ok: true, key: "innovationpage.comparison.chimie.item5" },
+  { ok: false, key: "innovationpage.comparison.chimie.item6" },
+];
+
+const autresItems = [
+  { ok: true, key: "innovationpage.comparison.autres.item1" },
+  { ok: true, key: "innovationpage.comparison.autres.item2" },
+  { ok: true, key: "innovationpage.comparison.autres.item3" },
+  { ok: false, key: "innovationpage.comparison.autres.item4" },
+  { ok: false, key: "innovationpage.comparison.autres.item5" },
+  { ok: false, key: "innovationpage.comparison.autres.item6" },
+];
 
 const InnovationPage = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries.forEach(e => {
@@ -52,13 +94,13 @@ const InnovationPage = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="reveal max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-                Innovation
+                {t("innovationpage.hero.eyebrow")}
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.05] mb-6">
-                Une source de molécules que la chimie ne peut pas reproduire
+                {t("innovationpage.hero.title")}
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Les insectes ont co-evolué avec les plantes pendant 400 millions d'années. Keprea extrait et formule ces actifs biologiques pour en faire des biosolutions agricoles sans aucun résidu chimique.
+                {t("innovationpage.hero.lead")}
               </p>
             </div>
 
@@ -66,17 +108,17 @@ const InnovationPage = () => {
             <div className="reveal reveal-delay-1 flex flex-wrap gap-10 mt-12 pt-12 border-t border-border/50">
               <div>
                 <span className="text-4xl font-extrabold tracking-tight text-primary tabular-nums">400 M</span>
-                <p className="text-sm text-muted-foreground mt-1">années de co-évolution</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("innovationpage.hero.stat1.label")}</p>
               </div>
               <div className="w-px bg-border/60 hidden sm:block" />
               <div>
                 <span className="text-4xl font-extrabold tracking-tight text-primary tabular-nums">84%</span>
-                <p className="text-sm text-muted-foreground mt-1">des cultures dépendent des insectes</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("innovationpage.hero.stat2.label")}</p>
               </div>
               <div className="w-px bg-border/60 hidden sm:block" />
               <div>
                 <span className="text-4xl font-extrabold tracking-tight text-primary tabular-nums">0</span>
-                <p className="text-sm text-muted-foreground mt-1">résidu chimique</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("innovationpage.hero.stat3.label")}</p>
               </div>
             </div>
           </div>
@@ -87,31 +129,15 @@ const InnovationPage = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="reveal mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-                L'agriculture face à ses limites
+                {t("innovationpage.challenges.title")}
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">
-                Les solutions chimiques conventionnelles montrent des signes d'épuisement. Réglementation plus stricte, résistances des ravageurs, attentes de traçabilité : le modèle doit changer.
+                {t("innovationpage.challenges.subtitle")}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[
-                {
-                  number: "01",
-                  title: "Réglementation en hausse",
-                  text: "Des centaines de substances actives chimiques retirées du marché ces dernières années en Europe. Les agriculteurs cherchent des alternatives fiables et durables.",
-                },
-                {
-                  number: "02",
-                  title: "Résistances croissantes",
-                  text: "Les ravageurs développent des résistances aux pesticides chimiques. L'efficacité des traitements conventionnels décline sur le long terme, forçant des doses croissantes.",
-                },
-                {
-                  number: "03",
-                  title: "Attentes de traçabilité",
-                  text: "Les filières et les consommateurs exigent des produits sans résidu. Le biocontrôle n'est plus un choix marginal, c'est une nécessité commerciale et réglementaire.",
-                },
-              ].map((item, i) => (
+              {challenges.map((item, i) => (
                 <div
                   key={i}
                   className={`reveal reveal-delay-${i + 1} p-7 rounded-2xl border border-border/60 bg-background`}
@@ -121,10 +147,10 @@ const InnovationPage = () => {
                     style={{ color: "hsl(var(--primary)/0.18)" }}
                     aria-hidden="true"
                   >
-                    {item.number}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="text-base font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                  <h3 className="text-base font-semibold text-foreground mb-2">{t(item.titleKey)}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t(item.textKey)}</p>
                 </div>
               ))}
             </div>
@@ -136,10 +162,10 @@ const InnovationPage = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="reveal mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-                Pourquoi les insectes sont uniques
+                {t("innovationpage.pillars.title")}
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">
-                Ce n'est pas un effet de mode. L'innovation Keprea repose sur une réalité biologique profonde que la chimie de synthèse et les extraits végétaux ne peuvent pas égaler.
+                {t("innovationpage.pillars.subtitle")}
               </p>
             </div>
 
@@ -164,10 +190,10 @@ const InnovationPage = () => {
                     <Leaf className="w-5 h-5 text-primary" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3" style={{ letterSpacing: "-0.01em" }}>
-                    400 millions d'années de biochimie naturelle
+                    {t("innovationpage.pillar1.title")}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-[50ch]">
-                    Les insectes ont co-evolué avec les plantes depuis 400 millions d'années. Ils ont développé des enzymes, des peptides et des acides aminés qui interagissent précisément avec les mécanismes de défense et de croissance végétales. Ces molécules sont impossibles à reproduire synthétiquement avec la même efficacité.
+                    {t("innovationpage.pillar1.desc")}
                   </p>
                 </div>
               </div>
@@ -191,10 +217,10 @@ const InnovationPage = () => {
                     <Shield className="w-5 h-5 text-primary" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3" style={{ letterSpacing: "-0.01em" }}>
-                    Zéro résidu chimique, zéro restriction
+                    {t("innovationpage.pillar2.title")}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-[50ch]">
-                    Les biosolutions Keprea sont entièrement d'origine naturelle. Aucun résidu toxique dans le sol, les eaux ou les récoltes. Compatibles avec les cahiers des charges bio, les certifications HVE et les exigences des grandes et moyennes surfaces.
+                    {t("innovationpage.pillar2.desc")}
                   </p>
                 </div>
               </div>
@@ -220,21 +246,17 @@ const InnovationPage = () => {
                         <Zap className="w-5 h-5 text-primary" strokeWidth={1.5} />
                       </div>
                       <h3 className="text-xl font-bold text-foreground mb-3" style={{ letterSpacing: "-0.01em" }}>
-                        Efficacité prouvée sur le terrain
+                        {t("innovationpage.pillar3.title")}
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Les gammes Keprea sont développées et testées directement avec des agriculteurs. Chaque formulation est évaluée sur des parcelles réelles, dans les conditions de culture françaises, avant d'être mise sur le marché.
+                        {t("innovationpage.pillar3.desc")}
                       </p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
-                      {[
-                        { value: "84%", label: "des cultures dépendent des insectes pour leur rendement" },
-                        { value: "5 500", label: "espèces auxiliaires utiles recensées en France, exploitables en plein champ" },
-                        { value: "100%", label: "naturel, sans résidu chimique" },
-                      ].map((stat, i) => (
+                      {pillar3Stats.map((stat, i) => (
                         <div key={i} className="bg-primary/5 rounded-xl p-4">
                           <span className="text-2xl font-extrabold text-primary tracking-tight tabular-nums">{stat.value}</span>
-                          <p className="text-xs text-muted-foreground mt-1 leading-snug">{stat.label}</p>
+                          <p className="text-xs text-muted-foreground mt-1 leading-snug">{t(stat.labelKey)}</p>
                         </div>
                       ))}
                     </div>
@@ -251,10 +273,10 @@ const InnovationPage = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="reveal mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-                Keprea face aux autres approches
+                {t("innovationpage.comparison.title")}
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">
-                Une comparaison directe pour vous aider à faire le bon choix pour vos cultures et votre exploitation.
+                {t("innovationpage.comparison.subtitle")}
               </p>
             </div>
 
@@ -279,20 +301,13 @@ const InnovationPage = () => {
                     className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary border rounded-full px-3 py-1 inline-block mb-6"
                     style={{ background: "hsl(var(--primary)/0.08)", borderColor: "hsl(var(--primary)/0.18)" }}
                   >
-                    Biosolutions Keprea
+                    {t("innovationpage.comparison.keprea.badge")}
                   </span>
                   <ul className="space-y-3">
-                    {[
-                      "Actifs biologiques issus d'insectes",
-                      "Zéro résidu toxique",
-                      "Compatible bio et HVE",
-                      "Efficacité testée en conditions réelles",
-                      "Traçabilité totale, Made in France",
-                      "Accompagnement technique inclus",
-                    ].map((item, i) => (
+                    {kepreaItems.map((key, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                        <span className="text-sm text-foreground">{item}</span>
+                        <span className="text-sm text-foreground">{t(key)}</span>
                       </li>
                     ))}
                   </ul>
@@ -302,48 +317,34 @@ const InnovationPage = () => {
               {/* Chimie classique */}
               <div className="rounded-[2rem] border border-border/60 bg-background px-7 py-8 reveal reveal-delay-1">
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground bg-muted/60 border border-border/50 rounded-full px-3 py-1 inline-block mb-6">
-                  Chimie classique
+                  {t("innovationpage.comparison.chimie.badge")}
                 </span>
                 <ul className="space-y-3">
-                  {[
-                    { ok: false, text: "Résidus toxiques dans les récoltes" },
-                    { ok: false, text: "Réglementation de plus en plus restrictive" },
-                    { ok: false, text: "Développement de résistances chez les ravageurs" },
-                    { ok: false, text: "Impact négatif sur la biodiversité" },
-                    { ok: true,  text: "Efficacité à court terme reconnue" },
-                    { ok: false, text: "Inadaptée aux cahiers des charges bio" },
-                  ].map((item, i) => (
+                  {chimieItems.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       {item.ok
                         ? <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                         : <X className="w-4 h-4 text-destructive/60 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                       }
-                      <span className="text-sm text-muted-foreground">{item.text}</span>
+                      <span className="text-sm text-muted-foreground">{t(item.key)}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Biocontrôle générique */}
+              {/* Autres solutions de biocontrôle */}
               <div className="rounded-[2rem] border border-border/60 bg-background px-7 py-8 reveal reveal-delay-2">
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground bg-muted/60 border border-border/50 rounded-full px-3 py-1 inline-block mb-6">
-                  Biocontrôle générique
+                  {t("innovationpage.comparison.autres.badge")}
                 </span>
                 <ul className="space-y-3">
-                  {[
-                    { ok: true,  text: "Sans résidu chimique" },
-                    { ok: false, text: "Efficacité variable selon les formulations" },
-                    { ok: false, text: "Traçabilité souvent opaque" },
-                    { ok: false, text: "Peu ou pas d'accompagnement terrain" },
-                    { ok: true,  text: "Compatible agriculture biologique" },
-                    { ok: false, text: "Gammes peu spécialisées par culture" },
-                  ].map((item, i) => (
+                  {autresItems.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       {item.ok
                         ? <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                         : <X className="w-4 h-4 text-destructive/60 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                       }
-                      <span className="text-sm text-muted-foreground">{item.text}</span>
+                      <span className="text-sm text-muted-foreground">{t(item.key)}</span>
                     </li>
                   ))}
                 </ul>
@@ -354,10 +355,10 @@ const InnovationPage = () => {
         </section>
 
         <GradientCTA
-          title="Convaincu ? Testez sur vos parcelles."
-          description="Nous proposons des essais terrain avec accompagnement technique. Parlez-nous de vos cultures, nous adaptons la solution."
-          primary={{ label: "Voir nos solutions", to: "/solutions" }}
-          secondary={{ label: "Demander un essai", href: "mailto:contact@keprea.com?subject=Demande%20essai%20terrain" }}
+          title={t("innovationpage.cta.title")}
+          description={t("innovationpage.cta.desc")}
+          primary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
+          secondary={{ label: t("innovationpage.cta.secondary"), href: "mailto:contact@keprea.com?subject=Demande%20essai%20terrain" }}
         />
 
       </main>

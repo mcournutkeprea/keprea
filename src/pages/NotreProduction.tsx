@@ -5,8 +5,28 @@ import Footer from "@/components/Footer";
 import Production from "@/components/Production";
 import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const NotreProduction = () => (
+const steps = [
+  { icon: Bug, titleKey: "notreproduction.step1.title", descKey: "notreproduction.step1.desc" },
+  { icon: Archive, titleKey: "notreproduction.step2.title", descKey: "notreproduction.step2.desc" },
+  { icon: FlaskConical, titleKey: "notreproduction.step3.title", descKey: "notreproduction.step3.desc" },
+  { icon: Package, titleKey: "notreproduction.step4.title", descKey: "notreproduction.step4.desc" },
+  { icon: Truck, titleKey: "notreproduction.step5.title", descKey: "notreproduction.step5.desc" },
+  { icon: Users, titleKey: "notreproduction.step6.title", descKey: "notreproduction.step6.desc" },
+];
+
+const bulletKeys = [
+  "notreproduction.bullet1",
+  "notreproduction.bullet2",
+  "notreproduction.bullet3",
+  "notreproduction.bullet4",
+];
+
+const NotreProduction = () => {
+  const { t } = useLanguage();
+
+  return (
   <div className="min-h-screen bg-background flex flex-col">
     <Head>
       <title>Notre Production Keprea | Site de Production à Dole, Jura</title>
@@ -34,13 +54,13 @@ const NotreProduction = () => (
     <Navigation />
     <main className="flex-1 pt-20">
       <PageHero
-        eyebrow="Fabrication française"
-        title="Notre Production"
-        lead="De la collecte de co-produits d'insectes à la formulation finale : un process maîtrisé, made in France."
+        eyebrow={t("notreproduction.hero.eyebrow")}
+        title={t("notreproduction.hero.title")}
+        lead={t("notreproduction.hero.lead")}
         stats={[
-          { value: "3 000 m²", label: "Surface du site" },
-          { value: "6", label: "Étapes maîtrisées" },
-          { value: "100%", label: "Made in France" },
+          { value: "3 000 m²", label: t("notreproduction.hero.stat1.label") },
+          { value: "6", label: t("notreproduction.hero.stat2.label") },
+          { value: "100%", label: t("notreproduction.hero.stat3.label") },
         ]}
       />
 
@@ -49,15 +69,10 @@ const NotreProduction = () => (
         <div className="container mx-auto max-w-3xl">
           <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              Pourquoi produire en France ?
+              {t("notreproduction.why.title")}
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Maîtriser l'élevage d'insectes et l'extraction des molécules actives sur un
-              site unique nous permet de garantir une traçabilité complète, du lot d'élevage
-              au produit fini. Cette intégration verticale limite notre dépendance aux
-              approvisionnements internationaux, un enjeu particulièrement sensible pour
-              des matières premières vivantes, et raccourcit les délais entre la production
-              et la livraison aux exploitations agricoles françaises.
+              {t("notreproduction.why.desc")}
             </p>
           </div>
         </div>
@@ -69,28 +84,20 @@ const NotreProduction = () => (
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
-            Les 6 étapes de notre chaîne de production
+            {t("notreproduction.steps.title")}
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Chaque lot de biosolutions Keprea suit un process intégré, de l'élevage
-            des insectes jusqu'au conseil d'utilisation en parcelle.
+            {t("notreproduction.steps.subtitle")}
           </p>
           <div className="space-y-6">
-            {[
-              { icon: Bug, title: "Élevage d'insectes auxiliaires", desc: "Élevage en conditions contrôlées (température, hygrométrie, alimentation) sur notre site en France, une matière première disponible toute l'année, indépendante des aléas climatiques." },
-              { icon: Archive, title: "Collecte de co-produits d'insectes", desc: "Valorisation des co-produits issus de l'élevage d'autres insectes (mouche soldat noire, ténébrion meunier)." },
-              { icon: FlaskConical, title: "Préparation ou transformation", desc: "Extraction des molécules actives (peptides antimicrobiens, chitine, acides aminés) par nos procédés propriétaires, puis formulation selon la gamme de destination." },
-              { icon: Package, title: "Packaging", desc: "Conditionnement adapté à chaque format de vente : sachets et tubes pour les auxiliaires vivants, bidons pour les biopesticides et boosters, big-bags et sacs pour le biofertilisant Fertea432." },
-              { icon: Truck, title: "Transport", desc: "Logistique organisée pour préserver la viabilité des produits vivants et la stabilité des formulations liquides jusqu'à la parcelle." },
-              { icon: Users, title: "Conseil d'utilisation en plein champ", desc: "Accompagnement technique pour le diagnostic, le dosage et le calendrier d'application, en lien avec les équipes agronomiques de nos clients et distributeurs." },
-            ].map(({ icon: Icon, title, desc }, i) => (
+            {steps.map(({ icon: Icon, titleKey, descKey }, i) => (
               <div key={i} className="flex gap-5">
                 <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="pt-1">
-                  <h3 className="font-semibold text-foreground mb-1">{title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{desc}</p>
+                  <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{t(descKey)}</p>
                 </div>
               </div>
             ))}
@@ -102,32 +109,27 @@ const NotreProduction = () => (
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-10">
-            Une implantation stratégique en France
+            {t("notreproduction.location.title")}
           </h2>
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">3 000 m²</div>
-              <p className="text-sm text-muted-foreground">Surface de notre site de production, made in France</p>
+              <p className="text-sm text-muted-foreground">{t("notreproduction.location.stat1.desc")}</p>
             </div>
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">2h</div>
-              <p className="text-sm text-muted-foreground">De Paris, Bâle, Genève et Lyon, au cœur d'un bassin céréalier et viticole</p>
+              <p className="text-sm text-muted-foreground">{t("notreproduction.location.stat2.desc")}</p>
             </div>
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">6</div>
-              <p className="text-sm text-muted-foreground">Étapes maîtrisées, de la collecte de co-produits au conseil terrain</p>
+              <p className="text-sm text-muted-foreground">{t("notreproduction.location.stat3.desc")}</p>
             </div>
           </div>
           <div className="max-w-2xl mx-auto space-y-3">
-            {[
-              "Site implanté en France, à proximité d'un important bassin céréalier et viticole français",
-              "Élevage d'insectes en conditions contrôlées, garantissant une matière première traçable toute l'année",
-              "Produits formulés pour répondre aux exigences de l'agriculture biologique (règlement (UE) 2018/848)",
-              "Société immatriculée en France (SAS Keprea), mentions légales et SIRET disponibles en pied de page",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
+            {bulletKeys.map((key) => (
+              <div key={key} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-foreground">{item}</span>
+                <span className="text-sm text-foreground">{t(key)}</span>
               </div>
             ))}
           </div>
@@ -137,6 +139,7 @@ const NotreProduction = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default NotreProduction;

@@ -1,13 +1,18 @@
 import GradientCTA from "./GradientCTA";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const ContactCTA = () => (
-  <GradientCTA
-    eyebrow="Passons à l'action"
-    title="Prêt à tester nos solutions sur votre exploitation ?"
-    description="Nos équipes vous accompagnent de l'essai terrain à la mise en place. Réponse garantie sous 48 heures."
-    primary={{ label: "Nous contacter", to: "/contact" }}
-    secondary={{ label: "Voir nos solutions", to: "/solutions" }}
-  />
-);
+const ContactCTA = () => {
+  const { t } = useLanguage();
+
+  return (
+    <GradientCTA
+      eyebrow={t("contactcta.eyebrow")}
+      title={t("contactcta.title")}
+      description={t("contactcta.desc")}
+      primary={{ label: t("contactcta.primary"), to: "/contact" }}
+      secondary={{ label: t("contactcta.secondary"), to: "/solutions" }}
+    />
+  );
+};
 
 export default ContactCTA;

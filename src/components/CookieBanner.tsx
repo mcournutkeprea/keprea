@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { initGA4 } from "@/lib/analytics";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const STORAGE_KEY = "keprea_cookie_consent";
 
 type ConsentStatus = "accepted" | "refused" | null;
 
 const CookieBanner = () => {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<ConsentStatus>(null);
 
   useEffect(() => {
@@ -34,16 +36,16 @@ const CookieBanner = () => {
   return (
     <div
       role="dialog"
-      aria-label="Gestion des cookies"
+      aria-label={t("cookie.ariaLabel")}
       aria-live="polite"
       className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <p className="text-sm text-muted-foreground flex-1">
-            Nous utilisons des cookies d'analyse pour améliorer votre expérience et mesurer l'audience de notre site. Votre consentement est requis avant tout dépôt.{" "}
+            {t("cookie.text")}{" "}
             <Link to="/politique-confidentialite" className="text-primary hover:underline">
-              En savoir plus
+              {t("cookie.learnMore")}
             </Link>
           </p>
           <div className="flex gap-3 flex-shrink-0">
@@ -52,13 +54,13 @@ const CookieBanner = () => {
               size="sm"
               onClick={handleRefuse}
             >
-              Refuser
+              {t("cookie.refuse")}
             </Button>
             <Button
               size="sm"
               onClick={handleAccept}
             >
-              Accepter
+              {t("cookie.accept")}
             </Button>
           </div>
         </div>

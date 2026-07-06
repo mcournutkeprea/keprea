@@ -100,13 +100,13 @@ const Solutions = () => {
             <Lightbulb className="w-6 h-6 text-primary" aria-hidden="true" />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-bold text-foreground mb-1">Pourquoi le biocontrôle ?</h3>
+            <h3 className="text-lg font-bold text-foreground mb-1">{t("solutions.banner.title")}</h3>
             <p className="text-sm text-muted-foreground max-w-xl leading-relaxed">
-              Cadre réglementaire, enjeux agronomiques et données clés : à lire avant de choisir votre solution.
+              {t("solutions.banner.desc")}
             </p>
           </div>
           <span className="inline-flex items-center gap-3 rounded-full bg-primary text-white pl-5 pr-2 py-2 font-semibold text-sm flex-shrink-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/banner:bg-primary/90">
-            Découvrir
+            {t("solutions.banner.cta")}
             <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover/banner:translate-x-0.5 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
             </span>
@@ -125,7 +125,7 @@ const Solutions = () => {
               onClick={() => handleNav(card.path)}
               role="button"
               tabIndex={0}
-              aria-label={`Découvrir la gamme ${t(card.titleKey)}`}
+              aria-label={`${t("solutions.card.ariaLabel")} ${t(card.titleKey)}`}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();

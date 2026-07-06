@@ -7,81 +7,37 @@ import GradientCTA from "@/components/GradientCTA";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, articleJsonLd } from "@/lib/schema";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const franceStats = [
-  {
-    value: "-50 %",
-    desc: (
-      <>
-        Objectif de réduction de l'usage et des risques des produits phytopharmaceutiques
-        fixé par la stratégie <strong className="text-foreground">Ecophyto 2030</strong>
-        {" "}d'ici 2030, par rapport à la moyenne 2011-2013 — la déclinaison française de la
-        directive européenne 2009/128/CE sur l'utilisation durable des pesticides (stratégie
-        publiée le 6 mai 2024).
-      </>
-    ),
-  },
-  {
-    value: "-20 %",
-    desc: "Baisse déjà constatée de l'usage des produits phytopharmaceutiques de synthèse en 2022 par rapport à la moyenne 2015-2017, première baisse depuis 2009 (données Ecophyto II+).",
-  },
-  {
-    value: "770",
-    desc: "Produits de biocontrôle homologués en France en janvier 2025, couvrant 56 % des usages phytosanitaires (source : ministère de l'Agriculture).",
-  },
-  {
-    value: "30 %",
-    desc: "Part de marché visée par la filière biocontrôle en France à l'horizon 2030, contre environ 12 % en 2024 (Baromètre du Biocontrôle, Alliance Biocontrôle, 2025).",
-  },
+  { value: "-50 %", descKey: "pourquoi.franceStat1.desc" },
+  { value: "-20 %", descKey: "pourquoi.franceStat2.desc" },
+  { value: "770", descKey: "pourquoi.franceStat3.desc" },
+  { value: "30 %", descKey: "pourquoi.franceStat4.desc" },
 ];
 
 const europeStats = [
-  {
-    value: "1,6 Md€",
-    desc: "Valeur du marché européen du biocontrôle en 2023, soit près de 10 % du marché européen de la protection des cultures (source : IBMA, association professionnelle européenne du secteur, enquête membres 2024).",
-  },
-  {
-    value: "+10 %/an",
-    desc: "Croissance annuelle du marché européen du biocontrôle, contre environ 4 % par an pour le marché conventionnel de la protection des cultures (source : IBMA, 2024).",
-  },
+  { value: "1,6 Md€", descKey: "pourquoi.europeStat1.desc" },
+  { value: "+10 %/an", descKey: "pourquoi.europeStat2.desc" },
 ];
 
-const faqItems = [
-  {
-    question: "Qu'est-ce que le biocontrôle, au sens de la loi française ?",
-    answer:
-      "L'article L.253-6 du Code rural définit les produits de biocontrôle comme l'ensemble des agents et produits utilisant des mécanismes naturels dans le cadre de la lutte intégrée contre les ennemis des cultures. Quatre catégories sont reconnues : les macro-organismes auxiliaires, les micro-organismes, les médiateurs chimiques (phéromones, kairomones) et les substances naturelles d'origine végétale, animale ou minérale. La liste officielle des produits de biocontrôle est publiée et mise à jour chaque mois au Bulletin officiel du ministère de l'Agriculture.",
-  },
-  {
-    question: "Le biocontrôle est-il aussi efficace que les produits phytosanitaires classiques ?",
-    answer:
-      "L'efficacité dépend du couple bioagresseur/culture et du positionnement dans l'itinéraire technique : le biocontrôle agit le plus souvent en prévention ou en curatif précoce, avec une fenêtre d'application différente de celle des produits chimiques de synthèse. Utilisé au bon moment et en combinaison avec d'autres leviers agronomiques (rotation, auxiliaires, prophylaxie), il constitue une alternative crédible, en particulier là où les substances actives conventionnelles disparaissent du marché.",
-  },
-  {
-    question: "Le biocontrôle est-il autorisé en agriculture biologique ?",
-    answer:
-      "La majorité des produits de biocontrôle sont compatibles avec le règlement (UE) 2018/848 relatif à la production biologique, sous réserve de vérifier l'inscription de chaque produit à l'annexe correspondante et son autorisation de mise sur le marché (AMM) en France. Les solutions Keprea sont développées pour répondre à ces exigences ; nous recommandons systématiquement de vérifier la compatibilité avec votre organisme certificateur avant emploi.",
-  },
-  {
-    question: "Pourquoi utiliser des insectes comme matière première en biocontrôle ?",
-    answer:
-      "Les insectes comme Hermetia illucens (mouche soldat noire) ou les vers de farine produisent naturellement des molécules de défense (peptides antimicrobiens, chitine, acides aminés) développées au cours de leur évolution pour résister à leurs propres agresseurs (bactéries, champignons). L'élevage contrôlé permet d'obtenir une matière première standardisée, traçable et disponible toute l'année, contrairement à certaines ressources végétales soumises aux aléas de récolte.",
-  },
-  {
-    question: "Le biocontrôle est-il reconnu au niveau européen, ou seulement en France ?",
-    answer:
-      "Le biocontrôle en tant que catégorie juridique nommée est une spécificité française (article L.253-6 du Code rural), mais le principe repose sur un socle européen commun : le règlement (CE) n° 1107/2009 encadre la mise sur le marché des produits phytopharmaceutiques dans toute l'Union et définit les substances actives à faible risque, sur lesquelles s'appuient les cadres nationaux. La filière professionnelle européenne (IBMA) utilise une classification proche de celle du droit français (micro-organismes, invertébrés, médiateurs chimiques, substances naturelles), et le marché européen du biocontrôle représentait 1,6 milliard d'euros en 2023, avec une croissance annuelle d'environ 10 %.",
-  },
-  {
-    question: "Quelle est la différence entre biocontrôle, biostimulant et biofertilisant ?",
-    answer:
-      "Le biocontrôle vise la protection des cultures contre les bioagresseurs (insectes ravageurs, champignons pathogènes). Le biostimulant améliore la nutrition, la tolérance au stress abiotique ou les caractéristiques qualitatives de la culture, sans action directe contre les bioagresseurs. Le biofertilisant apporte ou améliore la disponibilité des éléments nutritifs. Les trois catégories relèvent de cadres réglementaires distincts, et une même gamme de produits peut combiner plusieurs de ces fonctions.",
-  },
+const faqKeys = [
+  { questionKey: "pourquoi.faq1.q", answerKey: "pourquoi.faq1.a" },
+  { questionKey: "pourquoi.faq2.q", answerKey: "pourquoi.faq2.a" },
+  { questionKey: "pourquoi.faq3.q", answerKey: "pourquoi.faq3.a" },
+  { questionKey: "pourquoi.faq4.q", answerKey: "pourquoi.faq4.a" },
+  { questionKey: "pourquoi.faq5.q", answerKey: "pourquoi.faq5.a" },
+  { questionKey: "pourquoi.faq6.q", answerKey: "pourquoi.faq6.a" },
 ];
 
 
 const PourquoiBiocontrole = () => {
+  const { t } = useLanguage();
   const [statsScope, setStatsScope] = useState<"france" | "europe">("france");
+  const faqItems = faqKeys.map(({ questionKey, answerKey }) => ({
+    question: t(questionKey),
+    answer: t(answerKey),
+  }));
 
   return (
   <div className="min-h-screen bg-background flex flex-col">
@@ -123,12 +79,10 @@ const PourquoiBiocontrole = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Pourquoi le Biocontrôle ?
+            {t("pourquoi.hero.title")}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Face au retrait progressif des pesticides chimiques et aux exigences croissantes
-            des filières et consommateurs, le biocontrôle s'impose comme la réponse
-            agronomique et économique durable.
+            {t("pourquoi.hero.lead")}
           </p>
         </div>
       </section>
@@ -138,40 +92,27 @@ const PourquoiBiocontrole = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              Qu'est-ce que le biocontrôle ?
+              {t("pourquoi.def.title")}
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Le biocontrôle regroupe l'ensemble des méthodes de protection des végétaux
-              utilisant des <strong className="text-foreground">mécanismes et agents naturels</strong>,
-              en alternative aux pesticides chimiques de synthèse.
+              {t("pourquoi.def.intro")}
             </p>
             <div className="grid sm:grid-cols-2 gap-6 mb-6">
               <div className="bg-background rounded-xl p-5 border border-border">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">En France</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">{t("pourquoi.def.france.title")}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  L'article L.253-6 du Code rural donne une définition légale précise : les agents
-                  et produits utilisant des mécanismes naturels dans le cadre de la lutte intégrée
-                  contre les ennemis des cultures, répartis en quatre catégories détaillées
-                  ci-dessous. La liste officielle est publiée et actualisée chaque mois au Bulletin
-                  officiel du ministère de l'Agriculture, avec ses propres procédures d'homologation.
+                  {t("pourquoi.def.france.text")}
                 </p>
               </div>
               <div className="bg-background rounded-xl p-5 border border-border">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">En Europe</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">{t("pourquoi.def.europe.title")}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Le règlement (CE) n° 1107/2009 encadre la mise sur le marché des produits
-                  phytopharmaceutiques dans toute l'Union et introduit la notion de « substances
-                  actives à faible risque », sur laquelle s'appuient les cadres nationaux. Chaque
-                  État membre applique ce règlement via sa propre procédure nationale d'autorisation
-                  de mise sur le marché (AMM).
+                  {t("pourquoi.def.europe.text")}
                 </p>
               </div>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Keprea développe des solutions à base d'<strong className="text-foreground">insectes</strong>,
-              exploitant leurs propriétés biologiques uniques pour créer des produits efficaces,
-              traçables et conformes aux cahiers des charges agriculture biologique
-              (règlement (UE) 2018/848).
+              {t("pourquoi.def.outro")}
             </p>
           </div>
         </div>
@@ -181,46 +122,38 @@ const PourquoiBiocontrole = () => {
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
-            Les 4 catégories reconnues par la loi
+            {t("pourquoi.categories.title")}
           </h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            Le Code rural (article L.253-6) distingue quatre familles d'agents et de produits
-            de biocontrôle, chacune avec ses propres mécanismes d'action — une classification
-            qui recoupe celle utilisée par la filière au niveau européen (micro-organismes,
-            invertébrés, médiateurs chimiques, substances naturelles, selon l'IBMA, l'association
-            professionnelle du secteur en Europe).
+            {t("pourquoi.categories.subtitle")}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-background rounded-2xl p-6 border border-border">
               <Feather className="w-6 h-6 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Macro-organismes</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat1.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Insectes, acariens ou nématodes auxiliaires introduits pour réguler les
-                populations de ravageurs (ex. : coccinelles contre les pucerons).
+                {t("pourquoi.cat1.desc")}
               </p>
             </div>
             <div className="bg-background rounded-2xl p-6 border border-border">
               <Microscope className="w-6 h-6 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Micro-organismes</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat2.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Bactéries, champignons ou virus utilisés comme agents de lutte biologique
-                contre les maladies et ravageurs des cultures.
+                {t("pourquoi.cat2.desc")}
               </p>
             </div>
             <div className="bg-background rounded-2xl p-6 border border-border">
               <TestTube className="w-6 h-6 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Médiateurs chimiques</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat3.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Phéromones et kairomones qui perturbent le comportement des ravageurs
-                (piégeage, confusion sexuelle) sans les détruire directement.
+                {t("pourquoi.cat3.desc")}
               </p>
             </div>
             <div className="bg-background rounded-2xl p-6 border border-border">
               <Bug className="w-6 h-6 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Substances naturelles</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat4.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                D'origine végétale, animale ou minérale, c'est dans cette catégorie que
-                s'inscrivent les extraits d'insectes développés par Keprea.
+                {t("pourquoi.cat4.desc")}
               </p>
             </div>
           </div>
@@ -231,15 +164,13 @@ const PourquoiBiocontrole = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
-            Un contexte réglementaire et économique qui accélère, en France comme en Europe
+            {t("pourquoi.context.title")}
           </h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
-            Le retrait progressif des substances actives conventionnelles et la structuration
-            de la filière biocontrôle transforment rapidement le marché de la protection
-            des cultures, à l'échelle française et européenne.
+            {t("pourquoi.context.subtitle")}
           </p>
 
-          <div role="tablist" aria-label="Périmètre des statistiques" className="flex justify-center gap-2 mb-8">
+          <div role="tablist" aria-label={t("pourquoi.tabs.ariaLabel")} className="flex justify-center gap-2 mb-8">
             <button
               type="button"
               role="tab"
@@ -251,7 +182,7 @@ const PourquoiBiocontrole = () => {
                   : "bg-background border border-border text-muted-foreground hover:text-foreground"
               }`}
             >
-              France
+              {t("pourquoi.tabs.france")}
             </button>
             <button
               type="button"
@@ -264,7 +195,7 @@ const PourquoiBiocontrole = () => {
                   : "bg-background border border-border text-muted-foreground hover:text-foreground"
               }`}
             >
-              Europe
+              {t("pourquoi.tabs.europe")}
             </button>
           </div>
 
@@ -272,7 +203,7 @@ const PourquoiBiocontrole = () => {
             {franceStats.map((item, i) => (
               <div key={i} className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
                 <div className="text-3xl font-bold text-primary mb-2">{item.value}</div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
               </div>
             ))}
           </div>
@@ -288,14 +219,10 @@ const PourquoiBiocontrole = () => {
           <Accordion type="single" collapsible>
             <AccordionItem value="sources" className="border-none">
               <AccordionTrigger className="justify-center gap-2 text-xs text-muted-foreground hover:no-underline py-0">
-                Sources et méthodologie
+                {t("pourquoi.sources.trigger")}
               </AccordionTrigger>
               <AccordionContent className="text-xs text-muted-foreground text-center italic pt-3">
-                Chiffres tiers cités à titre indicatif, sources : agriculture.gouv.fr (stratégie Écophyto 2030,
-                mai 2024), Alliance Biocontrôle (Baromètre du Biocontrôle 2024), Légifrance (article L.253-6
-                du Code rural, règlement (CE) n° 1107/2009, directive 2009/128/CE), IBMA (enquête membres 2024,
-                marché européen du biocontrôle). Ces données évoluent chaque année ; nous les mettons à jour
-                lors de nos revues de contenu périodiques.
+                {t("pourquoi.sources.content")}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -306,38 +233,34 @@ const PourquoiBiocontrole = () => {
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            3 raisons d'adopter le biocontrôle
+            {t("pourquoi.reasons.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <ShieldCheck className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Conformité réglementaire</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t("pourquoi.reason1.title")}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Règlement européen (CE) 1107/2009, plan Ecophyto 2030, retrait des substances
-                actives critiques, exigences HVE et AB : le biocontrôle sécurise votre conformité
-                aujourd'hui et demain, en France comme dans le reste de l'UE.
+                {t("pourquoi.reason1.desc")}
               </p>
             </div>
             <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Valeur commerciale</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t("pourquoi.reason2.title")}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Les filières premium, grande distribution et export exigent des preuves
-                de pratiques durables. Le biocontrôle est un argument de vente concret.
+                {t("pourquoi.reason2.desc")}
               </p>
             </div>
             <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <Leaf className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Agronomie durable</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t("pourquoi.reason3.title")}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Préservation des auxiliaires naturels, maintien de la biodiversité du sol,
-                réduction des résidus sur les productions : des bénéfices mesurables long terme.
+                {t("pourquoi.reason3.desc")}
               </p>
             </div>
           </div>
@@ -348,35 +271,15 @@ const PourquoiBiocontrole = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            L'approche Keprea
+            {t("pourquoi.approach.title")}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              {
-                icon: Bug,
-                title: "Matière première insecte",
-                desc: "Nos insectes sont élevés dans des conditions contrôlées garantissant la traçabilité et la qualité constante de nos extraits."
-              },
-              {
-                icon: FlaskConical,
-                title: "Extraction innovante",
-                desc: "Nos procédés d'extraction préservent les molécules actives : peptides antimicrobiens, chitine, acides aminés. Une technologie propriétaire développée en France."
-              },
-              {
-                icon: Sprout,
-                title: "Formulations adaptées",
-                desc: "Chaque produit est formulé pour une application terrain optimale : miscibilité eau, stabilité en conditions agricoles, compatibilité avec d'autres intrants."
-              },
-              {
-                icon: Award,
-                title: "Homologations & cahiers des charges",
-                desc: "Nos produits répondent aux exigences de l'agriculture biologique (norme UE 2018/848) et sont développés dans le respect des bonnes pratiques phytosanitaires."
-              },
-              {
-                icon: Tractor,
-                title: "Application en plein champ",
-                desc: "Au-delà de la production, Keprea développe des solutions d'application pensées pour le plein champ, notamment par pulvérisation, afin de rendre compétitive l'utilisation des insectes auxiliaires et des extraits d'insectes à l'échelle de l'exploitation agricole."
-              }
+              { icon: Bug, titleKey: "pourquoi.approach1.title", descKey: "pourquoi.approach1.desc" },
+              { icon: FlaskConical, titleKey: "pourquoi.approach2.title", descKey: "pourquoi.approach2.desc" },
+              { icon: Sprout, titleKey: "pourquoi.approach3.title", descKey: "pourquoi.approach3.desc" },
+              { icon: Award, titleKey: "pourquoi.approach4.title", descKey: "pourquoi.approach4.desc" },
+              { icon: Tractor, titleKey: "pourquoi.approach5.title", descKey: "pourquoi.approach5.desc" },
             ].map((item, i) => (
               <div key={i} className={`flex gap-6${i === 4 ? " md:col-span-2" : ""}`}>
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -396,7 +299,7 @@ const PourquoiBiocontrole = () => {
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Questions fréquentes
+            {t("pourquoi.faq.title")}
           </h2>
           <div className="bg-background rounded-xl border border-border divide-y divide-border px-6">
             <Accordion type="single" collapsible>
@@ -416,10 +319,10 @@ const PourquoiBiocontrole = () => {
       </section>
 
       <GradientCTA
-        title="Prêt à passer au biocontrôle ?"
-        description="Découvrez nos gammes de solutions ou contactez-nous pour un conseil personnalisé."
-        primary={{ label: "Voir nos solutions", to: "/solutions" }}
-        secondary={{ label: "Nous contacter", to: "/contact" }}
+        title={t("pourquoi.cta.title")}
+        description={t("pourquoi.cta.desc")}
+        primary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
+        secondary={{ label: t("contactcta.primary"), to: "/contact" }}
       />
     </main>
 

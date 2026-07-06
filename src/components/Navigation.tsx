@@ -32,9 +32,9 @@ const Navigation = () => {
   const navItems = [
     { id: "solutions", label: t("nav.solutions"), href: "/solutions" },
     { id: "innovation", label: t("nav.innovation"), href: "/innovation" },
-    { id: "production", label: "Production", href: "/notre-production" },
+    { id: "production", label: t("nav.production.short"), href: "/notre-production" },
     { id: "about", label: t("nav.about"), href: "/qui-sommes-nous" },
-    { id: "ressources", label: "Ressources", href: "/ressources" },
+    { id: "ressources", label: t("nav.ressources"), href: "/ressources" },
   ];
 
   const isActive = (href: string | null) => {
@@ -62,7 +62,7 @@ const Navigation = () => {
           <Link to="/" className="shrink-0">
             <img
               src="/lovable-uploads/eprea_Main_Logo.png"
-              alt="Keprea Logo"
+              alt={t("alt.kepreaLogo")}
               className="h-9 w-auto hover:opacity-80 transition-opacity duration-200"
             />
           </Link>
@@ -130,7 +130,7 @@ const Navigation = () => {
           <Link to="/">
             <img
               src="/lovable-uploads/eprea_Main_Logo.png"
-              alt="Keprea Logo"
+              alt={t("alt.kepreaLogo")}
               className="h-10 w-auto"
             />
           </Link>

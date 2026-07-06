@@ -29,21 +29,19 @@ const Innovation = () => {
           className={`mb-12 max-w-2xl reveal${headerVisible ? " is-visible" : ""}`}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-            Pourquoi les insectes ?
+            {t("innovation.eyebrow")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Une source de molécules agricoles unique
+            {t("innovation.heading")}
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed">
-            Les insectes ont co-évolué avec les plantes pendant 400 millions d'années.
-            Ils ont développé des actifs biologiques d'une efficacité que la chimie de synthèse ne peut pas reproduire.
-            Keprea extrait et formule ces substances pour les rendre accessibles aux agriculteurs.
+            {t("innovation.intro")}
           </p>
           <Link
             to="/pourquoi-le-biocontrole"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:opacity-80 transition-opacity mt-4"
           >
-            Pourquoi le biocontrôle ?
+            {t("innovation.link")}
             <span aria-hidden="true">→</span>
           </Link>
         </div>
@@ -74,7 +72,7 @@ const Innovation = () => {
                 className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
                 style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
               >
-                Extraits d'insectes
+                {t("innovation.card1.eyebrow")}
               </span>
 
               <h3 className="text-lg font-bold text-foreground mb-8 leading-snug max-w-[30ch]"
@@ -121,7 +119,7 @@ const Innovation = () => {
                 className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
                 style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
               >
-                Biocontrôle vivant
+                {t("innovation.card2.eyebrow")}
               </span>
 
               <h3

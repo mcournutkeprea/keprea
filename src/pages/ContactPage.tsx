@@ -2,11 +2,25 @@ import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import FieldFeedbackForm from "@/components/FieldFeedbackForm";
 import { MapPin, Mail, Clock, Leaf, ArrowRight } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const ContactPage = () => {
+  const { t } = useLanguage();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState<"contact" | "terrain">(
+    searchParams.get("type") === "terrain" ? "terrain" : "contact"
+  );
+
+  const selectTab = (tab: "contact" | "terrain") => {
+    setActiveTab(tab);
+    setSearchParams(tab === "terrain" ? { type: "terrain" } : {}, { replace: true });
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries.forEach(e => {
@@ -53,13 +67,13 @@ const ContactPage = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="reveal">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3 sm:mb-6">
-                Nous contacter
+                {t("contactpage.eyebrow")}
               </p>
               <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-3 sm:mb-6">
-                Parlons de votre projet
+                {t("contactpage.title")}
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Une question sur nos biosolutions, un essai terrain ou un projet de partenariat ? Notre équipe vous répond sous 48 heures.
+                {t("contactpage.subtitle")}
               </p>
             </div>
           </div>
@@ -71,8 +85,42 @@ const ContactPage = () => {
             <div className="grid lg:grid-cols-5 gap-10 xl:gap-16 items-start">
 
               {/* ── Formulaire ── */}
-              <div className="lg:col-span-3 reveal reveal-delay-1">
-                <ContactForm embedded />
+              <div id="contact-form" className="lg:col-span-3 reveal reveal-delay-1">
+                <div role="tablist" aria-label={t("contactpage.tabsAriaLabel")} className="flex gap-2 mb-5">
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={activeTab === "contact"}
+                    onClick={() => selectTab("contact")}
+                    className={`flex-1 px-5 py-3 rounded-full text-sm font-semibold transition-colors ${
+                      activeTab === "contact"
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-background border border-border text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {t('contact.tabs.contact')}
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={activeTab === "terrain"}
+                    onClick={() => selectTab("terrain")}
+                    className={`flex-1 px-5 py-3 rounded-full text-sm font-semibold transition-colors ${
+                      activeTab === "terrain"
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-background border border-border text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {t('contact.tabs.terrain')}
+                  </button>
+                </div>
+
+                <div role="tabpanel" hidden={activeTab !== "contact"}>
+                  <ContactForm embedded />
+                </div>
+                <div role="tabpanel" hidden={activeTab !== "terrain"}>
+                  <FieldFeedbackForm />
+                </div>
               </div>
 
               {/* ── Panneau d'information ── */}
@@ -83,7 +131,7 @@ const ContactPage = () => {
                   <div className="p-2 rounded-[2rem] bg-muted/40 ring-1 ring-border/60">
                     <div className="bg-background rounded-[calc(2rem-0.375rem)] p-7 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
                       <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
-                        Coordonnées
+                        {t("contactpage.coordinates.title")}
                       </p>
                       <div className="space-y-5">
                         <div className="flex items-start gap-4">
@@ -91,8 +139,8 @@ const ContactPage = () => {
                             <MapPin className="w-4 h-4 text-primary" strokeWidth={1.5} />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-foreground mb-0.5">Siège social</p>
-                            <p className="text-sm text-muted-foreground">Dole (39100), Jura, France</p>
+                            <p className="text-sm font-semibold text-foreground mb-0.5">{t("contactpage.coordinates.hq.label")}</p>
+                            <p className="text-sm text-muted-foreground">{t("footer.location")}</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-4">
@@ -100,7 +148,7 @@ const ContactPage = () => {
                             <Mail className="w-4 h-4 text-primary" strokeWidth={1.5} />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-foreground mb-0.5">Email</p>
+                            <p className="text-sm font-semibold text-foreground mb-0.5">{t("contactpage.coordinates.email.label")}</p>
                             <a
                               href="mailto:contact@keprea.com"
                               className="text-sm text-primary hover:underline transition-colors"
@@ -114,8 +162,8 @@ const ContactPage = () => {
                             <Clock className="w-4 h-4 text-primary" strokeWidth={1.5} />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-foreground mb-0.5">Délai de réponse</p>
-                            <p className="text-sm text-muted-foreground">Sous 48 heures ouvrées</p>
+                            <p className="text-sm font-semibold text-foreground mb-0.5">{t("contactpage.coordinates.responseTime.label")}</p>
+                            <p className="text-sm text-muted-foreground">{t("contactpage.coordinates.responseTime.value")}</p>
                           </div>
                         </div>
                       </div>
@@ -132,22 +180,25 @@ const ContactPage = () => {
                           <Leaf className="w-4 h-4 text-primary" strokeWidth={1.5} />
                         </div>
                         <h2 className="font-semibold text-foreground text-sm leading-tight">
-                          Agriculteur ou<br />conseiller agricole ?
+                          {t("contactpage.farmerCard.title")}
                         </h2>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Nous proposons des essais terrain et des accompagnements techniques.
-                        Mentionnez votre culture et votre région pour un conseil ciblé.
+                        {t("contactpage.farmerCard.desc")}
                       </p>
-                      <a
-                        href="mailto:contact@keprea.com?subject=Demande%20essai%20terrain"
+                      <button
+                        type="button"
+                        onClick={() => {
+                          selectTab("terrain");
+                          document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }}
                         className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-primary group"
                       >
-                        <span>Demander un essai</span>
+                        <span>{t("contactpage.farmerCard.cta")}</span>
                         <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
                           <ArrowRight className="w-3 h-3" strokeWidth={1.5} />
                         </span>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>

@@ -16,31 +16,31 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
-const faqItems = [
-  {
-    q: "En combien de temps les auxiliaires réduisent-ils les populations ravageurs ?",
-    a: "Les auxiliaires commencent à agir en 48 à 72h. La réduction visible des populations ravageurs s'observe généralement entre 7 et 21 jours selon la pression initiale et les conditions climatiques."
-  },
-  {
-    q: "Le biocontrôle vivant est-il efficace en agriculture conventionnelle ?",
-    a: "Oui. Le biocontrôle vivant s'intègre dans tout système de production, conventionnel ou biologique. Il permet souvent de réduire significativement les doses d'insecticides de synthèse, avec des résultats équivalents voire supérieurs."
-  },
-  {
-    q: "Peut-on combiner lâchers d'auxiliaires et biopesticides Keprea ?",
-    a: "Oui, nos produits sont conçus pour fonctionner en programme intégré. Nos biopesticides à base d'extraits d'insectes et les auxiliaires vivants sont complémentaires. Notre équipe technique vous accompagne pour définir un programme cohérent."
-  },
-  {
-    q: "Que faire si les conditions météo ne permettent pas de lâcher à la date prévue ?",
-    a: "Un report de 24 à 48h n'affecte généralement pas l'efficacité du programme, à condition de conserver les auxiliaires dans de bonnes conditions (10°C, obscurité). Au-delà, contactez notre équipe technique pour ajuster le calendrier de lâcher en fonction de la météo et du stade de la culture."
-  },
-  {
-    q: "Faut-il renouveler les lâchers d'auxiliaires chaque saison ?",
-    a: "Oui, dans la grande majorité des cas. Les auxiliaires introduits ne s'établissent pas de façon pérenne sur la parcelle une fois le ravageur cible éliminé, faute de proie disponible, leur population décline naturellement. Un programme de lâchers est donc à reconduire à chaque nouvelle saison culturale, en ajustant les quantités selon la pression observée l'année précédente."
-  },
+const faqKeys = [
+  { questionKey: "bv.faq1.q", answerKey: "bv.faq1.a" },
+  { questionKey: "bv.faq2.q", answerKey: "bv.faq2.a" },
+  { questionKey: "bv.faq3.q", answerKey: "bv.faq3.a" },
+  { questionKey: "bv.faq4.q", answerKey: "bv.faq4.a" },
+  { questionKey: "bv.faq5.q", answerKey: "bv.faq5.a" },
+];
+
+const cropKeys = ["bv.crop1", "bv.crop2", "bv.crop3", "bv.crop4", "bv.crop5", "bv.crop6"];
+
+const stepKeys = [
+  { titleKey: "bv.step1.title", descKey: "bv.step1.desc" },
+  { titleKey: "bv.step2.title", descKey: "bv.step2.desc" },
+  { titleKey: "bv.step3.title", descKey: "bv.step3.desc" },
+  { titleKey: "bv.step4.title", descKey: "bv.step4.desc" },
+  { titleKey: "bv.step5.title", descKey: "bv.step5.desc" },
+  { titleKey: "bv.step6.title", descKey: "bv.step6.desc" },
 ];
 
 const BiocontroleVivant = () => {
   const { t } = useLanguage();
+  const faqItems = faqKeys.map(({ questionKey, answerKey }) => ({
+    q: t(questionKey),
+    a: t(answerKey),
+  }));
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -89,7 +89,7 @@ const BiocontroleVivant = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="max-w-2xl mx-auto mb-10 text-center">
               <p className="text-base text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Le principe :</strong> nous élevons des insectes prédateurs naturels que vous libérez sur vos parcelles. Ils chassent et éliminent les ravageurs cibles : sans intervention chimique, sans résidu, sans développement de résistance.
+                {t("bv.principle")}
               </p>
             </div>
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
@@ -103,14 +103,14 @@ const BiocontroleVivant = () => {
                 { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title'), desc: t('biocontrole.pest4.desc') },
               ].map(({ img, alt, title, desc }) => (
                 <div key={title} className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
-                  <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-3">Ravageur cible</p>
+                  <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-3">{t("bv.targetPest")}</p>
                   <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-4">
                     <div className="w-full h-full rounded-full overflow-hidden border-2 border-primary/20">
                       <img src={img} alt={alt} className="w-full h-full object-cover" />
                     </div>
                     <span
                       className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-primary border-2 border-background shadow-sm"
-                      title="Ciblé par nos solutions de bioprotection"
+                      title={t("bv.targetedTooltip")}
                       aria-hidden="true"
                     >
                       <ShieldCheck className="w-4 h-4 text-primary-foreground" />
@@ -120,7 +120,7 @@ const BiocontroleVivant = () => {
                   <p className="text-xs text-muted-foreground mb-3">{desc}</p>
                   <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2.5 py-1 rounded-full">
                     <ShieldCheck className="w-3 h-3" aria-hidden="true" />
-                    Neutralisé par Keprea
+                    {t("bv.neutralized")}
                   </span>
                 </div>
               ))}
@@ -142,7 +142,7 @@ const BiocontroleVivant = () => {
                   badge: (
                     <img
                       src={logoAb}
-                      alt="Logo Agriculture Biologique (AB)"
+                      alt={t("alt.logoAB")}
                       className="h-6 w-6 flex-shrink-0 object-contain"
                     />
                   ),
@@ -155,23 +155,15 @@ const BiocontroleVivant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Cultures cibles</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t("bv.crops.title")}</h2>
             <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-              Nos auxiliaires entomophages s'adaptent aux principales cultures agricoles françaises,
-              en plein champ comme sous serre.
+              {t("bv.crops.subtitle")}
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {[
-                "Maïs : lutte contre la pyrale (Ostrinia nubilalis)",
-                "Grandes cultures : betterave, blé, colza (pucerons)",
-                "Maraîchage sous serre : tomate, poivron, concombre",
-                "Maraîchage plein champ : laitue, courgette, aubergine, carotte, oignon, poivrons",
-                "Arboriculture fruitière : pomme, poire, cerise, kiwi",
-                "Viticulture : tordeuse de la vigne (ver de la grappe), vecteur de la flavescence dorée",
-              ].map((culture) => (
-                <div key={culture} className="flex items-start gap-3">
+              {cropKeys.map((key) => (
+                <div key={key} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-foreground">{culture}</span>
+                  <span className="text-base text-foreground">{t(key)}</span>
                 </div>
               ))}
             </div>
@@ -180,58 +172,49 @@ const BiocontroleVivant = () => {
 
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("bv.results.title")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">70–90%</div>
-                <div className="text-sm text-muted-foreground">de réduction des ravageurs en 14 jours</div>
+                <div className="text-sm text-muted-foreground">{t("bv.results.stat1.label")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">48–72h</div>
-                <div className="text-sm text-muted-foreground">délai d'action après le lâcher</div>
+                <div className="text-sm text-muted-foreground">{t("bv.results.stat2.label")}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">0 résidu</div>
-                <div className="text-sm text-muted-foreground">chimique de synthèse</div>
-                <div className="text-xs text-muted-foreground mt-1">Éligible AB, vérifier avec votre certificateur</div>
+                <div className="text-3xl font-bold text-primary mb-1">{t("bv.results.stat3.value")}</div>
+                <div className="text-sm text-muted-foreground">{t("bv.results.stat3.label")}</div>
+                <div className="text-xs text-muted-foreground mt-1">{t("bv.results.stat3.sub")}</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
-              Données internes Keprea, essais en parcelles pilotes 2023–2024. Résultats variables selon
-              l'espèce ravageur, la pression parasitaire et les conditions climatiques, communiqués à
-              titre indicatif, hors valeur d'engagement contractuel.
+              {t("bv.results.disclaimer")}
             </p>
           </div>
         </section>
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Mode d'emploi</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t("bv.howto.title")}</h2>
             <p className="text-muted-foreground text-center mb-4 max-w-2xl mx-auto">
-              Un <strong className="text-foreground">lâcher</strong> consiste à ouvrir des sachets ou boîtes contenant des auxiliaires vivants et à les déposer sur les plantes ou dans les rangs. Voici le déroulé type.
+              {t("bv.howto.intro")}
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-lg px-5 py-4 mb-4 max-w-2xl mx-auto text-sm text-muted-foreground">
-              <strong className="text-foreground">Format de livraison :</strong> sachets ou tubes de 250 à 1 000 individus selon l'espèce. Conservation : 24–48h à 10°C, à l'abri de la lumière directe. Application le jour de réception recommandée pour préserver le taux de survie des auxiliaires au lâcher.
+              {t("bv.howto.delivery")}
             </div>
             <p className="text-sm text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-              <strong className="text-foreground">En résumé :</strong> diagnostiquer → planifier → lâcher tôt le matin → éviter les insecticides 48h avant et après → observer à J+7.
+              {t("bv.howto.summary")}
             </p>
             <div className="space-y-6">
-              {[
-                { step: 1, title: "Diagnostic ravageur", desc: "Identifier l'espèce ravageur, évaluer la pression parasitaire et choisir l'auxiliaire adapté à votre situation culturale." },
-                { step: 2, title: "Planification des lâchers", desc: "Lâchers préventifs en début de saison dès apparition des premiers foyers, ou curatifs dès observation du ravageur cible." },
-                { step: 3, title: "Méthodes de distribution", desc: "Lâcher manuel (sachets ou boîtes), ou à l'aide d'un pulvérisateur ou d'un atomiseur adapté pour les formulations sur support inerte. L'application par drone est également une piste suivie par la filière." },
-                { step: 4, title: "Conditions d'application", desc: "Libérer les auxiliaires aux heures fraîches (matin ou soir), répartir de manière homogène sur la parcelle." },
-                { step: 5, title: "Précautions phytosanitaires", desc: "Éviter tout insecticide à large spectre dans les 48h avant et après le lâcher pour protéger les auxiliaires." },
-                { step: 6, title: "Suivi et évaluation", desc: "Observer l'évolution des populations ravageurs 7 à 14 jours après le lâcher. Un suivi régulier permet d'ajuster le programme." },
-              ].map(({ step, title, desc }) => (
-                <div key={step} className="flex gap-5">
+              {stepKeys.map(({ titleKey, descKey }, i) => (
+                <div key={i} className="flex gap-5">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
-                    {step}
+                    {i + 1}
                   </div>
                   <div className="pt-1">
-                    <h3 className="font-semibold text-foreground mb-1">{title}</h3>
-                    <p className="text-muted-foreground">{desc}</p>
+                    <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
+                    <p className="text-muted-foreground">{t(descKey)}</p>
                   </div>
                 </div>
               ))}
@@ -241,7 +224,7 @@ const BiocontroleVivant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("bv.faq.title")}</h2>
             <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
               <Accordion type="single" collapsible>
                 {faqItems.map(({ q, a }, i) => (
@@ -261,40 +244,40 @@ const BiocontroleVivant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">{t("bv.feedback.title")}</h2>
             <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
-              Vous utilisez nos auxiliaires ? Votre retour d'expérience aide d'autres agriculteurs à décider.
+              {t("bv.feedback.subtitle")}
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
               <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
-                Partager votre expérience avec nos auxiliaires →
+                {t("bv.feedback.link")}
               </Link>
             </div>
           </div>
         </section>
 
         <GradientCTA
-          title="Prêt à protéger vos cultures naturellement ?"
-          description="Contactez notre équipe technique pour un conseil personnalisé et un programme de bioprotection adapté à votre exploitation."
-          primary={{ label: "Demander un conseil", to: "/contact" }}
-          secondary={{ label: "Pourquoi le biocontrôle ?", to: "/pourquoi-le-biocontrole" }}
+          title={t("bv.cta.title")}
+          description={t("bv.cta.desc")}
+          primary={{ label: t("bv.cta.primary"), to: "/contact" }}
+          secondary={{ label: t("innovation.link"), to: "/pourquoi-le-biocontrole" }}
         />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Complétez votre programme avec nos autres solutions</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("bv.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Biopesticides</h3>
-                <p className="text-sm text-muted-foreground">Extraits d'insectes pour une protection foliaire complémentaire</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.biopesticides.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.biopesticides.desc")}</p>
               </Link>
               <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Boosters de croissance</h3>
-                <p className="text-sm text-muted-foreground">Biostimulants pour renforcer la vigueur et la résistance des cultures</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.boosters.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.boosters.desc")}</p>
               </Link>
               <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Biofertilisant</h3>
-                <p className="text-sm text-muted-foreground">Fertea432 pour améliorer la fertilité et la structure du sol</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.biofertilisant.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.biofertilisant.desc")}</p>
               </Link>
             </div>
           </div>

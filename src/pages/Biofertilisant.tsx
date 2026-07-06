@@ -12,35 +12,34 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
-const faqItems = [
-  {
-    q: "Fertea432 peut-il remplacer les engrais minéraux ?",
-    a: "Fertea432 enrichit la matière organique du sol et améliore sa structure. Il peut remplacer un apport d'engrais minéral, en particulier en agriculture biologique où il constitue la base de la fertilisation, ou l'accompagner en conventionnel pour réduire les doses d'engrais minéraux de synthèse et améliorer durablement la structure du sol. Il améliore par ailleurs la solubilisation du phosphore déjà présent dans le sol, le rendant plus disponible pour la plante."
-  },
-  {
-    q: "Puis-je épandre Fertea432 en contact direct avec les semences ?",
-    a: "Oui, sans risque. Fertea432 est un biofertilisant à libération lente : il ne contient pas d'azote minéral concentré susceptible de brûler les racines ou les semences. Son application est sécurisée même en contact direct."
-  },
-  {
-    q: "Comment Fertea432 améliore-t-il la structure du sol ?",
-    a: "En pratique : votre sol retient mieux l'eau, les racines se développent plus facilement et le travail du sol devient progressivement moins énergivore. Avec 85% de matière organique, Fertea432 stimule l'activité de la faune du sol (vers de terre, bactéries, champignons mycorhiziens) et améliore la rétention en eau, la porosité et la capacité d'échange cationique (CEC) sur le long terme."
-  },
-  {
-    q: "Quelle est la durée de conservation de Fertea432 avant épandage ?",
-    a: "Stocké au sec, à l'abri de l'humidité et des rongeurs, dans son conditionnement d'origine (big-bag ou sac fermé), Fertea432 se conserve plusieurs mois sans perte significative de valeur agronomique. Éviter le stockage prolongé en extérieur sans protection contre les intempéries."
-  },
-  {
-    q: "Fertea432 est-il adapté à tous les types de sol ?",
-    a: "Fertea432 convient à la majorité des types de sol agricole français, y compris les sols pauvres en matière organique ou en cours de reconversion vers l'agriculture biologique."
-  },
-  {
-    q: "Quelle différence entre Fertea432 et un compost classique ?",
-    a: "Contrairement à un compost dont la composition varie selon les intrants et le processus de compostage, Fertea432 présente une composition standardisée et constante (85% de matière organique, NPK 4-3-2) grâce à une matière première homogène issue de l'élevage d'insectes contrôlé. C'est aussi un produit sec et inodore, facile à intégrer dans un épandeur ou à épandre à la main, sans les contraintes de manipulation d'un compost humide. Cette régularité facilite le calcul des doses et la planification de la fertilisation d'une campagne à l'autre."
-  },
+const faqKeys = [
+  { questionKey: "biofertilisant.faq1.q", answerKey: "biofertilisant.faq1.a" },
+  { questionKey: "biofertilisant.faq2.q", answerKey: "biofertilisant.faq2.a" },
+  { questionKey: "biofertilisant.faq3.q", answerKey: "biofertilisant.faq3.a" },
+  { questionKey: "biofertilisant.faq4.q", answerKey: "biofertilisant.faq4.a" },
+  { questionKey: "biofertilisant.faq5.q", answerKey: "biofertilisant.faq5.a" },
+  { questionKey: "biofertilisant.faq6.q", answerKey: "biofertilisant.faq6.a" },
+];
+
+const cropKeys = [
+  "biofertilisant.crop1", "biofertilisant.crop2", "biofertilisant.crop3",
+  "biofertilisant.crop4", "biofertilisant.crop5", "biofertilisant.crop6",
+];
+
+const stepKeys = [
+  { titleKey: "biofertilisant.step1.title", descKey: "biofertilisant.step1.desc" },
+  { titleKey: "biofertilisant.step2.title", descKey: "biofertilisant.step2.desc" },
+  { titleKey: "biofertilisant.step3.title", descKey: "biofertilisant.step3.desc" },
+  { titleKey: "biofertilisant.step4.title", descKey: "biofertilisant.step4.desc" },
+  { titleKey: "biofertilisant.step5.title", descKey: "biofertilisant.step5.desc" },
 ];
 
 const Biofertilisant = () => {
   const { t } = useLanguage();
+  const faqItems = faqKeys.map(({ questionKey, answerKey }) => ({
+    q: t(questionKey),
+    a: t(answerKey),
+  }));
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -83,21 +82,21 @@ const Biofertilisant = () => {
             <h1 className="text-4xl font-bold text-white">{t('biofertilisant.title')}</h1>
             <p className="text-xl text-white/90 mt-2">{t('biofertilisant.subtitle')}</p>
           </div>
-          <img src={logoAb} alt="Agriculture Biologique" className="absolute bottom-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-10" />
+          <img src={logoAb} alt={t("alt.logoAB")} className="absolute bottom-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-10" />
         </header>
 
         <section className="pt-10 pb-16 px-4">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-2xl font-bold text-primary mb-2">Composition certifiée Fertea432</h2>
+            <h2 className="text-2xl font-bold text-primary mb-2">{t("biofertilisant.composition.title")}</h2>
             <p className="text-sm text-muted-foreground mb-8">
-              Résultats issus d'une étude scientifique publiée dans Nature :{" "}
+              {t("biofertilisant.composition.studyIntro")}{" "}
               <a
                 href="https://www.nature.com/articles/s41598-025-87075-8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary underline underline-offset-2 hover:opacity-80"
               >
-                consulter la publication
+                {t("biofertilisant.composition.studyLink")}
               </a>
               .
             </p>
@@ -120,11 +119,11 @@ const Biofertilisant = () => {
                 <div className="text-center sm:text-left">
                   <div className="text-7xl font-bold leading-none mb-2 text-primary">85%</div>
                   <div className="text-xl font-semibold text-foreground">{t('biofertilisant.organic')}</div>
-                  <p className="text-muted-foreground mt-2 max-w-sm">Disponibilité rapide de l'azote, enrichissement progressif du sol sur plusieurs années. Aucun risque de brûlure racinaire, même en cas d'application proche du semis ou de la plantation.</p>
+                  <p className="text-muted-foreground mt-2 max-w-sm">{t("biofertilisant.organicMatter.desc")}</p>
                 </div>
                 <div className="sm:ml-auto text-sm text-muted-foreground text-center sm:text-right">
-                  <p>Contrairement aux engrais minéraux concentrés (ex. NPK 15-15-15),</p>
-                  <p className="mt-1">Fertea432 favorise les cycles naturels du sol</p>
+                  <p>{t("biofertilisant.organicMatter.compare1")}</p>
+                  <p className="mt-1">{t("biofertilisant.organicMatter.compare2")}</p>
                 </div>
               </div>
             </div>
@@ -162,23 +161,15 @@ const Biofertilisant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Cultures cibles</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t("biofertilisant.crops.title")}</h2>
             <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-              Fertea432 s'applique sur l'ensemble des grandes cultures et productions spécialisées,
-              en agriculture biologique comme conventionnelle.
+              {t("biofertilisant.crops.subtitle")}
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {[
-                "Grandes cultures : blé, maïs, colza, tournesol, betterave",
-                "Légumineuses : soja, pois, féverole",
-                "Maraîchage : tomate, courgette, poivron, laitue, aubergine, carotte, oignon",
-                "Arboriculture : pommier, poirier, cerisier, vigne",
-                "Prairies et cultures fourragères",
-                "Toutes cultures en agriculture biologique (AB)",
-              ].map((culture) => (
-                <div key={culture} className="flex items-start gap-3">
+              {cropKeys.map((key) => (
+                <div key={key} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-foreground">{culture}</span>
+                  <span className="text-base text-foreground">{t(key)}</span>
                 </div>
               ))}
             </div>
@@ -187,22 +178,16 @@ const Biofertilisant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("biofertilisant.howto.title")}</h2>
             <div className="space-y-6">
-              {[
-                { step: 1, title: "Dosage et conditionnement", desc: "2 à 3 tonnes par hectare selon la culture, l'analyse de sol et les objectifs de fertilité, ou une poignée par plant en application localisée. Disponible en big-bags de 500 kg et sacs de 25 kg, contactez-nous pour le prix à la tonne selon volume." },
-                { step: 2, title: "Moment d'application", desc: "Avant le semis (idéalement 2 à 4 semaines avant, pour une pré-décomposition optimale) ou après le semis, lors de la plantation ou après la plantation." },
-                { step: 3, title: "Incorporation au sol", desc: "Un griffage superficiel du sol après épandage optimise la vitesse d'absorption des nutriments. Recommandé mais pas indispensable : un simple épandage en surface reste efficace." },
-                { step: 4, title: "Compatibilité", desc: "Compatible avec d'autres amendements organiques. Peut compléter un programme de fertilisation conventionnel ou biologique." },
-                { step: 5, title: "Fréquence d'application", desc: "Une application par an maintient et améliore la fertilité du sol. Le taux de matière organique augmente progressivement sur plusieurs années." },
-              ].map(({ step, title, desc }) => (
-                <div key={step} className="flex gap-5">
+              {stepKeys.map(({ titleKey, descKey }, i) => (
+                <div key={i} className="flex gap-5">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
-                    {step}
+                    {i + 1}
                   </div>
                   <div className="pt-1">
-                    <h3 className="font-semibold text-foreground mb-1">{title}</h3>
-                    <p className="text-muted-foreground">{desc}</p>
+                    <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
+                    <p className="text-muted-foreground">{t(descKey)}</p>
                   </div>
                 </div>
               ))}
@@ -212,28 +197,26 @@ const Biofertilisant = () => {
 
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("biofertilisant.results.title")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">+20%</div>
-                <div className="text-sm text-muted-foreground">sur la biomasse aérienne et racinaire du colza</div>
+                <div className="text-sm text-muted-foreground">{t("biofertilisant.results.stat1.label")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">+18%</div>
-                <div className="text-sm text-muted-foreground">sur l'activité bactérienne du sol</div>
+                <div className="text-sm text-muted-foreground">{t("biofertilisant.results.stat2.label")}</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
-              Données internes Keprea, mesurées selon des méthodes d'analyse de sol
-              inspirées des référentiels Comifer. Résultats variables selon le type de sol et l'historique
-              cultural, communiqués à titre indicatif.
+              {t("biofertilisant.results.disclaimer")}
             </p>
           </div>
         </section>
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("biofertilisant.faq.title")}</h2>
             <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
               <Accordion type="single" collapsible>
                 {faqItems.map(({ q, a }, i) => (
@@ -253,13 +236,13 @@ const Biofertilisant = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">{t("biofertilisant.feedback.title")}</h2>
             <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
-              Vous utilisez Fertea432 ? Votre retour d'expérience aide d'autres agriculteurs à décider.
+              {t("biofertilisant.feedback.subtitle")}
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
               <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
-                Partager votre expérience avec Fertea432 →
+                {t("biofertilisant.feedback.link")}
               </Link>
             </div>
           </div>
@@ -269,24 +252,24 @@ const Biofertilisant = () => {
           title={t('biofertilisant.cta.title')}
           description={t('biofertilisant.cta.desc')}
           primary={{ label: t('product.contact'), to: "/contact" }}
-          secondary={{ label: "Notre processus de production", to: "/notre-production" }}
+          secondary={{ label: t("biofertilisant.cta.secondary"), to: "/notre-production" }}
         />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Complétez votre programme avec nos autres solutions</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("biofertilisant.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Bioprotection vivante</h3>
-                <p className="text-sm text-muted-foreground">Insectes prédateurs pour éliminer les ravageurs de vos cultures</p>
+                <h3 className="font-semibold text-primary mb-2">{t("extraits.crosssell.bioprotection.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("extraits.crosssell.bioprotection.desc")}</p>
               </Link>
               <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Biopesticides</h3>
-                <p className="text-sm text-muted-foreground">Extraits d'insectes pour une protection foliaire naturelle</p>
+                <h3 className="font-semibold text-primary mb-2">{t("solutions.biopesticides.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("boosters.crosssell.biopesticides.desc")}</p>
               </Link>
               <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Boosters de croissance</h3>
-                <p className="text-sm text-muted-foreground">Biostimulants pour renforcer la vigueur et la résistance des cultures</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.boosters.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.boosters.desc")}</p>
               </Link>
             </div>
           </div>

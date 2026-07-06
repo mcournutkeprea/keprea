@@ -34,7 +34,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
           className={`mb-12 reveal${headerVisible ? " is-visible" : ""}`}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-            Site de production
+            {t("production.eyebrow")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t("production.title")}
@@ -87,7 +87,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border-2 border-primary/20">
                   <img
                     src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.webp"
-                    alt="Site de production Keprea à Damparis, bâtiment d'élevage et de transformation"
+                    alt={t("alt.productionSite")}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -100,20 +100,20 @@ const Production = ({ teaser = false }: ProductionProps) => {
                   <div className="flex flex-col justify-between h-full gap-6 p-6 rounded-xl border border-primary/15 bg-background/60">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-                        Process complet
+                        {t("production.teaser.label")}
                       </p>
                       <p className="text-base font-semibold text-foreground leading-snug mb-2">
-                        De l'élevage d'insectes à la formulation finale
+                        {t("production.teaser.title")}
                       </p>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Découvrez notre chaîne de production maîtrisée : collecte de co-produits, extraction, formulation, livraison.
+                        {t("production.teaser.desc")}
                       </p>
                     </div>
                     <Link
                       to="/notre-production"
                       className="group inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300 w-fit"
                     >
-                      Voir notre site de production
+                      {t("production.teaser.link")}
                       <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
                         <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
                       </span>

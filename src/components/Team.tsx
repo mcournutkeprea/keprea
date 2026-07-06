@@ -2,21 +2,21 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TeamMember {
   name: string;
-  role: string;
+  roleKey: string;
 }
 
 const teamMembers: TeamMember[] = [
-  { name: "Alexandre Pernot", role: "Production Manager" },
-  { name: "Antoine Hubert", role: "CEO" },
-  { name: "Béatrice Vassy", role: "CFO" },
-  { name: "Emilien Bohuon", role: "Head of R&D Biostimulants" },
-  { name: "Guillaume Daoulas", role: "Head of Sales" },
-  { name: "Isabelle Couvert", role: "Supply and Logistics Manager" },
-  { name: "Julien Denormandie", role: "Chairman of the Strategic Committee" },
-  { name: "Pascal Maignet", role: "Head of R&D Insects" },
-  { name: "Thibault Sarton du Jonchay", role: "Head of Operations" },
-  { name: "Thierry Dumbardon Martial", role: "R&D Engineer Insects" },
-  { name: "Valentin Frenceshi", role: "Line Operator" },
+  { name: "Alexandre Pernot", roleKey: "team.role.alexandre" },
+  { name: "Antoine Hubert", roleKey: "team.role.antoine" },
+  { name: "Béatrice Vassy", roleKey: "team.role.beatrice" },
+  { name: "Emilien Bohuon", roleKey: "team.role.emilien" },
+  { name: "Guillaume Daoulas", roleKey: "team.role.guillaume" },
+  { name: "Isabelle Couvert", roleKey: "team.role.isabelle" },
+  { name: "Julien Denormandie", roleKey: "team.role.julien" },
+  { name: "Pascal Maignet", roleKey: "team.role.pascal" },
+  { name: "Thibault Sarton du Jonchay", roleKey: "team.role.thibault" },
+  { name: "Thierry Dumbardon Martial", roleKey: "team.role.thierry" },
+  { name: "Valentin Frenceshi", roleKey: "team.role.valentin" },
 ];
 
 const getInitials = (name: string) => {
@@ -51,7 +51,7 @@ const Team = () => {
                 <p className="text-sm font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                   {member.name}
                 </p>
-                <p className="text-xs text-muted-foreground">{member.role}</p>
+                <p className="text-xs text-muted-foreground">{t(member.roleKey)}</p>
                 <span className="mx-auto mt-1.5 block h-0.5 w-0 bg-primary transition-all duration-300 ease-out group-hover:w-8" />
               </div>
             </div>

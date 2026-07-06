@@ -11,27 +11,36 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
-const faqItems = [
-  {
-    q: "Les biostimulants Keprea sont-ils compatibles avec les engrais minéraux ?",
-    a: "Oui, nos boosters peuvent être mélangés avec un autre intrant organique ou de synthèse (engrais, produits phytosanitaires). Un test de miscibilité est recommandé avant tout mélange en cuve. Notre équipe technique vous accompagne."
-  },
-  {
-    q: "En combien de temps observe-t-on les effets des biostimulants ?",
-    a: "Les premiers effets (meilleur enracinement, reprise de vigueur) sont observables en 10 à 21 jours. Les bénéfices sur rendement et résistance aux stress abiotiques (sécheresse, gel tardif) se mesurent en fin de cycle."
-  },
-  {
-    q: "Boostea13 et Soilea110 sont-ils utilisables en agriculture biologique ?",
-    a: "Nos biostimulants à base d'extraits d'insectes sont compatibles avec les principes de l'agriculture biologique. Vérifiez la conformité avec votre organisme certificateur avant utilisation."
-  },
-  {
-    q: "Faut-il choisir entre Boostea13 et Soilea110 ou peut-on utiliser les deux ?",
-    a: "Les deux produits ciblent des leviers différents (vigueur aérienne pour Boostea13, santé du sol pour Soilea110) et sont conçus pour être utilisés ensemble sur un même itinéraire technique. En cas de budget limité pour une première saison d'essai, privilégiez le produit correspondant à votre contrainte la plus limitante identifiée par diagnostic (foliaire ou racinaire)."
-  },
+const faqKeys = [
+  { questionKey: "boosters.faq1.q", answerKey: "boosters.faq1.a" },
+  { questionKey: "boosters.faq2.q", answerKey: "boosters.faq2.a" },
+  { questionKey: "boosters.faq3.q", answerKey: "boosters.faq3.a" },
+  { questionKey: "boosters.faq4.q", answerKey: "boosters.faq4.a" },
+];
+
+const cropKeys = [
+  "boosters.crop1", "boosters.crop2", "boosters.crop3",
+  "boosters.crop4", "boosters.crop5", "boosters.crop6",
+];
+
+const boosteaSteps = [
+  { titleKey: "boosters.boosteaSteps.step1.title", descKey: "boosters.boosteaSteps.step1.desc" },
+  { titleKey: "boosters.boosteaSteps.step2.title", descKey: "boosters.boosteaSteps.step2.desc" },
+  { titleKey: "boosters.boosteaSteps.step3.title", descKey: "boosters.boosteaSteps.step3.desc" },
+];
+
+const soileaSteps = [
+  { titleKey: "boosters.soileaSteps.step1.title", descKey: "boosters.soileaSteps.step1.desc" },
+  { titleKey: "boosters.soileaSteps.step2.title", descKey: "boosters.soileaSteps.step2.desc" },
+  { titleKey: "boosters.soileaSteps.step3.title", descKey: "boosters.soileaSteps.step3.desc" },
 ];
 
 const Boosters = () => {
   const { t } = useLanguage();
+  const faqItems = faqKeys.map(({ questionKey, answerKey }) => ({
+    q: t(questionKey),
+    a: t(answerKey),
+  }));
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -78,28 +87,28 @@ const Boosters = () => {
 
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-3">Qu'est-ce qu'un biostimulant agricole ?</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-3">{t("boosters.whatIs.title")}</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante : nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité), sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir d'extraits d'insectes : le premier en application foliaire pour la vigueur aérienne, le second au sol pour la santé racinaire et microbienne.
+              {t("boosters.whatIs.desc")}
             </p>
-            <h3 className="text-xl font-bold text-primary mt-8 mb-3">Les micropeptides, notre différenciant</h3>
+            <h3 className="text-xl font-bold text-primary mt-8 mb-3">{t("boosters.micropeptides.title")}</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Plus que le terme générique de « biostimulant », ce qui distingue Boostea13 et Soilea110, ce sont les micropeptides qu'ils apportent : de courtes chaînes d'acides aminés issues de l'hydrolyse de la matière première insecte. Directement assimilables par la plante, ces micropeptides agissent comme signaux biologiques qui activent les mécanismes naturels de croissance et de défense, plus rapidement que des protéines complètes qui doivent d'abord être dégradées. C'est cette spécificité moléculaire, et non une action biostimulante générique, qui explique les effets observés sur la vigueur, l'enracinement et la tolérance aux stress.
+              {t("boosters.micropeptides.desc")}
             </p>
-            <h2 className="text-2xl font-bold text-center text-foreground mt-10 mb-6">Quel produit choisir ?</h2>
+            <h2 className="text-2xl font-bold text-center text-foreground mt-10 mb-6">{t("boosters.choose.title")}</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <h3 className="font-bold text-primary mb-2">Boostea13 : Application foliaire</h3>
-                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la vigueur aérienne : manque de résistance à la sécheresse, stress post-gel, assimilation nutritive insuffisante.</p>
-                <p className="text-sm text-muted-foreground">→ Pulvérisation foliaire aux stades clés (tallage, floraison…)</p>
+                <h3 className="font-bold text-primary mb-2">{t("boosters.choose.boostea.title")}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{t("boosters.choose.boostea.desc")}</p>
+                <p className="text-sm text-muted-foreground">{t("boosters.choose.boostea.action")}</p>
               </div>
               <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <h3 className="font-bold text-primary mb-2">Soilea110 : Application au sol</h3>
-                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la santé du sol : structure dégradée, faible activité microbienne, résistance aux maladies racinaires.</p>
-                <p className="text-sm text-muted-foreground">→ Incorporation avant semis ou plantation</p>
+                <h3 className="font-bold text-primary mb-2">{t("boosters.choose.soilea.title")}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{t("boosters.choose.soilea.desc")}</p>
+                <p className="text-sm text-muted-foreground">{t("boosters.choose.soilea.action")}</p>
               </div>
             </div>
-            <p className="text-sm text-center text-muted-foreground mt-4">Les deux produits sont <strong className="text-foreground">complémentaires</strong>, utilisés ensemble, ils couvrent l'ensemble du programme de stimulation.</p>
+            <p className="text-sm text-center text-muted-foreground mt-4">{t("boosters.choose.complementary")}</p>
           </div>
         </section>
 
@@ -153,23 +162,15 @@ const Boosters = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Cultures cibles</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t("boosters.crops.title")}</h2>
             <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-              Nos biostimulants Boostea13 et Soilea110 s'appliquent sur l'ensemble des grandes cultures
-              et productions spécialisées, pour renforcer la vigueur et la résistance aux stress.
+              {t("boosters.crops.subtitle")}
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {[
-                "Céréales : blé, orge, triticale, seigle, avoine",
-                "Oléagineux : colza, tournesol, soja",
-                "Maïs : grain et fourrage",
-                "Maraîchage sous serre et plein champ : courgette, aubergine, carotte, oignon, poivron",
-                "Arboriculture fruitière : pommier, poirier, cerisier",
-                "Viticulture : renforcement de la vigueur et résistance",
-              ].map((culture) => (
-                <div key={culture} className="flex items-start gap-3">
+              {cropKeys.map((key) => (
+                <div key={key} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-foreground">{culture}</span>
+                  <span className="text-base text-foreground">{t(key)}</span>
                 </div>
               ))}
             </div>
@@ -178,23 +179,19 @@ const Boosters = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("boosters.howto.title")}</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold text-primary mb-6">Boostea13</h3>
                 <div className="space-y-5">
-                  {[
-                    { step: 1, title: "Application foliaire", desc: "Diluer à 0,5–1,5 L dans un pulvérisateur. Appliquer en conditions fraîches (matin ou soir)." },
-                    { step: 2, title: "Stades clés", desc: "Tallage et montaison pour les céréales, floraison et nouaison pour le maraîchage et l'arboriculture." },
-                    { step: 3, title: "Fréquence", desc: "1 à 3 applications selon la culture." },
-                  ].map(({ step, title, desc }) => (
-                    <div key={step} className="flex gap-4">
+                  {boosteaSteps.map(({ titleKey, descKey }, i) => (
+                    <div key={i} className="flex gap-4">
                       <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm">
-                        {step}
+                        {i + 1}
                       </div>
                       <div>
-                        <p className="font-semibold text-foreground text-sm">{title}</p>
-                        <p className="text-muted-foreground text-sm">{desc}</p>
+                        <p className="font-semibold text-foreground text-sm">{t(titleKey)}</p>
+                        <p className="text-muted-foreground text-sm">{t(descKey)}</p>
                       </div>
                     </div>
                   ))}
@@ -203,18 +200,14 @@ const Boosters = () => {
               <div>
                 <h3 className="text-xl font-bold text-primary mb-6">Soilea110</h3>
                 <div className="space-y-5">
-                  {[
-                    { step: 1, title: "Application au sol", desc: "Application pendant le semis ou la plantation." },
-                    { step: 2, title: "Dosage", desc: "150 à 300 kg/ha ou une poignée par plant selon le type de sol, la culture et les objectifs de fertilité." },
-                    { step: 3, title: "Compatibilité", desc: "Compatible avec d'autres amendements organiques. Favorise la microfaune du sol et le développement racinaire." },
-                  ].map(({ step, title, desc }) => (
-                    <div key={step} className="flex gap-4">
+                  {soileaSteps.map(({ titleKey, descKey }, i) => (
+                    <div key={i} className="flex gap-4">
                       <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm">
-                        {step}
+                        {i + 1}
                       </div>
                       <div>
-                        <p className="font-semibold text-foreground text-sm">{title}</p>
-                        <p className="text-muted-foreground text-sm">{desc}</p>
+                        <p className="font-semibold text-foreground text-sm">{t(titleKey)}</p>
+                        <p className="text-muted-foreground text-sm">{t(descKey)}</p>
                       </div>
                     </div>
                   ))}
@@ -226,29 +219,26 @@ const Boosters = () => {
 
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("boosters.results.title")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">+5–13%</div>
-                <div className="text-sm text-muted-foreground">de biomasse (Boostea13)</div>
+                <div className="text-sm text-muted-foreground">{t("boosters.results.stat1.label")}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">Renforcée</div>
-                <div className="text-sm text-muted-foreground">résistance aux stress hydrique et phytotoxique</div>
+                <div className="text-3xl font-bold text-primary mb-1">{t("boosters.results.stat2.value")}</div>
+                <div className="text-sm text-muted-foreground">{t("boosters.results.stat2.label")}</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-3">
-              Données internes Keprea, essais agronomiques, mesurés selon un protocole inspiré
-              des méthodologies ARVALIS. Résultats variables selon la culture et les conditions
-              pédoclimatiques, communiqués à titre indicatif. Soilea110 : amélioration de l'activité
-              microbienne et de la structure du sol observée dès la 2ᵉ application.
+              {t("boosters.results.disclaimer")}
             </p>
           </div>
         </section>
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("boosters.faq.title")}</h2>
             <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
               <Accordion type="single" collapsible>
                 {faqItems.map(({ q, a }, i) => (
@@ -274,19 +264,19 @@ const Boosters = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Complétez votre programme avec nos autres solutions</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("boosters.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Bioprotection vivante</h3>
-                <p className="text-sm text-muted-foreground">Insectes prédateurs pour éliminer les ravageurs de vos cultures</p>
+                <h3 className="font-semibold text-primary mb-2">{t("extraits.crosssell.bioprotection.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("extraits.crosssell.bioprotection.desc")}</p>
               </Link>
               <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Biopesticides</h3>
-                <p className="text-sm text-muted-foreground">Extraits d'insectes pour une protection foliaire naturelle</p>
+                <h3 className="font-semibold text-primary mb-2">{t("solutions.biopesticides.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("boosters.crosssell.biopesticides.desc")}</p>
               </Link>
               <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Biofertilisant</h3>
-                <p className="text-sm text-muted-foreground">Fertea432 pour améliorer la fertilité et la structure du sol</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.biofertilisant.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.biofertilisant.desc")}</p>
               </Link>
             </div>
           </div>

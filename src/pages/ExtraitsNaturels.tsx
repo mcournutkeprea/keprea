@@ -12,35 +12,34 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
-const faqItems = [
-  {
-    q: "Les biopesticides Keprea laissent-ils des résidus sur les cultures ?",
-    a: "Nos biopesticides à base d'extraits d'insectes se dégradent rapidement par les UV et l'humidité. Ils ne laissent pas de résidus chimiques de synthèse, ce qui les rend compatibles avec les exigences des filières biologiques et premium."
-  },
-  {
-    q: "Y a-t-il un délai avant récolte (DAR) à respecter ?",
-    a: "Le délai avant récolte dépend du produit et de la culture. Consultez la fiche technique de chaque produit ou contactez notre équipe technique pour les informations réglementaires précises."
-  },
-  {
-    q: "Nos biopesticides sont-ils compatibles avec les lâchers d'auxiliaires ?",
-    a: "Oui, nos biopesticides sont formulés pour être compatibles avec le biocontrôle vivant. Utilisés en programme intégré, ils se complètent pour une protection optimale de vos cultures."
-  },
-  {
-    q: "Peut-on mélanger nos biopesticides avec d'autres produits en cuve ?",
-    a: "Un test de miscibilité préalable est recommandé avant tout mélange extemporané, en particulier avec des produits fortement acides ou basiques. Notre équipe technique peut vous confirmer la compatibilité avec les principaux intrants du marché sur simple demande."
-  },
-  {
-    q: "Comment conserver nos biopesticides avant utilisation ?",
-    a: "Stocker à l'abri de la lumière directe et de la chaleur excessive (idéalement entre 5°C et 25°C), dans l'emballage d'origine fermé. Une fois la bouillie préparée, l'appliquer dans les heures qui suivent pour préserver l'activité des molécules bioactives."
-  },
-  {
-    q: "Nos biopesticides sont-ils dangereux pour les abeilles et pollinisateurs ?",
-    a: "Les molécules actives de nos biopesticides ciblent spécifiquement le système nerveux ou digestif des ravageurs cibles, sans effet démontré sur les pollinisateurs aux doses recommandées. Nous recommandons néanmoins d'éviter les traitements en pleine floraison et de privilégier les heures où les pollinisateurs sont peu actifs (tôt le matin ou en soirée), par précaution et conformément aux bonnes pratiques phytosanitaires générales."
-  },
+const faqKeys = [
+  { questionKey: "extraits.faq1.q", answerKey: "extraits.faq1.a" },
+  { questionKey: "extraits.faq2.q", answerKey: "extraits.faq2.a" },
+  { questionKey: "extraits.faq3.q", answerKey: "extraits.faq3.a" },
+  { questionKey: "extraits.faq4.q", answerKey: "extraits.faq4.a" },
+  { questionKey: "extraits.faq5.q", answerKey: "extraits.faq5.a" },
+  { questionKey: "extraits.faq6.q", answerKey: "extraits.faq6.a" },
+];
+
+const cropKeys = [
+  "extraits.crop1", "extraits.crop2", "extraits.crop3",
+  "extraits.crop4", "extraits.crop5", "extraits.crop6",
+];
+
+const stepKeys = [
+  { titleKey: "extraits.step1.title", descKey: "extraits.step1.desc" },
+  { titleKey: "extraits.step2.title", descKey: "extraits.step2.desc" },
+  { titleKey: "extraits.step3.title", descKey: "extraits.step3.desc" },
+  { titleKey: "extraits.step4.title", descKey: "extraits.step4.desc" },
+  { titleKey: "extraits.step5.title", descKey: "extraits.step5.desc" },
 ];
 
 const ExtraitsNaturels = () => {
   const { t } = useLanguage();
+  const faqItems = faqKeys.map(({ questionKey, answerKey }) => ({
+    q: t(questionKey),
+    a: t(answerKey),
+  }));
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -88,16 +87,16 @@ const ExtraitsNaturels = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Nos biopesticides</h2>
-              <p className="text-sm text-muted-foreground max-w-xl mx-auto">Nos biopesticides à base d'extraits d'insectes sont en cours d'homologation</p>
+              <h2 className="text-2xl font-bold text-primary mb-2">{t("extraits.heading")}</h2>
+              <p className="text-sm text-muted-foreground max-w-xl mx-auto">{t("extraits.subheading")}</p>
             </div>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
-                <strong>Comment ça fonctionne ?</strong> Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles : ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures. Le mode d'action par contact et ingestion, combiné à une dégradation rapide dans l'environnement, limite le risque de sélection de populations résistantes, un enjeu croissant à mesure que les substances actives conventionnelles se raréfient.
+                <strong>{t("extraits.howItWorks.title")}</strong> {t("extraits.howItWorks.desc")}
               </p>
             </div>
             <AdvantageGrid
-              title="Pourquoi choisir nos biopesticides ?"
+              title={t("extraits.whyChoose.title")}
               advantages={[
                 { icon: ShieldCheck, title: t('substances.benefit1.title'), description: t('substances.benefit1.desc') },
                 { icon: ShieldPlus, title: t('substances.benefit2.title'), description: t('substances.benefit2.desc') },
@@ -141,23 +140,15 @@ const ExtraitsNaturels = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Cultures cibles</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t("extraits.crops.title")}</h2>
             <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-              Nos biopesticides à base d'extraits d'insectes couvrent une large gamme de cultures,
-              en agriculture biologique comme conventionnelle.
+              {t("extraits.crops.subtitle")}
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {[
-                "Céréales : blé, orge, triticale, seigle",
-                "Oléagineux : colza, tournesol, soja",
-                "Viticulture : ravageurs foliaires (dont tordeuse de la vigne), insectes vecteurs de la flavescence dorée et maladies cryptogamiques",
-                "Maraîchage : tomate, poivron, laitue, courgette, aubergine, carotte, oignon, cucurbitacées",
-                "Maïs : grandes cultures",
-                "Arboriculture fruitière : pommier, poirier, cerisier, kiwi",
-              ].map((culture) => (
-                <div key={culture} className="flex items-start gap-3">
+              {cropKeys.map((key) => (
+                <div key={key} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-foreground">{culture}</span>
+                  <span className="text-base text-foreground">{t(key)}</span>
                 </div>
               ))}
             </div>
@@ -166,22 +157,16 @@ const ExtraitsNaturels = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Mode d'emploi</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("extraits.howto.title")}</h2>
             <div className="space-y-6">
-              {[
-                { step: 1, title: "Préparation de la bouillie", desc: "Diluer le produit selon le dosage de la fiche technique. Agiter jusqu'à dissolution complète dans le volume d'eau recommandé." },
-                { step: 2, title: "Conditions d'application", desc: "Pulvérisation foliaire de préférence aux heures fraîches (avant 10h ou après 18h). Éviter les jours de vent fort (> 3 m/s) et de chaleur excessive (> 28°C)." },
-                { step: 3, title: "Couverture foliaire", desc: "Traiter de manière homogène, en insistant sur la face inférieure des feuilles pour les insectes suceurs et tétranyques." },
-                { step: 4, title: "Fréquence de traitement", desc: "1 application tous les 7 à 14 jours selon la pression parasitaire. Ajuster selon l'évolution des populations cibles." },
-                { step: 5, title: "Précautions", desc: "Ne pas appliquer par temps de pluie ou lorsqu'une pluie est prévue dans les 4 heures suivant le traitement." },
-              ].map(({ step, title, desc }) => (
-                <div key={step} className="flex gap-5">
+              {stepKeys.map(({ titleKey, descKey }, i) => (
+                <div key={i} className="flex gap-5">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
-                    {step}
+                    {i + 1}
                   </div>
                   <div className="pt-1">
-                    <h3 className="font-semibold text-foreground mb-1">{title}</h3>
-                    <p className="text-muted-foreground">{desc}</p>
+                    <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
+                    <p className="text-muted-foreground">{t(descKey)}</p>
                   </div>
                 </div>
               ))}
@@ -191,32 +176,30 @@ const ExtraitsNaturels = () => {
 
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">Résultats mesurés sur le terrain</h2>
+            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("extraits.results.title")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">80–95%</div>
-                <div className="text-sm text-muted-foreground">d'efficacité contre les principaux ravageurs (légumes, céréales, vigne)</div>
+                <div className="text-sm text-muted-foreground">{t("extraits.results.stat1.label")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">7–14j</div>
-                <div className="text-sm text-muted-foreground">fréquence de traitement selon la pression parasitaire</div>
+                <div className="text-sm text-muted-foreground">{t("extraits.results.stat2.label")}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">0 résidu</div>
-                <div className="text-sm text-muted-foreground">chimique de synthèse, filières bio et premium</div>
+                <div className="text-3xl font-bold text-primary mb-1">{t("extraits.results.stat3.value")}</div>
+                <div className="text-sm text-muted-foreground">{t("extraits.results.stat3.label")}</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
-              Données internes Keprea, essais en parcelles pilotes 2023–2024, sur légumes, céréales et vigne.
-              Résultats variables selon la culture et la pression parasitaire, communiqués à titre indicatif,
-              hors valeur d'engagement contractuel.
+              {t("extraits.results.disclaimer")}
             </p>
           </div>
         </section>
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">Questions fréquentes</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("extraits.faq.title")}</h2>
             <div className="bg-primary/5 rounded-xl border border-primary/10 divide-y divide-primary/10 px-6">
               <Accordion type="single" collapsible>
                 {faqItems.map(({ q, a }, i) => (
@@ -236,40 +219,40 @@ const ExtraitsNaturels = () => {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">Retours terrain</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">{t("extraits.feedback.title")}</h2>
             <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
-              Vous utilisez nos biopesticides ? Votre retour d'expérience aide d'autres agriculteurs à décider.
+              {t("extraits.feedback.subtitle")}
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
               <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
-                Partager votre expérience avec nos biopesticides →
+                {t("extraits.feedback.link")}
               </Link>
             </div>
           </div>
         </section>
 
         <GradientCTA
-          title="Protégez vos cultures naturellement"
-          description="Contactez notre équipe pour un conseil personnalisé sur nos biopesticides et la constitution d'un programme de protection intégré."
-          primary={{ label: "Demander un conseil", to: "/contact" }}
-          secondary={{ label: "Pourquoi le biocontrôle ?", to: "/pourquoi-le-biocontrole" }}
+          title={t("extraits.cta.title")}
+          description={t("extraits.cta.desc")}
+          primary={{ label: t("bv.cta.primary"), to: "/contact" }}
+          secondary={{ label: t("innovation.link"), to: "/pourquoi-le-biocontrole" }}
         />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Complétez votre programme avec nos autres solutions</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("extraits.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Bioprotection vivante</h3>
-                <p className="text-sm text-muted-foreground">Insectes prédateurs pour éliminer les ravageurs de vos cultures</p>
+                <h3 className="font-semibold text-primary mb-2">{t("extraits.crosssell.bioprotection.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("extraits.crosssell.bioprotection.desc")}</p>
               </Link>
               <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Boosters de croissance</h3>
-                <p className="text-sm text-muted-foreground">Biostimulants pour renforcer la vigueur et la résistance des cultures</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.boosters.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.boosters.desc")}</p>
               </Link>
               <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
-                <h3 className="font-semibold text-primary mb-2">Biofertilisant</h3>
-                <p className="text-sm text-muted-foreground">Fertea432 pour améliorer la fertilité et la structure du sol</p>
+                <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.biofertilisant.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("bv.crosssell.biofertilisant.desc")}</p>
               </Link>
             </div>
           </div>

@@ -30,7 +30,7 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
         {showTitle && (
           <div ref={headerRef as RefObject<HTMLDivElement>} className={`mb-12 max-w-2xl reveal${headerVisible ? ' is-visible' : ''}`}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-              Qui sommes-nous ?
+              {t("about.eyebrow")}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('about.title')}
@@ -86,7 +86,7 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
               to="/qui-sommes-nous"
               className="group inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 hover:bg-primary/10 text-primary pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300"
             >
-              Découvrir notre équipe et nos valeurs
+              {t("about.teaser.link")}
               <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
                 <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
               </span>
