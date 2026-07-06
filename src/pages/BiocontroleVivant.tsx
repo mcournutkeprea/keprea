@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, CheckCircle2, Leaf, Target, Recycle, BadgeCheck, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Leaf, Target, Recycle, BadgeCheck, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import aphidImage from "@/assets/Pucerons.jpg";
@@ -91,6 +91,12 @@ const BiocontroleVivant = () => {
               <p className="text-base text-muted-foreground leading-relaxed">
                 {t("bv.principle")}
               </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/ressources/fiches-techniques/bioprotection">
+                  {t('techsheet.cta.viewSheet')}
+                  <ArrowRight className="w-4 h-4 ml-1.5" />
+                </Link>
+              </Button>
             </div>
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
               {t('biocontrole.pests.title')}

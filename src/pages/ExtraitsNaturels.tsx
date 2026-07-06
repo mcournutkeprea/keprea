@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, Leaf, FlaskConical, Microscope, CheckCircle2, ShieldCheck, ShieldPlus, Recycle, Settings2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Leaf, FlaskConical, Microscope, CheckCircle2, ShieldCheck, ShieldPlus, Recycle, Settings2 } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -90,10 +90,18 @@ const ExtraitsNaturels = () => {
               <h2 className="text-2xl font-bold text-primary mb-2">{t("extraits.heading")}</h2>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">{t("extraits.subheading")}</p>
             </div>
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
                 <strong>{t("extraits.howItWorks.title")}</strong> {t("extraits.howItWorks.desc")}
               </p>
+            </div>
+            <div className="text-center mb-10">
+              <Button asChild variant="outline">
+                <Link to="/ressources/fiches-techniques/biopesticides">
+                  {t('techsheet.cta.viewSheet')}
+                  <ArrowRight className="w-4 h-4 ml-1.5" />
+                </Link>
+              </Button>
             </div>
             <AdvantageGrid
               title={t("extraits.whyChoose.title")}

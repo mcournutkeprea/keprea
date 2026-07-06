@@ -12,6 +12,9 @@ import InnovationPage from "@/pages/InnovationPage";
 import QuiSommesNous from "@/pages/QuiSommesNous";
 import NotreProduction from "@/pages/NotreProduction";
 import Ressources from "@/pages/Ressources";
+import FichesTechniques from "@/pages/FichesTechniques";
+import FicheTechniqueDetail from "@/pages/FicheTechniqueDetail";
+import { technicalSheets } from "@/data/technicalSheets";
 import ContactPage from "@/pages/ContactPage";
 import MentionsLegales from "@/pages/MentionsLegales";
 import PolitiqueConfidentialite from "@/pages/PolitiqueConfidentialite";
@@ -33,6 +36,12 @@ export const routes: RouteRecord[] = [
       { path: "qui-sommes-nous", Component: QuiSommesNous },
       { path: "notre-production", Component: NotreProduction },
       { path: "ressources", Component: Ressources },
+      { path: "ressources/fiches-techniques", Component: FichesTechniques },
+      {
+        path: "ressources/fiches-techniques/:slug",
+        Component: FicheTechniqueDetail,
+        getStaticPaths: () => technicalSheets.map((entry) => `/ressources/fiches-techniques/${entry.slug}`),
+      },
       { path: "contact", Component: ContactPage },
       { path: "mentions-legales", Component: MentionsLegales },
       { path: "politique-confidentialite", Component: PolitiqueConfidentialite },

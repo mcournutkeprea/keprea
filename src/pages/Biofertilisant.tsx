@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, Wheat, Droplets, Leaf, Shield, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Wheat, Droplets, Leaf, Shield, CheckCircle2 } from "lucide-react";
 import logoAb from "@/assets/logo-ab.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -142,6 +142,12 @@ const Biofertilisant = () => {
                 </div>
               ))}
             </div>
+            <Button asChild variant="outline" className="mt-6">
+              <Link to="/ressources/fiches-techniques/fertea432">
+                {t('techsheet.cta.viewSheet')}
+                <ArrowRight className="w-4 h-4 ml-1.5" />
+              </Link>
+            </Button>
           </div>
         </section>
 

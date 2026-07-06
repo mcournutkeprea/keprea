@@ -1,5 +1,6 @@
 import { Head } from "vite-react-ssg";
-import { FileText, BookOpen, Mail } from "lucide-react";
+import { FileText, BookOpen, Mail, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GradientCTA from "@/components/GradientCTA";
@@ -7,7 +8,7 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const cards = [
-  { icon: FileText, titleKey: "ressources.card1.title", descKey: "ressources.card1.desc" },
+  { icon: FileText, titleKey: "ressources.card1.title", descKey: "ressources.card1.desc", to: "/ressources/fiches-techniques", ctaKey: "ressources.card1.cta" },
   { icon: BookOpen, titleKey: "ressources.card2.title", descKey: "ressources.card2.desc" },
   { icon: Mail, titleKey: "ressources.card3.title", descKey: "ressources.card3.desc" },
 ];
@@ -65,9 +66,19 @@ const Ressources = () => {
                 </div>
                 <h2 className="text-lg font-bold text-foreground mb-3">{t(item.titleKey)}</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{t(item.descKey)}</p>
-                <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                  {t("ressources.comingSoon")}
-                </span>
+                {item.to ? (
+                  <Link
+                    to={item.to}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:opacity-80 transition-opacity"
+                  >
+                    {t(item.ctaKey as string)}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                ) : (
+                  <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {t("ressources.comingSoon")}
+                  </span>
+                )}
               </div>
             ))}
           </div>

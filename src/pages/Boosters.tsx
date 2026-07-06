@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, CheckCircle2, TrendingUp, Leaf, Puzzle, LifeBuoy } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, TrendingUp, Leaf, Puzzle, LifeBuoy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -118,10 +118,10 @@ const Boosters = () => {
               {t('boosters.range.title')}
             </h2>
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full flex flex-col">
                 <h3 className="text-2xl font-bold text-primary mb-4">Boostea13</h3>
                 <p className="text-muted-foreground mb-6">{t('boosters.boostea.desc')}</p>
-                <div className="space-y-3">
+                <div className="space-y-3 mb-6">
                   {[t('boosters.boostea.benefit1'), t('boosters.boostea.benefit2'), t('boosters.boostea.benefit3')].map((b) => (
                     <div key={b} className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
@@ -129,11 +129,17 @@ const Boosters = () => {
                     </div>
                   ))}
                 </div>
+                <Button asChild variant="outline" className="mt-auto self-start">
+                  <Link to="/ressources/fiches-techniques/boostea13">
+                    {t('techsheet.cta.viewSheet')}
+                    <ArrowRight className="w-4 h-4 ml-1.5" />
+                  </Link>
+                </Button>
               </div>
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl h-full flex flex-col">
                 <h3 className="text-2xl font-bold text-primary mb-4">Soilea110</h3>
                 <p className="text-muted-foreground mb-6">{t('boosters.soilea.desc')}</p>
-                <div className="space-y-3">
+                <div className="space-y-3 mb-6">
                   {[t('boosters.soilea.benefit1'), t('boosters.soilea.benefit2'), t('boosters.soilea.benefit3')].map((b) => (
                     <div key={b} className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
@@ -141,6 +147,12 @@ const Boosters = () => {
                     </div>
                   ))}
                 </div>
+                <Button asChild variant="outline" className="mt-auto self-start">
+                  <Link to="/ressources/fiches-techniques/soilea110">
+                    {t('techsheet.cta.viewSheet')}
+                    <ArrowRight className="w-4 h-4 ml-1.5" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>

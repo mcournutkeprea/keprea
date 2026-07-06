@@ -2585,6 +2585,96 @@ const translations: Translations = {
   'ressources.comingSoon': {
     fr: 'Bientôt disponible', en: 'Coming soon', es: 'Próximamente', pt: 'Brevemente disponível', de: 'Demnächst verfügbar'
   },
+  'ressources.card1.cta': {
+    fr: 'Voir les fiches techniques', en: 'View technical data sheets', es: 'Ver fichas técnicas', pt: 'Ver fichas técnicas', de: 'Technische Datenblätter ansehen'
+  },
+  // Fiches techniques (hub + detail)
+  'techsheet.hub.title': {
+    fr: 'Fiches techniques', en: 'Technical data sheets', es: 'Fichas técnicas', pt: 'Fichas técnicas', de: 'Technische Datenblätter'
+  },
+  'techsheet.hub.subtitle': {
+    fr: 'Composition, dose d\'application, cultures cibles et compatibilités pour chaque produit Keprea.',
+    en: 'Composition, application rate, target crops and compatibilities for each Keprea product.',
+    es: 'Composición, dosis de aplicación, cultivos objetivo y compatibilidades de cada producto Keprea.',
+    pt: 'Composição, dose de aplicação, culturas-alvo e compatibilidades de cada produto Keprea.',
+    de: 'Zusammensetzung, Aufwandmenge, Zielkulturen und Kompatibilitäten für jedes Keprea-Produkt.'
+  },
+  'techsheet.hub.viewSheet': {
+    fr: 'Voir la fiche', en: 'View data sheet', es: 'Ver ficha', pt: 'Ver ficha', de: 'Datenblatt ansehen'
+  },
+  'techsheet.detail.backToHub': {
+    fr: 'Toutes les fiches techniques', en: 'All technical data sheets', es: 'Todas las fichas técnicas', pt: 'Todas as fichas técnicas', de: 'Alle technischen Datenblätter'
+  },
+  'techsheet.detail.viewRangePage': {
+    fr: 'Voir la page produit', en: 'View product page', es: 'Ver página de producto', pt: 'Ver página do produto', de: 'Zur Produktseite'
+  },
+  'techsheet.detail.range': {
+    fr: 'Gamme', en: 'Range', es: 'Gama', pt: 'Gama', de: 'Produktlinie'
+  },
+  'techsheet.cta.viewSheet': {
+    fr: 'Voir la fiche technique', en: 'View technical data sheet', es: 'Ver ficha técnica', pt: 'Ver ficha técnica', de: 'Technisches Datenblatt ansehen'
+  },
+  'techsheet.label.compositionEffect': {
+    fr: 'Composition & effet', en: 'Composition & effect', es: 'Composición y efecto', pt: 'Composição e efeito', de: 'Zusammensetzung & Wirkung'
+  },
+  'techsheet.label.description': {
+    fr: 'Description', en: 'Description', es: 'Descripción', pt: 'Descrição', de: 'Beschreibung'
+  },
+  'techsheet.label.application': {
+    fr: 'Mode d\'application', en: 'Application method', es: 'Modo de aplicación', pt: 'Modo de aplicação', de: 'Anwendungsart'
+  },
+  'techsheet.label.technology': {
+    fr: 'Technologie d\'extraction', en: 'Extraction technology', es: 'Tecnología de extracción', pt: 'Tecnologia de extração', de: 'Extraktionstechnologie'
+  },
+  'techsheet.label.stages': {
+    fr: 'Stades clés', en: 'Key stages', es: 'Etapas clave', pt: 'Fases-chave', de: 'Schlüsselstadien'
+  },
+  'techsheet.label.frequency': {
+    fr: 'Fréquence', en: 'Frequency', es: 'Frecuencia', pt: 'Frequência', de: 'Häufigkeit'
+  },
+  'techsheet.label.dosage': {
+    fr: 'Dose', en: 'Dosage', es: 'Dosis', pt: 'Dose', de: 'Dosierung'
+  },
+  'techsheet.label.compatibility': {
+    fr: 'Compatibilité', en: 'Compatibility', es: 'Compatibilidad', pt: 'Compatibilidade', de: 'Kompatibilität'
+  },
+  'techsheet.label.crops': {
+    fr: 'Cultures cibles', en: 'Target crops', es: 'Cultivos objetivo', pt: 'Culturas-alvo', de: 'Zielkulturen'
+  },
+  'techsheet.label.pests': {
+    fr: 'Ravageurs ciblés', en: 'Target pests', es: 'Plagas objetivo', pt: 'Pragas-alvo', de: 'Zielschädlinge'
+  },
+  'techsheet.label.category': {
+    fr: 'Catégorie', en: 'Category', es: 'Categoría', pt: 'Categoria', de: 'Kategorie'
+  },
+  'techsheet.value.category.biostimulant': {
+    fr: 'Biostimulant (non-fertilisant, non-produit phytopharmaceutique)',
+    en: 'Biostimulant (not a fertilizer, not a plant protection product)',
+    es: 'Bioestimulante (no es fertilizante ni producto fitosanitario)',
+    pt: 'Bioestimulante (não é fertilizante nem produto fitofarmacêutico)',
+    de: 'Biostimulans (kein Düngemittel, kein Pflanzenschutzmittel)'
+  },
+  'techsheet.value.category.biofertilizer': {
+    fr: 'Biofertilisant / amendement organique',
+    en: 'Biofertilizer / organic amendment',
+    es: 'Biofertilizante / enmienda orgánica',
+    pt: 'Biofertilizante / corretivo orgânico',
+    de: 'Biodünger / organischer Bodenverbesserer'
+  },
+  'techsheet.value.category.biocontrol': {
+    fr: 'Auxiliaire de biocontrôle (organisme vivant)',
+    en: 'Biocontrol agent (living organism)',
+    es: 'Agente de biocontrol (organismo vivo)',
+    pt: 'Agente de biocontrolo (organismo vivo)',
+    de: 'Biokontroll-Nützling (lebender Organismus)'
+  },
+  'techsheet.fertea432.composition': {
+    fr: '85% de matière organique — ratio N-P-K : 3% azote, 4% phosphore, 2% potassium.',
+    en: '85% organic matter — N-P-K ratio: 3% nitrogen, 4% phosphorus, 2% potassium.',
+    es: '85% de materia orgánica — relación N-P-K: 3% nitrógeno, 4% fósforo, 2% potasio.',
+    pt: '85% de matéria orgânica — relação N-P-K: 3% azoto, 4% fósforo, 2% potássio.',
+    de: '85% organische Substanz — N-P-K-Verhältnis: 3% Stickstoff, 4% Phosphor, 2% Kalium.'
+  },
   'ressources.cta.title': {
     fr: 'Vous souhaitez être informé de nos publications ?',
     en: 'Want to be notified about our publications?',

@@ -1,0 +1,95 @@
+export interface SpecRow {
+  labelKey: string;
+  valueKey: string;
+}
+
+export interface TechnicalSheetEntry {
+  slug: string;
+  /** Literal brand name (not translated) — leave undefined and set nameKey for range-level entries. */
+  name?: string;
+  /** i18n key for a translated name — used when there is no fixed brand name. */
+  nameKey?: string;
+  rangePath: string;
+  rangeLabelKey: string;
+  rows: SpecRow[];
+  cropsLabelKey: string;
+  cropKeys: string[];
+}
+
+export const technicalSheets: TechnicalSheetEntry[] = [
+  {
+    slug: "boostea13",
+    name: "Boostea13",
+    rangePath: "/solutions/boosters",
+    rangeLabelKey: "boosters.title",
+    rows: [
+      { labelKey: "techsheet.label.compositionEffect", valueKey: "boosters.boostea.desc" },
+      { labelKey: "techsheet.label.application", valueKey: "boosters.boosteaSteps.step1.desc" },
+      { labelKey: "techsheet.label.stages", valueKey: "boosters.boosteaSteps.step2.desc" },
+      { labelKey: "techsheet.label.frequency", valueKey: "boosters.boosteaSteps.step3.desc" },
+      { labelKey: "techsheet.label.category", valueKey: "techsheet.value.category.biostimulant" },
+    ],
+    cropsLabelKey: "techsheet.label.crops",
+    cropKeys: ["boosters.crop1", "boosters.crop2", "boosters.crop3", "boosters.crop4", "boosters.crop5", "boosters.crop6"],
+  },
+  {
+    slug: "soilea110",
+    name: "Soilea110",
+    rangePath: "/solutions/boosters",
+    rangeLabelKey: "boosters.title",
+    rows: [
+      { labelKey: "techsheet.label.compositionEffect", valueKey: "boosters.soilea.desc" },
+      { labelKey: "techsheet.label.application", valueKey: "boosters.soileaSteps.step1.desc" },
+      { labelKey: "techsheet.label.dosage", valueKey: "boosters.soileaSteps.step2.desc" },
+      { labelKey: "techsheet.label.compatibility", valueKey: "boosters.soileaSteps.step3.desc" },
+      { labelKey: "techsheet.label.category", valueKey: "techsheet.value.category.biostimulant" },
+    ],
+    cropsLabelKey: "techsheet.label.crops",
+    cropKeys: ["boosters.crop1", "boosters.crop2", "boosters.crop3", "boosters.crop4", "boosters.crop5", "boosters.crop6"],
+  },
+  {
+    slug: "fertea432",
+    name: "Fertea432",
+    rangePath: "/solutions/biofertilisant",
+    rangeLabelKey: "biofertilisant.title",
+    rows: [
+      { labelKey: "techsheet.label.compositionEffect", valueKey: "techsheet.fertea432.composition" },
+      { labelKey: "techsheet.label.application", valueKey: "biofertilisant.step1.desc" },
+      { labelKey: "techsheet.label.dosage", valueKey: "biofertilisant.step2.desc" },
+      { labelKey: "techsheet.label.stages", valueKey: "biofertilisant.step3.desc" },
+      { labelKey: "techsheet.label.category", valueKey: "techsheet.value.category.biofertilizer" },
+    ],
+    cropsLabelKey: "techsheet.label.crops",
+    cropKeys: ["biofertilisant.crop1", "biofertilisant.crop2", "biofertilisant.crop3", "biofertilisant.crop4", "biofertilisant.crop5", "biofertilisant.crop6"],
+  },
+  {
+    slug: "bioprotection",
+    nameKey: "biocontrole.title",
+    rangePath: "/solutions/bioprotection",
+    rangeLabelKey: "biocontrole.title",
+    rows: [
+      { labelKey: "techsheet.label.description", valueKey: "biocontrole.auxiliary.desc" },
+      { labelKey: "techsheet.label.compatibility", valueKey: "biocontrole.adv4.desc" },
+      { labelKey: "techsheet.label.category", valueKey: "techsheet.value.category.biocontrol" },
+    ],
+    cropsLabelKey: "techsheet.label.pests",
+    cropKeys: ["biocontrole.pest1.title", "biocontrole.pest2.title", "biocontrole.pest3.title", "biocontrole.pest4.title"],
+  },
+  {
+    slug: "biopesticides",
+    nameKey: "substances.title",
+    rangePath: "/solutions/biopesticides",
+    rangeLabelKey: "substances.title",
+    rows: [
+      { labelKey: "techsheet.label.application", valueKey: "extraits.howItWorks.desc" },
+      { labelKey: "techsheet.label.technology", valueKey: "substances.tech.step2.desc" },
+      { labelKey: "techsheet.label.application", valueKey: "extraits.step2.desc" },
+      { labelKey: "techsheet.label.frequency", valueKey: "extraits.step4.desc" },
+      { labelKey: "techsheet.label.category", valueKey: "extraits.subheading" },
+    ],
+    cropsLabelKey: "techsheet.label.crops",
+    cropKeys: ["extraits.crop1", "extraits.crop2", "extraits.crop3", "extraits.crop4", "extraits.crop5", "extraits.crop6"],
+  },
+];
+
+export const getTechnicalSheet = (slug: string) => technicalSheets.find((entry) => entry.slug === slug);
