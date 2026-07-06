@@ -8,14 +8,17 @@ interface Advantage {
   title: string;
   description: string;
   badge?: ReactNode;
+  alignSelfEnd?: boolean;
+  minHeightClassName?: string;
 }
 
 interface AdvantageGridProps {
   title: string;
   advantages: Advantage[];
+  gridClassName?: string;
 }
 
-const AdvantageGrid = ({ title, advantages }: AdvantageGridProps) => {
+const AdvantageGrid = ({ title, advantages, gridClassName = "" }: AdvantageGridProps) => {
   const { ref, inView } = useInView(0.1);
 
   return (
@@ -23,11 +26,11 @@ const AdvantageGrid = ({ title, advantages }: AdvantageGridProps) => {
       <h2 className={`text-3xl font-bold text-center text-foreground mb-12 reveal${inView ? " is-visible" : ""}`}>
         {title}
       </h2>
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className={`grid gap-5 sm:grid-cols-2 ${gridClassName}`}>
         {advantages.map((advantage, i) => (
           <div
             key={advantage.title}
-            className={`reveal${inView ? " is-visible" : ""}`}
+            className={`reveal h-full${inView ? " is-visible" : ""}${advantage.alignSelfEnd ? " self-end" : ""}`}
             style={{ transitionDelay: inView ? `${i * 90}ms` : "0ms" }}
           >
             <AdvantageCard
@@ -36,6 +39,7 @@ const AdvantageGrid = ({ title, advantages }: AdvantageGridProps) => {
               title={advantage.title}
               description={advantage.description}
               badge={advantage.badge}
+              minHeightClassName={advantage.minHeightClassName}
             />
           </div>
         ))}

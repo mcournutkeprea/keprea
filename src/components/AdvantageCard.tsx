@@ -7,12 +7,13 @@ interface AdvantageCardProps {
   title: string;
   description: string;
   badge?: ReactNode;
+  minHeightClassName?: string;
 }
 
-const AdvantageCard = ({ icon: Icon, index, title, description, badge }: AdvantageCardProps) => {
+const AdvantageCard = ({ icon: Icon, index, title, description, badge, minHeightClassName }: AdvantageCardProps) => {
   return (
     <div
-      className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-7 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-7 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0${minHeightClassName ? ` ${minHeightClassName}` : ""}`}
     >
       <span
         className="pointer-events-none absolute -right-2 -top-5 select-none text-7xl font-black leading-none text-primary/5 transition-colors duration-300 group-hover:text-primary/10"

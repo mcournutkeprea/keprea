@@ -89,7 +89,7 @@ const ExtraitsNaturels = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Nos biopesticides</h2>
-              <p className="text-sm text-muted-foreground max-w-xl mx-auto">Biopesticides à base d'extraits d'insectes : protection foliaire naturelle pour vos cultures</p>
+              <p className="text-sm text-muted-foreground max-w-xl mx-auto">Nos biopesticides à base d'extraits d'insectes sont en cours d'homologation</p>
             </div>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
@@ -150,9 +150,9 @@ const ExtraitsNaturels = () => {
               {[
                 "Céréales : blé, orge, triticale, seigle",
                 "Oléagineux : colza, tournesol, soja",
-                "Maïs : grandes cultures",
-                "Maraîchage : tomate, poivron, laitue, courgette, aubergine, carotte, oignon, cucurbitacées",
                 "Viticulture : ravageurs foliaires (dont tordeuse de la vigne), insectes vecteurs de la flavescence dorée et maladies cryptogamiques",
+                "Maraîchage : tomate, poivron, laitue, courgette, aubergine, carotte, oignon, cucurbitacées",
+                "Maïs : grandes cultures",
                 "Arboriculture fruitière : pommier, poirier, cerisier, kiwi",
               ].map((culture) => (
                 <div key={culture} className="flex items-start gap-3">

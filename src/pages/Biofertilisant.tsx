@@ -103,16 +103,29 @@ const Biofertilisant = () => {
             </p>
 
             {/* Stat principale : matière organique */}
-            <div className="bg-primary text-white rounded-2xl p-8 mb-6 flex flex-col sm:flex-row items-center gap-6">
-              <div className="text-center sm:text-left">
-                <div className="text-7xl font-bold leading-none mb-2">85%</div>
-                <div className="text-xl font-semibold opacity-90">{t('biofertilisant.organic')}</div>
-                <p className="opacity-75 mt-2 max-w-sm">Libération lente, enrichissement progressif du sol sur plusieurs années. Aucun risque de brûlure racinaire, même en cas d'application proche du semis ou de la plantation.</p>
-              </div>
-              <div className="sm:ml-auto text-sm opacity-80 text-center sm:text-right">
-                <p>Contrairement aux engrais minéraux concentrés</p>
-                <p className="font-medium opacity-90">(ex. NPK 15-15-15)</p>
-                <p className="mt-1">Fertea432 favorise les cycles naturels du sol</p>
+            <div
+              className="p-[3px] rounded-[2rem] mb-6"
+              style={{
+                background: "linear-gradient(145deg, hsl(var(--primary)/0.40) 0%, hsl(var(--primary)/0.08) 100%)",
+                boxShadow: "0 4px 40px hsl(var(--primary)/0.12)",
+              }}
+            >
+              <div
+                className="rounded-[calc(2rem-3px)] p-8 flex flex-col sm:flex-row items-center gap-6"
+                style={{
+                  background: "radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))",
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.92)",
+                }}
+              >
+                <div className="text-center sm:text-left">
+                  <div className="text-7xl font-bold leading-none mb-2 text-primary">85%</div>
+                  <div className="text-xl font-semibold text-foreground">{t('biofertilisant.organic')}</div>
+                  <p className="text-muted-foreground mt-2 max-w-sm">Disponibilité rapide de l'azote, enrichissement progressif du sol sur plusieurs années. Aucun risque de brûlure racinaire, même en cas d'application proche du semis ou de la plantation.</p>
+                </div>
+                <div className="sm:ml-auto text-sm text-muted-foreground text-center sm:text-right">
+                  <p>Contrairement aux engrais minéraux concentrés (ex. NPK 15-15-15),</p>
+                  <p className="mt-1">Fertea432 favorise les cycles naturels du sol</p>
+                </div>
               </div>
             </div>
 

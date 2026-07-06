@@ -2,9 +2,9 @@ import { Head } from "vite-react-ssg";
 import { ArrowLeft, CheckCircle2, Leaf, Target, Recycle, BadgeCheck, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import aphidImage from "@/assets/aphid.jpg";
-import pyraleImage from "@/assets/pyrale.jpg";
-import cochenillesImage from "@/assets/cochenilles.jpg";
+import aphidImage from "@/assets/Pucerons.jpg";
+import pyraleImage from "@/assets/Chenille ravageuse.webp";
+import cochenillesImage from "@/assets/Cochenille.webp";
 import aleurodeImage from "@/assets/aleurode.jpg";
 import logoAb from "@/assets/logo-ab.png";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -135,7 +135,6 @@ const BiocontroleVivant = () => {
               advantages={[
                 { icon: Leaf, title: t('biocontrole.adv1.title'), description: t('biocontrole.adv1.desc') },
                 { icon: Target, title: t('biocontrole.adv2.title'), description: t('biocontrole.adv2.desc') },
-                { icon: Recycle, title: t('biocontrole.adv3.title'), description: t('biocontrole.adv3.desc') },
                 {
                   icon: BadgeCheck,
                   title: t('biocontrole.adv4.title'),
@@ -148,6 +147,7 @@ const BiocontroleVivant = () => {
                     />
                   ),
                 },
+                { icon: Recycle, title: t('biocontrole.adv3.title'), description: t('biocontrole.adv3.desc') },
               ]}
             />
           </div>
@@ -165,7 +165,7 @@ const BiocontroleVivant = () => {
                 "Maïs : lutte contre la pyrale (Ostrinia nubilalis)",
                 "Grandes cultures : betterave, blé, colza (pucerons)",
                 "Maraîchage sous serre : tomate, poivron, concombre",
-                "Maraîchage plein champ : laitue, courgette, aubergine, carotte, oignon",
+                "Maraîchage plein champ : laitue, courgette, aubergine, carotte, oignon, poivrons",
                 "Arboriculture fruitière : pomme, poire, cerise, kiwi",
                 "Viticulture : tordeuse de la vigne (ver de la grappe), vecteur de la flavescence dorée",
               ].map((culture) => (
@@ -220,9 +220,10 @@ const BiocontroleVivant = () => {
               {[
                 { step: 1, title: "Diagnostic ravageur", desc: "Identifier l'espèce ravageur, évaluer la pression parasitaire et choisir l'auxiliaire adapté à votre situation culturale." },
                 { step: 2, title: "Planification des lâchers", desc: "Lâchers préventifs en début de saison dès apparition des premiers foyers, ou curatifs dès observation du ravageur cible." },
-                { step: 3, title: "Conditions d'application", desc: "Libérer les auxiliaires aux heures fraîches (matin ou soir), répartir de manière homogène sur la parcelle." },
-                { step: 4, title: "Précautions phytosanitaires", desc: "Éviter tout insecticide à large spectre dans les 48h avant et après le lâcher pour protéger les auxiliaires." },
-                { step: 5, title: "Suivi et évaluation", desc: "Observer l'évolution des populations ravageurs 7 à 14 jours après le lâcher. Un suivi régulier permet d'ajuster le programme." },
+                { step: 3, title: "Méthodes de distribution", desc: "Lâcher manuel (sachets ou boîtes), ou à l'aide d'un pulvérisateur ou d'un atomiseur adapté pour les formulations sur support inerte. L'application par drone est également une piste suivie par la filière." },
+                { step: 4, title: "Conditions d'application", desc: "Libérer les auxiliaires aux heures fraîches (matin ou soir), répartir de manière homogène sur la parcelle." },
+                { step: 5, title: "Précautions phytosanitaires", desc: "Éviter tout insecticide à large spectre dans les 48h avant et après le lâcher pour protéger les auxiliaires." },
+                { step: 6, title: "Suivi et évaluation", desc: "Observer l'évolution des populations ravageurs 7 à 14 jours après le lâcher. Un suivi régulier permet d'ajuster le programme." },
               ].map(({ step, title, desc }) => (
                 <div key={step} className="flex gap-5">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
