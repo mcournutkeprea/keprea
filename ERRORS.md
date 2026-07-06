@@ -147,44 +147,8 @@ Retiré "Hermetia illucens/vers de farine élevés en France" (`/pourquoi-le-bio
 
 ---
 
-### App.css contient du CSS Vite template parasite (`#root { max-width:1280px; text-align:center }`)
-- **Statut** : Corrigé (15/06/2026 — Redesign)
-- Ces styles auraient pu casser les layouts full-width. Remplacé par un commentaire vide.
-
-### App.tsx routes incohérentes avec Navigation + Solutions
-- **Statut** : Corrigé (15/06/2026 — Redesign)
-- Toutes les routes manquantes ajoutées dans `App.tsx` (13 routes actives + aliases)
-
-### Contact.tsx retournait `null`
-- **Statut** : Corrigé (15/06/2026 — Redesign)
-- Composant documenté. La section contact homepage utilise `ContactForm.tsx` directement.
-
-### Cards Solutions sans `role="button"` ni `tabindex` (accessibilité)
-- **Statut** : Corrigé (15/06/2026 — Redesign)
-- `role="button"`, `tabIndex={0}`, `onKeyDown`, `focus-visible:ring` ajoutés sur chaque card
-- Arrow icon d'indication ajouté (apparaît au hover avec translate)
-
-### Contenu Innovation enfermé dans images/vidéos (non indexable)
-- **Statut** : Corrigé (15/06/2026 — Redesign v2)
-- Section Innovation refondée : intro textuelle indexable (3 piliers) + onglets tabpanel accessibles
-- Flip-cards supprimées (UX non-intuitive mobile) → infographies affichées directement via tab switcher
-
-### Hero CTA "Découvrir notre portfolio" inadapté au B2B agri-tech
-- **Statut** : Corrigé (15/06/2026 — Redesign v2)
-- Remplacé par "Voir nos solutions" + CTA secondaire "Demander un essai"
-
-### Hero stat3 "✓ Prêt à l'emploi" — checkmark pas une statistique
-- **Statut** : Corrigé (15/06/2026 — Redesign v2)
-- Remplacé par "Jura / Site de production" — ancrage territorial crédible
-
-### Testimonials avec 3 placeholders "en cours de collecte" — signal de faiblesse
-- **Statut** : Corrigé (15/06/2026 — Redesign v2)
-- Refonte complète : section TrustSection "Nos garanties" — stats + 3 cartes garanties + CTA essais
-
-### CSS mort — ~15 keyframes inutilisées + classes 3D flip orphelines
-- **Statut** : Corrigé (15/06/2026 — Redesign v2)
-- Supprimé : gentle-zoom, float, drift, sparkle, sway, pan-up, slow-zoom, water-drop, ripple, pan-left, pan-right, slow-pan-left, slow-pan-right, camera-sweep
-- Supprimé : .perspective-1000, .preserve-3d, .backface-hidden, .rotate-y-180
+### Corrections mineures Redesign 15/06/2026 (v1+v2) — toutes corrigées
+App.css CSS Vite parasite ; routes App.tsx incohérentes ; Contact.tsx retournait `null` ; Cards Solutions sans a11y (`role="button"`/`tabIndex`) ; Innovation non indexable (flip-cards → tabpanel) ; Hero CTA/stat3 inadaptés B2B ; Testimonials placeholders "en cours de collecte" → TrustSection ; CSS mort (~15 keyframes + classes 3D flip).
 
 ## Journal des corrections
 
@@ -200,3 +164,4 @@ Retiré "Hermetia illucens/vers de farine élevés en France" (`/pourquoi-le-bio
 | 02/07/2026 | Nettoyage : ~64 Mo de vidéos orphelines dans `public/` (jamais chargées par aucune page) ; Footer avec ancres homepage (`/#solutions`, `/#production`, `/#about`, `/#contact-form`) au lieu des pages dédiées | `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés + `ProductsSchema.tsx` (composant mort, seul référent, jamais importé) supprimé — `public/` 85→18 Mo. Footer : les 5 liens de navigation basculés en `<Link>` React Router vers `/solutions`, `/innovation`, `/notre-production`, `/qui-sommes-nous`, `/contact` (alignés sur `Navigation.tsx`). Build 18 pages OK, 0 erreur TS. |
 | 02/07/2026 | Audit SEO Phase 3 (contenu & autorité) : pages produits/hub thin, pas de schema Article/FAQPage/Service, stats produits attribuées à tort à des orgs tierces (IBMA/Koppert/Comifer/ARVALIS), `/ressources` vide mais indexée | `src/lib/schema.ts` créé (faqJsonLd/articleJsonLd/serviceJsonLd). `/pourquoi-le-biocontrole` : 335→1055 mots, stats sourcées et vérifiées par recherche web (Ecophyto 2030, Alliance Biocontrôle, Code rural L.253-6 — **Farm to Fork -50% UE écarté car retiré par la Commission en 2024, ne pas citer**), Article+FAQPage schema. 4 pages produits : 595-747→820-848 mots (FAQ étendues), FAQPage+Service schema (factuel, sans offers/ratings). `/qui-sommes-nous` 222→553 mots et `/notre-production` 145→512 mots (jalons, chiffres réels : 3000m², 7 associés, 2025). Stats internes reformulées "données internes Keprea" + note méthodologique, dissociées des orgs tierces citées à tort comme source. `/ressources` passé `noindex, follow` + retiré du sitemap. Byline "Rédigé par l'équipe Keprea · Dernière mise à jour" ajouté sur les 7 pages à claims réglementaires. Build 18 pages OK, 0 erreur TS. |
 | 03/07/2026 | Incohérence relevée : `Production.tsx` légende l'image du site "Site de production Keprea à Damparis", alors que SIRET/mentions légales et tout le reste du site situent l'entreprise à Dole (39) | Confirmé par l'utilisateur (03/07/2026) : Damparis est correct, commune limitrophe de Dole — pas une erreur, aucune correction nécessaire |
+| 06/07/2026 | Revue UX (ui-ux-pro-max) : encart dev "Contenu à compléter par Émilien" visible en prod sur `Boosters.tsx` ; redondance narrative sur `Boosters.tsx` (intro biostimulant/micropeptides répétée dans la section "Quel produit choisir") et `QuiSommesNous.tsx` (récit fondateur répété 4× : Mission/About/Jalons/"Pourquoi pluridisciplinaire") | Placeholder supprimé. Boosters : intro fusionnée en 1 section (def courte + micropeptides condensés) directement suivie des 2 cartes produit. QuiSommesNous : section "Pourquoi pluridisciplinaire" supprimée (pure redite), Jalons réduits à liste courte (titre seul, sans `desc` dupliqués ailleurs). Nettoyage `LanguageContext.tsx` : 13 clés `about.history.p2.*`/`p3.*` orphelines (jamais rendues par `About.tsx` depuis la condensation en `about.history.body`) supprimées ×5 langues. Build 18 pages OK, 0 erreur TS. |

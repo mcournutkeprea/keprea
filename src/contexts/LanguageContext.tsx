@@ -603,111 +603,6 @@ const translations: Translations = {
     pt: 'Made in France, a nossa unidade de 3.000 m² produz biosoluções de qualidade estável e reprodutível, todas compatíveis com a agricultura biológica.',
     de: 'Made in France entwickelt unser 3.000 m² großer Standort Biolösungen von stabiler, reproduzierbarer Qualität, alle für den ökologischen Landbau geeignet.'
   },
-  'about.history.p2.location': {
-    fr: 'Implantée à proximité de',
-    en: 'Located near',
-    es: 'Ubicada cerca de',
-    pt: 'Localizada perto de',
-    de: 'In der Nähe von'
-  },
-  'about.history.p2.city': {
-    fr: 'Dole dans le Jura',
-    en: 'Dole in the Jura',
-    es: 'Dole en el Jura',
-    pt: 'Dole no Jura',
-    de: 'Dole im Jura'
-  },
-  'about.history.p2.site': {
-    fr: ', notre site de production de',
-    en: ', our production site of',
-    es: ', nuestro sitio de producción de',
-    pt: ', a nossa unidade de produção, com',
-    de: ', unser Produktionsstandort von'
-  },
-  'about.history.p2.size': {
-    fr: '3 000 m²',
-    en: '3,000 m²',
-    es: '3.000 m²',
-    pt: '3.000 m²',
-    de: '3.000 m²'
-  },
-  'about.history.p2.develop': {
-    fr: 'nous permet de développer une gamme complète de solutions pour les agriculteurs : solutions de',
-    en: 'allows us to develop a complete range of solutions for farmers: solutions of',
-    es: 'nos permite desarrollar una gama completa de soluciones para los agricultores: soluciones de',
-    pt: ', nos permite desenvolver uma gama completa de soluções para os agricultores: soluções de',
-    de: 'ermöglicht uns die Entwicklung eines kompletten Lösungsportfolios für Landwirte: Lösungen für'
-  },
-  'about.history.p2.bioprotection': {
-    fr: 'bioprotection',
-    en: 'bioprotection',
-    es: 'bioprotección',
-    pt: 'bioproteção',
-    de: 'Bioschutz'
-  },
-  'about.history.p2.rest': {
-    fr: 'performantes et abordables,',
-    en: 'that are efficient and affordable,',
-    es: 'eficientes y asequibles,',
-    pt: 'eficientes e acessíveis,',
-    de: 'die leistungsstark und erschwinglich sind,'
-  },
-  'about.history.p2.boosters': {
-    fr: 'boosters',
-    en: 'boosters',
-    es: 'potenciadores',
-    pt: 'potenciadores',
-    de: 'Booster'
-  },
-  'about.history.p2.activators': {
-    fr: 'et activateurs de sols pour la résistance des cultures contre les stress abiotiques,',
-    en: 'and soil activators for crop resistance against abiotic stress,',
-    es: 'y activadores de suelo para la resistencia de los cultivos contra el estrés abiótico,',
-    pt: 'e ativadores de solo para reforçar a resistência das culturas ao estresse abiótico,',
-    de: 'und Bodenaktivatoren für die Widerstandsfähigkeit der Kulturen gegen abiotischen Stress,'
-  },
-  'about.history.p2.biofertilisants': {
-    fr: 'biofertilisants',
-    en: 'biofertilizers',
-    es: 'biofertilizantes',
-    pt: 'biofertilizantes',
-    de: 'Biodünger'
-  },
-  'about.history.p2.biofertilisants.desc': {
-    fr: 'pour régénérer les sols et nourrir les cultures. Toutes ces solutions étant utilisables en',
-    en: 'to regenerate soils and nourish crops. All these solutions can be used in',
-    es: 'para regenerar los suelos y nutrir los cultivos. Todas estas soluciones se pueden usar en',
-    pt: 'para regenerar os solos e nutrir as culturas. Todas essas soluções podem ser utilizadas na',
-    de: 'zur Bodenregeneration und Pflanzenernährung. All diese Lösungen sind einsetzbar im'
-  },
-  'about.history.p2.organic': {
-    fr: 'agriculture biologique',
-    en: 'organic farming',
-    es: 'agricultura ecológica',
-    pt: 'agricultura orgânica.',
-    de: 'ökologischen Landbau'
-  },
-  'about.history.p3': {
-    fr: 'Notre expertise en',
-    en: 'Our expertise in',
-    es: 'Nuestra experiencia en',
-    pt: 'Nossa experiência em',
-    de: 'Unsere Expertise in'
-  },
-  'about.history.p3.process': {
-    fr: 'biofabrique et agriculture',
-    en: 'biomanufacturing and agriculture',
-    es: 'biofábrica y agricultura',
-    pt: 'biofábrica e agricultura',
-    de: 'Bioproduktion und Landwirtschaft'
-  },
-  'about.history.p3.guarantee': {
-    fr: 'nous permet de garantir des produits de qualité stable et reproductible, répondant aux exigences les plus strictes du monde agricole.',
-    en: 'allows us to guarantee products of stable and reproducible quality, meeting the strictest requirements of the agricultural world.',
-    es: 'nos permite garantizar productos de calidad estable y reproducible, que cumplen con los requisitos más estrictos del mundo agrícola.',
-    pt: 'garante produtos de qualidade, que atendem aos requisitos mais rigorosos do setor agrícola.',
-    de: 'ermöglicht es uns, Produkte von stabiler und reproduzierbarer Qualität zu garantieren, die den strengsten Anforderungen der Landwirtschaft entsprechen.'
-  },
   // About values
   'about.value1.title': {
     fr: 'Innovation Naturelle',
@@ -1284,11 +1179,11 @@ const translations: Translations = {
     de: 'Natürlich'
   },
   'biocontrole.adv1.desc': {
-    fr: 'Solutions 100% biologiques sans résidus chimiques',
-    en: '100% biological solutions without chemical residues',
-    es: 'Soluciones 100% biológicas sin residuos químicos',
-    pt: 'Soluções 100% biológicas sem resíduos químicos',
-    de: '100% biologische Lösungen ohne chemische Rückstände'
+    fr: 'Des solutions 100% biologiques, sans résidus chimiques, qui s\'appuient uniquement sur des mécanismes présents dans la nature.',
+    en: '100% biological solutions, free of chemical residues, relying solely on mechanisms already present in nature.',
+    es: 'Soluciones 100% biológicas, sin residuos químicos, que se basan únicamente en mecanismos presentes en la naturaleza.',
+    pt: 'Soluções 100% biológicas, sem resíduos químicos, que se apoiam apenas em mecanismos já presentes na natureza.',
+    de: '100% biologische Lösungen ohne chemische Rückstände, die ausschließlich auf natürlich vorkommenden Mechanismen beruhen.'
   },
   'biocontrole.adv2.title': {
     fr: 'Sélectif',
@@ -1636,11 +1531,11 @@ const translations: Translations = {
     de: 'Technischer Support'
   },
   'boosters.why4.desc': {
-    fr: 'Pas de modification de l\'itinéraire technique, ni d\'investissement dans le matériel agricole : application foliaire ou au sol.',
-    en: 'No modification of the technical itinerary, no investment in agricultural equipment: foliar or soil application.',
-    es: 'Sin modificación del itinerario técnico, ni inversión en equipos agrícolas: aplicación foliar o al suelo.',
-    pt: 'Sem modificação do itinerário técnico, nem investimento em equipamentos agrícolas: aplicação foliar ou no solo.',
-    de: 'Keine Änderung des technischen Ablaufs, keine Investition in landwirtschaftliche Geräte: Blatt- oder Bodenanwendung.'
+    fr: 'Pas de modification de l\'itinéraire technique, ni d\'investissement dans le matériel agricole : application foliaire ou au sol. Peut être mélangé avec un autre intrant organique ou de synthèse.',
+    en: 'No modification of the technical itinerary, no investment in agricultural equipment: foliar or soil application. Can be mixed with another organic or synthetic input.',
+    es: 'Sin modificación del itinerario técnico, ni inversión en equipos agrícolas: aplicación foliar o al suelo. Se puede mezclar con otro insumo orgánico o de síntesis.',
+    pt: 'Sem modificação do itinerário técnico, nem investimento em equipamentos agrícolas: aplicação foliar ou no solo. Pode ser misturado com outro insumo orgânico ou de síntese.',
+    de: 'Keine Änderung des technischen Ablaufs, keine Investition in landwirtschaftliche Geräte: Blatt- oder Bodenanwendung. Kann mit einem anderen organischen oder synthetischen Betriebsmittel gemischt werden.'
   },
   'boosters.cta.title': {
     fr: 'Prêt à booster vos cultures ?',

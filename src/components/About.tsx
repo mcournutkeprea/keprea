@@ -64,9 +64,9 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
               <div className="space-y-3">
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   {t('about.history.p1')}{' '}
-                  <strong className="text-foreground font-semibold">{t('about.history.p1.year')}</strong>{' '}
+                  {t('about.history.p1.year')}{' '}
                   {t('about.history.p1.by')}{' '}
-                  <strong className="text-foreground font-semibold">{t('about.history.p1.associates')}</strong>{' '}
+                  {t('about.history.p1.associates')}{' '}
                   {t('about.history.p1.roles')}{' '}
                   {t('about.history.p1.vision.intro')}{' '}
                   <strong className="text-primary font-semibold">{t('about.history.p1.vision.bold')}</strong>

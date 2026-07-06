@@ -69,58 +69,25 @@ const QuiSommesNous = () => (
 
       <About showTitle={false} />
 
-      {/* Jalons et implantation */}
-      <section className="py-16 px-4">
+      {/* Jalons */}
+      <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-10">
             Nos jalons
           </h2>
           <div className="max-w-2xl mx-auto space-y-4">
             {[
-              {
-                title: "2024 : Création de Keprea (SAS)",
-                desc: "Fondée par 7 associés experts (agriculteurs, entomologistes, agronomes et entrepreneurs), réunis autour d'une même conviction : faire revenir le vivant au cœur de la gestion de la ferme.",
-              },
-              {
-                title: "2025 : implantation du site de production en France",
-                desc: "Sur 3 000 m², à environ 2 heures de Paris, Bâle, Genève et Lyon, au cœur d'un important bassin céréalier et viticole français.",
-              },
-              {
-                title: "Une gamme de 4 familles de biosolutions",
-                desc: "Bioprotection vivante (auxiliaires entomophages), biopesticides (extraits d'insectes), boosters (biostimulants) et biofertilisant, développés pour couvrir l'ensemble d'un programme de protection et de nutrition des cultures.",
-              },
-              {
-                title: "Des formulations pensées pour l'agriculture biologique",
-                desc: "Conçues pour répondre aux exigences du règlement (UE) 2018/848 relatif à la production biologique, sous réserve de vérification produit par produit avec votre organisme certificateur.",
-              },
+              "2024 : création de Keprea (SAS)",
+              "2025 : implantation du site de production en France (3 000 m²)",
+              "Une gamme de 4 familles de biosolutions : bioprotection vivante, biopesticides, boosters, biofertilisant",
+              "Des formulations pensées pour l'agriculture biologique (règlement (UE) 2018/848)",
             ].map((item) => (
-              <div key={item.title} className="flex items-start gap-3">
+              <div key={item} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="text-base font-semibold text-foreground block">{item.title}</span>
-                  <span className="text-sm text-muted-foreground">{item.desc}</span>
-                </div>
+                <span className="text-base text-foreground">{item}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Pourquoi une équipe pluridisciplinaire */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Pourquoi une équipe pluridisciplinaire ?
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Développer des biosolutions performantes exige de faire dialoguer des
-            compétences rarement réunies dans une même structure : l'entomologie pour
-            comprendre et exploiter les propriétés biologiques des insectes,
-            l'agronomie pour valider l'efficacité au champ, et une expérience concrète
-            de l'exploitation agricole pour concevoir des produits réellement utilisables.
-            C'est cette combinaison qui a présidé au choix des 7 associés fondateurs
-            de Keprea, et qui continue de guider le recrutement de l'équipe.
-          </p>
         </div>
       </section>
 

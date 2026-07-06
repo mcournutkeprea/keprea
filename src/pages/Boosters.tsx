@@ -76,37 +76,22 @@ const Boosters = () => {
           </div>
         </header>
 
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-3">Qu'est-ce qu'un biostimulant agricole ?</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante : nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité), sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir d'extraits d'insectes (polypeptides, proline, acides aminés) : le premier en application foliaire pour la vigueur aérienne, le second au sol pour la santé racinaire et microbienne.
+              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante : nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité), sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir de micropeptides d'insectes, de courtes chaînes d'acides aminés directement assimilables par la plante, qui activent plus rapidement ses mécanismes naturels de croissance et de défense que des protéines complètes.
             </p>
-            <h3 className="text-xl font-bold text-primary mt-8 mb-3">Les micropeptides, notre différenciant</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Plus que le terme générique de « biostimulant », ce qui distingue Boostea13 et Soilea110, ce sont les micropeptides qu'ils apportent : de courtes chaînes d'acides aminés issues de l'hydrolyse de la matière première insecte. Directement assimilables par la plante, ces micropeptides agissent comme signaux biologiques qui activent les mécanismes naturels de croissance et de défense, plus rapidement que des protéines complètes qui doivent d'abord être dégradées. C'est cette spécificité moléculaire, et non une action biostimulante générique, qui explique les effets observés sur la vigueur, l'enracinement et la tolérance aux stress.
-            </p>
-            <div className="mt-6 border-2 border-dashed border-primary/30 bg-primary/5 rounded-xl p-5">
-              <p className="text-sm font-semibold text-primary mb-1">Contenu à compléter par Émilien</p>
-              <p className="text-sm text-muted-foreground">
-                Paragraphe technique sur les micropeptides à rédiger (mécanisme d'action, spécificité vs. biostimulants génériques, données d'appui).
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-center text-foreground mb-6">Quel produit choisir ?</h2>
+            <h2 className="text-2xl font-bold text-center text-foreground mt-10 mb-6">Quel produit choisir ?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-card border border-primary/20 rounded-xl p-5">
                 <h3 className="font-bold text-primary mb-2">Boostea13 : Application foliaire</h3>
-                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la <strong className="text-foreground">vigueur aérienne</strong> : manque de résistance à la sécheresse, stress post-gel, assimilation nutritive insuffisante.</p>
+                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la vigueur aérienne : manque de résistance à la sécheresse, stress post-gel, assimilation nutritive insuffisante.</p>
                 <p className="text-sm text-muted-foreground">→ Pulvérisation foliaire aux stades clés (tallage, floraison…)</p>
               </div>
               <div className="bg-card border border-primary/20 rounded-xl p-5">
                 <h3 className="font-bold text-primary mb-2">Soilea110 : Application au sol</h3>
-                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la <strong className="text-foreground">santé du sol</strong> : structure dégradée, faible activité microbienne, résistance aux maladies racinaires.</p>
+                <p className="text-sm text-muted-foreground mb-3">Votre priorité est la santé du sol : structure dégradée, faible activité microbienne, résistance aux maladies racinaires.</p>
                 <p className="text-sm text-muted-foreground">→ Incorporation avant semis ou plantation</p>
               </div>
             </div>
@@ -197,7 +182,7 @@ const Boosters = () => {
                   {[
                     { step: 1, title: "Application foliaire", desc: "Diluer à 0,5–1,5 L dans un pulvérisateur. Appliquer en conditions fraîches (matin ou soir)." },
                     { step: 2, title: "Stades clés", desc: "Tallage et montaison pour les céréales, floraison et nouaison pour le maraîchage et l'arboriculture." },
-                    { step: 3, title: "Fréquence", desc: "1 à 3 applications selon la culture. 1 à 2 applications constituent généralement le meilleur compromis." },
+                    { step: 3, title: "Fréquence", desc: "1 à 3 applications selon la culture." },
                   ].map(({ step, title, desc }) => (
                     <div key={step} className="flex gap-4">
                       <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm">
@@ -216,7 +201,7 @@ const Boosters = () => {
                 <div className="space-y-5">
                   {[
                     { step: 1, title: "Application au sol", desc: "Application pendant le semis ou la plantation." },
-                    { step: 2, title: "Dosage", desc: "150 à 300 kg/ha selon le type de sol, la culture et les objectifs de fertilité, ou une poignée par plant selon la culture." },
+                    { step: 2, title: "Dosage", desc: "150 à 300 kg/ha ou une poignée par plant selon le type de sol, la culture et les objectifs de fertilité." },
                     { step: 3, title: "Compatibilité", desc: "Compatible avec d'autres amendements organiques. Favorise la microfaune du sol et le développement racinaire." },
                   ].map(({ step, title, desc }) => (
                     <div key={step} className="flex gap-4">
