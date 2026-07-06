@@ -80,7 +80,11 @@ const Boosters = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-3">Qu'est-ce qu'un biostimulant agricole ?</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante : nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité), sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir de micropeptides d'insectes, de courtes chaînes d'acides aminés directement assimilables par la plante, qui activent plus rapidement ses mécanismes naturels de croissance et de défense que des protéines complètes.
+              Un biostimulant agricole est une substance ou un microorganisme qui stimule les processus naturels de la plante : nutrition, développement racinaire, tolérance aux stress abiotiques (sécheresse, gel, salinité), sans agir directement comme un engrais ou un produit phytosanitaire. Boostea13 et Soilea110 sont les deux biostimulants de Keprea, formulés à partir d'extraits d'insectes : le premier en application foliaire pour la vigueur aérienne, le second au sol pour la santé racinaire et microbienne.
+            </p>
+            <h3 className="text-xl font-bold text-primary mt-8 mb-3">Les micropeptides, notre différenciant</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Plus que le terme générique de « biostimulant », ce qui distingue Boostea13 et Soilea110, ce sont les micropeptides qu'ils apportent : de courtes chaînes d'acides aminés issues de l'hydrolyse de la matière première insecte. Directement assimilables par la plante, ces micropeptides agissent comme signaux biologiques qui activent les mécanismes naturels de croissance et de défense, plus rapidement que des protéines complètes qui doivent d'abord être dégradées. C'est cette spécificité moléculaire, et non une action biostimulante générique, qui explique les effets observés sur la vigueur, l'enracinement et la tolérance aux stress.
             </p>
             <h2 className="text-2xl font-bold text-center text-foreground mt-10 mb-6">Quel produit choisir ?</h2>
             <div className="grid md:grid-cols-2 gap-4">
