@@ -269,7 +269,7 @@ const translations: Translations = {
     de: 'Bodenaktivator und Stressresistenz'
   },
   'solutions.boosters.polypeptides': {
-    fr: 'Riche en',
+    fr: 'Riches en',
     en: 'Rich in',
     es: 'Rico en',
     pt: 'Rico em',
@@ -283,10 +283,10 @@ const translations: Translations = {
     de: 'Aktive Extrakte'
   },
   'solutions.biofertilisant.title': {
-    fr: 'Biofertilisant',
-    en: 'Biofertilizer',
-    es: 'Biofertilizante',
-    pt: 'Biofertilizante',
+    fr: 'Biofertilisants',
+    en: 'Biofertilizers',
+    es: 'Biofertilizantes',
+    pt: 'Biofertilizantes',
     de: 'Biodünger'
   },
   'solutions.biofertilisant.subtitle': {
@@ -297,7 +297,7 @@ const translations: Translations = {
     de: 'Optimale Pflanzenernährung'
   },
   'solutions.biofertilisant.organic': {
-    fr: 'Riche en matière organique',
+    fr: 'Riches en matière organique',
     en: 'Rich in organic matter',
     es: 'Rico en materia orgánica',
     pt: 'Rico em matéria orgânica',
@@ -1384,10 +1384,10 @@ const translations: Translations = {
   },
   // Biofertilisant page
   'biofertilisant.title': {
-    fr: 'Biofertilisant',
-    en: 'Biofertilizer',
-    es: 'Biofertilizante',
-    pt: 'Biofertilizante',
+    fr: 'Biofertilisants',
+    en: 'Biofertilizers',
+    es: 'Biofertilizantes',
+    pt: 'Biofertilizantes',
     de: 'Biodünger'
   },
   'biofertilisant.subtitle': {
@@ -2853,11 +2853,11 @@ const translations: Translations = {
     de: 'chemische Rückstände'
   },
   'innovationpage.hero.image.alt': {
-    fr: 'Concept scientifique des biostimulants issus de substances naturelles d’insectes',
-    en: 'Scientific concept of biostimulants derived from natural insect substances',
-    es: 'Concepto científico de los biostimulantes derivados de sustancias naturales de insectos',
-    pt: 'Conceito científico de biostimulantes derivados de substâncias naturais de insetos',
-    de: 'Wissenschaftliches Konzept von Biostimulanzien aus natürlichen Insektenstoffen'
+    fr: 'Chrysope posée sur une feuille de soja, illustrant l’interaction naturelle entre insectes et plantes à l’origine des biosolutions Keprea',
+    en: 'A lacewing resting on a soybean leaf, illustrating the natural insect–plant interaction behind Keprea’s biosolutions',
+    es: 'Una crisopa posada en una hoja de soja, que ilustra la interacción natural entre insectos y plantas en el origen de las biosoluciones de Keprea',
+    pt: 'Um crisopídeo sobre uma folha de soja, ilustrando a interação natural entre insetos e plantas na origem das biossoluções da Keprea',
+    de: 'Eine Florfliege auf einem Sojablatt – die natürliche Insekten-Pflanzen-Interaktion, die den Biolösungen von Keprea zugrunde liegt'
   },
   'innovationpage.challenges.title': {
     fr: 'Un contexte agricole en mouvement',

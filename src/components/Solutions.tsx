@@ -2,6 +2,7 @@ import type { RefObject } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate, Link } from "react-router-dom";
 import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
+import solutionsBiofertilisantBg from "@/assets/Solutions Biofertilisant.png";
 import { useInView } from "@/hooks/useInView";
 import { ArrowRight, Lightbulb, CheckCircle2, Construction } from "lucide-react";
 
@@ -64,7 +65,7 @@ const Solutions = () => {
     },
     {
       path: "/solutions/biofertilisant",
-      bgStyle: { backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')` },
+      bgStyle: { backgroundImage: `url(${solutionsBiofertilisantBg})` },
       subtitleKey: "solutions.biofertilisant.subtitle",
       titleKey: "solutions.biofertilisant.title",
       descKey: null,
