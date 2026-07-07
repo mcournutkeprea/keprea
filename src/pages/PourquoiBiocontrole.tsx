@@ -286,8 +286,8 @@ const PourquoiBiocontrole = () => {
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-semibold text-foreground mb-2">{t(item.titleKey)}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{t(item.descKey)}</p>
                 </div>
               </div>
             ))}
@@ -321,8 +321,8 @@ const PourquoiBiocontrole = () => {
       <GradientCTA
         title={t("pourquoi.cta.title")}
         description={t("pourquoi.cta.desc")}
-        primary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
-        secondary={{ label: t("contactcta.primary"), to: "/contact" }}
+        primary={{ label: t("contactcta.primary"), to: "/contact" }}
+        secondary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
       />
     </main>
 

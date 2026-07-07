@@ -268,6 +268,20 @@ const Boosters = () => {
           </div>
         </section>
 
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/20">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-foreground mb-3 text-center">{t("boosters.feedback.title")}</h2>
+            <p className="text-center text-muted-foreground mb-6 text-sm max-w-xl mx-auto">
+              {t("boosters.feedback.subtitle")}
+            </p>
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
+              <Link to="/contact?type=terrain&product=boosters" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
+                {t("boosters.feedback.link")}
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <GradientCTA
           title={t('boosters.cta.title')}
           description={t('boosters.cta.desc')}

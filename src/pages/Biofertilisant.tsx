@@ -247,7 +247,7 @@ const Biofertilisant = () => {
               {t("biofertilisant.feedback.subtitle")}
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
-              <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
+              <Link to="/contact?type=terrain&product=biofertilisant" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
                 {t("biofertilisant.feedback.link")}
               </Link>
             </div>

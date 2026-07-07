@@ -2,21 +2,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
-const FieldFeedbackForm = () => {
+const PRODUCT_OPTIONS = ["biofertilisant", "boosters", "biocontrole", "extraits", "autre"] as const;
+
+interface FieldFeedbackFormProps {
+  defaultProduct?: string;
+}
+
+const FieldFeedbackForm = ({ defaultProduct }: FieldFeedbackFormProps) => {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,15 +26,22 @@ const FieldFeedbackForm = () => {
     email: "",
     culture: "",
     region: "",
-    product: "",
+    product: defaultProduct && (PRODUCT_OPTIONS as readonly string[]).includes(defaultProduct) ? [defaultProduct] : [],
     feedback: "",
   });
   const [rgpdAccepted, setRgpdAccepted] = useState(false);
 
+  const toggleProduct = (value: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      product: checked ? [...prev.product, value] : prev.product.filter(p => p !== value),
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.culture || !formData.region || !formData.product || !formData.feedback) {
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.culture || !formData.region || formData.product.length === 0 || !formData.feedback) {
       toast({
         title: t('toast.error'),
         description: t('toast.error.required'),
@@ -56,7 +63,7 @@ const FieldFeedbackForm = () => {
 
     try {
       const { error } = await supabase.functions.invoke('send-field-feedback-email', {
-        body: formData
+        body: { ...formData, product: formData.product.join(", ") }
       });
 
       if (error) throw error;
@@ -66,7 +73,7 @@ const FieldFeedbackForm = () => {
         description: t('toast.terrain.success.desc'),
       });
 
-      setFormData({ firstName: "", lastName: "", email: "", culture: "", region: "", product: "", feedback: "" });
+      setFormData({ firstName: "", lastName: "", email: "", culture: "", region: "", product: [], feedback: "" });
       setRgpdAccepted(false);
     } catch (error) {
       toast({
@@ -161,22 +168,40 @@ const FieldFeedbackForm = () => {
 
           <div className="space-y-2">
             <Label htmlFor="terrain-product">{t('contact.terrain.product')} *</Label>
-            <Select
-              value={formData.product}
-              onValueChange={(value) => handleInputChange('product', value)}
-              required
-            >
-              <SelectTrigger id="terrain-product" className={inputClass}>
-                <SelectValue placeholder={t('contact.terrain.product.placeholder')} />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="biofertilisant">{t('contact.terrain.product.biofertilisant')}</SelectItem>
-                <SelectItem value="boosters">{t('contact.terrain.product.boosters')}</SelectItem>
-                <SelectItem value="biocontrole">{t('contact.terrain.product.biocontrole')}</SelectItem>
-                <SelectItem value="extraits">{t('contact.terrain.product.extraits')}</SelectItem>
-                <SelectItem value="autre">{t('contact.terrain.product.autre')}</SelectItem>
-              </SelectContent>
-            </Select>
+            <Popover>
+              <PopoverTrigger asChild>
+                <button
+                  type="button"
+                  id="terrain-product"
+                  className={`${inputClass} w-full flex items-center justify-between px-3`}
+                >
+                  <span className={formData.product.length === 0 ? "text-muted-foreground/50 font-normal" : "text-left"}>
+                    {formData.product.length === 0
+                      ? t('contact.terrain.product.placeholder')
+                      : formData.product.map((value) => t(`contact.terrain.product.${value}`)).join(", ")}
+                  </span>
+                  <ChevronDown className="w-4 h-4 opacity-50 shrink-0" />
+                </button>
+              </PopoverTrigger>
+              <PopoverContent className="w-[--radix-popover-trigger-width] p-2" align="start">
+                <div className="space-y-1">
+                  {PRODUCT_OPTIONS.map((value) => (
+                    <label
+                      key={value}
+                      htmlFor={`terrain-product-${value}`}
+                      className="flex items-center gap-2.5 px-2 py-1.5 rounded-md hover:bg-muted/60 cursor-pointer"
+                    >
+                      <Checkbox
+                        id={`terrain-product-${value}`}
+                        checked={formData.product.includes(value)}
+                        onCheckedChange={(checked) => toggleProduct(value, checked === true)}
+                      />
+                      <span className="text-sm font-normal">{t(`contact.terrain.product.${value}`)}</span>
+                    </label>
+                  ))}
+                </div>
+              </PopoverContent>
+            </Popover>
           </div>
 
           <div className="space-y-2">

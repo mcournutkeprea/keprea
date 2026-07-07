@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import FieldFeedbackForm from "@/components/FieldFeedbackForm";
-import { MapPin, Mail, Clock, Leaf, ArrowRight } from "lucide-react";
+import { MapPin, Mail, Clock, Leaf } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -15,6 +15,7 @@ const ContactPage = () => {
   const [activeTab, setActiveTab] = useState<"contact" | "terrain">(
     searchParams.get("type") === "terrain" ? "terrain" : "contact"
   );
+  const productParam = searchParams.get("product") ?? undefined;
 
   const selectTab = (tab: "contact" | "terrain") => {
     setActiveTab(tab);
@@ -119,7 +120,7 @@ const ContactPage = () => {
                   <ContactForm embedded />
                 </div>
                 <div role="tabpanel" hidden={activeTab !== "terrain"}>
-                  <FieldFeedbackForm />
+                  <FieldFeedbackForm defaultProduct={productParam} />
                 </div>
               </div>
 
@@ -186,19 +187,6 @@ const ContactPage = () => {
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {t("contactpage.farmerCard.desc")}
                       </p>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          selectTab("terrain");
-                          document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }}
-                        className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-primary group"
-                      >
-                        <span>{t("contactpage.farmerCard.cta")}</span>
-                        <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
-                          <ArrowRight className="w-3 h-3" strokeWidth={1.5} />
-                        </span>
-                      </button>
                     </div>
                   </div>
                 </div>

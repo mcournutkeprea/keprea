@@ -174,7 +174,6 @@ const BiocontroleVivant = () => {
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">{t("bv.results.stat3.value")}</div>
                 <div className="text-sm text-muted-foreground">{t("bv.results.stat3.label")}</div>
-                <div className="text-xs text-muted-foreground mt-1">{t("bv.results.stat3.sub")}</div>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
@@ -189,13 +188,10 @@ const BiocontroleVivant = () => {
             <p className="text-muted-foreground text-center mb-4 max-w-2xl mx-auto">
               {t("bv.howto.intro")}
             </p>
-            <div className="bg-primary/5 border border-primary/10 rounded-lg px-5 py-4 mb-4 max-w-2xl mx-auto text-sm text-muted-foreground">
+            <div className="bg-primary/5 border border-primary/10 rounded-lg px-5 py-4 mb-8 max-w-2xl mx-auto text-sm text-muted-foreground whitespace-pre-line">
               {t("bv.howto.delivery")}
             </div>
-            <p className="text-sm text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-              {t("bv.howto.summary")}
-            </p>
-            <div className="space-y-6">
+            <div className="space-y-6 mb-8">
               {stepKeys.map(({ titleKey, descKey }, i) => (
                 <div key={i} className="flex gap-5">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
@@ -208,6 +204,9 @@ const BiocontroleVivant = () => {
                 </div>
               ))}
             </div>
+            <p className="text-sm text-center text-muted-foreground max-w-2xl mx-auto">
+              {t("bv.howto.summary")}
+            </p>
           </div>
         </section>
 
@@ -238,7 +237,7 @@ const BiocontroleVivant = () => {
               {t("bv.feedback.subtitle")}
             </p>
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-8 text-center">
-              <Link to="/contact" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
+              <Link to="/contact?type=terrain&product=biocontrole" className="inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:opacity-80">
                 {t("bv.feedback.link")}
               </Link>
             </div>

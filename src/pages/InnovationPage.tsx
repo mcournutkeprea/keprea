@@ -244,8 +244,8 @@ const InnovationPage = () => {
         <GradientCTA
           title={t("innovationpage.cta.title")}
           description={t("innovationpage.cta.desc")}
-          primary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
-          secondary={{ label: t("innovationpage.cta.secondary"), href: "mailto:contact@keprea.com?subject=Demande%20essai%20terrain" }}
+          primary={{ label: t("innovationpage.cta.secondary"), to: "/contact" }}
+          secondary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
         />
 
       </main>

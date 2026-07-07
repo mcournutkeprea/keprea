@@ -1313,7 +1313,7 @@ const translations: Translations = {
     de: 'Weiße Fliegen'
   },
   'biocontrole.pest4.desc': {
-    fr: 'Contre les mouches blanches (aleurodes) des tomates, concombres, courgettes...',
+    fr: 'Contre les mouches blanches (aleurodes) des concombres, courgettes...',
     en: 'Against whiteflies on tomatoes, cucumbers, zucchini...',
     es: 'Contra las moscas blancas (aleuródidos) de tomates, pepinos, calabacines...',
     pt: 'Contra moscas brancas (aleuroídeos) de tomates, pepinos, abobrinhas...',
@@ -2316,7 +2316,7 @@ const translations: Translations = {
     de: 'Warum Biokontrolle?'
   },
   'solutions.banner.desc': {
-    fr: 'Cadre réglementaire, enjeux agronomiques et données clés : à lire avant de choisir votre solution.',
+    fr: 'Cadre réglementaire, enjeux agronomiques et données clés.',
     en: 'Regulatory framework, agronomic stakes and key data: read before choosing your solution.',
     es: 'Marco regulatorio, retos agronómicos y datos clave: léalo antes de elegir su solución.',
     pt: 'Enquadramento regulamentar, desafios agronómicos e dados-chave: leia antes de escolher a sua solução.',
@@ -2798,11 +2798,11 @@ const translations: Translations = {
     fr: 'Innovation', en: 'Innovation', es: 'Innovación', pt: 'Inovação', de: 'Innovation'
   },
   'innovationpage.hero.title': {
-    fr: 'Une source de molécules que la chimie ne peut pas reproduire',
-    en: 'A source of molecules that chemistry cannot replicate',
-    es: 'Una fuente de moléculas que la química no puede reproducir',
-    pt: 'Uma fonte de moléculas que a química não consegue reproduzir',
-    de: 'Eine Quelle von Molekülen, die die Chemie nicht nachbilden kann'
+    fr: 'Une nouvelle source de molécules bioactives issues du vivant',
+    en: 'A new source of bioactive molecules from living organisms',
+    es: 'Una nueva fuente de moléculas bioactivas de origen vivo',
+    pt: 'Uma nova fonte de moléculas bioativas de origem viva',
+    de: 'Eine neue Quelle bioaktiver Moleküle aus der Natur'
   },
   'innovationpage.hero.lead': {
     fr: 'Les insectes ont co-évolué avec les plantes pendant 400 millions d\'années. Keprea identifie et développe des biosolutions innovantes pour mettre l\'insecte au service d\'une agriculture plus résiliente.',
@@ -3420,13 +3420,6 @@ const translations: Translations = {
   'bv.results.stat3.label': {
     fr: 'chimique de synthèse', en: 'synthetic chemical', es: 'químico de síntesis', pt: 'químico de síntese', de: 'synthetisch-chemisch'
   },
-  'bv.results.stat3.sub': {
-    fr: 'Éligible AB, vérifier avec votre certificateur',
-    en: 'Eligible for organic certification, check with your certifying body',
-    es: 'Elegible para AB, verifique con su organismo certificador',
-    pt: 'Elegível para AB, verifique com o seu organismo certificador',
-    de: 'Bio-zertifizierbar, bitte mit Ihrer Zertifizierungsstelle prüfen'
-  },
   'bv.results.disclaimer': {
     fr: 'Données internes Keprea, essais en parcelles pilotes 2023–2024. Résultats variables selon l\'espèce ravageur, la pression parasitaire et les conditions climatiques, communiqués à titre indicatif, hors valeur d\'engagement contractuel.',
     en: 'Internal Keprea data, pilot field trials 2023–2024. Results vary depending on pest species, pest pressure and weather conditions; provided for indicative purposes only, with no contractual commitment.',
@@ -3445,11 +3438,11 @@ const translations: Translations = {
     de: 'Bei einer Freisetzung werden Beutel oder Boxen mit lebenden Nützlingen geöffnet und auf die Pflanzen oder in die Reihen gelegt. Hier der typische Ablauf.'
   },
   'bv.howto.delivery': {
-    fr: 'Format de livraison : sachets ou tubes de 250 à 1 000 individus selon l\'espèce. Conservation : 24–48h à 8°C, à l\'abri de la lumière directe. Application le jour de réception recommandée pour préserver le taux de survie des auxiliaires au lâcher.',
-    en: 'Delivery format: pouches or tubes of 250 to 1,000 individuals depending on the species. Storage: 24–48h at 10°C, away from direct light. Application on the day of receipt is recommended to preserve the survival rate of the beneficials upon release.',
-    es: 'Formato de entrega: bolsitas o tubos de 250 a 1.000 individuos según la especie. Conservación: 24-48h a 10°C, al abrigo de la luz directa. Se recomienda la aplicación el día de recepción para preservar la tasa de supervivencia de los auxiliares en la suelta.',
-    pt: 'Formato de entrega: saquetas ou tubos de 250 a 1.000 indivíduos consoante a espécie. Conservação: 24-48h a 10°C, ao abrigo da luz direta. Recomenda-se a aplicação no dia da receção para preservar a taxa de sobrevivência dos auxiliares na libertação.',
-    de: 'Lieferformat: Beutel oder Röhrchen mit 250 bis 1.000 Individuen je nach Art. Lagerung: 24-48h bei 10°C, vor direktem Licht geschützt. Die Anwendung am Tag des Erhalts wird empfohlen, um die Überlebensrate der Nützlinge bei der Freisetzung zu erhalten.'
+    fr: 'Format de livraison : sachets ou tubes de 250 à 1 000 individus selon l\'espèce.\n\nConservation : 24–48h à 8°C, à l\'abri de la lumière directe. Application le jour de réception recommandée pour préserver le taux de survie des auxiliaires au lâcher.',
+    en: 'Delivery format: pouches or tubes of 250 to 1,000 individuals depending on the species.\n\nStorage: 24–48h at 10°C, away from direct light. Application on the day of receipt is recommended to preserve the survival rate of the beneficials upon release.',
+    es: 'Formato de entrega: bolsitas o tubos de 250 a 1.000 individuos según la especie.\n\nConservación: 24-48h a 10°C, al abrigo de la luz directa. Se recomienda la aplicación el día de recepción para preservar la tasa de supervivencia de los auxiliares en la suelta.',
+    pt: 'Formato de entrega: saquetas ou tubos de 250 a 1.000 indivíduos consoante a espécie.\n\nConservação: 24-48h a 10°C, ao abrigo da luz direta. Recomenda-se a aplicação no dia da receção para preservar a taxa de sobrevivência dos auxiliares na libertação.',
+    de: 'Lieferformat: Beutel oder Röhrchen mit 250 bis 1.000 Individuen je nach Art.\n\nLagerung: 24-48h bei 10°C, vor direktem Licht geschützt. Die Anwendung am Tag des Erhalts wird empfohlen, um die Überlebensrate der Nützlinge bei der Freisetzung zu erhalten.'
   },
   'bv.howto.summary': {
     fr: 'En résumé : diagnostiquer → planifier → lâcher tôt le matin → éviter les insecticides 48h avant et après → observer à J+7.',
@@ -3671,7 +3664,7 @@ const translations: Translations = {
     de: 'Wird nach Abschluss der Entwicklungs- und Zulassungsphasen mitgeteilt'
   },
   'extraits.notAvailable.badge': {
-    fr: 'En développement — non disponible à la vente',
+    fr: 'En développement - non disponible à la vente',
     en: 'In development — not yet available for sale',
     es: 'En desarrollo — no disponible para la venta',
     pt: 'Em desenvolvimento — não disponível para venda',
@@ -4302,6 +4295,23 @@ const translations: Translations = {
     es: 'Comparta su experiencia con Fertea432 →',
     pt: 'Partilhe a sua experiência com o Fertea432 →',
     de: 'Teilen Sie Ihre Erfahrung mit Fertea432 →'
+  },
+  'boosters.feedback.title': {
+    fr: 'Retours terrain', en: 'Field feedback', es: 'Comentarios de campo', pt: 'Comentários de campo', de: 'Feldrückmeldungen'
+  },
+  'boosters.feedback.subtitle': {
+    fr: 'Vous utilisez nos boosters ? Votre retour d\'expérience aide d\'autres agriculteurs à décider.',
+    en: 'Do you use our boosters? Your feedback helps other farmers decide.',
+    es: '¿Utiliza nuestros potenciadores? Su experiencia ayuda a otros agricultores a decidir.',
+    pt: 'Utiliza os nossos potenciadores? A sua experiência ajuda outros agricultores a decidir.',
+    de: 'Nutzen Sie unsere Booster? Ihre Erfahrung hilft anderen Landwirten bei der Entscheidung.'
+  },
+  'boosters.feedback.link': {
+    fr: 'Partager votre expérience avec nos boosters →',
+    en: 'Share your experience with our boosters →',
+    es: 'Comparta su experiencia con nuestros potenciadores →',
+    pt: 'Partilhe a sua experiência com os nossos potenciadores →',
+    de: 'Teilen Sie Ihre Erfahrung mit unseren Boostern →'
   },
   'biofertilisant.cta.secondary': {
     fr: 'Notre processus de production', en: 'Our production process', es: 'Nuestro proceso de producción', pt: 'O nosso processo de produção', de: 'Unser Produktionsprozess'
