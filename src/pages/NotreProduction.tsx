@@ -107,7 +107,7 @@ const NotreProduction = () => {
       <Production />
 
       {/* Détail des 6 étapes */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
             {t("notreproduction.steps.title")}

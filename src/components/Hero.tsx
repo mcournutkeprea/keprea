@@ -26,8 +26,8 @@ const Hero = () => {
       </div>
 
       {/* Content — bottom-left anchored */}
-      <div className="relative z-20 w-full container mx-auto px-6 sm:px-8 lg:px-10 pb-14 md:pb-20">
-        <div className="max-w-2xl">
+      <div className="relative z-20 w-full container mx-auto px-6 sm:px-8 lg:px-10 pb-16 md:pb-24">
+        <div className="max-w-3xl">
 
           {/* Eyebrow tag */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/8 px-3 py-1 mb-6">

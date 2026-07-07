@@ -6,16 +6,21 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/40 border-t border-border mt-auto">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer className="relative bg-muted/40 mt-auto">
+      <div
+        className="h-px w-full"
+        style={{ background: "linear-gradient(90deg, transparent, hsl(var(--primary)/0.4), transparent)" }}
+        aria-hidden="true"
+      />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
 
           {/* Identité */}
           <div>
             <img
               src="/lovable-uploads/eprea_Main_Logo.png"
               alt={t("alt.kepreaFooterLogo")}
-              className="h-12 w-auto mb-4"
+              className="h-14 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t("footer.tagline")}
@@ -25,7 +30,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">{t("footer.nav.title")}</h3>
+            <h3 className="text-xs font-semibold text-foreground uppercase tracking-[0.2em] mb-5">{t("footer.nav.title")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
@@ -67,7 +72,7 @@ const Footer = () => {
 
           {/* Contact & légal */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">{t("footer.contact.title")}</h3>
+            <h3 className="text-xs font-semibold text-foreground uppercase tracking-[0.2em] mb-5">{t("footer.contact.title")}</h3>
             <ul className="space-y-2 mb-6">
               <li>
                 <a
@@ -78,7 +83,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">{t("footer.legal.title")}</h3>
+            <h3 className="text-xs font-semibold text-foreground uppercase tracking-[0.2em] mb-5">{t("footer.legal.title")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/mentions-legales" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">

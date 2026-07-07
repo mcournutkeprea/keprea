@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import GradientCTA from "@/components/GradientCTA";
+import PremiumCard from "@/components/PremiumCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
@@ -71,8 +72,8 @@ const Biofertilisant = () => {
           <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url('/lovable-uploads/514c70d9-ef8f-4f9f-8df3-f38124715fa6.png')`
           }}></div>
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20 md:py-24">
             <Link to="/solutions">
               <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -135,11 +136,11 @@ const Biofertilisant = () => {
                 { value: "3%", label: t('biofertilisant.azote'), desc: t('biofertilisant.azote.desc') },
                 { value: "2%", label: t('biofertilisant.potassium'), desc: t('biofertilisant.potassium.desc') },
               ].map(({ value, label, desc }) => (
-                <div key={label} className="bg-white p-6 rounded-xl text-center border border-border shadow-sm">
+                <PremiumCard key={label} className="p-6 text-center">
                   <div className="text-3xl font-bold text-primary mb-2">{value}</div>
                   <h3 className="text-base font-semibold mb-1">{label}</h3>
                   <p className="text-sm text-muted-foreground">{desc}</p>
-                </div>
+                </PremiumCard>
               ))}
             </div>
             <Button asChild variant="outline" className="mt-6">
@@ -151,7 +152,7 @@ const Biofertilisant = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-muted/30">
+        <section className="py-20 px-4 bg-muted/30">
           <div className="container mx-auto max-w-5xl">
             <AdvantageGrid
               title={t('biofertilisant.advantages')}
@@ -201,20 +202,22 @@ const Biofertilisant = () => {
           </div>
         </section>
 
-        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("biofertilisant.results.title")}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">+20%</div>
-                <div className="text-sm text-muted-foreground">{t("biofertilisant.results.stat1.label")}</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground tracking-tight mb-10">{t("biofertilisant.results.title")}</h2>
+            <PremiumCard className="p-8 sm:p-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-border/60 text-center">
+                <div className="pb-8 sm:pb-0 sm:pr-8">
+                  <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight tabular-nums">+20%</div>
+                  <div className="text-sm text-muted-foreground">{t("biofertilisant.results.stat1.label")}</div>
+                </div>
+                <div className="pt-8 sm:pt-0 sm:pl-8">
+                  <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight tabular-nums">+18%</div>
+                  <div className="text-sm text-muted-foreground">{t("biofertilisant.results.stat2.label")}</div>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">+18%</div>
-                <div className="text-sm text-muted-foreground">{t("biofertilisant.results.stat2.label")}</div>
-              </div>
-            </div>
-            <p className="text-xs text-muted-foreground text-center mt-4">
+            </PremiumCard>
+            <p className="text-xs text-muted-foreground text-center mt-5 max-w-xl mx-auto">
               {t("biofertilisant.results.disclaimer")}
             </p>
           </div>
@@ -265,15 +268,15 @@ const Biofertilisant = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("biofertilisant.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
-              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("extraits.crosssell.bioprotection.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("extraits.crosssell.bioprotection.desc")}</p>
               </Link>
-              <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("solutions.biopesticides.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("boosters.crosssell.biopesticides.desc")}</p>
               </Link>
-              <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.boosters.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("bv.crosssell.boosters.desc")}</p>
               </Link>

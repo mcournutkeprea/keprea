@@ -47,7 +47,7 @@ const SolutionsTeaser = () => {
   }, []);
 
   return (
-    <section id="solutions" className="py-28 px-4 sm:px-6 lg:px-8">
+    <section id="solutions" className="py-32 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-center">
 

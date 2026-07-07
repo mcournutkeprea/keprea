@@ -30,7 +30,7 @@ const HowToGet = () => {
   const { ref: stepsRef, inView: stepsVisible } = useInView(0.05);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-28 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
 
         {/* Header */}
@@ -59,8 +59,8 @@ const HowToGet = () => {
               {/* Connector line between steps */}
               {i < steps.length - 1 && (
                 <div
-                  className="hidden md:block absolute top-[2.75rem] left-[calc(50%+3rem)] w-[calc(100%-6rem)] h-px"
-                  style={{ backgroundColor: "hsl(var(--border))" }}
+                  className="hidden md:block absolute top-[3.25rem] left-[calc(50%+3.5rem)] w-[calc(100%-7rem)] h-px"
+                  style={{ background: "linear-gradient(90deg, hsl(var(--primary)/0.35), hsl(var(--primary)/0.05))" }}
                   aria-hidden="true"
                 />
               )}
@@ -74,10 +74,8 @@ const HowToGet = () => {
                   {step.number}
                 </span>
                 {/* Icon */}
-                <div
-                  className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"
-                >
-                  <step.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                  <step.icon className="w-6 h-6 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mt-1">{t(step.titleKey)}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{t(step.descKey)}</p>

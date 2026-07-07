@@ -3,6 +3,7 @@ import { CheckCircle, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from "@/hooks/useInView";
 import { useLanguage } from "@/contexts/LanguageContext";
+import PremiumCard from "./PremiumCard";
 
 
 const credibilityStats = [
@@ -55,7 +56,7 @@ const TrustSection = () => {
               className="flex flex-col gap-1 px-6 py-5 bg-background"
             >
               <span
-                className="text-2xl font-bold text-primary tracking-tight"
+                className="text-3xl md:text-4xl font-bold text-primary tracking-tight"
                 style={{ fontVariantNumeric: "tabular-nums" }}
               >
                 {t(s.valueKey)}
@@ -71,10 +72,7 @@ const TrustSection = () => {
           className={`grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 reveal reveal-delay-1${guaranteesVisible ? " is-visible" : ""}`}
         >
           {guarantees.map((item, i) => (
-            <div
-              key={i}
-              className="rounded-xl p-6 flex flex-col gap-4 bg-background border border-border"
-            >
+            <PremiumCard key={i} className="p-6 flex flex-col gap-4">
               <div
                 className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"
               >
@@ -82,7 +80,7 @@ const TrustSection = () => {
               </div>
               <h3 className="text-base font-semibold text-foreground">{t(item.titleKey)}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
-            </div>
+            </PremiumCard>
           ))}
         </div>
 

@@ -11,6 +11,7 @@ import { faqJsonLd, articleJsonLd } from "@/lib/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 import coccinelleImage from "@/assets/coccinelle-jardin.jpg";
+import PremiumCard from "@/components/PremiumCard";
 
 const franceStats = [
   { value: "-50 %", descKey: "pourquoi.franceStat1.desc" },
@@ -91,7 +92,7 @@ const PourquoiBiocontrole = () => {
       />
 
       {/* Définition */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <div
             ref={defRef as RefObject<HTMLDivElement>}
@@ -137,7 +138,7 @@ const PourquoiBiocontrole = () => {
       </section>
 
       {/* 4 catégories de biocontrôle */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
             {t("pourquoi.categories.title")}
@@ -146,40 +147,40 @@ const PourquoiBiocontrole = () => {
             {t("pourquoi.categories.subtitle")}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-background rounded-2xl p-6 border border-border">
+            <PremiumCard className="p-6">
               <Feather className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat1.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {t("pourquoi.cat1.desc")}
               </p>
-            </div>
-            <div className="bg-background rounded-2xl p-6 border border-border">
+            </PremiumCard>
+            <PremiumCard className="p-6">
               <Microscope className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat2.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {t("pourquoi.cat2.desc")}
               </p>
-            </div>
-            <div className="bg-background rounded-2xl p-6 border border-border">
+            </PremiumCard>
+            <PremiumCard className="p-6">
               <TestTube className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat3.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {t("pourquoi.cat3.desc")}
               </p>
-            </div>
-            <div className="bg-background rounded-2xl p-6 border border-border">
+            </PremiumCard>
+            <PremiumCard className="p-6">
               <Bug className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-semibold text-foreground mb-2">{t("pourquoi.cat4.title")}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {t("pourquoi.cat4.desc")}
               </p>
-            </div>
+            </PremiumCard>
           </div>
         </div>
       </section>
 
       {/* Contexte réglementaire et marché */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
             {t("pourquoi.context.title")}
@@ -248,13 +249,13 @@ const PourquoiBiocontrole = () => {
       </section>
 
       {/* 3 raisons */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             {t("pourquoi.reasons.title")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
+          <div className="grid md:grid-cols-3 gap-6">
+            <PremiumCard className="p-8">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <ShieldCheck className="w-6 h-6 text-primary" />
               </div>
@@ -262,8 +263,8 @@ const PourquoiBiocontrole = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {t("pourquoi.reason1.desc")}
               </p>
-            </div>
-            <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
+            </PremiumCard>
+            <PremiumCard className="p-8">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
@@ -271,8 +272,8 @@ const PourquoiBiocontrole = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {t("pourquoi.reason2.desc")}
               </p>
-            </div>
-            <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
+            </PremiumCard>
+            <PremiumCard className="p-8">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <Leaf className="w-6 h-6 text-primary" />
               </div>
@@ -280,13 +281,13 @@ const PourquoiBiocontrole = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {t("pourquoi.reason3.desc")}
               </p>
-            </div>
+            </PremiumCard>
           </div>
         </div>
       </section>
 
       {/* Approche Keprea */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             {t("pourquoi.approach.title")}
@@ -314,7 +315,7 @@ const PourquoiBiocontrole = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             {t("pourquoi.faq.title")}

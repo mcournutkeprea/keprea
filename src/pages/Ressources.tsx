@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GradientCTA from "@/components/GradientCTA";
+import PremiumCard from "@/components/PremiumCard";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -56,11 +57,11 @@ const Ressources = () => {
       </section>
 
       {/* Prochainement */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
             {cards.map((item, i) => (
-              <div key={i} className="bg-muted/40 rounded-2xl p-8 border border-border text-center">
+              <PremiumCard key={i} className="p-8 text-center">
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-7 h-7 text-primary" />
                 </div>
@@ -79,7 +80,7 @@ const Ressources = () => {
                     {t("ressources.comingSoon")}
                   </span>
                 )}
-              </div>
+              </PremiumCard>
             ))}
           </div>
         </div>

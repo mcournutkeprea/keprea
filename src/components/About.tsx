@@ -23,7 +23,7 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-28 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
 
         {/* ── Header ── */}

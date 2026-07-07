@@ -2,6 +2,7 @@ import type { RefObject } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
+import PremiumCard from "./PremiumCard";
 
 const Innovation = () => {
   const { t } = useLanguage();
@@ -20,7 +21,7 @@ const Innovation = () => {
   ];
 
   return (
-    <section id="innovation" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+    <section id="innovation" className="py-28 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto">
 
         {/* Section header */}
@@ -53,99 +54,71 @@ const Innovation = () => {
         >
 
           {/* ── Carte 1 : Extraits d'insectes (claire) ── */}
-          <div
-            className="p-[3px] rounded-[2rem]"
-            style={{
-              background: 'linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)',
-              boxShadow: '0 4px 40px hsl(var(--primary)/0.09), 0 1px 3px rgba(0,0,0,0.04)',
-            }}
-          >
-            <div
-              className="rounded-[calc(2rem-3px)] px-8 py-9 h-full relative overflow-hidden"
-              style={{
-                background: 'radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))',
-                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.92)',
-              }}
+          <PremiumCard className="px-8 py-9">
+            {/* Eyebrow */}
+            <span
+              className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
+              style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
             >
-              {/* Eyebrow */}
-              <span
-                className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
-                style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
-              >
-                {t("innovation.card1.eyebrow")}
-              </span>
+              {t("innovation.card1.eyebrow")}
+            </span>
 
-              <h3 className="text-lg font-bold text-foreground mb-8 leading-snug max-w-[30ch]"
-                style={{ letterSpacing: '-0.01em' }}>
-                {t("innovation.substances.question")}
-              </h3>
+            <h3 className="text-lg font-bold text-foreground mb-8 leading-snug max-w-[30ch]"
+              style={{ letterSpacing: '-0.01em' }}>
+              {t("innovation.substances.question")}
+            </h3>
 
-              <ul className="flex flex-col gap-0 divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }} role="list">
-                {extraitsBenefits.map((benefit, i) => (
-                  <li key={i} className="flex gap-5 items-start py-5 first:pt-0 last:pb-0">
-                    <span
-                      className="text-3xl font-extrabold tabular-nums shrink-0 leading-none w-10"
-                      style={{ color: 'hsl(var(--primary))' }}
-                      aria-hidden="true"
-                    >
-                      0{i + 1}
-                    </span>
-                    <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--foreground)/0.78)' }}>
-                      {benefit}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+            <ul className="flex flex-col gap-0 divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }} role="list">
+              {extraitsBenefits.map((benefit, i) => (
+                <li key={i} className="flex gap-5 items-start py-5 first:pt-0 last:pb-0">
+                  <span
+                    className="text-3xl font-extrabold tabular-nums shrink-0 leading-none w-10"
+                    style={{ color: 'hsl(var(--primary))' }}
+                    aria-hidden="true"
+                  >
+                    0{i + 1}
+                  </span>
+                  <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--foreground)/0.78)' }}>
+                    {benefit}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </PremiumCard>
 
           {/* ── Carte 2 : Biocontrôle vivant (claire) ── */}
-          <div
-            className="p-[3px] rounded-[2rem]"
-            style={{
-              background: 'linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)',
-              boxShadow: '0 4px 40px hsl(var(--primary)/0.09), 0 1px 3px rgba(0,0,0,0.04)',
-            }}
-          >
-            <div
-              className="rounded-[calc(2rem-3px)] px-8 py-9 h-full relative overflow-hidden"
-              style={{
-                background: 'radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))',
-                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.92)',
-              }}
+          <PremiumCard className="px-8 py-9">
+            {/* Eyebrow */}
+            <span
+              className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
+              style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
             >
-              {/* Eyebrow */}
-              <span
-                className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-primary mb-5"
-                style={{ background: 'hsl(var(--primary)/0.08)', border: '1px solid hsl(var(--primary)/0.18)' }}
-              >
-                {t("innovation.card2.eyebrow")}
-              </span>
+              {t("innovation.card2.eyebrow")}
+            </span>
 
-              <h3
-                className="text-lg font-bold text-foreground mb-8 leading-snug max-w-[30ch]"
-                style={{ letterSpacing: '-0.01em' }}
-              >
-                {t("innovation.biocontrol.question")}
-              </h3>
+            <h3
+              className="text-lg font-bold text-foreground mb-8 leading-snug max-w-[30ch]"
+              style={{ letterSpacing: '-0.01em' }}
+            >
+              {t("innovation.biocontrol.question")}
+            </h3>
 
-              <ul className="flex flex-col gap-0 divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }} role="list">
-                {biocontrolStats.map((stat, i) => (
-                  <li key={i} className="flex gap-5 items-start py-5 first:pt-0 last:pb-0">
-                    <span
-                      className="text-3xl font-extrabold tabular-nums shrink-0 leading-none min-w-10"
-                      style={{ color: 'hsl(var(--primary))' }}
-                    >
-                      {stat.value}
-                    </span>
-                    <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--foreground)/0.78)' }}>
-                      {stat.label}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+            <ul className="flex flex-col gap-0 divide-y" style={{ borderColor: 'hsl(var(--border)/0.5)' }} role="list">
+              {biocontrolStats.map((stat, i) => (
+                <li key={i} className="flex gap-5 items-start py-5 first:pt-0 last:pb-0">
+                  <span
+                    className="text-3xl font-extrabold tabular-nums shrink-0 leading-none min-w-10"
+                    style={{ color: 'hsl(var(--primary))' }}
+                  >
+                    {stat.value}
+                  </span>
+                  <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--foreground)/0.78)' }}>
+                    {stat.label}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </PremiumCard>
 
         </div>
       </div>

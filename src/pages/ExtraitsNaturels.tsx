@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import GradientCTA from "@/components/GradientCTA";
+import PremiumCard from "@/components/PremiumCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
@@ -54,8 +55,8 @@ const ExtraitsNaturels = () => {
           <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url(${plantDropletsBg})`
           }}></div>
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20 md:py-24">
             <Link to="/solutions">
               <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -76,10 +77,12 @@ const ExtraitsNaturels = () => {
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">{t("extraits.heading")}</h2>
             </div>
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
-              <p className="text-base text-foreground leading-relaxed">
-                <strong>{t("extraits.howItWorks.title")}</strong> {t("extraits.howItWorks.desc")}
-              </p>
+            <div className="max-w-2xl mx-auto mb-10">
+              <PremiumCard className="p-6">
+                <p className="text-base text-foreground leading-relaxed">
+                  <strong>{t("extraits.howItWorks.title")}</strong> {t("extraits.howItWorks.desc")}
+                </p>
+              </PremiumCard>
             </div>
             <AdvantageGrid
               title={t("extraits.whyChoose.title")}
@@ -155,15 +158,15 @@ const ExtraitsNaturels = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("extraits.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
-              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("extraits.crosssell.bioprotection.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("extraits.crosssell.bioprotection.desc")}</p>
               </Link>
-              <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/boosters" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.boosters.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("bv.crosssell.boosters.desc")}</p>
               </Link>
-              <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.biofertilisant.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("bv.crosssell.biofertilisant.desc")}</p>
               </Link>

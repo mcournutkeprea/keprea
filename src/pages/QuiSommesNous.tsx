@@ -148,7 +148,7 @@ const QuiSommesNous = () => {
       </section>
 
       {/* Jalons — timeline chronologique */}
-      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground tracking-tight mb-12">
             {t("quisommesnous.milestones.title")}
@@ -174,7 +174,7 @@ const QuiSommesNous = () => {
       </section>
 
       {/* Valeurs — cascade légèrement décalée, pile digitale */}
-      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30 overflow-hidden">
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 md:mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">

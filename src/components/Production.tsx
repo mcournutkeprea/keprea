@@ -44,7 +44,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
             <div className={`relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8${teaser ? " items-center" : ""}`}>
 
               {/* Left — feature pillars */}
-              <div className="lg:col-span-4">
+              <div className="lg:col-span-3">
                 <h3 className="text-2xl font-bold mb-6 text-foreground">
                   {t("production.excellence")}
                 </h3>
@@ -75,8 +75,8 @@ const Production = ({ teaser = false }: ProductionProps) => {
               {teaser ? (
                 <>
                   {/* Centre — building photo */}
-                  <div className="lg:col-span-4">
-                    <div className="aspect-[4/3] rounded-xl overflow-hidden border-2 border-primary/20">
+                  <div className="lg:col-span-5">
+                    <div className="aspect-[16/11] rounded-xl overflow-hidden border-2 border-primary/20">
                       <img
                         src="/lovable-uploads/6f3f0723-78e2-48e6-b36a-2520e97f1f40.webp"
                         alt={t("alt.productionSite")}
@@ -116,7 +116,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
                 /* Right — site photo + map, page dédiée seulement */
                 <div
                   ref={siteRef as RefObject<HTMLDivElement>}
-                  className={`lg:col-span-8 grid sm:grid-cols-[1.5fr_1fr] gap-5 reveal reveal-delay-1${siteVisible ? " is-visible" : ""}`}
+                  className={`lg:col-span-9 grid sm:grid-cols-[1.5fr_1fr] gap-5 reveal reveal-delay-1${siteVisible ? " is-visible" : ""}`}
                 >
                   <div className="aspect-[16/10] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden border-2 border-primary/20">
                     <img

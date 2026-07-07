@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdvantageGrid from "@/components/AdvantageGrid";
 import GradientCTA from "@/components/GradientCTA";
+import PremiumCard from "@/components/PremiumCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
@@ -72,8 +73,8 @@ const Boosters = () => {
           <div className="absolute inset-0 bg-cover bg-center" style={{
             backgroundImage: `url('/lovable-uploads/5a41caf6-fec0-40ca-984c-f9543cae5d7e.png')`
           }}></div>
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20 md:py-24">
             <Link to="/solutions">
               <Button variant="ghost" className="mb-4 text-white border-white hover:bg-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -96,23 +97,23 @@ const Boosters = () => {
               {t("boosters.micropeptides.desc")}
             </p>
             <h2 className="text-2xl font-bold text-center text-foreground mt-10 mb-6">{t("boosters.choose.title")}</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
+            <div className="grid md:grid-cols-2 gap-5">
+              <PremiumCard className="p-5">
                 <h3 className="font-bold text-primary mb-2">{t("boosters.choose.boostea.title")}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{t("boosters.choose.boostea.desc")}</p>
                 <p className="text-sm text-muted-foreground">{t("boosters.choose.boostea.action")}</p>
-              </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
+              </PremiumCard>
+              <PremiumCard className="p-5">
                 <h3 className="font-bold text-primary mb-2">{t("boosters.choose.soilea.title")}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{t("boosters.choose.soilea.desc")}</p>
                 <p className="text-sm text-muted-foreground">{t("boosters.choose.soilea.action")}</p>
-              </div>
+              </PremiumCard>
             </div>
             <p className="text-sm text-center text-muted-foreground mt-4">{t("boosters.choose.complementary")}</p>
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
               {t('boosters.range.title')}
@@ -158,7 +159,7 @@ const Boosters = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
             <AdvantageGrid
               title={t('boosters.why.title')}
@@ -229,20 +230,22 @@ const Boosters = () => {
           </div>
         </section>
 
-        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("boosters.results.title")}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">+5–13%</div>
-                <div className="text-sm text-muted-foreground">{t("boosters.results.stat1.label")}</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground tracking-tight mb-10">{t("boosters.results.title")}</h2>
+            <PremiumCard className="p-8 sm:p-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-border/60 text-center">
+                <div className="pb-8 sm:pb-0 sm:pr-8">
+                  <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight tabular-nums">+5–13%</div>
+                  <div className="text-sm text-muted-foreground">{t("boosters.results.stat1.label")}</div>
+                </div>
+                <div className="pt-8 sm:pt-0 sm:pl-8">
+                  <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight tabular-nums">{t("boosters.results.stat2.value")}</div>
+                  <div className="text-sm text-muted-foreground">{t("boosters.results.stat2.label")}</div>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">{t("boosters.results.stat2.value")}</div>
-                <div className="text-sm text-muted-foreground">{t("boosters.results.stat2.label")}</div>
-              </div>
-            </div>
-            <p className="text-xs text-muted-foreground text-center mt-3">
+            </PremiumCard>
+            <p className="text-xs text-muted-foreground text-center mt-5 max-w-xl mx-auto">
               {t("boosters.results.disclaimer")}
             </p>
           </div>
@@ -292,15 +295,15 @@ const Boosters = () => {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t("boosters.crosssell.title")}</h2>
             <div className="grid sm:grid-cols-3 gap-4">
-              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/bioprotection" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("extraits.crosssell.bioprotection.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("extraits.crosssell.bioprotection.desc")}</p>
               </Link>
-              <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/biopesticides" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("solutions.biopesticides.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("boosters.crosssell.biopesticides.desc")}</p>
               </Link>
-              <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-sm transition-all">
+              <Link to="/solutions/biofertilisant" className="bg-card p-5 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-semibold text-primary mb-2">{t("bv.crosssell.biofertilisant.title")}</h3>
                 <p className="text-sm text-muted-foreground">{t("bv.crosssell.biofertilisant.desc")}</p>
               </Link>

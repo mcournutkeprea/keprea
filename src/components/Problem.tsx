@@ -2,6 +2,7 @@ import type { RefObject } from "react";
 import { Leaf, ShieldCheck, Sprout } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 import { useLanguage } from "@/contexts/LanguageContext";
+import PremiumCard from "./PremiumCard";
 
 const challenges = [
   {
@@ -30,7 +31,7 @@ const Problem = () => {
   const { ref: cardsRef, inView: cardsVisible } = useInView(0.05);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary/5 overflow-hidden">
+    <section className="py-28 px-4 sm:px-6 lg:px-8 bg-primary/5 overflow-hidden">
       <div className="container mx-auto">
 
         {/* Header */}
@@ -55,15 +56,12 @@ const Problem = () => {
           className={`grid grid-cols-1 md:grid-cols-3 gap-5 mb-14 reveal reveal-delay-1${cardsVisible ? " is-visible" : ""}`}
         >
           {challenges.map((item, i) => (
-            <div
-              key={i}
-              className="rounded-xl p-6 border border-border bg-background"
-            >
-              <item.icon className="w-5 h-5 text-primary/30 mb-5" aria-hidden="true" />
+            <PremiumCard key={i} className="p-6">
+              <item.icon className="w-5 h-5 text-primary/40 mb-5" aria-hidden="true" />
               <div className="text-4xl font-bold text-primary mb-3 tracking-tight">{item.stat}</div>
               <h3 className="text-base font-semibold text-foreground mb-2">{t(item.titleKey)}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
-            </div>
+            </PremiumCard>
           ))}
         </div>
 
