@@ -20,7 +20,6 @@ const bulletKeys = [
   "notreproduction.bullet1",
   "notreproduction.bullet2",
   "notreproduction.bullet3",
-  "notreproduction.bullet4",
 ];
 
 const NotreProduction = () => {
@@ -105,12 +104,12 @@ const NotreProduction = () => {
         </div>
       </section>
 
-      {/* Chiffres clés et implantation */}
+      {/* Un site d'excellence, en chiffres — suite de la section Production */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary text-center mb-10">
             {t("notreproduction.location.title")}
-          </h2>
+          </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             <div className="bg-background rounded-2xl p-6 text-center border border-border">
               <div className="text-3xl font-bold text-primary mb-1">3 000 m²</div>

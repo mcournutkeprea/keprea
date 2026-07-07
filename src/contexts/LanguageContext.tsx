@@ -142,8 +142,14 @@ const translations: Translations = {
     pt: '4 linhas para uma agricultura sem compromissos',
     de: '4 Produktlinien für eine kompromisslose Landwirtschaft'
   },
+  'solutions.badge.available': {
+    fr: 'Disponible', en: 'Available', es: 'Disponible', pt: 'Disponível', de: 'Verfügbar'
+  },
+  'solutions.badge.pipeline': {
+    fr: 'En développement', en: 'In development', es: 'En desarrollo', pt: 'Em desenvolvimento', de: 'In Entwicklung'
+  },
   'solutions.subtitle': {
-    fr: 'Issues de la biologie des insectes, nos solutions proposent une alternative aux intrants chimiques sans sacrifier votre rendement.',
+    fr: 'Issues de la biologie des insectes, nos solutions proposent des alternatives aux intrants chimiques sans sacrifier votre rendement.',
     en: 'Derived from insect biology, our solutions replace chemical inputs without sacrificing your yield.',
     es: 'Basadas en la biología de los insectos, nuestras soluciones sustituyen los insumos químicos sin sacrificar el rendimiento.',
     pt: 'Baseadas na biologia dos insetos, nossas soluções substituem os insumos químicos sem sacrificar a produtividade.',
@@ -385,7 +391,7 @@ const translations: Translations = {
     de: 'der Kulturen hängen für Qualität und Ertrag von Insekten ab'
   },
   'innovation.infographic.biocontrol.stat2.value': {
-    fr: '5500',
+    fr: '150',
     en: '5500',
     es: '5500',
     pt: '5500',
@@ -1166,7 +1172,7 @@ const translations: Translations = {
     de: 'Kompatibel mit Ihren bestehenden Geräten'
   },
   'substances.benefit4.desc': {
-    fr: 'Formulations liquides ou granulées applicables avec vos pulvérisateurs, atomiseurs et épandeurs habituels. Application par drone également à l\'étude. Aucun investissement matériel.',
+    fr: 'Formulations liquides ou granulées applicables avec vos pulvérisateurs, atomiseurs et épandeurs habituels. Aucun investissement matériel.',
     en: 'Liquid or granular formulations applicable with your usual sprayers, atomizers and spreaders. Drone application is also being explored. No equipment investment.',
     es: 'Formulaciones líquidas o granuladas aplicables con sus pulverizadores, atomizadores y distribuidores habituales. También se estudia la aplicación por dron. Sin inversión en maquinaria.',
     pt: 'Formulações líquidas ou granuladas aplicáveis com seus pulverizadores, atomizadores e distribuidores habituais. A aplicação por drone também está a ser estudada. Sem investimento em equipamentos.',
@@ -1568,7 +1574,7 @@ const translations: Translations = {
     de: 'Unsere Booster-Produktpalette'
   },
   'boosters.boostea.desc': {
-    fr: 'Riche en polypeptides de très petites tailles et en acides aminés libres (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l\'activité du sol.',
+    fr: 'Riche en micro-peptides et en acides aminés libres (proline), Boostea13 augmente la résistance face aux stress abiotiques et améliore l\'activité du sol.',
     en: 'Rich in very small polypeptides and free amino acids (proline), Boostea13 increases resistance to abiotic stress and improves soil activity.',
     es: 'Rico en polipéptidos de muy pequeño tamaño y aminoácidos libres (prolina), Boostea13 aumenta la resistencia al estrés abiótico y mejora la actividad del suelo.',
     pt: 'Rico em polipeptídeos de tamanho muito pequeno e aminoácidos livres (prolina), Boostea13 aumenta a resistência ao estresse abiótico e melhora a atividade do solo.',
@@ -1758,7 +1764,7 @@ const translations: Translations = {
     de: 'Verfügbare Nützlingsarten'
   },
   'problem.challenge3.desc': {
-    fr: 'La France recense 5 500 espèces d\'insectes auxiliaires utiles. Keprea sélectionne et formule les plus efficaces pour chaque culture et chaque besoin.',
+    fr: 'La France recense 150 espèces d\'insectes auxiliaires utiles. Keprea sélectionne et formule les plus efficaces pour chaque culture et chaque besoin.',
     en: 'France counts 5,500 species of beneficial insects. Keprea selects and formulates the most effective ones for each crop and each need.',
     es: 'Francia registra 5.500 especies de insectos auxiliares útiles. Keprea selecciona y formula los más eficaces para cada cultivo y cada necesidad.',
     pt: 'A França recenseia 5.500 espécies de insetos auxiliares úteis. A Keprea seleciona e formula os mais eficazes para cada cultura e cada necessidade.',
@@ -2534,13 +2540,6 @@ const translations: Translations = {
     pt: 'Produtos formulados para responder às exigências da agricultura biológica (regulamento (UE) 2018/848)',
     de: 'Produkte, formuliert zur Erfüllung der Anforderungen des ökologischen Landbaus (Verordnung (EU) 2018/848)'
   },
-  'notreproduction.bullet4': {
-    fr: 'Société immatriculée en France (SAS Keprea), mentions légales et SIRET disponibles en pied de page',
-    en: 'Company registered in France (SAS Keprea), legal notice and SIRET number available in the footer',
-    es: 'Empresa registrada en Francia (SAS Keprea), aviso legal y número SIRET disponibles en el pie de página',
-    pt: 'Empresa registada em França (SAS Keprea), aviso legal e número SIRET disponíveis no rodapé',
-    de: 'In Frankreich eingetragenes Unternehmen (SAS Keprea), Impressum und SIRET-Nummer in der Fußzeile verfügbar'
-  },
   // Ressources page
   'ressources.hero.title': {
     fr: 'Ressources', en: 'Resources', es: 'Recursos', pt: 'Recursos', de: 'Ressourcen'
@@ -2806,7 +2805,7 @@ const translations: Translations = {
     de: 'Eine Quelle von Molekülen, die die Chemie nicht nachbilden kann'
   },
   'innovationpage.hero.lead': {
-    fr: 'Les insectes ont co-evolué avec les plantes pendant 400 millions d\'années. Keprea extrait et formule ces actifs biologiques pour en faire des biosolutions agricoles sans aucun résidu chimique.',
+    fr: 'Les insectes ont co-évolué avec les plantes pendant 400 millions d\'années. Keprea identifie et développe des biosolutions innovantes pour mettre l\'insecte au service d\'une agriculture plus résiliente.',
     en: 'Insects have co-evolved with plants for 400 million years. Keprea extracts and formulates these biological actives into agricultural biosolutions with no chemical residue.',
     es: 'Los insectos han coevolucionado con las plantas durante 400 millones de años. Keprea extrae y formula estos activos biológicos para convertirlos en biosoluciones agrícolas sin ningún residuo químico.',
     pt: 'Os insetos coevoluíram com as plantas durante 400 milhões de anos. A Keprea extrai e formula estes ativos biológicos, transformando-os em biosoluções agrícolas sem qualquer resíduo químico.',
@@ -2834,14 +2833,14 @@ const translations: Translations = {
     de: 'chemische Rückstände'
   },
   'innovationpage.challenges.title': {
-    fr: 'L\'agriculture face à ses limites',
+    fr: 'Un contexte agricole en mouvement',
     en: 'Agriculture facing its limits',
     es: 'La agricultura frente a sus límites',
     pt: 'A agricultura perante os seus limites',
     de: 'Die Landwirtschaft an ihren Grenzen'
   },
   'innovationpage.challenges.subtitle': {
-    fr: 'Les solutions chimiques conventionnelles montrent des signes d\'épuisement. Réglementation plus stricte, résistances des ravageurs, attentes de traçabilité : le modèle doit changer.',
+    fr: 'Réglementation évolutive, résistances des ravageurs, attentes de traçabilité : l\'agriculture a besoin de nouveaux outils pour continuer à protéger les cultures efficacement.',
     en: 'Conventional chemical solutions are showing signs of exhaustion. Stricter regulation, pest resistance, traceability expectations: the model has to change.',
     es: 'Las soluciones químicas convencionales muestran signos de agotamiento. Regulación más estricta, resistencias de las plagas, exigencias de trazabilidad: el modelo debe cambiar.',
     pt: 'As soluções químicas convencionais mostram sinais de esgotamento. Regulamentação mais rigorosa, resistências das pragas, exigências de rastreabilidade: o modelo tem de mudar.',
@@ -2855,7 +2854,7 @@ const translations: Translations = {
     de: 'Zunehmende Regulierung'
   },
   'innovationpage.challenge1.text': {
-    fr: 'Des centaines de substances actives chimiques retirées du marché ces dernières années en Europe. Les agriculteurs cherchent des alternatives fiables et durables.',
+    fr: 'De nombreuses matières actives ont été retirées du marché ces dernières années en Europe. Les agriculteurs cherchent des alternatives fiables et durables pour compléter leur boîte à outils.',
     en: 'Hundreds of chemical active substances have been withdrawn from the market in Europe in recent years. Farmers are looking for reliable, sustainable alternatives.',
     es: 'Cientos de sustancias activas químicas se han retirado del mercado en Europa en los últimos años. Los agricultores buscan alternativas fiables y sostenibles.',
     pt: 'Centenas de substâncias ativas químicas foram retiradas do mercado na Europa nos últimos anos. Os agricultores procuram alternativas fiáveis e sustentáveis.',
@@ -2869,7 +2868,7 @@ const translations: Translations = {
     de: 'Zunehmende Resistenzen'
   },
   'innovationpage.challenge2.text': {
-    fr: 'Les ravageurs développent des résistances aux pesticides chimiques. L\'efficacité des traitements conventionnels décline sur le long terme, forçant des doses croissantes.',
+    fr: 'Les ravageurs peuvent développer des résistances aux matières actives conventionnelles sur le long terme. Diversifier les modes d\'action fait partie des bonnes pratiques agronomiques.',
     en: 'Pests are developing resistance to chemical pesticides. The effectiveness of conventional treatments declines over time, forcing increasing doses.',
     es: 'Las plagas desarrollan resistencias a los pesticidas químicos. La eficacia de los tratamientos convencionales disminuye a largo plazo, obligando a aumentar las dosis.',
     pt: 'As pragas desenvolvem resistências aos pesticidas químicos. A eficácia dos tratamentos convencionais diminui a longo prazo, forçando doses crescentes.',
@@ -2883,7 +2882,7 @@ const translations: Translations = {
     de: 'Anforderungen an Rückverfolgbarkeit'
   },
   'innovationpage.challenge3.text': {
-    fr: 'Les filières et les consommateurs exigent des produits sans résidu. Le biocontrôle n\'est plus un choix marginal, c\'est une nécessité commerciale et réglementaire.',
+    fr: 'Les filières et les consommateurs sont de plus en plus attentifs à la traçabilité et à l\'absence de résidu. Le biocontrôle répond à cette demande croissante.',
     en: 'Supply chains and consumers demand residue-free products. Biocontrol is no longer a marginal choice — it\'s a commercial and regulatory necessity.',
     es: 'Las cadenas de suministro y los consumidores exigen productos sin residuos. El biocontrol ya no es una opción marginal, es una necesidad comercial y regulatoria.',
     pt: 'As cadeias produtivas e os consumidores exigem produtos sem resíduos. O biocontrole já não é uma escolha marginal, é uma necessidade comercial e regulamentar.',
@@ -2925,7 +2924,7 @@ const translations: Translations = {
     de: 'Null chemische Rückstände, keine Einschränkungen'
   },
   'innovationpage.pillar2.desc': {
-    fr: 'Les biosolutions Keprea sont entièrement d\'origine naturelle. Aucun résidu toxique dans le sol, les eaux ou les récoltes. Compatibles avec les cahiers des charges bio, les certifications HVE et les exigences des grandes et moyennes surfaces.',
+    fr: 'Les biosolutions Keprea sont entièrement d\'origine naturelle. Aucun résidu toxique dans le sol, les eaux ou les récoltes. Compatibles avec les cahiers des charges bio, les certifications HVE et les exigences de la distribution.',
     en: 'Keprea biosolutions are entirely of natural origin. No toxic residue in the soil, water or harvests. Compatible with organic specifications, HVE certification and the requirements of large retailers.',
     es: 'Las biosoluciones Keprea son totalmente de origen natural. Ningún residuo tóxico en el suelo, el agua o las cosechas. Compatibles con los pliegos de condiciones ecológicos, las certificaciones HVE y las exigencias de las grandes superficies.',
     pt: 'As biosoluções Keprea são inteiramente de origem natural. Nenhum resíduo tóxico no solo, na água ou nas colheitas. Compatíveis com os cadernos de encargos biológicos, as certificações HVE e as exigências das grandes superfícies.',
@@ -2939,7 +2938,7 @@ const translations: Translations = {
     de: 'Nachgewiesene Wirksamkeit im Feld'
   },
   'innovationpage.pillar3.desc': {
-    fr: 'Les gammes Keprea sont développées et testées directement avec des agriculteurs. Chaque formulation est évaluée sur des parcelles réelles, dans les conditions de culture françaises, avant d\'être mise sur le marché.',
+    fr: 'Les gammes Keprea sont développées et testées directement avec des agriculteurs. Chaque formulation est évaluée en conditions réelles avant d\'être mise sur le marché.',
     en: 'Keprea ranges are developed and tested directly with farmers. Every formulation is evaluated on real fields, under French growing conditions, before being brought to market.',
     es: 'Las gamas Keprea se desarrollan y prueban directamente con agricultores. Cada formulación se evalúa en parcelas reales, en condiciones de cultivo francesas, antes de salir al mercado.',
     pt: 'As linhas Keprea são desenvolvidas e testadas diretamente com agricultores. Cada formulação é avaliada em parcelas reais, nas condições de cultivo francesas, antes de ser colocada no mercado.',
@@ -2966,83 +2965,6 @@ const translations: Translations = {
     pt: 'natural, sem resíduos químicos',
     de: 'natürlich, ohne chemische Rückstände'
   },
-  'innovationpage.comparison.title': {
-    fr: 'Keprea face aux autres approches',
-    en: 'Keprea vs. other approaches',
-    es: 'Keprea frente a otros enfoques',
-    pt: 'Keprea face a outras abordagens',
-    de: 'Keprea im Vergleich zu anderen Ansätzen'
-  },
-  'innovationpage.comparison.subtitle': {
-    fr: 'Une comparaison directe pour vous aider à faire le bon choix pour vos cultures et votre exploitation.',
-    en: 'A direct comparison to help you make the right choice for your crops and your farm.',
-    es: 'Una comparación directa para ayudarle a elegir bien para sus cultivos y su explotación.',
-    pt: 'Uma comparação direta para o ajudar a fazer a escolha certa para as suas culturas e a sua exploração.',
-    de: 'Ein direkter Vergleich, der Ihnen hilft, die richtige Wahl für Ihre Kulturen und Ihren Betrieb zu treffen.'
-  },
-  'innovationpage.comparison.keprea.badge': {
-    fr: 'Biosolutions Keprea', en: 'Keprea biosolutions', es: 'Biosoluciones Keprea', pt: 'Biosoluções Keprea', de: 'Keprea-Biolösungen'
-  },
-  'innovationpage.comparison.keprea.item1': {
-    fr: 'Actifs biologiques issus d\'insectes', en: 'Biological actives derived from insects', es: 'Activos biológicos derivados de insectos', pt: 'Ativos biológicos derivados de insetos', de: 'Biologische Wirkstoffe aus Insekten'
-  },
-  'innovationpage.comparison.keprea.item2': {
-    fr: 'Zéro résidu toxique', en: 'Zero toxic residue', es: 'Cero residuos tóxicos', pt: 'Zero resíduos tóxicos', de: 'Keine toxischen Rückstände'
-  },
-  'innovationpage.comparison.keprea.item3': {
-    fr: 'Compatible bio et HVE', en: 'Compatible with organic and HVE', es: 'Compatible con ecológico y HVE', pt: 'Compatível com biológico e HVE', de: 'Kompatibel mit Bio und HVE'
-  },
-  'innovationpage.comparison.keprea.item4': {
-    fr: 'Efficacité testée en conditions réelles', en: 'Effectiveness tested under real conditions', es: 'Eficacia probada en condiciones reales', pt: 'Eficácia testada em condições reais', de: 'Wirksamkeit unter realen Bedingungen getestet'
-  },
-  'innovationpage.comparison.keprea.item5': {
-    fr: 'Traçabilité totale, Fabriqué en France', en: 'Full traceability, Made in France', es: 'Trazabilidad total, Fabricado en Francia', pt: 'Rastreabilidade total, Fabricado em França', de: 'Vollständige Rückverfolgbarkeit, Hergestellt in Frankreich'
-  },
-  'innovationpage.comparison.keprea.item6': {
-    fr: 'Accompagnement technique inclus', en: 'Technical support included', es: 'Acompañamiento técnico incluido', pt: 'Acompanhamento técnico incluído', de: 'Technische Unterstützung inklusive'
-  },
-  'innovationpage.comparison.chimie.badge': {
-    fr: 'Chimie classique', en: 'Conventional chemistry', es: 'Química convencional', pt: 'Química convencional', de: 'Konventionelle Chemie'
-  },
-  'innovationpage.comparison.chimie.item1': {
-    fr: 'Résidus toxiques dans les récoltes', en: 'Toxic residues in harvests', es: 'Residuos tóxicos en las cosechas', pt: 'Resíduos tóxicos nas colheitas', de: 'Toxische Rückstände in der Ernte'
-  },
-  'innovationpage.comparison.chimie.item2': {
-    fr: 'Réglementation de plus en plus restrictive', en: 'Increasingly restrictive regulation', es: 'Regulación cada vez más restrictiva', pt: 'Regulamentação cada vez mais restritiva', de: 'Zunehmend restriktive Regulierung'
-  },
-  'innovationpage.comparison.chimie.item3': {
-    fr: 'Développement de résistances chez les ravageurs', en: 'Development of pest resistance', es: 'Desarrollo de resistencias en las plagas', pt: 'Desenvolvimento de resistências nas pragas', de: 'Entwicklung von Schädlingsresistenzen'
-  },
-  'innovationpage.comparison.chimie.item4': {
-    fr: 'Impact négatif sur la biodiversité', en: 'Negative impact on biodiversity', es: 'Impacto negativo en la biodiversidad', pt: 'Impacto negativo na biodiversidade', de: 'Negative Auswirkungen auf die Biodiversität'
-  },
-  'innovationpage.comparison.chimie.item5': {
-    fr: 'Efficacité à court terme reconnue', en: 'Recognized short-term effectiveness', es: 'Eficacia a corto plazo reconocida', pt: 'Eficácia a curto prazo reconhecida', de: 'Anerkannte kurzfristige Wirksamkeit'
-  },
-  'innovationpage.comparison.chimie.item6': {
-    fr: 'Inadaptée aux cahiers des charges bio', en: 'Unsuited to organic specifications', es: 'No adecuada para los pliegos de condiciones ecológicos', pt: 'Não adequada aos cadernos de encargos biológicos', de: 'Nicht geeignet für Bio-Vorgaben'
-  },
-  'innovationpage.comparison.autres.badge': {
-    fr: 'Autres solutions de biocontrôle', en: 'Other biocontrol solutions', es: 'Otras soluciones de biocontrol', pt: 'Outras soluções de biocontrole', de: 'Andere Biokontroll-Lösungen'
-  },
-  'innovationpage.comparison.autres.item1': {
-    fr: 'Sans résidu chimique de synthèse', en: 'Free of synthetic chemical residue', es: 'Sin residuos químicos de síntesis', pt: 'Sem resíduos químicos de síntese', de: 'Ohne synthetische chemische Rückstände'
-  },
-  'innovationpage.comparison.autres.item2': {
-    fr: 'Compatible agriculture biologique', en: 'Compatible with organic farming', es: 'Compatible con la agricultura ecológica', pt: 'Compatível com a agricultura biológica', de: 'Kompatibel mit ökologischem Landbau'
-  },
-  'innovationpage.comparison.autres.item3': {
-    fr: 'Offre mature, avec des références solides selon les usages', en: 'Mature offering, with solid track records depending on use', es: 'Oferta madura, con referencias sólidas según los usos', pt: 'Oferta madura, com referências sólidas conforme os usos', de: 'Ausgereiftes Angebot mit soliden Referenzen je nach Anwendung'
-  },
-  'innovationpage.comparison.autres.item4': {
-    fr: 'Peu de solutions basées sur les actifs d\'insectes', en: 'Few solutions based on insect actives', es: 'Pocas soluciones basadas en activos de insectos', pt: 'Poucas soluções baseadas em ativos de insetos', de: 'Wenige Lösungen auf Basis von Insektenwirkstoffen'
-  },
-  'innovationpage.comparison.autres.item5': {
-    fr: 'Rarement produites en France', en: 'Rarely produced in France', es: 'Raramente producidas en Francia', pt: 'Raramente produzidas em França', de: 'Selten in Frankreich hergestellt'
-  },
-  'innovationpage.comparison.autres.item6': {
-    fr: 'Qualité et accompagnement variables selon les fournisseurs', en: 'Quality and support vary by supplier', es: 'Calidad y acompañamiento variables según el proveedor', pt: 'Qualidade e acompanhamento variáveis consoante o fornecedor', de: 'Qualität und Unterstützung variieren je nach Anbieter'
-  },
   'innovationpage.cta.title': {
     fr: 'Convaincu ? Testez sur vos parcelles.',
     en: 'Convinced? Test it on your fields.',
@@ -3068,7 +2990,7 @@ const translations: Translations = {
     fr: 'Pourquoi le Biocontrôle ?', en: 'Why Biocontrol?', es: '¿Por qué el Biocontrol?', pt: 'Por que o Biocontrole?', de: 'Warum Biokontrolle?'
   },
   'pourquoi.hero.lead': {
-    fr: 'Face au retrait progressif des pesticides chimiques et aux exigences croissantes des filières et consommateurs, le biocontrôle s\'impose comme la réponse agronomique et économique durable.',
+    fr: 'Face au retrait progressif de nombreuses matières actives et aux exigences croissantes des filières et consommateurs, le biocontrôle s\'impose comme la réponse agronomique et économique durable.',
     en: 'As chemical pesticides are gradually withdrawn and supply chains and consumers demand more, biocontrol is emerging as the sustainable agronomic and economic answer.',
     es: 'Ante la retirada progresiva de los pesticidas químicos y las crecientes exigencias de las cadenas de suministro y los consumidores, el biocontrol se impone como la respuesta agronómica y económica sostenible.',
     pt: 'Face à retirada progressiva dos pesticidas químicos e às exigências crescentes das cadeias produtivas e dos consumidores, o biocontrole impõe-se como a resposta agronómica e económica sustentável.',
@@ -3078,7 +3000,7 @@ const translations: Translations = {
     fr: 'Qu\'est-ce que le biocontrôle ?', en: 'What is biocontrol?', es: '¿Qué es el biocontrol?', pt: 'O que é o biocontrole?', de: 'Was ist Biokontrolle?'
   },
   'pourquoi.def.intro': {
-    fr: 'Le biocontrôle regroupe l\'ensemble des méthodes de protection des végétaux utilisant des mécanismes et agents naturels, en alternative aux pesticides chimiques de synthèse.',
+    fr: 'Le biocontrôle regroupe l\'ensemble des méthodes de protection des végétaux utilisant des mécanismes et agents naturels, en alternative aux produits phytosanitaires de synthèse.',
     en: 'Biocontrol brings together all crop protection methods that use natural mechanisms and agents, as an alternative to synthetic chemical pesticides.',
     es: 'El biocontrol reúne todos los métodos de protección de las plantas que utilizan mecanismos y agentes naturales, como alternativa a los pesticidas químicos de síntesis.',
     pt: 'O biocontrole reúne todos os métodos de proteção das plantas que utilizam mecanismos e agentes naturais, como alternativa aos pesticidas químicos de síntese.',
@@ -3488,13 +3410,6 @@ const translations: Translations = {
   'bv.results.title': {
     fr: 'Résultats mesurés sur le terrain', en: 'Results measured in the field', es: 'Resultados medidos en campo', pt: 'Resultados medidos no terreno', de: 'Im Feld gemessene Ergebnisse'
   },
-  'bv.results.stat1.label': {
-    fr: 'de réduction des ravageurs en 14 jours',
-    en: 'reduction in pests within 14 days',
-    es: 'de reducción de plagas en 14 días',
-    pt: 'de redução de pragas em 14 dias',
-    de: 'Schädlingsreduzierung innerhalb von 14 Tagen'
-  },
   'bv.results.stat2.label': {
     fr: 'délai d\'action après le lâcher',
     en: 'time to action after release',
@@ -3530,7 +3445,7 @@ const translations: Translations = {
     de: 'Bei einer Freisetzung werden Beutel oder Boxen mit lebenden Nützlingen geöffnet und auf die Pflanzen oder in die Reihen gelegt. Hier der typische Ablauf.'
   },
   'bv.howto.delivery': {
-    fr: 'Format de livraison : sachets ou tubes de 250 à 1 000 individus selon l\'espèce. Conservation : 24–48h à 10°C, à l\'abri de la lumière directe. Application le jour de réception recommandée pour préserver le taux de survie des auxiliaires au lâcher.',
+    fr: 'Format de livraison : sachets ou tubes de 250 à 1 000 individus selon l\'espèce. Conservation : 24–48h à 8°C, à l\'abri de la lumière directe. Application le jour de réception recommandée pour préserver le taux de survie des auxiliaires au lâcher.',
     en: 'Delivery format: pouches or tubes of 250 to 1,000 individuals depending on the species. Storage: 24–48h at 10°C, away from direct light. Application on the day of receipt is recommended to preserve the survival rate of the beneficials upon release.',
     es: 'Formato de entrega: bolsitas o tubos de 250 a 1.000 individuos según la especie. Conservación: 24-48h a 10°C, al abrigo de la luz directa. Se recomienda la aplicación el día de recepción para preservar la tasa de supervivencia de los auxiliares en la suelta.',
     pt: 'Formato de entrega: saquetas ou tubos de 250 a 1.000 indivíduos consoante a espécie. Conservação: 24-48h a 10°C, ao abrigo da luz direta. Recomenda-se a aplicação no dia da receção para preservar a taxa de sobrevivência dos auxiliares na libertação.',
@@ -3557,7 +3472,7 @@ const translations: Translations = {
     fr: 'Planification des lâchers', en: 'Release planning', es: 'Planificación de las sueltas', pt: 'Planeamento das libertações', de: 'Freisetzungsplanung'
   },
   'bv.step2.desc': {
-    fr: 'Lâchers préventifs en début de saison dès apparition des premiers foyers, ou curatifs dès observation du ravageur cible.',
+    fr: 'Lâchers préventifs positionnés selon les données météo et les outils de suivi de la pression parasitaire, ou curatifs dès confirmation du ravageur cible sur la parcelle.',
     en: 'Preventive releases at the start of the season as soon as the first outbreaks appear, or curative releases as soon as the target pest is observed.',
     es: 'Sueltas preventivas al inicio de temporada desde la aparición de los primeros focos, o curativas desde la observación de la plaga objetivo.',
     pt: 'Libertações preventivas no início da estação a partir do aparecimento dos primeiros focos, ou curativas a partir da observação da praga-alvo.',
@@ -3567,7 +3482,7 @@ const translations: Translations = {
     fr: 'Méthodes de distribution', en: 'Distribution methods', es: 'Métodos de distribución', pt: 'Métodos de distribuição', de: 'Verteilungsmethoden'
   },
   'bv.step3.desc': {
-    fr: 'Lâcher manuel (sachets ou boîtes), ou à l\'aide d\'un pulvérisateur ou d\'un atomiseur adapté pour les formulations sur support inerte. L\'application par drone est également une piste suivie par la filière.',
+    fr: 'Lâcher manuel (sachets ou boîtes), ou à l\'aide d\'un pulvérisateur ou d\'un atomiseur adapté pour les formulations sur support inerte.',
     en: 'Manual release (pouches or boxes), or using a sprayer or atomizer suited to formulations on an inert carrier. Drone application is also a route being explored by the industry.',
     es: 'Suelta manual (bolsitas o cajas), o mediante un pulverizador o atomizador adaptado para las formulaciones sobre soporte inerte. La aplicación por dron es también una vía seguida por el sector.',
     pt: 'Libertação manual (saquetas ou caixas), ou com recurso a um pulverizador ou atomizador adaptado para as formulações sobre suporte inerte. A aplicação por drone é também uma via seguida pelo setor.',
@@ -3625,25 +3540,11 @@ const translations: Translations = {
     de: 'Ist lebende Biokontrolle in der konventionellen Landwirtschaft wirksam?'
   },
   'bv.faq2.a': {
-    fr: 'Oui. Le biocontrôle vivant s\'intègre dans tout système de production, conventionnel ou biologique. Il permet souvent de réduire significativement les doses d\'insecticides de synthèse, avec des résultats équivalents voire supérieurs.',
+    fr: 'Oui. Le biocontrôle vivant s\'intègre dans tout système de production, conventionnel ou biologique. Il permet souvent de réduire significativement les doses d\'insecticides de synthèse, avec des résultats généralement équivalents.',
     en: 'Yes. Living biocontrol fits into any production system, conventional or organic. It often allows a significant reduction in synthetic insecticide doses, with equivalent or even better results.',
     es: 'Sí. El biocontrol vivo se integra en cualquier sistema de producción, convencional o ecológico. A menudo permite reducir significativamente las dosis de insecticidas de síntesis, con resultados equivalentes o incluso superiores.',
     pt: 'Sim. O biocontrole vivo integra-se em qualquer sistema de produção, convencional ou biológico. Permite frequentemente reduzir significativamente as doses de inseticidas de síntese, com resultados equivalentes ou mesmo superiores.',
     de: 'Ja. Lebende Biokontrolle passt in jedes Produktionssystem, konventionell oder ökologisch. Sie ermöglicht oft eine deutliche Reduzierung der Dosen synthetischer Insektizide, mit gleichwertigen oder sogar besseren Ergebnissen.'
-  },
-  'bv.faq3.q': {
-    fr: 'Peut-on combiner lâchers d\'auxiliaires et biopesticides Keprea ?',
-    en: 'Can beneficial releases be combined with Keprea biopesticides?',
-    es: '¿Se pueden combinar sueltas de auxiliares y biopesticidas Keprea?',
-    pt: 'É possível combinar libertações de auxiliares e biopesticidas Keprea?',
-    de: 'Können Nützlingsfreisetzungen mit Keprea-Biopestiziden kombiniert werden?'
-  },
-  'bv.faq3.a': {
-    fr: 'Oui, nos produits sont conçus pour fonctionner en programme intégré. Nos biopesticides à base d\'extraits d\'insectes et les auxiliaires vivants sont complémentaires. Notre équipe technique vous accompagne pour définir un programme cohérent.',
-    en: 'Yes, our products are designed to work as an integrated program. Our insect-extract biopesticides and living beneficials are complementary. Our technical team supports you in defining a consistent program.',
-    es: 'Sí, nuestros productos están diseñados para funcionar en un programa integrado. Nuestros biopesticidas a base de extractos de insectos y los auxiliares vivos son complementarios. Nuestro equipo técnico le acompaña para definir un programa coherente.',
-    pt: 'Sim, os nossos produtos são concebidos para funcionar num programa integrado. Os nossos biopesticidas à base de extratos de insetos e os auxiliares vivos são complementares. A nossa equipa técnica acompanha-o para definir um programa coerente.',
-    de: 'Ja, unsere Produkte sind für ein integriertes Programm konzipiert. Unsere Biopestizide auf Basis von Insektenextrakten und lebende Nützlinge ergänzen sich. Unser technisches Team begleitet Sie bei der Erstellung eines stimmigen Programms.'
   },
   'bv.faq4.q': {
     fr: 'Que faire si les conditions météo ne permettent pas de lâcher à la date prévue ?',
@@ -3653,7 +3554,7 @@ const translations: Translations = {
     de: 'Was tun, wenn die Wetterbedingungen die Freisetzung am geplanten Datum nicht zulassen?'
   },
   'bv.faq4.a': {
-    fr: 'Un report de 24 à 48h n\'affecte généralement pas l\'efficacité du programme, à condition de conserver les auxiliaires dans de bonnes conditions (10°C, obscurité). Au-delà, contactez notre équipe technique pour ajuster le calendrier de lâcher en fonction de la météo et du stade de la culture.',
+    fr: 'Un report de 24 à 48h n\'affecte généralement pas l\'efficacité du programme, à condition de conserver les auxiliaires dans de bonnes conditions (8°C, obscurité). Au-delà, contactez notre équipe technique pour ajuster le calendrier de lâcher en fonction de la météo et du stade de la culture.',
     en: 'A delay of 24 to 48 hours generally does not affect program effectiveness, provided beneficials are kept in good conditions (10°C, darkness). Beyond that, contact our technical team to adjust the release schedule based on the weather and crop stage.',
     es: 'Un aplazamiento de 24 a 48h generalmente no afecta a la eficacia del programa, siempre que se conserven los auxiliares en buenas condiciones (10°C, oscuridad). Más allá, contacte con nuestro equipo técnico para ajustar el calendario de suelta en función del tiempo y del estado del cultivo.',
     pt: 'Um adiamento de 24 a 48h geralmente não afeta a eficácia do programa, desde que os auxiliares sejam conservados em boas condições (10°C, escuridão). Para além disso, contacte a nossa equipa técnica para ajustar o calendário de libertação em função do tempo e do estádio da cultura.',
@@ -3672,6 +3573,20 @@ const translations: Translations = {
     es: 'Sí, en la gran mayoría de los casos. Los auxiliares introducidos no se establecen de forma permanente en la parcela una vez eliminada la plaga objetivo; a falta de presas disponibles, su población declina de forma natural. Un programa de sueltas debe por tanto renovarse en cada nueva temporada de cultivo, ajustando las cantidades según la presión observada el año anterior.',
     pt: 'Sim, na grande maioria dos casos. Os auxiliares introduzidos não se estabelecem de forma permanente na parcela uma vez eliminada a praga-alvo; na falta de presas disponíveis, a sua população declina naturalmente. Um programa de libertações deve, portanto, ser renovado a cada nova estação de cultivo, ajustando as quantidades consoante a pressão observada no ano anterior.',
     de: 'Ja, in den meisten Fällen. Eingeführte Nützlinge etablieren sich nicht dauerhaft auf dem Feld, sobald der Zielschädling beseitigt ist; mangels verfügbarer Beute geht ihre Population natürlich zurück. Ein Freisetzungsprogramm muss daher jede neue Anbausaison erneuert werden, wobei die Mengen entsprechend dem im Vorjahr beobachteten Befallsdruck angepasst werden.'
+  },
+  'bv.faq6.q': {
+    fr: 'Pourquoi lâcher des auxiliaires s\'il en existe déjà naturellement dans mes parcelles ?',
+    en: 'Why release beneficials if they already occur naturally in my fields?',
+    es: '¿Por qué soltar auxiliares si ya existen de forma natural en mis parcelas?',
+    pt: 'Por que libertar auxiliares se já existem naturalmente nas minhas parcelas?',
+    de: 'Warum Nützlinge freisetzen, wenn sie bereits natürlich auf meinen Feldern vorkommen?'
+  },
+  'bv.faq6.a': {
+    fr: 'Les populations d\'auxiliaires naturels arrivent généralement avec un décalage par rapport aux ravageurs : elles mettent plus de temps à s\'installer, pendant que les ravageurs prolifèrent déjà. Les lâchers permettent de combler ce décalage en apportant immédiatement une population d\'auxiliaires suffisante pour intervenir dès les premiers stades de l\'infestation.',
+    en: 'Natural beneficial populations generally arrive later than pests: they take longer to establish while pests are already multiplying. Releases fill this gap by immediately providing a sufficient population of beneficials to act from the early stages of an infestation.',
+    es: 'Las poblaciones de auxiliares naturales suelen llegar con un desfase respecto a las plagas: tardan más en instalarse mientras las plagas ya proliferan. Las sueltas permiten colmar este desfase aportando de inmediato una población de auxiliares suficiente para intervenir desde las primeras fases de la infestación.',
+    pt: 'As populações de auxiliares naturais geralmente chegam com um desfasamento em relação às pragas: demoram mais a instalar-se enquanto as pragas já proliferam. As libertações permitem colmatar esse desfasamento, fornecendo de imediato uma população de auxiliares suficiente para intervir desde os primeiros estádios da infestação.',
+    de: 'Natürliche Nützlingspopulationen treffen in der Regel später ein als die Schädlinge: Sie brauchen länger, um sich zu etablieren, während sich die Schädlinge bereits vermehren. Freisetzungen schließen diese Lücke, indem sofort eine ausreichende Nützlingspopulation bereitgestellt wird, um bereits in den frühen Stadien des Befalls einzugreifen.'
   },
   'bv.faq.title': {
     fr: 'Questions fréquentes', en: 'Frequently asked questions', es: 'Preguntas frecuentes', pt: 'Perguntas frequentes', de: 'Häufig gestellte Fragen'
@@ -3748,6 +3663,20 @@ const translations: Translations = {
     de: 'Fertea432 zur Verbesserung von Bodenfruchtbarkeit und -struktur'
   },
   // ExtraitsNaturels page (extraits.*)
+  'extraits.crops.pending': {
+    fr: 'Communiqué à l\'issue des phases de développement et d\'homologation',
+    en: 'To be announced once development and approval are complete',
+    es: 'Se comunicará al finalizar las fases de desarrollo y homologación',
+    pt: 'Comunicado após a conclusão das fases de desenvolvimento e homologação',
+    de: 'Wird nach Abschluss der Entwicklungs- und Zulassungsphasen mitgeteilt'
+  },
+  'extraits.notAvailable.badge': {
+    fr: 'En développement — non disponible à la vente',
+    en: 'In development — not yet available for sale',
+    es: 'En desarrollo — no disponible para la venta',
+    pt: 'Em desenvolvimento — não disponível para venda',
+    de: 'In Entwicklung — noch nicht im Verkauf'
+  },
   'extraits.heading': {
     fr: 'Nos biopesticides', en: 'Our biopesticides', es: 'Nuestros biopesticidas', pt: 'Os nossos biopesticidas', de: 'Unsere Biopestizide'
   },
@@ -3762,7 +3691,7 @@ const translations: Translations = {
     fr: 'Comment ça fonctionne ?', en: 'How does it work?', es: '¿Cómo funciona?', pt: 'Como funciona?', de: 'Wie funktioniert das?'
   },
   'extraits.howItWorks.desc': {
-    fr: 'Ces molécules actives perturbent le système nerveux ou digestif des ravageurs cibles : ils cessent de se nourrir, perdent leur mobilité et meurent. Sans affecter les pollinisateurs ni la faune auxiliaire présente dans vos cultures. Le mode d\'action par contact et ingestion, combiné à une dégradation rapide dans l\'environnement, limite le risque de sélection de populations résistantes, un enjeu croissant à mesure que les substances actives conventionnelles se raréfient.',
+    fr: 'Ces molécules bioactives issues d\'extraits d\'insectes agissent sur les ravageurs cibles tout en se dégradant rapidement dans l\'environnement. Le détail de leur mode d\'action sera précisé à l\'issue des phases de développement et d\'homologation en cours.',
     en: 'These active molecules disrupt the nervous or digestive system of target pests: they stop feeding, lose mobility and die, without affecting pollinators or beneficial fauna present in your crops. The contact-and-ingestion mode of action, combined with rapid environmental degradation, limits the risk of resistant populations developing — a growing concern as conventional active substances become scarcer.',
     es: 'Estas moléculas activas perturban el sistema nervioso o digestivo de las plagas objetivo: dejan de alimentarse, pierden movilidad y mueren, sin afectar a los polinizadores ni a la fauna auxiliar presente en sus cultivos. El modo de acción por contacto e ingestión, combinado con una rápida degradación en el medio ambiente, limita el riesgo de selección de poblaciones resistentes, un desafío creciente a medida que las sustancias activas convencionales escasean.',
     pt: 'Estas moléculas ativas perturbam o sistema nervoso ou digestivo das pragas-alvo: deixam de se alimentar, perdem mobilidade e morrem, sem afetar os polinizadores nem a fauna auxiliar presente nas suas culturas. O modo de ação por contacto e ingestão, combinado com uma rápida degradação no ambiente, limita o risco de seleção de populações resistentes, um desafio crescente à medida que as substâncias ativas convencionais escasseiam.',
@@ -3774,138 +3703,6 @@ const translations: Translations = {
     es: '¿Por qué elegir nuestros biopesticidas?',
     pt: 'Por que escolher os nossos biopesticidas?',
     de: 'Warum unsere Biopestizide wählen?'
-  },
-  'extraits.crops.title': {
-    fr: 'Cultures cibles', en: 'Target crops', es: 'Cultivos objetivo', pt: 'Culturas-alvo', de: 'Zielkulturen'
-  },
-  'extraits.crops.subtitle': {
-    fr: 'Nos biopesticides à base d\'extraits d\'insectes couvrent une large gamme de cultures, en agriculture biologique comme conventionnelle.',
-    en: 'Our insect-extract biopesticides cover a wide range of crops, in both organic and conventional farming.',
-    es: 'Nuestros biopesticidas a base de extractos de insectos cubren una amplia gama de cultivos, tanto en agricultura ecológica como convencional.',
-    pt: 'Os nossos biopesticidas à base de extratos de insetos cobrem uma vasta gama de culturas, tanto na agricultura biológica como convencional.',
-    de: 'Unsere Biopestizide auf Basis von Insektenextrakten decken eine breite Palette von Kulturen ab, sowohl im ökologischen als auch im konventionellen Landbau.'
-  },
-  'extraits.crop1': {
-    fr: 'Céréales : blé, orge, triticale, seigle',
-    en: 'Cereals: wheat, barley, triticale, rye',
-    es: 'Cereales: trigo, cebada, triticale, centeno',
-    pt: 'Cereais: trigo, cevada, triticale, centeio',
-    de: 'Getreide: Weizen, Gerste, Triticale, Roggen'
-  },
-  'extraits.crop2': {
-    fr: 'Oléagineux : colza, tournesol, soja',
-    en: 'Oilseeds: rapeseed, sunflower, soybean',
-    es: 'Oleaginosas: colza, girasol, soja',
-    pt: 'Oleaginosas: colza, girassol, soja',
-    de: 'Ölsaaten: Raps, Sonnenblume, Soja'
-  },
-  'extraits.crop3': {
-    fr: 'Viticulture : ravageurs foliaires (dont tordeuse de la vigne), insectes vecteurs de la flavescence dorée et maladies cryptogamiques',
-    en: 'Viticulture: foliar pests (including grape berry moth), insect vectors of Flavescence dorée, and fungal diseases',
-    es: 'Viticultura: plagas foliares (incluida la polilla del racimo), insectos vectores de la flavescencia dorada y enfermedades criptogámicas',
-    pt: 'Viticultura: pragas foliares (incluindo a traça-da-uva), insetos vetores da flavescência dourada e doenças criptogâmicas',
-    de: 'Weinbau: Blattschädlinge (einschließlich Traubenwickler), Überträgerinsekten der Goldgelben Vergilbung und Pilzkrankheiten'
-  },
-  'extraits.crop4': {
-    fr: 'Maraîchage : tomate, poivron, laitue, courgette, aubergine, carotte, oignon, cucurbitacées',
-    en: 'Market gardening: tomato, pepper, lettuce, zucchini, eggplant, carrot, onion, cucurbits',
-    es: 'Horticultura: tomate, pimiento, lechuga, calabacín, berenjena, zanahoria, cebolla, cucurbitáceas',
-    pt: 'Horticultura: tomate, pimento, alface, curgete, beringela, cenoura, cebola, cucurbitáceas',
-    de: 'Gemüsebau: Tomate, Paprika, Salat, Zucchini, Aubergine, Karotte, Zwiebel, Kürbisgewächse'
-  },
-  'extraits.crop5': {
-    fr: 'Maïs : grandes cultures', en: 'Corn: field crops', es: 'Maíz: cultivos extensivos', pt: 'Milho: culturas extensivas', de: 'Mais: Ackerkulturen'
-  },
-  'extraits.crop6': {
-    fr: 'Arboriculture fruitière : pommier, poirier, cerisier, kiwi',
-    en: 'Fruit growing: apple, pear, cherry, kiwi trees',
-    es: 'Fruticultura: manzano, peral, cerezo, kiwi',
-    pt: 'Fruticultura: macieira, pereira, cerejeira, kiwi',
-    de: 'Obstbau: Apfel-, Birn-, Kirschbaum, Kiwi'
-  },
-  'extraits.howto.title': {
-    fr: 'Mode d\'emploi', en: 'Instructions for use', es: 'Modo de empleo', pt: 'Modo de utilização', de: 'Gebrauchsanleitung'
-  },
-  'extraits.step1.title': {
-    fr: 'Préparation de la bouillie', en: 'Preparing the spray mix', es: 'Preparación de la mezcla', pt: 'Preparação da calda', de: 'Vorbereitung der Spritzbrühe'
-  },
-  'extraits.step1.desc': {
-    fr: 'Diluer le produit selon le dosage de la fiche technique. Agiter jusqu\'à dissolution complète dans le volume d\'eau recommandé.',
-    en: 'Dilute the product according to the dosage on the technical data sheet. Stir until fully dissolved in the recommended volume of water.',
-    es: 'Diluir el producto según la dosis de la ficha técnica. Agitar hasta la disolución completa en el volumen de agua recomendado.',
-    pt: 'Diluir o produto de acordo com a dosagem da ficha técnica. Agitar até à dissolução completa no volume de água recomendado.',
-    de: 'Das Produkt gemäß der Dosierung im technischen Datenblatt verdünnen. Bis zur vollständigen Auflösung in der empfohlenen Wassermenge rühren.'
-  },
-  'extraits.step2.title': {
-    fr: 'Conditions d\'application', en: 'Application conditions', es: 'Condiciones de aplicación', pt: 'Condições de aplicação', de: 'Anwendungsbedingungen'
-  },
-  'extraits.step2.desc': {
-    fr: 'Pulvérisation foliaire de préférence aux heures fraîches (avant 10h ou après 18h). Éviter les jours de vent fort (> 3 m/s) et de chaleur excessive (> 28°C).',
-    en: 'Foliar spraying preferably during cooler hours (before 10am or after 6pm). Avoid days with strong wind (> 3 m/s) and excessive heat (> 28°C).',
-    es: 'Pulverización foliar preferiblemente en las horas frescas (antes de las 10h o después de las 18h). Evitar los días de viento fuerte (> 3 m/s) y calor excesivo (> 28°C).',
-    pt: 'Pulverização foliar de preferência nas horas mais frescas (antes das 10h ou depois das 18h). Evitar dias de vento forte (> 3 m/s) e calor excessivo (> 28°C).',
-    de: 'Blattspritzung vorzugsweise zu kühleren Tageszeiten (vor 10 Uhr oder nach 18 Uhr). Tage mit starkem Wind (> 3 m/s) und übermäßiger Hitze (> 28°C) vermeiden.'
-  },
-  'extraits.step3.title': {
-    fr: 'Couverture foliaire', en: 'Foliar coverage', es: 'Cobertura foliar', pt: 'Cobertura foliar', de: 'Blattabdeckung'
-  },
-  'extraits.step3.desc': {
-    fr: 'Traiter de manière homogène, en insistant sur la face inférieure des feuilles pour les insectes suceurs et tétranyques.',
-    en: 'Treat evenly, focusing on the underside of leaves for sucking insects and spider mites.',
-    es: 'Tratar de manera homogénea, insistiendo en el envés de las hojas para los insectos chupadores y ácaros.',
-    pt: 'Tratar de forma homogénea, insistindo na face inferior das folhas para os insetos sugadores e ácaros.',
-    de: 'Gleichmäßig behandeln, mit Schwerpunkt auf der Blattunterseite bei saugenden Insekten und Spinnmilben.'
-  },
-  'extraits.step4.title': {
-    fr: 'Fréquence de traitement', en: 'Treatment frequency', es: 'Frecuencia de tratamiento', pt: 'Frequência de tratamento', de: 'Behandlungshäufigkeit'
-  },
-  'extraits.step4.desc': {
-    fr: '1 application tous les 7 à 14 jours selon la pression parasitaire. Ajuster selon l\'évolution des populations cibles.',
-    en: '1 application every 7 to 14 days depending on pest pressure. Adjust according to the trend in target populations.',
-    es: '1 aplicación cada 7 a 14 días según la presión parasitaria. Ajustar según la evolución de las poblaciones objetivo.',
-    pt: '1 aplicação a cada 7 a 14 dias consoante a pressão parasitária. Ajustar consoante a evolução das populações-alvo.',
-    de: '1 Anwendung alle 7 bis 14 Tage, je nach Befallsdruck. Anpassung entsprechend der Entwicklung der Zielpopulationen.'
-  },
-  'extraits.step5.title': {
-    fr: 'Précautions', en: 'Precautions', es: 'Precauciones', pt: 'Precauções', de: 'Vorsichtsmaßnahmen'
-  },
-  'extraits.step5.desc': {
-    fr: 'Ne pas appliquer par temps de pluie ou lorsqu\'une pluie est prévue dans les 4 heures suivant le traitement.',
-    en: 'Do not apply in rainy weather or when rain is forecast within 4 hours of treatment.',
-    es: 'No aplicar en tiempo lluvioso o cuando se prevea lluvia en las 4 horas siguientes al tratamiento.',
-    pt: 'Não aplicar em tempo de chuva ou quando esteja prevista chuva nas 4 horas seguintes ao tratamento.',
-    de: 'Nicht bei Regen anwenden oder wenn innerhalb von 4 Stunden nach der Behandlung Regen vorhergesagt wird.'
-  },
-  'extraits.results.title': {
-    fr: 'Résultats mesurés sur le terrain', en: 'Results measured in the field', es: 'Resultados medidos en campo', pt: 'Resultados medidos no terreno', de: 'Im Feld gemessene Ergebnisse'
-  },
-  'extraits.results.stat1.label': {
-    fr: 'd\'efficacité contre les principaux ravageurs (légumes, céréales, vigne)',
-    en: 'effectiveness against major pests (vegetables, cereals, vines)',
-    es: 'de eficacia contra las principales plagas (hortalizas, cereales, viña)',
-    pt: 'de eficácia contra as principais pragas (hortícolas, cereais, vinha)',
-    de: 'Wirksamkeit gegen die wichtigsten Schädlinge (Gemüse, Getreide, Wein)'
-  },
-  'extraits.results.stat2.label': {
-    fr: 'fréquence de traitement selon la pression parasitaire',
-    en: 'treatment frequency depending on pest pressure',
-    es: 'frecuencia de tratamiento según la presión parasitaria',
-    pt: 'frequência de tratamento consoante a pressão parasitária',
-    de: 'Behandlungshäufigkeit je nach Befallsdruck'
-  },
-  'extraits.results.stat3.label': {
-    fr: 'chimique de synthèse, filières bio et premium',
-    en: 'synthetic chemical, organic and premium supply chains',
-    es: 'químico de síntesis, cadenas ecológicas y premium',
-    pt: 'químico de síntese, cadeias biológicas e premium',
-    de: 'synthetisch-chemisch, Bio- und Premium-Wertschöpfungsketten'
-  },
-  'extraits.results.disclaimer': {
-    fr: 'Données internes Keprea, essais en parcelles pilotes 2023–2024, sur légumes, céréales et vigne. Résultats variables selon la culture et la pression parasitaire, communiqués à titre indicatif, hors valeur d\'engagement contractuel.',
-    en: 'Internal Keprea data, pilot field trials 2023–2024, on vegetables, cereals and vines. Results vary depending on crop and pest pressure; provided for indicative purposes only, with no contractual commitment.',
-    es: 'Datos internos de Keprea, ensayos en parcelas piloto 2023-2024, sobre hortalizas, cereales y viña. Resultados variables según el cultivo y la presión parasitaria, comunicados a título indicativo, sin valor de compromiso contractual.',
-    pt: 'Dados internos Keprea, ensaios em parcelas piloto 2023-2024, em hortícolas, cereais e vinha. Resultados variáveis consoante a cultura e a pressão parasitária, comunicados a título indicativo, sem valor de compromisso contratual.',
-    de: 'Interne Keprea-Daten, Pilotfeldversuche 2023-2024, bei Gemüse, Getreide und Wein. Ergebnisse variieren je nach Kultur und Befallsdruck; nur zur Orientierung, ohne vertragliche Verbindlichkeit.'
   },
   'extraits.faq.title': {
     fr: 'Questions fréquentes', en: 'Frequently asked questions', es: 'Preguntas frecuentes', pt: 'Perguntas frequentes', de: 'Häufig gestellte Fragen'
@@ -3937,62 +3734,6 @@ const translations: Translations = {
     es: 'El plazo de seguridad depende del producto y del cultivo. Consulte la ficha técnica de cada producto o contacte a nuestro equipo técnico para información normativa precisa.',
     pt: 'O prazo antes da colheita depende do produto e da cultura. Consulte a ficha técnica de cada produto ou contacte a nossa equipa técnica para informações regulamentares precisas.',
     de: 'Die Wartezeit vor der Ernte hängt vom Produkt und der Kultur ab. Konsultieren Sie das technische Datenblatt jedes Produkts oder wenden Sie sich für genaue regulatorische Informationen an unser technisches Team.'
-  },
-  'extraits.faq3.q': {
-    fr: 'Nos biopesticides sont-ils compatibles avec les lâchers d\'auxiliaires ?',
-    en: 'Are our biopesticides compatible with beneficial releases?',
-    es: '¿Son nuestros biopesticidas compatibles con las sueltas de auxiliares?',
-    pt: 'Os nossos biopesticidas são compatíveis com as libertações de auxiliares?',
-    de: 'Sind unsere Biopestizide mit Nützlingsfreisetzungen kompatibel?'
-  },
-  'extraits.faq3.a': {
-    fr: 'Oui, nos biopesticides sont formulés pour être compatibles avec le biocontrôle vivant. Utilisés en programme intégré, ils se complètent pour une protection optimale de vos cultures.',
-    en: 'Yes, our biopesticides are formulated to be compatible with living biocontrol. Used in an integrated program, they complement each other for optimal crop protection.',
-    es: 'Sí, nuestros biopesticidas están formulados para ser compatibles con el biocontrol vivo. Utilizados en un programa integrado, se complementan para una protección óptima de sus cultivos.',
-    pt: 'Sim, os nossos biopesticidas são formulados para serem compatíveis com o biocontrole vivo. Utilizados num programa integrado, complementam-se para uma proteção ótima das suas culturas.',
-    de: 'Ja, unsere Biopestizide sind so formuliert, dass sie mit lebender Biokontrolle kompatibel sind. In einem integrierten Programm eingesetzt, ergänzen sie sich für einen optimalen Schutz Ihrer Kulturen.'
-  },
-  'extraits.faq4.q': {
-    fr: 'Peut-on mélanger nos biopesticides avec d\'autres produits en cuve ?',
-    en: 'Can our biopesticides be tank-mixed with other products?',
-    es: '¿Se pueden mezclar nuestros biopesticidas con otros productos en tanque?',
-    pt: 'É possível misturar os nossos biopesticidas com outros produtos em cuba?',
-    de: 'Können unsere Biopestizide im Tank mit anderen Produkten gemischt werden?'
-  },
-  'extraits.faq4.a': {
-    fr: 'Un test de miscibilité préalable est recommandé avant tout mélange extemporané, en particulier avec des produits fortement acides ou basiques. Notre équipe technique peut vous confirmer la compatibilité avec les principaux intrants du marché sur simple demande.',
-    en: 'A prior miscibility test is recommended before any extemporaneous mix, especially with strongly acidic or alkaline products. Our technical team can confirm compatibility with the main inputs on the market upon request.',
-    es: 'Se recomienda una prueba de miscibilidad previa antes de cualquier mezcla extemporánea, en particular con productos fuertemente ácidos o básicos. Nuestro equipo técnico puede confirmarle la compatibilidad con los principales insumos del mercado a petición.',
-    pt: 'Recomenda-se um teste de miscibilidade prévio antes de qualquer mistura extemporânea, em particular com produtos fortemente ácidos ou básicos. A nossa equipa técnica pode confirmar a compatibilidade com os principais insumos do mercado mediante pedido.',
-    de: 'Vor jeder spontanen Mischung wird ein vorheriger Mischbarkeitstest empfohlen, insbesondere bei stark sauren oder basischen Produkten. Unser technisches Team kann auf Anfrage die Kompatibilität mit den wichtigsten Marktbetriebsmitteln bestätigen.'
-  },
-  'extraits.faq5.q': {
-    fr: 'Comment conserver nos biopesticides avant utilisation ?',
-    en: 'How should our biopesticides be stored before use?',
-    es: '¿Cómo conservar nuestros biopesticidas antes de su uso?',
-    pt: 'Como conservar os nossos biopesticidas antes da utilização?',
-    de: 'Wie sollen unsere Biopestizide vor der Verwendung gelagert werden?'
-  },
-  'extraits.faq5.a': {
-    fr: 'Stocker à l\'abri de la lumière directe et de la chaleur excessive (idéalement entre 5°C et 25°C), dans l\'emballage d\'origine fermé. Une fois la bouillie préparée, l\'appliquer dans les heures qui suivent pour préserver l\'activité des molécules bioactives.',
-    en: 'Store away from direct light and excessive heat (ideally between 5°C and 25°C), in the closed original packaging. Once the spray mix is prepared, apply it within a few hours to preserve the activity of the bioactive molecules.',
-    es: 'Almacenar al abrigo de la luz directa y del calor excesivo (idealmente entre 5°C y 25°C), en el envase de origen cerrado. Una vez preparada la mezcla, aplicarla en las horas siguientes para preservar la actividad de las moléculas bioactivas.',
-    pt: 'Armazenar ao abrigo da luz direta e do calor excessivo (idealmente entre 5°C e 25°C), na embalagem de origem fechada. Uma vez preparada a calda, aplicá-la nas horas seguintes para preservar a atividade das moléculas bioativas.',
-    de: 'Vor direktem Licht und übermäßiger Hitze geschützt lagern (idealerweise zwischen 5°C und 25°C), in der geschlossenen Originalverpackung. Sobald die Spritzbrühe vorbereitet ist, innerhalb weniger Stunden anwenden, um die Aktivität der bioaktiven Moleküle zu erhalten.'
-  },
-  'extraits.faq6.q': {
-    fr: 'Nos biopesticides sont-ils dangereux pour les abeilles et pollinisateurs ?',
-    en: 'Are our biopesticides dangerous for bees and pollinators?',
-    es: '¿Son peligrosos nuestros biopesticidas para las abejas y polinizadores?',
-    pt: 'Os nossos biopesticidas são perigosos para as abelhas e polinizadores?',
-    de: 'Sind unsere Biopestizide gefährlich für Bienen und Bestäuber?'
-  },
-  'extraits.faq6.a': {
-    fr: 'Les molécules actives de nos biopesticides ciblent spécifiquement le système nerveux ou digestif des ravageurs cibles, sans effet démontré sur les pollinisateurs aux doses recommandées. Nous recommandons néanmoins d\'éviter les traitements en pleine floraison et de privilégier les heures où les pollinisateurs sont peu actifs (tôt le matin ou en soirée), par précaution et conformément aux bonnes pratiques phytosanitaires générales.',
-    en: 'The active molecules in our biopesticides specifically target the nervous or digestive system of target pests, with no demonstrated effect on pollinators at recommended doses. We nonetheless recommend avoiding treatment during full bloom and favoring times when pollinators are less active (early morning or evening), as a precaution and in line with general good plant health practices.',
-    es: 'Las moléculas activas de nuestros biopesticidas se dirigen específicamente al sistema nervioso o digestivo de las plagas objetivo, sin efecto demostrado sobre los polinizadores a las dosis recomendadas. No obstante, recomendamos evitar los tratamientos en plena floración y priorizar las horas en que los polinizadores están poco activos (temprano por la mañana o al atardecer), como precaución y de acuerdo con las buenas prácticas fitosanitarias generales.',
-    pt: 'As moléculas ativas dos nossos biopesticidas visam especificamente o sistema nervoso ou digestivo das pragas-alvo, sem efeito demonstrado sobre os polinizadores nas doses recomendadas. Recomendamos, no entanto, evitar os tratamentos em plena floração e privilegiar as horas em que os polinizadores estão pouco ativos (de manhã cedo ou ao fim da tarde), por precaução e em conformidade com as boas práticas fitossanitárias gerais.',
-    de: 'Die Wirkmoleküle unserer Biopestizide zielen speziell auf das Nerven- oder Verdauungssystem der Zielschädlinge ab, ohne nachgewiesene Wirkung auf Bestäuber bei den empfohlenen Dosierungen. Dennoch empfehlen wir, Behandlungen während der Vollblüte zu vermeiden und Zeiten zu bevorzugen, in denen Bestäuber wenig aktiv sind (früh morgens oder abends), als Vorsichtsmaßnahme und im Einklang mit allgemeiner guter Pflanzenschutzpraxis.'
   },
   'extraits.feedback.title': {
     fr: 'Retours terrain', en: 'Field feedback', es: 'Comentarios de campo', pt: 'Comentários de campo', de: 'Feldrückmeldungen'
@@ -4600,9 +4341,6 @@ const translations: Translations = {
     de: 'Ziel unserer Bioschutzlösungen'
   },
   'bv.results.stat3.value': {
-    fr: '0 résidu', en: '0 residue', es: '0 residuos', pt: '0 resíduos', de: '0 Rückstände'
-  },
-  'extraits.results.stat3.value': {
     fr: '0 résidu', en: '0 residue', es: '0 residuos', pt: '0 resíduos', de: '0 Rückstände'
   },
   // Image alt texts

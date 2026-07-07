@@ -46,13 +46,13 @@ const Boosters = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Head>
         <title>Biostimulants Agricoles Keprea | Boostea13 & Soilea110</title>
-        <meta name="description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
+        <meta name="description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Micro-peptides, proline, acides aminés." />
         <link rel="canonical" href="https://keprea.vercel.app/solutions/boosters" />
         <meta property="og:url" content="https://keprea.vercel.app/solutions/boosters" />
         <meta property="og:title" content="Biostimulants Agricoles Keprea | Boostea13 & Soilea110" />
         <meta name="twitter:title" content="Biostimulants Agricoles Keprea | Boostea13 & Soilea110" />
-        <meta property="og:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
-        <meta name="twitter:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Polypeptides, proline, acides aminés." />
+        <meta property="og:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Micro-peptides, proline, acides aminés." />
+        <meta name="twitter:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Micro-peptides, proline, acides aminés." />
         <script type="application/ld+json">{breadcrumbJsonLd([
           { name: "Accueil", path: "/" },
           { name: "Solutions", path: "/solutions" },
@@ -61,7 +61,7 @@ const Boosters = () => {
         <script type="application/ld+json">{faqJsonLd(faqItems.map(({ q, a }) => ({ question: q, answer: a })))}</script>
         <script type="application/ld+json">{serviceJsonLd({
           name: "Biostimulants Boostea13 et Soilea110",
-          description: "Biostimulants agricoles à base d'extraits d'insectes (polypeptides, proline, acides aminés) pour la vigueur foliaire (Boostea13) et la santé du sol (Soilea110).",
+          description: "Biostimulants agricoles à base d'extraits d'insectes (micro-peptides, proline, acides aminés) pour la vigueur foliaire (Boostea13) et la santé du sol (Soilea110).",
           path: "/solutions/boosters",
           serviceType: "Biostimulant agricole",
         })}</script>

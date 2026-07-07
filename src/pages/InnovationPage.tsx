@@ -3,7 +3,7 @@ import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GradientCTA from "@/components/GradientCTA";
-import { Leaf, Shield, Zap, CheckCircle2, X } from "lucide-react";
+import { Leaf, Shield, Zap } from "lucide-react";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -15,35 +15,8 @@ const challenges = [
 
 const pillar3Stats = [
   { value: "84%", labelKey: "innovationpage.pillar3.stat1.label" },
-  { value: "5 500", labelKey: "innovationpage.pillar3.stat2.label" },
+  { value: "150", labelKey: "innovationpage.pillar3.stat2.label" },
   { value: "100%", labelKey: "innovationpage.pillar3.stat3.label" },
-];
-
-const kepreaItems = [
-  "innovationpage.comparison.keprea.item1",
-  "innovationpage.comparison.keprea.item2",
-  "innovationpage.comparison.keprea.item3",
-  "innovationpage.comparison.keprea.item4",
-  "innovationpage.comparison.keprea.item5",
-  "innovationpage.comparison.keprea.item6",
-];
-
-const chimieItems = [
-  { ok: false, key: "innovationpage.comparison.chimie.item1" },
-  { ok: false, key: "innovationpage.comparison.chimie.item2" },
-  { ok: false, key: "innovationpage.comparison.chimie.item3" },
-  { ok: false, key: "innovationpage.comparison.chimie.item4" },
-  { ok: true, key: "innovationpage.comparison.chimie.item5" },
-  { ok: false, key: "innovationpage.comparison.chimie.item6" },
-];
-
-const autresItems = [
-  { ok: true, key: "innovationpage.comparison.autres.item1" },
-  { ok: true, key: "innovationpage.comparison.autres.item2" },
-  { ok: true, key: "innovationpage.comparison.autres.item3" },
-  { ok: false, key: "innovationpage.comparison.autres.item4" },
-  { ok: false, key: "innovationpage.comparison.autres.item5" },
-  { ok: false, key: "innovationpage.comparison.autres.item6" },
 ];
 
 const InnovationPage = () => {
@@ -262,92 +235,6 @@ const InnovationPage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* ── Comparaison Keprea vs alternatives ── */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
-          <div className="container mx-auto max-w-6xl">
-            <div className="reveal mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-                {t("innovationpage.comparison.title")}
-              </h2>
-              <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">
-                {t("innovationpage.comparison.subtitle")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-              {/* Keprea - carte claire (accent) */}
-              <div
-                className="p-[3px] rounded-[2rem] reveal"
-                style={{
-                  background: "linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)",
-                  boxShadow: "0 4px 40px hsl(var(--primary)/0.09)",
-                }}
-              >
-                <div
-                  className="rounded-[calc(2rem-3px)] px-7 py-8 h-full"
-                  style={{
-                    background: "radial-gradient(ellipse at 110% -15%, hsl(var(--primary)/0.09) 0%, transparent 55%), hsl(var(--background))",
-                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.92)",
-                  }}
-                >
-                  <span
-                    className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary border rounded-full px-3 py-1 inline-block mb-6"
-                    style={{ background: "hsl(var(--primary)/0.08)", borderColor: "hsl(var(--primary)/0.18)" }}
-                  >
-                    {t("innovationpage.comparison.keprea.badge")}
-                  </span>
-                  <ul className="space-y-3">
-                    {kepreaItems.map((key, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                        <span className="text-sm text-foreground">{t(key)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Chimie classique */}
-              <div className="rounded-[2rem] border border-border/60 bg-background px-7 py-8 reveal reveal-delay-1">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground bg-muted/60 border border-border/50 rounded-full px-3 py-1 inline-block mb-6">
-                  {t("innovationpage.comparison.chimie.badge")}
-                </span>
-                <ul className="space-y-3">
-                  {chimieItems.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      {item.ok
-                        ? <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                        : <X className="w-4 h-4 text-destructive/60 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                      }
-                      <span className="text-sm text-muted-foreground">{t(item.key)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Autres solutions de biocontrôle */}
-              <div className="rounded-[2rem] border border-border/60 bg-background px-7 py-8 reveal reveal-delay-2">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground bg-muted/60 border border-border/50 rounded-full px-3 py-1 inline-block mb-6">
-                  {t("innovationpage.comparison.autres.badge")}
-                </span>
-                <ul className="space-y-3">
-                  {autresItems.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      {item.ok
-                        ? <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                        : <X className="w-4 h-4 text-destructive/60 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                      }
-                      <span className="text-sm text-muted-foreground">{t(item.key)}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
 
             </div>

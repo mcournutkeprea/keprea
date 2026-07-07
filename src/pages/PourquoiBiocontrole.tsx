@@ -45,7 +45,7 @@ const PourquoiBiocontrole = () => {
       <title>Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea</title>
       <meta
         name="description"
-        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux pesticides chimiques pour protéger vos cultures."
+        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux produits phytosanitaires pour protéger vos cultures."
       />
       <link rel="canonical" href="https://keprea.vercel.app/pourquoi-le-biocontrole" />
       <meta property="og:url" content="https://keprea.vercel.app/pourquoi-le-biocontrole" />
@@ -53,11 +53,11 @@ const PourquoiBiocontrole = () => {
       <meta name="twitter:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea" />
       <meta
         property="og:description"
-        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux pesticides chimiques pour protéger vos cultures."
+        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux produits phytosanitaires pour protéger vos cultures."
       />
       <meta
         name="twitter:description"
-        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux pesticides chimiques pour protéger vos cultures."
+        content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux produits phytosanitaires pour protéger vos cultures."
       />
       <script type="application/ld+json">{breadcrumbJsonLd([
         { name: "Accueil", path: "/" },
@@ -65,7 +65,7 @@ const PourquoiBiocontrole = () => {
       ])}</script>
       <script type="application/ld+json">{articleJsonLd({
         headline: "Pourquoi le Biocontrôle ? Comprendre les enjeux pour l'agriculture durable",
-        description: "Comprendre le biocontrôle : cadre réglementaire français et européen, marché en croissance, catégories de solutions et alternatives naturelles aux pesticides chimiques.",
+        description: "Comprendre le biocontrôle : cadre réglementaire français et européen, marché en croissance, catégories de solutions et alternatives naturelles aux produits phytosanitaires.",
         path: "/pourquoi-le-biocontrole",
         datePublished: "2026-06-15",
         dateModified: "2026-07-03",

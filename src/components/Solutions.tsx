@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate, Link } from "react-router-dom";
 import leavesDropletsBg from "@/assets/leaves-droplets-bg.jpg";
 import { useInView } from "@/hooks/useInView";
-import { ArrowRight, Lightbulb } from "lucide-react";
+import { ArrowRight, Lightbulb, CheckCircle2, Construction } from "lucide-react";
 
 const Solutions = () => {
   const { t } = useLanguage();
@@ -30,6 +30,7 @@ const Solutions = () => {
         </>
       ),
       wide: true,
+      available: true,
     },
     {
       path: "/solutions/biopesticides",
@@ -44,6 +45,7 @@ const Solutions = () => {
         </>
       ),
       wide: false,
+      available: false,
     },
     {
       path: "/solutions/boosters",
@@ -54,10 +56,11 @@ const Solutions = () => {
       descText: (
         <>
           {t("solutions.boosters.polypeptides")}{" "}
-          <strong className="text-white">Polypeptides &amp; Proline</strong>
+          <strong className="text-white">Micro-peptides &amp; Proline</strong>
         </>
       ),
       wide: false,
+      available: true,
     },
     {
       path: "/solutions/biofertilisant",
@@ -72,6 +75,7 @@ const Solutions = () => {
         </>
       ),
       wide: true,
+      available: true,
     },
   ];
 
@@ -142,6 +146,18 @@ const Solutions = () => {
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
+              {/* Availability badge */}
+              <span
+                className={`absolute top-4 right-4 z-10 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full ${
+                  card.available ? "bg-primary/90 text-primary-foreground" : "bg-white/20 text-white border border-white/30"
+                }`}
+              >
+                {card.available
+                  ? <CheckCircle2 className="w-3 h-3" aria-hidden="true" />
+                  : <Construction className="w-3 h-3" aria-hidden="true" />
+                }
+                {t(card.available ? "solutions.badge.available" : "solutions.badge.pipeline")}
+              </span>
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col justify-end p-7">
                 <span className="text-xs text-white/50 uppercase tracking-widest mb-2">

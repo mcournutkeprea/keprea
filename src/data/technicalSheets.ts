@@ -92,12 +92,10 @@ export const technicalSheets: TechnicalSheetEntry[] = [
     rows: [
       { labelKey: "techsheet.label.application", valueKey: "extraits.howItWorks.desc" },
       { labelKey: "techsheet.label.technology", valueKey: "substances.tech.step2.desc" },
-      { labelKey: "techsheet.label.application", valueKey: "extraits.step2.desc" },
-      { labelKey: "techsheet.label.frequency", valueKey: "extraits.step4.desc" },
       { labelKey: "techsheet.label.category", valueKey: "extraits.subheading" },
     ],
     cropsLabelKey: "techsheet.label.crops",
-    cropKeys: ["extraits.crop1", "extraits.crop2", "extraits.crop3", "extraits.crop4", "extraits.crop5", "extraits.crop6"],
+    cropKeys: ["extraits.crops.pending"],
   },
 ];
 

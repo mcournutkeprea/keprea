@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, ArrowRight, Leaf, FlaskConical, Microscope, CheckCircle2, ShieldCheck, ShieldPlus, Recycle, Settings2 } from "lucide-react";
+import { ArrowLeft, Leaf, FlaskConical, Microscope, ShieldCheck, ShieldPlus, Recycle, Settings2, Construction } from "lucide-react";
 import plantDropletsBg from "@/assets/plant-droplets-bg.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,23 +15,6 @@ import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 const faqKeys = [
   { questionKey: "extraits.faq1.q", answerKey: "extraits.faq1.a" },
   { questionKey: "extraits.faq2.q", answerKey: "extraits.faq2.a" },
-  { questionKey: "extraits.faq3.q", answerKey: "extraits.faq3.a" },
-  { questionKey: "extraits.faq4.q", answerKey: "extraits.faq4.a" },
-  { questionKey: "extraits.faq5.q", answerKey: "extraits.faq5.a" },
-  { questionKey: "extraits.faq6.q", answerKey: "extraits.faq6.a" },
-];
-
-const cropKeys = [
-  "extraits.crop1", "extraits.crop2", "extraits.crop3",
-  "extraits.crop4", "extraits.crop5", "extraits.crop6",
-];
-
-const stepKeys = [
-  { titleKey: "extraits.step1.title", descKey: "extraits.step1.desc" },
-  { titleKey: "extraits.step2.title", descKey: "extraits.step2.desc" },
-  { titleKey: "extraits.step3.title", descKey: "extraits.step3.desc" },
-  { titleKey: "extraits.step4.title", descKey: "extraits.step4.desc" },
-  { titleKey: "extraits.step5.title", descKey: "extraits.step5.desc" },
 ];
 
 const ExtraitsNaturels = () => {
@@ -81,6 +64,10 @@ const ExtraitsNaturels = () => {
             </Link>
             <h1 className="text-4xl font-bold text-white">{t('substances.title')}</h1>
             <p className="text-xl text-white/90 mt-2">{t('substances.subtitle')}</p>
+            <span className="inline-flex items-center gap-2 mt-4 text-xs font-semibold uppercase tracking-wide text-white bg-white/15 border border-white/30 px-3 py-1.5 rounded-full">
+              <Construction className="w-3.5 h-3.5" aria-hidden="true" />
+              {t("extraits.notAvailable.badge")}
+            </span>
           </div>
         </header>
 
@@ -90,18 +77,10 @@ const ExtraitsNaturels = () => {
               <h2 className="text-2xl font-bold text-primary mb-2">{t("extraits.heading")}</h2>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">{t("extraits.subheading")}</p>
             </div>
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
+            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-10 max-w-2xl mx-auto">
               <p className="text-base text-foreground leading-relaxed">
                 <strong>{t("extraits.howItWorks.title")}</strong> {t("extraits.howItWorks.desc")}
               </p>
-            </div>
-            <div className="text-center mb-10">
-              <Button asChild variant="outline">
-                <Link to="/ressources/fiches-techniques/biopesticides">
-                  {t('techsheet.cta.viewSheet')}
-                  <ArrowRight className="w-4 h-4 ml-1.5" />
-                </Link>
-              </Button>
             </div>
             <AdvantageGrid
               title={t("extraits.whyChoose.title")}
@@ -143,65 +122,6 @@ const ExtraitsNaturels = () => {
                 <p className="text-base text-muted-foreground">{t('substances.tech.step3.desc')}</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t("extraits.crops.title")}</h2>
-            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-              {t("extraits.crops.subtitle")}
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {cropKeys.map((key) => (
-                <div key={key} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-foreground">{t(key)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10">{t("extraits.howto.title")}</h2>
-            <div className="space-y-6">
-              {stepKeys.map(({ titleKey, descKey }, i) => (
-                <div key={i} className="flex gap-5">
-                  <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
-                    {i + 1}
-                  </div>
-                  <div className="pt-1">
-                    <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
-                    <p className="text-muted-foreground">{t(descKey)}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("extraits.results.title")}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">80–95%</div>
-                <div className="text-sm text-muted-foreground">{t("extraits.results.stat1.label")}</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">7–14j</div>
-                <div className="text-sm text-muted-foreground">{t("extraits.results.stat2.label")}</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">{t("extraits.results.stat3.value")}</div>
-                <div className="text-sm text-muted-foreground">{t("extraits.results.stat3.label")}</div>
-              </div>
-            </div>
-            <p className="text-xs text-muted-foreground text-center mt-4">
-              {t("extraits.results.disclaimer")}
-            </p>
           </div>
         </section>
 

@@ -18,7 +18,7 @@ const challenges = [
   },
   {
     icon: Sprout,
-    stat: "5 500",
+    stat: "150",
     titleKey: "problem.challenge3.title",
     descKey: "problem.challenge3.desc",
   },

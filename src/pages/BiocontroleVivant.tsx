@@ -6,7 +6,6 @@ import aphidImage from "@/assets/Pucerons.jpg";
 import pyraleImage from "@/assets/Chenille ravageuse.webp";
 import cochenillesImage from "@/assets/Cochenille.webp";
 import aleurodeImage from "@/assets/aleurode.jpg";
-import logoAb from "@/assets/logo-ab.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -19,12 +18,12 @@ import { faqJsonLd, serviceJsonLd } from "@/lib/schema";
 const faqKeys = [
   { questionKey: "bv.faq1.q", answerKey: "bv.faq1.a" },
   { questionKey: "bv.faq2.q", answerKey: "bv.faq2.a" },
-  { questionKey: "bv.faq3.q", answerKey: "bv.faq3.a" },
   { questionKey: "bv.faq4.q", answerKey: "bv.faq4.a" },
   { questionKey: "bv.faq5.q", answerKey: "bv.faq5.a" },
+  { questionKey: "bv.faq6.q", answerKey: "bv.faq6.a" },
 ];
 
-const cropKeys = ["bv.crop1", "bv.crop2", "bv.crop3", "bv.crop4", "bv.crop5", "bv.crop6"];
+const cropKeys = ["bv.crop1", "bv.crop3", "bv.crop4", "bv.crop5", "bv.crop6"];
 
 const stepKeys = [
   { titleKey: "bv.step1.title", descKey: "bv.step1.desc" },
@@ -103,11 +102,11 @@ const BiocontroleVivant = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { img: aphidImage, alt: t('biocontrole.pest1.title'), title: t('biocontrole.pest1.title'), desc: t('biocontrole.pest1.desc') },
-                { img: pyraleImage, alt: t('biocontrole.pest2.title'), title: t('biocontrole.pest2.title'), desc: t('biocontrole.pest2.desc') },
-                { img: cochenillesImage, alt: t('biocontrole.pest3.title'), title: t('biocontrole.pest3.title'), desc: t('biocontrole.pest3.desc') },
-                { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title'), desc: t('biocontrole.pest4.desc') },
-              ].map(({ img, alt, title, desc }) => (
+                { img: aphidImage, alt: t('biocontrole.pest1.title'), title: t('biocontrole.pest1.title') },
+                { img: pyraleImage, alt: t('biocontrole.pest2.title'), title: t('biocontrole.pest2.title') },
+                { img: cochenillesImage, alt: t('biocontrole.pest3.title'), title: t('biocontrole.pest3.title') },
+                { img: aleurodeImage, alt: t('biocontrole.pest4.title'), title: t('biocontrole.pest4.title') },
+              ].map(({ img, alt, title }) => (
                 <div key={title} className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl text-center">
                   <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-3">{t("bv.targetPest")}</p>
                   <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-4">
@@ -122,8 +121,7 @@ const BiocontroleVivant = () => {
                       <ShieldCheck className="w-4 h-4 text-primary-foreground" />
                     </span>
                   </div>
-                  <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{title}</h3>
-                  <p className="text-xs text-muted-foreground mb-3">{desc}</p>
+                  <h3 className="text-base md:text-lg font-bold text-foreground mb-3">{title}</h3>
                   <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2.5 py-1 rounded-full">
                     <ShieldCheck className="w-3 h-3" aria-hidden="true" />
                     {t("bv.neutralized")}
@@ -141,18 +139,7 @@ const BiocontroleVivant = () => {
               advantages={[
                 { icon: Leaf, title: t('biocontrole.adv1.title'), description: t('biocontrole.adv1.desc') },
                 { icon: Target, title: t('biocontrole.adv2.title'), description: t('biocontrole.adv2.desc') },
-                {
-                  icon: BadgeCheck,
-                  title: t('biocontrole.adv4.title'),
-                  description: t('biocontrole.adv4.desc'),
-                  badge: (
-                    <img
-                      src={logoAb}
-                      alt={t("alt.logoAB")}
-                      className="h-6 w-6 flex-shrink-0 object-contain"
-                    />
-                  ),
-                },
+                { icon: BadgeCheck, title: t('biocontrole.adv4.title'), description: t('biocontrole.adv4.desc') },
                 { icon: Recycle, title: t('biocontrole.adv3.title'), description: t('biocontrole.adv3.desc') },
               ]}
             />
@@ -179,11 +166,7 @@ const BiocontroleVivant = () => {
         <section className="py-10 px-4 sm:px-6 lg:px-8 bg-primary/5">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-xl font-bold text-center text-foreground mb-6">{t("bv.results.title")}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">70–90%</div>
-                <div className="text-sm text-muted-foreground">{t("bv.results.stat1.label")}</div>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">48–72h</div>
                 <div className="text-sm text-muted-foreground">{t("bv.results.stat2.label")}</div>
