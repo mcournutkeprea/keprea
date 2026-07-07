@@ -36,7 +36,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white leading-tight tracking-tight mb-5">
+          <h1 className="text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white leading-tight tracking-tight mb-5">
             {t('hero.title')}
           </h1>
 
@@ -68,7 +68,11 @@ const Hero = () => {
               <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[190px] leading-tight">{t('hero.stat2.label')}</div>
             </div>
             <div className="border-l border-white/20 pl-8">
-              <div className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">{t('hero.stat3.value')}</div>
+              <div className="text-xl md:text-2xl font-bold whitespace-nowrap">
+                <span style={{ color: '#0055A4' }}>Made</span>
+                <span className="text-white"> in </span>
+                <span style={{ color: '#EF4135' }}>France</span>
+              </div>
               <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[160px] leading-tight">{t('hero.stat3.label')}</div>
             </div>
           </div>

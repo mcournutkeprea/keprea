@@ -120,13 +120,6 @@ const translations: Translations = {
     pt: 'soluções em desenvolvimento, 5 já no mercado',
     de: 'Lösungen in Entwicklung, davon 5 bereits am Markt'
   },
-  'hero.stat3.value': {
-    fr: 'Fabriqué en France',
-    en: 'Made in France',
-    es: 'Made in France',
-    pt: 'Made in France',
-    de: 'Made in France'
-  },
   'hero.stat3.label': {
     fr: 'Origine',
     en: 'Origin',
