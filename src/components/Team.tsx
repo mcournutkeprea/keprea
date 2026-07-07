@@ -9,7 +9,7 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   { name: "Alexandre Pernot", roleKey: "team.role.alexandre" },
-  { name: "Antoine Lescouet", roleKey: "team.role.antoine" },
+  { name: "Antoine Hubert", roleKey: "team.role.antoine" },
   { name: "Béatrice Vassy", roleKey: "team.role.beatrice" },
   { name: "Emilien Bohuon", roleKey: "team.role.emilien" },
   { name: "Guillaume Daoulas", roleKey: "team.role.guillaume" },
