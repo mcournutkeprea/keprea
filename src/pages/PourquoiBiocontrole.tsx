@@ -230,7 +230,7 @@ const PourquoiBiocontrole = () => {
             {europeStats.map((item, i) => (
               <div key={i} className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
                 <div className="text-3xl font-bold text-primary mb-2">{item.value}</div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
               </div>
             ))}
           </div>
