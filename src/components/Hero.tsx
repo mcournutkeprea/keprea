@@ -69,9 +69,10 @@ const Hero = () => {
             </div>
             <div className="border-l border-white/20 pl-8">
               <div className="text-xl md:text-2xl font-bold whitespace-nowrap">
-                <span style={{ color: '#0055A4' }}>Made</span>
-                <span className="text-white"> in </span>
-                <span style={{ color: '#EF4135' }}>France</span>
+                <span className="text-white">Made in </span>
+                <span style={{ color: '#0055A4' }}>Fr</span>
+                <span className="text-white">an</span>
+                <span style={{ color: '#EF4135' }}>ce</span>
               </div>
               <div className="text-xs text-white/50 uppercase tracking-widest mt-0.5 max-w-[160px] leading-tight">{t('hero.stat3.label')}</div>
             </div>
