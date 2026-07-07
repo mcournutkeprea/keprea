@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState, type RefObject } from "react";
 import { Head } from "vite-react-ssg";
 import { Leaf, ShieldCheck, FlaskConical, TrendingUp, Bug, Sprout, Award, Microscope, Feather, TestTube, Scale, Tractor } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GradientCTA from "@/components/GradientCTA";
+import PageHero from "@/components/PageHero";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { faqJsonLd, articleJsonLd } from "@/lib/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useInView } from "@/hooks/useInView";
+import coccinelleImage from "@/assets/coccinelle-jardin.jpg";
 
 const franceStats = [
   { value: "-50 %", descKey: "pourquoi.franceStat1.desc" },
@@ -38,6 +41,7 @@ const PourquoiBiocontrole = () => {
     question: t(questionKey),
     answer: t(answerKey),
   }));
+  const { ref: defRef, inView: defVisible } = useInView(0.15);
 
   return (
   <div className="min-h-screen bg-background flex flex-col">
@@ -75,28 +79,42 @@ const PourquoiBiocontrole = () => {
     <Navigation />
 
     <main className="flex-1 pt-20">
-      {/* Hero */}
-      <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("pourquoi.hero.title")}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            {t("pourquoi.hero.lead")}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("pourquoi.hero.eyebrow")}
+        title={t("pourquoi.hero.title")}
+        lead={t("pourquoi.hero.lead")}
+        stats={[
+          { value: "-50 %", label: t("pourquoi.hero.stat1.label") },
+          { value: "770", label: t("pourquoi.hero.stat2.label") },
+          { value: "1,6 Md€", label: t("pourquoi.hero.stat3.label") },
+        ]}
+      />
 
       {/* Définition */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
+          <div
+            ref={defRef as RefObject<HTMLDivElement>}
+            className={`grid lg:grid-cols-[1fr_1.4fr] gap-8 items-center mb-10 reveal${defVisible ? " is-visible" : ""}`}
+          >
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-primary/20 order-1 lg:order-none">
+              <img
+                src={coccinelleImage}
+                alt={t("pourquoi.def.image.alt")}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">
+                {t("pourquoi.def.title")}
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {t("pourquoi.def.intro")}
+              </p>
+            </div>
+          </div>
           <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              {t("pourquoi.def.title")}
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              {t("pourquoi.def.intro")}
-            </p>
             <div className="grid sm:grid-cols-2 gap-6 mb-6">
               <div className="bg-background rounded-xl p-5 border border-border">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-primary/70 mb-2">{t("pourquoi.def.france.title")}</h3>

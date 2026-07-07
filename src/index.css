@@ -136,6 +136,7 @@ All colors MUST be HSL.
   h1, h2, h3 {
     text-wrap: balance;
     letter-spacing: -0.025em;
+    font-family: 'Outfit', 'Poppins', sans-serif;
   }
 
   button:active,

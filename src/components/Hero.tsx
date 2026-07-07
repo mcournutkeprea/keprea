@@ -69,7 +69,7 @@ const Hero = () => {
             </div>
             <div className="border-l border-white/20 pl-8">
               <div className="text-xl md:text-2xl font-bold whitespace-nowrap">
-                <span className="text-white">Fabriqué en </span>
+                <span className="text-white">Made in </span>
                 <span style={{ color: '#0055A4' }}>Fr</span>
                 <span className="text-white">an</span>
                 <span style={{ color: '#EF4135' }}>ce</span>

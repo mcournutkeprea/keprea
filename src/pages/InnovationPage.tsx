@@ -6,6 +6,7 @@ import GradientCTA from "@/components/GradientCTA";
 import { Leaf, Shield, Zap } from "lucide-react";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
+import biostimulantsConcept from "@/assets/biostimulants-concept.jpg";
 
 const challenges = [
   { titleKey: "innovationpage.challenge1.title", textKey: "innovationpage.challenge1.text" },
@@ -65,16 +66,27 @@ const InnovationPage = () => {
         {/* ── Hero ── */}
         <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
-            <div className="reveal max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-                {t("innovationpage.hero.eyebrow")}
-              </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.05] mb-6">
-                {t("innovationpage.hero.title")}
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                {t("innovationpage.hero.lead")}
-              </p>
+            <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-14 items-center">
+              <div className="reveal">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                  {t("innovationpage.hero.eyebrow")}
+                </p>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.05] mb-6">
+                  {t("innovationpage.hero.title")}
+                </h1>
+                <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+                  {t("innovationpage.hero.lead")}
+                </p>
+              </div>
+
+              <div className="reveal reveal-delay-1 rounded-2xl overflow-hidden border-2 border-primary/15 aspect-[4/3] shadow-sm">
+                <img
+                  src={biostimulantsConcept}
+                  alt={t("innovationpage.hero.image.alt")}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              </div>
             </div>
 
             {/* Stats inline */}

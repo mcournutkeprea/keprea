@@ -29,7 +29,7 @@ const translations: Translations = {
     de: 'Innovation'
   },
   'nav.production': {
-    fr: 'Notre site de production',
+    fr: 'Notre biofabrique',
     en: 'Our production site',
     es: 'Nuestro sitio de producción',
     pt: 'Nosso local de produção',
@@ -413,7 +413,7 @@ const translations: Translations = {
   },
   // Production section
   'production.title': {
-    fr: 'Notre site de production',
+    fr: 'Notre biofabrique',
     en: 'Our production site',
     es: 'Nuestro sitio de producción',
     pt: 'Nosso local de produção',
@@ -1857,6 +1857,13 @@ const translations: Translations = {
     pt: 'Ver o nosso local de produção',
     de: 'Unseren Produktionsstandort ansehen'
   },
+  'production.site.mapCaption': {
+    fr: 'Notre site de production, à Damparis (Jura)',
+    en: 'Our production site, in Damparis (Jura, France)',
+    es: 'Nuestro sitio de producción, en Damparis (Jura, Francia)',
+    pt: 'O nosso local de produção, em Damparis (Jura, França)',
+    de: 'Unser Produktionsstandort in Damparis (Jura, Frankreich)'
+  },
   // About — homepage hardcoded strings
   'about.eyebrow': {
     fr: 'Qui sommes-nous ?',
@@ -2345,7 +2352,7 @@ const translations: Translations = {
     de: 'Unsere Produktion'
   },
   'notreproduction.hero.lead': {
-    fr: 'De la collecte de co-produits d\'insectes à la formulation finale : un process maîtrisé, situé en France.',
+    fr: 'De l\'élevage et la collecte de co-produits d\'insectes à la formulation finale : un process maîtrisé, situé en France.',
     en: 'From the collection of insect co-products to final formulation: a fully controlled process, based in France.',
     es: 'Desde la recogida de subproductos de insectos hasta la formulación final: un proceso totalmente controlado, ubicado en Francia.',
     pt: 'Da recolha de coprodutos de insetos até à formulação final: um processo totalmente controlado, situado em França.',
@@ -2780,28 +2787,28 @@ const translations: Translations = {
     fr: 'Responsable de production', en: 'Production Manager', es: 'Responsable de producción', pt: 'Responsável de produção', de: 'Produktionsleiter'
   },
   'team.role.antoine': {
-    fr: 'Co-fondateur', en: 'Co-founder', es: 'Cofundador', pt: 'Cofundador', de: 'Mitgründer'
+    fr: 'Co-fondateur · Agriculteur (fruit et légumes, pisciculture)', en: 'Co-founder · Farmer (fruit and vegetables, fish farming)', es: 'Cofundador · Agricultor (frutas y verduras, piscicultura)', pt: 'Cofundador · Agricultor (frutas e legumes, piscicultura)', de: 'Mitgründer · Landwirt (Obst und Gemüse, Fischzucht)'
   },
   'team.role.beatrice': {
-    fr: 'Présidente & CFO', en: 'President & CFO', es: 'Presidenta y CFO', pt: 'Presidente e CFO', de: 'Präsidentin & CFO'
+    fr: 'Présidente & CFO · Co-fondatrice', en: 'President & CFO · Co-founder', es: 'Presidenta y CFO · Cofundadora', pt: 'Presidente e CFO · Cofundadora', de: 'Präsidentin & CFO · Mitgründerin'
   },
   'team.role.emilien': {
-    fr: 'Responsable R&D Biostimulants', en: 'Head of R&D Biostimulants', es: 'Responsable de I+D Bioestimulantes', pt: 'Responsável de I&D Bioestimulantes', de: 'Leiter F&E Biostimulanzien'
+    fr: 'Responsable R&D Biostimulants · Co-fondateur · Agriculteur (grandes cultures, élevage ovin)', en: 'Head of R&D Biostimulants · Co-founder · Farmer (arable farming, sheep farming)', es: 'Responsable de I+D Bioestimulantes · Cofundador · Agricultor (agricultura extensiva, ganadería ovina)', pt: 'Responsável de I&D Bioestimulantes · Cofundador · Agricultor (agricultura extensiva, criação de ovinos)', de: 'Leiter F&E Biostimulanzien · Mitgründer · Landwirt (Ackerbau, Schafhaltung)'
   },
   'team.role.guillaume': {
-    fr: 'Responsable des ventes', en: 'Head of Sales', es: 'Responsable de ventas', pt: 'Responsável de vendas', de: 'Vertriebsleiter'
+    fr: 'Responsable des ventes · Co-fondateur · Agriculteur (élevage ovin)', en: 'Head of Sales · Co-founder · Farmer (sheep farming)', es: 'Responsable de ventas · Cofundador · Agricultor (ganadería ovina)', pt: 'Responsável de vendas · Cofundador · Agricultor (criação de ovinos)', de: 'Vertriebsleiter · Mitgründer · Landwirt (Schafhaltung)'
   },
   'team.role.isabelle': {
     fr: 'Responsable supply chain et logistique', en: 'Supply Chain and Logistics Manager', es: 'Responsable de cadena de suministro y logística', pt: 'Responsável de cadeia de abastecimento e logística', de: 'Leiterin Supply Chain und Logistik'
   },
   'team.role.julien': {
-    fr: 'Président du comité stratégique', en: 'Chairman of the Strategic Committee', es: 'Presidente del comité estratégico', pt: 'Presidente do comité estratégico', de: 'Vorsitzender des Strategieausschusses'
+    fr: 'Président du comité stratégique · Co-fondateur', en: 'Chairman of the Strategic Committee · Co-founder', es: 'Presidente del comité estratégico · Cofundador', pt: 'Presidente do comité estratégico · Cofundador', de: 'Vorsitzender des Strategieausschusses · Mitgründer'
   },
   'team.role.pascal': {
-    fr: 'Responsable R&D Insectes', en: 'Head of R&D Insects', es: 'Responsable de I+D Insectos', pt: 'Responsável de I&D Insetos', de: 'Leiter F&E Insekten'
+    fr: 'Responsable R&D Insectes · Co-fondateur', en: 'Head of R&D Insects · Co-founder', es: 'Responsable de I+D Insectos · Cofundador', pt: 'Responsável de I&D Insetos · Cofundador', de: 'Leiter F&E Insekten · Mitgründer'
   },
   'team.role.thibault': {
-    fr: 'Responsable des opérations', en: 'Head of Operations', es: 'Responsable de operaciones', pt: 'Responsável de operações', de: 'Leiter Betrieb'
+    fr: 'Responsable des opérations · Co-fondateur', en: 'Head of Operations · Co-founder', es: 'Responsable de operaciones · Cofundador', pt: 'Responsável de operações · Cofundador', de: 'Leiter Betrieb · Mitgründer'
   },
   'team.role.thierry': {
     fr: 'Ingénieur R&D Insectes', en: 'R&D Engineer Insects', es: 'Ingeniero de I+D Insectos', pt: 'Engenheiro de I&D Insetos', de: 'F&E-Ingenieur Insekten'
@@ -2844,6 +2851,13 @@ const translations: Translations = {
     es: 'residuo químico',
     pt: 'resíduo químico',
     de: 'chemische Rückstände'
+  },
+  'innovationpage.hero.image.alt': {
+    fr: 'Concept scientifique des biostimulants issus de substances naturelles d’insectes',
+    en: 'Scientific concept of biostimulants derived from natural insect substances',
+    es: 'Concepto científico de los biostimulantes derivados de sustancias naturales de insectos',
+    pt: 'Conceito científico de biostimulantes derivados de substâncias naturais de insetos',
+    de: 'Wissenschaftliches Konzept von Biostimulanzien aus natürlichen Insektenstoffen'
   },
   'innovationpage.challenges.title': {
     fr: 'Un contexte agricole en mouvement',
@@ -2999,6 +3013,9 @@ const translations: Translations = {
     fr: 'Demander un essai', en: 'Request a trial', es: 'Solicitar un ensayo', pt: 'Pedir um ensaio', de: 'Versuch anfragen'
   },
   // Pourquoi le biocontrôle page
+  'pourquoi.hero.eyebrow': {
+    fr: 'Comprendre le biocontrôle', en: 'Understanding biocontrol', es: 'Comprender el biocontrol', pt: 'Compreender o biocontrole', de: 'Biokontrolle verstehen'
+  },
   'pourquoi.hero.title': {
     fr: 'Pourquoi le Biocontrôle ?', en: 'Why Biocontrol?', es: '¿Por qué el Biocontrol?', pt: 'Por que o Biocontrole?', de: 'Warum Biokontrolle?'
   },
@@ -3008,6 +3025,22 @@ const translations: Translations = {
     es: 'Ante la retirada progresiva de los pesticidas químicos y las crecientes exigencias de las cadenas de suministro y los consumidores, el biocontrol se impone como la respuesta agronómica y económica sostenible.',
     pt: 'Face à retirada progressiva dos pesticidas químicos e às exigências crescentes das cadeias produtivas e dos consumidores, o biocontrole impõe-se como a resposta agronómica e económica sustentável.',
     de: 'Angesichts des schrittweisen Rückzugs chemischer Pestizide und der wachsenden Anforderungen von Wertschöpfungsketten und Verbrauchern etabliert sich die Biokontrolle als nachhaltige agronomische und wirtschaftliche Antwort.'
+  },
+  'pourquoi.hero.stat1.label': {
+    fr: 'Objectif Ecophyto 2030', en: 'Ecophyto 2030 target', es: 'Objetivo Ecophyto 2030', pt: 'Objetivo Ecophyto 2030', de: 'Ziel Ecophyto 2030'
+  },
+  'pourquoi.hero.stat2.label': {
+    fr: 'Solutions homologuées en France', en: 'Approved solutions in France', es: 'Soluciones homologadas en Francia', pt: 'Soluções homologadas em França', de: 'Zugelassene Lösungen in Frankreich'
+  },
+  'pourquoi.hero.stat3.label': {
+    fr: 'Marché européen du biocontrôle', en: 'European biocontrol market', es: 'Mercado europeo del biocontrol', pt: 'Mercado europeu do biocontrole', de: 'Europäischer Biokontrollmarkt'
+  },
+  'pourquoi.def.image.alt': {
+    fr: 'Coccinelle, auxiliaire de biocontrôle, sur une feuille au jardin',
+    en: 'Ladybird, a biocontrol beneficial insect, on a garden leaf',
+    es: 'Mariquita, insecto auxiliar de biocontrol, sobre una hoja en el jardín',
+    pt: 'Joaninha, inseto auxiliar de biocontrole, numa folha no jardim',
+    de: 'Marienkäfer, ein Nützling der Biokontrolle, auf einem Blatt im Garten'
   },
   'pourquoi.def.title': {
     fr: 'Qu\'est-ce que le biocontrôle ?', en: 'What is biocontrol?', es: '¿Qué es el biocontrol?', pt: 'O que é o biocontrole?', de: 'Was ist Biokontrolle?'

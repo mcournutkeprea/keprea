@@ -1,3 +1,4 @@
+import type { RefObject } from "react";
 import { Head } from "vite-react-ssg";
 import { Bug, Archive, FlaskConical, Package, Truck, Users, CheckCircle2 } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -6,6 +7,7 @@ import Production from "@/components/Production";
 import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useInView } from "@/hooks/useInView";
 
 const steps = [
   { icon: Bug, titleKey: "notreproduction.step1.title", descKey: "notreproduction.step1.desc" },
@@ -24,6 +26,8 @@ const bulletKeys = [
 
 const NotreProduction = () => {
   const { t } = useLanguage();
+  const { ref: whyRef, inView: whyVisible } = useInView(0.15);
+  const { ref: stepsRef, inView: stepsVisible } = useInView(0.08);
 
   return (
   <div className="min-h-screen bg-background flex flex-col">
@@ -63,16 +67,39 @@ const NotreProduction = () => {
         ]}
       />
 
-      {/* Pourquoi produire en France */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-3xl">
-          <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              {t("notreproduction.why.title")}
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              {t("notreproduction.why.desc")}
-            </p>
+      {/* Pourquoi un site unique en France — bandeau argumentaire distinct du bloc Production ci-dessous */}
+      <section className="pt-4 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-5xl">
+          <div
+            ref={whyRef as RefObject<HTMLDivElement>}
+            className={`grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-14 items-center reveal${whyVisible ? " is-visible" : ""}`}
+          >
+            <div className="flex lg:flex-col items-center lg:items-start gap-4 lg:gap-1 lg:border-r lg:border-primary/15 lg:pr-14">
+              <div className="text-5xl md:text-6xl font-extrabold tracking-tight text-primary whitespace-nowrap">2h</div>
+              <p className="text-sm text-muted-foreground leading-snug max-w-[14rem]">
+                {t("notreproduction.location.stat2.desc")}
+              </p>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+                {t("notreproduction.location.title")}
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                {t("notreproduction.why.title")}
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                {t("notreproduction.why.desc")}
+              </p>
+              <div className="flex flex-wrap gap-x-6 gap-y-3">
+                {bulletKeys.map((key) => (
+                  <div key={key} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                    <span className="text-sm text-foreground">{t(key)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -88,49 +115,25 @@ const NotreProduction = () => {
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             {t("notreproduction.steps.subtitle")}
           </p>
-          <div className="space-y-6">
-            {steps.map(({ icon: Icon, titleKey, descKey }, i) => (
-              <div key={i} className="flex gap-5">
-                <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5" />
+          <div ref={stepsRef as RefObject<HTMLDivElement>} className="relative">
+            <div className="absolute left-5 top-5 bottom-5 w-px bg-primary/15" aria-hidden="true" />
+            <div className="space-y-8">
+              {steps.map(({ icon: Icon, titleKey, descKey }, i) => (
+                <div
+                  key={i}
+                  className={`relative flex gap-5 reveal${stepsVisible ? " is-visible" : ""}`}
+                  style={{ transitionDelay: stepsVisible ? `${i * 90}ms` : "0ms" }}
+                >
+                  <div className="relative z-10 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5" aria-hidden="true" />
+                  </div>
+                  <div className="pt-1">
+                    <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{t(descKey)}</p>
+                  </div>
                 </div>
-                <div className="pt-1">
-                  <h3 className="font-semibold text-foreground mb-1">{t(titleKey)}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{t(descKey)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Un site d'excellence, en chiffres — suite de la section Production */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary text-center mb-10">
-            {t("notreproduction.location.title")}
-          </p>
-          <div className="grid sm:grid-cols-3 gap-6 mb-10">
-            <div className="bg-background rounded-2xl p-6 text-center border border-border">
-              <div className="text-3xl font-bold text-primary mb-1">3 000 m²</div>
-              <p className="text-sm text-muted-foreground">{t("notreproduction.location.stat1.desc")}</p>
+              ))}
             </div>
-            <div className="bg-background rounded-2xl p-6 text-center border border-border">
-              <div className="text-3xl font-bold text-primary mb-1">2h</div>
-              <p className="text-sm text-muted-foreground">{t("notreproduction.location.stat2.desc")}</p>
-            </div>
-            <div className="bg-background rounded-2xl p-6 text-center border border-border">
-              <div className="text-3xl font-bold text-primary mb-1">6</div>
-              <p className="text-sm text-muted-foreground">{t("notreproduction.location.stat3.desc")}</p>
-            </div>
-          </div>
-          <div className="max-w-2xl mx-auto space-y-3">
-            {bulletKeys.map((key) => (
-              <div key={key} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-foreground">{t(key)}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
