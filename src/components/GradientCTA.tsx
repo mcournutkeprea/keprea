@@ -17,10 +17,10 @@ interface GradientCTAProps {
 }
 
 const primaryClassName =
-  "group inline-flex items-center justify-center gap-3 rounded-full h-12 px-6 text-sm font-semibold bg-primary text-white transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-primary/90";
+  "group inline-flex items-center justify-center gap-3 rounded-full h-12 px-6 text-sm font-semibold bg-primary text-white transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
 
 const secondaryClassName =
-  "inline-flex items-center justify-center rounded-full h-12 px-6 text-sm font-semibold border border-primary/20 text-primary transition-colors duration-200 hover:bg-primary/5";
+  "inline-flex items-center justify-center rounded-full h-12 px-6 text-sm font-semibold border border-primary/20 text-primary transition-colors duration-200 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
 
 const GradientCTA = ({ eyebrow, title, description, primary, secondary }: GradientCTAProps) => {
   const primaryContent = (

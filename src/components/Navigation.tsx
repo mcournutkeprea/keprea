@@ -78,7 +78,7 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.href}
-                  className={`relative text-sm whitespace-nowrap transition-colors duration-200 pb-0.5 ${
+                  className={`relative text-sm whitespace-nowrap transition-colors duration-200 pb-0.5 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                     active
                       ? "text-primary font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
                       : "text-foreground/65 hover:text-foreground font-medium"
@@ -90,7 +90,7 @@ const Navigation = () => {
                 <a
                   key={item.id}
                   href={isHomePage ? `#${item.id}` : `/#${item.id}`}
-                  className="text-sm text-foreground/65 hover:text-foreground font-medium whitespace-nowrap transition-colors duration-200"
+                  className="text-sm text-foreground/65 hover:text-foreground font-medium whitespace-nowrap transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </a>
@@ -170,7 +170,7 @@ const Navigation = () => {
                   <Link
                     key={item.id}
                     to={item.href}
-                    className={`text-base font-medium transition-colors ${
+                    className={`text-base font-medium transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                       isActive(item.href) ? "text-primary font-semibold" : "text-foreground/70 hover:text-foreground"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
@@ -181,7 +181,7 @@ const Navigation = () => {
                   <button
                     key={item.id}
                     onClick={() => handleSectionClick(item.id)}
-                    className="text-base font-medium text-foreground/70 hover:text-foreground text-left transition-colors"
+                    className="text-base font-medium text-foreground/70 hover:text-foreground text-left transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     {item.label}
                   </button>

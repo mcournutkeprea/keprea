@@ -28,37 +28,37 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">{t("footer.nav.title")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.nav.solutions")}
                 </Link>
               </li>
               <li>
-                <Link to="/innovation" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/innovation" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("nav.innovation")}
                 </Link>
               </li>
               <li>
-                <Link to="/notre-production" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/notre-production" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.nav.production")}
                 </Link>
               </li>
               <li>
-                <Link to="/qui-sommes-nous" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/qui-sommes-nous" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.nav.about")}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.nav.contact")}
                 </Link>
               </li>
               <li>
-                <Link to="/ressources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/ressources" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.nav.ressources")}
                 </Link>
               </li>
               <li>
-                <Link to="/pourquoi-le-biocontrole" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/pourquoi-le-biocontrole" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.nav.whyBiocontrol")}
                 </Link>
               </li>
@@ -72,7 +72,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:contact@keprea.com"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   contact@keprea.com
                 </a>
@@ -81,12 +81,12 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">{t("footer.legal.title")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/mentions-legales" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/mentions-legales" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.legal.notice")}
                 </Link>
               </li>
               <li>
-                <Link to="/politique-confidentialite" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/politique-confidentialite" className="text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                   {t("footer.legal.privacy")}
                 </Link>
               </li>

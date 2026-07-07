@@ -84,7 +84,7 @@ const About = ({ teaser = false, showTitle = true }: AboutProps) => {
           <div ref={valuesRef as RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto reveal reveal-delay-2${valuesVisible ? ' is-visible' : ''}`}>
             <Link
               to="/qui-sommes-nous"
-              className="group inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 hover:bg-primary/10 text-primary pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300"
+              className="group inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 hover:bg-primary/10 text-primary pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               {t("about.teaser.link")}
               <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">

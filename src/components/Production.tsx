@@ -102,7 +102,7 @@ const Production = ({ teaser = false }: ProductionProps) => {
                       </div>
                       <Link
                         to="/notre-production"
-                        className="group inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300 w-fit"
+                        className="group inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-5 pr-2 py-2 font-semibold text-sm transition-all duration-300 w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                       >
                         {t("production.teaser.link")}
                         <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">

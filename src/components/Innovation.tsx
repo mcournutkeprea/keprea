@@ -39,7 +39,7 @@ const Innovation = () => {
           </p>
           <Link
             to="/pourquoi-le-biocontrole"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:opacity-80 transition-opacity mt-4"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:opacity-80 transition-opacity mt-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             {t("innovation.link")}
             <span aria-hidden="true">→</span>

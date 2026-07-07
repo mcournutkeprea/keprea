@@ -64,7 +64,7 @@ const SolutionsTeaser = () => {
             </p>
             <Link
               to="/solutions"
-              className="inline-flex items-center justify-between gap-4 h-12 rounded-full bg-primary text-primary-foreground font-semibold text-sm px-5 group transition-all duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-primary/90 active:scale-[0.98]"
+              className="inline-flex items-center justify-between gap-4 h-12 rounded-full bg-primary text-primary-foreground font-semibold text-sm px-5 group transition-all duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-primary/90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               <span>{t("solutionsTeaser.cta")}</span>
               <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-px transition-transform duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
