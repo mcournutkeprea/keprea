@@ -2759,6 +2759,29 @@ const translations: Translations = {
     pt: 'Formulações pensadas para a agricultura biológica (regulamento (UE) 2018/848)',
     de: 'Formulierungen, konzipiert für den ökologischen Landbau (Verordnung (EU) 2018/848)'
   },
+  'quisommesnous.values.eyebrow': {
+    fr: 'Ce qui nous guide', en: 'What guides us', es: 'Lo que nos guía', pt: 'O que nos guia', de: 'Was uns leitet'
+  },
+  'quisommesnous.values.title': {
+    fr: 'Nos valeurs', en: 'Our values', es: 'Nuestros valores', pt: 'Os nossos valores', de: 'Unsere Werte'
+  },
+  'quisommesnous.cta.eyebrow': {
+    fr: 'Envie d\'en savoir plus ?', en: 'Want to know more?', es: '¿Quiere saber más?', pt: 'Quer saber mais?', de: 'Möchten Sie mehr erfahren?'
+  },
+  'quisommesnous.cta.title': {
+    fr: 'Discutons de votre exploitation',
+    en: 'Let\'s talk about your farm',
+    es: 'Hablemos de su explotación',
+    pt: 'Vamos falar sobre a sua exploração',
+    de: 'Sprechen wir über Ihren Betrieb'
+  },
+  'quisommesnous.cta.desc': {
+    fr: 'Notre équipe est à votre écoute pour répondre à vos questions sur nos biosolutions et leur mise en œuvre sur le terrain.',
+    en: 'Our team is here to answer your questions about our biosolutions and their implementation in the field.',
+    es: 'Nuestro equipo está a su disposición para responder a sus preguntas sobre nuestras biosoluciones y su aplicación en el campo.',
+    pt: 'A nossa equipa está disponível para responder às suas perguntas sobre as nossas biosoluções e a sua implementação no terreno.',
+    de: 'Unser Team beantwortet gerne Ihre Fragen zu unseren Biolösungen und deren Einsatz vor Ort.'
+  },
   // Team roles
   'team.role.alexandre': {
     fr: 'Responsable de production', en: 'Production Manager', es: 'Responsable de producción', pt: 'Responsável de produção', de: 'Produktionsleiter'
@@ -2789,9 +2812,6 @@ const translations: Translations = {
   },
   'team.role.thierry': {
     fr: 'Ingénieur R&D Insectes', en: 'R&D Engineer Insects', es: 'Ingeniero de I+D Insectos', pt: 'Engenheiro de I&D Insetos', de: 'F&E-Ingenieur Insekten'
-  },
-  'team.role.valentin': {
-    fr: 'Opérateur de production', en: 'Line Operator', es: 'Operador de producción', pt: 'Operador de produção', de: 'Produktionsmitarbeiter'
   },
   // Innovation page
   'innovationpage.hero.eyebrow': {
