@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
@@ -56,12 +55,6 @@ const Hero = () => {
                 <ArrowRight className="w-4 h-4" />
               </span>
             </button>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/8 hover:bg-white/15 text-white px-5 py-2.5 font-medium text-sm transition-all duration-300"
-            >
-              Demander un essai
-            </Link>
           </div>
 
           {/* Stats — inline with pipe separators, not 3 equal cards */}
