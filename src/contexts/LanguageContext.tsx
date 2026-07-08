@@ -4427,6 +4427,13 @@ const translations: Translations = {
     es: 'Sitio de producción Keprea en Damparis, edificio de cría y transformación',
     pt: 'Local de produção Keprea em Damparis, edifício de criação e transformação',
     de: 'Keprea-Produktionsstandort in Damparis, Zucht- und Verarbeitungsgebäude'
+  },
+  'alt.productionLine': {
+    fr: 'Ligne de production Keprea : plateforme industrielle de séparation et de transformation',
+    en: 'Keprea production line: industrial separation and processing platform',
+    es: 'Línea de producción Keprea: plataforma industrial de separación y transformación',
+    pt: 'Linha de produção Keprea: plataforma industrial de separação e transformação',
+    de: 'Keprea-Produktionslinie: industrielle Trenn- und Verarbeitungsplattform'
   }
 };
 

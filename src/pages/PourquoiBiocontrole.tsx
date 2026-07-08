@@ -98,13 +98,23 @@ const PourquoiBiocontrole = () => {
             ref={defRef as RefObject<HTMLDivElement>}
             className={`grid lg:grid-cols-[1fr_1.4fr] gap-8 items-center mb-10 reveal${defVisible ? " is-visible" : ""}`}
           >
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-primary/20 order-1 lg:order-none">
-              <img
-                src={coccinelleImage}
-                alt={t("pourquoi.def.image.alt")}
-                className="w-full h-full object-cover"
-                loading="lazy"
+            <div className="relative order-1 lg:order-none">
+              {/* Halo organique pâle — intègre l'image au fond plutôt que de la poser à plat */}
+              <div
+                className="absolute -inset-8 -z-10 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(circle at 50% 45%, hsl(var(--primary)/0.14) 0%, hsl(var(--primary)/0.05) 45%, transparent 72%)',
+                }}
+                aria-hidden="true"
               />
+              <div className="aspect-[4/3] rounded-[1.75rem] overflow-hidden border border-border/60 shadow-[0_30px_60px_-18px_rgba(0,0,0,0.14)]">
+                <img
+                  src={coccinelleImage}
+                  alt={t("pourquoi.def.image.alt")}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">

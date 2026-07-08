@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import type { RefObject } from "react";
 import { Head } from "vite-react-ssg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -6,6 +7,7 @@ import GradientCTA from "@/components/GradientCTA";
 import { Leaf, Shield, Zap, Scale, Bug, BadgeCheck } from "lucide-react";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useInView } from "@/hooks/useInView";
 import innovationHeroImage from "@/assets/Innovation.jpg";
 import innovationHeroVideo from "@/assets/Innovation insecte.mp4";
 
@@ -23,6 +25,13 @@ const pillar3Stats = [
 
 const InnovationPage = () => {
   const { t } = useLanguage();
+  const { ref: statsRef, inView: statsVisible } = useInView(0.2);
+
+  const heroStats = [
+    { value: "400 M", label: t("innovationpage.hero.stat1.label") },
+    { value: "84%", label: t("innovationpage.hero.stat2.label") },
+    { value: "0", label: t("innovationpage.hero.stat3.label") },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -62,65 +71,85 @@ const InnovationPage = () => {
       </Head>
       <Navigation />
 
-      <main className="flex-1 pt-20">
+      <main className="flex-1">
 
-        {/* ── Hero ── */}
-        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid lg:grid-cols-[1fr_1.05fr] gap-10 lg:gap-16 items-start">
-              <div className="reveal">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-                  {t("innovationpage.hero.eyebrow")}
-                </p>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.05] mb-6">
-                  {t("innovationpage.hero.title")}
-                </h1>
-                <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                  {t("innovationpage.hero.lead")}
-                </p>
-              </div>
+        {/* ── Hero — vidéo plein cadre, contenu ancré en bas ── */}
+        <section className="relative h-[58vh] min-h-[440px] max-h-[620px] flex items-end overflow-hidden">
+          <div className="absolute inset-0">
+            <video
+              className="w-full h-full object-cover object-[70%_center] animate-ken-burns"
+              src={innovationHeroVideo}
+              poster={innovationHeroImage}
+              aria-label={t("innovationpage.hero.image.alt")}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+            {/* Voile sombre pour la lisibilité du texte */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/15" aria-hidden="true" />
+            {/* Teinte verte très subtile, cohérente avec l'identité de marque */}
+            <div
+              className="absolute inset-0"
+              style={{ background: 'radial-gradient(ellipse 70% 55% at 15% 100%, hsl(var(--primary)/0.28) 0%, transparent 65%)' }}
+              aria-hidden="true"
+            />
+          </div>
 
-              <div className="reveal reveal-delay-1 relative lg:mt-8">
-                {/* Halo organique pâle — intègre l'image au fond plutôt que de la poser à plat */}
-                <div
-                  className="absolute -inset-10 -z-10 pointer-events-none"
-                  style={{
-                    background: 'radial-gradient(circle at 50% 45%, hsl(var(--primary)/0.11) 0%, hsl(var(--primary)/0.04) 45%, transparent 72%)',
-                  }}
-                  aria-hidden="true"
-                />
-                <div className="rounded-[1.75rem] overflow-hidden border border-border/60 aspect-[3/2] shadow-[0_30px_60px_-18px_rgba(0,0,0,0.14)]">
-                  <video
-                    className="w-full h-full object-cover object-[70%_center]"
-                    src={innovationHeroVideo}
-                    poster={innovationHeroImage}
-                    aria-label={t("innovationpage.hero.image.alt")}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
-                </div>
-              </div>
+          <div className="relative z-10 w-full container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
+            <div className="max-w-2xl">
+              <span
+                className="inline-flex items-center rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-semibold text-white/85 mb-5"
+                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.22)' }}
+              >
+                {t("innovationpage.hero.eyebrow")}
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight tracking-tight mb-5">
+                {t("innovationpage.hero.title")}
+              </h1>
+              <p className="text-lg text-white/85 max-w-xl leading-relaxed">
+                {t("innovationpage.hero.lead")}
+              </p>
             </div>
+          </div>
+        </section>
 
-            {/* Stats inline */}
-            <div className="reveal reveal-delay-1 flex flex-wrap gap-10 mt-12 pt-12 border-t border-border/50">
-              <div>
-                <span className="text-4xl font-extrabold tracking-tight text-primary tabular-nums">400 M</span>
-                <p className="text-sm text-muted-foreground mt-1">{t("innovationpage.hero.stat1.label")}</p>
-              </div>
-              <div className="w-px bg-border/60 hidden sm:block" />
-              <div>
-                <span className="text-4xl font-extrabold tracking-tight text-primary tabular-nums">84%</span>
-                <p className="text-sm text-muted-foreground mt-1">{t("innovationpage.hero.stat2.label")}</p>
-              </div>
-              <div className="w-px bg-border/60 hidden sm:block" />
-              <div>
-                <span className="text-4xl font-extrabold tracking-tight text-primary tabular-nums">0</span>
-                <p className="text-sm text-muted-foreground mt-1">{t("innovationpage.hero.stat3.label")}</p>
-              </div>
+        {/* Chiffres clés — chevauchent le bas du hero et amorcent une transition douce */}
+        <section className="relative bg-gradient-to-b from-primary/[0.07] to-transparent px-4 sm:px-6 lg:px-8 pb-10 md:pb-14">
+          <div className="container mx-auto max-w-6xl">
+            <div
+              ref={statsRef as RefObject<HTMLDivElement>}
+              className={`-mt-12 md:-mt-16 relative z-20 grid grid-cols-3 gap-3 md:gap-5 reveal${statsVisible ? " is-visible" : ""}`}
+            >
+              {heroStats.map((stat, i) => (
+                <div
+                  key={i}
+                  className="p-[3px] rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(145deg, hsl(var(--primary)/0.22) 0%, hsl(var(--primary)/0.06) 100%)',
+                    boxShadow: '0 12px 34px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.06)',
+                  }}
+                >
+                  <div
+                    className="rounded-[calc(1rem-3px)] px-4 py-5 md:px-6 md:py-6 text-center md:text-left"
+                    style={{
+                      background: 'hsl(var(--background))',
+                      boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.92)',
+                    }}
+                  >
+                    <div
+                      className="text-xl md:text-3xl font-extrabold tracking-tight tabular-nums leading-none"
+                      style={{ color: 'hsl(var(--primary))' }}
+                    >
+                      {stat.value}
+                    </div>
+                    <div className="text-[11px] md:text-sm text-muted-foreground leading-snug mt-1.5 md:mt-2">
+                      {stat.label}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

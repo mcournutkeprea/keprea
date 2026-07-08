@@ -81,7 +81,7 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solutions" className="py-28 px-4 sm:px-6 lg:px-8">
+    <section id="solutions" className="pt-10 md:pt-12 pb-28 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
 
         <div
