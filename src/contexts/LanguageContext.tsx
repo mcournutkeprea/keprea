@@ -2782,6 +2782,20 @@ const translations: Translations = {
     pt: 'A nossa equipa está disponível para responder às suas perguntas sobre as nossas biosoluções e a sua implementação no terreno.',
     de: 'Unser Team beantwortet gerne Ihre Fragen zu unseren Biolösungen und deren Einsatz vor Ort.'
   },
+  'quisommesnous.press.title': {
+    fr: 'Contact presse',
+    en: 'Press contact',
+    es: 'Contacto de prensa',
+    pt: 'Contacto de imprensa',
+    de: 'Pressekontakt'
+  },
+  'quisommesnous.press.agency': {
+    fr: 'Scopus Communication',
+    en: 'Scopus Communication',
+    es: 'Scopus Communication',
+    pt: 'Scopus Communication',
+    de: 'Scopus Communication'
+  },
   // Team roles
   'team.role.alexandre': {
     fr: 'Responsable de production', en: 'Production Manager', es: 'Responsable de producción', pt: 'Responsável de produção', de: 'Produktionsleiter'

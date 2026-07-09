@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
 import { Head } from "vite-react-ssg";
-import { Rocket, Factory, Layers, BadgeCheck, Leaf, FlaskConical, Users, Target } from "lucide-react";
+import { Rocket, Factory, Layers, BadgeCheck, Leaf, FlaskConical, Users, Target, Mail, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Team from "@/components/Team";
@@ -9,6 +9,11 @@ import GradientCTA from "@/components/GradientCTA";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
+
+const pressContacts = [
+  { name: "Candide Louniangou", email: "candide.louniangou@scopuscommunication.fr", phoneDisplay: "07 63 85 14 46", phoneHref: "+33763851446" },
+  { name: "Sylvain Camus", email: "sylvain.camus@scopuscommunication.fr", phoneDisplay: "06 12 16 38 60", phoneHref: "+33612163860" },
+];
 
 const timelineSteps = [
   { icon: Rocket, key: "quisommesnous.milestone1" },
@@ -238,6 +243,41 @@ const QuiSommesNous = () => {
         primary={{ label: t("contactcta.primary"), to: "/contact" }}
         secondary={{ label: t("innovationpage.cta.primary"), to: "/solutions" }}
       />
+
+      {/* Contact presse */}
+      <section className="pb-16 md:pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="rounded-2xl border border-border bg-muted/30 px-6 sm:px-8 py-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-2">
+              {t("quisommesnous.press.title")}
+            </p>
+            <p className="text-sm font-semibold text-foreground mb-5">
+              {t("quisommesnous.press.agency")}
+            </p>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {pressContacts.map((contact) => (
+                <div key={contact.email}>
+                  <p className="text-sm font-medium text-foreground mb-1.5">{contact.name}</p>
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  >
+                    <Mail className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+                    {contact.email}
+                  </a>
+                  <a
+                    href={`tel:${contact.phoneHref}`}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 mt-1"
+                  >
+                    <Phone className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+                    {contact.phoneDisplay}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
     <Footer />
