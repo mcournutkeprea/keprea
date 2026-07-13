@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -46,15 +47,15 @@ const Hero = () => {
 
           {/* CTA group */}
           <div className="flex flex-wrap items-center gap-3">
-            <button
-              onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}
+            <Link
+              to="/solutions"
               className="group inline-flex items-center gap-3 rounded-full bg-primary hover:bg-primary/90 text-white pl-6 pr-2 py-2 font-semibold text-sm transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/40"
             >
               {t('hero.cta')}
               <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                 <ArrowRight className="w-4 h-4" />
               </span>
-            </button>
+            </Link>
           </div>
 
           {/* Stats — inline with pipe separators, not 3 equal cards */}
