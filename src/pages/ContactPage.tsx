@@ -41,8 +41,8 @@ const ContactPage = () => {
           name="description"
           content="Contactez l'équipe Keprea pour un conseil sur nos biosolutions agricoles, un partenariat ou toute question. Basés à Dole, Jura, réponse sous 48h."
         />
-        <link rel="canonical" href="https://keprea.vercel.app/contact" />
-        <meta property="og:url" content="https://keprea.vercel.app/contact" />
+        <link rel="canonical" href="https://keprea.com/contact" />
+        <meta property="og:url" content="https://keprea.com/contact" />
         <meta property="og:title" content="Contactez Keprea | Biosolutions Agricoles à Dole (39)" />
         <meta name="twitter:title" content="Contactez Keprea | Biosolutions Agricoles à Dole (39)" />
         <meta

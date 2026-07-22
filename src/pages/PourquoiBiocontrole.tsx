@@ -52,8 +52,8 @@ const PourquoiBiocontrole = () => {
         name="description"
         content="Comprendre le biocontrôle : cadre réglementaire français et européen, alternatives naturelles aux produits phytosanitaires pour protéger vos cultures."
       />
-      <link rel="canonical" href="https://keprea.vercel.app/pourquoi-le-biocontrole" />
-      <meta property="og:url" content="https://keprea.vercel.app/pourquoi-le-biocontrole" />
+      <link rel="canonical" href="https://keprea.com/pourquoi-le-biocontrole" />
+      <meta property="og:url" content="https://keprea.com/pourquoi-le-biocontrole" />
       <meta property="og:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea" />
       <meta name="twitter:title" content="Pourquoi le Biocontrôle ? | Agriculture Durable : Keprea" />
       <meta

@@ -23,8 +23,8 @@ const FichesTechniques = () => {
           name="description"
           content="Fiches techniques des produits Keprea : composition, dose d'application, cultures cibles et compatibilités pour Boostea13, Soilea110, Fertea432 et nos gammes de biocontrôle."
         />
-        <link rel="canonical" href="https://keprea.vercel.app/ressources/fiches-techniques" />
-        <meta property="og:url" content="https://keprea.vercel.app/ressources/fiches-techniques" />
+        <link rel="canonical" href="https://keprea.com/ressources/fiches-techniques" />
+        <meta property="og:url" content="https://keprea.com/ressources/fiches-techniques" />
         <meta property="og:title" content="Fiches Techniques Produits Keprea" />
         <meta name="twitter:title" content="Fiches Techniques Produits Keprea" />
         <script type="application/ld+json">{breadcrumbJsonLd([

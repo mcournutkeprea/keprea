@@ -52,8 +52,8 @@ const InnovationPage = () => {
           name="description"
           content="Keprea exploite 400 millions d'années de co-évolution entre insectes et plantes pour créer des biosolutions agricoles uniques : sans résidu chimique, efficaces, tracées depuis le Jura."
         />
-        <link rel="canonical" href="https://keprea.vercel.app/innovation" />
-        <meta property="og:url" content="https://keprea.vercel.app/innovation" />
+        <link rel="canonical" href="https://keprea.com/innovation" />
+        <meta property="og:url" content="https://keprea.com/innovation" />
         <meta property="og:title" content="Notre Innovation - Biosolutions à base d'insectes | Keprea" />
         <meta name="twitter:title" content="Notre Innovation - Biosolutions à base d'insectes | Keprea" />
         <meta

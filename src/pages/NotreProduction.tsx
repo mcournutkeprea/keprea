@@ -44,8 +44,8 @@ const NotreProduction = () => {
         name="description"
         content="Découvrez notre process de production de biosolutions à Dole (39) : élevage d'insectes, extraction des principes actifs et formulation de biopesticides et biofertilisants."
       />
-      <link rel="canonical" href="https://keprea.vercel.app/notre-production" />
-      <meta property="og:url" content="https://keprea.vercel.app/notre-production" />
+      <link rel="canonical" href="https://keprea.com/notre-production" />
+      <meta property="og:url" content="https://keprea.com/notre-production" />
       <meta property="og:title" content="Notre Production Keprea | Site de Production à Dole, Jura" />
       <meta name="twitter:title" content="Notre Production Keprea | Site de Production à Dole, Jura" />
       <meta

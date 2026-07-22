@@ -44,8 +44,8 @@ const QuiSommesNous = () => {
         name="description"
         content="Keprea, startup de biosolutions agricoles à Dole (Jura). Découvrez notre équipe d'experts, notre histoire et notre mission : des biosolutions à base d'insectes pour une agriculture durable."
       />
-      <link rel="canonical" href="https://keprea.vercel.app/qui-sommes-nous" />
-      <meta property="og:url" content="https://keprea.vercel.app/qui-sommes-nous" />
+      <link rel="canonical" href="https://keprea.com/qui-sommes-nous" />
+      <meta property="og:url" content="https://keprea.com/qui-sommes-nous" />
       <meta property="og:title" content="Qui sommes-nous ? | Équipe et Mission Keprea" />
       <meta name="twitter:title" content="Qui sommes-nous ? | Équipe et Mission Keprea" />
       <meta

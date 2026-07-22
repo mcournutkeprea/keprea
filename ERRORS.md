@@ -10,6 +10,15 @@
 
 ---
 
+### Audit SEO complet 22/07/2026 — score santé 62/100 (www.keprea.com, prod live)
+- **Statut** : Ouvert — plan complet dans `keprea.com-audit/ACTION-PLAN.md`, détail par catégorie dans `keprea.com-audit/findings/*.md`
+- **Correction Fait (13/07/2026) invalidée en prod** : `schema.ts`/`breadcrumb.ts`/`index.html`/`robots.txt`/`sitemap.xml`/`llms.txt` corrigés en local (`keprea.com`) mais **jamais commités** — `git diff` le confirme, HEAD sert encore `keprea.vercel.app` partout en JSON-LD/canonical/sitemap. Pas un bug d'infra Vercel : juste un commit+push manquant. À corriger en priorité absolue avec le point suivant (même fichiers).
+- **Nouveau — conflit domaine apex/www** : le code cible l'apex `keprea.com` (sans www) comme canonique, mais en prod l'apex redirige en 308 vers `www.keprea.com` (version réellement servie). Choisir une seule variante définitive avant de redéployer le point ci-dessus.
+- **Témoignages agriculteurs réels** : toujours zéro témoignage nominatif (`Testimonials.tsx`/`TrustSection` = stats génériques, pas de preuve sociale) — priorité n°1 du projet, non traitée depuis l'audit du 02/07.
+- Autres findings notables : `/solutions` sans `<h1>` ; image `Solutions Biofertilisant.png` 7,5 Mo non compressée ; 3 pages orphelines absentes du sitemap (`/ressources`, `/ressources/fiches-techniques`, 5 fiches produit) ; meta description vide dupliquée (résidu vite-react-ssg) sur toutes les pages ; claim "publiée dans Nature" imprécis (`Biofertilisant.tsx`, il s'agit de *Scientific Reports*) ; pas de schema `Product` sur les gammes/fiches techniques ; CSP toujours absente (volontaire, cf. entrée 02/07 ci-dessous).
+
+---
+
 ### Retours mail "Relecture site web" 06/07/2026 — points en attente de décision (07/07/2026)
 - **Stat "70-90% de réduction en 14 jours"** (`/solutions/bioprotection`) retirée sans remplacement, faute de source — à réintégrer si une source est fournie.
 - **Contradiction chiffre auxiliaires** : `5500` (confirmé fiable par l'utilisateur le 03/07, voir entrée ci-dessous) remplacé par `150` partout (accueil `Problem.tsx`, `Innovation.tsx`, `InnovationPage.tsx`) sur demande explicite du mail du 06/07 — à confirmer que ce n'est pas une confusion avec un autre chiffre.
@@ -46,7 +55,7 @@ Retiré "Hermetia illucens/vers de farine élevés en France" (`/pourquoi-le-bio
 - ~~Contenu thin : pages produits 523-589 mots (seuil 800), `/ressources` quasi vide~~ — Corrigé (02/07/2026, Phase 3) : 4 pages produits portées à 820-848 mots (FAQ enrichies + FAQPage schema), `/pourquoi-le-biocontrole` porté à 1055 mots (Article+FAQPage schema, stats sourcées Ecophyto/Alliance Biocontrôle), `/qui-sommes-nous` et `/notre-production` portés à 550/510 mots (jalons, chiffres, mission). `/ressources` passé en `noindex, follow` (retiré du sitemap) faute de vrai contenu — à ré-indexer quand du contenu réel existera.
 - ~~~64 Mo de vidéos orphelines dans `public/`~~ — Corrigé (02/07/2026) : `portfolio-video-1/2/3.mp4`, `biocontrol-video.mp4`, `substances-video.mp4` supprimés, ainsi que `ProductsSchema.tsx` (composant mort qui les référençait, jamais importé nulle part). `public/` : 85 Mo → 18 Mo.
 - ~~Footer avec ancres homepage `/#solutions`/`/#production`/`/#about`/`/#contact-form`~~ — Corrigé (02/07/2026) : les 4 liens (+ Innovation) basculés en `<Link>` React Router vers les pages dédiées (`/solutions`, `/notre-production`, `/qui-sommes-nous`, `/contact`), alignés sur Navigation.
-- **⚠️ À REBASCULER AU LANCEMENT keprea.com** : JSON-LD Organization + og:image/twitter:image (`index.html`), les 14 `<link rel="canonical">`/`og:url` par page, `robots.txt` (ligne `Sitemap:`) et `llms.txt` pointent volontairement vers `keprea.vercel.app` en attendant la migration — voir checklist "Déploiement keprea.com" ci-dessous
+- ~~**⚠️ À REBASCULER AU LANCEMENT keprea.com**~~ — **Fait (13/07/2026)** : les 63 références `keprea.vercel.app` (JSON-LD Organization + og:image/twitter:image dans `index.html`, tous les `<link rel="canonical">`/`og:url` par page via `SITE_URL` dans `src/lib/schema.ts` et pages, `robots.txt`, `sitemap.xml`, `llms.txt`) rebasculées sur `https://keprea.com` (sans www, choix utilisateur). `keprea.com` sert désormais le build Vercel (vérifié : plus aucune balise Lovable). **Restant côté infra (hors code)** : (1) régler Vercel pour rediriger `www.keprea.com` → `keprea.com` (aujourd'hui c'est l'inverse) ; (2) Search Console → demander réindexation + resoumettre `sitemap.xml` ; (3) le favicon Lovable dans Google est du cache, se rafraîchit en quelques jours/semaines.
 
 ---
 

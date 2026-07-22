@@ -1,4 +1,4 @@
-const SITE_URL = "https://keprea.vercel.app";
+const SITE_URL = "https://keprea.com";
 
 export interface BreadcrumbItem {
   name: string;
