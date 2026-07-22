@@ -9,8 +9,8 @@ const MentionsLegales = () => {
       <Head>
         <title>Mentions Légales | Keprea</title>
         <meta name="description" content="Mentions légales de Keprea (SAS) : éditeur du site, hébergeur, SIRET, siège social à Mâcon (71)." />
-        <link rel="canonical" href="https://keprea.com/mentions-legales" />
-        <meta property="og:url" content="https://keprea.com/mentions-legales" />
+        <link rel="canonical" href="https://www.keprea.com/mentions-legales" />
+        <meta property="og:url" content="https://www.keprea.com/mentions-legales" />
         <meta property="og:title" content="Mentions Légales | Keprea" />
         <meta name="twitter:title" content="Mentions Légales | Keprea" />
         <meta property="og:description" content="Mentions légales de Keprea (SAS) : éditeur du site, hébergeur, SIRET, siège social à Mâcon (71)." />

@@ -47,8 +47,8 @@ const Biofertilisant = () => {
       <Head>
         <title>Fertea432 : Biofertilisant Keprea | Fertilisation Organique NPK</title>
         <meta name="description" content="Fertea432, biofertilisant à base d'insectes Keprea : 4% P, 3% N, 2% K, 85% matière organique. Homologué agriculture biologique. Améliore la structure du sol." />
-        <link rel="canonical" href="https://keprea.com/solutions/biofertilisant" />
-        <meta property="og:url" content="https://keprea.com/solutions/biofertilisant" />
+        <link rel="canonical" href="https://www.keprea.com/solutions/biofertilisant" />
+        <meta property="og:url" content="https://www.keprea.com/solutions/biofertilisant" />
         <meta property="og:title" content="Fertea432 : Biofertilisant Keprea | Fertilisation Organique NPK" />
         <meta name="twitter:title" content="Fertea432 : Biofertilisant Keprea | Fertilisation Organique NPK" />
         <meta property="og:description" content="Fertea432, biofertilisant à base d'insectes Keprea : 4% P, 3% N, 2% K, 85% matière organique. Homologué agriculture biologique. Améliore la structure du sol." />

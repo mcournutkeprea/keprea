@@ -1,4 +1,4 @@
-const SITE_URL = "https://keprea.com";
+const SITE_URL = "https://www.keprea.com";
 
 export interface FaqItem {
   question: string;

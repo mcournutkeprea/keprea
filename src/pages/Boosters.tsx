@@ -48,8 +48,8 @@ const Boosters = () => {
       <Head>
         <title>Biostimulants Agricoles Keprea | Boostea13 & Soilea110</title>
         <meta name="description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Micro-peptides, proline, acides aminés." />
-        <link rel="canonical" href="https://keprea.com/solutions/boosters" />
-        <meta property="og:url" content="https://keprea.com/solutions/boosters" />
+        <link rel="canonical" href="https://www.keprea.com/solutions/boosters" />
+        <meta property="og:url" content="https://www.keprea.com/solutions/boosters" />
         <meta property="og:title" content="Biostimulants Agricoles Keprea | Boostea13 & Soilea110" />
         <meta name="twitter:title" content="Biostimulants Agricoles Keprea | Boostea13 & Soilea110" />
         <meta property="og:description" content="Boostea13 et Soilea110 : biostimulants à base d'insectes Keprea pour stimuler la croissance et la résistance des cultures. Micro-peptides, proline, acides aminés." />

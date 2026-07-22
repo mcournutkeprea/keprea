@@ -30,8 +30,8 @@ const ExtraitsNaturels = () => {
       <Head>
         <title>Biopesticides Naturels Keprea | Extraits d'Insectes</title>
         <meta name="description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Compatibles agriculture biologique, zéro résidu chimique, en cours d'homologation." />
-        <link rel="canonical" href="https://keprea.com/solutions/biopesticides" />
-        <meta property="og:url" content="https://keprea.com/solutions/biopesticides" />
+        <link rel="canonical" href="https://www.keprea.com/solutions/biopesticides" />
+        <meta property="og:url" content="https://www.keprea.com/solutions/biopesticides" />
         <meta property="og:title" content="Biopesticides Naturels Keprea | Extraits d'Insectes" />
         <meta name="twitter:title" content="Biopesticides Naturels Keprea | Extraits d'Insectes" />
         <meta property="og:description" content="Biopesticides à base d'extraits d'insectes Keprea : molécules bioactives naturelles pour protéger vos cultures. Compatibles agriculture biologique, zéro résidu chimique, en cours d'homologation." />

@@ -34,8 +34,8 @@ const FicheTechniqueDetail = () => {
           name="description"
           content={`Fiche technique ${productName} : composition, mode d'application, cultures cibles et compatibilités.`}
         />
-        <link rel="canonical" href={`https://keprea.com/ressources/fiches-techniques/${entry.slug}`} />
-        <meta property="og:url" content={`https://keprea.com/ressources/fiches-techniques/${entry.slug}`} />
+        <link rel="canonical" href={`https://www.keprea.com/ressources/fiches-techniques/${entry.slug}`} />
+        <meta property="og:url" content={`https://www.keprea.com/ressources/fiches-techniques/${entry.slug}`} />
         <meta property="og:title" content={`${productName} : Fiche Technique Keprea`} />
         <meta name="twitter:title" content={`${productName} : Fiche Technique Keprea`} />
         <script type="application/ld+json">{breadcrumbJsonLd([

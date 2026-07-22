@@ -9,8 +9,8 @@ const PolitiqueConfidentialite = () => {
       <Head>
         <title>Politique de Confidentialité | Keprea</title>
         <meta name="description" content="Politique de confidentialité Keprea : données collectées, finalités du traitement et droits RGPD des utilisateurs du site." />
-        <link rel="canonical" href="https://keprea.com/politique-confidentialite" />
-        <meta property="og:url" content="https://keprea.com/politique-confidentialite" />
+        <link rel="canonical" href="https://www.keprea.com/politique-confidentialite" />
+        <meta property="og:url" content="https://www.keprea.com/politique-confidentialite" />
         <meta property="og:title" content="Politique de Confidentialité | Keprea" />
         <meta name="twitter:title" content="Politique de Confidentialité | Keprea" />
         <meta property="og:description" content="Politique de confidentialité Keprea : données collectées, finalités du traitement et droits RGPD des utilisateurs du site." />

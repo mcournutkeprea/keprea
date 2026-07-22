@@ -11,9 +11,9 @@
 ---
 
 ### Audit SEO complet 22/07/2026 — score santé 62/100 (www.keprea.com, prod live)
-- **Statut** : Ouvert — plan complet dans `keprea.com-audit/ACTION-PLAN.md`, détail par catégorie dans `keprea.com-audit/findings/*.md`
-- **Correction Fait (13/07/2026) invalidée en prod** : `schema.ts`/`breadcrumb.ts`/`index.html`/`robots.txt`/`sitemap.xml`/`llms.txt` corrigés en local (`keprea.com`) mais **jamais commités** — `git diff` le confirme, HEAD sert encore `keprea.vercel.app` partout en JSON-LD/canonical/sitemap. Pas un bug d'infra Vercel : juste un commit+push manquant. À corriger en priorité absolue avec le point suivant (même fichiers).
-- **Nouveau — conflit domaine apex/www** : le code cible l'apex `keprea.com` (sans www) comme canonique, mais en prod l'apex redirige en 308 vers `www.keprea.com` (version réellement servie). Choisir une seule variante définitive avant de redéployer le point ci-dessus.
+- **Statut** : Corrections domaine faites et poussées (22/07/2026) — reste à vérifier l'effectivité du déploiement Vercel. Plan complet dans `keprea.com-audit/ACTION-PLAN.md`, détail par catégorie dans `keprea.com-audit/findings/*.md`
+- ~~Correction Fait (13/07/2026) invalidée en prod~~ — **Corrigé (22/07/2026)** : `schema.ts`/`breadcrumb.ts`/`index.html`/`robots.txt`/`sitemap.xml`/`llms.txt`/canonicals des 15 pages commités et poussés (`256879d`), pointant sur `keprea.com`.
+- ~~Conflit domaine apex/www~~ — **Corrigé (22/07/2026)** : tout rebasculé sur `https://www.keprea.com` (version réellement servie, l'apex redirige en 308 vers www) dans les mêmes fichiers. À vérifier une fois déployé : `curl https://www.keprea.com/ | grep -c vercel.app` doit renvoyer 0.
 - **Témoignages agriculteurs réels** : toujours zéro témoignage nominatif (`Testimonials.tsx`/`TrustSection` = stats génériques, pas de preuve sociale) — priorité n°1 du projet, non traitée depuis l'audit du 02/07.
 - Autres findings notables : `/solutions` sans `<h1>` ; image `Solutions Biofertilisant.png` 7,5 Mo non compressée ; 3 pages orphelines absentes du sitemap (`/ressources`, `/ressources/fiches-techniques`, 5 fiches produit) ; meta description vide dupliquée (résidu vite-react-ssg) sur toutes les pages ; claim "publiée dans Nature" imprécis (`Biofertilisant.tsx`, il s'agit de *Scientific Reports*) ; pas de schema `Product` sur les gammes/fiches techniques ; CSP toujours absente (volontaire, cf. entrée 02/07 ci-dessous).
 

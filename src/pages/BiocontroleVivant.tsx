@@ -47,8 +47,8 @@ const BiocontroleVivant = () => {
       <Head>
         <title>Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs</title>
         <meta name="description" content="Biocontrôle vivant Keprea : auxiliaires entomophages pour lutter contre pucerons, pyrales, cochenilles et aleurodes. Solutions naturelles homologuées AB." />
-        <link rel="canonical" href="https://keprea.com/solutions/bioprotection" />
-        <meta property="og:url" content="https://keprea.com/solutions/bioprotection" />
+        <link rel="canonical" href="https://www.keprea.com/solutions/bioprotection" />
+        <meta property="og:url" content="https://www.keprea.com/solutions/bioprotection" />
         <meta property="og:title" content="Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs" />
         <meta name="twitter:title" content="Bioprotection Vivante Keprea | Auxiliaires contre Ravageurs" />
         <meta property="og:description" content="Biocontrôle vivant Keprea : auxiliaires entomophages pour lutter contre pucerons, pyrales, cochenilles et aleurodes. Solutions naturelles homologuées AB." />

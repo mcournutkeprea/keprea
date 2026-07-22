@@ -12,8 +12,8 @@ const SolutionsHub = () => (
         name="description"
         content="Découvrez les 4 gammes de solutions biosourcées Keprea : bioprotection vivante, biopesticides naturels, boosters de croissance et biofertilisants à base d'insectes."
       />
-      <link rel="canonical" href="https://keprea.com/solutions" />
-      <meta property="og:url" content="https://keprea.com/solutions" />
+      <link rel="canonical" href="https://www.keprea.com/solutions" />
+      <meta property="og:url" content="https://www.keprea.com/solutions" />
       <meta property="og:title" content="Nos Solutions Keprea | Bioprotection, Biopesticides, Biofertilisants" />
       <meta name="twitter:title" content="Nos Solutions Keprea | Bioprotection, Biopesticides, Biofertilisants" />
       <meta
