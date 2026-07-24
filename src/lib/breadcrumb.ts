@@ -1,4 +1,4 @@
-const SITE_URL = "https://www.keprea.com";
+import { SITE_URL } from "./site";
 
 export interface BreadcrumbItem {
   name: string;

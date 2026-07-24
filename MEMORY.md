@@ -44,7 +44,8 @@
 
 | Décision | Statut |
 |----------|--------|
-| Migration vers GitHub + Vercel | Planifiée (Phase 2) |
+| Migration vers GitHub + Vercel | **Faite** — keprea.com sert le build Vercel (13/07/2026) |
+| Domaine canonique = www.keprea.com | **Décidé (22/07/2026, révise le choix apex du 13/07) + vérifié en prod (24/07/2026)** — apex et vercel.app redirigent tous deux vers www, 0 réf. vercel.app en prod |
 | Architecture multi-pages (12 URLs cibles) | **Implémentée (Phase 5.3)** |
 | Pré-rendu statique (option A : vite-react-ssg) | **Implémentée (Phase 5.2)** |
 | Suppression du badge Lovable | Corrigé (Phase 0) |

@@ -67,6 +67,48 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.keprea.com/ressources</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.keprea.com/ressources/fiches-techniques</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.keprea.com/ressources/fiches-techniques/boostea13</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.keprea.com/ressources/fiches-techniques/soilea110</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.keprea.com/ressources/fiches-techniques/fertea432</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.keprea.com/ressources/fiches-techniques/bioprotection</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.keprea.com/ressources/fiches-techniques/biopesticides</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.keprea.com/mentions-legales</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
