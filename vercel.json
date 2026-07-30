@@ -34,6 +34,16 @@
       "source": "/biocontrole-vivant",
       "destination": "/solutions/bioprotection",
       "permanent": true
+    },
+    {
+      "source": "/our-story",
+      "destination": "/qui-sommes-nous",
+      "permanent": true
+    },
+    {
+      "source": "/opportunity",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
