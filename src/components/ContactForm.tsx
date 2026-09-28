@@ -23,6 +23,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
     email: "",
     company: "",
     message: "",
+    website: "", // honeypot — laissé vide par les humains
   });
   const [rgpdAccepted, setRgpdAccepted] = useState(false);
 
@@ -61,7 +62,7 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
         description: t('toast.success.desc'),
       });
 
-      setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
+      setFormData({ firstName: "", lastName: "", email: "", company: "", message: "", website: "" });
       setRgpdAccepted(false);
     } catch (error) {
       toast({
@@ -97,6 +98,22 @@ const ContactForm = ({ embedded = false }: ContactFormProps) => {
       )}
 
       <form onSubmit={handleSubmit} className={embedded ? "space-y-5 mt-6" : "space-y-6"}>
+        <div
+          style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}
+          aria-hidden="true"
+        >
+          <Label htmlFor="website">Site web</Label>
+          <Input
+            id="website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={formData.website}
+            onChange={(e) => handleInputChange('website', e.target.value)}
+          />
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="space-y-2">
             <Label htmlFor="firstName">{t('contact.form.firstName')} *</Label>

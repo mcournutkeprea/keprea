@@ -28,6 +28,7 @@ const FieldFeedbackForm = ({ defaultProduct }: FieldFeedbackFormProps) => {
     region: "",
     product: defaultProduct && (PRODUCT_OPTIONS as readonly string[]).includes(defaultProduct) ? [defaultProduct] : [],
     feedback: "",
+    website: "", // honeypot — laissé vide par les humains
   });
   const [rgpdAccepted, setRgpdAccepted] = useState(false);
 
@@ -73,7 +74,7 @@ const FieldFeedbackForm = ({ defaultProduct }: FieldFeedbackFormProps) => {
         description: t('toast.terrain.success.desc'),
       });
 
-      setFormData({ firstName: "", lastName: "", email: "", culture: "", region: "", product: [], feedback: "" });
+      setFormData({ firstName: "", lastName: "", email: "", culture: "", region: "", product: [], feedback: "", website: "" });
       setRgpdAccepted(false);
     } catch (error) {
       toast({
@@ -101,6 +102,22 @@ const FieldFeedbackForm = ({ defaultProduct }: FieldFeedbackFormProps) => {
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5 mt-6">
+          <div
+            style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}
+            aria-hidden="true"
+          >
+            <Label htmlFor="terrain-website">Site web</Label>
+            <Input
+              id="terrain-website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={formData.website}
+              onChange={(e) => handleInputChange('website', e.target.value)}
+            />
+          </div>
+
           <div className="grid sm:grid-cols-2 gap-5">
             <div className="space-y-2">
               <Label htmlFor="terrain-firstName">{t('contact.form.firstName')} *</Label>

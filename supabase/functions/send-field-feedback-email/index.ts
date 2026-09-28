@@ -12,13 +12,14 @@ import {
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-interface ContactFormData {
+interface FieldFeedbackFormData {
   firstName: string;
   lastName: string;
   email: string;
-  company?: string;
-  subject?: string;
-  message: string;
+  culture: string;
+  region: string;
+  product: string;
+  feedback: string;
   website?: string; // honeypot — must stay empty
 }
 
@@ -36,20 +37,21 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
   try {
-    const formData: ContactFormData = await req.json();
+    const formData: FieldFeedbackFormData = await req.json();
 
     // Honeypot: bots tend to fill every field. Pretend success without doing any work.
     if (formData.website && formData.website.trim() !== "") {
-      return jsonResponse(200, { success: true, message: "Message envoyé avec succès" });
+      return jsonResponse(200, { success: true, message: "Retour terrain envoyé avec succès" });
     }
 
     if (
       !isNonEmptyString(formData.firstName, 100) ||
       !isNonEmptyString(formData.lastName, 100) ||
       !isValidEmail(formData.email) ||
-      !isNonEmptyString(formData.message, 5000) ||
-      (formData.company !== undefined && formData.company.length > 200) ||
-      (formData.subject !== undefined && formData.subject.length > 200)
+      !isNonEmptyString(formData.culture, 200) ||
+      !isNonEmptyString(formData.region, 200) ||
+      !isNonEmptyString(formData.product, 200) ||
+      !isNonEmptyString(formData.feedback, 5000)
     ) {
       return jsonResponse(400, { success: false, error: "Champs invalides ou manquants" });
     }
@@ -59,52 +61,55 @@ const handler = async (req: Request): Promise<Response> => {
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     const clientIp = getClientIp(req);
-    const allowed = await checkRateLimit(supabase, `contact:${clientIp}`, { windowMinutes: 10, maxHits: 3 });
+    const allowed = await checkRateLimit(supabase, `field-feedback:${clientIp}`, { windowMinutes: 10, maxHits: 3 });
     if (!allowed) {
       return jsonResponse(429, { success: false, error: "Trop de tentatives, réessayez plus tard" });
     }
 
     // Store in database
     const { error: dbError } = await supabase
-      .from('contact_submissions')
+      .from('field_feedback_submissions')
       .insert({
         first_name: formData.firstName,
         last_name: formData.lastName,
         email: formData.email,
-        company: formData.company,
-        subject: formData.subject,
-        message: formData.message,
+        culture: formData.culture,
+        region: formData.region,
+        product: formData.product,
+        feedback: formData.feedback,
       });
 
     if (dbError) {
       console.error("Database error:", dbError);
-      throw new Error("Failed to store contact submission");
+      throw new Error("Failed to store field feedback submission");
     }
 
     const firstName = escapeHtml(formData.firstName);
     const lastName = escapeHtml(formData.lastName);
     const email = escapeHtml(formData.email);
-    const company = formData.company ? escapeHtml(formData.company) : undefined;
-    const subject = formData.subject ? escapeHtml(formData.subject) : undefined;
-    const messageHtml = escapeHtml(formData.message).replace(/\n/g, '<br>');
+    const culture = escapeHtml(formData.culture);
+    const region = escapeHtml(formData.region);
+    const product = escapeHtml(formData.product);
+    const feedbackHtml = escapeHtml(formData.feedback).replace(/\n/g, '<br>');
 
     // Send email to admin
     const adminEmailResponse = await resend.emails.send({
-      from: "Formulaire Contact <onboarding@resend.dev>",
+      from: "Retour terrain <onboarding@resend.dev>",
       to: ["g.daoulas@keprea.com"],
-      subject: `Nouveau message de contact - ${firstName} ${lastName}`,
+      subject: `Nouveau retour terrain - ${firstName} ${lastName}`,
       html: `
-        <h2>Nouveau message de contact</h2>
+        <h2>Nouveau retour terrain</h2>
         <p><strong>Nom:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
-        ${company ? `<p><strong>Société:</strong> ${company}</p>` : ''}
-        ${subject ? `<p><strong>Sujet:</strong> ${subject}</p>` : ''}
-        <p><strong>Message:</strong></p>
+        <p><strong>Culture:</strong> ${culture}</p>
+        <p><strong>Région:</strong> ${region}</p>
+        <p><strong>Produit utilisé:</strong> ${product}</p>
+        <p><strong>Retour:</strong></p>
         <div style="border-left: 3px solid #ccc; padding-left: 15px; margin: 10px 0;">
-          ${messageHtml}
+          ${feedbackHtml}
         </div>
         <hr>
-        <p style="color: #666; font-size: 12px;">Ce message a été envoyé depuis le formulaire de contact du site Keprea.</p>
+        <p style="color: #666; font-size: 12px;">Ce retour a été envoyé depuis le formulaire de contact du site Keprea.</p>
       `,
     });
 
@@ -114,15 +119,17 @@ const handler = async (req: Request): Promise<Response> => {
       to: [formData.email],
       subject: "Confirmation de réception - Keprea",
       html: `
-        <h2>Merci pour votre message !</h2>
+        <h2>Merci pour votre retour terrain !</h2>
         <p>Bonjour ${firstName},</p>
-        <p>Nous avons bien reçu votre message et vous remercions de nous avoir contactés.</p>
-        <p>Notre équipe examinera votre demande et vous répondra dans les plus brefs délais.</p>
+        <p>Nous avons bien reçu votre retour d'expérience et vous en remercions.</p>
+        <p>Notre équipe agronomique va l'examiner et pourra revenir vers vous pour approfondir certains points.</p>
         <hr>
-        <p><strong>Récapitulatif de votre message :</strong></p>
-        ${subject ? `<p><strong>Sujet:</strong> ${subject}</p>` : ''}
+        <p><strong>Récapitulatif de votre retour :</strong></p>
+        <p><strong>Culture:</strong> ${culture}</p>
+        <p><strong>Région:</strong> ${region}</p>
+        <p><strong>Produit utilisé:</strong> ${product}</p>
         <div style="border-left: 3px solid #ccc; padding-left: 15px; margin: 10px 0; color: #666;">
-          ${messageHtml}
+          ${feedbackHtml}
         </div>
         <p>Cordialement,<br>L'équipe Keprea</p>
       `,
@@ -130,10 +137,10 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Emails sent successfully:", { adminEmailResponse, userEmailResponse });
 
-    return jsonResponse(200, { success: true, message: "Message envoyé avec succès" });
+    return jsonResponse(200, { success: true, message: "Retour terrain envoyé avec succès" });
   } catch (error: any) {
-    console.error("Error in send-contact-email function:", error);
-    return jsonResponse(500, { success: false, error: error.message || "Erreur lors de l'envoi du message" });
+    console.error("Error in send-field-feedback-email function:", error);
+    return jsonResponse(500, { success: false, error: error.message || "Erreur lors de l'envoi du retour terrain" });
   }
 };
 
