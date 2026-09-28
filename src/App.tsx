@@ -19,6 +19,7 @@ import Ressources from "./pages/Ressources";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
+import TestBlurText from "./pages/TestBlurText";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,8 @@ const App = () => (
             {/* Legal */}
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+            {/* Dev test route — a retirer avant mise en prod */}
+            <Route path="/test-blur-text" element={<TestBlurText />} />
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
