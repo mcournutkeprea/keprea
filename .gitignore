@@ -27,3 +27,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Outils locaux (Claude Code, skills, CLI Supabase) — état machine, pas du code du site
+.claude/
+.agents/
+skills-lock.json
+supabase/.temp/
+
+# Sorties d'outils / skills volumineuses — regenerables, pas du code du site
+claude-seo/
+keprea.vercel.app-audit/
+ui-ux-pro-max-skill/
